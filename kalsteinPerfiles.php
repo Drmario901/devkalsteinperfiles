@@ -712,8 +712,8 @@
     function perfiles_styles() {
 
          //MAIN URLS
-        $plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles';
-        $plugin_quote = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion';
+        $plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles';
+        $plugin_quote = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion';
 
         function general_client_styles(){
             wp_enqueue_script('JS', plugins_url('src/js/btnLoginRegister.js',__FILE__),array('jquery'));
