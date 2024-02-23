@@ -15,6 +15,7 @@
 
 <input type="hidden" id="search-product" value="<?php echo $search ?>">
 <link rel="icon" type="image/x-icon" href="https://kalstein.us/wp-content/plugins/kalsteinPerfiles/src/images/favicon.ico">
+<script src="https://cdn.tailwindcss.com"></script>
 <script src='https://kit.fontawesome.com/3cff919dc3.js' crossorigin='anonymous'></script>
 <div class='container'>
     <div id='contentLogin' class='row align-items-start'>
@@ -43,7 +44,7 @@
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn'>Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2'>Continuar</button>
                     </div>
-                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? Createla papa <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Registrate</a></span></p>
+                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? <span class="text-red-400 font-bold">Createla papa</span> <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Registrate</a></span></p>
                 </div>
             </div>
         </div>
@@ -69,3 +70,15 @@
         </div>
     </div>
 </div>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
