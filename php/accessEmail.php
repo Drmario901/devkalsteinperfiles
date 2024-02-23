@@ -11,7 +11,7 @@
     $row = mysqli_fetch_array($resultConsulta);
     $statusAcc = $row['account_status'];
     $count2 = mysqli_num_rows($resultConsulta2);
-
+    // Este comentario es nuevo para un commit xD
     if ($count > 0){
         $status = 'registrado';
     }else{
