@@ -79,7 +79,7 @@
                     
                     $queryBans = "SELECT COUNT(*), ban_time FROM wp_bans WHERE ban_user = '$email' AND ban_time > '$current'";
                     $resultBans2 = $conexion->query($queryBans);
-                    $resulBans = mysqli_fetch_array($resulbans2);
+                    $resultBans = mysqli_fetch_array($resultbans2);
 
 
                     if($resultBans[0] > 0){
