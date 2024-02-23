@@ -1,0 +1,15 @@
+[16-Feb-2024 16:13:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DansMaCulotte\Monetico\Monetico::__construct(), 1 passed in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/testMonetico.php on line 8 and exactly 3 expected in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Monetico.php:37
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/testMonetico.php(8): DansMaCulotte\Monetico\Monetico->__construct('kalsteinfr')
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Monetico.php on line 37
+[16-Feb-2024 16:13:26 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DansMaCulotte\Monetico\Monetico::__construct(), 1 passed in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/testMonetico.php on line 8 and exactly 3 expected in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Monetico.php:37
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/testMonetico.php(8): DansMaCulotte\Monetico\Monetico->__construct('kalsteinfr')
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Monetico.php on line 37
+[16-Feb-2024 16:14:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DansMaCulotte\Monetico\Monetico::__construct(), 1 passed in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/testMonetico.php on line 11 and exactly 3 expected in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Monetico.php:37
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/testMonetico.php(11): DansMaCulotte\Monetico\Monetico->__construct('kalsteinfr')
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Monetico.php on line 37
