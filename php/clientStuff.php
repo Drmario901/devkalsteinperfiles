@@ -2,7 +2,7 @@
 if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];
 }else{
-    header('Location: https://kalstein.net/es/');
+    header('Location: https://dev.kalstein.plus/');
 }
 
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
