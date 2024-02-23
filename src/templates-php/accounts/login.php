@@ -22,7 +22,7 @@
             <div class='card' style='min-width: 18rem; max-width: 26rem; margin: 0 auto; margin-top: 10rem; -webkit-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75);'>
                 <a href='https://kalstein.net/es/' style='margin: 0 auto;'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png' class='card-img-top' style='width: 200px;  margin-top: 4rem; margin-bottom: 2rem;'></a>
                 <div class='card-body'>
-                    <h5 class='card-title text-center fs-5'>¡Hola! Nos alegra volver a verte.</h5>
+                    <h5 class='card-title text-center fs-5'>UwW! Nos alegra volver a verte.</h5>
                     <div class='col-md' style='margin-top: 1rem;'>
                         <div class='form-floating input-wrapper'>
                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
