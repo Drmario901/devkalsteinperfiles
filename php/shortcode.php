@@ -231,7 +231,7 @@
             
             
 
-        
+
             $baseURL = 'https://plataforma.kalstein.net/index.php/';
             $scientistURL = 'https://biblioteca.kalstein.net/';
             
@@ -268,6 +268,10 @@
 
 
         // XXX Client XXX
+
+        function prueba_html(){
+            return render_php_file("client/pruebaDatos.php");
+        }
 
         function dashboard(){
             verify_session(1);
