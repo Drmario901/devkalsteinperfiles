@@ -12,7 +12,7 @@
     function verify_session($rol){
         if(isset($_SESSION["emailAccount"])){
             if ($_SESSION["emailAccount"] == ''){
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder/');</script>";
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>";
             }
             else {
                 $email = $_SESSION["emailAccount"];
@@ -232,7 +232,7 @@
             
 
 
-            $baseURL = 'https://plataforma.kalstein.net/index.php/';
+            $baseURL = 'https://dev.kalstein.plus/plataforma/index.php/';
             $scientistURL = 'https://biblioteca.kalstein.net/';
             
             switch($rolAccount){
@@ -256,7 +256,7 @@
                     $redirectUrl = $scientistURL . "setSession.php";
                     break;
                 default: 
-                    echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder/');</script>"; 
+                    echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>"; 
                     return '';
             }
 
