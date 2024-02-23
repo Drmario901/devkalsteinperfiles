@@ -73,11 +73,11 @@ if ($count > 0) {
         $conexion->query($query);
 
         //TABLA CIENTIFICO
-        $query2 = "UPDATE wp_account_scientist SET account_session = '$session_id' WHERE account_correo = '$email'";
+        /*$query2 = "UPDATE wp_account_scientist SET account_session = '$session_id' WHERE account_correo = '$email'";
         $conexion2->query($query2);
 
         $query3 = "UPDATE wp_users SET account_session = '$session_id' WHERE user_email = '$email'";
-        $conexion2->query($query3);
+        $conexion2->query($query3);*/
 
         $tipo = 'regular';
     } else {
