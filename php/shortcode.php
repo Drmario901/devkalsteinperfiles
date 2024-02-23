@@ -27,7 +27,7 @@
                 $rolacc = $row[0];
                 $status = $row[1];
                 
-                // verificacion de baneo
+                // verificacion de baneof
                 $fecha_actual = date("Y-m-d");
                 if ($status == 'validated'){
                     
