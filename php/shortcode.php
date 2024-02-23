@@ -269,6 +269,10 @@
 
         // XXX Client XXX
 
+        function prueba_html(){
+            return render_php_file("client/pruebaDatos.php");
+        }
+
         function dashboard(){
             verify_session(1);
             return render_php_file("client/dashboard.php");
