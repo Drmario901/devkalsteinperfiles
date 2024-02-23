@@ -15,7 +15,7 @@ jobs:
                     password: ${{ secrets.SSH_PASSWORD }}
                     port: 22
                     script: |
-                      cd /home/kalsteinplus/public_html/plataforma/wp-content/plugins/kalsteinPerfiles
+                      cd /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles
                       git pull https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
           
           
