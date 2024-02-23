@@ -34,7 +34,7 @@
                             <div class='form-floating input-wrapper-p'>
                                 <input type='hidden' id='ipConnect'>
                                 <input type='password' class='form-control' id='passwordGrid' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                <label for='passwordGrid'>Contraseña</label>
+                                <label for='passwordGrid'>Pon aqui la contraseña mi pana</label>
                                 <i class='fa-sharp fa-solid fa-eye eye-03'></i>
                             </div>
                             <div class='passwordIncorrect' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Contraseña incorrecta</p></div>
@@ -43,7 +43,7 @@
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn'>Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2'>Continuar</button>
                     </div>
-                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Registrate</a></span></p>
+                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? Createla papa <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Registrate</a></span></p>
                 </div>
             </div>
         </div>
