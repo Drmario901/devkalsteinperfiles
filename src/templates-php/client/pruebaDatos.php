@@ -6,5 +6,5 @@ echo "Hello World";
 ?>
 
 <script>
-    console.log('Hola');
+    alert('Hola');
 </script>
