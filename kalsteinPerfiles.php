@@ -30,13 +30,6 @@
 
     // XXX SHORTCODE CUENTAS Y CLIENTE XXX
 
-    function pruebaHTML(){
-        $_short = new shortcodePerfiles;
-
-        $html = $_short->prueba_html();
-        return $html;
-    }
-
     function loginPerfiles(){
         $_short = new shortcodePerfiles;
 
@@ -607,7 +600,6 @@
 
     // XXX CUENTAS Y CLIENTE XXXX
 
-    add_shortcode("PRUEBA_HTML", "pruebaHTML");
     add_shortcode("PERFILES_LOGIN", "loginPerfiles");
     add_shortcode("PERFILES_SIGNUP", "signupPerfiles");
     add_shortcode("PERFILES_REGISTER", "registerPerfiles");
