@@ -1,0 +1,16 @@
+[01-Feb-2024 17:16:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_contains() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php on line 9
+[01-Feb-2024 17:18:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_contains() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php on line 9
+[01-Feb-2024 17:19:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_contains() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php on line 13
+[01-Feb-2024 17:27:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function str_contains() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload_kalstein_catalogs.php on line 13

@@ -1,0 +1,236 @@
+[25-Jan-2024 17:39:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[25-Jan-2024 17:40:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[25-Jan-2024 20:18:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[30-Jan-2024 14:42:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[30-Jan-2024 18:30:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[30-Jan-2024 18:41:09 UTC] PHP Warning:  move_uploaded_file(/home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/../../../../../../public_html/es/wp-content/uploads/kalsteinQuote/65b942c504659.jpg): failed to open stream: No such file or directory in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/uploadProductData.php on line 10
+[30-Jan-2024 18:41:09 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpLHvOLp' to '/home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/../../../../../../public_html/es/wp-content/uploads/kalsteinQuote/65b942c504659.jpg' in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/uploadProductData.php on line 10
+[30-Jan-2024 18:48:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 12:36:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 13:09:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 13:29:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 17:52:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 18:27:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 18:31:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 18:42:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 18:51:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 18:52:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[31-Jan-2024 23:36:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 03:23:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 12:02:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 12:12:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 13:14:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 13:31:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 14:25:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 14:33:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 14:50:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:13
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(141): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 13
+[01-Feb-2024 14:52:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 14:57:44 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php80/sess_b69a7736591821d8c90dd2538639e839, O_RDWR) failed: No such file or directory (2) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:57:44 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php80) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:57:44 UTC] PHP Notice:  Undefined index: emailAccount in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 9
+[01-Feb-2024 14:57:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 14:59:24 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php80/sess_b69a7736591821d8c90dd2538639e839, O_RDWR) failed: Permission denied (13) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:24 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php80) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:24 UTC] PHP Notice:  Undefined index: emailAccount in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 9
+[01-Feb-2024 14:59:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 14:59:26 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php80/sess_b69a7736591821d8c90dd2538639e839, O_RDWR) failed: Permission denied (13) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:26 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php80) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:26 UTC] PHP Notice:  Undefined index: emailAccount in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 9
+[01-Feb-2024 14:59:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 14:59:27 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php80/sess_b69a7736591821d8c90dd2538639e839, O_RDWR) failed: Permission denied (13) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:27 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php80) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:27 UTC] PHP Notice:  Undefined index: emailAccount in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 9
+[01-Feb-2024 14:59:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 14:59:28 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php80/sess_b69a7736591821d8c90dd2538639e839, O_RDWR) failed: Permission denied (13) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:28 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php80) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:28 UTC] PHP Notice:  Undefined index: emailAccount in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 9
+[01-Feb-2024 14:59:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 14:59:55 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php80/sess_b69a7736591821d8c90dd2538639e839, O_RDWR) failed: Permission denied (13) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:55 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php80) in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 6
+[01-Feb-2024 14:59:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 15:00:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 15:02:37 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): No such file or directory in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 9
+[01-Feb-2024 15:02:37 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 10
+[01-Feb-2024 15:02:37 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): No such file or directory in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 12
+[01-Feb-2024 15:02:37 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 13
+[01-Feb-2024 15:02:37 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): No such file or directory in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 15
+[01-Feb-2024 15:02:37 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 16
+[01-Feb-2024 15:02:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 15:02:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php:17
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php(145): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfo.php on line 17
+[01-Feb-2024 15:04:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:11
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php(98): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 11
+[01-Feb-2024 15:04:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:11
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php(98): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 11
+[01-Feb-2024 15:14:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:15
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php(102): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 15
+[01-Feb-2024 15:15:25 UTC] PHP Notice:  Undefined variable: m6 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:15:25 UTC] PHP Notice:  Undefined variable: m5 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:15:25 UTC] PHP Notice:  Undefined variable: m4 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:15:25 UTC] PHP Notice:  Undefined variable: m3 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:15:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:97
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 97
+[01-Feb-2024 15:16:38 UTC] PHP Notice:  Undefined variable: m6 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:16:38 UTC] PHP Notice:  Undefined variable: m5 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:16:38 UTC] PHP Notice:  Undefined variable: m4 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:16:38 UTC] PHP Notice:  Undefined variable: m3 in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 52
+[01-Feb-2024 15:16:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:97
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 97
+[01-Feb-2024 15:20:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:11
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php(98): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 11
+[01-Feb-2024 15:20:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cal_days_in_month() in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php:15
+Stack trace:
+#0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php(102): days_until_monthend()
+#1 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 15
