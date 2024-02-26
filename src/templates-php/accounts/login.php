@@ -36,7 +36,7 @@
                     <div class='col-md' style='margin-top: 1rem;'>
                         <div class='form-floating input-wrapper'>
                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                            <label for='emailUser' data-i18n="login.labelCorreo">Correo electrónico</label> 
+                            <label for='emailUser' data-i18n="labelCorreo">Correo electrónico</label> 
                             <script>console.log('data-i18n', data-i18n)</script>                              
                         </div>
                         <div class='emailError' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>El correo no es válido</p></div>
