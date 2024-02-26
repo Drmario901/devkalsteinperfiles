@@ -1,69 +1,76 @@
-// Importa i18next y el detector de idioma del navegador
-import i18next from 'i18next';
-import i18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+const lngs = {
+    en: { nativeName: 'English' },
+    es: { nativeName: 'Spanish' }
+  };
+  
 
-// Configura i18next
-i18next
-    .use(i18nextBrowserLanguageDetector)
-    .init({
-        debug: true,
-        fallbackLng: 'en',
-        resources: {
-            en: {
-                translation: {
-                    login: {
-                        labelCorreo: 'Email',
-                        tittleButton: 'Continue',
-                        noAccount: 'Don\'t have an account?',
-                        forgotPassword: 'Forgot your password?',
-                        spanAccount: 'Sign up'
-                    }
-                }
-            },
-            es: {
-                translation: {
+const rerender = () => {
+    // start localizing, details:
+    // https://github.com/i18next/jquery-i18next#usage-of-selector-function
+    $('body').localize();
+  }
+
+
+
+  jQuery(document).ready(function($){
+    $(function () {
+    i18next
+        .use(i18nextBrowserLanguageDetector)
+        .init({
+            debug: true,
+            fallbackLng: 'es',
+            resources: {
+                en: {
                     translation: {
                         login: {
-                            labelCorreo: 'Correo Electronico',
-                            tittleButton: 'Continuar',
-                            noAccount: '¿No tienes una cuenta?',
-                            forgotPassword: '¿Olvidaste tu contraseña?',
-                            spanAccount: 'Registrate'
+                            labelCorreo: 'Email',
+                            tittleButton: 'Continue',
+                            noAccount: 'Don\'t have an account?',
+                            forgotPassword: 'Forgot your password?',
+                            spanAccount: 'Sign up'
+                        }
+                    }
+                },
+                es: {
+                    translation: {
+                        translation: {
+                            login: {
+                                labelCorreo: 'Correo Electronico',
+                                tittleButton: 'Continuar',
+                                noAccount: '¿No tienes una cuenta?',
+                                forgotPassword: '¿Olvidaste tu contraseña?',
+                                spanAccount: 'Registrate'
+                            }
                         }
                     }
                 }
+                // Añade más idiomas según sea necesario
             }
-            // Añade más idiomas según sea necesario
-        }
-    }, (err, t) => {
-        if (err) return console.error(err);
+        }, function (err, t) {
+            if (err) return console.error(err);
+            // Inicialización de jquery-i18next
+            jqueryI18next.init(i18next, $, { useOptionsAttr: true });
 
-        // Función para cambiar el idioma
-        function changeLanguage(event) {
-            const chosenLng = event.target.value;
-            i18next.changeLanguage(chosenLng);
+            // Localización de elementos HTML
+            $('body').localize();
 
-            console.log(chosenLng)
-        }
-
-        // Rellena el selector de idioma
-        const languageSwitcher = document.getElementById('languageSwitcher');
-        languageSwitcher.addEventListener('change', changeLanguage);
-
-        // Función para renderizar el contenido
-        function renderContent() {
-            // Obtiene todos los elementos que necesitan traducción
-            const elements = document.querySelectorAll('[data-i18n]');
-            // Para cada elemento, actualiza su texto con la traducción correspondiente
-            elements.forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.textContent = i18next.t(key);
+             // fill language switcher
+            Object.keys(lngs).map((lng) => {
+                const opt = new Option(lngs[lng].nativeName, lng);
+                if (lng === i18next.resolvedLanguage) {
+                opt.setAttribute("selected", "selected");
+                }
+                $('#languageSwitcher').append(opt);
             });
-        }
-
-        // Renderiza el contenido inicial
-        renderContent();
-
-        // Vuelve a renderizar el contenido cuando cambia el idioma
-        i18next.on('languageChanged', renderContent);
-    });
+            $('#languageSwitcher').change((a, b, c) => {
+                const chosenLng = $(this).find("option:selected").attr('value');
+                console.log(chosenLng);
+                i18next.changeLanguage(chosenLng, () => {
+                rerender();
+                });
+            });
+        
+            rerender();
+        });
+});
+  });

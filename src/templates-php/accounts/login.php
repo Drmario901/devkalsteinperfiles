@@ -18,13 +18,9 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src='https://kit.fontawesome.com/3cff919dc3.js' crossorigin='anonymous'></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
 
 <select id="languageSwitcher">
-    <option value="en">English</option>
-    <option value="es">Español</option>
 </select>
 
 <body>
