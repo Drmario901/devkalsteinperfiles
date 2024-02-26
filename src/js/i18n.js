@@ -1,7 +1,6 @@
 const lngs = {
     en: { nativeName: 'English' },
-    es: { nativeName: 'Spanish' },
-    de: { nativeName: 'Deustsh' }
+    es: { nativeName: 'Spanish' }
   };
   
 
@@ -29,14 +28,10 @@ const lngs = {
             defaultNS: 'login',
             resources: {
               en: {
-                translation: {
-
-                }
+                login: require('../locale/en/login.json')
               },
               es: {
-                translation: {
-
-                }
+                login: require('../locale/es/login.json')
               }
             }
           }, (err, t) => {
