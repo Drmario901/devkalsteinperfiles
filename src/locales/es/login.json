@@ -1,10 +1,8 @@
 {
-    "login" : {
-        "labelCorreo": "Correo Electronico",
-        "tittleButton": "Continuar",
-        "noAccount": "¿No tienes una cuenta?",
-        "forgotPassword": "¿Olvidaste tu contraseña?",
-        "spanAccount": "Registrate",
-        "title": "Kalstein Plus Development Enviroment"
-    }
+    "labelCorreo": "Correo Electronico",
+    "tittleButton": "Continuar",
+    "noAccount": "¿No tienes una cuenta?",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "spanAccount": "Registrate",
+    "title": "Kalstein Plus Development Enviroment"
 }
