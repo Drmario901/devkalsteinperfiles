@@ -1,6 +1,6 @@
 const lngs = {
     en: { nativeName: 'English' },
-    es: { nativeName: 'Spanish' }
+    es: { nativeName: 'Spanish' },
     de: { nativeName: 'Deustsh' }
   };
   
@@ -33,7 +33,8 @@ const lngs = {
                     tittleButton: 'Continue',
                     noAccount: 'Don\'t have an account?',
                     forgotPassword: 'Forgot your password?',
-                    spanAccount: 'Sign up'
+                    spanAccount: 'Sign up',
+                    title: "Kalstein Plus Development Enviroment"
                 }
                 }
               },
@@ -44,7 +45,8 @@ const lngs = {
                     tittleButton: 'Continuar',
                     noAccount: '¿No tienes una cuenta?',
                     forgotPassword: '¿Olvidaste tu contraseña?',
-                    spanAccount: 'Registrate'
+                    spanAccount: 'Registrate',
+                    title: "Kalstein Plus Development Enviroment"
                   }
                 }
               }
