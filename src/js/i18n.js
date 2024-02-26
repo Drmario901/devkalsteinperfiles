@@ -16,7 +16,7 @@ const rerender = () => {
                     translation: {
                         login: {
                             labelCorreo: 'Email',
-                            titleButton: 'Continue',
+                            tittleButton: 'Continue',
                             noAccount: 'Don\'t have an account?',
                             forgotPassword: 'Forgot your password?',
                             spanAccount: 'Sign up'
@@ -28,7 +28,7 @@ const rerender = () => {
                         translation: {
                             login: {
                                 labelCorreo: 'Correo Electronico',
-                                titleButton: 'Continuar',
+                                tittleButton: 'Continuar',
                                 noAccount: '¿No tienes una cuenta?',
                                 forgotPassword: '¿Olvidaste tu contraseña?',
                                 spanAccount: 'Registrate'
