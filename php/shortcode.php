@@ -12,7 +12,7 @@
     function verify_session($rol){
         if(isset($_SESSION["emailAccount"])){
             if ($_SESSION["emailAccount"] == ''){
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder/');</script>";
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>";
             }
             else {
                 $email = $_SESSION["emailAccount"];
@@ -27,7 +27,7 @@
                 $rolacc = $row[0];
                 $status = $row[1];
                 
-                // verificacion de baneo
+                // verificacion de baneof
                 $fecha_actual = date("Y-m-d");
                 if ($status == 'validated'){
                     
@@ -78,8 +78,8 @@
                     $current = date('Y-m-d h:i:s');
                     
                     $queryBans = "SELECT COUNT(*), ban_time FROM wp_bans WHERE ban_user = '$email' AND ban_time > '$current'";
-                    $resultBans2 = $conexion->query($queryBans);
-                    $resulBans = mysqli_fetch_array($resulbans2);
+                    //$resultBans2 = $conexion->query($queryBans);
+                    //$resultBans = mysqli_fetch_array($resultbans2);
 
 
                     if($resultBans[0] > 0){
@@ -232,7 +232,7 @@
             
 
 
-            $baseURL = 'https://plataforma.kalstein.net/index.php/';
+            $baseURL = 'https://dev.kalstein.plus/plataforma/index.php/';
             $scientistURL = 'https://biblioteca.kalstein.net/';
             
             switch($rolAccount){
@@ -256,7 +256,7 @@
                     $redirectUrl = $scientistURL . "setSession.php";
                     break;
                 default: 
-                    echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder/');</script>"; 
+                    echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>"; 
                     return '';
             }
 
@@ -268,10 +268,6 @@
 
 
         // XXX Client XXX
-
-        function prueba_html(){
-            return render_php_file("client/pruebaDatos.php");
-        }
 
         function dashboard(){
             verify_session(1);

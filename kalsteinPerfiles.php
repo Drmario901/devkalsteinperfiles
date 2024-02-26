@@ -30,13 +30,6 @@
 
     // XXX SHORTCODE CUENTAS Y CLIENTE XXX
 
-    function pruebaHTML(){
-        $_short = new shortcodePerfiles;
-
-        $html = $_short->prueba_html();
-        return $html;
-    }
-
     function loginPerfiles(){
         $_short = new shortcodePerfiles;
 
@@ -607,7 +600,6 @@
 
     // XXX CUENTAS Y CLIENTE XXXX
 
-    add_shortcode("PRUEBA_HTML", "pruebaHTML");
     add_shortcode("PERFILES_LOGIN", "loginPerfiles");
     add_shortcode("PERFILES_SIGNUP", "signupPerfiles");
     add_shortcode("PERFILES_REGISTER", "registerPerfiles");
@@ -720,8 +712,8 @@
     function perfiles_styles() {
 
          //MAIN URLS
-        $plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles';
-        $plugin_quote = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion';
+        $plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles';
+        $plugin_quote = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion';
 
         function general_client_styles(){
             wp_enqueue_script('JS', plugins_url('src/js/btnLoginRegister.js',__FILE__),array('jquery'));

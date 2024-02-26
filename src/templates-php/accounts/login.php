@@ -23,7 +23,7 @@
             <div class='card' style='min-width: 18rem; max-width: 26rem; margin: 0 auto; margin-top: 10rem; -webkit-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75);'>
                 <a href='https://kalstein.net/es/' style='margin: 0 auto;'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png' class='card-img-top' style='width: 200px;  margin-top: 4rem; margin-bottom: 2rem;'></a>
                 <div class='card-body'>
-                    <h5 class='card-title text-center fs-5'>UwW! Nos alegra volver a verte.</h5>
+                    <h5 class='card-title text-center fs-5'>Kalstein Plus Development Enviroment.</h5>
                     <div class='col-md' style='margin-top: 1rem;'>
                         <div class='form-floating input-wrapper'>
                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
@@ -35,7 +35,7 @@
                             <div class='form-floating input-wrapper-p'>
                                 <input type='hidden' id='ipConnect'>
                                 <input type='password' class='form-control' id='passwordGrid' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                <label for='passwordGrid'>Pon aqui la contraseña mi pana</label>
+                                <label for='passwordGrid'>Contraseña es requerida</label>
                                 <i class='fa-sharp fa-solid fa-eye eye-03'></i>
                             </div>
                             <div class='passwordIncorrect' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Contraseña incorrecta</p></div>
@@ -44,7 +44,7 @@
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn'>Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2'>Continuar</button>
                     </div>
-                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? <span class="text-red-400 font-bold">Createla papa</span> <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Registrate</a></span></p>
+                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a></span></p>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
       theme: {
         extend: {
           colors: {
-            clifford: '#da373d',
+            clifford: '#000000',
           }
         }
       }
