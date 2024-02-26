@@ -4,7 +4,8 @@ const rerender = () => {
     $('body').localize();
   }
 
-$(function () {
+  jQuery(document).ready(function($){
+    $(function () {
     i18next
         .use(i18nextBrowserLanguageDetector)
         .init({
@@ -48,3 +49,4 @@ $(function () {
             });
         });
 });
+  });
