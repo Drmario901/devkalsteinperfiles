@@ -1,7 +1,7 @@
 //PETICIONES FETCH:
 const getObjeto = async() => {
 	try { //Se ejecuta cuando no hay errores
-		const res = await fetch("template-php/accounts/es.json");
+		const res = await fetch("https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/JSON/template-php/accounts/es.json");
 		const objeto = await res.json();
 
 		function obtenerValor(clave) {
