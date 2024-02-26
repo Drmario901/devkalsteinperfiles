@@ -1,6 +1,3 @@
-const login_en = require('../locale/en/login.json')
-
-const login_es = require('../locale/es/login.json')
 
 const lngs = {
     en: { nativeName: 'English' },
