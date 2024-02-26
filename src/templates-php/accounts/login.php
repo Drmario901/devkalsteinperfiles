@@ -38,7 +38,7 @@
                     <div class='col-md' style='margin-top: 1rem;'>
                         <div class='form-floating input-wrapper'>
                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                            <label for='emailUser' data-i18n="login.correo">Correo electrónico</label>                               
+                            <label for='emailUser' data-i18n="login.labelCorreo">Correo electrónico</label>                               
                         </div>
                         <div class='emailError' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>El correo no es válido</p></div>
                         <div class='emailNoRegister' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Correo electrónico no registrado</p></div>
@@ -50,7 +50,7 @@
                                 <i class='fa-sharp fa-solid fa-eye eye-03'></i>
                             </div>
                             <div class='passwordIncorrect' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Contraseña incorrecta</p></div>
-                            <p style='margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'><span class='forgotpw' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='#' id='btnForgotPassword' data-i18n="forgotPassword">¿Olvidaste tu contraseña?</a></span></p>
+                            <p style='margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'><span class='forgotpw' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='#' id='btnForgotPassword' data-i18n="login.forgotPassword">¿Olvidaste tu contraseña?</a></span></p>
                         </div>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn' data-i18n="login.tittleButton">Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2'>Continuar</button>

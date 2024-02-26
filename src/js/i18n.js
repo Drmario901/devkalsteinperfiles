@@ -18,6 +18,7 @@ const rerender = () => {
                             labelCorreo: 'Email',
                             titleButton: 'Continue',
                             noAccount: 'Don\'t have an account?',
+                            forgotPassword: 'Forgot your password?',
                             spanAccount: 'Sign up'
                         }
                     }
@@ -29,6 +30,7 @@ const rerender = () => {
                                 labelCorreo: 'Correo Electronico',
                                 titleButton: 'Continuar',
                                 noAccount: '¿No tienes una cuenta?',
+                                forgotPassword: '¿Olvidaste tu contraseña?',
                                 spanAccount: 'Registrate'
                             }
                         }
