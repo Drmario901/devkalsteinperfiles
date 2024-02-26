@@ -1,3 +1,7 @@
+const login_en = require('../locale/en/login.json')
+
+const login_es = require('../locale/es/login.json')
+
 const lngs = {
     en: { nativeName: 'English' },
     es: { nativeName: 'Spanish' }
@@ -28,10 +32,10 @@ const lngs = {
             defaultNS: 'login',
             resources: {
               en: {
-                login: require('../locale/en/login.json')
+                login: login_en
               },
               es: {
-                login: require('../locale/es/login.json')
+                login: login_es
               }
             }
           }, (err, t) => {
