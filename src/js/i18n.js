@@ -1,3 +1,9 @@
+const rerender = () => {
+    // start localizing, details:
+    // https://github.com/i18next/jquery-i18next#usage-of-selector-function
+    $('body').localize();
+  }
+
 $(function () {
     i18next
         .use(i18nextBrowserLanguageDetector)

@@ -26,6 +26,7 @@
         <option value="es">Spanish</option>
 </select>
 
+<body>
 <div class='container'>
     <div id='contentLogin' class='row align-items-start'>
         <div class='col'>
@@ -79,6 +80,7 @@
         </div>
     </div>
 </div>
+</body>
 
 <script>
     tailwind.config = {
@@ -92,32 +94,5 @@
     }
 </script>
 
-<script>
-    $(document).ready(function() {
-        i18next.use(i18nextBrowserLanguageDetector).init({
-            resources: {
-                en: {
-                    translation: {
-                        labelEmail: 'Email',
-                        tittleButton: 'Continue',
-                        forgotPassword: 'Forgot your password?',
-                    }
-                },
-                es: {
-                    translation: {
-                        labelEmail: 'Correo electrónico',
-                        tittleButton: 'Continuar',
-                        forgotPassword: '¿Olvidaste tu contraseña?',
-                    }
-                }
-            }
-        }, function(err, t) {
-            jqueryI18next.init(i18next, $);
-            $('[data-i18n]').localize();
-        });
-
-        $('#language-select').change(function() {
-            i18next.changeLanguage($(this).val());
-        });
-    });
+<script src="js/i18n.js">
 </script>
