@@ -42,6 +42,8 @@ i18next
         function changeLanguage(event) {
             const chosenLng = event.target.value;
             i18next.changeLanguage(chosenLng);
+
+            console.log(chosenLng)
         }
 
         // Rellena el selector de idioma
