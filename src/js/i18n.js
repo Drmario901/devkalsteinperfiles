@@ -1,3 +1,9 @@
+const lngs = {
+    en: { nativeName: 'English' },
+    es: { nativeName: 'Spanish' }
+  };
+  
+
 const rerender = () => {
     // start localizing, details:
     // https://github.com/i18next/jquery-i18next#usage-of-selector-function
