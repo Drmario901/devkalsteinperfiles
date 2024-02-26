@@ -92,5 +92,32 @@
     }
 </script>
 
-<script src="../../js/i18n.js">
+<script>
+    $(document).ready(function() {
+        i18next.use(i18nextBrowserLanguageDetector).init({
+            resources: {
+                en: {
+                    translation: {
+                        labelEmail: 'Email',
+                        tittleButton: 'Continue',
+                        forgotPassword: 'Forgot your password?',
+                    }
+                },
+                es: {
+                    translation: {
+                        labelEmail: 'Correo electrónico',
+                        tittleButton: 'Continuar',
+                        forgotPassword: '¿Olvidaste tu contraseña?',
+                    }
+                }
+            }
+        }, function(err, t) {
+            jqueryI18next.init(i18next, $);
+            $('[data-i18n]').localize();
+        });
+
+        $('#language-select').change(function() {
+            i18next.changeLanguage($(this).val());
+        });
+    });
 </script>
