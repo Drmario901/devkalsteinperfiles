@@ -25,7 +25,7 @@ const lngs = {
           .init({
             debug: true,
             fallbackLng: 'en',
-            ns: ['common', 'login'], // Especifica los namespaces que deseas cargar
+            ns: ['login'], // Especifica los namespaces que deseas cargar
             defaultNS: 'login',
             resources: {}
           }, (err, t) => {
