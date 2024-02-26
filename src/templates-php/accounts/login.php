@@ -21,6 +21,11 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
 
+<select id="language-select">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+</select>
+
 <div class='container'>
     <div id='contentLogin' class='row align-items-start'>
         <div class='col'>
