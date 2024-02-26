@@ -1,67 +1,74 @@
-const rerender = () => {
-    // start localizing, details:
-    // https://github.com/i18next/jquery-i18next#usage-of-selector-function
-    $('body').localize();
-  }
+const lngs = {
+    en: { nativeName: 'English' },
+    es: { nativeName: 'Spanish' }
+    de: { nativeName: 'Deustsh' }
+  };
+  
+
+  const rerender = () => {
+    // Traduce cada elemento individualmente
+    $('[data-i18n]').each(function() {
+        const key = $(this).attr('data-i18n');
+        $(this).text(i18next.t(key));
+    });
+}
+
+
 
   jQuery(document).ready(function($){
     $(function () {
-    i18next
-        .use(i18nextBrowserLanguageDetector)
-        .init({
+        // use plugins and options as needed, for options, detail see
+        i18next
+          // detect user language
+          .use(i18nextBrowserLanguageDetector)
+          // init i18next
+          .init({
             debug: true,
-            fallbackLng: 'es',
+            fallbackLng: 'en',
             resources: {
-                en: {
-                    translation: {
-                        login: {
-                            labelCorreo: 'Email',
-                            tittleButton: 'Continue',
-                            noAccount: 'Don\'t have an account?',
-                            forgotPassword: 'Forgot your password?',
-                            spanAccount: 'Sign up'
-                        }
-                    }
-                },
-                es: {
-                    translation: {
-                        translation: {
-                            login: {
-                                labelCorreo: 'Correo Electronico',
-                                tittleButton: 'Continuar',
-                                noAccount: '¿No tienes una cuenta?',
-                                forgotPassword: '¿Olvidaste tu contraseña?',
-                                spanAccount: 'Registrate'
-                            }
-                        }
-                    }
+              en: {
+                translation: {
+                  login: {
+                    labelCorreo: 'Email',
+                    tittleButton: 'Continue',
+                    noAccount: 'Don\'t have an account?',
+                    forgotPassword: 'Forgot your password?',
+                    spanAccount: 'Sign up'
                 }
-                // Añade más idiomas según sea necesario
+                }
+              },
+              es: {
+                translation: {
+                  login: {
+                    labelCorreo: 'Correo Electronico',
+                    tittleButton: 'Continuar',
+                    noAccount: '¿No tienes una cuenta?',
+                    forgotPassword: '¿Olvidaste tu contraseña?',
+                    spanAccount: 'Registrate'
+                  }
+                }
+              }
             }
-        }, function (err, t) {
+          }, (err, t) => {
             if (err) return console.error(err);
-            // Inicialización de jquery-i18next
             jqueryI18next.init(i18next, $, { useOptionsAttr: true });
-
-            // Localización de elementos HTML
-            $('body').localize();
-
-             // fill language switcher
+      
+            // fill language switcher
             Object.keys(lngs).map((lng) => {
-                const opt = new Option(lngs[lng].nativeName, lng);
-                if (lng === i18next.resolvedLanguage) {
+              const opt = new Option(lngs[lng].nativeName, lng);
+              if (lng === i18next.resolvedLanguage) {
                 opt.setAttribute("selected", "selected");
-                }
-                $('#languageSwitcher').append(opt);
+              }
+              $('#languageSwitcher').append(opt);
             });
             $('#languageSwitcher').change((a, b, c) => {
-                const chosenLng = $(this).find("option:selected").attr('value');
-                i18next.changeLanguage(chosenLng, () => {
+              const chosenLng = $(this).find("option:selected").attr('value');
+              i18next.changeLanguage(chosenLng, () => {
                 rerender();
-                });
+              });
             });
-        
+      
             rerender();
-        });
-});
+          });
+      });
   });
