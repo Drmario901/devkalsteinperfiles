@@ -27,14 +27,7 @@ const lngs = {
             fallbackLng: 'en',
             ns: ['common', 'login'], // Especifica los namespaces que deseas cargar
             defaultNS: 'login',
-            resources: {
-              en: {
-                login: login_en
-              },
-              es: {
-                login: login_es
-              }
-            }
+            resources: {}
           }, (err, t) => {
             if (err) return console.error(err);
             jqueryI18next.init(i18next, $, { useOptionsAttr: true });
