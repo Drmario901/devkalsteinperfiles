@@ -23,7 +23,8 @@
 <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
 
 <select id="languageSwitcher">
-
+    <option value="en">English</option>
+    <option value="es">Español</option>
 </select>
 
 <body>
