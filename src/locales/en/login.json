@@ -4,5 +4,6 @@
     "noAccount": "Don\t have an account?",
     "forgotPassword": "Forgot your password?",
     "spanAccount": "Sign up",
-    "title": "Kalstein Plus Development Enviroment"
+    "title": "Kalstein Plus Development Enviroment",
+    "incorrectPassword": "Incorrect password"
 }
