@@ -43,7 +43,7 @@ const lngs = {
 
             Promise.all(Object.keys(lngs).map(lng =>
                 Promise.all(i18next.options.ns.map(ns =>
-                  fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locale/${lng}/${ns}.json`).then(response => response.json())
+                  fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/${ns}.json`).then(response => response.json())
                 )).then(([...namespaceResources]) => {
                   const resources = {};
                   i18next.options.ns.forEach((ns, index) => {
