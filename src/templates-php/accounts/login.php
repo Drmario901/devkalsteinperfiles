@@ -13,11 +13,6 @@
     session_write_close();
 ?>
 
-<script>
-alert("HOA")
-</script>
-
-
 <input type="hidden" id="search-product" value="<?php echo $search ?>">
 <link rel="icon" type="image/x-icon" href="https://kalstein.us/wp-content/plugins/kalsteinPerfiles/src/images/favicon.ico">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -49,7 +44,7 @@ alert("HOA")
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn'>Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2'>Continuar</button>
                     </div>
-                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? <span class="text-red-400 font-bold">Regístrate</span> <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a></span></p>
+                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿No posees una cuenta? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a></span></p>
                 </div>
             </div>
         </div>
