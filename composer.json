@@ -1,0 +1,14 @@
+{
+    "name": "he270716/kalstein-perfiles",
+    "autoload": {
+        "psr-4": {
+            "He270716\\KalsteinPerfiles\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "calcinai/php-imagick": "^0.1.2",
+        "google/apiclient": "^2.0",
+        "dansmaculotte/monetico-php": "^2.0"
+    }
+}
