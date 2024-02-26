@@ -1,6 +1,7 @@
 const lngs = {
     en: { nativeName: 'English' },
     es: { nativeName: 'Spanish' }
+    de: { nativeName: 'Deustsh' }
   };
   
 
