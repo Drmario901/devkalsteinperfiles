@@ -10,7 +10,7 @@ const rerender = () => {
         .use(i18nextBrowserLanguageDetector)
         .init({
             debug: true,
-            fallbackLng: 'en',
+            fallbackLng: 'es',
             resources: {
                 en: {
                     translation: {
@@ -46,15 +46,22 @@ const rerender = () => {
             // Localización de elementos HTML
             $('body').localize();
 
-            // Cambiar idioma al seleccionar una opción en el select
-            $('#language-select').on('change', function () {
-                var lang = $(this).val();
-                i18next.changeLanguage(lang, function (err, t) {
-                    if (err) return console.error(err);
-                    // Localización de elementos HTML al cambiar de idioma
-                    $('body').localize();
+             // fill language switcher
+            Object.keys(lngs).map((lng) => {
+                const opt = new Option(lngs[lng].nativeName, lng);
+                if (lng === i18next.resolvedLanguage) {
+                opt.setAttribute("selected", "selected");
+                }
+                $('#languageSwitcher').append(opt);
+            });
+            $('#languageSwitcher').change((a, b, c) => {
+                const chosenLng = $(this).find("option:selected").attr('value');
+                i18next.changeLanguage(chosenLng, () => {
+                rerender();
                 });
             });
+        
+            rerender();
         });
 });
   });
