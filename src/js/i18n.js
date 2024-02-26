@@ -14,18 +14,24 @@ const rerender = () => {
             resources: {
                 en: {
                     translation: {
-                        tittleButton: "Continue",
-                        forgotPassword: "Forgot password?",
-                        description: "This is a simple internationalization example.",
-                        labelEmail: "Email",
+                        login: {
+                            labelCorreo: 'Email',
+                            titleButton: 'Continue',
+                            noAccount: 'Don\'t have an account?',
+                            spanAccount: 'Sign up'
+                        }
                     }
                 },
                 es: {
                     translation: {
-                        tittleButton: "Continuar",
-                        description: "Este es un ejemplo simple de internacionalización.",
-                        forgotPassword: "¿Olvidaste tu contraseña?",
-                        labelEmail: "Correo",
+                        translation: {
+                            login: {
+                                labelCorreo: 'Correo Electronico',
+                                titleButton: 'Continuar',
+                                noAccount: '¿No tienes una cuenta?',
+                                spanAccount: 'Registrate'
+                            }
+                        }
                     }
                 }
                 // Añade más idiomas según sea necesario
