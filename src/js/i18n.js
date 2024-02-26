@@ -1,6 +1,6 @@
 const lngs = {
     en: { nativeName: 'English' },
-    es: { nativeName: 'Spanish' }
+    es: { nativeName: 'Spanish' },
     de: { nativeName: 'Deustsh' }
   };
   
@@ -25,27 +25,17 @@ const lngs = {
           .init({
             debug: true,
             fallbackLng: 'en',
+            ns: ['common', 'login'], // Especifica los namespaces que deseas cargar
+            defaultNS: 'login',
             resources: {
               en: {
                 translation: {
-                  login: {
-                    labelCorreo: 'Email',
-                    tittleButton: 'Continue',
-                    noAccount: 'Don\'t have an account?',
-                    forgotPassword: 'Forgot your password?',
-                    spanAccount: 'Sign up'
-                }
+
                 }
               },
               es: {
                 translation: {
-                  login: {
-                    labelCorreo: 'Correo Electronico',
-                    tittleButton: 'Continuar',
-                    noAccount: '¿No tienes una cuenta?',
-                    forgotPassword: '¿Olvidaste tu contraseña?',
-                    spanAccount: 'Registrate'
-                  }
+
                 }
               }
             }
