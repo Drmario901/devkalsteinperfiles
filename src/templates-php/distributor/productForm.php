@@ -319,12 +319,12 @@
     <!-- PRODUCT DATA -->
 
     <div class="col-12">
-        <div class="stock-title">Datos del producto</div>
+        <div class="stock-title" data-i18n="distribuidor:textDatosProduct">Datos del producto</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
-            <label>Categoría</label>
+            <label data-i18n="distribuidor:labelCategoria">Categoría</label>
             <select id="dataCategory" class="custom-select tm-select-accounts">
                 <option value=''>-- Elige una opción --</option>
                 <?php
