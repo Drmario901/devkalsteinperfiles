@@ -11,6 +11,14 @@ const lngs = {
   fr: { nativeName: 'French' }
 };
 
+// Obtener language from cookie
+const getLanguage = () => {
+  const cookie = document.cookie.split('; ').find(row => row.startsWith('language='));
+  return cookie ? cookie.split('=')[1] : 'en';
+};
+
+console.log(getLanguage());
+
 const rerender = () => {
   // Traduce cada elemento individualmente
   $('[data-i18n]').each(function() {
