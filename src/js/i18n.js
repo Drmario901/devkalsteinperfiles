@@ -47,19 +47,19 @@ const lngs = {
             });
 
             Promise.all(Object.keys(lngs).map(lng =>
-                Promise.all(i18next.options.ns.map(ns =>
-                  fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/${ns}.json`).then(response => response.json())
-                )).then(([...namespaceResources]) => {
-                  const resources = {};
-                  i18next.options.ns.forEach((ns, index) => {
-                    resources[ns] = namespaceResources[index];
-                  });
-                  i18next.addResourceBundle(lng, 'translation', resources);
-                })
-              )).then(() => {
-                // Una vez cargados todos los recursos, se llama a rerender
-                rerender();
-              });
+              Promise.all(i18next.options.ns.map(ns =>
+                  fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/${ns}.json`)
+                      .then(response => response.json())
+                      .then(translation => {
+                          const resources = {};
+                          resources[ns] = translation;
+                          i18next.addResourceBundle(lng, 'translation', resources);
+                      })
+              ))
+          )).then(() => {
+              // Una vez cargados todos los recursos, se llama a rerender
+              rerender();
+          });
 
             $('#languageSwitcher').change((a, b, c) => {
               const chosenLng = $(this).find("option:selected").attr('value');
