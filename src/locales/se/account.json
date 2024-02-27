@@ -83,5 +83,7 @@
     "codigoNoValido": "Ogiltig verifieringskod.",
     "nuevoCodigo": "Begär en ny verifieringskod här",
     "yaRegistrado": "Har du redan ett konto?",
-    "iniciarSesion": "Logga in"
+    "iniciarSesion": "Logga in",
+    "confirmEmail": "Bekräfta din e-postadress",
+    "sendLinkPassword": "Skicka länk för att återställa lösenordet"
 }

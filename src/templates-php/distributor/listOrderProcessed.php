@@ -25,9 +25,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes">Órdenes pendientes</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes/procesadas">Órdenes procesadas</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes/canceladas">Órdenes canceladas</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes/procesadas" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes/canceladas" data-i18n="distribuidor:parrafoOrdenesCancel">Órdenes canceladas</a>
         </nav>
         
         <br>
@@ -63,13 +63,13 @@
                     <thead class='headTableForQuote'>
                         <tr>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Cliente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Método de envío</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total en (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Fecha</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Estatus</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Detalles</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Ver</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='distribuidor:elementoCliente'>Cliente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='distribuidor:elementoMetodoEnvio'>Método de envío</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='distribuidor:elementoTotalUSD'>Total en (USD)</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoFecha'>Fecha</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoEstatus'>Estatus</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoDetalles'>Detalles</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoVer'>Ver</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -116,7 +116,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>Datos no encontrados</p></center>
+                                    <center><p style='color: #000;' data-i18n='distribuidor:parrafoDontHaveDataTwo'>Datos no encontrados</p></center>
                                 </div>
                             </td>
                         </tr>
@@ -136,7 +136,7 @@
                 $hiddenNext = $page * $perPage >= $All ? 'hidden' : '';
 
                 $html .= "
-                    <span> Página $page </span>
+                    <span data-i18n='distribuidor:spanPagina'> Página $page </span>
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px' $hiddenPrev>
                             <input type='hidden' name='i' value=".($prevPage).">

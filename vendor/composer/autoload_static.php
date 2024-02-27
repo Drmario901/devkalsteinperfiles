@@ -20,6 +20,10 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         array (
             'phpseclib3\\' => 11,
         ),
+        'T' => 
+        array (
+            'Twilio\\' => 7,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -60,6 +64,10 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         'phpseclib3\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+        ),
+        'Twilio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twilio/sdk/src/Twilio',
         ),
         'Psr\\Log\\' => 
         array (

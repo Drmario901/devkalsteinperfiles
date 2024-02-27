@@ -83,5 +83,7 @@
     "codigoNoValido": "Nieprawidłowy kod weryfikacyjny.",
     "nuevoCodigo": "Poproś tutaj o nowy kod weryfikacyjny",
     "yaRegistrado": "Masz już konto?",
-    "iniciarSesion": "Zaloguj się"
+    "iniciarSesion": "Zaloguj się",
+    "confirmEmail": "Confirme seu endereço de e-mail",
+    "sendLinkPassword": "Enviar link de redefinição de senha"
 }

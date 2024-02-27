@@ -83,5 +83,7 @@
     "codigoNoValido": "Il codice di verifica non è valido.",
     "nuevoCodigo": "Richiedi qui un nuovo codice di verifica",
     "yaRegistrado": "Hai già un account?",
-    "iniciarSesion": "Accedi"
+    "iniciarSesion": "Accedi",
+    "confirmEmail": "Conferma il tuo indirizzo email",
+    "sendLinkPassword": "Invia link per reimpostare la password"
 }

@@ -191,7 +191,7 @@ jQuery(document).ready(function($){
 
         
 
-        $('#pMsjSendingResetPassword').html('Confirm your email address <b>'+emailChange+'</b> to send you the link to reset your password.')
+        $('#pMsjSendingResetPassword').html('<span data-i18n="account:confirmEmail" ></span> <b>'+emailChange+'</b> <span data-i18n="account:sendLinkPassword"></span>')
 
         $('#contentLogin').css({'display' : 'none'})
 

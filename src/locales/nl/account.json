@@ -83,5 +83,7 @@
     "codigoNoValido": "De verificatiecode is ongeldig.",
     "nuevoCodigo": "Vraag hier een nieuwe verificatiecode aan",
     "yaRegistrado": "Heeft u al een account?",
-    "iniciarSesion": "Inloggen"
+    "iniciarSesion": "Inloggen",
+    "confirmEmail": "Bevestig uw e-mailadres",
+    "sendLinkPassword": "Stuur wachtwoordherstel link"
 }

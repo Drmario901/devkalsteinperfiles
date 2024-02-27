@@ -83,5 +83,7 @@
     "codigoNoValido": "Kinnituskood ei kehti.",
     "nuevoCodigo": "Paluge siin uut kinnituskoodi",
     "yaRegistrado": "Kas teil on juba konto?",
-    "iniciarSesion": "Logi sisse"
+    "iniciarSesion": "Logi sisse",
+    "confirmEmail": "Kinnitage oma e-posti aadress",
+    "sendLinkPassword": "Saada parooli lähtestamise link"
 }

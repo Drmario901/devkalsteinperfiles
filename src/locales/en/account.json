@@ -83,5 +83,7 @@
     "codigoNoValido": "The validation code is not valid.",
     "nuevoCodigo": "Request a new validation code here",
     "yaRegistrado": "Already have an account?",
-    "iniciarSesion": "Log in"
+    "iniciarSesion": "Log in",
+    "confirmEmail": "Confirma tu dirección de correo electrónico",
+    "sendLinkPassword": "Enviar enlace de restablecimiento de contraseña"
 }
