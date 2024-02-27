@@ -35,8 +35,8 @@
                     $current = date('Y-m-d h:i:s');
                     
                     $queryBans = "SELECT COUNT(*), ban_time FROM wp_bans WHERE ban_user = '$email' AND ban_time > '$current'";
-                    $resultBans2 = $conexion->query($queryBans); 
-                    $resultBans = mysqli_fetch_array($resulbans2);
+                    /*$resultBans2 = $conexion->query($queryBans); 
+                    $resultBans = mysqli_fetch_array($resulbans2);*/
          
                     if($resultBans[0] > 0){
                         $suspended = true;
