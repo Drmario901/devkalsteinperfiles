@@ -35,7 +35,7 @@
                     <h5 class='card-title text-center fs-5' data-i18n="account:Bienvenida">Kalstein Plus Development Enviroment.</h5>
                     <div class='col-md' style='margin-top: 1rem;'>
                         <div class='form-floating input-wrapper'>
-                            <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
+                            <input type='email' class='form-control' autocomplete="off" id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
                             <label for='emailUser' data-i18n="account:LabelCorreo">Correo electrónico</label>                             
                         </div>
                         <div class='emailError' style='display: none;'><p data-i18n="account:correoNoValido" style='color: #de3a46; font-weight: bold;'>El correo no es válido</p></div>
@@ -53,7 +53,12 @@
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn' data-i18n="account:tittleButton">Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2' data-i18n="account:tittleButton">Continuar</button>
                     </div>
-                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;' data-i18n="account:noAccount">¿No posees una cuenta? </p><span  class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a data-i18n="account:registrate" href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a></span>
+                    <div style="display: flex; align-items: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em; margin-right: 0.5rem;" data-i18n="account:noAccount">¿No posees una cuenta?</p>
+                        <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold; margin-top: -3rem;'>
+                            <a data-i18n="account:registrate" href='https://dev.kalstein.plus/plataforma/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

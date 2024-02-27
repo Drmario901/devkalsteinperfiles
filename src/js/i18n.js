@@ -11,6 +11,12 @@ const lngs = {
   fr: { nativeName: 'French' }
 };
 
+// Obtener language from cookie
+const getLanguage = () => {
+  const cookie = document.cookie.split('; ').find(row => row.startsWith('language='));
+  return cookie ? cookie.split('=')[1] : 'en';
+};
+
 const rerender = () => {
   // Traduce cada elemento individualmente
   $('[data-i18n]').each(function() {
@@ -24,19 +30,14 @@ jQuery(document).ready(function($){
   $(function () {
   i18next
     // detect user language
-    .use(i18nextBrowserLanguageDetector)
     // init i18next
     .init({
       debug: true,
+      lng: getLanguage(),
       fallbackLng: 'en',
       ns: ['account', 'prueba'],
       defaultNS: 'account', // Establecer el namespace predeterminado
-      resources: {
-        en: {
-        }, 
-        es: {
-        }
-      }
+      resources: {}
     }, (err, t) => {
       if (err) return console.error(err);
 
@@ -50,6 +51,7 @@ jQuery(document).ready(function($){
         ))
       )).then(() => {
         // Inicializar jquery-i18next
+        console.log(getLanguage());
         jqueryI18next.init(i18next, $, { useOptionsAttr: true });
 
         // fill language switcher
