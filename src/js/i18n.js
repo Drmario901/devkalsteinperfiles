@@ -52,6 +52,7 @@ const lngs = {
                       .then(response => response.json())
                       .then(translation => {
                           const resources = {};
+                          console.log(translation);
                           resources[ns] = translation;
                           i18next.addResourceBundle(lng, 'translation', resources);
                       })
