@@ -13,9 +13,9 @@ if (isset($_GET['lang'])) {
 
 //COOKIE PAÍS
 if (isset($_GET['country'])) {
-    $language = $_GET['country'];
+    $country = $_GET['country'];
 
-    setcookie('country', $language, time() + (86400 * 30), "/");
+    setcookie('country', $country, time() + (86400 * 30), "/");
 
     echo "Country: " . $_COOKIE['country'];
 } else {
