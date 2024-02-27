@@ -11,6 +11,7 @@ const rerender = () => {
   });
 }
 
+// Inicializar i18next y jquery-i18next
 jQuery(document).ready(function($){
   $(function () {
   i18next
@@ -24,7 +25,7 @@ jQuery(document).ready(function($){
       defaultNS: 'login', // Establecer el namespace predeterminado
       resources: {
         en: {
-        },
+        }, 
         es: {
         }
       }
@@ -34,7 +35,7 @@ jQuery(document).ready(function($){
       // Cargar los archivos JSON para cada idioma y namespace
       Promise.all(Object.keys(lngs).map(lng =>
         Promise.all(i18next.options.ns.map(ns =>
-          fetch(`locales/${lng}/${ns}.json`).then(response => response.json())
+          fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/${ns}.json`).then(response => response.json())
             .then(translation =>
               i18next.addResourceBundle(lng, ns, translation)
             )
