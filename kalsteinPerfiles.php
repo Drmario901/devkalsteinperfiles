@@ -709,7 +709,10 @@
         }       
     
         function translations() {
+            wp_enqueue_script('i18next', plugins_url('src/js/i18next.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('i18n', plugins_url('src/js/i18n.js',__FILE__),array('jquery'));
+            wp_enqueue_script('jQuery-3.4.0', plugins_url('src/js/jquery-migrate-3.4.0.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('jQuery-i18n', plugins_url('src/js/jquery-i18next.min.js',__FILE__),array('jquery'));
         }
 
     function perfiles_styles() {
