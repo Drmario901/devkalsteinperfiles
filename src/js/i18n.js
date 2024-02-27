@@ -32,19 +32,14 @@ jQuery(document).ready(function($){
   $(function () {
   i18next
     // detect user language
-    .use(i18nextBrowserLanguageDetector)
     // init i18next
     .init({
       debug: true,
+      lng: getLanguage(),
       fallbackLng: 'en',
       ns: ['account', 'prueba'],
       defaultNS: 'account', // Establecer el namespace predeterminado
-      resources: {
-        en: {
-        }, 
-        es: {
-        }
-      }
+      resources: {}
     }, (err, t) => {
       if (err) return console.error(err);
 
