@@ -326,7 +326,7 @@
         <div class="col-12 col-sm-6 form-group mb-3">
             <label data-i18n="distribuidor:labelCategoria">Categoría</label>
             <select id="dataCategory" class="custom-select tm-select-accounts">
-                <option value=''>-- Elige una opción --</option>
+                <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
                 <?php
                     require __DIR__.'/../../../php/conexion.php';
                 
@@ -357,8 +357,8 @@
     <div class="row mb-3">
         <!-- GROSS -->
         <div class="col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Producto <i class="fas fa-microscope"></i></h6>
-            <label>Peso neto (kg)</label>
+            <h6 class="tm-block-title mb-0"><span data-i18n="distribuidor:labelSubtitleProduct">Producto</span> <i class="fas fa-microscope"></i></h6>
+            <label data-i18n="distribuidor:labelPesoNeto">Peso neto (kg)</label>
             <input
                 id="weProduct"
                 type="number"
@@ -369,7 +369,7 @@
                 min="0"
             />
 
-            <labe>Ancho (cm)</label>
+            <label data-i18n="distribuidor:labelAncho">Ancho (cm)</label>
             <input
                 id="wiProduct"
                 type="number"
@@ -378,7 +378,7 @@
                 min="0"
             />
 
-            <label>Alto (cm)</label>
+            <label data-i18n="distribuidor:labelAlto">Alto (cm)</label>
             <input
                 id="heProduct"
                 type="number"
@@ -387,7 +387,7 @@
                 min="0"
             />
 
-            <label>Largo (cm)</label>
+            <label data-i18n="distribuidor:labelLargo">Largo (cm)</label>
             <input
                 id="leProduct"
                 type="number"
@@ -398,8 +398,8 @@
         </div>
         <!-- PACKAGED -->
         <div class=" col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Empaque <i class="fas fa-box"></i></h6>
-            <label>Peso bruto (kg)</label>
+            <h6 class="tm-block-title mb-0"><span data-i18n="distribuidor:subtitleEmpaque">Empaque</span> <i class="fas fa-box"></i></h6>
+            <label data-i18n="distribuidor:labelPesoBruto">Peso bruto (kg)</label>
             <input
                 id="weProductPa"
                 type="number"
