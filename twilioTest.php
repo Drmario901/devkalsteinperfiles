@@ -3,12 +3,12 @@ require 'vendor/autoload.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-$code = 'Chávez vive la lucha sigue.';
+$code = 'Feid';
 /*if(isset($_SESSION["codeVerification"])){
     $code = $_SESSION["codeVerification"];
 }*/
 
-$phoneNumber = '+584128484468'; 
+$phoneNumber = '+584120182256'; 
 
 use Twilio\Rest\Client;
 
@@ -18,16 +18,16 @@ $twilioPhoneNumber = '+15107383214';
 $client = new Client($sid, $token);
 
 try {
-    $call = $client->calls->create(
+    $message = $client->messages->create(
         $phoneNumber, 
-        $twilioPhoneNumber, 
-        [
-            "twiml" => "<Response><Say voice='alice' language='es-MX'>4030293482340983</Say></Response>"
-        ]
+        array(
+            'from' => $twilioPhoneNumber, 
+            'body' => $code
+        )
     );
 
-    echo 'La llamada ha sido iniciada';
+    echo 'El mensaje ha sido enviado';
 } catch (Exception $e) {
-    echo 'La llamada no se ha podido realizar, error: ' . $e->getMessage();
+    echo 'El mensaje no se ha podido enviar, error: ' . $e->getMessage();
 }
 ?>
