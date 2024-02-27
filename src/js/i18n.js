@@ -29,8 +29,8 @@ jQuery(document).ready(function($){
     .init({
       debug: true,
       fallbackLng: 'en',
-      ns: ['login', 'prueba'],
-      defaultNS: 'login', // Establecer el namespace predeterminado
+      ns: ['account', 'prueba'],
+      defaultNS: 'account', // Establecer el namespace predeterminado
       resources: {
         en: {
         }, 
