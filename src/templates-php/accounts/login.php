@@ -27,7 +27,7 @@ if (isset($_GET['country'])) {
 
 echo "Country: " . (isset($_COOKIE['country']) ? $_COOKIE['country'] : "No country set.");
 
-session_write_close();
+//session_write_close();
 ?>
 
 
