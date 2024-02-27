@@ -81,7 +81,7 @@
         
                         <div>
                             <p class="profile-title"><?php echo $acc_name ?></p>
-                            <p class="profile-subtitle">Distribuidor</p>
+                            <p class="profile-subtitle" data-i18n="distribuidor:parrafoDistribuidor">Distribuidor</p>
                         </div>
         
                     </a>
@@ -99,37 +99,37 @@
     
                 <li>
                     <a id="link-stock" href="https://plataforma.kalstein.net/index.php/distribuidor/productos" class="navbar-link icon-box">
-                        <span>Productos</span>
+                        <span data-i18n="distribuidor:linkProducts">Productos</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-list-order" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes" class="navbar-link icon-box">
-                        <span>Órdenes</span>
+                        <span data-i18n="distribuidor:linkOrders">Órdenes</span>
                     </a>
                 </li>
 
                 <li>
                     <a id="link-catalogs" href="https://plataforma.kalstein.net/index.php/distribuidor/catalogos" class="navbar-link icon-box">
-                        <span>Catálogos</span>
+                        <span data-i18n="distribuidor:linkCatalogs">Catálogos</span>
                     </a>
                 </li>
 
                 <li>
                     <a id="link-shop" href="https://plataforma.kalstein.net/index.php/distribuidor/tienda" class="navbar-link icon-box">
-                        <span>Tienda</span>
+                        <span data-i18n="distribuidor:linkShop">Tienda</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-sales" href="https://plataforma.kalstein.net/index.php/distribuidor/ventas" class="navbar-link icon-box">
-                        <span>Reporte de ventas</span>
+                        <span data-i18n="distribuidor:linkRepVentas">Reporte de ventas</span>
                     </a>
                 </li>
 
                 <li class='generate-quote'> <!-- only style class-->
                     <a id='btnGenQuote' href="https://plataforma.kalstein.net/index.php/distribuidor/productos/agregar" class='navbar-link icon-box text-white' style='color: white !important;'>
-                        <span>AGREGAR UN PRODUCTO</span>
+                        <span data-i18n="distribuidor:btnAgregarProducto">AGREGAR UN PRODUCTO</span>
                     </a>
                 </li>
             </ul>

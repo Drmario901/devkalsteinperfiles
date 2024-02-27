@@ -49,33 +49,33 @@
             <div class="container-calc">
                 <form class='calculator-form' method="post">
         
-                    <label for="product">Por favor selecciona el método que quieras consultar</label>
+                    <label data-i18n="distribuidor:labelMetodo" for="product">Por favor selecciona el método que quieras consultar</label>
                     <select style="color: #000 !important" name="product" id="product">
-                        <option value="selected">Selecciona una opción para calcular</option>
-                        <option value="maritime">Marítimo</option>
-                        <option value="aerial">Aéreo</option>
+                        <option value="selected" data-i18n="distribuidor:optionMetodoOne">Selecciona una opción para calcular</option>
+                        <option value="maritime" data-i18n="distribuidor:optionMetodoTwo">Marítimo</option>
+                        <option value="aerial" data-i18n="distribuidor:optionMetodoThree">Aéreo</option>
                     </select>
         
                     <div id="show-aerial" hidden>
                         <center><p style="font-size: 30px">EXW Kalstein Shangai</p></center>
-                        <label for="show-maritime">Por favor ingresa las medidas necesarias para calcular</label>
+                        <label for="show-maritime" data-i18n="distribuidor:labelAlmacen">Por favor ingresa las medidas necesarias para calcular</label>
                         <input type="number" style="color: #000 !important" id="height-a" placeholder="Alto" value="" />
                         <input type="number" style="color: #000 !important" id="width-a" placeholder="Ancho" value="" />
                         <input type="number" style="color: #000 !important" id="length-a" placeholder="Largo" value="" />
                         <input type="number" style="color: #000 !important" id="quantity-a" placeholder="Cantidad" value="" />
                         <input type="number" style="color: #000 !important" id="weightBoxFT" placeholder="Peso" value="" />
-                        <label for="show-maritime">Selecciona el país que quieres calcular:</label>
+                        <label for="show-maritime" data-i18n="distribuidor:labelPais">Selecciona el país que quieres calcular:</label>
                         <select style="color: #000 !important" name="selectCountryAerial" id="selectCountryAerial"></select>
                         <input type="number" style="color: #000 !important" id="result-a" placeholder="Resultado" value="" readonly/>
                     </div>
             
                     <div id="show-maritime" hidden>
                         <center><p style="font-size: 30px">EXW Kalstein Shangai</p></center>
-                        <label for="show-maritime">Por favor ingresa las medidas necesarias</label>
+                        <label for="show-maritime" data-i18n="distribuidor:labelAlmacenTwo">Por favor ingresa las medidas necesarias</label>
                         <input type="number" style="color: #000 !important" id="height-m" placeholder="Alto" value="" />
                         <input type="number" style="color: #000 !important" id="width-m" placeholder="Ancho" value="" />
                         <input type="number" style="color: #000 !important" id="length-m" placeholder="Largo" value="" />
-                        <label for="show-maritime">Selecciona el país al que quieres calcular:</label>
+                        <label for="show-maritime" data-i18n="distribuidor:labelPaisTwo">Selecciona el país al que quieres calcular:</label>
                         <select style="color: #000 !important" id="selectCountryMaritimal"></select>
                         <input type="number" style="color: #000 !important" id="result-m" placeholder="Resultado" value="" readonly/>
                     </div>
@@ -90,7 +90,7 @@
 
         <div class="col-12 col-md-5">
             <div class="container-history">
-                <label class="mb-2"> Historial</label>
+                <label class="mb-2" data-i18n="distribuidor:labelHistorial"> Historial</label>
                 <div id="results-history">
 
                 </div>

@@ -2,14 +2,14 @@
     if ($add){
         $stock_inputs = "
         <div class='form-group mb-3 col-12'>
-            <label>Unidades en existencias</label>
+            <label data-i18n='distribuidor:labelUnidexis'>Unidades en existencias</label>
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-xs-12 col-sm-6' hidden>
-            <label>Status</label>
+            <label data-i18n='distribuidor:labelStatus'>Status</label>
             <select  id='statusProduct' style='width: 200px'>
-            <option class='text-dark' value='in stock'> En existencias </option>
-            <option class='text-dark' value='out of stock'> Agotado </option>
+            <option class='text-dark' value='in stock' data-i18n='distribuidor:optionExistencias'> En existencias </option>
+            <option class='text-dark' value='out of stock' data-i18n='distribuidor:optionAgotado'> Agotado </option>
             </select>
         </div>
         ";
@@ -17,14 +17,14 @@
     else{
         $stock_inputs = "
         <div class='form-group mb-3 col-12 col-sm-6'>
-            <label>Unidades en existencias</label>
+            <label data-i18n='distribuidor:labelUnidexis'>Unidades en existencias</label>
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-12 col-sm-6'>
-            <label>Status</label>
+            <label data-i18n='distribuidor:labelStatus'>Status</label>
             <select  id='statusProduct' style='width: 200px'>
-                <option class='text-dark' value='in stock'> En existencias </option>
-                <option class='text-dark' value='out of stock'> Agotado </option>
+                <option class='text-dark' value='in stock' data-i18n='distribuidor:optionExistencias'> En existencias </option>
+                <option class='text-dark' value='out of stock' data-i18n='distribuidor:optionAgotado'> Agotado </option>
             </select>
         </div>
         ";
@@ -207,16 +207,16 @@
         <!-- BASIC DATA -->
         <div class="col-12 col-md-6">
 
-            <label>Nombre</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre"/>
+            <label data-i18n="distribuidor:labelNombre">Nombre</label>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="labelNombre" placeholder="Nombre"/>
 
             
             <!-- no fake brand input -->
-                <label>Marca</label>
-                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" placeholder="Marca"/>
+                <label data-i18n="distribuidor:labelMarca">Marca</label>
+                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="labelMarca" placeholder="Marca"/>
             
-            <label>Modelo</label>
-            <input id="modelProduct" type="text" class="form-control validate mb-3" placeholder="Modelo"/>
+            <label data-i18n="distribuidor:labelModelo">Modelo</label>
+            <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="labelModelo" placeholder="Modelo"/>
             
         </div>
 
@@ -224,10 +224,10 @@
 
         <!-- PRODUCT IMAGE -->
         <div class="col-12 col-md-6 mb-4">
-            <label>Imágen de producto</label>
+            <label data-i18n="distribuidor:labelImagenProduct">Imágen de producto</label>
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
-                    <span class="drop-title">Selecciona o arrastra y suelta una imágen</span>
+                    <span class="drop-title" data-i18n="distribuidor:labelDragAndDrop">Selecciona o arrastra y suelta una imágen</span>
                     <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
@@ -236,25 +236,25 @@
         </div>
 
         <div class="col-12 mb-4">
-            <label>Descripción</label>
-            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" placeholder="Describe tu producto en menos de 5000 carácteres
-            " ></textarea>
+            <label data-i18n="distribuidor:labelDescripcion">Descripción</label>
+            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" data-placeholder="placeholderDescripcion" placeholder="Describe tu producto en menos de 5000 carácteres
+            "></textarea>
         </div>
     </div>
 
     <!-- TABLA TECNICA -->
 
     <div class="row">
-        <label>Hoja de especificaciones</label>
+        <label data-i18n="distribuidor:labelHojaEspecific">Hoja de especificaciones</label>
         <div class="col-12">
             <div class='table-editor-selector mb-3'>
-                <div id='stock-ignore-table' class="selected">
+                <div id='stock-ignore-table' class="selected" data-i18n="distribuidor:labelNinguna">
                     Ninguna
                 </div>
-                <div id='stock-basic-editor'>
+                <div id='stock-basic-editor' data-i18n="distribuidor:labelTablaBasica">
                     Tabla básica
                 </div>
-                <div id='stock-excel-editor'>
+                <div id='stock-excel-editor' data-i18n="distribuidor:labelTablaExcel">
                     Tabla de Excel
                 </div>
             </div>
@@ -269,7 +269,7 @@
                         <button id="stock-table-button-plus">+</button>
                         <button id="stock-table-button-minus">-</button>
                     </div>
-                    <small>Toca las celdas para editarlas</small>
+                    <small data-i18n="distribuidor:celdasEdit">Toca las celdas para editarlas</small>
                     <div class="row">
                         <div id="stock-table-keys" class="col-6">
                             <div><input id="table-keys-1" type="text" value="Ejemplo"></div>
@@ -286,19 +286,19 @@
             </div>
 
             <!-- EXCEL -->
-            <div id="stock-excel-table" class="mb-4" hidden>
+            <div id="stock-excel-table" class="mb-4" hidden data-i18n="distribuidor:archivoExcelCSV">
 
                 Incluye un archivo Microsoft Excel o un .csv
                 
-                <div id="paste-excel-clipboard" class="btn-clipboard mb-3">
+                <div id="paste-excel-clipboard" class="btn-clipboard mb-3" data-i18n="distribuidor:textPortapapeles">
                     Pegar del portapapeles <i class="fa-regular fa-clipboard"></i>
                 </div>
 
-                <textarea id="csv" hidden>ejemplo</textarea>
+                <textarea id="csv" hidden data-i18n="distribuidor:textEjemplo">ejemplo</textarea>
 
-                <span>Tiene cabecera<input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
+                <span data-i18n="distribuidor:textHaveHeader">Tiene cabecera<input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
 
-                <label>Prevista</label>
+                <label data-i18n="distribuidor:textPrevista">Prevista</label>
                 <table id="resultTable" class='table p-prev-table'>
                     <thead>
                         <th>Ejemplo</th>
