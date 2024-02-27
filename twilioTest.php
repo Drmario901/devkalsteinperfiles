@@ -22,7 +22,7 @@ try {
         $phoneNumber, 
         $twilioPhoneNumber, 
         [
-            "twiml" => "<Response><Say voice='alice' language='es-MX'>Tu código de verificación es $code</Say></Response>"
+            "twiml" => "<Response><Say voice='alice' language='es-MX'>4030293482340983</Say></Response>"
         ]
     );
 
