@@ -6,5 +6,3 @@ echo '<script>
 
 </script>'
 ?>
-
-<!-- hola owo -->
