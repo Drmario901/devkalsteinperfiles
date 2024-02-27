@@ -29,10 +29,8 @@ const lngs = {
             ns: ['login'], // Especifica los namespaces que deseas cargar
             resources: {
               en: {
-                  login: {}
               },
               es: {
-                  login: {}
               }
           }
           }, (err, t) => {
