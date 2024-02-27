@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-$code = 'Feid';
+$code = 'Chávez vive la lucha sigue.';
 /*if(isset($_SESSION["codeVerification"])){
     $code = $_SESSION["codeVerification"];
 }*/
@@ -18,16 +18,16 @@ $twilioPhoneNumber = '+15107383214';
 $client = new Client($sid, $token);
 
 try {
-    $message = $client->messages->create(
+    $call = $client->calls->create(
         $phoneNumber, 
-        array(
-            'from' => $twilioPhoneNumber, 
-            'body' => $code
-        )
+        $twilioPhoneNumber, 
+        [
+            "twiml" => "<Response><Say voice='alice' language='es-MX'>Tu código de verificación es $code</Say></Response>"
+        ]
     );
 
-    echo 'El mensaje ha sido enviado';
+    echo 'La llamada ha sido iniciada';
 } catch (Exception $e) {
-    echo 'El mensaje no se ha podido enviar, error: ' . $e->getMessage();
+    echo 'La llamada no se ha podido realizar, error: ' . $e->getMessage();
 }
 ?>
