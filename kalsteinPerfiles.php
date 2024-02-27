@@ -708,6 +708,9 @@
             wp_enqueue_script('global-url', plugins_url('src/js/links.upload.js',__FILE__),array('jquery'));
         }       
     
+        function translations() {
+            wp_enqueue_script('i18n', plugins_url('src/js/i18n.js',__FILE__),array('jquery'));
+        }
 
     function perfiles_styles() {
 
@@ -730,6 +733,7 @@
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_LOGIN' ) ) {
             global_url();
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/login.style.css', __FILE__));
             wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -744,6 +748,7 @@
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_SIGNUP' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/login.style.css', __FILE__));
@@ -758,6 +763,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_REGISTER' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/register.style.css', __FILE__));
@@ -771,6 +777,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DASHBOARD' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
@@ -869,6 +876,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_DASHBOARD' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -884,6 +892,7 @@
         }
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_STOCK' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -899,6 +908,7 @@
         }
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_STOCK_PREVIEW' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -917,6 +927,7 @@
         }
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_STOCK_ADD' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -940,6 +951,7 @@
         }
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_STOCK_EDIT' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -965,6 +977,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_LIST_ORDER' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -985,6 +998,7 @@
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_LIST_ORDER_PROCESSED' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1002,6 +1016,7 @@
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_LIST_ORDER_CANCELLED' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1019,6 +1034,7 @@
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_SALES_REPORT' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1036,6 +1052,7 @@
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_SHIPPING_COSTS' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1056,6 +1073,7 @@
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_INBOX' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1072,6 +1090,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_EDIT_PROFILE' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1092,6 +1111,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_CATALOGS' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1110,6 +1130,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_PURSACHING' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1133,6 +1154,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DASHBOARD_DISTRIBUTOR' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1149,6 +1171,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_STOCK_DISTRIBUTOR' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1165,6 +1188,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_STOCK_DISTRIBUTOR_ADD' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1190,6 +1214,7 @@
         
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_STOCK_DISTRIBUTOR_EDIT' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1215,6 +1240,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_STOCK_DISTRIBUTOR_PREVIEW' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1233,6 +1259,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_STOCK_DISTRIBUTOR_SHIPPING' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1254,6 +1281,7 @@
    
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_LIST_ORDER_DISTRIBUTOR' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1270,6 +1298,7 @@
 
         //GLOBAL URL APPLIED 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_LIST_ORDER_PROCESSED_DISTRIBUTOR' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__)); 
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1286,6 +1315,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_LIST_ORDER_CANCELLED_DISTRIBUTOR' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1301,6 +1331,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_SALES_DISTRIBUTOR' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1318,6 +1349,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DISTRIBUTOR_INBOX' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1334,6 +1366,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DISTRIBUTOR_EDIT_PROFILE' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__)); 
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1354,6 +1387,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DISTRIBUTOR_CATALOGS' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__)); 
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1371,6 +1405,7 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DISTRIBUTOR_PURSACHING' ) ) {
+            translations();
             global_url();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1393,6 +1428,7 @@
         // XXX SUPPORT STYLES
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_DASHBOARD' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
@@ -1405,6 +1441,7 @@
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_REPORTS' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
@@ -1422,6 +1459,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_ADDREPORTS' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'nav-style', plugins_url('src/suport/css/stock.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
@@ -1440,6 +1478,7 @@
             
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_MODREPORTS' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style(' tamplatemo', plugins_url('admin\css\templatemo-style.css',__FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1458,6 +1497,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_SERVICES' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1477,6 +1517,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_SERVICESADD' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
@@ -1494,6 +1535,7 @@
         }
         
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_SERVICESMOD' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
@@ -1511,6 +1553,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_QUOTES' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1527,6 +1570,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_QUOTESPROCESSED' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1543,6 +1587,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_QUOTESCANCELLED' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1559,6 +1604,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_INBOX' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
@@ -1571,6 +1617,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_STOCK' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1585,6 +1632,7 @@
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_CATALOGO' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/suport/css/material.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1604,6 +1652,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_EDIT_PROFILE' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1621,6 +1670,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_PURSACHING' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1639,6 +1689,7 @@
 
         //RENTAL AND USED EQUIPMENT
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_DASHBOARD' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__)); 
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/distributor/css/material.css', __FILE__));
@@ -1650,6 +1701,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_STOCK' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
@@ -1664,6 +1716,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_STOCK_ADD' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1685,6 +1738,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_USED' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1706,6 +1760,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_STOCK_EDIT' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1725,6 +1780,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_ORDER' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
@@ -1737,6 +1793,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_ORDER_PROCESSED' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
@@ -1749,6 +1806,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_ORDER_CANCELLED' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
@@ -1760,6 +1818,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_COSTUMERS' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1781,6 +1840,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_SALES' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
@@ -1794,6 +1854,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_INBOX' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
@@ -1807,6 +1868,7 @@
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'RENTAL_EDIT_PROFILE' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
@@ -1825,6 +1887,7 @@
         // MODERADOR
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_DASHBOARD' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
@@ -1839,6 +1902,7 @@
 
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_PRODUCT' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
@@ -1848,6 +1912,7 @@
             wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_QUOTES' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
@@ -1860,6 +1925,7 @@
             wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_BITACORAS' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
@@ -1873,6 +1939,7 @@
             wp_enqueue_script('log-table-js', plugins_url('src/moderator/js/log.table.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_SHIPPING' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
@@ -1885,6 +1952,7 @@
             wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_VIEW_PRODUCT' ) ) {
+            translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
             wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
@@ -1897,6 +1965,7 @@
             wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.product.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_VIEW_ACCOUNT' ) ) {
+            translations();
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
@@ -1909,6 +1978,7 @@
             wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.account.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_DATA_RECOVER' ) ){
+            translations();
             wp_enqueue_script('csv-to-json-lib', plugins_url('src/manufacturer/js/csv2json.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery'));
