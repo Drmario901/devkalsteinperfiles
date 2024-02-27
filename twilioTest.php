@@ -8,7 +8,7 @@ $code = 'Feid';
     $code = $_SESSION["codeVerification"];
 }*/
 
-$phoneNumber = '+584120182256'; 
+$phoneNumber = ['+584120182256', '+584128484468']; 
 
 use Twilio\Rest\Client;
 
