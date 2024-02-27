@@ -25,7 +25,7 @@
                     <div class='col-md' style='margin-top: 1rem;'>
                         <div class='form-floating input-wrapper c-email'>
                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                            <label for='emailUser' data-i18n="account:labelCorreo" >Correo electrónico</label>                               
+                            <label for='emailUser' data-i18n="account:LabelCorreo" >Correo electrónico</label>                               
                         </div>
                         <div class='emailError' data-i18n="account:CorreoNoValido"  style='display: none;'><p style='color: #de3a46; font-weight: bold;'>El correo no es válido</p></div>
                         <div class='availableMail' data-i18n="account:correoDisponible"  style='display: none;'><p style='color: #229e1e; font-weight: bold;'>Correo disponible</p></div>
@@ -62,11 +62,16 @@
                             <div class='codeError' style='display: none;'><p data-i18n="account:codigoNoValido" style='color: #de3a46; font-weight: bold;'>El código de validación no es válido.</p></div>
                             <p data-i18n="account:nuevoCodigo" class='newCode' style='cursor: pointer; margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'>Solicite aquí un nuevo código de validación</p>
                         </div>
-                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueSignUp' data-i18n="account:botonContinuar" >Continuar</button>
-                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp2' data-i18n="account:botonContinuar">Continuar</button>
-                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp3' data-i18n="account:botonContinuar">Continuar</button>
+                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueSignUp' data-i18n="account:tittleButton" >Continuar</button>
+                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp2' data-i18n="account:tittleButton">Continuar</button>
+                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp3' data-i18n="account:tittleButton">Continuar</button>
                     </div>
-                    <p data-i18n="account:yaRegistrado" class='redirectLogin' style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>¿Ya tiene una cuenta? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a data-i18n="account:iniciarSesion" href='https://plataforma.kalstein.net/acceder/<?php echo $search != '' ? "?search=$search" : '' ?>'>Iniciar sesión</a></span></p>
+                    <div style="display: flex; align-items: center;">
+                        <p style="margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em; margin-right: 0.5rem;" data-i18n="account:yaRegistrado">¿Ya tiene una cuenta?</p>
+                        <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold; margin-top: -3rem;'>
+                            <a data-i18n="account:iniciarSesion" href='https://dev.kalstein.plus/plataforma/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Iniciar sesión</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
