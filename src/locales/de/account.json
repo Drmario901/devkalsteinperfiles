@@ -83,5 +83,7 @@
     "codigoNoValido": "Der Bestätigungscode ist ungültig.",
     "nuevoCodigo": "Fordern Sie hier einen neuen Bestätigungscode an",
     "yaRegistrado": "Haben Sie bereits ein Konto?",
-    "iniciarSesion": "Anmelden"
+    "iniciarSesion": "Anmelden",
+    "confirmEmail": "Bestätigen Sie Ihre E-Mail-Adresse",
+    "sendLinkPassword": "Link zum Zurücksetzen des Passworts senden"
 }
