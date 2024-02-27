@@ -5,6 +5,8 @@
 ?>
 <div class='container' style='background-color: #fff; scroll-behavior: smooth;'>
 
+    <?php echo $_COOKIE['en']; ?>
+    
     <?php
         //NAVBAR
         include 'navbar.php';

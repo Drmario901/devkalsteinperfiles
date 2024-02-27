@@ -92,3 +92,29 @@
       }
     }
 </script>
+
+
+<script>
+jQuery(document).ready(function($) {
+    var urlParams = new URLSearchParams(window.location.search);
+    var lang = urlParams.get('lang');
+    var country = urlParams.get('country');
+
+    if (lang || country) {
+        $.ajax({
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
+            type: 'POST',
+            data: {
+                'lang': lang,
+                'country': country
+            },
+            success: function(response) {
+                console.log(response); 
+            },
+            error: function() {
+                console.log('Error with cookies.');
+            }
+        });
+    }
+});
+</script>
