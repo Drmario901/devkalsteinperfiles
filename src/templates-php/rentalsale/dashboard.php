@@ -24,8 +24,9 @@
         <br>
         <br>
     <article class="container article">       
-      <h2 class="h2 article-title">Hi <?php echo $acc_name .' '.$acc_lname ?></h2>
-      <p class="article-subtitle">Welcome to Rental and Used Dashboard!</p>
+      <h2 class="h2 article-title" data-i18n="rentalsale:titleHi">Hi</h2>
+      <span><?php echo $acc_name .' '.$acc_lname ?></span>
+      <p class="article-subtitle" data-i18n="rentalsale:subtWelcome">Welcome to Rental and Used Dashboard!</p>
       <div id="c-panel01" class="col-sm-12" style="height: auto;">
       <!-- 
       - #HOME
@@ -34,7 +35,7 @@
   
     <div class="card revenue-card" style="min-height: 400px">
                     <div style="position: absolute; width: 90%; height: 90%; overflow: scroll; padding-right: 10px">
-                    <h6 class="card-title">Recent quotes.</h6>
+                    <h6 class="card-title" data-i18n="rentalsale:titleRecentQ">Recent quotes.</h6>
                         <?php
                             require __DIR__.'/../../../php/conexion.php';
 
@@ -97,7 +98,7 @@
                             echo '<br>';
                             echo '<br>';
                             echo '<br>'; 
-                            echo '<center><b><p>No recent quotes</p></b><center>';
+                            echo '<center><b><p data-i18n="rentalsale:infoNoRQ">No recent quotes</p></b><center>';
                             }
 
                         ?>
@@ -108,12 +109,12 @@
                     
                     <div class="card task-card">
                         <div class="card-icon icon-box green">
-                            <span class="material-symbols-rounded  icon">inventory</span>
+                            <span class="material-symbols-rounded  icon" data-i18n="rentalsale:spanInventory">inventory</span>
                         </div>
                         <div>
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
                             <center style="display: flex; flex-direction: columns">
-                                <p class="card-text">Orders completed</p>
+                                <p class="card-text" data-i18n="rentalsale:infoOrdComp">Orders completed</p>
                                 <a href="https://testing.kalstein.digital/index.php/equipment/list-order/processed"> &nbsp; <span class='fa-solid fa-eye btn-details' style='color: #444 !important; font-size: 16px;'></span></a>
                             </center>
                         </div>
@@ -126,9 +127,9 @@
                             </span>
                         </div>
                         <div>
-                            <center><data id="pending-orders" class="card-data"> No data </data>
+                            <center><data id="pending-orders" class="card-data" data-i18n="rentalsale:dataNone"> No data </data>
                             <center style="display: flex; flex-direction: columns">
-                                <p class="card-text">Pending orders</p>
+                                <p class="card-text" data-i18n="rentalsale:infoPerdOrd">Pending orders</p>
                                 <a href="https://testing.kalstein.digital/index.php/equipment/list-order/"> &nbsp;
                                     <span class='fa-solid fa-eye btn-details' style='color: #444 !important; font-size: 16px;'>
                                     </span>
@@ -141,7 +142,7 @@
                 </div>
 
       <div class="card revenue-card">
-                    <h6 class="card-title">Customers overview</h6>
+                    <h6 class="card-title" data-i18n="rentalsale:infoCustOV">Customers overview</h6>
                     <canvas id="activity"></canvas>
                     <div class="divider card-divider"></div>
 
@@ -168,11 +169,11 @@
         <footer class="footer">
           <div class="container">
       
-      
             <center><p class="copyright">
-              &copy; 2023 <a href="https://kalstein.us/" class="copyright-link">Kalstein</a>. All Rights Reserved
-            </p></center>
-      
+              &copy; 2023
+            </p>
+            <a href="https://kalstein.us/" class="copyright-link">Kalstein</a>
+            <p data-i18n="rentalsale:footerRights">. All Rights Reserved</p></center>
           </div>
         </footer>
 
