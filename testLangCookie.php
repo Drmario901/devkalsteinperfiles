@@ -1,7 +1,7 @@
 <?php
 
 //COOKIE IDIOMA
-if (isset($_GET['lang'])) {
+/*if (isset($_GET['lang'])) {
     $language = $_GET['lang'];
     setcookie('language', $language, time() + (86400 * 30), "/");
     
@@ -11,7 +11,7 @@ if (isset($_GET['lang'])) {
     echo isset($_COOKIE['language']) ? "Language: " . $_COOKIE['language'] : "No language set.";
 }
 
-echo "<br/>"; 
+echo "<br/>"; */
 
 //COOKIE PAÍS
 if (isset($_GET['country'])) {
