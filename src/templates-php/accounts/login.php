@@ -56,7 +56,7 @@
                     <div style="display: flex; align-items: center;">
                         <p style="margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em; margin-right: 0.5rem;" data-i18n="account:noAccount">¿No posees una cuenta?</p>
                         <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold; margin-top: -3rem;'>
-                            <a data-i18n="account:registrate" href='https://dev.kalstein.plus/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a>
+                            <a data-i18n="account:registrate" href='https://dev.kalstein.plus/plataforma/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a>
                         </span>
                     </div>
                 </div>
