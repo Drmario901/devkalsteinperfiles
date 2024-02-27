@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
       debug: true,
       lng: getLanguage(),
       fallbackLng: 'en',
-      ns: ['account', 'prueba'],
+      ns: ['account', 'prueba', 'client'],
       defaultNS: 'account', // Establecer el namespace predeterminado
       resources: {}
     }, (err, t) => {
