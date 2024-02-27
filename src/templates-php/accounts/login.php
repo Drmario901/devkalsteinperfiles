@@ -11,7 +11,7 @@
     }
 
     //COOKIE IDIOMA
-    /*if (isset($_GET['lang'])) {
+    if (isset($_GET['lang'])) {
         $language = $_GET['lang'];
         setcookie('language', $language, time() + (86400 * 30), "/");
         
@@ -31,7 +31,7 @@
         echo "Country: " . $country;
     } else {
         echo isset($_COOKIE['country']) ? "Country: " . $_COOKIE['country'] : "No country set.";
-    }*/
+    }
 
     session_write_close();
 ?>
