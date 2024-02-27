@@ -53,12 +53,11 @@
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn' data-i18n="account:tittleButton">Continuar</button>
                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2' data-i18n="account:tittleButton">Continuar</button>
                     </div>
-                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;' data-i18n="account:noAccount">
+                    <p style="margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;" data-i18n="account:noAccount">
                         ¿No posees una cuenta? 
-                        <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'>
-                            <a data-i18n="account:registrate" href='https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>'>Regístrate</a>
-                        </span>
+                        <a href="https://plataforma.kalstein.net/registrarse/<?php echo $search != '' ? "?search=$search" : '' ?>" class="singup" style="color: #213280; cursor: pointer; font-weight: bold;" data-i18n="account:registrate">Regístrate</a>
                     </p>
+
                 </div>
             </div>
         </div>
