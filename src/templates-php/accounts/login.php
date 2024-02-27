@@ -1,40 +1,35 @@
 <?php
-    session_start();
+session_start();
 
-    if (isset($_GET['search'])){        
-        $search = $_GET? $_GET['search'] : '';
-    }
-    else {
-        if(isset($_SESSION['model-to-open-in-platform'])) {
-            $search = $_SESSION['model-to-open-in-platform'] != '' ? $_SESSION['model-to-open-in-platform'] : $search;
-        }
-    }
+$search = '';
+if (isset($_GET['search'])) {        
+    $search = $_GET['search'];
+} elseif (isset($_SESSION['model-to-open-in-platform'])) {
+    $search = $_SESSION['model-to-open-in-platform'];
+}
 
-    //COOKIE IDIOMA
-    if (isset($_GET['lang'])) {
-        $language = $_GET['lang'];
-        setcookie('language', $language, time() + (86400 * 30), "/");
-        
-        echo "Language: " . $language;
-    } else {
 
-        echo isset($_COOKIE['language']) ? "Language: " . $_COOKIE['language'] : "No language set.";
-    }
+if (isset($_GET['lang'])) {
+    $language = $_GET['lang'];
+    setcookie('language', $language, time() + (86400 * 30), "/");
+    $_COOKIE['language'] = $language; 
+}
 
-    echo "<br/>"; 
 
-    //COOKIE PAÍS
-    if (isset($_GET['country'])) {
-        $country = $_GET['country'];
-        setcookie('country', $country, time() + (86400 * 30), "/");
+echo "Language: " . (isset($_COOKIE['language']) ? $_COOKIE['language'] : "No language set.") . "<br/>";
 
-        echo "Country: " . $country;
-    } else {
-        echo isset($_COOKIE['country']) ? "Country: " . $_COOKIE['country'] : "No country set.";
-    }
+// Establecer COOKIE PAÍS si se ha proporcionado un nuevo valor a través de GET
+if (isset($_GET['country'])) {
+    $country = $_GET['country'];
+    setcookie('country', $country, time() + (86400 * 30), "/");
+    $_COOKIE['country'] = $country; 
+}
 
-    session_write_close();
+echo "Country: " . (isset($_COOKIE['country']) ? $_COOKIE['country'] : "No country set.");
+
+session_write_close();
 ?>
+
 
 <input type="hidden" id="search-product" value="<?php echo $search ?>">
 <link rel="icon" type="image/x-icon" href="https://kalstein.us/wp-content/plugins/kalsteinPerfiles/src/images/favicon.ico">
