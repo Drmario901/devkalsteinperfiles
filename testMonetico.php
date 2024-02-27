@@ -21,3 +21,9 @@ try {
     echo '<br>';
     echo "Error: " . $e->getMessage() . "\n";
 }
+
+?>
+
+<?php 
+echo "<p>Hola</p>";
+?>
