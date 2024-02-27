@@ -22,9 +22,9 @@
     try {
         $mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
         $mail->isSMTP();
-        $mail->Host = 'mail.kalstein.net';  // Host de conexión SMTP
+        $mail->Host = 'mail.kalstein.plus';  // Host de conexión SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = 'no-reply@kalstein.net';                 // Usuario SMTP
+        $mail->Username = 'no-reply@kalstein.plus';                 // Usuario SMTP
         $mail->Password = 'Kalstein1234';                           // Password SMTP
         $mail->SMTPSecure = 'ssl';                            // Activar seguridad TLS
         $mail->Port = 465;                               // Puerto SMTP
@@ -33,7 +33,7 @@
         #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
         #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
      
-        $mail->setFrom('no-reply2@kalstein.net');		// Mail del remitente
+        $mail->setFrom('no-reply@kalstein.plus');		// Mail del remitente
         $mail->addAddress($email);     // Mail del destinatario
 
         $position = strpos($email, '@');
