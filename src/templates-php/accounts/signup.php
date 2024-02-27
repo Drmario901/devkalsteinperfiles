@@ -37,7 +37,7 @@
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                <label for='passwordGrid' data-i18n="account:labelPassword" >Contraseña</label>
+                                <label for='passwordGrid' data-i18n="account:Password" >Contraseña</label>
                                 <i class='fa-sharp fa-solid eye-03 fa-eye'></i>
                             </div>
                             <div class='container required-info'>
