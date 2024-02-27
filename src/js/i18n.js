@@ -17,8 +17,6 @@ const getLanguage = () => {
   return cookie ? cookie.split('=')[1] : 'en';
 };
 
-console.log(getLanguage());
-
 const rerender = () => {
   // Traduce cada elemento individualmente
   $('[data-i18n]').each(function() {
@@ -53,6 +51,7 @@ jQuery(document).ready(function($){
         ))
       )).then(() => {
         // Inicializar jquery-i18next
+        console.log(getLanguage());
         jqueryI18next.init(i18next, $, { useOptionsAttr: true });
 
         // fill language switcher
