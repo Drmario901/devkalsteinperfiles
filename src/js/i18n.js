@@ -53,8 +53,9 @@ const lngs = {
                       .then(translation => {
                           const resources = {};
                           console.log(translation);
+                          console.log(ns);
                           resources[ns] = translation;
-                          i18next.addResourceBundle(lng, 'translation', resources);
+                          i18next.addResourceBundle(lng, ns, resources);
                       })
               ))
           )).then(() => {
