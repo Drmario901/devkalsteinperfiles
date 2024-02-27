@@ -19,9 +19,11 @@ const getLanguage = () => {
 
 const rerender = () => {
   // Traduce cada elemento individualmente
-  $('[data-i18n]').each(function() {
-      const key = $(this).attr('data-i18n');
-      $(this).text(i18next.t(key));
+  jQuery(document).ready(function($){
+    $('[data-i18n]').each(function() {
+        const key = $(this).attr('data-i18n');
+        $(this).text(i18next.t(key));
+    });
   });
 }
 
