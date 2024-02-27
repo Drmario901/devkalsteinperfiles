@@ -71,7 +71,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-         <a class="nav-link active" href="index.php?pag=diagsys"><span class="bottom-icon material-symbols-outlined">
+         <a class="nav-link active" href="index.php?pag=diagsys" data-i18n="client:diagnosticar"><span class="bottom-icon material-symbols-outlined">
             build</span>Diagnosticar
             <span class="visually-hidden">(current)</span>
           </a>
@@ -79,17 +79,17 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?pag=register"><span class="bottom-icon material-symbols-outlined">
             add_to_photos
-          </span>Registrar Equipo</a>
+          </span data-i18n="client:RegistrarEquipo">Registrar Equipo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?pag=exit"><span class="bottom-icon material-symbols-outlined">
+          <a class="nav-link" href="index.php?pag=exit"><span class="bottom-icon material-symbols-outlined" data-i18n="client:logout">
             logout
-          </span>Logout</a>
+          </span data-i18n="client:logout">Logout</a>
         </li>
       </ul>
        <!--User Icon-->
       <span class="navbar-text">
-        <span class="bottom-icon material-symbols-outlined">
+        <span class="bottom-icon material-symbols-outlined" data-i18n="client:person">
             person
         </span>
       </span>
@@ -104,7 +104,7 @@
     
     <div class="container flex-wrap p3 rounded-3 shadow-lg p-3" style="background-color:#FFFFFF;">
         <div class="d-flex justify-content-center">
-            <p class="lead">Diagnosticando: </p>
+            <p class="lead" data-i18n="client:diagnosing">Diagnosing: </p>
         </div>
         <div class="d-flex justify-content-center">
             <p><small id="uidprod"><?php echo $uidProd; ?></small></p>

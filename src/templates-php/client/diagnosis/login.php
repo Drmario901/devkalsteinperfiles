@@ -64,10 +64,10 @@
              </div>
              <br>
             <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary" name="btnLogin" value="Login">Login</button>
+            <button type="submit" class="btn btn-primary" name="btnLogin" value="Login" data-i18n="client:login">Login</button>
             </div>
             <br>
-            <a style="color:black;" href="#"><p>Registrate</p></a>
+            <a style="color:black;" href="#"><p data-i18n="client:registrate">Registrate</p></a>
             
                   
           </form>

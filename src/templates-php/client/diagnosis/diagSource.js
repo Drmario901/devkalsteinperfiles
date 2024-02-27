@@ -3,17 +3,17 @@ $(function(){
     
     console.log("Jquery esta funcionando");
     
-    var contentHTMLWait = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">pending</span></p><p><small>Por favor espere...</small></p><br><br><div class="progress centerDiv" style="width:350px;"><div class="progress-bar" id="bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div></div><br><br><br><br></div>';
+    var contentHTMLWait = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined" data-i18n="client:pending">pending</span></p><p data-i18n="client:esperar"><small>Por favor espere...</small></p><br><br><div class="progress centerDiv" style="width:350px;"><div class="progress-bar" id="bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div></div><br><br><br><br></div>';
     
-    var contentHTMLServerFail = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">cloud_off</span></p><p><small>Falla de servidor</small></p><br><br><br><br><br><br></div>';
+    var contentHTMLServerFail = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">cloud_off</span></p><p><small data-i18n="client:serverError">Falla de servidor</small></p><br><br><br><br><br><br></div>';
     
-    var contentHTMLuidNotValid = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">gpp_bad</span></p><p><small>UID invalido</small></p><br><br><br><br><br><br></div>';
+    var contentHTMLuidNotValid = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">gpp_bad</span></p><p><small data-i18n="client:uidInvalido">UID invalido</small></p><br><br><br><br><br><br></div>';
     
-    var contentHTMLVoidPOST = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">error</span></p><p><small>UID vacio</small></p><br><br><br><br><br><br></div>';
+    var contentHTMLVoidPOST = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">error</span></p><p><small data-i18n="client:uidVacio">UID vacio</small></p><br><br><br><br><br><br></div>';
     
-    var contentHTMLUnknown = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">unknown_document</span></p><p><small>Algo ha ido mal</small></p><br><br><br><br><br><br></div>';
+    var contentHTMLUnknown = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">unknown_document</span></p><p><small data-i18n="client:algoMal">Algo ha ido mal</small></p><br><br><br><br><br><br></div>';
     
-    var contentHTMLStartDenied = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">block</span></p><p><small>Ya se esta ejecutando un diagnostico</small></p><br><br><br><br><br><br></div>';
+    var contentHTMLStartDenied = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">block</span></p><p><small data-i18n="client:progesoDiagnostico">Ya se esta ejecutando un diagnostico</small></p><br><br><br><br><br><br></div>';
     
     var filtrouid = $('#uidprod').text().trim();
     
@@ -107,7 +107,7 @@ $(function(){
                     if(response.includes("FAIL")){
                         
                         //Almenos 1 elemento esta malo
-                        var HTMLcontentWRONG = '<div class="centerDiv"><span style="font-size:90px;" class="bottom-icon material-symbols-outlined">dangerous</span><p>Algunos componentes estan fallando</p></div><br><div class="card centerDiv" style="width: 18rem;"><ul class="list-group list-group-flush">';
+                        var HTMLcontentWRONG = '<div class="centerDiv"><span style="font-size:90px;" class="bottom-icon material-symbols-outlined">dangerous</span><p data-i18n="client:algoMal">Algunos componentes estan fallando</p></div><br><div class="card centerDiv" style="width: 18rem;"><ul class="list-group list-group-flush">';
                         
                          filasDiagnostico.forEach(function(filasDiagnostico,index){
                              
@@ -159,7 +159,7 @@ $(function(){
                     }else{
                         
                         //Todos los componentes estan buenos
-                        var HTMLcontentFINE = '<div class="centerDiv"><span style="font-size:90px; color:green;" class="bottom-icon material-symbols-outlined">new_releases</span><p>Todo parece ir correctamente</p></div><br><div class="card centerDiv" style="width: 18rem;"><ul class="list-group list-group-flush">';
+                        var HTMLcontentFINE = '<div class="centerDiv"><span style="font-size:90px; color:green;" class="bottom-icon material-symbols-outlined">new_releases</span><p data-i18n="client:todoBien">Todo parece ir correctamente</p></div><br><div class="card centerDiv" style="width: 18rem;"><ul class="list-group list-group-flush">';
                         
                         filasDiagnostico.forEach(function(filasDiagnostico,index){
                              

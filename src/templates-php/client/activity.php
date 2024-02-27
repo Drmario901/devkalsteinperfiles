@@ -8,10 +8,10 @@
 
     <div class='container-xl px-4 mt-4'>
         <nav class='nav nav-borders'>
-            <a class='nav-link active ms-0' href='#' id='btnSearches'><small>Búsquedas</small></a>
-            <a class='nav-link ms-1' href='#' id='btnAccess'><small>Accesos</small></a>
-            <a class='nav-link ms-1' href='#' id='btnUpdates'><small>Actualizaciones</small></a>
-            <a class='nav-link ms-1' href='#' id='btnDeletes'><small>Eliminaciones</small></a>
+            <a class='nav-link active ms-0' href='#' id='btnSearches'><small data-i18n="client:busquedas">Búsquedas</small></a>
+            <a class='nav-link ms-1' href='#' id='btnAccess'><small  data-i18n="client:accesos">Accesos</small></a>
+            <a class='nav-link ms-1' href='#' id='btnUpdates'><small data-i18n="client:actualizaciones" >Actualizaciones</small></a>
+            <a class='nav-link ms-1' href='#' id='btnDeletes'><small data-i18n="client:eliminaciones">Eliminaciones</small></a>
         </nav>
         <hr class='mt-0 mb-4'>
         <div id='c-searches'>

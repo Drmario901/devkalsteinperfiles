@@ -80,7 +80,7 @@
         $html = "
                 <div class='mainResultSearch-rental'>
                     <div class='RS mb-3'>
-                        <span style='float: left;'>Showing results</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='minCount'>".min(1, $maxCount)."</button><span style='float: left;'>to</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='maxCount'>$maxCount</button><span style='float: left;'>of</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='totalCount'>$countAll</button><span style='float: left;'>results</span>
+                        <span style='float: left;' data-i18n='client:mostrarResultados' >Showing results</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='minCount'>".min(1, $maxCount)."</button><span style='float: left;'>to</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='maxCount'>$maxCount</button><span style='float: left;'>of</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='totalCount'>$countAll</button><span style='float: left;'>results</span>
                     </div>";
 
         // depliegue de productos
@@ -141,7 +141,7 @@
                                         <i class='fa-solid fa-location-dot'></i> $textAddr
                                     </div>
                                     <div class='btnActions'>
-                                        <button value='$model' class='btnQuo'>Quote</button>
+                                        <button value='$model' class='btnQuo' data-i18n='client:cita' >Quote</button>
                                         <button class='activeModal' data-bs-toggle='modal' data-bs-target='#cotModal' style='display: none;'></button>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@
             $html.="
                     <div class='row'>
                         <div class='showResults col-12 col-md-9 order-last order-md-first'>
-                            <div class='nodatos'><h5>No data found in your search</h5></div>
+                            <div class='nodatos'><h5 data-i18n='client:noDataBusqueda'>No data found in your search</h5></div>
                         </div>
                     </div>";
         }
@@ -168,7 +168,7 @@
         $html = "
                 <div class='mainResultSearch'>
                     <div class='RS mb-3'>
-                        <span style='float: left;'>Showing results</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='minCount'>".min(1, $maxCount)."</button><span style='float: left;'>to</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='maxCount'>$maxCount</button><span style='float: left;'>of</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='totalCount'>$countAll</button><span style='float: left;'>results</span>
+                        <span style='float: left;' data-i18n='client:resultadosBusqueda' >Showing results</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='minCount'>".min(1, $maxCount)."</button><span style='float: left;'>to</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='maxCount'>$maxCount</button><span style='float: left;'>of</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='totalCount'>$countAll</button><span style='float: left;' data-i18n='client:resultados'>results</span>
                     </div>";
 
         // depliegue de productos

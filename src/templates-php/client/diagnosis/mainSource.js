@@ -8,10 +8,10 @@ $(function(){
     var prodsCliente;                          //Array de todos los productos del cliente
     
     //Contenido que se mostrara cuando no existan productos registrados
-    var HTMLVoidProds = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">error</span></p><p><small>Parece que aun no has registrado productos</small></p><br><br><br><br><br><br></div>';
+    var HTMLVoidProds = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">error</span></p><p><small data-i18n="client:noHasRegistradoProductos">Parece que aun no has registrado productos</small></p><br><br><br><br><br><br></div>';
     
     //COntenido que se mostrara cuando ocurra un fallo en la peticion 
-     var HTMLFailRequest = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">gpp_bad</span></p><p><small>Ha habido un error de conexion</small></p><br><br><br><br><br><br></div>';
+     var HTMLFailRequest = '<div style="text-align:center; margin-left:auto; margin-right:auto"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">gpp_bad</span></p><p><small data-i18n="client:errorConexion">Ha habido un error de conexion</small></p><br><br><br><br><br><br></div>';
     
     var filtroUser = $('#username').text().trim();   //Nombre de usuario para filtrar la peticion
     
@@ -68,7 +68,7 @@ $(function(){
                             if(nCols<=3){
                                 
                                 //1.Agregar la nueva columna
-                                listaHTMLProdsCliente += '<div class="col p-2"><div class="d-flex justify-content-center"><div class="card shadow" style="width: 18rem;"><img src="'+prodsCliente.imglink+'" class="img-fluid" alt="..."><div class="card-body"><p class="lead">'+prodsCliente.modelo+'</p><p><small>'+prodsCliente.uid+'</small></p><div class="d-grid gap-2"><a href="#" uid='+prodsCliente.uid+' class="btndiag btn btn-primary active bg-kalstein" role="button" aria-pressed="true"><span class="bottom-icon material-symbols-outlined">build</span>Diagnosticar</a></div></div></div></div></div>';
+                                listaHTMLProdsCliente += '<div class="col p-2"><div class="d-flex justify-content-center"><div class="card shadow" style="width: 18rem;"><img src="'+prodsCliente.imglink+'" class="img-fluid" alt="..."><div class="card-body"><p class="lead">'+prodsCliente.modelo+'</p><p><small>'+prodsCliente.uid+'</small></p><div class="d-grid gap-2"><a href="#" uid='+prodsCliente.uid+' class="btndiag btn btn-primary active bg-kalstein" role="button" aria-pressed="true"><span class="bottom-icon material-symbols-outlined">build</span data-i18n="client:diagnosticar">Diagnosticar</a></div></div></div></div></div>';
                                 
                                 //Se incrementa solo si hay siguiente elemento
                                 //nCols++;
