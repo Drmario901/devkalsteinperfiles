@@ -174,5 +174,13 @@
     "accesoriosAdic": "Accesorios adicionales",
     "ver": "Ver",
     "descripcionProducto": "Descripción del producto",
-    "accesos":"Acceso"
+    "accesos":"Acceso",
+    "itemTabla": "Elemento",
+    "nCotizacionTable": "N° de cotización",
+    "fechaTable": "Fecha",
+    "statusTable": "Estado",
+    "qtyTable": "Cantidad",
+    "shippingTable": "Método de envío",
+    "seeTable": "Ver",
+    "deleteTable": "Eliminar"
 }

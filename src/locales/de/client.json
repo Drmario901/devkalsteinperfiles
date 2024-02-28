@@ -1,5 +1,13 @@
 {
     "productoYaRegistrado": "Das Produkt wurde bereits von einem anderen Kunden registriert!",
+    "itemTabla": "Element",
+    "nCotizacionTable": "Angebotsnummer",
+    "fechaTable": "Datum",
+    "statusTable": "Status",
+    "qtyTable": "Menge",
+    "shippingTable": "Versandmethode",
+    "seeTable": "Ansehen",
+    "deleteTable": "Löschen",
     "productoRegistrado": "Das Produkt wurde erfolgreich registriert!",
     "errorRegistrar": "Ein Serverfehler ist aufgetreten!",
     "errorUID": "Produkt-UID existiert nicht!",

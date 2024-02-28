@@ -192,14 +192,14 @@
             <table class='table custom-table'>
                 <thead class='headTableForQuote'>
                     <tr>
-                        <td scope='col'>Item</td>
-                        <td scope='col'>N° Cotización</td>
-                        <td scope='col'>Fecha</td>
-                        <td scope='col'>Cantidad</td>
-                        <td scope='col'>Método de envío</td>
-                        <td scope='col'>Ver</td>
-                        <td scope='col'>Borrar</td>
-                        <td scope='col'>Estatus</td>
+                        <td scope='col' data-i18n='client:itemTable' >Item</td>
+                        <td scope='col' data-i18n='client:nCotizacionTable'>N° Cotización</td>
+                        <td scope='col' data-i18n='client:fechaTable'>Fecha</td>
+                        <td scope='col' data-i18n='client:qtyTable'>Cantidad</td>
+                        <td scope='col' data-i18n='client:shippingTable'>Método de envío</td>
+                        <td scope='col' data-i18n='client:seeTable'>Ver</td>
+                        <td scope='col' data-i18n='client:deleteTable'>Borrar</td>
+                        <td scope='col' data-i18n='client:statusTable'>Estatus</td>
                     </tr>
                 </thead>
                 <tbody id='tblQuoteClientCuca' class='bodyTableForQuote'>
