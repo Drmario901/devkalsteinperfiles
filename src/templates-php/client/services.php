@@ -2,7 +2,16 @@
 
     <?php
         $banner_img = 'Header-usuario-IMG.png';
-        $banner_text = "Buscar un agente de soporte";
+        $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+                // Incluir el archivo de traducciones
+                include 'translations.php';
+
+                // Determinar el texto del banner según el idioma
+                $banner_text_translation = isset($translations[$language]['banner_text_find_support_agent']) ? $translations[$language]['banner_text_find_support_agent'] : $translations['en']['banner_text_find_support_agent'];
+
+                // Incluir el banner.php pasando el texto traducido
+                $banner_text = $banner_text_translation;
         include 'banner.php';
     ?>
 

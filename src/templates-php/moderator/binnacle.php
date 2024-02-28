@@ -21,9 +21,9 @@
 
         <div class="row">
             <nav class='nav nav-borders my-quotes-nav'>
-                <a class='nav-link active ms-0' href='#' id='btnModAccounts'>Acounts</a>
-                <a class='nav-link' href='#' id='btnModProducts'>Products</a>
-                <a class='nav-link' href='#' id='btnModQuotes'>Quotes</a>
+                <a class='nav-link active ms-0' href='#' id='btnModAccounts' data-i18n="moderator:accounts" >Acounts</a>
+                <a class='nav-link' href='#' id='btnModProducts' data-i18n="moderator:products">Products</a>
+                <a class='nav-link' href='#' id='btnModQuotes' data-i18n="moderator:quotes">Quotes</a>
             </nav>
              <!-- SECTION ACCOUNT -->                    
             <div class='row' style='margin-top: 2rem !important;'>
@@ -33,7 +33,7 @@
                             <i class="fa-solid fa-users" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Total Accounts</h6>
+                            <h6 data-i18n="moderator:totalAccounts">Total Accounts</h6>
                             <?php
                                 $consultTotalAccount = "SELECT * FROM wp_account";
                                 $resultTotalAccount = $conexion->query($consultTotalAccount);
@@ -68,7 +68,7 @@
                             <i class="fa-solid fa-user-tie" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Manufacturer Accounts</h6>
+                            <h6 data-i18n="moderator:manufacturerAccounts">Manufacturer Accounts</h6>
                             <?php
                                 $consultTotalAccountClient = "SELECT * FROM wp_account WHERE account_rol_aid = '3'";
                                 $resultTotalAccountClient = $conexion->query($consultTotalAccountClient);
@@ -84,7 +84,7 @@
                             <i class="fa-solid fa-user-group" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Distribuitor Accounts</h6>
+                            <h6 data-i18n="moderator:distribuitorAccounts">Distribuitor Accounts</h6>
                             <?php
                                 $consultTotalAccountClient = "SELECT * FROM wp_account WHERE account_rol_aid = '2'";
                                 $resultTotalAccountClient = $conexion->query($consultTotalAccountClient);
@@ -102,7 +102,7 @@
                             <i class="fa-solid fa-user-clock" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Rental & Sales Accounts</h6>
+                            <h6 data-i18n="moderator:rentalSale" >Rental & Sales Accounts</h6>
                             <?php
                                 $consultTotalAccountClient = "SELECT * FROM wp_account WHERE account_rol_aid = '5'";
                                 $resultTotalAccountClient = $conexion->query($consultTotalAccountClient);
@@ -118,7 +118,7 @@
                             <i class="fa-solid fa-users-gear" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Technical Support Accounts</h6>
+                            <h6 data-i18n="moderator:technicalSupportAccounts" >Technical Support Accounts</h6>
                             <?php
                                 $consultTotalAccountClient = "SELECT * FROM wp_account WHERE account_rol_aid = '4'";
                                 $resultTotalAccountClient = $conexion->query($consultTotalAccountClient);
@@ -136,7 +136,7 @@
                             <i class="fa-solid fa-user-astronaut" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Scientist Accounts</h6>
+                            <h6 data-i18n="moderator:scientisAccounts">Scientist Accounts</h6>
                             <?php
                                 $consultTotalAccountClient = "SELECT * FROM wp_account WHERE account_rol_aid = '6'";
                                 $resultTotalAccountClient = $conexion->query($consultTotalAccountClient);
@@ -152,7 +152,7 @@
                             <i class="fa-solid fa-user-large-slash" style="font-size: 2em;"></i>
                         </div>
                         <div class="col-7">
-                            <h6>Undetermined Accounts</h6>
+                            <h6 data-i18n="moderator:undeterminedAccounts">Undetermined Accounts</h6>
                             <?php
                                 $consultTotalAccountClient = "SELECT * FROM wp_account WHERE account_rol_aid = '0'";
                                 $resultTotalAccountClient = $conexion->query($consultTotalAccountClient);
@@ -167,16 +167,16 @@
                 <!-- FILTERS -->
                 
                 <div class='col-6 col-sm-12'>
-                    <label class='small mb-1'>Status</label>
+                    <label class='small mb-1' data-i18n="moderator:labelStatus">Status</label>
                     <select class='form-select' id='log-filter' style='height: 2.8em; outline: 1px solid #213280; font-size: 0.9em;'>
                         
-                    <option value='all' selected>All</option>
-                    <option value='a_aproved'> Account Validated </option>
-                    <option value='a_denied' > Account Denied </option>
-                    <option value='p_aproved'> Product Validated </option>
-                    <option value='p_denied' > Product Denied </option>
-                    <option value='q_aproved'> Quote Processed </option>
-                    <option value='q_denied' > Quote Cancelled </option>
+                    <option value='all' selected data-i18n="moderator:optionAll" >All</option>
+                    <option value='a_aproved' data-i18n="moderator:optionAccountValidated"> Account Validated </option>
+                    <option value='a_denied' data-i18n="moderator:optionAccountDenied"> Account Denied </option>
+                    <option value='p_aproved' data-i18n="moderator:optionProductValidated"> Product Validated </option>
+                    <option value='p_denied' data-i18n="moderator:optionProductDenied"> Product Denied </option>
+                    <option value='q_aproved' data-i18n="moderator:optionQuoteProcessed"> Quote Processed </option>
+                    <option value='q_denied' data-i18n="moderator:optionQuoteCancelled"> Quote Cancelled </option>
                     
                 </select>
                 </div>
@@ -236,8 +236,8 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Clients Account</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:clientAccounts" >Clients Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-i18n="moderator:close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="tblClientAcc">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Clients Account</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:clientAccounts">Clients Account</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -265,7 +265,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -276,7 +276,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Clients Account</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:clientAccounts">Clients Account</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -285,7 +285,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Rental & Sales Account</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:rentalSale">Rental & Sales Account</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -305,7 +305,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -316,8 +316,8 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Technical Support Account</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:technicalSupportAccounts">Technical Support Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-i18n="moderator:close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="tblTechnicalAcc">
@@ -325,7 +325,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -336,8 +336,8 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Scientist Account</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:scientisAccounts">Scientist Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-i18n="moderator:close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="tblScientistAcc">
@@ -345,7 +345,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -356,8 +356,8 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Undetermined Account</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="moderator:undeterminedAccounts">Undetermined Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-i18n="moderator:close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="tblUndeterminedAcc">
@@ -365,7 +365,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>
@@ -378,11 +378,11 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-12">
-                                <h6>Activity history</h6>
+                                <h6 data-i18n="moderator:activityHistory">Activity history</h6>
                             </div>
                             <div class="col-6" style="border-right: 1px solid #c9c9c9;">
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-12" data-i18n="moderator:quotes">
                                         Quotes
                                     </div>
                                     <div class="col-12">
@@ -394,7 +394,7 @@
                             </div>
                             <div class="col-6" style="border-left: 1px solid #c9c9c9">
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-12" data-i18n="moderator:activity">
                                         Activity
                                     </div>
                                     <div class="col-12">
@@ -407,7 +407,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="moderator:close">Close</button>
                     </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
         
 
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/catalogo.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/catalogo.php",
             type: "POST",
             data: {inputSearch, category},
         })
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
     category();  
     function category(consulta) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
             type: 'POST',
             data: { consulta },
         })

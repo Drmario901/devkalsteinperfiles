@@ -6,7 +6,7 @@
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-xs-12 col-sm-6' hidden>
-            <label data-i18n='distribuidor:labelStatus'>Status</label>
+            <label data-i18n='distribuidor:labelStatus'>Status</label>F
             <select  id='statusProduct' style='width: 200px'>
             <option class='text-dark' value='in stock' data-i18n='distribuidor:optionExistencias'> En existencias </option>
             <option class='text-dark' value='out of stock' data-i18n='distribuidor:optionAgotado'> Agotado </option>
@@ -410,7 +410,7 @@
                 min="0"
             />
 
-            <label>Ancho (cm)</label>
+            <label data-i18n="distribuidor:labelAncho">Ancho (cm)</label>
             <input
                 id="wiProductPa"
                 type="number"
@@ -419,7 +419,7 @@
                 min="0"
             />
 
-            <label>Alto (cm)</label>
+            <label data-i18n="distribuidor:labelAlto">Alto (cm)</label>
             <input
                 id="heProductPa"
                 type="number"
@@ -428,7 +428,7 @@
                 min="0"
             />
 
-            <label>Largo (cm)</label>
+            <label data-i18n="distribuidor:labelLargo">Largo (cm)</label>
             <input
                 id="leProductPa"
                 type="number"
@@ -437,11 +437,11 @@
                 min="0"
             />
 
-            <label>Tipo de empaque</label>
+            <label data-i18n="distribuidor:labelTipoEmpaque">Tipo de empaque</label>
             <select id="packageType">
-                <option class="text-dark" value="">-- Selecciona --</option>
-                <option class="text-dark" value="carton">Caja de cartón</option>
-                <option class="text-dark" value="wooden">Caja de madera</option>
+                <option class="text-dark" value="" data-i18n="distribuidor:optionSelecciona">-- Selecciona --</option>
+                <option class="text-dark" value="carton" data-i18n="distribuidor:CajaDeCarton">Caja de cartón</option>
+                <option class="text-dark" value="wooden" data-i18n="distribuidor:CajaDeMadera">Caja de madera</option>
             </select>
         </div>
     </div>
@@ -449,12 +449,12 @@
     <!-- PRICING -->
 
     <div class="col-12">
-        <div class="stock-title">Precios</div>
+        <div class="stock-title" data-i18n="distribuidor:subtitlePrecios">Precios</div>
     </div>
 
     <div class="row">
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Precio unitario</label>
+            <label data-i18n="distribuidor:labelPrecioUnit">Precio unitario</label>
             <input
                 id="priceProduct"
                 type="number"
@@ -465,58 +465,64 @@
             />
         </div>
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
+            <label><span data-i18n="distribuidor:subtitleMoneda">Moneda</span> <i class="far fa-money-bill-1 h5"></i></i></label>
             <select id="currency">
-                <option class="text-dark" value="">-- Selecciona --</option>
+                <option class="text-dark" value="" data-i18n="distribuidor:optionSelecciona">-- Selecciona --</option>
                 <option class="text-dark" value="USD">USD</option>
                 <option class="text-dark" value="EUR">EUR</option>
             </select>
         </div>
 
-        <h6 class="tm-block-title mb-0">Descuento mayorista 1 (opcional)</h6>
+        <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleDescuentoUno">Descuento mayorista 1 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
-            Aplica <input style="width: 45px;"
+            <span data-i18n="distribuidor:spanAplica">Aplica </span> 
+            <input style="width: 45px;"
                 id="discount1"
                 type="number"
                 placeholder="0"
                 class="form-control validate mb-2 d-inline-block stock-special-input"
                 min="0"
                 max="100"
-            /> % descuento de 
+            /> 
+            <span data-i18n="distribuidor:spanDescuento">% descuento de </span>
             <input style="width: 55px;"
                 id="discount1Amount"
                 type="number"
                 placeholder="24"
                 class="form-control validate d-inline-block stock-special-input"
                 min="0"
-            /> unidades
+            /> 
+            <span data-i18n="distribuidor:spanUnidades">unidades</span> 
         </div>
 
-        <h6 class="tm-block-title mb-0">Descuento mayorista 2 (opcional)</h6>
+        <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleDescuentoDos">Descuento mayorista 2 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
-            Aplica <input style="width: 45px;"
+            <span data-i18n="distribuidor:spanAplica">Aplica </span> 
+            <input style="width: 45px;"
                 id="discount2"
                 type="number"
                 placeholder="0"
                 class="form-control validate mb-2 d-inline-block stock-special-input"
                 min="0"
                 max="100"
-            /> % descuento de 
+            /> 
+            <span data-i18n="distribuidor:spanDescuento">% descuento de </span>
             <input style="width: 55px;"
                 id="discount2Amount"
                 type="number"
                 placeholder="50"
                 class="form-control validate d-inline-block stock-special-input"
                 min="0"
-            /> unidades
+            /> 
+            <span data-i18n="distribuidor:spanUnidades">unidades</span> 
         </div>
     </div>
 
  <!--acessories -->
- <div class="col-12">
-        <div class="stock-title">Accesorios</div>
+    <div class="col-12">
+        <div class="stock-title" data-i18n="distribuidor:subtitleAccesorios">Accesorios</div>
     </div>
- <div class="row mb-3 d-flex justify-content-center">
+    <div class="row mb-3 d-flex justify-content-center">
         <div class="accordion col-12 col-md-8" id="accordionExample">
 
             <!-- ACORDEON ACCESSORY -->
@@ -524,7 +530,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header pb-0" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <b>Agregar un nuevo accesorio</b>
+                        <b data-i18n="distribuidor:subtitleAggNewAcces">Agregar un nuevo accesorio</b>
                     </button>
                 </h2>
 
@@ -550,24 +556,24 @@
     <!-- FILES -->
 
     <div class="col-12">
-        <div class="stock-title">Suplementos</div>
+        <div class="stock-title" data-i18n="distribuidor:suplements">Suplementos</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Catálogo informativo (opcional)</label>
+            <label data-i18n="distribuidor:catalogOpcional" >Catálogo informativo (opcional)</label>
             <p id='currentlyUploadedCatalog'></p>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
-                <span class="drop-title">Selecciona o arrastra y suelta tu archivo</span>
+                <span class="drop-title" data-i18n="distribuidor:dragAndDrop" >Selecciona o arrastra y suelta tu archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
         </div>
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Manual técnico (opcional)</label>
+            <label data-i18n="distribuidor:manualOpcional">Manual técnico (opcional)</label>
             <p id='currentlyUploadedManual'></p>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
-                <span class="drop-title">Selecciona o arrastra y suelta tu archivo</span>
+                <span class="drop-title" data-i18n="distribuidor:dragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>

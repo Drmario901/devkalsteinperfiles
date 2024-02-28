@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
     $('.vce-row-content').attr('id', 'vce-row-content')
 
     $(document).on('click', '#btnNewQuote', function(){
-        $(location).attr('href','https://kalstein.us/quote/')
+        $(location).attr('href','https://dev.kalstein.plus/quote/')
     })
 
     $(document).on('click', '#btn-logout', function(){
@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
 
     function searchDataUserDashboard(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
             type: 'POST',
             data: {consulta},
         })
@@ -88,7 +88,7 @@ jQuery(document).ready(function($){
 
     function showTblQuoteUsers(email){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php',
             type: 'POST',
             data: {email},
         })
@@ -102,12 +102,12 @@ jQuery(document).ready(function($){
 
     function logout(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/logout.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/logout.php',
             type: 'POST',
             data: {consulta},
         })
         .done(function(respuesta){
-            $(location).attr('href','https://kalstein.us/login/')
+            $(location).attr('href','https://dev.kalstein.plus/login/')
         })
         .fail(function(){
             console.log("error")

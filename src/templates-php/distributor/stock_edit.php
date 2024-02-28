@@ -28,9 +28,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos"><i class="fa-solid fa-share"></i> Volver</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos/agregar">Agregar un producto</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos/calculadora">Calculadora de envíos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos"><i class="fa-solid fa-share"></i> <span data-i18n="distribuidor:addProduct">Volver</span></a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/distribuidor/productos/agregar" data-i18n="distribuidor:addProduct">Agregar un producto</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
         </nav>
     
         <hr class="mt-0 mb-4">
@@ -43,7 +43,7 @@
                             <div class="col-12">
                             </div>
                             <select class="custom-select tm-select-accounts" style="color: #000 !important;" id="dataEdit" name="consulta">
-                                <option selected value='0'>Por favor, elige una opción</option>
+                                <option selected value='0' data-i18n="distribuidor:pleaseSelect" >Por favor, elige una opción</option>
                                 <?php
                                     
                                     require __DIR__.'/../../../php/conexion.php';
@@ -83,7 +83,7 @@
                             ?>
                         </div>
                         <div id="formElementsbutton" class="col-12" hidden>
-                            <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" style='color: white; background-color: #de3a46 !important; border: none'>Editar producto ahora</button></center>
+                            <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="distribuidor:editProductNow" >Editar producto ahora</button></center>
                         </div>
                     </div>
                 </div>

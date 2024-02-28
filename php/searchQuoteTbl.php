@@ -152,6 +152,140 @@
         $q = $conexion->real_escape_string($_POST['consulta']);
         $a = $_POST['status'];
 
+        $translations = array(
+            'en' => array(
+                'client:itemTabla' => 'Item',
+                'client:nCotizacionTable' => 'Quote number',
+                'client:fechaTable' => 'Date',
+                'client:qtyTable' => 'Quantity',
+                'client:shippingTable' => 'Shipping method',
+                'client:seeTable' => 'View',
+                'client:deleteTable' => 'Delete',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'No data found',
+                'client:previo' => 'Previous',
+                'client:next' => 'Next',
+            ),
+            'es' => array(
+                'client:itemTabla' => 'Item',
+                'client:nCotizacionTable' => 'N° Cotización',
+                'client:fechaTable' => 'Fecha',
+                'client:qtyTable' => 'Cantidad',
+                'client:shippingTable' => 'Método de envío',
+                'client:seeTable' => 'Ver',
+                'client:deleteTable' => 'Borrar',
+                'client:statusTable' => 'Estatus',
+                'client:dataNotFound' => 'No se han encontrado datos',
+                'client:previo' => 'Anterior',
+                'client:next' => 'Siguiente'
+            ),
+            'fr' => array(
+                'client:itemTabla' => 'Article',
+                'client:nCotizacionTable' => 'Numéro de devis',
+                'client:fechaTable' => 'Date',
+                'client:qtyTable' => 'Quantité',
+                'client:shippingTable' => 'Méthode d\'expédition',
+                'client:seeTable' => 'Voir',
+                'client:deleteTable' => 'Effacer',
+                'client:statusTable' => 'Statut',
+                'client:dataNotFound' => 'Aucune donnée trouvée',
+                'client:previo' => 'Précédent',
+                'client:next' => 'Prochain'
+            ),
+            'it' => array(
+                'client:itemTabla' => 'Articolo',
+                'client:nCotizacionTable' => 'Numero di preventivo',
+                'client:fechaTable' => 'Data',
+                'client:qtyTable' => 'Quantità',
+                'client:shippingTable' => 'Metodo di spedizione',
+                'client:seeTable' => 'Vedi',
+                'client:deleteTable' => 'Cancellare',
+                'client:statusTable' => 'Stato',
+                'client:dataNotFound' => 'Nessun dato trovato',
+                'client:previo' => 'Precedente',
+                'client:next' => 'Il prossimo'
+            ),
+            'pt' => array(
+                'client:itemTabla' => 'Artigo',
+                'client:nCotizacionTable' => 'Número de cotação',
+                'client:fechaTable' => 'Encontro',
+                'client:qtyTable' => 'Quantidade',
+                'client:shippingTable' => 'Método de envio',
+                'client:seeTable' => 'Ver',
+                'client:deleteTable' => 'Excluir',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Nenhum dado encontrado',
+                'client:previo' => 'Anterior',
+                'client:next' => 'Próximo'
+            ),
+            'pl' => array(
+                'client:itemTabla' => 'Artykuł',
+                'client:nCotizacionTable' => 'Numer oferty',
+                'client:fechaTable' => 'Data',
+                'client:qtyTable' => 'Ilość',
+                'client:shippingTable' => 'Metoda wysyłki',
+                'client:seeTable' => 'Zobacz',
+                'client:deleteTable' => 'Kasować',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Nie znaleziono danych',
+                'client:previo' => 'Poprzedni',
+                'client:next' => 'Następny'
+            ),
+            'nl' => array(
+                'client:itemTabla' => 'Artikel',
+                'client:nCotizacionTable' => 'Offertenummer',
+                'client:fechaTable' => 'Datum',
+                'client:qtyTable' => 'Hoeveelheid',
+                'client:shippingTable' => 'Verzendmethode',
+                'client:seeTable' => 'Bekijk',
+                'client:deleteTable' => 'Verwijderen',
+                'client:statusTable' => 'Toestand',
+                'client:dataNotFound' => 'Geen gegevens gevonden',
+                'client:previo' => 'Vorige',
+                'client:next' => 'Volgende'
+            ),
+            'de' => array(
+                'client:itemTabla' => 'Artikel',
+                'client:nCotizacionTable' => 'Angebotsnummer',
+                'client:fechaTable' => 'Datum',
+                'client:qtyTable' => 'Menge',
+                'client:shippingTable' => 'Versandart',
+                'client:seeTable' => 'Sehen',
+                'client:deleteTable' => 'Löschen',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Keine Daten gefunden',
+                'client:previo' => 'Bisherige',
+                'client:next' => 'Nächster'
+            ),
+            'ee' => array(
+                'client:itemTabla' => 'Artikkel',
+                'client:nCotizacionTable' => 'Pakkumise number',
+                'client:fechaTable' => 'Kuupäev',
+                'client:qtyTable' => 'Kogus',
+                'client:shippingTable' => 'Kohaletoimetamise meetod',
+                'client:seeTable' => 'Vaata',
+                'client:deleteTable' => 'Kustuta',
+                'client:statusTable' => 'Staatus',
+                'client:dataNotFound' => 'Andmeid ei leitud',
+                'client:previo' => 'Eelmine',
+                'client:next' => 'Järgmine'
+            ),
+            'se' => array(
+                'client:itemTabla' => 'Artikel',
+                'client:nCotizacionTable' => 'Offertnummer',
+                'client:fechaTable' => 'Datum',
+                'client:qtyTable' => 'Mängd',
+                'client:shippingTable' => 'Fraktsätt',
+                'client:seeTable' => 'Se',
+                'client:deleteTable' => 'Radera',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Inga data hittades',
+                'client:previo' => 'Tidigare',
+                'client:next' => 'Nästa'
+            ),
+        );
+
+
         if (isset($_POST['dateTo'])) {
             if ($dateTo == '' && $dateFrom == '') {
                 if ($q == '') {
@@ -188,18 +322,29 @@
         
         $resultado = $conexion->query($consulta);
 
+        
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+        $html = "<script>";
+        foreach ($translations[$lang] as $key => $value) {
+            $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
+        }
+        $html .= "</script>";
+
+        echo $html;
+
         $html = "
             <table class='table custom-table'>
                 <thead class='headTableForQuote'>
                     <tr>
-                        <td scope='col'>Item</td>
-                        <td scope='col'>N° Cotización</td>
-                        <td scope='col'>Fecha</td>
-                        <td scope='col'>Cantidad</td>
-                        <td scope='col'>Método de envío</td>
-                        <td scope='col'>Ver</td>
-                        <td scope='col'>Borrar</td>
-                        <td scope='col'>Estatus</td>
+                        <td scope='col' data-i17n='client:itemTabla' >Item</td>
+                        <td scope='col' data-i17n='client:nCotizacionTable'>N° Cotización</td>
+                        <td scope='col' data-i17n='client:fechaTable'>Fecha</td>
+                        <td scope='col' data-i17n='client:qtyTable'>Cantidad</td>
+                        <td scope='col' data-i17n='client:shippingTable'>Método de envío</td>
+                        <td scope='col' data-i17n='client:seeTable'>Ver</td>
+                        <td scope='col' data-i17n='client:deleteTable'>Borrar</td>
+                        <td scope='col' data-i17n='client:statusTable'>Estatus</td>
                     </tr>
                 </thead>
                 <tbody id='tblQuoteClientCuca' class='bodyTableForQuote'>
@@ -269,7 +414,7 @@
             $msjNoData = "
                 <div class='contentNoDataQuote'>
                     <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                    <p>No se han encontrado datos</p>
+                    <p data-i17n='client:dataNotFound' >No se han encontrado datos</p>
                 </div>
             ";
         }
@@ -288,11 +433,11 @@
             <div id='currentPageIndicator'>Page: 1</div>
                 <form id='form-previous' action='' method='get' style='margin-right: 8px'>
                     <input id='previous' type='hidden' name='u' value='$prevPage'>
-                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Anterior'>
+                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:previo' value='&laquo; Anterior'>
                 </form>
                 <form id='form-next' action='' method='get'>
                     <input class='next' type='hidden' name='u' value='$nextPage'>
-                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:next' value='Siguiente &raquo;'>
                 </form>
             </div>
             <input id='hiddenPage' type='hidden' value='$page'>

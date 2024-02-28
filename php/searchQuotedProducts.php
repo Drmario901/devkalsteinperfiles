@@ -80,7 +80,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 3em;'></i>
-                <p>No data found</p>
+                <p data-i18n='client:dataNotFound'>No data found</p>
             </div>
         ";
     }

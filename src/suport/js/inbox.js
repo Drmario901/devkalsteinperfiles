@@ -1,5 +1,5 @@
-let plugin_dir = 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/';
-let domain = 'https://testing.kalstein.digital/wp-content/';
+let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/';
+let domain = 'https://dev.kalstein.plus/plataforma/wp-content/';
 
 
 

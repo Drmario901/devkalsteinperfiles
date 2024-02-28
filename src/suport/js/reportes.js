@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
     function tablaconsulta(inputSearch, status, dateFrom, dateTo){
 
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php",
             type: "POST",
             data: {inputSearch, status, dateFrom, dateTo},
 
@@ -50,7 +50,7 @@ jQuery(document).ready(function($){
 
     function showInfoReportRequest(consulta){
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/showInfoReportRequest.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/showInfoReportRequest.php",
             type: "POST",
             data: {consulta},
 
@@ -114,7 +114,7 @@ jQuery(document).ready(function($){
 
     function savedGeneratedQuo(id, description, datas, precioMoneda){
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
             type: "POST",
             data: {id, description, datas, precioMoneda},
 
@@ -140,7 +140,7 @@ jQuery(document).ready(function($){
                 }
                 cant = 1
                 $('#ih-cant').val(cant)
-                window.open('https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php', '_blank')   
+                window.open('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php', '_blank')   
                 let inputSearch = $('#searchreport').val()
                 let dateFrom = $('#dateFrom').val()
                 let status = $('#estatus').val()
@@ -158,7 +158,7 @@ jQuery(document).ready(function($){
     function createdSessionCotizacion(consulta){
 
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/createSessionReportSupport.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/createSessionReportSupport.php',
             type: 'POST',
             data: {consulta},
         })
@@ -172,7 +172,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewQuoteSupport', function(){
         let id = $(this).val()
-        window.open('https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php?idCotizacion='+id, '_blank') 
+        window.open('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php?idCotizacion='+id, '_blank') 
     })
 });
 
@@ -181,7 +181,7 @@ jQuery(document).ready(function($){
     
     function allPendingCardCount(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/reportespendientes.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportespendientes.php',
             type: 'POST',
             data: {consulta},
         })
@@ -199,7 +199,7 @@ jQuery(document).ready(function($){
     
     function allPendingCirculatorCount(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php',
             type: 'POST',
             data: {consulta},
         })
@@ -218,7 +218,7 @@ jQuery(document).ready(function($){
 
         console.log('detectó');
 
-        let form = $("<form action='https://plataforma.kalstein.net/index.php/kalstein-support/modreports/'" + "' method='get' hidden>" +
+        let form = $("<form action='https://dev.kalstein.plus/plataforma/index.php/kalstein-support/modreports/'" + "' method='get' hidden>" +
             "<input type='hidden' name='edit' value='" + edit_id + "' /></form>");
 
         $('body').append(form);

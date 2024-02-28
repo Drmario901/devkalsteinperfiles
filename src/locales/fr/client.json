@@ -6,6 +6,14 @@
     "diagnosticar": "Diagnostic",
     "RegistrarEquipo": "Enregistrer l'équipement",
     "logout": "Déconnexion",
+    "itemTabla": "Élément",
+    "nCotizacionTable": "Numéro de devis",
+    "fechaTable": "Date",
+    "statusTable": "Statut",
+    "qtyTable": "Quantité",
+    "shippingTable": "Méthode d'expédition",
+    "seeTable": "Voir",
+    "deleteTable": "Supprimer",
     "person": "Personne",
     "diagnosing": "Diagnostic en cours",
     "esperar": "Veuillez patienter...",
@@ -174,5 +182,8 @@
     "accesoriosAdic": "Accessoires supplémentaires",
     "ver": "Afficher",
     "descripcionProducto": "Description du produit",
-    "accesos":"Accéder"
+    "accesos":"Accéder",
+    "dataNotFound": "Aucune donnée trouvée",
+    "previo": "Précédent",
+    "next": "Suivant"
 }

@@ -37,7 +37,9 @@ jQuery(document).ready(function($){
       debug: true,
       lng: getLanguage(),
       fallbackLng: 'en',
-      ns: ['account', 'prueba', 'client', 'support','manofacturer'],
+
+      ns: ['account', 'prueba', 'client', 'support', 'moderator', 'distribuidor','manofacturer'],
+      
       defaultNS: 'account', // Establecer el namespace predeterminado
       resources: {}
     }, (err, t) => {
@@ -53,18 +55,11 @@ jQuery(document).ready(function($){
         ))
       )).then(() => {
         // Inicializar jquery-i18next
-        
-        //Check if the language from cookie is the same as the language initialized
-        if (i18next.resolvedLanguage !== getLanguage()) {
-          i18next.changeLanguage(getLanguage(), () => {
-            rerender();
-          });
-        }
 
         jqueryI18next.init(i18next, $, { useOptionsAttr: true });
 
         // fill language switcher
-        Object.keys(lngs).map((lng) => {
+        /* Object.keys(lngs).map((lng) => {
           const opt = new Option(lngs[lng].nativeName, lng);
           if (lng === i18next.resolvedLanguage) {
             opt.setAttribute("selected", "selected");
@@ -76,7 +71,7 @@ jQuery(document).ready(function($){
           i18next.changeLanguage(chosenLng, () => {
             rerender();
           });
-        });
+        }); */
 
         rerender();
       });

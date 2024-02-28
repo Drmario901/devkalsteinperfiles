@@ -71,5 +71,7 @@ document.getElementById("sendEmail").addEventListener("click", function(event) {
 
 document.getElementById("chatOnline").addEventListener("click", function(event) {
     event.preventDefault(); 
+    
 });
+
 </script>

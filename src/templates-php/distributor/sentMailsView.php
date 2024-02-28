@@ -14,13 +14,13 @@
 <div class="container">
     <div class="email-app mb-4">
         <nav>
-            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff !important" class="btn btn-danger btn-block">New Message</a>
+             <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff" class="btn btn-danger btn-block" data-i18n="distribuidor:newMensajes">New Message</a>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i> Inbox</a>
+                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i><span data-i18n="distribuidor:inbox">Inbox</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/sent"><i class="fa fa-rocket"></i> Sent</a>
+                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/sent"><i class="fa fa-rocket"></i> <span data-i18n="distribuidor:sent">Sent</span></a>
                 </li>
             </ul>
         </nav>

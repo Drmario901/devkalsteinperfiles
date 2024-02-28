@@ -9,7 +9,7 @@ function array_sum(array){
 }
 
 jQuery(document).ready(function($) {
-    let plugin_dir = 'http://127.0.0.1/wp-local/wp-content/plugins/kalsteinPerfiles/';
+    let plugin_dir = 'http://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/';
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August ', 'September', 'Octuber', 'November', 'December'];
 
