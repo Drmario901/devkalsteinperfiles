@@ -16,7 +16,7 @@
 </header>
 <br>
 <br>
-<h2 class="h2 article-title">List Order</h2>
+<h2 class="h2 article-title" data-i18n="rentalsale:listOrder">List Order</h2>
 <nav class="nav nav-borders">
     <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/list-order">All orders</a>
     <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/list-order/processed">Processed orders</a>

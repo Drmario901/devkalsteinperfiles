@@ -81,13 +81,13 @@
                                     echo "
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <div> From <b>$client</b></div>
+                                            <div><span data-i18n='rentalsale:spanFrom'> From </span><b>$client</b></div>
                                             <a href='https://testing.kalstein.digital/index.php/equipment/list-order'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <span>total: $total $</span>
+                                            <span data-i18n='rentalsale:spanTotal'>total: $total $</span>
                                             <span>$date</span>
                                         </div>
                                     </div>
