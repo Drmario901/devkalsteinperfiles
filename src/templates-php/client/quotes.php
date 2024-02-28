@@ -91,8 +91,8 @@
                                 <select class='form-select' aria-label='Default select example' id='inputWarehouse'
                                     style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'>
                                     <option selected='' style='text-align: center;' value='0' data-i18n="client:selecciona">-- Seleccionar --</option>
-                                    <option value='EXW Kalstein Shanghai' data-i18n="client:todo">EXW Kalstein Shanghai</option>
-                                    <option value='EXW Kalstein Paris' data-i18n="client:todo">EXW Kalstein Paris</option>
+                                    <option value='EXW Kalstein Shanghai'>EXW Kalstein Shanghai</option>
+                                    <option value='EXW Kalstein Paris'>EXW Kalstein Paris</option>
                                 </select>
                             </div>
                             <div class='mb-3'>
@@ -100,8 +100,8 @@
                                 <select class='form-select' aria-label='Default select example' id='inputCurrency'
                                     style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'>
                                     <option selected='' style='text-align: center;' value='0' data-i18n="client:selecciona">-- Seleccionar --</option>
-                                    <option value='EUR' data-i18n="client:todo">EUR</option>
-                                    <option value='USD' data-i18n="client:todo">USD</option>
+                                    <option value='EUR'>EUR</option>
+                                    <option value='USD'>USD</option>
                                 </select>
                             </div>
                             <div class='mb-3'>
@@ -127,7 +127,7 @@
                                     style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'>
                                     <option selected='' style='text-align: center;' value='0' data-i18n="client:selecciona">-- Seleccionar --</option>
                                     <option value='Aerial' data-i18n="client:aereo">Aereo</option>
-                                    <option value='Maritime' data-i18n="client:todo">Marsítimo</option>
+                                    <option value='Maritime' data-i18n="client:maritimo">Marsítimo</option>
                                 </select>
                                 <select class='form-select' aria-label='Default select example' id='inputShippingMFR'
                                     style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em; display: none;'>
