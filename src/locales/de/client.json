@@ -1,6 +1,9 @@
 {
     "productoYaRegistrado": "Das Produkt wurde bereits von einem anderen Kunden registriert!",
     "itemTabla": "Element",
+    "previo": "Vorherige",
+    "next": "Nächste",
+    "dataNotFound": "Keine Daten gefunden",
     "nCotizacionTable": "Angebotsnummer",
     "fechaTable": "Datum",
     "statusTable": "Status",

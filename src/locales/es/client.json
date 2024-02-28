@@ -182,5 +182,8 @@
     "qtyTable": "Cantidad",
     "shippingTable": "Método de envío",
     "seeTable": "Ver",
-    "deleteTable": "Eliminar"
+    "deleteTable": "Eliminar",
+    "dataNotFound": "No se encontraron datos",
+    "previo": "Anterior",
+    "next": "Siguiente"
 }

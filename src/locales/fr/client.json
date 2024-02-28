@@ -182,5 +182,8 @@
     "accesoriosAdic": "Accessoires supplémentaires",
     "ver": "Afficher",
     "descripcionProducto": "Description du produit",
-    "accesos":"Accéder"
+    "accesos":"Accéder",
+    "dataNotFound": "Aucune donnée trouvée",
+    "previo": "Précédent",
+    "next": "Suivant"
 }
