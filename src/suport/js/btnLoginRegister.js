@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 
     function showUserLoguer(consulta){
         $.ajax({
-			url: "https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/infoAccountLoguer.php",
+			url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/infoAccountLoguer.php",
 			type: "POST",
 			data: {consulta},
         })
@@ -23,12 +23,12 @@ jQuery(document).ready(function($){
 
     function logout(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/logout.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/logout.php',
             type: 'POST',
             data: {consulta},
         })
         .done(function(respuesta){
-            $(location).attr('href','https://kalstein.us/login/')
+            $(location).attr('href','https://dev.kalstein.plus/login/')
         })
         .fail(function(){
             console.log("error")
