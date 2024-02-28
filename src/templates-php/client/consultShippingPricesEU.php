@@ -2,7 +2,16 @@
 	<?php
 		require __DIR__. '/../../../php/conexion.php';
 		$banner_img = 'Header-consultar-precios.jpg';
-		$banner_text = "Consulte los gastos de envío";
+		$language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+        // Incluir el archivo de traducciones
+        include 'translations.php';
+
+        // Determinar el texto del banner según el idioma
+        $banner_text_translation = isset($translations[$language]['banner_text_shipping_costs']) ? $translations[$language]['banner_text_shipping_costs'] : $translations['en']['banner_text_shipping_costs'];
+
+        // Incluir el banner.php pasando el texto traducido
+        $banner_text = $banner_text_translation;
 		include 'banner.php';
 
 		$userProduct = $_GET['userToConsultPriceShipping'];

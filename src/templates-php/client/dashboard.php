@@ -47,7 +47,16 @@
         <div id='c-panel04' style='display: none'>
             <?php
                 $banner_img = 'Header-usuario-IMG.png';
-                $banner_text = "Parámetros";
+                $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+                // Incluir el archivo de traducciones
+                include 'translations.php';
+
+                // Determinar el texto del banner según el idioma
+                $banner_text_translation = isset($translations[$language]['banner_text_parameters']) ? $translations[$language]['banner_text_parameters'] : $translations['en']['banner_text_parameters'];
+
+                // Incluir el banner.php pasando el texto traducido
+                $banner_text = $banner_text_translation;
                 include 'banner.php';
 
                 //PROFILE SETTINGS
@@ -63,7 +72,16 @@
         <div id='c-panel07' style='display: none'>
             <?php
                 $banner_img = 'Header-usuario-IMG.png';
-                $banner_text = "Conectar con otros usuarios";
+                $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+                // Incluir el archivo de traducciones
+                include 'translations.php';
+
+                // Determinar el texto del banner según el idioma
+                $banner_text_translation = isset($translations[$language]['banner_text_connect_with_others']) ? $translations[$language]['banner_text_connect_with_others'] : $translations['en']['banner_text_connect_with_others'];
+
+                // Incluir el banner.php pasando el texto traducido
+                $banner_text = $banner_text_translation;
                 include 'banner.php';
 
                 //INBOX 

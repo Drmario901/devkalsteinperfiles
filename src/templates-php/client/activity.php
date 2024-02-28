@@ -1,8 +1,15 @@
 <div id='c-panel03' style='display: none;'>
 
-    <?php
+<?php
         $banner_img = 'Header-usuario-IMG.png';
-        $banner_text = "Registro";
+
+        $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+        include 'translations.php';
+
+        $banner_text_translation = isset($translations[$language]['banner_text_registration']) ? $translations[$language]['banner_text_registration'] : $translations['en']['banner_text_registration'];
+
+        $banner_text = $banner_text_translation;
         include 'banner.php';
     ?>
 
