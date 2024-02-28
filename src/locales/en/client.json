@@ -25,7 +25,7 @@
     "enviados":"Sends",
     "componerMsj":"Compose a message",
     "deMsj":"from",
-    "paraMsj":"for",
+    "paraMsj":"For",
     "asuntoMsj":"Matter",
     "enviar":"Send",
     "noMsj":"No messages",
@@ -173,5 +173,6 @@
     "cotizar":"Quote",
     "accesoriosAdic":"Additional accessories",
     "ver":"Show",
-    "descripcionProducto":"Product Description"
+    "descripcionProducto":"Product Description",
+    "accesos":"Access"
 }

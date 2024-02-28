@@ -240,7 +240,7 @@
                 <div class='card mb-4' style='border-color: #213280;'>
                     <div class='card-header' data-i18n="client:borrarCuenta">Borrar cuenta</div>
                     <div class='card-body'>
-                        <p data-i18n="client:eliminarCuentaPar">Eliminar su cuenta es una acción permanente y no se puede deshacer. Si estás seguro de que
+                        <p data-i18n="client:borrarCuentaPar">Eliminar su cuenta es una acción permanente y no se puede deshacer. Si estás seguro de que
                              Si desea eliminar su cuenta, seleccione el botón a continuación.</p>
                         <button class='btn btn-danger-soft text-danger' type='button' id='btnDeleteAccount' data-i18n="client:siBorrar">Entiendo, borrar cuenta</button>
                     </div>
