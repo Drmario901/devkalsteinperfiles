@@ -7,8 +7,8 @@
     ?>
 
     <nav class='nav nav-borders'>
-        <a class='nav-link active ms-0' href='#' id='btnHistorySupportPR01'>Historia</a>
-        <a class='nav-link' href='#' id='btnOrderSupportPR01'>Orden de Servicio</a>
+        <a class='nav-link active ms-0' href='#' id='btnHistorySupportPR01' data-i18n="client:historia">Historia</a>
+        <a class='nav-link' href='#' id='btnOrderSupportPR01' data-i18n="client:ordenServicio">Orden de Servicio</a>
     </nav>
     
     <hr>
@@ -17,7 +17,7 @@
         <div class='row'>
             <div class='col-12 input-wrapper-p'>
                 <i class='fa-solid fa-magnifying-glass second-glass second-glass-2'></i>
-                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar el servicio de su requerimiento'>
+                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar el servicio de su requerimiento' data-placeholder='buscarServicio'>
             </div>
             <div id='c-listSupportReports' class='col-12 table-responsive'>
         
@@ -28,7 +28,7 @@
         <div class='row'>
             <div class='col-12 input-wrapper-p'>
                 <i class='fa-solid fa-magnifying-glass second-glass second-glass-2'></i>
-                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar un agente de soporte'>
+                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar un agente de soporte' data-placeholder='buscarAgente'>
             </div>
             <div id='c-listSupportServices' class='col-12'>
             </div>
@@ -55,32 +55,32 @@
                 </div>
                 <hr>
                 <div class='form-group mb-3'>
-                    <label for='product'>Modelo del Producto:</label>
+                    <label for='product' data-i18n="client:modeloProducto">Modelo del Producto:</label>
                     <select id='Rproduct' class='custom-select tm-select-accounts' name='category'>
                         
                     </select>
-                    <input type="text" id='otherModel' style='display: none; margin-top: 1rem;' placeholder='Modelo de Equipo'>                 
+                    <input type="text" id='otherModel' style='display: none; margin-top: 1rem;' placeholder='Modelo de Equipo' data-placeholder='modeloEquipo'>                 
                     <br>
                     <div class='row tm-edit-product-row'>
                         <div class='form-group mb-3'>
-                            <label for='description'>Escribe la aplicación:</label>
+                            <label for='description' data-i18n="client:escribeAplicacion">Escribe la aplicación:</label>
                             <textarea id='RDescription' class='form-control validate' required></textarea>
                         </div>   
                         <div class='form-group mb-3'>                                               
-                            <label for='Level'>Nivel de Exigencia:</label>
+                            <label for='Level' data-i18n="client:nivelExigencia">Nivel de Exigencia:</label>
                             <select id='Rnivel' class='custom-select tm-select-accounts' name='category'>
-                                <option selected value='0'>Elige una opción</option>
-                                <option value='Bajo'>Bajo</option>
-                                <option value='Media'>Media</option>
-                                <option value='Alto'>Alto</option>
+                                <option selected value='0' data-i18n="client:eligeOpcion">Elige una opción</option>
+                                <option value='Bajo' data-i18n="client:bajo">Bajo</option>
+                                <option value='Media' data-i18n="client:media">Media</option>
+                                <option value='Alto' data-i18n="client:alto">Alto</option>
                             </select>
                         </div> 
                     </div>
                 </div>
             </div>
             <div class='modal-footer'>
-                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' id='btnClosedModalTicket'>Cerrar</button>
-                <button type='button' class='btn btn-primary' id='savedTicket'>Generar Ticket</button>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' id='btnClosedModalTicket' data-i18n="client:historia">Cerrar</button>
+                <button type='button' class='btn btn-primary' id='savedTicket' data-i18n="client:historia">Generar Ticket</button>
             </div>
         </div>
     </div>

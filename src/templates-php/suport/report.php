@@ -21,7 +21,7 @@
         ?>
     
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/reports/" target="__blank">Lista de  Reportes</a>
+            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/reports/" target="__blank" data-i18n="support:listaReportes" >Lista de  Reportes</a>
             <hr class="mt-0 mb-4">
         </nav>
         
@@ -36,9 +36,9 @@
             </div>
             <div class="col-2">
                 <select class="form-control" id="estatus">
-                    <option value="0" style="text-align: center;">-- Seleccionar Estatus --</option>
-                    <option value="Pending">Pendiente</option>
-                    <option value="Process">Procesado</option>
+                    <option value="0" style="text-align: center;" data-i18n="support:seleccionarEstatus" >-- Seleccionar Estatus --</option>
+                    <option value="Pending" data-i18n="support:selectPending">Pendiente</option>
+                    <option value="Process" data-i18n="support:procesado">Procesado</option>
                 </select>
             </div>
         </div>
@@ -51,8 +51,8 @@
                 <div class="modal-content">
                     <div class="modal-body c-reportRequest"></div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnClosedModalReportSupport">Cerrado</button>
-                        <button type="button" class="btn btn-primary" style='color: #fff;' id='btn-savedGeneratedQuo'>Generado</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnClosedModalReportSupport" data-i18n="support:cerrado" >Cerrado</button>
+                        <button type="button" class="btn btn-primary" style='color: #fff;' id='btn-savedGeneratedQuo' data-i18n="support:generado">Generado</button>
                     </div>
                 </div>
             </div>

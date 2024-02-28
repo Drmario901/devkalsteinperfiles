@@ -41,23 +41,23 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link active" id="diagsys" href="#"><span class="bottom-icon material-symbols-outlined">
-            build</span>Diagnosticar
+            build</span data-i18n="client:diagnosticar">Diagnosticar
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="register" href="#"><span class="bottom-icon material-symbols-outlined">
             add_to_photos
-          </span>Registrar Equipo</a>
+          </span data-i18n="client:RegistrarEquipo">Registrar Equipo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="exit" href="#"><span class="bottom-icon material-symbols-outlined">
             logout
-          </span>Logout</a>
+          </span data-i18n="client:logout">Logout</a>
         </li>
       </ul>
       <!--User Icon-->
       <span class="navbar-text">
-        <span class="bottom-icon material-symbols-outlined">
+        <span class="bottom-icon material-symbols-outlined" data-i18n="client:person">
             person
         </span>
       </span>

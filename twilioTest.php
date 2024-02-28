@@ -7,7 +7,9 @@ require 'vendor/autoload.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-$code = 'Prueba con API Twilio';
+
+$language = $_COOKIE['language'];
+$code = 'Ultima prueba librería Twilio';
 /*if(isset($_SESSION["codeVerification"])){
     $code = $_SESSION["codeVerification"];
 }*/
@@ -26,7 +28,7 @@ try {
         $phoneNumber, 
         array(
             'from' => $twilioPhoneNumber, 
-            'body' => $code
+            'body' => $language
         )
     );
 

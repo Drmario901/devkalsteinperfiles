@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
       debug: true,
       lng: getLanguage(),
       fallbackLng: 'en',
-      ns: ['account', 'prueba'],
+      ns: ['account', 'prueba', 'client', 'support'],
       defaultNS: 'account', // Establecer el namespace predeterminado
       resources: {}
     }, (err, t) => {
@@ -53,7 +53,14 @@ jQuery(document).ready(function($){
         ))
       )).then(() => {
         // Inicializar jquery-i18next
-        console.log(getLanguage());
+        
+        //Check if the language from cookie is the same as the language initialized
+        if (i18next.resolvedLanguage !== getLanguage()) {
+          i18next.changeLanguage(getLanguage(), () => {
+            rerender();
+          });
+        }
+
         jqueryI18next.init(i18next, $, { useOptionsAttr: true });
 
         // fill language switcher

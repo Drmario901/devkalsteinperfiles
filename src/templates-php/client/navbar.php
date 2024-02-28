@@ -22,7 +22,7 @@
                         </li>
                         <li>
                             <a href='#' id='btnEditProfilePr01' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded  icon'>settings</span>
+                                <span class='material-symbols-rounded  icon' >settings</span>
                             </a>
                         </li>
                         <li>
@@ -46,27 +46,27 @@
                 <ul class='navbar-list'>
                     <li>
                         <a href='#' id='btnDashboardPr01' class='navbar-link active icon-box'>          
-                            <span>Dashboard</span>
+                            <span data-i18n="client:dashboard">Dashboard</span>
                         </a>
                     </li>
                     <li>
                         <a href='#' id='btnQuotePr01' class='navbar-link icon-box'>           
-                            <span>Mis cotizaciones</span>
+                            <span data-i18n="client:misCotizaciones">Mis cotizaciones</span>
                         </a>
                     </li>
                     <li>
                         <a href='#' id='btnRecentActivityPr01' class='navbar-link icon-box'>           
-                            <span>Actividad</span>
+                            <span data-i18n="client:actividad">Actividad</span>
                         </a>
                     </li>
                     <li>
                         <a href='#' id='btnCatalogs' class='navbar-link icon-box'>
-                            <span>Catálogos</span>
+                            <span data-i18n="client:catalogos">Catálogos</span>
                         </a>
                     </li>                        
                     <li>
                         <a href='#' id='btnReportPr01' class='navbar-link icon-box'>
-                            <span>Soporte técnico</span>
+                            <span data-i18n="client:soporteTecnico">Soporte técnico</span>
                         </a>
                     </li>
                     <!--li>
@@ -76,7 +76,7 @@
                     </li-->
                     <li class='generate-quote'>
                         <a href='#' id='btnGenQuote' class='navbar-link icon-box' style='color: white !important;'>
-                            <span>GENERA TU COTIZACIÓN</span>
+                            <span data-i18n="client:generarCotizacion">GENERA TU COTIZACIÓN</span>
                         </a>
                     </li>                       
                 </ul>                        

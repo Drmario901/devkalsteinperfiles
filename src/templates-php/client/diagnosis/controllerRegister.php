@@ -37,7 +37,7 @@ function borrarVarsPOST(){
                 
                 //Si devolvio contenido es porque ya esta registrado
                 borrarVarsPOST();
-                echo '<div class="centerDiv"><div class="alert alert-danger" role="alert">El producto ya ha sido registrado por otro cliente!</div></div>';
+                echo '<div class="centerDiv"><div class="alert alert-danger" role="alert"  data-i18n="client:productoYaRegistrado" >El producto ya ha sido registrado por otro cliente!</div></div>';
                 
                 
             }else{
@@ -67,12 +67,12 @@ function borrarVarsPOST(){
                             
                             //Registrado exitosamente
                             borrarVarsPOST();
-                            echo '<div class="centerDiv"><div class="alert alert-success" role="alert">El producto fue registrado exitosamente!</div></div>';
+                            echo '<div class="centerDiv"><div class="alert alert-success" role="alert" data-i18n="client:productoRegistrado" >El producto fue registrado exitosamente!</div></div>';
 
                         }else{
                             
                             borrarVarsPOST();
-                            echo '<div class="centerDiv"><div class="alert alert-danger" role="alert">Ha ocurrido un error de servidor!</div></div>';
+                            echo '<div class="centerDiv"><div class="alert alert-danger" data-i18n="client:errorRegistrar"  role="alert">Ha ocurrido un error de servidor!</div></div>';
                         }
                         
                         
@@ -80,7 +80,7 @@ function borrarVarsPOST(){
                         
                         //Si viene vacio es porque no existe el uid
                         borrarVarsPOST();
-                        echo '<div class="centerDiv"><div class="alert alert-danger" role="alert">El UID de producto no existe!</div></div>';
+                        echo '<div class="centerDiv"><div class="alert alert-danger" role="alert" data-i18n="client:errorUID" >El UID de producto no existe!</div></div>';
                         
                     }
                     
@@ -89,7 +89,7 @@ function borrarVarsPOST(){
                 }else{
                     
                     borrarVarsPOST();
-                    echo '<div class="centerDiv"><div class="alert alert-danger" role="alert">Ha ocurrido un error de servidor!</div></div>';
+                    echo '<div class="centerDiv"><div class="alert alert-danger" role="alert" data-i18n="client:errorRegistrar">Ha ocurrido un error de servidor!</div></div>';
 
                 }
                 
@@ -102,7 +102,7 @@ function borrarVarsPOST(){
         }else{
             
             borrarVarsPOST();
-            echo '<div class="centerDiv"><div class="alert alert-danger" role="alert">Ha ocurrido un error de servidor!</div></div>';
+            echo '<div class="centerDiv"><div class="alert alert-danger" role="alert" data-i18n="client:errorRegistrar">Ha ocurrido un error de servidor!</div></div>';
         }
     
     

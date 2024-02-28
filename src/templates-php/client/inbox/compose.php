@@ -28,26 +28,26 @@
 <div class="email-app">
     <nav>
         <ul class="nav">
-            <a href="#" id="inbox-compose" style="color: #fff" class="btn btn-danger btn-block">Nuevo mensaje</a>
+            <a href="#" id="inbox-compose" style="color: #fff" class="btn btn-danger btn-block" data-i18n="client:nuevoMenssaje">Nuevo mensaje</a>
             <li class="nav-item">
-                <a class="nav-link" href="#" id="inbox-inbox"><i class="fa fa-inbox"></i> Inbox <span class="badge badge-danger">4</span></a>
+                <a class="nav-link" href="#" id="inbox-inbox" data-i18n="client:inbox"><i class="fa fa-inbox"></i> Inbox <span class="badge badge-danger">4</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" id="inbox-sent"><i class="fa fa-rocket"></i>Enviados</a>
+                <a class="nav-link" href="#" id="inbox-sent" data-i18n="client:enviados"><i class="fa fa-rocket"></i>Enviados</a>
             </li>
         </ul>
     </nav>
     <main class='p-4'>
-        <p class="text-center">Componer un mensaje</p>
+        <p class="text-center" data-i18n="client:componerMsj">Componer un mensaje</p>
         <form id="messageForm">
             <div class="form-row mb-3">
-                <label for="to" class="col-2 col-sm-1 col-form-label">De:</label>
+                <label for="to" class="col-2 col-sm-1 col-form-label" data-i18n="client:deMsj">De:</label>
                 <div class="col-10 col-sm-11">
                 <input style="color: #000 !important" type="text" class="form-control" name="remitente"  value="<?php echo $userTag?>" readonly>
                 </div>
             </div>
             <div class="form-row mb-3">
-                <label for="to" class="col-2 col-sm-1 col-form-label">Para:</label>
+                <label for="to" class="col-2 col-sm-1 col-form-label" data-i18n="client:paraMsj">Para:</label>
                 <div class="col-10 col-sm-11">
                     <br>
                 <li class='nav-item dropdown' style='margin-left: -1.5mm; width: 100%'>
@@ -59,11 +59,11 @@
             </div>
             <div class="form-row mb-3">
                 <br>
-                <label for="cc" class="col-2 col-sm-1 col-form-label">Asunto:</label>
+                <label for="cc" class="col-2 col-sm-1 col-form-label" data-i18n="client:asuntoMsj">Asunto:</label>
                 <div class="col-10 col-sm-11">
                     <br>
                     <?php $subject = (isset($_GET['subject']) && $_GET['subject'] != "")? " value='Re: ".$_GET['subject']."'" : ''; ?>
-                    <input style="color: #000 !important" type="text" id="asunto" name="asunto" placeholder="Asunto"<?php echo $subject?>>
+                    <input style="color: #000 !important" type="text" id="asunto" name="asunto" data-placeholder='asuntoMsj' placeholder="Asunto"<?php echo $subject?>>
                 </div>
             </div>
         </form>
@@ -72,11 +72,11 @@
                     </div>
                 </div>
                 <div class="form-group mt-4">
-                    <textarea style="color: #000 !important" id="contenido" name="contenido" rows="12" placeholder="Escribe tu mensaje aquí"></textarea>
+                    <textarea style="color: #000 !important" id="contenido" name="contenido" rows="12" data-placeholder='componerMsj' placeholder="Escribe tu mensaje aquí"></textarea>
                 </div>
                 <br>
                 <div class="form-group">
-                    <center><button type="submit" id="sendMessage" class="btn btn-success">Enviar</button></center>
+                    <center><button type="submit" id="sendMessage" class="btn btn-success" data-i18n="client:enviar">Enviar</button></center>
                 </div>
             </div>
         </div>
