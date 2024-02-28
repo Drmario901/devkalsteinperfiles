@@ -192,7 +192,7 @@
             <table class='table custom-table'>
                 <thead class='headTableForQuote'>
                     <tr>
-                        <td scope='col' data-i18n='client:itemTable' >Item</td>
+                        <td scope='col' data-i18n='client:itemTabla' >Item</td>
                         <td scope='col' data-i18n='client:nCotizacionTable'>N° Cotización</td>
                         <td scope='col' data-i18n='client:fechaTable'>Fecha</td>
                         <td scope='col' data-i18n='client:qtyTable'>Cantidad</td>
