@@ -61,7 +61,7 @@
             <div class="footer-main-button-quo" id='btnGenQuote' style='cursor: pointer' data-i18n="client:generaCotizacion">GENERA TU COTIZACIÓN</div>
         </div>
     </div>
-    <div class='text-white my-3 text-center'>© <?php echo date('Y') data-i18n="client:kalsteinDerechos" ?> Kalstein. Todos los derechos reservados.</div>
+    <div class='text-white my-3 text-center' data-i18n="client:kalsteinDerechos">© <?php echo date('Y')  ?> Kalstein. Todos los derechos reservados.</div>
 </footer>
 
 <script>
