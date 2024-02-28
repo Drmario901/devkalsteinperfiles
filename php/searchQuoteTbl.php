@@ -269,7 +269,7 @@
             $msjNoData = "
                 <div class='contentNoDataQuote'>
                     <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                    <p data-i18n='dataNotFound' >No se han encontrado datos</p>
+                    <p data-i18n='client:dataNotFound' >No se han encontrado datos</p>
                 </div>
             ";
         }
