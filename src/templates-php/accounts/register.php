@@ -59,7 +59,7 @@
                                 <option value='1' selected data-i18n="account:opcion1">Cotizar, comprar o consumir recursos proporcionados por la plataforma</option>
                                 <option value='2' selected data-i18n="account:opcion2">Anunciar y vender sus productos</option>
                                  <option value='6' selected data-i18n="account:opcion3">Impartir conocimientos en el ámbito científico, dar cursos, etc.</option>
-                                <!--option value='4'>Prestación de servicios técnicos</option -->
+                                <option value='4'>Prestación de servicios técnicos</option>
                             </select>
                         </div>
                         <div class='col-sm-3'></div>
@@ -169,7 +169,7 @@
                                     <option value='0' selected data-i18n="account:selectDefault" >Elija una opción</option>
                                     <option value='1' data-i18n="account:selectIngeniero" >Ingeniero</option>
                                     <option value='2' data-i18n="account:selectDireccion">Dirección de Ingeniería</option>
-                                    <option value='3' data-i18n="account:selectDesing">Diseñador</option>
+                                    <option value='3' data-i18n="account:selectDesign">Diseñador</option>
                                     <option value='4' data-i18n="account:selectCompras">Compras / Comprador / Finanzas</option>
                                     <option value='5' data-i18n="account:selectGestion">Gestión de programas y proyectos</option>
                                     <option value='6' data-i18n="account:selectOperaciones">Operaciones / Gestión de MRO</option>
@@ -449,7 +449,7 @@
                                     <option value='0' selected data-i18n="account:selectDefault" >Elija una opción</option>
                                     <option value='1' data-i18n="account:selectIngeniero" >Ingeniero</option>
                                     <option value='2' data-i18n="account:selectDireccion">Dirección de Ingeniería</option>
-                                    <option value='3' data-i18n="account:selectDesing">Diseñador</option>
+                                    <option value='3' data-i18n="account:selectDesign">Diseñador</option>
                                     <option value='4' data-i18n="account:selectCompras">Compras / Comprador / Finanzas</option>
                                     <option value='5' data-i18n="account:selectGestion">Gestión de programas y proyectos</option>
                                     <option value='6' data-i18n="account:selectOperaciones">Operaciones / Gestión de MRO</option>
@@ -570,11 +570,11 @@
                         </div>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper'>
-                                <select class='form-select' aria-label='Default select example' style='height: 3rem; outline: 1px solid #213280; font-size: 0.9em;' id='jobRole-soporte' data-i18n="account:selectDefault">
+                                <select class='form-select' aria-label='Default select example' style='height: 3rem; outline: 1px solid #213280; font-size: 0.9em;' id='jobRole-soporte'>
                                 <option value='0' selected data-i18n="account:selectDefault" >Elija una opción</option>
                                     <option value='1' data-i18n="account:selectIngeniero" >Ingeniero</option>
                                     <option value='2' data-i18n="account:selectDireccion">Dirección de Ingeniería</option>
-                                    <option value='3' data-i18n="account:selectDesing">Diseñador</option>
+                                    <option value='3' data-i18n="account:selectDesign">Diseñador</option>
                                     <option value='4' data-i18n="account:selectCompras">Compras / Comprador / Finanzas</option>
                                     <option value='5' data-i18n="account:selectGestion">Gestión de programas y proyectos</option>
                                     <option value='6' data-i18n="account:selectOperaciones">Operaciones / Gestión de MRO</option>
