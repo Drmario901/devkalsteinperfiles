@@ -164,7 +164,7 @@
                 'client:statusTable' => 'Status',
                 'client:dataNotFound' => 'No data found',
                 'client:previo' => 'Previous',
-                'client:next' => 'Next'
+                'client:next' => 'Next',
             ),
             'es' => array(
                 'client:itemTabla' => 'Item',
@@ -230,7 +230,59 @@
                 'client:dataNotFound' => 'Nie znaleziono danych',
                 'client:previo' => 'Poprzedni',
                 'client:next' => 'Następny'
-            )
+            ),
+            'nl' => array(
+                'client:itemTabla' => 'Artikel',
+                'client:nCotizacionTable' => 'Offertenummer',
+                'client:fechaTable' => 'Datum',
+                'client:qtyTable' => 'Hoeveelheid',
+                'client:shippingTable' => 'Verzendmethode',
+                'client:seeTable' => 'Bekijk',
+                'client:deleteTable' => 'Verwijderen',
+                'client:statusTable' => 'Toestand',
+                'client:dataNotFound' => 'Geen gegevens gevonden',
+                'client:previo' => 'Vorige',
+                'client:next' => 'Volgende'
+            ),
+            'de' => array(
+                'client:itemTabla' => 'Artikel',
+                'client:nCotizacionTable' => 'Angebotsnummer',
+                'client:fechaTable' => 'Datum',
+                'client:qtyTable' => 'Menge',
+                'client:shippingTable' => 'Versandart',
+                'client:seeTable' => 'Sehen',
+                'client:deleteTable' => 'Löschen',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Keine Daten gefunden',
+                'client:previo' => 'Bisherige',
+                'client:next' => 'Nächster'
+            ),
+            'ee' => array(
+                'client:itemTabla' => 'Artikkel',
+                'client:nCotizacionTable' => 'Pakkumise number',
+                'client:fechaTable' => 'Kuupäev',
+                'client:qtyTable' => 'Kogus',
+                'client:shippingTable' => 'Kohaletoimetamise meetod',
+                'client:seeTable' => 'Vaata',
+                'client:deleteTable' => 'Kustuta',
+                'client:statusTable' => 'Staatus',
+                'client:dataNotFound' => 'Andmeid ei leitud',
+                'client:previo' => 'Eelmine',
+                'client:next' => 'Järgmine'
+            ),
+            'se' => array(
+                'client:itemTabla' => 'Artikel',
+                'client:nCotizacionTable' => 'Offertnummer',
+                'client:fechaTable' => 'Datum',
+                'client:qtyTable' => 'Mängd',
+                'client:shippingTable' => 'Fraktsätt',
+                'client:seeTable' => 'Se',
+                'client:deleteTable' => 'Radera',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Inga data hittades',
+                'client:previo' => 'Tidigare',
+                'client:next' => 'Nästa'
+            ),
         );
 
 
@@ -362,7 +414,7 @@
             $msjNoData = "
                 <div class='contentNoDataQuote'>
                     <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                    <p data-i18n='client:dataNotFound' >No se han encontrado datos</p>
+                    <p data-i17n='client:dataNotFound' >No se han encontrado datos</p>
                 </div>
             ";
         }
@@ -381,11 +433,11 @@
             <div id='currentPageIndicator'>Page: 1</div>
                 <form id='form-previous' action='' method='get' style='margin-right: 8px'>
                     <input id='previous' type='hidden' name='u' value='$prevPage'>
-                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='client:previo' value='&laquo; Anterior'>
+                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:previo' value='&laquo; Anterior'>
                 </form>
                 <form id='form-next' action='' method='get'>
                     <input class='next' type='hidden' name='u' value='$nextPage'>
-                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='client:next' value='Siguiente &raquo;'>
+                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:next' value='Siguiente &raquo;'>
                 </form>
             </div>
             <input id='hiddenPage' type='hidden' value='$page'>
