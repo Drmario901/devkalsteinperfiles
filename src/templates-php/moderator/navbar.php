@@ -138,7 +138,7 @@
                             </figure>                            
                             <div>
                                 <p class='profile-title' style='color: #000;'><?php echo $acc_name ?></p>
-                                <p class='profile-subtitle'>Moderador</p> 
+                                <p class='profile-subtitle' data-i18n="moderator:moderador">Moderador</p> 
                             </div>                            
                         </a>                         
                     </li>                        
@@ -146,17 +146,17 @@
                 <ul class='navbar-list'>
                     <li>
                         <a href='https://plataforma.kalstein.net/private-kalstein-moderator/accounts' id="link-accounts" class='navbar-link icon-box'>          
-                            <span>Cuentas</span>
+                            <span data-i18n="moderator:accounts">Cuentas</span>
                         </a>
                     </li>
                     <li>
                         <a href='https://plataforma.kalstein.net/private-kalstein-moderator/products' id='link-product' class='navbar-link icon-box'>           
-                            <span>Productos</span>
+                            <span data-i18n="moderator:products">Productos</span>
                         </a>
                     </li>
                     <li>
                         <a href='https://plataforma.kalstein.net/private-kalstein-moderator/bitacoras' id='link-bitacora' class='navbar-link icon-box'>           
-                            <span>Bitacora</span>
+                            <span data-i18n="moderator:bitacora">Bitacora</span>
                         </a>
                     </li>
                     <!--li>
@@ -171,7 +171,7 @@
                     </li-->
                     <li class='generate-quote'>
                         <a href='https://plataforma.kalstein.net/moderator/quotes' class='navbar-link icon-box' style='color: white !important;'>
-                            <span>COTIZACIONES</span>
+                            <span data-i18n="moderator:quotesMayus">COTIZACIONES</span>
                         </a>
                     </li>                       
                 </ul>                        

@@ -1,7 +1,16 @@
 <div id='c-panel02' style='display: none;'>
     <?php
         $banner_img = 'Header-usuario-IMG.png';
-        $banner_text = "Mis cotizaciones";
+        $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+        // Incluir el archivo de traducciones
+        include 'translations.php';
+
+        // Determinar el texto del banner según el idioma
+        $banner_text_translation = isset($translations[$language]['banner_text_my_quotes']) ? $translations[$language]['banner_text_my_quotes'] : $translations['en']['banner_text_my_quotes'];
+
+        // Incluir el banner.php pasando el texto traducido
+        $banner_text = $banner_text_translation;
         include 'banner.php';
     ?>
     <div class='container-xl px-4 mt-4'>

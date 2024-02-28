@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
     
     function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
         $.ajax({
-            url:  'http://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/updateStatus.php',
+            url:  'http://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateStatus.php',
             method: 'POST',
             data: {
                 cotizacion_id,
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
     
     function loadQuotes(page) {
         $.ajax({
-            url: 'http://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/quotes.php',
+            url: 'http://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/quotes.php',
             method: 'POST',
             data: { page },
         })
@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
         console.log(quotes_id);
   
         $.ajax({
-            url:'http://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/cotizacioninfo.php',
+            url:'http://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/cotizacioninfo.php',
             method: 'POST', 
             data: {quotes_id}
         })
@@ -143,12 +143,12 @@ jQuery(document).ready(function($){
 function createdSessionCotizacion(consulta){
 
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/createSession.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/createSession.php',
         type: 'POST',
         data: {consulta},
     })
     .done(function(respuesta){
-        window.open('https://plataforma.kalstein.net/wp-content/plugins/kalsteinperfiles/php/suport/createPDF.php', '_blank') 
+        window.open('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinperfiles/php/suport/createPDF.php', '_blank') 
     })
     .fail(function(){
         console.log("error");

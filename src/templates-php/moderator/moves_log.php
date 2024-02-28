@@ -26,22 +26,22 @@
                 <!-- FILTERS -->
                 
                 <div class='col-xl-2'>
-                    <label class='small mb-1'>Filter</label>
+                    <label class='small mb-1' data-i18n="moderator:filter">Filter</label>
 
                     <select class='form-select' id='log-filter' style='height: 2.8em; outline: 1px solid #213280; font-size: 0.9em;'>    
-                        <option value='all' selected> All </option>
-                        <option value='a_aproved'> Account Validated </option>
-                        <option value='a_denied' > Account Denied </option>
-                        <option value='p_aproved'> Product Validated </option>
-                        <option value='p_denied' > Product Denied </option>
-                        <option value='q_aproved'> Quote Processed </option>
-                        <option value='q_denied' > Quote Cancelled </option>
+                        <option value='all' selected data-i18n="moderator:optionAll" >All</option>
+                        <option value='a_aproved' data-i18n="moderator:optionAccountValidated"> Account Validated </option>
+                        <option value='a_denied' data-i18n="moderator:optionAccountDenied"> Account Denied </option>
+                        <option value='p_aproved' data-i18n="moderator:optionProductValidated"> Product Validated </option>
+                        <option value='p_denied' data-i18n="moderator:optionProductDenied"> Product Denied </option>
+                        <option value='q_aproved' data-i18n="moderator:optionQuoteProcessed"> Quote Processed </option>
+                        <option value='q_denied' data-i18n="moderator:optionQuoteCancelled"> Quote Cancelled </option>
                     </select>
                 </div>
                 <div class='col-xl-6 input-wrapper-p'>
                     <div class="d-flex flex-row">
                         <input type='text' id='log-search-term' class='inputSearchQuote'>
-                        <button id='log-search' class='btnSearchQuote'>Search</button>
+                        <button id='log-search' class='btnSearchQuote' data-i18n="moderator:search">Search</button>
                     </div>
                     <i class='fa-solid fa-magnifying-glass second-glass'></i>
                 </div>

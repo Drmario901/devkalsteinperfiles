@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     dataCMB()
     function dataCMB(consulta) {
         $.ajax({
-            url: 'http://127.0.0.1/wp-local/wp-content/plugins/kalsteinPerfiles/php/fetchData.php',
+            url: 'http:/dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/php/fetchData.php',
             type: 'POST',
             data: { consulta },
         })
@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
     function mostrarDatos(consulta){
         $.ajax({
             // Cambia mificherophp.php por el nombre de tu fichero
-            url: "http://127.0.0.1/wp-local/wp-content/plugins/kalsteinPerfiles/php/productData.php",
+            url: "http:/dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/php/productData.php",
             type: "POST",
             data: {consulta},
         })
@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
             $('#height').val(data.height)
             $('#status').val(data.status)
             $('#price').val(data.price)
-            $('#thumbnail').attr('src', 'http://127.0.0.1/wp-local/wp-content/plugins/kalsteinPerfiles/src/images/upload/' + data.image)
+            $('#thumbnail').attr('src', 'http:/dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/src/images/upload/' + data.image)
         })
         .fail(function(){
             console.log(data.name);

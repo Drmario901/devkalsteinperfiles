@@ -1,10 +1,25 @@
 <div id='c-panel08' style='display: none;'>
 
-	<?php
-		$banner_img = 'Header-usuario-IMG.png';
-		$banner_text = "Catálogos";
-		include 'banner.php';
-	?>
+		<?php
+			// Incluir el archivo de traducciones
+			include 'translations.php';
+			
+			$banner_img = 'Header-usuario-IMG.png';
+
+			// Obtener el idioma del cookie
+			$language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+			// Obtener el texto del banner según el idioma
+			$banner_text_key = 'banner_text_catalogs'; // Clave para el texto de los catálogos (por defecto)
+			if (isset($translations[$language]['banner_text_catalogs'])) {
+				$banner_text_key = 'banner_text_catalogs';
+			}
+
+			// Obtener el texto del banner
+			$banner_text = isset($translations[$language][$banner_text_key]) ? $translations[$language][$banner_text_key] : 'Catalogs';
+
+			include 'banner.php';
+		?>
 
 	<style>
 		#category {

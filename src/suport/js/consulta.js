@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     /*dataCMB()
     function dataCMB(consulta) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/selectdata.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/selectdata.php',
             type: 'POST',
             data: { consulta },
         })
@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     function mostrarDatos(consulta){
         $.ajax({
             // Cambia mificherophp.php por el nombre de tu fichero
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/reportdata.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportdata.php",
             type: "POST",
             data: {consulta},
         })
@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
         formData.append('moneda',A_moneda);
         formData.append('price',A_price);
 
-        $.ajax({ contentType: "multipart/form-data", url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/update.php', 
+        $.ajax({ contentType: "multipart/form-data", url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/update.php', 
             type: 'POST',
             data: formData,
             dataType: 'text',
@@ -105,7 +105,7 @@ jQuery(document).ready(function($) {
             contentType: false,
             cache: false,
             success: function(response) {
-                console.log(response);  alert('hola'); window.location.href = 'https://plataforma.kalstein.net/index.php/kalstein-support/reports/';
+                console.log(response);  alert('hola'); window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/kalstein-support/reports/';
             },
             error: function(xhr, status, error){
                 console.log(xhr.responseText);
@@ -254,7 +254,7 @@ jQuery(document).ready(function($) {
         formData.append('Registrar_moneda',R_moneda);
         formData.append('Registrar_price',R_price);
 
-        $.ajax({ contentType: "multipart/form-data", url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/insert_cotizacion.php',
+        $.ajax({ contentType: "multipart/form-data", url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/insert_cotizacion.php',
             type: 'POST', 
             data: formData, 
             dataType: 'text', 

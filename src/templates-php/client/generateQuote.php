@@ -1,7 +1,16 @@
 <div id='c-panel06' style='<?php echo isset($_GET['search']) ? '' : 'display: none' ?>'>
     <?php
         $banner_img = 'Header-usuario-IMG.png';
-        $banner_text = "Productos";
+        $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+                // Incluir el archivo de traducciones
+                include 'translations.php';
+
+                // Determinar el texto del banner según el idioma
+                $banner_text_translation = isset($translations[$language]['banner_text_products']) ? $translations[$language]['banner_text_products'] : $translations['en']['banner_text_products'];
+
+                // Incluir el banner.php pasando el texto traducido
+                $banner_text = $banner_text_translation;
         include 'banner.php';
     ?>
 
