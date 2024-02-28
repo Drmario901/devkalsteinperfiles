@@ -79,7 +79,7 @@ jQuery(document).ready(function($){
         });
 
         rerender();
-        rerender();
+        document.readyState === 'complete' ? rerender() : window.addEventListener('load', rerender);
       });
     });
   });
