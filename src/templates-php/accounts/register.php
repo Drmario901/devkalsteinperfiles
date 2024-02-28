@@ -570,7 +570,7 @@
                         </div>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper'>
-                                <select class='form-select' aria-label='Default select example' style='height: 3rem; outline: 1px solid #213280; font-size: 0.9em;' id='jobRole-soporte' data-i18n="account:selectDefault">
+                                <select class='form-select' aria-label='Default select example' style='height: 3rem; outline: 1px solid #213280; font-size: 0.9em;' id='jobRole-soporte'>
                                 <option value='0' selected data-i18n="account:selectDefault" >Elija una opción</option>
                                     <option value='1' data-i18n="account:selectIngeniero" >Ingeniero</option>
                                     <option value='2' data-i18n="account:selectDireccion">Dirección de Ingeniería</option>
