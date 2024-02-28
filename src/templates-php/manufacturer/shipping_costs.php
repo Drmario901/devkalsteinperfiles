@@ -18,9 +18,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock">Existencias de productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add">Añadir producto</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping">Costos de envíos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock" data-i18n='manofacturer:existenciaProductos'>Existencias de productos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
         </nav>
 
         <?php

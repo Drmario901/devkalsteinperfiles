@@ -21,10 +21,10 @@
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order">Todos los pedidos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/processed">Pedidos procesados</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/cancelled">Pedidos cancelados</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/editor-de-plantillas/">Editar plantilla</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order" data-i18n='manofacturer:todosPedidos'>Todos los pedidos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/processed" data-i18n='manofacturer:pedidosProcesados'>Pedidos procesados</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/cancelled" data-i18n='manofacturer:pedidosCancelados'>Pedidos cancelados</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/editor-de-plantillas/" data-i18n='manofacturer:editarPlantilla'>Editar plantilla</a>
         </nav>
         
         <br>
@@ -61,14 +61,14 @@
                     <thead class='headTableForQuote'>
                         <tr>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Cliente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Método en envío</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total en (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Fecha</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Estatus</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Detalles</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Ver</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Acciones</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='manofacturer:cliente'>Cliente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'data-i18n='manofacturer:metodoEnvio'>Método en envío</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='manofacturer:total'>Total en (USD)</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:fecha'>Fecha</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:estatus'>Estatus</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:detalles'>Detalles</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:ver'>Ver</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:acciones'>Acciones</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -106,9 +106,9 @@
                                 </td>
                                 <td>
                                     <select name='cotizacion_status' style='color: #000 !important; border: 1px solid #aaa !important; border-radius: 4px' class='status-select''>
-                                        <option value=''></option>
-                                        <option value='3'>Procesado</option>
-                                        <option value='4'>Cancelado</option>
+                                        <option value='' ></option>
+                                        <option value='3' data-i18n='manofacturer:procesado'>Procesado</option>
+                                        <option value='4' data-i18n='manofacturer:cancelado'>Cancelado</option>
                                     </select>
                                     <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 mt-2 mx-auto' value='$quoteId'>Cambiar estatus</button>
                                 </td>
@@ -123,7 +123,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>No hay datos encontrados</p></center>
+                                    <center><p style='color: #000;' data-i18n='manofacturer:noDatos'>No hay datos encontrados</p></center>
                                 </div>
                             </td>
                         </tr>

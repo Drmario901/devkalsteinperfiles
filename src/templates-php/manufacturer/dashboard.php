@@ -31,7 +31,7 @@
     
                 <div class="card revenue-card" style="min-height: 400px">
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
-                        <h6 class="card-title">Cotizaciones recientes</h6>
+                        <h6 class="card-title" data-i18n="manofacturer:cotizacionReciente">Cotizaciones recientes</h6>
                         <?php
                             require __DIR__.'/../../../php/conexion.php';
 
@@ -77,7 +77,7 @@
                                     echo "
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <div> De <b>$client</b></div>
+                                            <div  data-i18n='manofacturer:de' > De <b>$client</b></div>
                                             <a href='https://plataforma.kalstein.net/index.php/fabricante/ordenes'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
@@ -94,7 +94,7 @@
                                 echo "
                                     <br>
                                     <br>
-                                    <center><h6>Ninguna cotización</h6></center>
+                                    <center><h6 data-i18n='manofacturer:noCotizacion'>Ninguna cotización</h6></center>
                                 ";
                             }
 
@@ -106,12 +106,12 @@
     
                     <div class="card task-card">
                         <div class="card-icon icon-box green">
-                            <span class="material-symbols-rounded  icon">inventory</span>
+                            <span class="material-symbols-rounded  icon" data-i18n="manofacturer:inventario">Inventory</span>
                         </div>
                         <div>
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
                             <center style="display: flex; flex-direction: columns">
-                                <p class="card-text">Órdenes procesadas</p>
+                                <p class="card-text" data-i18n="manofacturer:ordenesProcesadas">Órdenes procesadas</p>
                                 <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/procesadas">
                                     &nbsp; <span class='fa-solid fa-eye btn-details'
                                         style='color: #444 !important; font-size: 16px;'></span></a>
@@ -121,14 +121,14 @@
     
                     <div class="card task-card">
                         <div class="card-icon icon-box blue">
-                            <span class="material-symbols-rounded icon">
+                            <span class="material-symbols-rounded icon" data-i18n="manofacturer:costoEnvio">
                                 pending_actions
                             </span>
                         </div>
                         <div>
-                            <center><data id="pending-orders" class="card-data">No hay datos</data>
+                            <center><data id="pending-orders" class="card-data" data-i18n="manofacturer:noDatos">No hay datos</data>
                                 <center style="display: flex; flex-direction: columns">
-                                    <p class="card-text">Órdenes pendientes</p>
+                                    <p class="card-text" data-i18n="manofacturer:ordenesPendientes">Órdenes pendientes</p>
                                     <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/"> &nbsp;
                                         <span class='fa-solid fa-eye btn-details'
                                             style='color: #444 !important; font-size: 16px;'>
@@ -145,7 +145,7 @@
                 </div>
     
                 <div class="card revenue-card">
-                    <h6 class="card-title">Resúmen de clientes</h6>
+                    <h6 class="card-title" data-i18n="manofacturer:resumenClientes">Resúmen de clientes</h6>
                     <canvas id="activity"></canvas>
                     <div class="divider card-divider"></div>
     

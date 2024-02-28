@@ -22,10 +22,10 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock">Products stock</a>
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/add"> Add product</a>
-            <a class="nav-link active" href="https://platform.kalstein.us/index.php/manufacturer/stock/add/accessories"> Add accessory</a>
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/shipping">Shipping Costs</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock"  data-i18n="manofacturer:productoStock">Products stock</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/add"  data-i18n="manofacturer:agregarProducto"> Add product</a>
+            <a class="nav-link active" href="https://platform.kalstein.us/index.php/manufacturer/stock/add/accessories"  data-i18n="manofacturer:agregarAccesorio2"> Add accessory</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/shipping"  data-i18n="manofacturer:costoEnvio">Shipping Costs</a>
         </nav>
     
         <hr class="mt-0 mb-4">
@@ -40,7 +40,7 @@
                                 include __DIR__.'/productForm.php';
                             ?>
                             <div class="col-12">
-                                <center><button type="button" id="btnSendData" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'>Add New Accessory</button></center>
+                                <center><button type="button" id="btnSendData" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'  data-i18n="manofacturer:agregarAccesorio">Add New Accessory</button></center>
                             </div>
                         </div>
                     </div>

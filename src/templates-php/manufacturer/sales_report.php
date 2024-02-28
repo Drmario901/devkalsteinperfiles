@@ -29,27 +29,27 @@
 
             <div class="card profile-card">
                 <div class="profile-card-wrapper">
-                    <h2 class="h2 article-title">Productos más vendidos (últimos seis meses)</h2>
+                    <h2 class="h2 article-title" data-i18n='manofacturer:productoMasVendidos'>Productos más vendidos (últimos seis meses)</h2>
                     <canvas id="sales2"></canvas>
                 </div>
             </div>
 
             <div class="card task-card">
-                <h2 id="last-month-h2" class="h2 article-title">Último mes <span class="d-inline">(--)</span></h2>
+                <h2 id="last-month-h2" class="h2 article-title" data-i18n='manofacturer:ultimoMes'>Último mes <span class="d-inline">(--)</span></h2>
 
                 <div class="card-icon icon-box green">
                     <span class="material-symbols-rounded  icon">attach_money</span>
                 </div>
 
                 <div>
-                    <center><data class="card-data" value="">Ingresos totales</data></center>
+                    <center><data class="card-data" value="" data-i18n='manofacturer:ingresosTotales'>Ingresos totales</data></center>
                     <center><p id="income" class="card-text"> -- </p></center>
                 </div>
 
                 <ul>
 
                     <li id="graph-1-month" class="revenue-item icon-box">
-                        <span class="material-symbols-rounded  icon  green">trending_up</span>
+                        <span class="material-symbols-rounded  icon  green" >trending_up</span>
                         <center>
                             <data class="revenue-item-data" >--</data>
                         </center>
@@ -66,7 +66,7 @@
                     <div>
                     <center><data id="products-sold" class="card-data">--</data></center>
 
-                    <center><p class="card-text">Productos vendidos</p></center>
+                    <center><p class="card-text" data-i18n='manofacturer:productosVendidos'>Productos vendidos</p></center>
                     </div>
 
                 </div>
@@ -74,7 +74,7 @@
 
             <div class="card revenue-card">
 
-                <h2 class="h2 article-title">Visualización de ingresos</h2>
+                <h2 class="h2 article-title" data-i18n='manofacturer:visualizacionIngreso'>Visualización de ingresos</h2>
 
                 <canvas id="sales"></canvas>
                 <div class="card task-card">
@@ -83,7 +83,7 @@
                     </div>
 
                     <div>
-                        <center><data class="card-data" value="">Total clientes</data></center>
+                        <center><data class="card-data" value="" data-i18n='manofacturer:clientesTotales'>Total clientes</data></center>
                         <center><p id="total-costumers" class="card-text">--</p></center>
                     </div>
                 </div>

@@ -22,10 +22,10 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock">Products stock</a>
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/add"> Add product</a>
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/add/accessories"> Add accessory</a>
-            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/shipping"> Shipping Costs</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock" data-i18n="manofacturer:productoStock">Products stock</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/add" data-i18n="manofacturer:agregarProducto"> Add product</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/add/accessories" data-i18n="manofacturer:agregarAccesorio2"> Add accessory</a>
+            <a class="nav-link" href="https://platform.kalstein.us/index.php/manufacturer/stock/shipping" data-i18n="manofacturer:costoEnvio"> Shipping Costs</a>
         </nav>
         
         <hr class="mt-0 mb-4">
@@ -36,7 +36,7 @@
                     <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
                         <div class="row mb-4">
                             <select class="custom-select tm-select-accounts" style='border-radius: 5.6px' id="dataEdit" name="consulta">
-                                <option selected value='0'>Please, choose an option</option>
+                                <option selected value='0' data-i18n="manofacturer:elegirOpcion">Please, choose an option</option>
                                 <?php
                                     
                                     require __DIR__.'/../../../php/conexion.php';
@@ -80,7 +80,7 @@
                             ?>
                         </div>
                         <div id="formElementsbutton" class="col-12" hidden>
-                            <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" style='color: white; background-color: #de3a46 !important; border: none'>Edit Accessory</button></center>
+                            <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="manofacturer:editarAccesorio">Edit Accessory</button></center>
                         </div>
                     </div>
                 </div>

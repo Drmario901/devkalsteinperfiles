@@ -22,9 +22,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock"><i class="fa-solid fa-share"></i> Volver</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add">Añadir producto</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping">Costos de envíos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock"><i class="fa-solid fa-share" data-i18n='manofacturer:volver'></i> Volver</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
         </nav>
         
         <hr class="mt-0 mb-4">
@@ -35,7 +35,7 @@
                     <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
                         <div class="row mb-4">
                             <select class="custom-select tm-select-accounts" style='border-radius: 5.6px' id="dataEdit" name="consulta">
-                                <option selected value='0'>Por favor, elija una opción</option>
+                                <option selected value='0' data-i18n='manofacturer:elegirUnaOpcion'>Por favor, elija una opción</option>
                                 <?php
                                     
                                     require __DIR__.'/../../../php/conexion.php';
@@ -79,7 +79,7 @@
                             ?>
                         </div>
                         <div id="formElementsbutton" class="col-12" hidden>
-                            <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" style='color: white; background-color: #de3a46 !important; border: none'>Editar producto ahora</button></center>
+                            <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" style='color: white; background-color: #de3a46 !important; border: none' data-i18n='manofacturer:agregarProductoAhora'>Editar producto ahora</button></center>
                         </div>
                     </div>
                 </div>

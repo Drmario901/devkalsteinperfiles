@@ -15,10 +15,10 @@
     $firstLyricsLastname = strtoupper($acc_lname[0]);
 
     if ($acc_img == ''){
-        $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
+        $urlImagePerfil = 'https://https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
     }
     else{
-        $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
+        $urlImagePerfil = 'https://https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
     }
 
 ?>
@@ -75,7 +75,7 @@
         
                         <div>
                             <p class="profile-title"><?php echo $acc_name ?></p>
-                            <p class="profile-subtitle">Fabricante</p>
+                            <p class="profile-subtitle" data-i18n='manofacturer:fabricante'>Fabricante</p>
                         </div>
         
                     </a>
@@ -87,44 +87,44 @@
                 
                 <li>
                     <a id="link-home" href="https://plataforma.kalstein.net/index.php/fabricante/dashboard" class="navbar-link icon-box">
-                        <span>Dashboard</span>
+                        <span data-i18n='manofacturer:editarPlantilla'>Dashboard</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-stock" href="https://plataforma.kalstein.net/index.php/fabricante/productos" class="navbar-link icon-box">
-                        <span>Productos</span>
+                        <span data-i18n='manofacturer:productos'>Productos</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-list-order" href="https://plataforma.kalstein.net/index.php/fabricante/ordenes" class="navbar-link icon-box">
-                        <span>Órdenes</span>
+                        <span data-i18n='manofacturer:ordenes'>Órdenes</span>
                     </a>
                 </li>
 
                 <li>
                     <a id="link-catalogs" href="https://plataforma.kalstein.net/index.php/fabricante/catalogos" class="navbar-link icon-box">
-                        <span>Catálogos</span>
+                        <span data-i18n='manofacturer:catalogos'>Catálogos</span>
                     </a>
                 </li>
                 
                 <li>
                     <a id="link-shop" href="https://plataforma.kalstein.net/index.php/fabricante/tienda" class="navbar-link icon-box">
-                        <span>Tienda</span>
+                        <span data-i18n='manofacturer:tienda'>Tienda</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-sales-report" href="https://plataforma.kalstein.net/index.php/fabricante/ventas" class="navbar-link icon-box">
-                        <span>Reportes de ventas</span>
+                        <span data-i18n='manofacturer:reportesVentas'>Reportes de ventas</span>
                     </a>
                 </li>
 
 
                 <li class='generate-quote'> <!-- only style class-->
                     <a id='btnGenQuote' href="https://plataforma.kalstein.net/index.php/fabricante/productos/agregar" class='navbar-link icon-box text-white' style='color: white !important;'>
-                        <span>AGREGAR PRODUCTO</span>
+                        <span data-i18n='manofacturer:agregarProductoMayus'>AGREGAR PRODUCTO</span>
                     </a>
                 </li>
             </ul>

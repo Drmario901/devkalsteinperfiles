@@ -22,9 +22,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock"><i class="fa-solid fa-share"></i> Volver</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add">Añadir producto</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping">Costos de envíos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock" data-i18n='manofacturer:volver'><i class="fa-solid fa-share"></i> Volver</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
         </nav>
     
         <hr class="mt-0 mb-4">
@@ -39,7 +39,7 @@
                                 include __DIR__.'/productForm.php';
                             ?>
                             <div class="col-12">
-                                <center><button type="button" id="btnSendData" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'>Añadir producto ahora</button></center>
+                                <center><button type="button" id="btnSendData" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none' data-i18n='manofacturer:agregarProductoAhora'>Añadir producto ahora</button></center>
                             </div>
                         </div>
                     </div>

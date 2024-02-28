@@ -21,9 +21,9 @@
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order">Todos los pedidos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/processed">Pedidos procesados</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/cancelled">Pedidos cancelados</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order" data-i18n="manofacturer:todosPedidos">Todos los pedidos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/processed" data-i18n="manofacturer:pedidosProcesados">Pedidos procesados</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/cancelled" data-i18n="manofacturer:pedidosCancelados">Pedidos cancelados</a>
         </nav>
         <br>
         <div id="listOrderCancelledTable" class="table-responsive">
@@ -54,14 +54,14 @@
                 <table class='table custom-table'>
                     <thead class='headTableForQuote'>
                         <tr>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Cliente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Método de envío</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Fecha</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Status</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Detalles</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Ver</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;' >ID</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='manofacturer:cliente'>Cliente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='manofacturer:metodoEnvio'>Método de envío</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='manofacturer:total'>Total (USD)</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:fecha'>Fecha</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:estatus'>Estatus</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:detalles'>Detalles</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='manofacturer:ver'>Ver</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -105,7 +105,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>No se han encontrado datos</p></center>
+                                    <center><p style='color: #000;' data-i18n='manofacturer:noEncontrado'>No se han encontrado datos</p></center>
                                 </div>
                             </td>
                         </tr>

@@ -3,14 +3,14 @@
     if ($add){
         $stock_inputs = "
         <div class='form-group mb-3 col-12'>
-            <label>Unidades en existencias</label>
+            <label data-i18n='manofacturer:unidadesExistencia'>Unidades en existencias</label>
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-xs-12 col-sm-6' hidden>
             <label>Status</label>
             <select  id='statusProduct' style='width: 200px'>
-                <option class='text-dark' value='in stock'> En existencias </option>
-                <option class='text-dark' value='out of stock'> Agotado </option>
+                <option class='text-dark' value='in stock' data-i18n='manofacturer:enExistencia'> En existencias </option>
+                <option class='text-dark' value='out of stock' data-i18n='manofacturer:agotado'> Agotado </option>
             </select>
         </div>
         ";
@@ -18,14 +18,14 @@
     else{
         $stock_inputs = "
         <div class='form-group mb-3 col-12 col-sm-6'>
-            <label>Unidades en existencias</label>
+            <label data-i18n='manofacturer:unidadesExistencia'>Unidades en existencias</label>
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-12 col-sm-6'>
-            <label>Status</label>
+            <label data-i18n='manofacturer:estatus' >Estatus</label>
             <select  id='statusProduct' style='width: 200px'>
-                <option class='text-dark' value='in stock'> En existencias </option>
-                <option class='text-dark' value='out of stock'> Agotado </option>
+                <option class='text-dark' value='in stock' data-i18n='manofacturer:enExistencia'> En existencias </option>
+                <option class='text-dark' value='out of stock' data-i18n='manofacturer:agotado'> Agotado </option>
             </select>
         </div>
         ";
@@ -204,12 +204,12 @@
 <form method="post" class="tm-edit-product-form">
     <div class="row">
 
-        <?php echo $add ? '<div class="col-12"><div class="stock-title">Añadir un nuevo producto</div></div>' : '<div class="col-12"><div class="stock-title">Edit product</div></div>'?>
+        <?php echo $add ? '<div class="col-12"><div class="stock-title" data-i18n="manofacturer:agregarNuevoProd">Añadir un nuevo producto</div></div>' : '<div class="col-12"><div class="stock-title" data-i18n="manofacturer:editarProducto">Edit product</div></div>'?>
         <!-- BASIC DATA -->
         <div class="col-12 col-md-6">
 
-            <label>Nombre</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre"/>
+            <label data-i18n='manofacturer:nombre'>Nombre</label>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre" data-placeholder="nombre"/>
 
             <!-- true brand input -->
             <input type="hidden" id="productBrand" value="<?php
@@ -219,12 +219,12 @@
             ?>">
             
             <!-- fake brand input -->
-            <label>Marca</label>
+            <label data-i18n="manofacturer:marca">Marca</label>
 
             <input type="text" class="form-control validate mb-3" value="<?php echo $brand?>" disabled/>
             
-            <label>Modelo</label>
-            <input id="modelProduct" type="text" class="form-control validate mb-3" placeholder="Modelo"/>
+            <label data-i18n="manofacturer:modelo">Modelo</label>
+            <input id="modelProduct" type="text" class="form-control validate mb-3" placeholder="Modelo" data-placeholder='modelo'/>
             
         </div>
 
@@ -232,10 +232,10 @@
 
         <!-- PRODUCT IMAGE -->
         <div class="col-12 col-md-6 mb-4">
-            <label>Imagen del producto</label>
+            <label data-i18n='manofacturer:imagenProducto'>Imagen del producto</label>
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
-                    <span class="drop-title">Seleccionar o arrastrar y soltar una imagen</span>
+                    <span class="drop-title" data-i18n='manofacturer:seleccionarOdrop'>Seleccionar o arrastrar y soltar una imagen</span>
                     <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
@@ -244,25 +244,26 @@
         </div>
 
         <div class="col-12 mb-4">
-            <label>Descripción</label>
-            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" placeholder="Describa su producto en menos de 5000 caracteres
-            "></textarea>
+            <label data-i18n='manofacturer:descripcion'>Descripción</label>
+            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" placeholder="Describa su producto en menos de 5000 caracteres"
+            data-placeholder='describir5000'
+            ></textarea>
         </div>
     </div>
 
     <!-- TABLA TECNICA -->
 
     <div class="row">
-        <label>Ficha técnica</label>
+        <label data-i18n="manofacturer:editarProducto">Ficha técnica</label>
         <div class="col-12">
             <div class='table-editor-selector mb-3'>
-                <div id='stock-ignore-table' class="selected">
+                <div id='stock-ignore-table' class="selected" data-i18n='manofacturer:ninguno'>
                     Ninguno
                 </div>
-                <div id='stock-basic-editor'>
+                <div id='stock-basic-editor' data-i18n='manofacturer:tablaBasica'>
                     Tabla básica
                 </div>
-                <div id='stock-excel-editor'>
+                <div id='stock-excel-editor' data-i18n='manofacturer:tablaExcel'>
                     Tabla Excel
                 </div>
             </div>
@@ -277,7 +278,7 @@
                         <button id="stock-table-button-plus">+</button>
                         <button id="stock-table-button-minus">-</button>
                     </div>
-                    <small>Toca las celdas para editarlas</small>
+                    <small data-i18n='manofacturer:agregarProductoMayus' data-i18n="manofacturer:tocaCeldas">Toca las celdas para editarlas</small>
                     <div class="row">
                         <div id="stock-table-keys" class="col-6">
                             <div><input id="table-keys-1" type="text" value="Example"></div>
@@ -294,28 +295,28 @@
             </div>
 
             <!-- EXCEL -->
-            <div id="stock-excel-table" class="mb-4" hidden>
+            <div id="stock-excel-table" class="mb-4" hidden data-i18n='manofacturer:incluyeTabla'>
 
                 Incluya una tabla de Microsoft Excel o csv
                 
-                <div id="paste-excel-clipboard" class="btn-clipboard mb-3">
+                <div id="paste-excel-clipboard" class="btn-clipboard mb-3" data-i18n='manofacturer:pegarPortapapeles'>
                     Pegar desde el portapapeles <i class="fa-regular fa-clipboard"></i>
                 </div>
 
-                <textarea id="csv" hidden>example</textarea>
+                <textarea id="csv" hidden data-i18n='manofacturer:ejemplo'>example</textarea>
 
-                <span>Tiene cabecera <input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
+                <span data-i18n='manofacturer:tieneCabecera'>Tiene cabecera <input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
 
-                <label>Vista previa</label>
+                <label data-i18n='manofacturer:vistaPrevia'>Vista previa</label>
                 <table id="resultTable" class='table p-prev-table'>
                     <thead>
-                        <th>Ejemplo</th>
-                        <th>ejemplo</th>
+                        <th data-i18n='manofacturer:ejemplo'>Ejemplo</th>
+                        <th data-i18n='manofacturer:ejemplo'>Ejemplo</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Ejemplo</td>
-                            <td>ejemplo</td>
+                            <td data-i18n='manofacturer:ejemplo'>Ejemplo</td>
+                            <td data-i18n='manofacturer:ejemplo'>Ejemplo</td>
                         </tr>
                     </tbody>
                 </table>
@@ -327,14 +328,14 @@
     <!-- PRODUCT DATA -->
 
     <div class="col-12">
-        <div class="stock-title">Datos del producto</div>
+        <div class="stock-title" data-i18n='manofacturer:datosProductos'>Datos del producto</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
-            <label>Categoría</label>
+            <label data-i18n='manofacturer:categoria'>Categoría</label>
             <select id="dataCategory" class="custom-select tm-select-accounts">
-                <option value=''>-- Elija una opción --</option>
+                <option value='' data-i18n='manofacturer:elegirOpcion2'>-- Elija una opción --</option>
                 <?php
                     require __DIR__.'/../../../php/conexion.php';
                 
@@ -365,8 +366,8 @@
     <div class="row mb-3">
         <!-- GROSS -->
         <div class="col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Producto <i class="fas fa-microscope"></i></h6>
-            <label>Peso neto (kg)</label>
+            <h6 class="tm-block-title mb-0" data-i18n='manofacturer:producto'>Producto <i class="fas fa-microscope"></i></h6>
+            <label data-i18n='manofacturer:netWeight'>Peso neto (kg)</label>
             <input
                 id="weProduct"
                 type="number"
@@ -377,7 +378,7 @@
                 min="0"
             />
             
-            <label>Anchura / altura / longitud netas (cm)</label>
+            <label data-i18n='manofacturer:anchuraAlt'>Anchura / altura / longitud netas (cm)</label>
             <div class='triplette mb-2'>
                 <input
                     id="wiProduct"
@@ -401,8 +402,8 @@
         </div>
         <!-- PACKAGED -->
         <div class=" col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Empaquetado <i class="fas fa-box"></i></h6>
-            <label>Peso bruto (kg)</label>
+            <h6 class="tm-block-title mb-0" data-i18n='manofacturer:empaquetado'>Empaquetado <i class="fas fa-box"></i></h6>
+            <label data-i18n='manofacturer:pesoBruto'>Peso bruto (kg)</label>
             <input
                 id="weProductPa"
                 type="number"
@@ -413,7 +414,7 @@
                 min="0"
             />
 
-            <label>Anchura / altura / longitud brutas (cm)</label>
+            <label data-i18n='manofacturer:anchuraAltBru'>Anchura / altura / longitud brutas (cm)</label>
             <div class="triplette mb-2">
                 <input
                     id="wiProductPa"
@@ -435,11 +436,11 @@
                 />
             </div>
 
-            <label>Tipo de paquete</label>
+            <label data-i18n='manofacturer:tipoPaquete'>Tipo de paquete</label>
             <select id="packageType">
-                <option class="text-dark" value="">-- Seleccionar --</option>
-                <option class="text-dark" value="carton">Caja de cartón</option>
-                <option class="text-dark" value="wooden">Caja de madera</option>
+                <option class="text-dark" value="" data-i18n='manofacturer:agregarProductoMayus'>-- Seleccionar --</option>
+                <option class="text-dark" value="carton" data-i18n='manofacturer:cajaCarton'>Caja de cartón</option>
+                <option class="text-dark" value="wooden" data-i18n='manofacturer:cajaMadera'>Caja de madera</option>
             </select>
         </div>
     </div>
@@ -447,12 +448,12 @@
     <!-- PRICING -->
 
     <div class="col-12">
-        <div class="stock-title">Precios</div>
+        <div class="stock-title" data-i18n='manofacturer:precios'>Precios</div>
     </div>
 
     <div class="row">
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Precio unitario</label>
+            <label data-i18n='manofacturer:precioUnitario'>Precio unitario</label>
             <input
                 id="priceProduct"
                 type="number"
@@ -463,57 +464,63 @@
             />
         </div>
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
+            <label data-i18n='manofacturer:moneda'>Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
             <select id="currency">
-                <option class="text-dark" value="">-- Seleccionar --</option>
+                <option class="text-dark" value="" data-i18n='manofacturer:seleccionar'>-- Seleccionar --</option>
                 <option class="text-dark" value="USD">USD</option>
                 <option class="text-dark" value="EUR">EUR</option>
             </select>
         </div>
 
-        <h6 class="tm-block-title mb-0">Descuento al por mayor 1 (opcional)</h6>
+        <h6 class="tm-block-title mb-0" data-i18n='manofacturer:descuentoMayor'>Descuento al por mayor 1 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
-            Aplicar <input style="width: 45px;"
+        <span data-i18n='manofacturer:aplica'>Aplica </span>  
+            <input style="width: 45px;"
                 id="discount1"
                 type="number"
                 placeholder="0"
                 class="form-control validate mb-2 d-inline-block stock-special-input"
                 min="0"
                 max="100"
-            /> % descuento de 
+            />
+            <span data-i18n='manofacturer:descuentoSpan'>% descuento de </span>
             <input style="width: 55px;"
                 id="discount1Amount"
                 type="number"
                 placeholder="24"
                 class="form-control validate d-inline-block stock-special-input"
                 min="0"
-            /> unidades
+            /> 
+            <span data-i18n='manofacturer:unidades'>unidades</span> 
         </div>
         
-        <h6 class="tm-block-title mb-0">Descuento al por mayor 2 (opcional)</h6>
+        <h6 class="tm-block-title mb-0" data-i18n='manofacturer:descuentoMayor2'>Descuento al por mayor 2 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
-            Aplicar <input style="width: 45px;"
-                id="discount2"
+        <span data-i18n='manofacturer:aplica'>Aplica </span>  
+            <input style="width: 45px;"
+                id="discount1"
                 type="number"
                 placeholder="0"
                 class="form-control validate mb-2 d-inline-block stock-special-input"
                 min="0"
                 max="100"
-            /> % descuento de 
+            />
+            <span data-i18n='manofacturer:descuentoSpan'>% descuento de </span>
             <input style="width: 55px;"
-                id="discount2Amount"
+                id="discount1Amount"
                 type="number"
-                placeholder="50"
+                placeholder="24"
                 class="form-control validate d-inline-block stock-special-input"
                 min="0"
-            /> unidades
+            /> 
+            <span data-i18n='manofacturer:unidades'>unidades</span> 
         </div>
     </div>
     
     <!-- PRICING -->
 
     <div class="col-12">
-        <div class="stock-title">Accesorios</div>
+        <div class="stock-title" data-i18n='manofacturer:accesorios'>Accesorios</div>
     </div>
 
     <div class="row mb-3 d-flex justify-content-center">
@@ -524,7 +531,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header pb-0" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <b>Añadir nuevo accesorio</b>
+                        <b data-i18n='manofacturer:agregarAccesorio'>Añadir nuevo accesorio</b>
                     </button>
                 </h2>
 
@@ -548,23 +555,23 @@
     <!-- FILES -->
 
     <div class="col-12">
-        <div class="stock-title">Suministros</div>
+        <div class="stock-title" data-i18n='manofacturer:suministros'>Suministros</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Información del catálogo (opcional)</label>
+            <label data-i18n='manofacturer:catalogoInfo'>Información del catálogo (opcional)</label>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
-                <span class="drop-title">Seleccione o arrastre y suelte su archivo</span>
+                <span class="drop-title" data-i18n='manofacturer:seleccioneArrastreArch'>Seleccione o arrastre y suelte su archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
             <p id='currentlyUploadedCatalog'></p>
         </div>
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Manual técnico (opcional)</label>
+            <label data-i18n='manofacturer:manualTec'>Manual técnico (opcional)</label>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
-                <span class="drop-title">Seleccione o arrastre y suelte su archivo</span>
+                <span class="drop-title" data-i18n='manofacturer:seleccioneArrastreArch'>Seleccione o arrastre y suelte su archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>

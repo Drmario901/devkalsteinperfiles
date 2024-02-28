@@ -22,9 +22,9 @@
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/fabricante/productos">Existencias de productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/fabricante/productos/agregar">Agregar productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/fabricante/productos/calculadora">Costos de envíos</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/fabricante/productos" data-i18n='manofacturer:existenciaProductos'>Existencias de productos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/fabricante/productos/agregar" data-i18n='manofacturer:agregarProducto'>Agregar productos</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/fabricante/productos/calculadora" data-i18n='manofacturer:costoEnvio'>Costos de envíos</a>
         </nav>
         <br>        
         <div class="table-responsive">
@@ -32,14 +32,14 @@
                 <thead class='headTableForQuote'>
                     <tr>
                         <td class='fw-bold' style='background-color: #213280; color: white;'>ID</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Nombre</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Status</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Imagen</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Categoría</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Existencia</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;'>Precio</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Fecha</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Acciones</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:nombre'>Nombre</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:estatus'>Estatus</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:imagen'>Imagen</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:categoria'>Categoría</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:existencia'>Existencia</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;' data-i18n='manofacturer:agregarProductoAhora'>Precio</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:precio'>Fecha</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:acciones'>Acciones</td>
                     </tr>
                 </thead>
                 <tbody id="product-table-body" class='bodyTableForQuote'>
@@ -105,13 +105,13 @@
                                 }
         
                                 if ($val_status == 'pending'){
-                                    $st = '<i class="fa-regular fa-clock h3" style="color: #ffba1f"></i><p class="mb-0"><b>Pendiente</b></p>';
+                                    $st = '<i class="fa-regular fa-clock h3" style="color: #ffba1f"></i><p class="mb-0"><b data-i18n="manofacturer:pendientes">Pendiente</b></p>';
                                 }
                                 else if ($val_status == 'validated'){
-                                    $st = '<i class="fa-regular fa-circle-check h3" style="color: #4cd17a"></i><p class="mb-0"><b>Validado</b></p>';
+                                    $st = '<i class="fa-regular fa-circle-check h3" style="color: #4cd17a"></i><p class="mb-0"><b data-i18n="manofacturer:validado">Validado</b></p>';
                                 }
                                 else if ($val_status == 'denied'){
-                                    $st = '<i class="fa-solid fa-triangle-exclamation h3 style="color: #d13a33"></i><p class="mb-0"><b>Denegado</b></p>';
+                                    $st = '<i class="fa-solid fa-triangle-exclamation h3 style="color: #d13a33"></i><p class="mb-0"><b data-i18n="manofacturer:denegado">Denegado</b></p>';
                                 }
         
                                 $date = date('d/m/Y', strtotime($date));
@@ -129,9 +129,9 @@
                                     <td style=''>$currency $price</td>
                                     <td>$date</td>
                                     <td>
-                                        <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id'>delete</button>
+                                        <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id' data-i18n='manofacturer:eliminar'>delete</button>
                                         <br>
-                                        <button class='material-symbols-rounded'  id='btnEditProduct' value='$id'>edit</button>
+                                        <button class='material-symbols-rounded'  id='btnEditProduct' value='$id' data-i18n='manofacturer:editar'>edit</button>
                                         <br>
                                         <a href='https://plataforma.kalstein.net/index.php/fabricante/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
                                     </td>
@@ -149,7 +149,7 @@
                                 </table>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>No se encontraron datos</p></center>
+                                    <center><p style='color: #000;' data-i18n='manofacturer:noDatosEncontrados'>No se encontraron datos</p></center>
                                 </div>
                             ");
                         }

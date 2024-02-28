@@ -195,8 +195,8 @@
         <div class="col-12 col-sm-6">
             <input type="hidden" id="woo-meta-model" data-model="<?php echo $model?>">
             <div>
-                <p class='mb-0'><strong>Fabricante</strong>: <em><?php echo $brand?></em></p>
-                <p class='mb-0'><strong>Modelo</strong>: <em><?php echo $model?></em></p>
+                <p class='mb-0'><strong data-i18n='manofacturer:fabricante2'>Fabricante</strong>: <em><?php echo $brand?></em></p>
+                <p class='mb-0'><strong data-i18n='manofacturer:modelo'>Modelo</strong>: <em><?php echo $model?></em></p>
                 <?php echo $used?>
                 <p>
                     <img class="alignnone size-full wp-image-29188"
@@ -204,16 +204,16 @@
                 </p>
                 <div class='d-flex flex-row'>
                     <div>
-                        <p class='card-text'><small class='text-muted'><?php echo number_format($disc, 2)?> -18% de descuento con pre-orden</small></p>
+                        <p class='card-text'><small class='text-muted' data-i18n='manofacturer:descuento18' ><?php echo number_format($disc, 2)?> -18% de descuento con pre-orden</small></p>
                         <h6 class='my-0 mb-1'>USD$ <?php echo number_format($price, 2)?></h6>
                         <?php
                             if (!$manu_preview){
                                 $html = "
-                                    <div><span class='quantity d-inline'>Cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
+                                    <div><span class='quantity d-inline' data-i18n='manofacturer:cantidad'>Cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
                                 ";
 
                                 $html.="  
-                                        <button value='$model' class='btnQuo'>Cotizar</button>
+                                        <button value='$model' class='btnQuo' data-i18n='manofacturer:cotizar'>Cotizar</button>
                                         <button class='activeModal' data-bs-toggle='modal' data-bs-target='#cotModal' style='display: none;'></button>
                                 ";
 
@@ -225,7 +225,7 @@
                                         <div class='accordion-item'>
                                             <input type='hidden' id='ih-accesories-add' value='0'>
                                             <h6 class='accordion-header'>
-                                                <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne'>
+                                                <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne'  data-i18n='manofacturer:accesoriosAdicionales'>
                                                     Accesorios adicionales
                                                 </button>
                                             </h6>
@@ -283,7 +283,7 @@
     
     <!-- DESCRIPTION -->
     <div>
-        <h4>Descripción del producto</h4>
+        <h4  data-i18n='manofacturer:descripcionProducto'>Descripción del producto</h4>
 
         <p>
             <?php echo $description?>
@@ -294,7 +294,7 @@
         <?php
             if (strpos($table, '</table>')){
                 echo "
-                <h4>Detalles</h4>
+                <h4  data-i18n='manofacturer:detalles'>Detalles</h4>
                 <div class='p-prev-table' style='overflow-x: scroll'>
                     $table
                 </div>

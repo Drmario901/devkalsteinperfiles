@@ -143,17 +143,17 @@
 <form method="post" class="tm-edit-product-form">
     <div class="row mb-3">
 
-        <?php echo $add ? '<div class="col-12"><div class="stock-title">Add new accessory</div></div>' : '<div class="col-12"><div class="stock-title">Edit product</div></div>'?>
+        <?php echo $add ? '<div class="col-12"><div class="stock-title" data-i18n="manofacturer:agregarAccesorio">Add new accessory</div></div>' : '<div class="col-12"><div class="stock-title" data-i18n="manofacturer:editarProducto">Edit product</div></div>'?>
         <!-- BASIC DATA -->
         <div class="col-12 col-md-6">
 
-            <label>Name</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Name"/>
+            <label data-i18n="manofacturer:nombre">Name</label>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder='nombre' placeholder="Name"/>
             
-            <label>Model</label>
-            <input id="modelProduct" type="text" class="form-control validate mb-3" placeholder="Model"/>
+            <label data-i18n="manofacturer:modelo">Model</label>
+            <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder='modelo' placeholder="Model"/>
 
-            <label>Product to which it belongs</label>
+            <label data-i18n="manofacturer:productosBelongs" >Product to which it belongs</label>
             <select id="parentProduct" class="validate mb-3">
                 <?php
                     require __DIR__.'/../../../../php/conexion.php';
@@ -164,7 +164,7 @@
 
                     $resultado = $conexion->query($consulta);
 
-                    echo "<option selected value='0'> -- select -- </option>";
+                    echo "<option selected value='0' data-i18n='manofacturer:seleccionar'> -- select -- </option>";
                         
                     if ($resultado->num_rows > 0) {
                         while ($value = $resultado->fetch_assoc()) {
@@ -177,8 +177,10 @@
                 ?>
             </select>
             
-            <label>Description (optional)</label>
-            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" placeholder="Describe your product in less than 1000 characters
+            <label data-i18n="manofacturer:descripcionOptional">Description (optional)</label>
+            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" 
+            data-placeholder='describe1000'
+            placeholder="Describe your product in less than 1000 characters
             "></textarea>
         </div>
 
@@ -186,10 +188,10 @@
 
         <!-- PRODUCT IMAGE -->
         <div class="col-12 col-md-6 mb-4">
-            <label>Image (optional)</label>
+            <label data-i18n="manofacturer:imagenOptional">Image (optional)</label>
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
-                    <span class="drop-title">Select or drag and drop an image</span>
+                    <span class="drop-title" data-i18n="manofacturer:seleccionarOdrop" >Select or drag and drop an image</span>
                     <img class="drop-image" src="https://platform.kalstein.us/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
@@ -201,14 +203,14 @@
     <!-- PRODUCT DATA -->
 
     <div class="col-12">
-        <div class="stock-title">Measures and Pricing</div>
+        <div class="stock-title" data-i18n="manofacturer:measurePricing" >Measures and Pricing</div>
     </div>
 
     <div class="row mb-3">
         <!-- GROSS -->
         <div class="col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Product <i class="fas fa-microscope"></i></h6>
-            <label>Net weight (kg)</label>
+            <h6 class="tm-block-title mb-0" data-i18n="manofacturer:producto" >Product <i class="fas fa-microscope"></i></h6>
+            <label data-i18n="manofacturer:netoWeight">Net weight (kg)</label>
             <input
                 id="weProduct"
                 type="number"
@@ -219,7 +221,7 @@
                 min="0"
             />
 
-            <labe>Width (cm)</label>
+            <labe data-i18n="manofacturer:widthCm">Width (cm)</label>
             <input
                 id="wiProduct"
                 type="number"
@@ -228,7 +230,7 @@
                 min="0"
             />
 
-            <label>Height (cm)</label>
+            <label data-i18n="manofacturer:heightCm" >Height (cm)</label>
             <input
                 id="heProduct"
                 type="number"
@@ -237,7 +239,7 @@
                 min="0"
             />
 
-            <label>Length (cm)</label>
+            <label data-i18n="manofacturer:lengthCm">Length (cm)</label>
             <input
                 id="leProduct"
                 type="number"
@@ -248,8 +250,8 @@
         </div>
         <!-- PACKAGED -->
         <div class=" col-sm-6 col-xsm-12 mb-4">
-            <h6 class="tm-block-title mb-0">Packaged <i class="fas fa-box"></i></h6>
-            <label>Gross weight (kg)</label>
+            <h6 class="tm-block-title mb-0" data-i18n="manofacturer:packaged">Packaged <i class="fas fa-box"></i></h6>
+            <label data-i18n="manofacturer:grossW" >Gross weight (kg)</label>
             <input
                 id="weProductPa"
                 type="number"
@@ -260,7 +262,7 @@
                 min="0"
             />
 
-            <label>Width (cm)</label>
+            <label data-i18n="manofacturer:widthCm">Width (cm)</label>
             <input
                 id="wiProductPa"
                 type="number"
@@ -269,7 +271,7 @@
                 min="0"
             />
 
-            <label>Height (cm)</label>
+            <label data-i18n="manofacturer:heightCm">Height (cm)</label>
             <input
                 id="heProductPa"
                 type="number"
@@ -278,7 +280,7 @@
                 min="0"
             />
 
-            <label>Length (cm)</label>
+            <label data-i18n="manofacturer:lengthCm">Length (cm)</label>
             <input
                 id="leProductPa"
                 type="number"
@@ -287,16 +289,16 @@
                 min="0"
             />
 
-            <label>Package Type</label>
+            <label data-i18n="manofacturer:paqueteTipo">Package Type</label>
             <select id="packageType">
-                <option class="text-dark" value="">-- select --</option>
-                <option class="text-dark" value="carton">Carton box</option>
-                <option class="text-dark" value="wooden">Wooden box</option>
+                <option class="text-dark" value="" data-i18n="manofacturer:seleccionar">-- select --</option>
+                <option class="text-dark" value="carton" data-i18n="manofacturer:cartonBox">Carton box</option>
+                <option class="text-dark" value="wooden" data-i18n="manofacturer:woodenBox">Wooden box</option>
             </select>
         </div>
 
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Unit price</label>
+            <label data-i18n="manofacturer:precioUnico">Unit price</label>
             <input
                 id="priceProduct"
                 type="number"
@@ -307,9 +309,9 @@
             />
         </div>
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Currency <i class="far fa-money-bill-1 h5"></i></i></label>
+            <label data-i18n="manofacturer:moneda">Currency <i class="far fa-money-bill-1 h5"></i></i></label>
             <select id="currency">
-                <option class="text-dark" value="">-- select --</option>
+                <option class="text-dark" value="" data-i18n="manofacturer:seleccionar">-- select --</option>
                 <option class="text-dark" value="USD">USD</option>
                 <option class="text-dark" value="EUR">EUR</option>
             </select>
