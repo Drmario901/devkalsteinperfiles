@@ -4,7 +4,7 @@
             <a id='btn-logo' href='https://plataforma.kalstein.net/'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
         </h1>                
         <button class='menu-toggle-btn icon-box' data-menu-toggle-btn aria-label='Toggle Menu'>
-            <span class='material-symbols-rounded  icon' style='color: #213280'>menu</span>
+            <span class='material-symbols-rounded  icon' style='color: #213280' data-i18n="client:cotizacionTotal">menu</span>
         </button>                
         <nav class='navbar'>
             <div class='container'>
@@ -12,7 +12,7 @@
                     <div class="d-flex flex-row">
                         <li>
                             <a href='#' id='btnMail' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded icon position-relative'>
+                                <span class='material-symbols-rounded icon position-relative' data-i18n="client:cotizacionTotal">
                                     mail
                                     <span id='messagesBaloon' class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style='font-family: sans-serif; font-size: 10px' hidden>
                                         <div id='messagesCant' class="unread-messages"></div>
@@ -22,7 +22,7 @@
                         </li>
                         <li>
                             <a href='#' id='btnEditProfilePr01' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded  icon'>settings</span>
+                                <span class='material-symbols-rounded  icon' data-i18n="client:settings">settings</span>
                             </a>
                         </li>
                         <li>
@@ -46,27 +46,27 @@
                 <ul class='navbar-list'>
                     <li>
                         <a href='#' id='btnDashboardPr01' class='navbar-link active icon-box'>          
-                            <span>Dashboard</span>
+                            <span data-i18n="client:dashboard">Dashboard</span>
                         </a>
                     </li>
                     <li>
                         <a href='#' id='btnQuotePr01' class='navbar-link icon-box'>           
-                            <span>Mis cotizaciones</span>
+                            <span data-i18n="client:misCotizaciones">Mis cotizaciones</span>
                         </a>
                     </li>
                     <li>
                         <a href='#' id='btnRecentActivityPr01' class='navbar-link icon-box'>           
-                            <span>Actividad</span>
+                            <span data-i18n="client:actividad">Actividad</span>
                         </a>
                     </li>
                     <li>
                         <a href='#' id='btnCatalogs' class='navbar-link icon-box'>
-                            <span>Catálogos</span>
+                            <span data-i18n="client:catalogos">Catálogos</span>
                         </a>
                     </li>                        
                     <li>
                         <a href='#' id='btnReportPr01' class='navbar-link icon-box'>
-                            <span>Soporte técnico</span>
+                            <span data-i18n="client:soporteTecnico">Soporte técnico</span>
                         </a>
                     </li>
                     <!--li>
@@ -76,7 +76,7 @@
                     </li-->
                     <li class='generate-quote'>
                         <a href='#' id='btnGenQuote' class='navbar-link icon-box' style='color: white !important;'>
-                            <span>GENERA TU COTIZACIÓN</span>
+                            <span data-i18n="client:generarCotizacion">GENERA TU COTIZACIÓN</span>
                         </a>
                     </li>                       
                 </ul>                        

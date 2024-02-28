@@ -5,16 +5,16 @@
 ?>
 <div class='container-xl px-4 mt-4'>
     <nav class='nav nav-borders'>
-        <a class='nav-link active ms-0' href='#' id='btnProfilePR01'>Perfil</a>
-        <a class='nav-link' href='#' id='btnIdentityVerifyPR01'>Identificaciones</a>
-        <a class='nav-link' href='#' id='btnSecurityPR01'>Seguridad</a>
+        <a class='nav-link active ms-0' href='#' id='btnProfilePR01' data-i18n="client:perfil">Perfil</a>
+        <a class='nav-link' href='#' id='btnIdentityVerifyPR01' data-i18n="client:identificaciones">Identificaciones</a>
+        <a class='nav-link' href='#' id='btnSecurityPR01' data-i18n="client:seguridad">Seguridad</a>
     </nav>
     <hr class='mt-0 mb-4'>
     <div id='c-profile'>
         <div class='row'>
             <div class='col-xl-4'>
                 <div class='card mb-4 mb-xl-0' style='border-color: #213280;'>
-                    <div class='card-header'>
+                    <div class='card-header' data-i18n="client:fotoPerfil">
                         Foto de perfil
                     </div>
                     <div class='card-body text-center' style='margin: 0 auto;'>
@@ -25,7 +25,7 @@
                             JPG o PNG
                         </div>
                         <button id='btnUploadImagePerfil' class='btn-complete-profile rounded' type='button'
-                            style='width: 100%; text-align: center;'>Subir una nueva imágen</button>
+                            style='width: 100%; text-align: center;' data-i18n="client:subirImg">Subir una nueva imágen</button>
                         <input type='file' name='i-uploadImagePerfil' id='i-uploadImagePerfil'
                             accept='image/png,image/jpeg'>
                     </div>
@@ -33,34 +33,35 @@
             </div>
             <div class='col-xl-8'>
                 <div class='card mb-4'>
-                    <div class='card-header fw-bold'>
+                    <div class='card-header fw-bold' data-i18n="client:detallesCuenta">
                         Detalles de la cuenta
                     </div>
                     <div class='card-body'>
                         <form>
                             <div class='mb-3'>
-                                <label class='small mb-1' for='inputEmailAddress'>Dirreción de correo electrónico</label>
+                                <label class='small mb-1' for='inputEmailAddress' data-i18n="client:direccionCorreo">Dirreción de correo electrónico</label>
                                 <input class='form-control' id='inputEmailAddress' type='email'
                                     placeholder='Ingresa tu dirección de correo electrónico' value='<?php echo $email ?>' readonly
                                     style='outline: 1px solid #213280; font-size: 0.9em;'>
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputFirstNameProfile'>Primer nombre</label>
+                                    <label class='small mb-1' for='inputFirstNameProfile' data-i18n="client:primerNombre">Primer nombre</label>
                                     <input class='form-control' id='inputFirstName' type='text'
                                         placeholder='Ingresa tu primer nombre'
+                                        data-placehorde='primerNombre'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputLastNameProfile'>Segundo nombre</label>
+                                    <label class='small mb-1' for='inputLastNameProfile' data-i18n="client:segundoNombre">Segundo nombre</label>
                                     <input class='form-control' id='inputLastName' type='text'
-                                        placeholder='Ingresa tu segundo nombre'
+                                        placeholder='Ingresa tu segundo nombre' data-placehorde='segundoNombre'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='countryUserProfile'>País</label>
+                                    <label class='small mb-1' for='countryUserProfile' >País</label>
                                     <select class='form-select' aria-label='Ejemplo de select por defecto'
                                         style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'
                                         id='countryUserProfile'>
@@ -68,21 +69,23 @@
                                     </select>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputLocationProfile'>Estado</label>
+                                    <label class='small mb-1' for='inputLocationProfile' data-i18n="client:estado">Estado</label>
                                     <input class='form-control' id='inputLocationProfile' type='text'
                                         placeholder='Ingresa tu Estado'
+                                        data-placeholder='estado'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputAddressProfile'>Dirección</label>
+                                    <label class='small mb-1' for='inputAddressProfile' data-i18n="client:direccionS">Dirección</label>
                                     <input class='form-control' id='inputAddressProfile' type='text'
                                         placeholder='Ingresa tu dirección'
+                                        data-placeholder='direccionS'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputZipcodeProfile'>Código ZIP</label>
+                                    <label class='small mb-1' for='inputZipcodeProfile' data-i18n="client:codigoZip">Código ZIP</label>
                                     <input class='form-control' id='inputZipcodeProfile' type='text'
                                         placeholder='Ingresa tu código ZIP'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
@@ -90,55 +93,56 @@
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputPhone'>Número de teléfono</label>
+                                    <label class='small mb-1' for='inputPhone' data-i18n="client:numeroTlf">Número de teléfono</label>
                                     <input class='form-control' id='inputPhone' type='tel'
                                         placeholder='Ingresa tu número de teléfono'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputBirthday'>Cumpleaños</label>
+                                    <label class='small mb-1' for='inputBirthday' data-i18n="client:cumple" >Cumpleaños</label>
                                     <input class='form-control' id='inputBirthday' type='date' name='birthday'
                                         placeholder='Ingresa tu cumpleaños'
+                                        data-placeholder='cumple'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <hr class='mt-0 mb-4'>
-                    <div class='card-header fw-bold'>
+                    <div class='card-header fw-bold' data-i18n="client:detallesOrganizacion">
                         Detalles de la Organización
                     </div>
                     <div class='card-body'>
                         <form>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputOrgName'>Nommbre de la Organización
+                                    <label class='small mb-1' for='inputOrgName' data-i18n="client:nombreOrganizacion">Nombre de la Organización
                                     </label>
                                     <input class='form-control' id='inputOrgName' type='text'
                                         placeholder='Ingresa el nombre de tu organización'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='jobRoleOrg'>Rol de empleo</label>
+                                    <label class='small mb-1' for='jobRoleOrg' data-i18n="client:rolEmpleo">Rol de empleo</label>
                                     <select class='form-select' aria-label='Default select example'
                                         style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'
                                         id='jobRoleOrg'>
-                                        <option value='0' selected>Elige una opción</option>
-                                        <option value='1'>Ingeniero</option>
-                                        <option value='2'>Gestión de Ingeniería</option>
-                                        <option value='3'>Diseñador</option>
-                                        <option value='4'>Compras / Comprador / Finanzas</option>
-                                        <option value='5'>Programa / Gestión de proyecto</option>
-                                        <option value='6'>Operaciones / Gestión MRO</option>
-                                        <option value='7'>Liderazgo ejecutivo (CXO, VP, fundador, etc.)</option>
-                                        <option value='8'>Ventas y Marketing</option>
-                                        <option value='9'>Otros</option>
+                                        <option value='0' selected data-i18n="client:elegirOpcion" >Elige una opción</option>
+                                        <option value='1' data-i18n="client:ingeniero">Ingeniero</option>
+                                        <option value='2' data-i18n="client:gestionIng">Gestión de Ingeniería</option>
+                                        <option value='3' data-i18n="client:diseñador">Diseñador</option>
+                                        <option value='4' data-i18n="client:comprasFinanzas">Compras / Comprador / Finanzas</option>
+                                        <option value='5' data-i18n="client:gestionProyecto">Programa / Gestión de proyecto</option>
+                                        <option value='6' data-i18n="client:gestionMro">Operaciones / Gestión MRO</option>
+                                        <option value='7' data-i18n="client:liderazgoCxo">Liderazgo ejecutivo (CXO, VP, fundador, etc.)</option>
+                                        <option value='8' data-i18n="client:ventasMarketing">Ventas y Marketing</option>
+                                        <option value='9' data-i18n="client:otros">Otros</option>
                                     </select>
                                 </div>
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputCountryOrg'>País</label>
+                                    <label class='small mb-1' for='inputCountryOrg' data-i18n="client:pais">País</label>
                                     <select class='form-select' aria-label='Default select example'
                                         style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'
                                         id='inputCountryOrg'>
@@ -146,42 +150,47 @@
                                     </select>
                                 </div>                                                
                                 <div class=' col-md-6'>
-                                    <label class='small mb-1' for='inputStateOrg'>Estado</label>
+                                    <label class='small mb-1' for='inputStateOrg' data-i18n="client:estado">Estado</label>
                                     <input class='form-control' id='inputStateOrg' type='text'
                                         placeholder='Ingresa el Estado de tu organización'
+                                        data-placeholder='estado'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputAddressOrg'>Dirección</label>
+                                    <label class='small mb-1' for='inputAddressOrg' data-i18n="client:direccion">Dirección</label>
                                     <input class='form-control' id='inputAddressOrg' type='text'
                                         placeholder='Ingresa la dirección de tu Organización'
+                                        data-placeholder='direccion'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputZipcodeOrg'>Codigo ZIP</label>
+                                    <label class='small mb-1' for='inputZipcodeOrg' data-i18n="client:codigoZip">Codigo ZIP</label>
                                     <input class='form-control' id='inputZipcodeOrg' type='text'
                                         placeholder='Ingresa el código ZIP de tu organización'
+                                        data-placeholder='codigoZip'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
                             <div class='row gx-3 mb-3'>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputPhoneOrg'>Número de teléfono</label>
+                                    <label class='small mb-1' for='inputPhoneOrg' data-i18n="client:numeroTlf">Número de teléfono</label>
                                     <input class='form-control' id='inputPhoneOrg' type='tel'
                                         placeholder='Ingresa el número de teléfono de tu Organización'
+                                        data-placeholder='numeroTlf'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                                 <div class='col-md-6'>
-                                    <label class='small mb-1' for='inputUrlWebSiteOrg'>URL de sitio web</label>
+                                    <label class='small mb-1' for='inputUrlWebSiteOrg' data-i18n="client:sitioUrl">URL de sitio web</label>
                                     <input class='form-control' id='inputUrlWebSiteOrg' type='text'
                                         placeholder='Ingresa el sitio Web de tu Organización'
+                                        data-placeholder='sitioUrl'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
                             <button class='btn-complete-profile rounded' type='button' id='savedUpdateInfo'
-                                style='width: 100%; text-align: center;'>Guardar cambios</button>
+                                style='width: 100%; text-align: center;' data-i18n="client:guardarCambios">Guardar cambios</button>
                         </form>
                     </div>
                 </div>
@@ -193,32 +202,35 @@
             <div class='col-lg-8'>
                 <!-- Change password card-->
                 <div class='card mb-4' style='border-color: #213280;'>
-                    <div class='card-header'>Cambiar contraseña</div>
+                    <div class='card-header' data-i18n="client:cambiarContr">Cambiar contraseña</div>
                     <div class='card-body'>
                         <form>
                             <!-- Form Group (current password)-->
                             <div class='mb-3'>
-                                <label class='small mb-1' for='currentPassword'>Contraseña actual</label>
+                                <label class='small mb-1' for='currentPassword' data-i18n="client:contraActual">Contraseña actual</label>
                                 <input class='form-control' id='currentPassword' type='password'
                                     placeholder='Ingresa la contraseña actual'
+                                    data-placeholder='contraActual'
                                     style='outline: 1px solid #213280; font-size: 0.9em;' autocomplete='on'>
                             </div>
                             <!-- Form Group (new password)-->
                             <div class='mb-3'>
-                                <label class='small mb-1' for='newPassword'>Nueva contreseña</label>
+                                <label class='small mb-1' for='newPassword' data-i18n="client:nuevaContra">Nueva contraseña</label>
                                 <input class='form-control' id='newPassword' type='password'
                                     placeholder='Ingresa una nueva contraseña'
+                                    data-placeholder='nuevaContra'
                                     style='outline: 1px solid #213280; font-size: 0.9em;' autocomplete='on'>
                             </div>
                             <!-- Form Group (confirm password)-->
                             <div class='mb-3'>
-                                <label class='small mb-1' for='confirmPassword'>Confirmar contraseña</label>
+                                <label class='small mb-1' for='confirmPassword' data-i18n="client:confirmarContra">Confirmar contraseña</label>
                                 <input class='form-control' id='confirmPassword' type='password'
                                     placeholder='Confirmar nueva contraseña'
+                                    data-placeholder='confirmarContra'
                                     style='outline: 1px solid #213280; font-size: 0.9em;' autocomplete='on'>
                             </div>
                             <button class='btn-complete-profile rounded' type='button' id='btnSavedNewPassword'
-                                style='width: 100%; text-align: center;'>Guardar</button>
+                                style='width: 100%; text-align: center;' data-i18n="client:guardar">Guardar</button>
                         </form>
                     </div>
                 </div>
@@ -226,11 +238,11 @@
             <div class='col-lg-4'>
                 <!-- Delete account card-->
                 <div class='card mb-4' style='border-color: #213280;'>
-                    <div class='card-header'>Borrar cuenta</div>
+                    <div class='card-header' data-i18n="client:borrarCuenta">Borrar cuenta</div>
                     <div class='card-body'>
-                        <p>Eliminar su cuenta es una acción permanente y no se puede deshacer. Si estás seguro de que
+                        <p data-i18n="client:eliminarCuentaPar">Eliminar su cuenta es una acción permanente y no se puede deshacer. Si estás seguro de que
                              Si desea eliminar su cuenta, seleccione el botón a continuación.</p>
-                        <button class='btn btn-danger-soft text-danger' type='button' id='btnDeleteAccount'>Entiendo, borrar cuenta</button>
+                        <button class='btn btn-danger-soft text-danger' type='button' id='btnDeleteAccount' data-i18n="client:siBorrar">Entiendo, borrar cuenta</button>
                     </div>
                 </div>
             </div>
@@ -240,7 +252,7 @@
         <div class='row'>
             <div class='col-xl-6'>
                 <div class='card mb-4 mb-xl-0' style='border-color: #213280;'>
-                    <div class='card-header'>
+                    <div class='card-header' data-i18n="client:tarjetaIden">
                        Tarjeta de identificación
                     </div>
                     <div class='card-body text-center' style='margin: 0 auto;'>
@@ -287,7 +299,7 @@
             </div>
             <div class='col-xl-6'>
                 <div class='card mb-4 mb-xl-0' style='border-color: #213280;'>
-                    <div class='card-header'>
+                    <div class='card-header' data-i18n="client:documentoFiscal">
                         Documento fiscal
                     </div>
                     <div class='card-body text-center' style='margin: 0 auto;'>
@@ -297,7 +309,7 @@
                             $html.="
                                 <div class='custom-file mt-3 mb-3'>
                                     <label for='catalogPDF' class='drop-container' id='dropcontainerImage'>
-                                        <span class='drop-title'>Select or drag and drop an image</span>
+                                        <span class='drop-title' data-i18n='client:selectDrop' >Select or drag and drop an image</span>
                                         <img class='drop-image' src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png' alt='jpg/png'>
                                         <img id='thumbnail'/>
                                     </label>
@@ -310,7 +322,7 @@
                                             style='outline: 1px solid #213280; font-size: 0.9em;'>
                                     </div>
                                 </div>
-                                <button class='btn' style='color: #fff; background-color: #213280; margin: 0 auto;' id='savedInfoTaxCompany'>Saved</button>
+                                <button class='btn' style='color: #fff; background-color: #213280; margin: 0 auto;' id='savedInfoTaxCompany'  data-i18n='client:guardar' >Saved</button>
                             ";
                         }else{
                             $html.= "

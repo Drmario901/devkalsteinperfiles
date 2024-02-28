@@ -40,7 +40,7 @@
        
     <div>
             
-            <div class="centerDiv"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">warning</span></p><h1>Error 404</h1><p><small>La pagina no existe o fue movida</small></p><br><br><br><br><br><br></div>
+            <div class="centerDiv"><br><br><br><br><br><br><p><span style="font-size:50px;" class="bottom-icon material-symbols-outlined">warning</span></p><h1>Error 404</h1><p><small data-i18n="client:error404">La pagina no existe o fue movida</small></p><br><br><br><br><br><br></div>
             
     </div>
     

@@ -1,14 +1,20 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require 'vendor/autoload.php'; 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-$code = 'Feid';
+
+$language = $_COOKIE['language'];
+$code = 'Ultima prueba librería Twilio';
 /*if(isset($_SESSION["codeVerification"])){
     $code = $_SESSION["codeVerification"];
 }*/
 
-$phoneNumber = '+584128541945'; 
+$phoneNumber = '+584128484468'; 
 
 use Twilio\Rest\Client;
 
@@ -22,7 +28,7 @@ try {
         $phoneNumber, 
         array(
             'from' => $twilioPhoneNumber, 
-            'body' => $code
+            'body' => $language
         )
     );
 

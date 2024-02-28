@@ -31,7 +31,7 @@
     
                 <div class="card revenue-card" style="min-height: 400px">
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
-                        <h6 class="card-title">Cotizaciones recientes</h6>
+                        <h6 class="card-title" data-i18n="distribuidor:h6Cotizaciones">Cotizaciones recientes</h6>
                         <?php
                             require __DIR__.'/../../../php/conexion.php';
 
@@ -83,7 +83,7 @@
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <span>Total: $total $</span>
+                                            <span data-i18n='distribuidor:spanTotal'>Total: $total $</span>
                                             <span>$date</span>
                                         </div>
                                     </div>
@@ -94,7 +94,7 @@
                                 echo "
                                     <br>
                                     <br>
-                                    <center><h6>Ninguna cotización</h6></center>
+                                    <center><h6 data-i18n='distribuidor:h6NaCotizacion'>Ninguna cotización</h6></center>
                                 ";
                             }
 
@@ -111,7 +111,7 @@
                         <div>
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
                             <center style="display: flex; flex-direction: columns">
-                                <p class="card-text">Órdenes procesadas</p>
+                                <p class="card-text" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</p>
                                 <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/procesadas">
                                     &nbsp; <span class='fa-solid fa-eye btn-details'
                                         style='color: #444 !important; font-size: 16px;'></span></a>
@@ -126,9 +126,9 @@
                             </span>
                         </div>
                         <div>
-                            <center><data id="pending-orders" class="card-data">No hay datos</data>
+                            <center><data id="pending-orders" class="card-data" data-i18n="distribuidor:DontHaveData">No hay datos</data>
                                 <center style="display: flex; flex-direction: columns">
-                                    <p class="card-text">Órdenes pendientes</p>
+                                    <p class="card-text" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</p>
                                     <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/"> &nbsp;
                                         <span class='fa-solid fa-eye btn-details'
                                             style='color: #444 !important; font-size: 16px;'>
@@ -145,7 +145,7 @@
                 </div>
     
                 <div class="card revenue-card">
-                    <h6 class="card-title">Resúmen de clientes</h6>
+                    <h6 class="card-title" data-i18n="distribuidor:h6ResumenClient">Resúmen de clientes</h6>
                     <canvas id="activity"></canvas>
                     <div class="divider card-divider"></div>
     

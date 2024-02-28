@@ -66,18 +66,18 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
          <a class="nav-link" href="index.php?pag=diagsys"><span class="bottom-icon material-symbols-outlined">
-            build</span>Diagnosticar
+            build</span data-i18n="client:diagnosing">Diagnosticar
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="index.php?pag=register"><span class="bottom-icon material-symbols-outlined">
             add_to_photos
-          </span>Registrar Equipo<span class="visually-hidden">(current)</span></a>
+          </span data-i18n="client:RegistrarEquipo">Registrar Equipo<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?pag=exit"><span class="bottom-icon material-symbols-outlined">
             logout
-          </span>Logout</a>
+          </span data-i18n="client:logout">Logout</a>
         </li>
       </ul>
        <!--User Icon-->
@@ -99,7 +99,7 @@
 <div class="container flex-wrap p3 rounded-3 shadow-lg p-3" style="background-color:#FFFFFF;">
 
         <div class="d-flex justify-content-center">
-            <p class="lead">Registra tu equipo</p>
+            <p class="lead" data-i18n="client:RegistrarEquipo">Registra tu equipo</p>
         </div>
         <form class="p-3 mt-1" method="post">
 
@@ -110,7 +110,7 @@
             <br>
 
             <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary bg-kalstein" name="username" value="<?php echo $userTag;?>">Registrar</button>
+            <button type="submit" class="btn btn-primary bg-kalstein" name="username" value="<?php echo $userTag; data-i18n="client:registrate" ?>">Registrar</button>
             </div>
             <br>
             

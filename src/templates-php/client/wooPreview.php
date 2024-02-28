@@ -499,15 +499,15 @@ if ($count > 0){
             src="<?php echo $image?>"
             title="<?php echo $name?>"
         />
-        <p class='mb-0'><strong>Empresa</strong>: <em id='btnCompanyPreview'><?php echo $company?></em></p>
-        <p class='mb-0'><strong>País</strong>: <em><?php echo $country?></em></p>
+        <p class='mb-0'><strong data-i18n='client:empresa' >Empresa</strong>: <em id='btnCompanyPreview'><?php echo $company?></em></p>
+        <p class='mb-0'><strong data-i18n='client:pais' >País</strong>: <em><?php echo $country?></em></p>
     </div>
 
     <div class="col-12 col-sm-6">
         <input type="hidden" id="woo-meta-model" data-model="<?php echo $model?>">
         <div>
-            <p class='mb-0'><strong>Fabricante</strong>: <em><?php echo $brand?></em></p>
-            <p class='mb-0'><strong>Modelo</strong>: <em><?php echo $model?></em></p>
+            <p class='mb-0'><strong data-i18n='client:fabricante' >Fabricante</strong>: <em><?php echo $brand?></em></p>
+            <p class='mb-0'><strong data-i18n='client:modelo' >Modelo</strong>: <em><?php echo $model?></em></p>
             <?php echo $used?>
             <p>
                 <img class="alignnone size-full wp-image-29188"
@@ -515,16 +515,16 @@ if ($count > 0){
             </p>
             <div class='d-flex flex-row'>
                 <div>
-                    <p class='card-text'><small class='text-muted'><?php echo number_format($disc, 2)?> -18% de descuento con pre-orden</small></p>
-                    <h6 class='my-0 mb-1'>USD$ <?php echo number_format($price, 2)?></h6>
+                    <p class='card-text'><small class='text-muted' data-i18n='client:descuento18' ><?php echo number_format($disc, 2) ?> -18% de descuento con pre-orden</small></p>
+                    <h6 class='my-0 mb-1' >USD$ <?php echo number_format($price, 2)?></h6>
                     <?php
                         if (!$manu_preview){
                             $html = "
-                                <div><span class='quantity d-inline'>Cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
+                                <div><span class='quantity d-inline' data-i18n='client:cantidad' >Cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
                             ";
 
                             $html.="  
-                                    <button value='$model' class='btnQuo'>Cotizar</button>
+                                    <button value='$model' class='btnQuo' data-i18n='client:cotizar' >Cotizar</button>
                                     <button class='activeModal' data-bs-toggle='modal' data-bs-target='#cotModal' style='display: none;'></button>
                             ";
 
@@ -534,7 +534,7 @@ if ($count > 0){
                                         <div class='accordion-item'>
                                             <input type='hidden' id='ih-accesories-add' value='0'>
                                             <h6 class='accordion-header'>
-                                                <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne'>
+                                                <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne' data-i18n='client:accesoriosAdic' >
                                                     Accesorios adicionales
                                                 </button>
                                             </h6>
@@ -561,7 +561,7 @@ if ($count > 0){
                                                     <span style='flex: 1; margin: 0 10px;'>USD$ $priceAccesorie</span>
                                                 <div style='display: flex; flex-direction: column; align-items: center; text-align: center;'>
                                                     <i class='fa-solid fa-eye btn-view-accessory' style='color: #aaa; flex: 1;' data-id='$idAccesorie'></i>
-                                                    <span>Ver</span>
+                                                    <span data-i18n='client:ver' >Ver</span>
                                                 </div>
                                                     
                                                 </div>
@@ -589,7 +589,7 @@ if ($count > 0){
 </div>
 <!-- DESCRIPTION -->
 <div>
-    <h4>Descripción de producto</h4>
+    <h4 data-i18n='client:descripcionProducto' >Descripción de producto</h4>
 
     <p>
         <?php echo $description?>
@@ -609,7 +609,7 @@ if ($count > 0){
         else {
             if ($table != ''){
                 echo "
-                <h4>Detalles</h4>
+                <h4 data-i18n='client:guardar' >Detalles</h4>
                 <div style='overflow-x: scroll'>
                     <table class='p-prev-table'>
                         $table

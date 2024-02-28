@@ -2,21 +2,21 @@
     <div class="container">
         <div>
             <img class='kalstein-logo-footer' src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
-            <p><span>Déjanos saber lo que necesitas y nosotros nos encargaremos del resto</span></p>
+            <p><span data-i18n="client:dejaSaber">Déjanos saber lo que necesitas y nosotros nos encargaremos del resto</span></p>
         </div>
         <div>
-            <h5>Acceso rápido</h5>
+            <h5 data-i18n="client:accesoRapido">Acceso rápido</h5>
             <ul>
                 <li class="footer-item">
-                    <a href='#' id='btnQuotePr01'>Mis cotizaciones</a>
+                    <a href='#' id='btnQuotePr01' data-i18n="client:misCotizaciones">Mis cotizaciones</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a href='#' id='btnRecentActivityPr01'>Actividad</a>
+                    <a href='#' id='btnRecentActivityPr01' data-i18n="client:actividad">Actividad</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a href='#' id='btnCatalogs'>Catálogos</a>
+                    <a href='#' id='btnCatalogs' data-i18n="client:catalogos">Catálogos</a>
                 </li>
                 
                 <!--li class="footer-item">
@@ -25,22 +25,22 @@
             </ul>
         </div>
         <div>
-            <h5>Servicio al Consumidor</h5>
+            <h5 data-i18n="client:servicioConsumidor">Servicio al Consumidor</h5>
             <ul>
                 <li class="footer-item">
-                    <a href="#" id='sendEmail'>Chat en línea</a>
+                    <a href="#" id='sendEmail'data-i18n="client:chatLinea">Chat en línea</a>
                 </li>
     
                 <li class="footer-item">
-                    <a href="#" id='chatOnline'>Enviar un correo electrónico</a>
+                    <a href="#" id='chatOnline' data-i18n="client:enviarCorreo">Enviar un correo electrónico</a>
                 </li>
                 <li class="footer-item">
-                <a href="#" id="btnMail">Inbox</a>
+                <a href="#" id="btnMail" data-i18n="client:inbox">Inbox</a>
                 </li>
             </ul>
         </div>
         <div>
-            <h5>Síguenos</h5>
+            <h5 data-i18n="client:siguenos">Síguenos</h5>
             <ul>
                 <li class="footer-icon">
                     <a class="d-inline" href='https://www.instagram.com/kalsteinlab/?hl=es' target="__blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
@@ -58,10 +58,10 @@
         </div>
         <div class="order-first order-md-last">
             <h5>Ser visto</h5>
-            <div class="footer-main-button-quo" id='btnGenQuote' style='cursor: pointer'>GENERA TU COTIZACIÓN</div>
+            <div class="footer-main-button-quo" id='btnGenQuote' style='cursor: pointer' data-i18n="client:generaCotizacion">GENERA TU COTIZACIÓN</div>
         </div>
     </div>
-    <div class='text-white my-3 text-center'>© <?php echo date('Y') ?> Kalstein. Todos los derechos reservados.</div>
+    <div class='text-white my-3 text-center'>© <?php echo date('Y') data-i18n="client:kalsteinDerechos" ?> Kalstein. Todos los derechos reservados.</div>
 </footer>
 
 <script>

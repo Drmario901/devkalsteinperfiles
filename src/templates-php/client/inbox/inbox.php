@@ -73,13 +73,13 @@
         <div class="container bootdey">
             <div class="email-app mb-4">
                 <nav>
-                    <a href="#" id="inbox-compose" style="color: #fff" class="btn btn-danger btn-block">Nuevo mensaje</a>
+                    <a href="#" id="inbox-compose" style="color: #fff" class="btn btn-danger btn-block" data-i18n="client:nuevoMenssaje">Nuevo mensaje</a>
                     <ul class="nav">
                         <li class="nav-item">
-                            <b><a class="nav-link" href="#" id="inbox-inbox"><i class="fa fa-inbox"></i>Inbox</a></b>
+                            <b><a class="nav-link" href="#" id="inbox-inbox" data-i18n="client:inbox"><i class="fa fa-inbox"></i>Inbox</a></b>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="inbox-sent"><i class="fa fa-rocket"></i>Enviados</a>
+                            <a class="nav-link" href="#" id="inbox-sent" data-i18n="client:enviados"><i class="fa fa-rocket"></i>Enviados</a>
                         </li>
                     </ul>
                 </nav>
@@ -121,7 +121,7 @@
     else {
         echo '
                     <div class="no-messages">
-                        <p style="color: #000 !important">No hay mensajes</p>
+                        <p style="color: #000 !important" data-i18n="client:noMsj">No hay mensajes</p>
                     </div>';
     }
     echo '
