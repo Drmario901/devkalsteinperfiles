@@ -279,6 +279,8 @@
         }
         $html .= "</script>";
 
+        echo $html;
+
         $html = "
             <table class='table custom-table'>
                 <thead class='headTableForQuote'>
