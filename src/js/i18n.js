@@ -1,3 +1,16 @@
+const lngs = {
+  en: { nativeName: 'English' },
+  es: { nativeName: 'Spanish' },
+  it: { nativeName: 'Italian' },
+  pt: { nativeName: 'Portuguese' },
+  de: { nativeName: 'German' },
+  se: { nativeName: 'Swedish' },
+  ee: { nativeName: 'Estonian' },
+  pl: { nativeName: 'Polish' },
+  nl: { nativeName: 'Dutch' },
+  fr: { nativeName: 'French' }
+};
+
 jQuery(document).ready(function($) {
   // Función para obtener el idioma de la cookie
   const getLanguage = () => {
