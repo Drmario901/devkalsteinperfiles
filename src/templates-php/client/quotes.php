@@ -31,7 +31,7 @@
                         style='height: 2.8em; outline: 1px solid #213280; font-size: 0.9em;'>
                 </div>
                 <div class='col-xl-2'>
-                    <label class='small mb-1' for='dateTO' data-i18n="client:for">Para</label>
+                    <label class='small mb-1' for='dateTO' data-i18n="client:paraMsj">Para</label>
                     <input type='date' id='dateTO' style='height: 2.8em; outline: 1px solid #213280; font-size: 0.9em;'>
                 </div>
                 <div class='col-xl-2'>
