@@ -62,7 +62,7 @@
             </ul>
         </div>
         <div class="order-first order-md-last">
-            <h5>Ser visto</h5>
+            <h5 data-i18n="distribuidor:h5ToBeSeen">Ser visto</h5>
             <a href='https://plataforma.kalstein.net/index.php/distribuidor/productos/agregar'>
                 <div class="footer-main-button" data-i18n="distribuidor:btnAgregarProducto">AGREGAR UN PRODUCTO</div>
             </a>
@@ -72,5 +72,7 @@
             </a>
         </div>
     </div>
-    <div class='text-white my-3 text-center' data-i18n="distribuidor:footerCopyright">© <?php echo date('Y') ?> Kalstein. Todos los derechos reservados.</div>
+    <div class='text-white my-3 text-center'>
+        © <?php echo date('Y') ?> <span data-i18n="distribuidor:footerCopyright">Kalstein. Todos los derechos reservados.</span>
+    </div>
 </footer>
