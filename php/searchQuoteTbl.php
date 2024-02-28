@@ -328,6 +328,8 @@
         $html = "<script>";
         foreach ($translations[$lang] as $key => $value) {
             $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
+            // change the value of the input prev and next
+            $html .= "document.querySelector('[data-i17n=\"$key\"]').value = '$value';";
         }
         $html .= "</script>";
 
