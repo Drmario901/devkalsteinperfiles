@@ -169,7 +169,7 @@
                                     <option value='0' selected data-i18n="account:selectDefault" >Elija una opción</option>
                                     <option value='1' data-i18n="account:selectIngeniero" >Ingeniero</option>
                                     <option value='2' data-i18n="account:selectDireccion">Dirección de Ingeniería</option>
-                                    <option value='3' data-i18n="account:selectDesing">Diseñador</option>
+                                    <option value='3' data-i18n="account:selectDesign">Diseñador</option>
                                     <option value='4' data-i18n="account:selectCompras">Compras / Comprador / Finanzas</option>
                                     <option value='5' data-i18n="account:selectGestion">Gestión de programas y proyectos</option>
                                     <option value='6' data-i18n="account:selectOperaciones">Operaciones / Gestión de MRO</option>
