@@ -19,9 +19,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/quotes/">Todas las Ordenes</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/services/processed-orders">Ordenes Procesadas</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/cancelled-orders">Ordenes Canceladas</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/quotes/" data-i18n="support:allOrders" >Todas las Ordenes</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas">Ordenes Procesadas</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders">Ordenes Canceladas</a>
         </nav>
         
         <br>
@@ -48,13 +48,13 @@
                 <table class='table custom-table'>
                     <thead class='headTableForQuote'>
                         <tr>
-                        <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Cliente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Fecha</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Status</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Remitente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Detalles</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:client'>Cliente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:total'>Total (USD)</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:date'>Fecha</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:status'>Status</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:remitente'>Remitente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:details'>Detalles</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -101,7 +101,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>Datos no encontrados</p></center>
+                                    <center><p style='color: #000;' data-i18n='support:notfound'>Datos no encontrados</p></center>
                                 </div>
                             </td>
                         </tr>
@@ -121,11 +121,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:prev' value='&laquo; Previo'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:next' value='Siguiente &raquo;'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>

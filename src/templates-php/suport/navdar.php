@@ -69,7 +69,7 @@
                 
                             <div>
                                 <p class="profile-title"><?php echo $acc_name; ?></p>
-                                <p class="profile-subtitle">Soporte</p>
+                                <p class="profile-subtitle" data-i18n="support:support">Soporte</p>
                             </div>
                         </a>
                     </li>
@@ -78,37 +78,37 @@
                 <ul class="navbar-list">
                     <li>
                         <a id="home" href="https://plataforma.kalstein.net/index.php/support/dashboard" class="navbar-link icon-box">
-                            <span>Escritorio</span>
+                            <span data-i18n="support:desk" >Escritorio</span>
                         </a>
                     </li>
                     <li>
                         <a id="reports" href="https://plataforma.kalstein.net/index.php/support/reports/" class="navbar-link icon-box">
-                            <span>Reportes</span>
+                            <span data-i18n="support:report" >Reportes</span>
                         </a>
                     </li>
                     <li>
                         <a id="services" href="https://plataforma.kalstein.net/index.php/support/services/" class="navbar-link icon-box">
-                            <span>Mis Servicios</span>
+                            <span data-i18n="support:myServices" >Mis Servicios</span>
                         </a>
                     </li>
                     <li>
                         <a id="quotes" href="https://plataforma.kalstein.net/index.php/support/quotes/" class="navbar-link icon-box">
-                            <span>Ordenes</span>
+                            <span data-i18n="support:orders" >Ordenes</span>
                         </a>
                     </li>
                     <li>
                         <a id="catalog" href="https://plataforma.kalstein.net/index.php/support/manuals/" class="navbar-link icon-box">
-                            <span>Manuales</span>
+                            <span data-i18n="support:manuals" >Manuales</span>
                         </a>
                     </li>
                     <li>
                         <a id="shop" href="https://plataforma.kalstein.net/index.php/support/shop" class="navbar-link icon-box">
-                            <span>Tienda</span>
+                            <span data-i18n="support:store" >Tienda</span>
                         </a>
                     </li>
                     <li class='generate-quote'> <!-- only style class-->
                         <a id='btnGenQuote' href="https://plataforma.kalstein.net/index.php/support/services/add" class='navbar-link icon-box text-white'>
-                            <span>AÑADIR SERIVICIO</span>
+                            <span data-i18n="support:addService" >AÑADIR SERIVICIO</span>
                         </a>
                     </li>
                 </ul>

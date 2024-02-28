@@ -28,25 +28,25 @@
         ?>
     
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/services/">Servicios</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add">Añadir Servicio</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit">Modificar Servicio</a>
+            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
             <hr class="mt-0 mb-4">
         </nav>
         <br>
         <div class="category-select d-flex mb-3">
             <i class="fa-solid fa-search h5 me-2 mt-2"></i>
             <select class="form-control mb-2" type="date" id="category">
-                <option value="0">Seleccione Categoria</option>
+                <option value="0" data-i18n="support:selectDefault" >Seleccione Categoria</option>
                 
             </select>
         </div>
         <div class="category-select d-flex mb-3">
             <i class="fa-solid fa-play h5 me-2 mt-2"></i>
             <select class="form-control" id="estatus">
-                <option value='' selected>Selecciona un estatus</option>
-                <option value="Activated">Activated</option>
-                <option value="Disabled">Disabled</option>
+                <option value='' selected data-i18n="support:seleccionarEstatus" >Selecciona un estatus</option>
+                <option value="Activated" data-i18n="support:activated" >Activated</option>
+                <option value="Disabled" data-i18n="support:disabled" >Disabled</option>
             </select>
         </div>
         <div id="report-fails" class="table-responsive" width="100">
@@ -54,9 +54,9 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Categoria Linea</th>
-                        <th scope="col">Categoria Descripción</th>
-                        <th scope="col">Sub Categoria</th>
+                        <th scope="col" data-i18n="support:lineCategory" >Categoria Linea</th>
+                        <th scope="col" data-i18n="support:categoryDescription" >Categoria Descripción</th>
+                        <th scope="col" data-i18n="support:subCategory" >Sub Categoria</th>
                     </tr>
                 </thead>
                 <tbody>

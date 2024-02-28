@@ -134,12 +134,12 @@
 </style>
 
 <div class="row tm-edit-product-form">
-    <div class="col-12"><div class="stock-title">Tipo de Servicio</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:serviceType" >Tipo de Servicio</div></div>
 
     <div class="row mb-4 mt-3">
     <form id="modservices_form">
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Titulo del Servicio</label>
+            <label data-i18n="support:labelServiceTitle" >Titulo del Servicio</label>
             
             <input
                 id="SEnombre"
@@ -150,7 +150,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Compañia</label>
+            <label data-i18n="support:labelCompany" >Compañia</label>
             <input
                 id="SEcompany"
                 type="text"
@@ -160,7 +160,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Agente</label>
+            <label data-i18n="support:agente" >Agente</label>
             <input
                 id="SEagente"
                 type="text"
@@ -171,7 +171,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <!-- HACER QUE SE REGISTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-            <label for="Email">Telefono</label>
+            <label for="Email" data-i18n="support:telefono">Telefono</label>
             <input
                 id="SEtelefono"
                 type="number"
@@ -181,7 +181,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Email">Correo</label>
+            <label for="Email" data-i18n="support:labelCorreo">Correo</label>
             <input
                 id="SEcorreo"
                 type="text"
@@ -192,17 +192,17 @@
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">Dirección</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:labelDireccion" >Dirección</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
             <label for="Level">Pais</label>
             <select id="SEpais" class="tm-select-accounts" name="category">
-                <option selected value='0'>Elige una opción</option>
+                <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Dirección</label>
+            <label data-i18n="support:labelDireccion">Dirección</label>
             <input
                 id="SEdireccion"
                 type="text"
@@ -212,7 +212,7 @@
             <input type="text" id='actualizar_id' vaue=''>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Estado</label>
+            <label data-i18n="support:labelEstado">Estado</label>
             <input
                 id="SEestadoLugar"
                 type="text"
@@ -221,7 +221,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Ciudad</label>
+            <label for="name" data-i18n="support:labelCiudad" >Ciudad</label>
             <input
                 id="SEciudad"
                 type="text"
@@ -230,7 +230,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Provincia</label>
+            <label for="name" data-i18n="support:labelProvincia" >Provincia</label>
             <input
                 id="SEprovincia"
                 type="text"
@@ -240,25 +240,25 @@
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">Acerca del Producto</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:aboutProduct" >Acerca del Producto</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">PCategoria del Producto</label>
+            <label for="Level" data-i18n="support:productCategory">PCategoria del Producto</label>
             <select id="SEcategory" class="custom-select tm-select-accounts">
-                <option selected value='0'>Elige una opción</option>
+                <option selected value='0' data-i18n="support:selectOption">Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
         <label for="Level">Status</label>
             <select id="SEestado" class="custom-select tm-select-accounts">
-                <option selected value='0'>Elige una opción</option>
-                <option value="activado">activado</option>
-                <option value="desactivado">deasctivado</option>
+                <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
+                <option value="activado" data-i18n="support:activated" >activado</option>
+                <option value="desactivado" data-i18n="support:desactivated">deasctivado</option>
             </select>
         </div>
         <div class="col-12 col-lg-4">
-            <label for="name">Tiempo Estimado</label>
+            <label for="name" data-i18n="support:estimatedTime" >Tiempo Estimado</label>
             <input
                 id="SEtiempoEstimado"
                 type="text"
@@ -267,7 +267,7 @@
             />
         </div>
         <div class="col-12">
-            <label for="description">Descripción</label>
+            <label for="description" data-i18n="support:labelDescription" >Descripción</label>
             <textarea
                 id="SEdescription"                   
                 class="form-control validate"

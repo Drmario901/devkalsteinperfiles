@@ -21,9 +21,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/reports/" target="__blank">List Reports
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/reports/" target="__blank" data-i18n="support:listReports" >List Reports
             </a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/reports/management" target="__blank">Report Management</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/reports/management" target="__blank" data-i18n="support:reportManagement" >Report Management</a>
         </nav>
         
         <br>
@@ -42,7 +42,7 @@
                         <div class="form-group mb-3">
                             <label for="Level">id de reporte</label>
                                 <select id="dataEdit" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
-                                    <option selected value='0'>Choose an option</option>
+                                    <option selected value='0' data-i18n="support:selectOption" >Choose an option</option>
                                     <?php
                                         session_start();
                                         $acc_id = $_SESSION['emailAccount'];
@@ -78,7 +78,7 @@
                             <div class="col-xl-6 col-lg-6 col-12">
                                 <form method="post" class="tm-edit-product-form">
                                     <div class="form-group mb-3">
-                                        <label for="name">Name</label>
+                                        <label for="name" data-i18n="support:labelName" >Name</label>
                                         <input style="color: white !important;"
                                             id="Anombre"
                                             name="name"
@@ -94,7 +94,7 @@
                             <div class="col-xl-6 col-lg-6 col-12">
                                 <form method="post" class="tm-edit-product-form">
                                     <div class="form-group mb-5">
-                                        <label for="Email">Email</label>
+                                        <label for="Email" data-i18n="support:labelEmail" >Email</label>
                                         <input style="color: white !important;"
                                             id="Ausuario"
                                             name="Rusuario"
@@ -111,7 +111,7 @@
                             <div class="col-xl-6 col-lg-6 col-12">
                                 <form method="post" class="tm-edit-product-form">
                                     <div class="form-group mb-5">
-                                        <label for="Email">company</label>
+                                        <label for="Email" data-i18n="support:labelCompany" >company</label>
                                         <input style="color: white !important;"
                                             id="Acompany"
                                             name="Rusuario"
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="Type_US">type user</label>
+                            <label for="Type_US" data-i18n="support:typeUser" >type user</label>
                             <input style="color: white !important;"
                                 id="ATipo_US"
                                 name="Rusuario"
@@ -134,7 +134,7 @@
                             />
                         </div>
                         <div class="form-group mb-3">
-                            <label for="category">Category</label>
+                            <label for="category" data-i18n="support:category" >Category</label>
                             <input style="color: white !important;"
                                 id="Acategory"
                                 name="Rusuario"
@@ -144,7 +144,7 @@
                             />
                         </div>
                         <div class="form-group mb-3">
-                            <label for="product">Product</label>
+                            <label for="product" data-i18n="support:product" >Product</label>
                             <input style="color: white !important;"
                                 id="Aproducto"
                                 name="Rusuario"
@@ -154,7 +154,7 @@
                             />
                             <div class="row tm-edit-product-row">
                                 <div class="form-group mb-3">
-                                    <label for="description">Description</label>
+                                    <label for="description" data-i18n="support:description" >Description</label>
                                     <textarea 
                                         id="Adescription"                   
                                         class="form-control validate"
@@ -163,7 +163,7 @@
                                     </textarea>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="Level">Level</label>
+                                    <label for="Level" data-i18n="support:level">Level</label>
                                     <input style="color: white !important;"
                                         id="Anivel"
                                         name="Anivel"
@@ -177,7 +177,7 @@
                                     <div class="col-xl-6 col-lg-6 col-12">
                                         <form method="post" class="tm-edit-product-form">
                                             <div class="form-group mb-3">
-                                                <label for="name">agente de soporte</label>
+                                                <label for="name" data-i18n="support:agenteSoporte" >agente de soporte</label>
                                                 <input style="color: white !important;"
                                                     id="agente"
                                                     name="name"
@@ -194,7 +194,7 @@
                                     <div class="col-xl-6 col-lg-6 col-12">
                                         <form method="post" class="tm-edit-product-form">
                                             <div class="form-group mb-3">
-                                                <label for="name">company support</label>
+                                                <label for="name" data-i18n="support:companySupport" >company support</label>
                                                 <input style="color: white !important;"
                                                     id="Acompanysupport"
                                                     name="name"
@@ -211,7 +211,7 @@
                                     <div class="col-xl-6 col-lg-6 col-12">
                                         <form method="post" class="tm-edit-product-form">
                                             <div class="form-group mb-5">
-                                                <label for="Email">
+                                                <label for="Email" data-i18n="support:emailSoporte" >
                                                     Email Support
                                                 </label>
                                                 <input style="color: white !important;"
@@ -237,7 +237,7 @@
         
                                 <div class="row tm-edit-product-row">
                                     <div class="form-group mb-3">
-                                        <label for="observacion">observacion</label>
+                                        <label for="observacion" data-i18n="support:labelObservacion">Observacion</label>
                                         <textarea 
                                             id="observacion"                   
                                             class="form-control validate"
@@ -246,13 +246,13 @@
                                     </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="1" id="Generador_Cotizacion">
-                                    <label class="form-check-label" for="flexCheckChecked">generar cotizacion</label>
+                                    <label class="form-check-label" for="flexCheckChecked" data-i18n="support:labelGenerarCotizacion" >Generar cotizacion</label>
                                 </div>
                                 <div id="datos_cotizacion" style='display: none;'>  
                                     <div class='form-group mb-3'>
                                         <label for='Type_US'>tipo de moneda</label>
                                         <select id='Amoneda' class='custom-select tm-select-accounts' style='color: #fff !important;' name='moneda'>
-                                            <option selected value='0' style='color: #000 !important;' >Choose an option</option>
+                                            <option selected value='0' style='color: #000 !important;' data-i18n="support:selectOption" >Choose an option</option>
                                             <option value='USD' style='color: #000 !important;'>USD</option>
                                             <option value='EUR' style='color: #000 !important;'>EUR</option>
                                         </select>
@@ -261,7 +261,7 @@
                                         <div class='col-xl-6 col-lg-6 col-12'>
                                             <form method='post' class='tm-edit-product-form'>
                                                 <div class='form-group mb-3'>
-                                                    <label for='agente'>price</label>
+                                                    <label for='agente' data-i18n="support:labelPrice" >price</label>
                                                     <input style='color: white !important;'
                                                         id='Aprice'
                                                         name='name'
@@ -277,7 +277,7 @@
         
                                 </div>
                                 <div class="col-12">
-                                    <center><button type="button" id="actualizar" name="send" class="btn btn-primary btn-block text-uppercase">Responder ticket</button></center>
+                                    <center><button type="button" id="actualizar" name="send" class="btn btn-primary btn-block text-uppercase" data-i18n="support:answerTicket" >Responder ticket</button></center>
                                     <br>
                                 </div>
                             </div>
