@@ -74,7 +74,4 @@ document.getElementById("chatOnline").addEventListener("click", function(event) 
     
 });
 
-foreach ($translations[$lang] as $key => $value) {
-            $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
-        }
 </script>
