@@ -110,7 +110,7 @@
             <br>
 
             <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary bg-kalstein" name="username" value="<?php echo $userTag; data-i18n="client:registrate" ?>">Registrar</button>
+            <button type="submit" class="btn btn-primary bg-kalstein" name="username" data-i18n="client:registrate" value="<?php echo $userTag;?>">Registrar</button>
             </div>
             <br>
             

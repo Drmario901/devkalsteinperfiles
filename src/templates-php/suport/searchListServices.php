@@ -61,7 +61,7 @@
                                 <li class='list-group-item'>Agente: $usuario</li>
                                 <li class='list-group-item'>Categoria: $category</li>
                             </ul>
-                            <button type='button' class='btnQuoClone mx-auto my-3 text-center' id='add_report' value='$id' data-bs-toggle='modal' data-bs-target='#exampleModal' style='width: 160px'>Requerir Servicio</button>
+                            <button type='button' class='btnQuoClone mx-auto my-3 text-center' id='add_report' value='$id' data-bs-toggle='modal' data-bs-target='#exampleModal' style='width: 160px' data-i18n='support:askService'>Requerir Servicio</button>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded  icon'>sentiment_dissatisfied</span></center>
-                <center><p style='color: #000;'>No data found</p></center>
+                <center><p style='color: #000;' data-i18n='support:notfound' >No data found</p></center>
             </div>
         ";
     }
@@ -93,11 +93,11 @@
         <div id='currentPageIndicatorServices'>Page: $page</div>
         <form id='form-previous-services' action='' method='post' style='margin-right: 8px'>
             <input id='previous' type='hidden' name='b' value='$prevPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:prev' value='&laquo; Previo'>
         </form>
         <form id='form-next-services' action='' method='post'>
             <input id='next' class='next' type='hidden' name='b' value='$nextPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:next' value='Siguiente &raquo;'>
         </form>
     </div>
     <input id='hiddenPage' type='hidden' value='$page'>";

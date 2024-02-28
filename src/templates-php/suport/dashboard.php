@@ -40,14 +40,14 @@
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
-        <h2 class="h2 article-title">Hola <?php echo $acc_name?> </h2>
-        <p class="article-subtitle">Bienvenido(a) a Soporte Dashboard!</p>
+        <h2 data-i18n="support:hola" class="h2 article-title">Hola <?php echo $acc_name?> </h2>
+        <p data-i18n="support:welcome" class="article-subtitle">Bienvenido(a) a Soporte Dashboard!</p>
         <div id="c-panel01" class="col-sm-12" style="height: auto;">
         
         <section class="home">
             <div class="card revenue-card" style="min-height: 400px">
                 <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
-                    <h6 class="card-title"> Reportes Recientes</h6>
+                    <h6 data-i18n="support:recentReports" class="card-title"> Reportes Recientes</h6>
                     <?php
                         require __DIR__.'/../../../php/conexion.php';
     
@@ -94,13 +94,13 @@
                                 echo "
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <div> From <b>$client</b></div>
+                                            <div data-i18n='support:from'> From </div> <b>$client</b>
                                             <a href='localhost/wp-local/list-order'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <div>descripcion: $description </div>
+                                            <div data-i18n='support:description' >descripcion: </div> <p>$description</p>
                                             <div>$date</div>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@
                     </div>
                     <div>
                         <div id="reportes-completados"></div>
-                        <center><p class="card-text">Reportes completados</p></center>
+                        <center><p class="card-text" data-i18n="support:reportsComplete">Reportes completados</p></center>
                     </div>
     
                 </div>
@@ -130,14 +130,14 @@
                     </div>
                     <div>
                         <div id="reportes-pendientes"></div>
-                        <center><p class="card-text">Reportes Pendientes <!-- Pending reports --></p></center>
+                        <center><p class="card-text" data-i18n="support:reportsPending">Reportes Pendientes <!-- Pending reports --></p></center>
                     </div>
     
                 </div>
             </div>
             
                 <div class="card revenue-card">
-                    <h6 class="card-title">Reportes del Mes</h6>
+                    <h6 class="card-title" data-i18n="support:reportsMonth">Reportes del Mes</h6>
                     <canvas id="activity"></canvas>
                     <div class="divider card-divider"></div>
                     <ul class="list">

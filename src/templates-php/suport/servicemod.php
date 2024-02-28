@@ -20,9 +20,9 @@
         ?>
     
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/">Servicios</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add">Añadir servicio</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/services/edit">Modificar servicio</a>
+            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
         </nav>
         
         <br>
@@ -37,7 +37,7 @@
         
                     <label for="Level">id del servicio</label>
                     <select id="dataEdit" class="custom-select tm-select-accounts rounded mb-3" name="category" style="border-color: #999">
-                        <option selected value='0'>Elige una opción</option>
+                        <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
         
                         <?php
                             require __DIR__.'/../../../php/conexion.php';
@@ -79,7 +79,7 @@
                         <input type="hidden" id='actualizar_id' vaue='' name="actualizar_id">
         
                     <div class="col-12">
-                        <center><button type="button" id="actualizar_btn" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'>ACTUALIZAR SERVICIO</button></center>
+                        <center><button type="button" id="actualizar_btn" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="support:updateService" >ACTUALIZAR SERVICIO</button></center>
                     </div>
                         </form>
                 </div>

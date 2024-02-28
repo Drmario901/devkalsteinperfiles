@@ -21,8 +21,8 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="localhost/wp-local//list_report" target="__blank">list reports</a>
-            <a class="nav-link" href="localhost/wp-local/modreport" target="__blank">gestion de reportes</a>
+            <a class="nav-link active ms-0" href="localhost/wp-local//list_report" target="__blank" data-i18n="support:listReports" >List reports</a>
+            <a class="nav-link" href="localhost/wp-local/modreport" target="__blank" data-i18n="support:gestionReportes" >Gestion de reportes</a>
         </nav>
         
         <br>
@@ -35,14 +35,14 @@
                     <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="tm-block-title d-inline-block" style="color: white !important;">Add Report</h2>
+                                <h2 class="tm-block-title d-inline-block" style="color: white !important;" data-i18n="support:addReport" >Add Report</h2>
                             </div>
                         </div>
                         <div class="row tm-edit-product-row">
                             <div class="col-xl-6 col-lg-6 col-12">
                                 <form method="post" class="tm-edit-product-form">
                                     <div class="form-group mb-3">
-                                        <label for="name">Name</label>
+                                        <label for="name" data-i18n="support:labelName" >Name</label>
                                         <input style="color: white !important;"
                                             id="Rnombre"
                                             name="name"
@@ -58,7 +58,7 @@
                             <div class="col-xl-6 col-lg-6 col-12">
                                 <form method="post" class="tm-edit-product-form">
                                     <div class="form-group mb-5">
-                                        <label for="Email">Email</label>
+                                        <label for="Email" data-i18n="support:labelEmail" >Email</label>
                                         <input style="color: white !important;"
                                             id="Rusuario"
                                             name="email"
@@ -74,7 +74,7 @@
                             <div class="col-xl-6 col-lg-6 col-12">
                                 <form method="post" class="tm-edit-product-form">
                                     <div class="form-group mb-5">
-                                        <label for="company">company</label>
+                                        <label for="company" data-i18n="support:labelCompany" >company</label>
                                         <input style="color: white !important;"
                                             id="Rcompany"
                                             name="email"
@@ -87,28 +87,28 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="Type_US">type user</label>
+                            <label for="Type_US" data-i18n="support:typeUser" >type user</label>
                             <select id="RTipo_US" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
-                                <option selected value='0' style="color: #000 !important;" >Choose an option</option>
-                                <option value="Cliente" style="color: #000 !important;">Cliente</option>
-                                <option value="Distribuidor" style="color: #000 !important;">Distribuidor</option>
+                                <option selected value='0' style="color: #000 !important;" data-i18n="support:selectOption" >Choose an option</option>
+                                <option value="Cliente" style="color: #000 !important;" data-i18n="support:client" >Cliente</option>
+                                <option value="Distribuidor" style="color: #000 !important;" data-i18n="support:distribuidor">Distribuidor</option>
                             </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="category">Category</label>
+                            <label for="category" data-i18n="support:category">Category</label>
                             <select id="Rcategory" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
-                                <option selected value='0' >Choose an option</option>
+                                <option selected value='0' data-i18n="support:selectOption">Choose an option</option>
                             </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="product">Product</label>
+                            <label for="product" data-i18n="support:product">Product</label>
                             <select id="Rproduct" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
-                                <option selected value='0'>Choose an option</option>
+                                <option selected value='0' data-i18n="support:selectOption">Choose an option</option>
                             </select>
         
                             <div class="row tm-edit-product-row">
                                 <div class="form-group mb-3">
-                                    <label for="description">Description</label>
+                                    <label for="description" data-i18n="support:description">Description</label>
                                     <textarea 
                                         id="RDescription"                   
                                         class="form-control validate"
@@ -151,7 +151,7 @@
                                             <div class='col-xl-6 col-lg-6 col-12'>
                                                 <form method='post' class='tm-edit-product-form'>
                                                     <div class='form-group mb-3'>
-                                                        <label for='agente'>sopport company</label>
+                                                        <label for='agente' data-i18n='support:supportCompany' >sopport company</label>
                                                         <input style='color: white !important;'
                                                             id='Rcompanysoporte'
                                                             name='name'
@@ -168,7 +168,7 @@
                                             <div class='col-xl-6 col-lg-6 col-12'>
                                                 <form method='post' class='tm-edit-product-form'>
                                                     <div class='form-group mb-3'>
-                                                        <label for='agente'>agente</label>
+                                                        <label for='agente' data-i18n='support:agente'>agente</label>
                                                         <input style='color: white !important;'
                                                             id='Ragente'
                                                             name='name'
@@ -185,7 +185,7 @@
                                             <div class='col-xl-6 col-lg-6 col-12'>
                                                 <form method='post' class='tm-edit-product-form'>
                                                     <div class='form-group mb-3'>
-                                                        <label for='agente'>correo del agente</label>
+                                                        <label for='agente' data-i18n='support:correoAgente'>correo del agente</label>
                                                         <input style='color: white !important;'
                                                             id='Rcorreo'
                                                             name='name'
@@ -205,7 +205,7 @@
                                             <div class='col-xl-6 col-lg-6 col-12'>
                                                 <form method='post' class='tm-edit-product-form'>
                                                     <div class='form-group mb-3'>
-                                                        <label for='agente'>agente</label>
+                                                        <label for='agente' data-i18n='support:agente'>agente</label>
                                                         <input style='color: white !important;'
                                                             id='Ragente'
                                                             name='name'
@@ -222,7 +222,7 @@
                                             <div class='col-xl-6 col-lg-6 col-12'>
                                                 <form method='post' class='tm-edit-product-form'>
                                                     <div class='form-group mb-3'>
-                                                        <label for='agente'>correo del agente</label>
+                                                        <label for='agente' data-i18n='support:correoAgente'>correo del agente</label>
                                                         <input style='color: white !important;'
                                                             id='Rcorreo'
                                                             name='name'
@@ -244,14 +244,14 @@
                                 <div class="form-group mb-3">
                                     <label for="Level">Level</label>
                                     <select id="Rnivel" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
-                                        <option selected value='0'>Choose an option</option>
-                                        <option value="Bajo" style="color: #000 !important;">Low</option>
-                                        <option value="Medio" style="color: #000 !important;">Mid</option>
-                                        <option value="Alto" style="color: #000 !important;">High</option>
+                                        <option selected value='0' data-i18n="support:selectOption">Choose an option</option>
+                                        <option value="Bajo" style="color: #000 !important;" data-i18n="support:low" >Low</option>
+                                        <option value="Medio" style="color: #000 !important;" data-i18n="support:mid">Mid</option>
+                                        <option value="Alto" style="color: #000 !important;" data-i18n="support:high">High</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <center><button type="button" id="registrar" name="send" class="btn btn-primary btn-block text-uppercase">Add Ticket</button></center>
+                                    <center><button type="button" id="registrar" name="send" class="btn btn-primary btn-block text-uppercase" data-i18n="support:addTicket">Add Ticket</button></center>
                                 </div>
                             </div>
                         </div>

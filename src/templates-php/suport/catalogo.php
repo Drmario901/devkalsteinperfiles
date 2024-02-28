@@ -55,7 +55,7 @@
                 <div class="category-select col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fa-solid fa-filter mx-3"></i>
                     <select id="category-ma" style="padding-left: 10px;">
-                        <option value="" selected disabled hidden>Seleccione una categoria</option>
+                        <option value="" selected disabled hidden data-i18n="support:selectDefault" >Seleccione una categoria</option>
                         <?php while($fetch = $res->fetch_assoc()) : ?>
                             <option value="<?= $fetch['M_id']; ?>"><?= $fetch["M_nombre_product"] ?> </option>
                         <?php endwhile ?>
@@ -64,7 +64,7 @@
 
                 <div class="search col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fas fa-search mx-3"></i>
-                    <input class="mb-0" type="text" id="searchreport-ma" style="padding-left: 10px; height: 100%" placeholder="Busqueda para un manual">
+                    <input class="mb-0" data-placeholder="searchManual" data-i18n="support:searchManual" type="text" id="searchreport-ma" style="padding-left: 10px; height: 100%" placeholder="Busqueda para un manual">
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
 
                 <div class="search col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fas fa-search mx-3"></i>
-                    <input type="text" placeholder="Busqueda para un catalogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
+                    <input type="text" data-placeholder="searchCatalogo" data-i18n="support:searchCatalogo" placeholder="Busqueda para un catalogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
                 </div>
             </div>
         

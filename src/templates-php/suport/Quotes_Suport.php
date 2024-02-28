@@ -20,8 +20,8 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="localhost/wp-local/suport/list_report" target="__blank">Lista de Reportes</a>
-            <a class="nav-link" href="localhost/wp-local/suport/modreport" target="__blank">Gestion de reportes</a>
+            <a class="nav-link active ms-0" href="localhost/wp-local/suport/list_report" target="__blank" data-i18n="support:listOrders" >Lista de Reportes</a>
+            <a class="nav-link" href="localhost/wp-local/suport/modreport" target="__blank" data-i18n="support:gestionReportes" >Gestion de reportes</a>
             <hr class="mt-0 mb-4">
         </nav>
         
@@ -32,11 +32,11 @@
         <input class="form-control mb-5" type="date" id="dateTo">
             
         <select class="form-control mb-5" id="estatus">
-            <option value=''>Selecciona una opción</option>
-            <option value="solventado">solventado</option>
-            <option value="pendiente">Pendiente</option>
-            <option value="cancelado">Cancelado</option>
-            <option value="insolvente">insolvente</option>
+            <option value='' data-i18n="support:selectOption" >Selecciona una opción</option>
+            <option value="solventado" data-i18n="support:selectSolventado" >solventado</option>
+            <option value="pendiente" data-i18n="support:selectPending">Pendiente</option>
+            <option value="cancelado" data-i18n="support:selectCancelado">Cancelado</option>
+            <option value="insolvente" data-i18n="support:selectInsolvente">insolvente</option>
         </select>
                 
         <input  class="form-control mb-5" type="number" id="searchreport">
@@ -58,13 +58,13 @@
                     <thead class='headTableForQuote'>
                         <tr>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Client</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Sending method</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Date</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Status</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Details</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Actions</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:client'>Client</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:shippingMethod'>Sending method</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:total'>Total (USD)</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:date'>Date</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:status'>Status</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:details'>Details</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' >Actions</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -101,10 +101,10 @@
                                 <td>
                                     <select name='cotizacion_status' style='color: #000 !important; border: 1px solid #aaa !important; border-radius: 4px' class='estatus-seleccionado''>
                                         <option value=''></option>
-                                        <option value='3'>Process</option>
-                                        <option value='2'>Cancel</option>
+                                        <option value='3' data-i18n='support:process'>Process</option>
+                                        <option value='2' data-i18n='support:cancel'>Cancel</option>
                                     </select>
-                                    <button type='button' id='btnUpdate' style='color: #000 !important;' value='$quoteId'>Cambiar estatus</button>
+                                    <button type='button' id='btnUpdate' style='color: #000 !important;' value='$quoteId' data-i18n='support:changeStatus'>Cambiar estatus</button>
                                 </td>
                             </tr>
                         ";
@@ -117,7 +117,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>Datos no encontrados</p></center>
+                                    <center><p style='color: #000;' data-i18n='support:notfound'>Datos no encontrados</p></center>
                                 </div>
                             </td>
                         </tr>

@@ -1,3 +1,8 @@
+/**
+
+    * TODO: Finilizar traduccion de la tabla de cotizaciones
+*/
+
 <div class="container">
     <?php
             
@@ -19,9 +24,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/quotes/">Todas las ordenes</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/processed-orders">Ordenes Procesadas</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/cancelled-orders">Ordenes Canceladas</a>
+            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/quotes/" data-i18n="support:allOrders" >Todas las ordenes</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas" >Ordenes Procesadas</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders" >Ordenes Canceladas</a>
         </nav>
         
         <br>

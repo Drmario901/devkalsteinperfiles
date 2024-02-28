@@ -20,9 +20,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/">Servicios</a>
-            <a class="nav-link active ms-0" href="https:///plataforma.kalstein.net/index.php/support/services/add">Añadir servicio</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit">Modificar servicio</a>
+            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
+            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
             <hr class="mt-0 mb-4">
         </nav>
         
@@ -57,7 +57,7 @@
         
                     <div class="col-12">
                         <center>
-                            <button type="button" id="Register_service" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'>AÑADIR SERVICIO</button>
+                            <button type="button" id="Register_service" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="support:addService" >AÑADIR SERVICIO</button>
                         </center>
                     </div>
                     <form>
