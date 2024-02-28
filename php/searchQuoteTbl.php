@@ -152,6 +152,95 @@
         $q = $conexion->real_escape_string($_POST['consulta']);
         $a = $_POST['status'];
 
+        $translations = array(
+            'en' => array(
+                'client:itemTabla' => 'Item',
+                'client:nCotizacionTable' => 'Quote number',
+                'client:fechaTable' => 'Date',
+                'client:qtyTable' => 'Quantity',
+                'client:shippingTable' => 'Shipping method',
+                'client:seeTable' => 'View',
+                'client:deleteTable' => 'Delete',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'No data found',
+                'client:previo' => 'Previous',
+                'client:next' => 'Next'
+            ),
+            'es' => array(
+                'client:itemTabla' => 'Item',
+                'client:nCotizacionTable' => 'N° Cotización',
+                'client:fechaTable' => 'Fecha',
+                'client:qtyTable' => 'Cantidad',
+                'client:shippingTable' => 'Método de envío',
+                'client:seeTable' => 'Ver',
+                'client:deleteTable' => 'Borrar',
+                'client:statusTable' => 'Estatus',
+                'client:dataNotFound' => 'No se han encontrado datos',
+                'client:previo' => 'Anterior',
+                'client:next' => 'Siguiente'
+            ),
+            'fr' => array(
+                'client:itemTabla' => 'Article',
+                'client:nCotizacionTable' => 'Numéro de devis',
+                'client:fechaTable' => 'Date',
+                'client:qtyTable' => 'Quantité',
+                'client:shippingTable' => 'Méthode d\'expédition',
+                'client:seeTable' => 'Voir',
+                'client:deleteTable' => 'Effacer',
+                'client:statusTable' => 'Statut',
+                'client:dataNotFound' => 'Aucune donnée trouvée',
+                'client:previo' => 'Précédent',
+                'client:next' => 'Prochain'
+            ),
+            'it' => array(
+                'client:itemTabla' => 'Articolo',
+                'client:nCotizacionTable' => 'Numero di preventivo',
+                'client:fechaTable' => 'Data',
+                'client:qtyTable' => 'Quantità',
+                'client:shippingTable' => 'Metodo di spedizione',
+                'client:seeTable' => 'Vedi',
+                'client:deleteTable' => 'Cancellare',
+                'client:statusTable' => 'Stato',
+                'client:dataNotFound' => 'Nessun dato trovato',
+                'client:previo' => 'Precedente',
+                'client:next' => 'Il prossimo'
+            ),
+            'pt' => array(
+                'client:itemTabla' => 'Artigo',
+                'client:nCotizacionTable' => 'Número de cotação',
+                'client:fechaTable' => 'Encontro',
+                'client:qtyTable' => 'Quantidade',
+                'client:shippingTable' => 'Método de envio',
+                'client:seeTable' => 'Ver',
+                'client:deleteTable' => 'Excluir',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Nenhum dado encontrado',
+                'client:previo' => 'Anterior',
+                'client:next' => 'Próximo'
+            ),
+            'pl' => array(
+                'client:itemTabla' => 'Artykuł',
+                'client:nCotizacionTable' => 'Numer oferty',
+                'client:fechaTable' => 'Data',
+                'client:qtyTable' => 'Ilość',
+                'client:shippingTable' => 'Metoda wysyłki',
+                'client:seeTable' => 'Zobacz',
+                'client:deleteTable' => 'Kasować',
+                'client:statusTable' => 'Status',
+                'client:dataNotFound' => 'Nie znaleziono danych',
+                'client:previo' => 'Poprzedni',
+                'client:next' => 'Następny'
+            )
+        );
+
+        $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'en';
+
+        $html = "<script>";
+        foreach ($translations[$lang] as $key => $value) {
+            $html .= "document.querySelector('[data-i18n=\"$key\"]').innerText = '$value';";
+        }
+        $html .= "</script>";
+
         if (isset($_POST['dateTo'])) {
             if ($dateTo == '' && $dateFrom == '') {
                 if ($q == '') {
