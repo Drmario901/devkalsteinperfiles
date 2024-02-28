@@ -59,7 +59,7 @@
                                 <option value='1' selected data-i18n="account:opcion1">Cotizar, comprar o consumir recursos proporcionados por la plataforma</option>
                                 <option value='2' selected data-i18n="account:opcion2">Anunciar y vender sus productos</option>
                                  <option value='6' selected data-i18n="account:opcion3">Impartir conocimientos en el ámbito científico, dar cursos, etc.</option>
-                                <!--option value='4'>Prestación de servicios técnicos</option -->
+                                <option value='4'>Prestación de servicios técnicos</option>
                             </select>
                         </div>
                         <div class='col-sm-3'></div>
