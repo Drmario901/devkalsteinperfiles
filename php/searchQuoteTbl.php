@@ -275,7 +275,7 @@
 
         $html = "<script>";
         foreach ($translations[$lang] as $key => $value) {
-            $html .= "document.querySelector('[data-i18n=\"$key\"]').innerText = '$value';";
+            $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
         }
         $html .= "</script>";
 
@@ -283,14 +283,14 @@
             <table class='table custom-table'>
                 <thead class='headTableForQuote'>
                     <tr>
-                        <td scope='col' data-i18n='client:itemTabla' >Item</td>
-                        <td scope='col' data-i18n='client:nCotizacionTable'>N° Cotización</td>
-                        <td scope='col' data-i18n='client:fechaTable'>Fecha</td>
-                        <td scope='col' data-i18n='client:qtyTable'>Cantidad</td>
-                        <td scope='col' data-i18n='client:shippingTable'>Método de envío</td>
-                        <td scope='col' data-i18n='client:seeTable'>Ver</td>
-                        <td scope='col' data-i18n='client:deleteTable'>Borrar</td>
-                        <td scope='col' data-i18n='client:statusTable'>Estatus</td>
+                        <td scope='col' data-i17n='client:itemTabla' >Item</td>
+                        <td scope='col' data-i17n='client:nCotizacionTable'>N° Cotización</td>
+                        <td scope='col' data-i17n='client:fechaTable'>Fecha</td>
+                        <td scope='col' data-i17n='client:qtyTable'>Cantidad</td>
+                        <td scope='col' data-i17n='client:shippingTable'>Método de envío</td>
+                        <td scope='col' data-i17n='client:seeTable'>Ver</td>
+                        <td scope='col' data-i17n='client:deleteTable'>Borrar</td>
+                        <td scope='col' data-i17n='client:statusTable'>Estatus</td>
                     </tr>
                 </thead>
                 <tbody id='tblQuoteClientCuca' class='bodyTableForQuote'>
