@@ -4,7 +4,7 @@
             <a id='btn-logo' href='https://plataforma.kalstein.net/'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
         </h1>                
         <button class='menu-toggle-btn icon-box' data-menu-toggle-btn aria-label='Toggle Menu'>
-            <span class='material-symbols-rounded  icon' style='color: #213280' data-i18n="client:cotizacionTotal">menu</span>
+            <span class='material-symbols-rounded  icon' style='color: #213280'>menu</span>
         </button>                
         <nav class='navbar'>
             <div class='container'>
@@ -12,7 +12,7 @@
                     <div class="d-flex flex-row">
                         <li>
                             <a href='#' id='btnMail' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded icon position-relative' data-i18n="client:cotizacionTotal">
+                                <span class='material-symbols-rounded icon position-relative'>
                                     mail
                                     <span id='messagesBaloon' class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style='font-family: sans-serif; font-size: 10px' hidden>
                                         <div id='messagesCant' class="unread-messages"></div>
@@ -22,7 +22,7 @@
                         </li>
                         <li>
                             <a href='#' id='btnEditProfilePr01' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded  icon' data-i18n="client:settings">settings</span>
+                                <span class='material-symbols-rounded  icon' >settings</span>
                             </a>
                         </li>
                         <li>

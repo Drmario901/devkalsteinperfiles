@@ -73,35 +73,35 @@
                                 }else{
                                     $displayCompany = 'inline';
                                 }
-                            echo "style='display : $displayCompany' data-i18n='client:agregarNombre>Añadir nombre de compañía</button>
+                            echo "style='display : $displayCompany' data-i18n='client:agregarNombre'>Añadir nombre de compañía</button>
                             <button class='btn-complete-profile' id='btnImgDocumentCPR'";
                                 if ($imageDocument != ''){
                                     $displayCompany = 'none';
                                 }else{
                                     $displayCompany = 'inline';
                                 }
-                            echo "style='display : $displayCompany' data-i18n='client:agregarFotoIden >Añadir foto de documento de identidad</button>
+                            echo "style='display : $displayCompany' data-i18n='client:agregarFotoIden' >Añadir foto de documento de identidad</button>
                             <button class='btn-complete-profile' id='btnIdDocCPR'";
                                 if ($iDocument != ''){
                                     $displayCompany = 'none';
                                 }else{
                                     $displayCompany = 'inline';
                                 }
-                            echo "style='display : $displayCompany' data-i18n='client:agregarNumDoc >Añadir número de documento</button>
+                            echo "style='display : $displayCompany' data-i18n='client:agregarNumDoc' >Añadir número de documento</button>
                             <button class='btn-complete-profile' id='btnImgDocBussinessCPR'";
                                 if ($company_image_rif != ''){
                                     $displayCompany = 'none';
                                 }else{
                                     $displayCompany = 'inline';
                                 }
-                            echo "style='display : $displayCompany' data-i18n='client:agregarFotoLegal >Foto del documento legal de compañía</button>
+                            echo "style='display : $displayCompany' data-i18n='client:agregarFotoLegal' >Foto del documento legal de compañía</button>
                             <button class='btn-complete-profile' id='btnRifBussinessCPR'";
                                 if ($companyRif != ''){
                                     $displayCompany = 'none';
                                 }else{
                                     $displayCompany = 'inline';
                                 }
-                            echo "style='display : $displayCompany' data-i18n='client:agregarDocumento >Añadir documento legal de compañía</button>
+                            echo "style='display : $displayCompany' data-i18n='client:agregarDocumento' >Añadir documento legal de compañía</button>
                             <button class='btn-complete-profile' id='btnRoleCompanyCPR'";
                                 if ($companyRole != ''){
                                     if ($companyRole != 0){
@@ -112,56 +112,56 @@
                                 }else{
                                     $displayRole = 'inline';
                                 }
-                            echo "style='display : $displayRole' data-i18n='client:agregarRoll >Añadir rol de compañía</button>
+                            echo "style='display : $displayRole' data-i18n='client:agregarRoll' >Añadir rol de compañía</button>
                             <button class='btn-complete-profile' id='btnAddressCompanyCPR'";
                                 if ($companyAddress != ''){
                                     $displayAddress = 'none';
                                 }else{
                                     $displayAddress = 'inline';
                                 }
-                            echo "style='display : $displayAddress' data-i18n='client:agregarDireccion >Añadir dirección de compañía</button>
+                            echo "style='display : $displayAddress' data-i18n='client:agregarDireccion' >Añadir dirección de compañía</button>
                             <button class='btn-complete-profile' id='btnCountryCompanyCPR'";
                                 if ($companyCountry != ''){
                                     $displayCountry = 'none';
                                 }else{
                                     $displayCountry = 'inline';
                                 }
-                            echo "style='display : $displayCountry' data-i18n='client:agregarPais >Añadir país de companía</button>
+                            echo "style='display : $displayCountry' data-i18n='client:agregarPais' >Añadir país de companía</button>
                             <button class='btn-complete-profile' id='btnCompanyStateCPR'";
                                 if ($companyState != ''){
                                     $displayState = 'none';
                                 }else{
                                     $displayState = 'inline';
                                 }
-                            echo "style='display : $displayState' data-i18n='client:agregarCiudad >Añadir ciudad de compañía</button>
+                            echo "style='display : $displayState' data-i18n='client:agregarCiudad' >Añadir ciudad de compañía</button>
                             <button class='btn-complete-profile' id='btnZipcodeCompanyCPR'";
                                 if ($companyZipcode != ''){
                                     $displayZipcode = 'none';
                                 }else{
                                     $displayZipcode = 'inline';
                                 }
-                            echo "style='display : $displayZipcode' data-i18n='client:agregarPostal >Añadir código postal de compañía</button>
+                            echo "style='display : $displayZipcode' data-i18n='client:agregarPostal' >Añadir código postal de compañía</button>
                             <button class='btn-complete-profile' id='btnPhoneCompanyCPR'";
                                 if ($companyPhone != ''){
                                     $displayPhone = 'none';
                                 }else{
                                     $displayPhone = 'inline';
                                 }
-                            echo "style='display : $displayPhone' data-i18n='client:agregarTlf >Añadir teléfono de compañía</button>
+                            echo "style='display : $displayPhone' data-i18n='client:agregarTlf' >Añadir teléfono de compañía</button>
                             <button class='btn-complete-profile' id='btnWebsiteCompanyCPR'";
                                 if ($companyWebsite != ''){
                                     $displayWebsite = 'none';
                                 }else{
                                     $displayWebsite = 'inline';
                                 }
-                            echo "style='display : $displayWebsite' data-i18n='client:agregarWeb >Añadir sitio web de compañía</button>
+                            echo "style='display : $displayWebsite' data-i18n='client:agregarWeb' >Añadir sitio web de compañía</button>
                             <button class='btn-complete-profile' id='btnProfileImageCPR'";
                                 if ($imgPerfil != ''){
                                     $displayImgProfile = 'none';
                                 }else{
                                     $displayImgProfile = 'inline';
                                 }
-                            echo "style='display : $displayBirthday' data-i18n='client:agregarImg >Añadir imagen de perfíl</button></div>";
+                            echo "style='display : $displayBirthday' data-i18n='client:agregarImg' >Añadir imagen de perfíl</button></div>";
                         ?>
                         <div class='contentProfileComplete' style='display: none; text-align: center; margin-top: 1rem;'>
                             <p style='font-weight: bold; font-size: 1.5em;' data-i18n="client:felicidadesCompleto">¡Felicidades, tu perfil está completo!</p>
