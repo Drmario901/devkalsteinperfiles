@@ -53,13 +53,6 @@ jQuery(document).ready(function($){
         ))
       )).then(() => {
         // Inicializar jquery-i18next
-        
-        //Check if the language from cookie is the same as the language initialized
-        if (i18next.resolvedLanguage !== getLanguage()) {
-            i18next.changeLanguage(getLanguage(), () => {
-            rerender();
-          });
-        }
 
         jqueryI18next.init(i18next, $, { useOptionsAttr: true });
 
