@@ -1,5 +1,3 @@
-import sprintf from 'i18next-sprintf-postprocessor';
-
 const lngs = {
   en: { nativeName: 'English' },
   es: { nativeName: 'Spanish' },
@@ -33,7 +31,6 @@ const rerender = () => {
 jQuery(document).ready(function($){
   $(function () {
   i18next
-  .use(sprintf)
     // detect user language
     // init i18next
     .init({
