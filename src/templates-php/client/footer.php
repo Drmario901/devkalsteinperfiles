@@ -71,5 +71,10 @@ document.getElementById("sendEmail").addEventListener("click", function(event) {
 
 document.getElementById("chatOnline").addEventListener("click", function(event) {
     event.preventDefault(); 
+    
 });
+
+foreach ($translations[$lang] as $key => $value) {
+            $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
+        }
 </script>
