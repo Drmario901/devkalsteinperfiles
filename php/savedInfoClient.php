@@ -162,9 +162,9 @@
                 $empty_template = 'empty.php';
                 
                 $post_date = date('Y-m-d H:i:s');
-                $post_title = $conexion3->real_escape_string($slug);
-                $post_content = $conexion3->real_escape_string('<script>console.log("Blank template");</script>');
-                $post_name = $conexion3->real_escape_string($slug);
+                $post_title = $conexion->real_escape_string($slug);
+                $post_content = $conexion->real_escape_string('<script>console.log("Blank template");</script>');
+                $post_name = $conexion->real_escape_string($slug);
                 $post_status = 'draft';
                 $post_author = 1;
                 $post_type = 'page';
@@ -172,13 +172,13 @@
                 $sql = "INSERT INTO wp_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
                         VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type')";
 
-                if ($conexion3->query($sql) === TRUE) {
-                    $post_id = $conexion3->insert_id;
+                if ($conexion->query($sql) === TRUE) {
+                    $post_id = $conexion->insert_id;
 
-                    $empty_template = $conexion3->real_escape_string($empty_template);
+                    $empty_template = $conexion->real_escape_string($empty_template);
                     $sql_template = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                      VALUES ('$post_id', '_wp_page_template', '$empty_template')";
-                    $conexion3->query($sql_template);
+                    $conexion->query($sql_template);
 
                     $meta_values = [
                         '_edit_lock' => time(), 
@@ -189,7 +189,7 @@
                         $meta_value = $conexion->real_escape_string($meta_value);
                         $sql_meta = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                     VALUES ('$post_id', '$meta_key', '$meta_value')";
-                        $conexion3->query($sql_meta);
+                        $conexion->query($sql_meta);
                     }
                 }
             
@@ -206,9 +206,9 @@
                 $conexion->query($insertSlug);
 
                 $post_date = date('Y-m-d H:i:s');
-                $post_title = $conexion3->real_escape_string($slug);
-                $post_content = $conexion3->real_escape_string('<script>console.log("Blank template");</script>');
-                $post_name = $conexion3->real_escape_string($slug);
+                $post_title = $conexion->real_escape_string($slug);
+                $post_content = $conexion->real_escape_string('<script>console.log("Blank template");</script>');
+                $post_name = $conexion->real_escape_string($slug);
                 $post_status = 'draft';
                 $post_author = 1;
                 $post_type = 'page';
@@ -220,13 +220,13 @@
                 $sql = "INSERT INTO wp_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
                         VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type')";
 
-                if ($conexion3->query($sql) === TRUE) {
+                if ($conexion->query($sql) === TRUE) {
                     $post_id = $conexion->insert_id;
 
-                    $empty_template = $conexion3->real_escape_string($empty_template);
+                    $empty_template = $conexion->real_escape_string($empty_template);
                     $sql_template = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                      VALUES ('$post_id', '_wp_page_template', '$empty_template')";
-                    $conexion3->query($sql_template);
+                    $conexion->query($sql_template);
 
                     $meta_values = [
                         '_edit_lock' => time(), 
@@ -237,7 +237,7 @@
                         $meta_value = $conexion->real_escape_string($meta_value);
                         $sql_meta = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                     VALUES ('$post_id', '$meta_key', '$meta_value')";
-                        $conexion3->query($sql_meta);
+                        $conexion->query($sql_meta);
                     }
                 }
 
