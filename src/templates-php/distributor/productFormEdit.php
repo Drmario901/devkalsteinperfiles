@@ -2,14 +2,14 @@
     if ($add){
         $stock_inputs = "
         <div class='form-group mb-3 col-12'>
-            <label>Unidades en existencias</label>
+            <label data-i18n='distribuidor:labelUnidexis' >Unidades en existencias</label>
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-xs-12 col-sm-6' hidden>
-            <label>Status</label>
+            <label data-i18n='distribuidor:elementoEstatus'>Status</label>
             <select  id='statusProduct' style='width: 200px'>
-                <option class='text-dark' value='in stock'>In stock</option>
-                <option class='text-dark' value='out of stock'>Out of stock</option>
+                <option class='text-dark' value='in stock' data-i18n='distribuidor:optionExistencias'>In stock</option>
+                <option class='text-dark' value='out of stock' data-i18n='distribuidor:optionAgotado'>Out of stock</option>
             </select>
         </div>
         ";
@@ -17,14 +17,14 @@
     else{
         $stock_inputs = "
         <div class='form-group mb-3 col-12 col-sm-6'>
-            <label>Unidades en existencias</label>
+            <label data-i18n='distribuidor:labelUnidexis'>Unidades en existencias</label>
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-12 col-sm-6'>
             <label>Status</label>
             <select  id='statusProduct' style='width: 200px'>
-                <option class='text-dark' value='in stock'>In stock</option>
-                <option class='text-dark' value='out of stock'>Out of stock</option>
+                <option data-i18n='distribuidor:optionExistencias' class='text-dark' value='in stock'>In stock</option>
+                <option data-i18n='distribuidor:optionAgotado' class='text-dark' value='out of stock'>Out of stock</option>
             </select>
         </div>
         ";
@@ -207,15 +207,15 @@
         <!-- BASIC DATA -->
         <div class="col-12 col-md-6">
 
-            <label>Nombre</label>
+            <label data-i18n="distribuidor:labelNombre" >Nombre</label>
             <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre"/>
 
             
             <!-- no fake brand input -->
-                <label>Marca</label>
+                <label data-i18n="distribuidor:labelMarca">Marca</label>
                 <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" placeholder="Marca"/>
             
-            <label>Modelo</label>
+            <label data-i18n="distribuidor:labelModelo">Modelo</label>
             <input id="modelProduct" type="text" class="form-control validate mb-3" placeholder="Modelo"/>
             
         </div>
@@ -224,10 +224,10 @@
 
         <!-- PRODUCT IMAGE -->
         <div class="col-12 col-md-6 mb-4">
-            <label>Imágen de producto</label>
+            <label data-i18n="distribuidor:labelImagenProduct">Imágen de producto</label>
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
-                    <span class="drop-title">Selecciona o arrastra y suelta una imágen</span>
+                    <span class="drop-title" data-i18n="distribuidor:dragAndDrop">Selecciona o arrastra y suelta una imágen</span>
                     <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
@@ -236,7 +236,7 @@
         </div>
 
         <div class="col-12 mb-4">
-            <label>Descripción</label>
+            <label data-i18n="distribuidor:labelDescripcion">Descripción</label>
             <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" placeholder="Describe tu producto en menos de 5000 carácteres
             " ></textarea>
         </div>
@@ -245,16 +245,16 @@
     <!-- TABLA TECNICA -->
 
     <div class="row">
-        <label>Hoja de especificaciones</label>
+        <label data-i18n="distribuidor:labelHojaEspecific">Hoja de especificaciones</label>
         <div class="col-12">
             <div class='table-editor-selector mb-3'>
-                <div id='stock-ignore-table' class="selected">
+                <div id='stock-ignore-table' class="selected" data-i18n="distribuidor:h6NaCotizacion">
                     Ninguna
                 </div>
-                <div id='stock-basic-editor'>
+                <div id='stock-basic-editor' data-i18n="distribuidor:labelTablaBasica">
                     Tabla básica
                 </div>
-                <div id='stock-excel-editor'>
+                <div id='stock-excel-editor' data-i18n="distribuidor:labelTablaExcel">
                     Tabla de Excel
                 </div>
             </div>
@@ -269,7 +269,7 @@
                         <button id="stock-table-button-plus">+</button>
                         <button id="stock-table-button-minus">-</button>
                     </div>
-                    <small>Toca las celdas para editarlas</small>
+                    <small data-i18n="distribuidor:celdasEdit">Toca las celdas para editarlas</small>
                     <div class="row">
                         <div id="stock-table-keys" class="col-6">
                             <div><input id="table-keys-1" type="text" value="Ejemplo"></div>
@@ -288,17 +288,17 @@
             <!-- EXCEL -->
             <div id="stock-excel-table" class="mb-4" hidden>
 
-                Incluye un archivo Microsoft Excel o un .csv
+                <span data-i18n="distribuidor:archivoExcelCSV">Incluye un archivo Microsoft Excel o un .csv</span>
                 
-                <div id="paste-excel-clipboard" class="btn-clipboard mb-3">
+                <div id="paste-excel-clipboard" class="btn-clipboard mb-3" data-i18n="distribuidor:textPortapapeles">
                     Pegar del portapapeles <i class="fa-regular fa-clipboard"></i>
                 </div>
 
                 <textarea id="csv" hidden>ejemplo</textarea>
 
-                <span>Tiene cabecera<input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
+                <span data-i18n="distribuidor:textHaveHeader">Tiene cabecera<input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
 
-                <label>Prevista</label>
+                <label data-i18n="distribuidor:textPrevista">Prevista</label>
                 <table id="resultTable" class='table p-prev-table'>
                     <thead>
                         <th>Ejemplo</th>
@@ -319,14 +319,14 @@
     <!-- PRODUCT DATA -->
 
     <div class="col-12">
-        <div class="stock-title">Datos del producto</div>
+        <div class="stock-title" data-i18n="distribuidor:textDatosProduct">Datos del producto</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
-            <label>Categoría</label>
+            <label data-i18n="distribuidor:labelCategoria">Categoría</label>
             <select id="dataCategory" class="custom-select tm-select-accounts">
-                <option value=''>-- Elige una opción --</option>
+                <option value='' data-i18n="distribuidor:optionSelecciona">-- Elige una opción --</option>
                 <?php
                     require __DIR__.'/../../../php/conexion.php';
                 
@@ -357,8 +357,8 @@
     <div class="row mb-3">
         <!-- GROSS -->
         <div class="col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Producto <i class="fas fa-microscope"></i></h6>
-            <label>Peso neto (kg)</label>
+            <h6 class="tm-block-title mb-0" data-i18n="distribuidor:linkProducts">Producto <i class="fas fa-microscope"></i></h6>
+            <label data-i18n="distribuidor:labelPesoNeto">Peso neto (kg)</label>
             <input
                 id="weProduct"
                 type="number"
@@ -369,7 +369,7 @@
                 min="0"
             />
 
-            <labe>Ancho (cm)</label>
+            <labe data-i18n="distribuidor:labelAncho">Ancho (cm)</label>
             <input
                 id="wiProduct"
                 type="number"
@@ -378,7 +378,7 @@
                 min="0"
             />
 
-            <label>Alto (cm)</label>
+            <label data-i18n="distribuidor:labelAlto">Alto (cm)</label>
             <input
                 id="heProduct"
                 type="number"
@@ -387,7 +387,7 @@
                 min="0"
             />
 
-            <label>Largo (cm)</label>
+            <label data-i18n="distribuidor:labelLargo">Largo (cm)</label>
             <input
                 id="leProduct"
                 type="number"
@@ -398,8 +398,8 @@
         </div>
         <!-- PACKAGED -->
         <div class=" col-sm-6 col-xsm-12">
-            <h6 class="tm-block-title mb-0">Empaque <i class="fas fa-box"></i></h6>
-            <label>Peso bruto (kg)</label>
+            <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleEmpaque">Empaque <i class="fas fa-box"></i></h6>
+            <label data-i18n="distribuidor:labelPesoBruto">Peso bruto (kg)</label>
             <input
                 id="weProductPa"
                 type="number"
@@ -410,7 +410,7 @@
                 min="0"
             />
 
-            <label>Ancho (cm)</label>
+            <label data-i18n="distribuidor:labelAncho">Ancho (cm)</label>
             <input
                 id="wiProductPa"
                 type="number"
@@ -419,7 +419,7 @@
                 min="0"
             />
 
-            <label>Alto (cm)</label>
+            <label data-i18n="distribuidor:labelAlto">Alto (cm)</label>
             <input
                 id="heProductPa"
                 type="number"
@@ -428,7 +428,7 @@
                 min="0"
             />
 
-            <label>Largo (cm)</label>
+            <label data-i18n="distribuidor:labelLargo">Largo (cm)</label>
             <input
                 id="leProductPa"
                 type="number"
@@ -437,11 +437,11 @@
                 min="0"
             />
 
-            <label>Tipo de empaque</label>
+            <label data-i18n="distribuidor:labelTipoEmpaque">Tipo de empaque</label>
             <select id="packageType">
-                <option class="text-dark" value="">-- Selecciona --</option>
-                <option class="text-dark" value="carton">Caja de cartón</option>
-                <option class="text-dark" value="wooden">Caja de madera</option>
+                <option class="text-dark" value="" data-i18n="distribuidor:optionSelecciona">-- Selecciona --</option>
+                <option class="text-dark" value="carton" data-i18n="distribuidor:CajaCarton">Caja de cartón</option>
+                <option class="text-dark" value="wooden" data-i18n="distribuidor:CajaMadera">Caja de madera</option>
             </select>
         </div>
     </div>
@@ -449,12 +449,12 @@
     <!-- PRICING -->
 
     <div class="col-12">
-        <div class="stock-title">Precios</div>
+        <div class="stock-title" data-i18n="distribuidor:subtitlePrecios">Precios</div>
     </div>
 
     <div class="row">
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Precio unitario</label>
+            <label data-i18n="distribuidor:labelPrecioUnit">Precio unitario</label>
             <input
                 id="priceProduct"
                 type="number"
@@ -465,56 +465,62 @@
             />
         </div>
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-            <label>Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
+            <label data-i18n="distribuidor:subtitleMoneda">Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
             <select id="currency">
-                <option class="text-dark" value="">-- Selecciona --</option>
+                <option class="text-dark" value="" data-i18n="distribuidor:optionSelecciona">-- Selecciona --</option>
                 <option class="text-dark" value="USD">USD</option>
                 <option class="text-dark" value="EUR">EUR</option>
             </select>
         </div>
 
-        <h6 class="tm-block-title mb-0">Descuento mayorista 1 (opcional)</h6>
+        <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleDescuentoUno">Descuento mayorista 1 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
-            Aplica <input style="width: 45px;"
+            <span data-i18n="distribuidor:spanAplica">Aplica </span> 
+            <input style="width: 45px;"
                 id="discount1"
                 type="number"
                 placeholder="0"
                 class="form-control validate mb-2 d-inline-block stock-special-input"
                 min="0"
                 max="100"
-            /> % descuento de 
+            /> 
+            <span data-i18n="distribuidor:spanDescuento">% descuento de </span>
             <input style="width: 55px;"
                 id="discount1Amount"
                 type="number"
                 placeholder="24"
                 class="form-control validate d-inline-block stock-special-input"
                 min="0"
-            /> unidades
+            /> 
+            <span data-i18n="distribuidor:spanUnidades">unidades</span> 
         </div>
 
-        <h6 class="tm-block-title mb-0">Descuento mayorista 2 (opcional)</h6>
+        <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleDescuentoDos">Descuento mayorista 2 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
-            Aplica <input style="width: 45px;"
-                id="discount2"
+            <span data-i18n="distribuidor:spanAplica">Aplica </span> 
+            <input style="width: 45px;"
+                id="discount1"
                 type="number"
                 placeholder="0"
                 class="form-control validate mb-2 d-inline-block stock-special-input"
                 min="0"
                 max="100"
-            /> % descuento de 
+            /> 
+            <span data-i18n="distribuidor:spanDescuento">% descuento de </span>
             <input style="width: 55px;"
-                id="discount2Amount"
+                id="discount1Amount"
                 type="number"
-                placeholder="50"
+                placeholder="24"
                 class="form-control validate d-inline-block stock-special-input"
                 min="0"
-            /> unidades
+            /> 
+            <span data-i18n="distribuidor:spanUnidades">unidades</span> 
         </div>
     </div>
 
  <!--acessories -->
  <div class="col-12">
-        <div class="stock-title">Accesorios</div>
+        <div class="stock-title" data-i18n="distribuidor:subtitleAccesorios">Accesorios</div>
     </div>
  <div class="row mb-3 d-flex justify-content-center">
         <div class="accordion col-12 col-md-8" id="accordionExample">
@@ -524,7 +530,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header pb-0" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <b>Agregar un nuevo accesorio</b>
+                        <b data-i18n="distribuidor:subtitleAggNewAcces">Agregar un nuevo accesorio</b>
                     </button>
                 </h2>
 
@@ -550,24 +556,24 @@
     <!-- FILES -->
 
     <div class="col-12">
-        <div class="stock-title">Suplementos</div>
+        <div class="stock-title" data-i18n="distribuidor:suplements">Suplementos</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Catálogo informativo (opcional)</label>
+            <label data-i18n="distribuidor:catalogOpcional">Catálogo informativo (opcional)</label>
             <p id='currentlyUploadedCatalog'></p>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
-                <span class="drop-title">Selecciona o arrastra y suelta tu archivo</span>
+                <span class="drop-title" data-i18n="distribuidor:labelDragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
         </div>
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Manual técnico (opcional)</label>
+            <label data-i18n="distribuidor:manualOpcional">Manual técnico (opcional)</label>
             <p id='currentlyUploadedManual'></p>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
-                <span class="drop-title">Selecciona o arrastra y suelta tu archivo</span>
+                <span class="drop-title" data-i18n="distribuidor:labelDragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>

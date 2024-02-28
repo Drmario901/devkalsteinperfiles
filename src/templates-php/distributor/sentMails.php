@@ -58,10 +58,10 @@ function limitDescription($description, $limit)
 <div class="container bootdey">
     <div class="email-app mb-4">
         <nav>
-            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff" class="btn btn-danger btn-block">New Message</a>
+            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff" class="btn btn-danger btn-block" data-i18n="distribuidor:newMensajes">New Message</a>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i>Inbox</a>
+                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i><span data-i18n="distribuidor:inobx">Inbox</span></a>
                 </li>
             </ul>
         </nav>
@@ -101,7 +101,7 @@ function limitDescription($description, $limit)
             <?php } else { ?>
                 <div class="no-messages">
                     <i style="color: #000 !important" class="fa fa-frown"></i>
-                    <p style="color: #000 !important">No messages</p>
+                    <p style="color: #000 !important" data-i18n="distribuidor:noMsg">No messages</p>
                 </div>
             <?php } ?>
         </main>

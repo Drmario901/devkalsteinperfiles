@@ -6,7 +6,7 @@
             <input id='stockProduct' type='number' placeholder='0' class='form-control validate' min='0'/>
         </div>
         <div class='form-group mb-3 col-xs-12 col-sm-6' hidden>
-            <label data-i18n='distribuidor:labelStatus'>Status</label>
+            <label data-i18n='distribuidor:labelStatus'>Status</label>F
             <select  id='statusProduct' style='width: 200px'>
             <option class='text-dark' value='in stock' data-i18n='distribuidor:optionExistencias'> En existencias </option>
             <option class='text-dark' value='out of stock' data-i18n='distribuidor:optionAgotado'> Agotado </option>
@@ -556,24 +556,24 @@
     <!-- FILES -->
 
     <div class="col-12">
-        <div class="stock-title">Suplementos</div>
+        <div class="stock-title" data-i18n="distribuidor:suplements">Suplementos</div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Catálogo informativo (opcional)</label>
+            <label data-i18n="distribuidor:catalogOpcional" >Catálogo informativo (opcional)</label>
             <p id='currentlyUploadedCatalog'></p>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
-                <span class="drop-title">Selecciona o arrastra y suelta tu archivo</span>
+                <span class="drop-title" data-i18n="distribuidor:dragAndDrop" >Selecciona o arrastra y suelta tu archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
         </div>
         <div class="col-12 col-md-6 mb-3 p-4">
-            <label>Manual técnico (opcional)</label>
+            <label data-i18n="distribuidor:manualOpcional">Manual técnico (opcional)</label>
             <p id='currentlyUploadedManual'></p>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
-                <span class="drop-title">Selecciona o arrastra y suelta tu archivo</span>
+                <span class="drop-title" data-i18n="distribuidor:dragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
                 <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>
