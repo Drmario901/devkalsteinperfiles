@@ -271,11 +271,11 @@
         $resultado = $conexion->query($consulta);
 
         
-        $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'en';
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
         $html = "<script>";
         foreach ($translations[$lang] as $key => $value) {
-            $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
+            $html .= "document.querySelector('[data-i18n=\"$key\"]').innerText = '$value';";
         }
         $html .= "</script>";
 
