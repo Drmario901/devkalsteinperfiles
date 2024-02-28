@@ -48,6 +48,7 @@ jQuery(document).ready(function($) {
       // Después de cargar todas las traducciones, cambiar el idioma y rerenderizar
       const currentLanguage = getLanguage();
       if (i18next.resolvedLanguage !== currentLanguage) {
+        console.log('Changing language to', currentLanguage);
         i18next.changeLanguage(currentLanguage, () => {
           rerender();
         });
