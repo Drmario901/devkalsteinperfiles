@@ -1,4 +1,4 @@
-import { createAlert } from "./translateAlert";
+// import { createAlert } from "./translateAlert";
 
 jQuery(document).ready(function($){
     function getParameterByName(name, url) {
