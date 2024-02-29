@@ -124,5 +124,6 @@
     "labelProvinciaOpcional": "Provins (valfritt)",
     "aboutProduct": "Om produkten",
     "productCategory": "Produktkategori",
-    "estimatedTime": "Beräknad tid"
+    "estimatedTime": "Beräknad tid",
+    "placeholderFirstNameLastName": "För- och efternamn"
 }

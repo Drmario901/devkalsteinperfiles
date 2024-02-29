@@ -124,5 +124,6 @@
     "labelProvinciaOpcional": "Provincia (opcional)",
     "aboutProduct": "Acerca del Producto",
     "productCategory": "Categoría de Producto",
-    "estimatedTime": "Tiempo Estimado"
+    "estimatedTime": "Tiempo Estimado",
+    "placeholderFirstNameLastName": "Nombre y Apellido"
 }
