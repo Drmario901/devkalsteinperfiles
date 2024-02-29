@@ -88,6 +88,7 @@
                                     <label class='small mb-1' for='inputZipcodeProfile' data-i18n="client:codigoZip">Código ZIP</label>
                                     <input class='form-control' id='inputZipcodeProfile' type='text'
                                         placeholder='Ingresa tu código ZIP'
+                                        data-placeholder='client:zipPlaceHolder'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
                             </div>
@@ -95,6 +96,7 @@
                                 <div class='col-md-6'>
                                     <label class='small mb-1' for='inputPhone' data-i18n="client:numeroTlf">Número de teléfono</label>
                                     <input class='form-control' id='inputPhone' type='tel'
+                                        data-placeholder='client:numeroTlf'
                                         placeholder='Ingresa tu número de teléfono'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>
@@ -119,6 +121,7 @@
                                     <label class='small mb-1' for='inputOrgName' data-i18n="client:nombreOrganizacion">Nombre de la Organización
                                     </label>
                                     <input class='form-control' id='inputOrgName' type='text'
+                                        data-placeholder='client:organizationNamePlaceholder'
                                         placeholder='Ingresa el nombre de tu organización'
                                         style='outline: 1px solid #213280; font-size: 0.9em;'>
                                 </div>

@@ -186,5 +186,7 @@
     "ver": "Mostra",
     "descripcionProducto": "Descrizione del prodotto",
     "accesos":"Accesso",
-    "addEmail": "Inserisci il tuo indirizzo email"
+    "addEmail": "Inserisci il tuo indirizzo email",
+    "zipPlaceHolder": "Inserisci il tuo codice postale",
+    "organizationNamePlaceholder": "Inserisci il nome della tua organizzazione"
 }

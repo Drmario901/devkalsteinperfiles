@@ -186,5 +186,7 @@
     "dataNotFound": "Aucune donnée trouvée",
     "previo": "Précédent",
     "next": "Suivant",
-    "addEmail": "Entrez votre adresse e-mail"
+    "addEmail": "Entrez votre adresse e-mail",
+    "zipPlaceHolder": "Entrez votre code postal",
+    "organizationNamePlaceholder": "Entrez le nom de votre organisation"
 }

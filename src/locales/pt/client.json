@@ -187,5 +187,7 @@
     "ver": "Ver",
     "descripcionProducto": "Descrição do Produto",
     "accesos":"Acesso",
-    "addEmail": "Insira seu endereço de email"
+    "addEmail": "Insira seu endereço de email",
+    "zipPlaceHolder": "Insira seu código postal",
+    "organizationNamePlaceholder": "Insira o nome da sua organização"
 }

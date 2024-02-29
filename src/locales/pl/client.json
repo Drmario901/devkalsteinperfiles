@@ -186,6 +186,8 @@
     "ver": "Pokaż",
     "descripcionProducto": "Opis produktu",
     "accesos":"Dostęp",
-    "addEmail": "Wprowadź swój adres e-mail"
+    "addEmail": "Wprowadź swój adres e-mail",
+    "zipPlaceHolder": "Wprowadź swój kod pocztowy",
+    "organizationNamePlaceholder": "Wprowadź nazwę swojej organizacji"
 }
 

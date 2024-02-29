@@ -186,5 +186,7 @@
     "ver": "Näita",
     "descripcionProducto": "Toote kirjeldus",
     "accesos":"Juurdepääs",
-    "addEmail": "Sisestage oma e-posti aadress"
+    "addEmail": "Sisestage oma e-posti aadress",
+    "zipPlaceHolder": "Sisestage oma postiindeks",
+    "organizationNamePlaceholder": "Sisestage oma organisatsiooni nimi"
 }
