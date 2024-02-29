@@ -12,9 +12,9 @@
 <br>
 <br>
 <nav class="nav nav-borders">
-    <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/stock">Products stock</a>
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add"> Add rental service</a>
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add/used">Add used product</a>
+    <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/stock" data-i18n="rentalsale:aProductsStock">Products stock</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add" data-i18n="rentalsale:aAddRentalService"> Add rental service</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add/used" data-i18n="rentalsale:addUsedProduct">Add used product</a>
 </nav>
 <br>        
 <div class="table-responsive">
@@ -22,19 +22,19 @@
         <thead class='headTableForQuote'>
             <tr>
             <td class='fw-bold' style='background-color: #213280; color: white;'>ID</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Name</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Type</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Brand</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Model</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Description</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Image</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Category</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Stock</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Measures</td>
-            <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;'>Price ($)</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Date</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Status</td>
-            <td class='fw-bold' style='background-color: #213280; color: white;'>Actions</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:placeholderName">Name</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:elementType">Type</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:placeholderBrand">Brand</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:placeholderModel">Model</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:labelDescription">Description</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:spanImage">Image</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:labelCategory">Category</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:spanStock">Stock</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:elementMeasures">Measures</td>
+            <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;' data-i18n="rentalsale:elementPrice">Price ($)</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:elementDate">Date</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:elementStatus">Status</td>
+            <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="rentalsale:elementActions">Actions</td>
             </tr>
         </thead>
         <tbody id="product-table-body" class='bodyTableForQuote'>
@@ -136,20 +136,25 @@
                             <td style='min-width: 89px'>$stock <br>($status)</td>
                             <td>
                                 <ul class='list-unstyled text-start' style='min-width: 125px'>
-                                   <li><b>width</b>: $width cm</li>
-                                   <li><b>height</b>: $height cm</li>
-                                   <li><b>length</b>: $length cm</li>
+                                   <li><b data-i18n='rentalsale:elementWidth'>width</b>: $width cm</li>
+                                   <li><b data-i18n='rentalsale:elementHeight'>height</b>: $height cm</li>
+                                   <li><b data-i18n='rentalsale:elementLength'>length</b>: $length cm</li>
                                    <br>
-                                   <li><b>weigth</b>: $weight kg</li>
+                                   <li><b data-i18n='rentalsale:elementWeigth'>weigth</b>: $weight kg</li>
                                 </ul>
                             </td>
                             <td>$price $currency</td>
                             <td>$date</td>
                             <td>$st</td>
                             <td>
-                                <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id'>delete</button>
+                                <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id' data-i18n='rentalsale:btnDelete'>
+                                    delete
+                                </button>
                                 <br>
-                                <button class='material-symbols-rounded'  id='btnEditProduct' value='$id'>edit</button>
+                                <button class='material-symbols-rounded'  id='btnEditProduct' value='$id' data-i18n='rentalsale:btnEdit'>
+                                    edit
+                                </button>
+
                                 <br>
                                 <a href='https://testing.kalstein.digital/index.php/manufacturer/stock/preview/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
                             </td>
@@ -166,7 +171,7 @@
                         </table>
                         <div class='contentNoDataQuote'>
                             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                            <center><p style='color: #000;'>No data found</p></center>
+                            <center><p style='color: #000;' data-i18n='rentalsale:noDataFound'>No data found</p></center>
                         </div>
                     ");
                 }
