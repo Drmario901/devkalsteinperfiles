@@ -11,15 +11,6 @@ const lngs = {
   fr: { nativeName: 'French' }
 };
 
-const createAlert = (type, message) => {
-  const message = i18next.t(alerts[message], { ns: 'alerts' });
-  
-  iziToast[type]({
-    message: message
-  });
-};
-
-
 // Obtener language from cookie
 const getLanguage = () => {
   const cookie = document.cookie.split('; ').find(row => row.startsWith('language='));
