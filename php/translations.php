@@ -51,6 +51,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Add a New Accessory',
         'banner_text_welcomeThree' => 'Welcome,',
         'banner_text_catalog' => 'Catalog',
+        'banner_text_services' => 'Services',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -102,6 +103,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Agregar un nuevo accesorio',
         'banner_text_welcomeThree' => 'Bienvenido(a),',
         'banner_text_catalog' => 'Catalogar',
+        'banner_text_services' => 'Servicios',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -153,6 +155,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Ajouter un nouvel accessoire',
         'banner_text_welcomeThree' => 'Bienvenue,',
         'banner_text_catalog' => 'Catalogue',
+        'banner_text_services' => 'Prestations de service',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -204,6 +207,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Aggiungi un nuovo accessorio',
         'banner_text_welcomeThree' => 'Benvenuto/a,',
         'banner_text_catalog' => 'Catalogo',
+        'banner_text_services' => 'Servizi',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -255,6 +259,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Adicionar um novo acessório',
         'banner_text_welcomeThree' => 'Bem-vindo/a,',
         'banner_text_catalog' => 'Catálogo',
+        'banner_text_services' => 'Serviços',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -306,6 +311,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Dodaj nowy akcesorium',
         'banner_text_welcomeThree' => 'Witaj,',
         'banner_text_catalog' => 'Katalog',
+        'banner_text_services' => 'Usługi',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -357,6 +363,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Een nieuw accessoire toevoegen',
         'banner_text_welcomeThree' => 'Welkom,',
         'banner_text_catalog' => 'Catalogus',
+        'banner_text_services' => 'Diensten',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -408,6 +415,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Ein neues Zubehör hinzufügen',
         'banner_text_welcomeThree' => 'Willkommen,',
         'banner_text_catalog' => 'Katalog',
+        'banner_text_services' => 'Dienstleistungen',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -459,6 +467,7 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Lisa uus lisavarustus',
         'banner_text_welcomeThree' => 'Tere tulemast,',
         'banner_text_catalog' => 'Kataloog',
+        'banner_text_services' => 'Teenused',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -510,5 +519,6 @@ $translations = array(
         'banner_text_AddaNewAccesory' => 'Lägg till en ny tillbehör',
         'banner_text_welcomeThree' => 'Välkommen,',
         'banner_text_catalog' => 'Katalog',
+        'banner_text_services' => 'Tjänster',
     ),
 );

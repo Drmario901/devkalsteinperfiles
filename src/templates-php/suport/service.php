@@ -23,7 +23,10 @@
     
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Servicios";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_services';
+            $banner_text = translateTextBanner($banner);
             include __DIR__.'/../manufacturer/banner.php';
         ?>
     
