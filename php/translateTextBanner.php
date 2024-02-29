@@ -1,8 +1,8 @@
 <?php 
 // Incluir el archivo de traducciones
-require __DIR__. '/../../../php/'.translationsFile;
+require __DIR__. '/../../../php/translations.php';
 
-function translateTextBanner($translationsFile, $banner) {
+function translateTextBanner($banner) {
     // Include the translations file
     $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
             // Determinar el texto del banner según el idioma
