@@ -96,5 +96,3 @@ jQuery(document).ready(function($){
     });
   });
 });
-
-export { createAlert };
