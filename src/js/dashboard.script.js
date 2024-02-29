@@ -154,6 +154,10 @@ jQuery(document).ready(function($){
 
     }
 
+    function cl() {
+        console.log('hola')
+    }
+
 
 
     $(document).on('click', '#btnDashboardPr01', function(){
@@ -294,6 +298,7 @@ jQuery(document).ready(function($){
         $('#btnRentalEquipments').removeClass('active')
         searchListServices()
         tblReportsTickets()
+        cl()
     })
 
     
