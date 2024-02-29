@@ -22,14 +22,18 @@
 			// Obtener el idioma del cookie
 			$language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-			// Obtener el texto del banner según el idioma
-			$banner_text_key = 'banner_text_catalogs'; // Clave para el texto de los catálogos (por defecto)
-			if (isset($translations[$language]['banner_text_catalogs'])) {
-				$banner_text_key = 'banner_text_catalogs';
-			}
+            // Incluir el archivo de traducciones
+            require __DIR__. '/../../../php/translations.php';
 
-			// Obtener el texto del banner
-			$banner_text = isset($translations[$language][$banner_text_key]) ? $translations[$language][$banner_text_key] : 'Catalogs';
+            // Determinar el texto del banner según el idioma
+            $banner_text_translation = isset($translations[$language]['banner_text_catalogs']) ? $translations[$language]['banner_text_catalogs'] : $translations['en']['banner_text_catalogs'];
+
+            $name = isset($name) ? $name : '';
+            $lastname = isset($lastname) ? $lastname : '';
+            
+            // Incluir el banner.php pasando el texto traducido y el nombre del usuario
+            $banner_text = $banner_text_translation;
+
 			include __DIR__.'/../manufacturer/banner.php';
 		?>
 	
