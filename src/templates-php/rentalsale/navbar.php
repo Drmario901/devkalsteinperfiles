@@ -70,7 +70,7 @@
         
                         <div>
                             <p class="profile-title"><?php echo $acc_name .' '.$acc_lname ?></p>
-                            <p class="profile-subtitle">Rental and Used</p>
+                            <p class="profile-subtitle" data-i18n="rentalsale:rentalAndUsed">Rental and Used</p>
 
                         </div>
         
@@ -83,30 +83,30 @@
                 
                 <li>
                     <a id="link-home" href="https://testing.kalstein.digital/index.php/rentalsale/dashboard" class="navbar-link icon-box">
-                        <span>Home</span>
+                        <span data-i18n="rentalsale:spanHome">Home</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-stock" href="https://testing.kalstein.digital/index.php/rentalsale/stock" class="navbar-link icon-box">
-                        <span>Stock</span>
+                        <span data-i18n="rentalsale:spanStock">Stock</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-list-order" href="https://testing.kalstein.digital/index.php/rentalsale/list-order" class="navbar-link icon-box">
-                        <span>Orders</span>
+                        <span data-i18n="rentalsale:spanOrders">Orders</span>
                     </a>
                 </li>
 
                 <a id="link-customers" href="https://testing.kalstein.digital/index.php/rentalsale/customers" class="navbar-link icon-box">
-                        <span>Rental costumers</span>
+                        <span data-i18n="rentalsale:spanRentalCostumers">Rental costumers</span>
                     </a>
                 </li>
     
                 <li>
                     <a id="link-sales" href="https://testing.kalstein.digital/index.php/rentalsale/sales" class="navbar-link icon-box">
-                        <span>Sales Report</span>
+                        <span data-i18n="rentalsale:spanSalesReport">Sales Report</span>
                     </a>
                 </li>
             </ul>

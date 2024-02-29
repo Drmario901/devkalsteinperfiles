@@ -16,11 +16,11 @@
 </header>
 <br>
 <br>
-<h2 class="h2 article-title">List Order</h2>
+<h2 class="h2 article-title" data-i18n="rentalsale:listOrder">List Order</h2>
 <nav class="nav nav-borders">
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/list-order">All orders</a>
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/list-order/processed">Processed orders</a>
-    <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/list-order/cancelled">Cancelled orders</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/list-order" data-i18n="rentalsale:linkAllOrder">All orders</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/list-order/processed" data-i18n="rentalsale:linkProcessedOrder">Processed orders</a>
+    <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/list-order/cancelled" data-i18n="rentalsale:linkCancelledOrder">Cancelled orders</a>
 </nav>
 
 <br>
@@ -42,12 +42,12 @@
             <thead class='headTableForQuote'>
                 <tr>
                     <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Client</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Sending method</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total (USD)</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Date</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Status</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Details</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='rentalsale:elementClient'>Client</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='rentalsale:elementSedMethod'>Sending method</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='rentalsale:elementTotalUSD'>Total (USD)</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='rentalsale:elementDate'>Date</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='rentalsale:elementStatus'>Status</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='rentalsale:elementDetails'>Details</th>
                 </tr>
             </thead>
             <tbody class='bodyTableForQuote'>
@@ -91,7 +91,7 @@
                     <td colspan='9'>
                         <div class='contentNoDataQuote'>
                             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                            <center><p style='color: #000;'>No data found</p></center>
+                            <center><p style='color: #000;' data-i18n='rentalsale:noDataFound'>No data found</p></center>
                         </div>
                     </td>
                 </tr>
