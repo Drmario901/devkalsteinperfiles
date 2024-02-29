@@ -16,7 +16,10 @@
     <article class="container article">
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Sus pedidos";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_YourOrders';
+            $banner_text = translateTextBanner($banner);
             include 'banner.php';
         ?>
         
