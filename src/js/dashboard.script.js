@@ -11,6 +11,15 @@ jQuery(document).ready(function($){
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
+
+    const createAlert = (type, message) => {
+        //const message = i18next.t(alerts[message], { ns: 'alerts' });
+        
+        console.log('ahhhhhhhhh')
+        iziToast[type]({
+          message: message
+        });
+      };
     
     $('#inputShippingCost-subject').focus()
 
@@ -234,6 +243,7 @@ jQuery(document).ready(function($){
         searchRecentProductsQuoted()
         searchDataProductTbl();
         dataForBarChartjsQuote()
+        createAlert('info', 'This is an info message.');
 
         var myGet = getParameterByName('userToConsultPriceShipping');
         if (myGet) {
