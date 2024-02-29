@@ -37,6 +37,10 @@
             <tbody>
     ";
 
+    include 'translateText.php';
+
+    translateText();
+
     if ($resultado->num_rows > 0){
         $i = 0;
         while ($value = $resultado->fetch_assoc()) {
@@ -80,7 +84,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 3em;'></i>
-                <p data-i18n='client:dataNotFound'>No data found</p>
+                <p data-i17n='client:dataNotFound'>No data found</p>
             </div>
         ";
     }

@@ -152,139 +152,6 @@
         $q = $conexion->real_escape_string($_POST['consulta']);
         $a = $_POST['status'];
 
-        $translations = array(
-            'en' => array(
-                'client:itemTabla' => 'Item',
-                'client:nCotizacionTable' => 'Quote number',
-                'client:fechaTable' => 'Date',
-                'client:qtyTable' => 'Quantity',
-                'client:shippingTable' => 'Shipping method',
-                'client:seeTable' => 'View',
-                'client:deleteTable' => 'Delete',
-                'client:statusTable' => 'Status',
-                'client:dataNotFound' => 'No data found',
-                'client:previo' => 'Previous',
-                'client:next' => 'Next',
-            ),
-            'es' => array(
-                'client:itemTabla' => 'Item',
-                'client:nCotizacionTable' => 'N° Cotización',
-                'client:fechaTable' => 'Fecha',
-                'client:qtyTable' => 'Cantidad',
-                'client:shippingTable' => 'Método de envío',
-                'client:seeTable' => 'Ver',
-                'client:deleteTable' => 'Borrar',
-                'client:statusTable' => 'Estatus',
-                'client:dataNotFound' => 'No se han encontrado datos',
-                'client:previo' => 'Anterior',
-                'client:next' => 'Siguiente'
-            ),
-            'fr' => array(
-                'client:itemTabla' => 'Article',
-                'client:nCotizacionTable' => 'Numéro de devis',
-                'client:fechaTable' => 'Date',
-                'client:qtyTable' => 'Quantité',
-                'client:shippingTable' => 'Méthode d\'expédition',
-                'client:seeTable' => 'Voir',
-                'client:deleteTable' => 'Effacer',
-                'client:statusTable' => 'Statut',
-                'client:dataNotFound' => 'Aucune donnée trouvée',
-                'client:previo' => 'Précédent',
-                'client:next' => 'Prochain'
-            ),
-            'it' => array(
-                'client:itemTabla' => 'Articolo',
-                'client:nCotizacionTable' => 'Numero di preventivo',
-                'client:fechaTable' => 'Data',
-                'client:qtyTable' => 'Quantità',
-                'client:shippingTable' => 'Metodo di spedizione',
-                'client:seeTable' => 'Vedi',
-                'client:deleteTable' => 'Cancellare',
-                'client:statusTable' => 'Stato',
-                'client:dataNotFound' => 'Nessun dato trovato',
-                'client:previo' => 'Precedente',
-                'client:next' => 'Il prossimo'
-            ),
-            'pt' => array(
-                'client:itemTabla' => 'Artigo',
-                'client:nCotizacionTable' => 'Número de cotação',
-                'client:fechaTable' => 'Encontro',
-                'client:qtyTable' => 'Quantidade',
-                'client:shippingTable' => 'Método de envio',
-                'client:seeTable' => 'Ver',
-                'client:deleteTable' => 'Excluir',
-                'client:statusTable' => 'Status',
-                'client:dataNotFound' => 'Nenhum dado encontrado',
-                'client:previo' => 'Anterior',
-                'client:next' => 'Próximo'
-            ),
-            'pl' => array(
-                'client:itemTabla' => 'Artykuł',
-                'client:nCotizacionTable' => 'Numer oferty',
-                'client:fechaTable' => 'Data',
-                'client:qtyTable' => 'Ilość',
-                'client:shippingTable' => 'Metoda wysyłki',
-                'client:seeTable' => 'Zobacz',
-                'client:deleteTable' => 'Kasować',
-                'client:statusTable' => 'Status',
-                'client:dataNotFound' => 'Nie znaleziono danych',
-                'client:previo' => 'Poprzedni',
-                'client:next' => 'Następny'
-            ),
-            'nl' => array(
-                'client:itemTabla' => 'Artikel',
-                'client:nCotizacionTable' => 'Offertenummer',
-                'client:fechaTable' => 'Datum',
-                'client:qtyTable' => 'Hoeveelheid',
-                'client:shippingTable' => 'Verzendmethode',
-                'client:seeTable' => 'Bekijk',
-                'client:deleteTable' => 'Verwijderen',
-                'client:statusTable' => 'Toestand',
-                'client:dataNotFound' => 'Geen gegevens gevonden',
-                'client:previo' => 'Vorige',
-                'client:next' => 'Volgende'
-            ),
-            'de' => array(
-                'client:itemTabla' => 'Artikel',
-                'client:nCotizacionTable' => 'Angebotsnummer',
-                'client:fechaTable' => 'Datum',
-                'client:qtyTable' => 'Menge',
-                'client:shippingTable' => 'Versandart',
-                'client:seeTable' => 'Sehen',
-                'client:deleteTable' => 'Löschen',
-                'client:statusTable' => 'Status',
-                'client:dataNotFound' => 'Keine Daten gefunden',
-                'client:previo' => 'Bisherige',
-                'client:next' => 'Nächster'
-            ),
-            'ee' => array(
-                'client:itemTabla' => 'Artikkel',
-                'client:nCotizacionTable' => 'Pakkumise number',
-                'client:fechaTable' => 'Kuupäev',
-                'client:qtyTable' => 'Kogus',
-                'client:shippingTable' => 'Kohaletoimetamise meetod',
-                'client:seeTable' => 'Vaata',
-                'client:deleteTable' => 'Kustuta',
-                'client:statusTable' => 'Staatus',
-                'client:dataNotFound' => 'Andmeid ei leitud',
-                'client:previo' => 'Eelmine',
-                'client:next' => 'Järgmine'
-            ),
-            'se' => array(
-                'client:itemTabla' => 'Artikel',
-                'client:nCotizacionTable' => 'Offertnummer',
-                'client:fechaTable' => 'Datum',
-                'client:qtyTable' => 'Mängd',
-                'client:shippingTable' => 'Fraktsätt',
-                'client:seeTable' => 'Se',
-                'client:deleteTable' => 'Radera',
-                'client:statusTable' => 'Status',
-                'client:dataNotFound' => 'Inga data hittades',
-                'client:previo' => 'Tidigare',
-                'client:next' => 'Nästa'
-            ),
-        );
-
 
         if (isset($_POST['dateTo'])) {
             if ($dateTo == '' && $dateFrom == '') {
@@ -322,18 +189,9 @@
         
         $resultado = $conexion->query($consulta);
 
-        
-        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+        include 'translateText.php';
 
-        $html = "<script>";
-        foreach ($translations[$lang] as $key => $value) {
-            $html .= "document.querySelector('[data-i17n=\"$key\"]').innerText = '$value';";
-            // change the value of the input prev and next
-            $html .= "document.querySelector('[data-i17n=\"$key\"]').value = '$value';";
-        }
-        $html .= "</script>";
-
-        echo $html;
+        translateText();
 
         $html = "
             <table class='table custom-table'>

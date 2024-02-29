@@ -10,17 +10,10 @@
     $resultado = $conexion->query($consulta);
 
     $i = 0;
+    
+    include 'translateText.php';
 
-    $html = "
-        <table class='table'>
-            <thead class='headTableForQuoteRecent'>
-                <tr>
-                    <td scope='col'>N° Cotización</td>
-                    <td scope='col'>Fecha</td>
-                </tr>
-            </thead>
-            <tbody class='bodyTableForQuote'>
-    ";
+    translateText();
 
     if ($resultado->num_rows > 0){
         $i = 0;
@@ -44,7 +37,7 @@
         $msjNoData = "
             <div class='contentNoDataQuoteRecent'>
                 <i class='fa-solid fa-file-lines' style='font-size: 4rem; color: #212380; margin-top: 12rem;'></i>
-                <p style='font-size: 1.4em; font-weight: bold; margin-top: 2rem;'>Aquí puedes ver todas tus cotizaciones.</p>
+                <p style='font-size: 1.4em; font-weight: bold; margin-top: 2rem;' data-i17n='client:seeQuotesHere'>Aquí puedes ver todas tus cotizaciones.</p>
             </div>
         ";
     }
