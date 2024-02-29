@@ -58,7 +58,7 @@
 
 		<div class="search col-12 col-md-6 d-flex align-items-center px-0">
 			<i class="fas fa-search mx-3"></i>
-			<input type="text" placeholder="Buscar un catalogo" data-placeholder='buscar' id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
+			<input type="text" placeholder="Buscar un catalogo" data-placeholder='client:buscar' id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
 		</div>
 	</div>
 	<div id="catalogo"></div>

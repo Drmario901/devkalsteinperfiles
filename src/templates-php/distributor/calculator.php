@@ -59,25 +59,25 @@
                     <div id="show-aerial" hidden>
                         <center><p style="font-size: 30px">EXW Kalstein Shangai</p></center>
                         <label for="show-maritime" data-i18n="distribuidor:labelAlmacen">Por favor ingresa las medidas necesarias para calcular</label>
-                        <input type="number" style="color: #000 !important" id="height-a" placeholder="Alto" value="" />
-                        <input type="number" style="color: #000 !important" id="width-a" placeholder="Ancho" value="" />
-                        <input type="number" style="color: #000 !important" id="length-a" placeholder="Largo" value="" />
-                        <input type="number" style="color: #000 !important" id="quantity-a" placeholder="Cantidad" value="" />
-                        <input type="number" style="color: #000 !important" id="weightBoxFT" placeholder="Peso" value="" />
+                        <input type="number" style="color: #000 !important" id="height-a" data-placeholder="distribuidor:labelAlto" placeholder="Alto" value="" />
+                        <input type="number" style="color: #000 !important" id="width-a" data-placeholder="distribuidor:labelAncho" placeholder="Ancho" value="" />
+                        <input type="number" style="color: #000 !important" id="length-a" data-placeholder="distribuidor:labelLargo" placeholder="Largo" value="" />
+                        <input type="number" style="color: #000 !important" id="quantity-a" data-placeholder="distribuidor:labelCantidad" placeholder="Cantidad" value="" />
+                        <input type="number" style="color: #000 !important" id="weightBoxFT" data-placeholder="distribuidor:labelPesoNeto" placeholder="Peso" value="" />
                         <label for="show-maritime" data-i18n="distribuidor:labelPais">Selecciona el país que quieres calcular:</label>
                         <select style="color: #000 !important" name="selectCountryAerial" id="selectCountryAerial"></select>
-                        <input type="number" style="color: #000 !important" id="result-a" placeholder="Resultado" value="" readonly/>
+                        <input type="number" style="color: #000 !important" id="result-a" data-placeholder="distribuidor:labelResultado" placeholder="Resultado" value="" readonly/>
                     </div>
             
                     <div id="show-maritime" hidden>
                         <center><p style="font-size: 30px">EXW Kalstein Shangai</p></center>
                         <label for="show-maritime" data-i18n="distribuidor:labelAlmacenTwo">Por favor ingresa las medidas necesarias</label>
-                        <input type="number" style="color: #000 !important" id="height-m" placeholder="Alto" value="" />
-                        <input type="number" style="color: #000 !important" id="width-m" placeholder="Ancho" value="" />
-                        <input type="number" style="color: #000 !important" id="length-m" placeholder="Largo" value="" />
+                        <input type="number" style="color: #000 !important" id="height-m" data-placeholder="distribuidor:labelAlto" placeholder="Alto" value="" />
+                        <input type="number" style="color: #000 !important" id="width-m" data-placeholder="distribuidor:labelAncho" placeholder="Ancho" value="" />
+                        <input type="number" style="color: #000 !important" id="length-m" data-placeholder="distribuidor:labelLargo" placeholder="Largo" value="" />
                         <label for="show-maritime" data-i18n="distribuidor:labelPaisTwo">Selecciona el país al que quieres calcular:</label>
                         <select style="color: #000 !important" id="selectCountryMaritimal"></select>
-                        <input type="number" style="color: #000 !important" id="result-m" placeholder="Resultado" value="" readonly/>
+                        <input type="number" style="color: #000 !important" id="result-m" data-placeholder="distribuidor:labelResultado" placeholder="Resultado" value="" readonly/>
                     </div>
         
                 </form>

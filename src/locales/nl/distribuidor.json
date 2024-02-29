@@ -131,5 +131,7 @@
     "elementoAcciones": "Acties",
     "Pendiente": "In afwachting",
     "Validado": "Gevalideerd",
-    "Denegado": "Geweigerd"
+    "Denegado": "Geweigerd",
+    "labelCantidad": "Hoeveelheid",
+    "labelResultado": "Resultaat"
 }

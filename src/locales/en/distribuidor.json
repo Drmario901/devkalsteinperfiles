@@ -131,5 +131,7 @@
     "elementoAcciones": "Actions",
     "Pendiente": "Pending",
     "Validado": "Validated",
-    "Denegado": "Denied"
+    "Denegado": "Denied",
+    "labelCantidad": "Quantity",
+    "labelResultado": "Result"
 }

@@ -27,9 +27,6 @@
 
             // Determinar el texto del banner según el idioma
             $banner_text_translation = isset($translations[$language]['banner_text_catalogs']) ? $translations[$language]['banner_text_catalogs'] : $translations['en']['banner_text_catalogs'];
-
-            $name = isset($name) ? $name : '';
-            $lastname = isset($lastname) ? $lastname : '';
             
             // Incluir el banner.php pasando el texto traducido y el nombre del usuario
             $banner_text = $banner_text_translation;
@@ -74,7 +71,7 @@
 
 			<div class="search col-12 col-md-6 d-flex align-items-center px-0">
 				<i class="fas fa-search mx-3"></i>
-				<input type="text" data-placeholder="placeholderBuscarCatalogo" placeholder="Buscar un catálogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
+				<input type="text" data-placeholder="distribuidor:placeholderBuscarCatalogo" placeholder="Buscar un catálogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
 			</div>
 		</div>
 	
