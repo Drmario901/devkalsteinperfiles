@@ -85,5 +85,12 @@
     "yaRegistrado": "Hai già un account?",
     "iniciarSesion": "Accedi",
     "confirmEmail": "Conferma il tuo indirizzo email",
-    "sendLinkPassword": "Invia link per reimpostare la password"
+    "sendLinkPassword": "Invia link per reimpostare la password",
+    "placeholderName": "Inserisci il tuo nome",
+    "apellidoPlace": "Inserisci il tuo cognome",
+    "emailPlace": "Inserisci la tua email",
+    "passwordPlace": "Inserisci la tua password",
+    "confirmPlace": "Conferma la tua password",
+    "direccionPlace": "Inserisci il tuo indirizzo",
+    "telefonoPlace": "Inserisci il tuo numero di telefono"
 }
