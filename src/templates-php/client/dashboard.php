@@ -50,7 +50,7 @@
                 $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
                 // Incluir el archivo de traducciones
-                include '../../../php/translations.php';
+                require __DIR__. '/../../../php/translations.php';
 
                 $banner_text_key = 'banner_text_parameters'; // Clave para el texto de los catálogos (por defecto)
                 if (isset($translations[$language]['banner_text_parameters'])) {
