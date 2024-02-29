@@ -5161,7 +5161,7 @@ jQuery(document).ready(function($){
 
                 $('#Rnivel').val('0')
 
-                createAlert(success, 'supportTicketGerenerated')
+                //createAlert(success, 'supportTicketGerenerated')
 
                 iziToast.success({
 
