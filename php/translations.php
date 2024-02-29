@@ -72,6 +72,7 @@ $translations = array(
         'banner_text_edit_product' => 'Editar un producto',
         'banner_text_preview_product' => 'Vista previa de tu producto',
         'banner_text_manage_products' => 'Gestión de productos',
+        'banner_text_calculator_sends' => 'Calculadora de envíos',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
