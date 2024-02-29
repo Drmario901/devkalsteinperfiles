@@ -5,7 +5,7 @@
 		$language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
         // Incluir el archivo de traducciones
-        include 'translations.php';
+        include '../../../php/translations.php';
 
         // Determinar el texto del banner según el idioma
         $banner_text_translation = isset($translations[$language]['banner_text_shipping_costs']) ? $translations[$language]['banner_text_shipping_costs'] : $translations['en']['banner_text_shipping_costs'];
