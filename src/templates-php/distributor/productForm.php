@@ -208,15 +208,15 @@
         <div class="col-12 col-md-6">
 
             <label data-i18n="distribuidor:labelNombre">Nombre</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="labelNombre" placeholder="Nombre"/>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelNombre" placeholder="Nombre"/>
 
             
             <!-- no fake brand input -->
                 <label data-i18n="distribuidor:labelMarca">Marca</label>
-                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="labelMarca" placeholder="Marca"/>
+                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="distribuidor:labelMarca" placeholder="Marca"/>
             
             <label data-i18n="distribuidor:labelModelo">Modelo</label>
-            <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="labelModelo" placeholder="Modelo"/>
+            <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelModelo" placeholder="Modelo"/>
             
         </div>
 
@@ -237,7 +237,7 @@
 
         <div class="col-12 mb-4">
             <label data-i18n="distribuidor:labelDescripcion">Descripción</label>
-            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" data-placeholder="placeholderDescripcion" placeholder="Describe tu producto en menos de 5000 carácteres
+            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" data-placeholder="distribuidor:placeholderDescripcion" placeholder="Describe tu producto en menos de 5000 carácteres
             "></textarea>
         </div>
     </div>

@@ -131,5 +131,7 @@
     "elementoAcciones": "Åtgärder",
     "Pendiente": "Avvaktar",
     "Validado": "Validerad",
-    "Denegado": "Avslagen"
+    "Denegado": "Avslagen",
+    "labelCantidad": "Kvantitet",
+    "labelResultado": "Resultat"
 }
