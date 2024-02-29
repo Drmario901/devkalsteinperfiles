@@ -14,7 +14,10 @@
 
         <?php
             $banner_img = 'Header-distribuidor-IMG.jpg';
-            $banner_text = "Calculadora de envíos";
+            
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_calculator_sends';
+            $banner_text = translateTextBanner($banner);
             include __DIR__.'/../manufacturer/banner.php';
         ?>
     
