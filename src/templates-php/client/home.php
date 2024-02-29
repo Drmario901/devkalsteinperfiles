@@ -24,10 +24,11 @@
             
             // Incluir el banner.php pasando el texto traducido y el nombre del usuario
            // $banner_text = sprintf($banner_text_translation, $name, $lastname);
-            include 'banner.php';
+            
             require __DIR__. '/../../../php/translateTextBanner.php';
             $banner = 'banner_text_welcome';
             translateTextBanner($banner);
+            include 'banner.php';
         ?>
         <div class='row'>
             <div class='col-12 col-md-4'>
