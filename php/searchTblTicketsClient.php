@@ -15,19 +15,23 @@
     $consulta = "SELECT * FROM wp_reportes WHERE R_usuario = '$email' ORDER BY R_id DESC LIMIT $offset, $limit";
     $resultado = $conexion->query($consulta);
 
+    include 'translateText.php';
+
+    translateText();
+
     $i = 0;
 
     $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
-                    <td scope='col'>Item</td>
-                    <td scope='col'>Fecha</td>
-                    <td scope='col'>Servicio</td>
-                    <td scope='col'>Modelo</td>
-                    <td scope='col'>Agente</td>
-                    <td scope='col'>Status</td>
-                    <td scope='col'>Acciones</td>
+                    <td scope='col' data-i17n='client:itemTabla'>Item</td>
+                    <td scope='col' data-i17n='client:fechaTable'>Fecha</td>
+                    <td scope='col' data-i17n='client:service'>Servicio</td>
+                    <td scope='col' data-i17n='client:model'>Modelo</td>
+                    <td scope='col' data-i17n='client:agent'>Agente</td>
+                    <td scope='col' data-i17n='client:statusTable'>Status</td>
+                    <td scope='col' data-i17n='client:actions'>Acciones</td>
                 </tr>
             </thead>
             <tbody id='tblTickets' class='bodyTableForQuote'>
@@ -101,7 +105,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                <p>Datos no encontrados</p>
+                <p data-i17n='client:dataNotFound'>Datos no encontrados</p>
             </div>
         ";
     }
@@ -121,11 +125,11 @@
             <div id='currentPageIndicatorTickets'>Page: $page</div>
             <form id='form-previous-tickets' action='' method='get' style='margin-right: 8px'>
                 <input id='previous' type='hidden' name='e' value='$prevPage'>
-                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+                <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:previo' value=''>
             </form>
             <form id='form-next-tickets' action='' method='get'>
                 <input id='next' class='next' type='hidden' name='e' value='$nextPage'>
-                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+                <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:next' value=''>
             </form>
         </div>
         <input id='hiddenPage' type='hidden' value='$page'>
