@@ -17,7 +17,10 @@
 
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Gestión de productos";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_ProductManagement';
+            $banner_text = translateTextBanner($banner);
             include 'banner.php';
         ?>
         

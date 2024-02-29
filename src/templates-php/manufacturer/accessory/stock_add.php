@@ -17,7 +17,10 @@
 
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Add a New Accesory";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_AddaNewAccesory';
+            $banner_text = translateTextBanner($banner);
             include __DIR__.'/../banner.php';
         ?>
 
