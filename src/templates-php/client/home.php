@@ -9,6 +9,9 @@
 
    <div id='c-panel01' class='col-sm-12' style='height: auto;<?php echo isset($_GET['search']) || isset($_GET['userToConsultPriceShipping'])? 'display: none' : '' ?>'>
         <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             $banner_img = 'Header-usuario-IMG.png';
             // Obtener el idioma del cookie
            // $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
