@@ -9,24 +9,7 @@
 
    <div id='c-panel01' class='col-sm-12' style='height: auto;<?php echo isset($_GET['search']) || isset($_GET['userToConsultPriceShipping'])? 'display: none' : '' ?>'>
         <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
             $banner_img = 'Header-usuario-IMG.png';
-            // Obtener el idioma del cookie
-           // $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
-
-            // Incluir el archivo de traducciones
-            // require __DIR__. '/../../../php/translations.php';
-
-            // Determinar el texto del banner según el idioma
-           // $banner_text_translation = isset($translations[$language]['banner_text_welcome']) ? $translations[$language]['banner_text_welcome'] : $translations['en']['banner_text_welcome'];
-
-           // $name = isset($name) ? $name : '';
-          //  $lastname = isset($lastname) ? $lastname : '';
-            
-            // Incluir el banner.php pasando el texto traducido y el nombre del usuario
-           // $banner_text = sprintf($banner_text_translation, $name, $lastname);
             
             require __DIR__. '/../../../php/translateTextBanner.php';
             $banner = 'banner_text_welcome';
