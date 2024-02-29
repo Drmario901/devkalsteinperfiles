@@ -1,3 +1,5 @@
+import { createAlert } from "./translateAlert";
+
 jQuery(document).ready(function($){
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -5159,15 +5161,7 @@ jQuery(document).ready(function($){
 
                 $('#Rnivel').val('0')
 
-                iziToast.success({
-
-                    title: 'Success',
-
-                    message: 'Ticket generated',
-
-                    position: 'topRight'
-
-                })
+                createAlert(success, 'supportTicketGerenerated')
 
             }else{
 
