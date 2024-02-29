@@ -15,7 +15,10 @@
 
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Bievenidoi(a), $acc_name $acc_lname";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeThree';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
@@ -75,7 +78,10 @@
         <div id='container-catalogs' hidden>
             <?php
                 $banner_img = 'Header-fabricante-IMG.png';
-                $banner_text = "Catalog";
+
+                require __DIR__. '/../../../php/translateTextBanner.php';
+                $banner = 'banner_text_catalog';
+                $banner_text = translateTextBanner($banner);
                 include 'banner.php';
             ?>
         
