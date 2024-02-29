@@ -1,4 +1,4 @@
-import { createAlert } from "./i18n";
+// import { createAlert } from "./i18n";
 
 jQuery(document).ready(function($){
 
