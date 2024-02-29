@@ -38,6 +38,7 @@ $translations = array(
         'banner_text_manage_products' => 'Manage products',
         'banner_text_calculator_sends' => 'Shipping calculator',
         'banner_text_welcomeTwo' => 'Welcome,',
+        'banner_text_ConnectWithOtherUsers' => 'Connect with other users',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -76,6 +77,7 @@ $translations = array(
         'banner_text_manage_products' => 'Gestión de productos',
         'banner_text_calculator_sends' => 'Calculadora de envíos',
         'banner_text_welcomeTwo' => 'Bienvenido,',
+        'banner_text_ConnectWithOtherUsers' => 'Conectar con otros usuarios',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -113,7 +115,8 @@ $translations = array(
         'banner_text_preview_product' => 'Aperçu de votre produit',
         'banner_text_manage_products' => 'Gestion des produits',
         'banner_text_calculator_sends' => 'Calculateur d\'expédition',
-        'banner_text_welcomeTwo' => 'Accueillir,',
+        'banner_text_welcomeTwo' => 'Bienvenue,',
+        'banner_text_ConnectWithOtherUsers' => 'Connectez-vous avec d\'autres utilisateurs',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -152,6 +155,7 @@ $translations = array(
         'banner_text_manage_products' => 'Gestione dei prodotti',
         'banner_text_calculator_sends' => 'Calcolatore di spedizione',
         'banner_text_welcomeTwo' => 'Benvenuto,',
+        'banner_text_ConnectWithOtherUsers' => 'Connettiti con altri utenti',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -190,6 +194,7 @@ $translations = array(
         'banner_text_manage_products' => 'Gerenciar produtos',
         'banner_text_calculator_sends' => 'Calculadora de frete',
         'banner_text_welcomeTwo' => 'Bem-vindo,',
+        'banner_text_ConnectWithOtherUsers' => 'Conecte-se com outros usuários',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -228,6 +233,7 @@ $translations = array(
         'banner_text_manage_products' => 'Zarządzanie produktami',
         'banner_text_calculator_sends' => 'Kalkulator wysyłki',
         'banner_text_welcomeTwo' => 'Witaj,',
+        'banner_text_ConnectWithOtherUsers' => 'Połącz się z innymi użytkownikami',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -266,6 +272,7 @@ $translations = array(
         'banner_text_manage_products' => 'Beheer van producten',
         'banner_text_calculator_sends' => 'Verzendcalculator',
         'banner_text_welcomeTwo' => 'Welkom,',
+        'banner_text_ConnectWithOtherUsers' => 'Maak contact met andere gebruikers',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -304,6 +311,7 @@ $translations = array(
         'banner_text_manage_products' => 'Produktverwaltung',
         'banner_text_calculator_sends' => 'Versandkostenrechner',
         'banner_text_welcomeTwo' => 'Willkommen,',
+        'banner_text_ConnectWithOtherUsers' => 'Vernetzen Sie sich mit anderen Benutzern',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -342,6 +350,7 @@ $translations = array(
         'banner_text_manage_products' => 'Toodete haldamine',
         'banner_text_calculator_sends' => 'Saatekulu kalkulaator',
         'banner_text_welcomeTwo' => 'Tere tulemast,',
+        'banner_text_ConnectWithOtherUsers' => 'Ühendage teiste kasutajatega',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -380,5 +389,6 @@ $translations = array(
         'banner_text_manage_products' => 'Hantera produkter',
         'banner_text_calculator_sends' => 'Kalkylator för fraktkostnad',
         'banner_text_welcomeTwo' => 'Välkommen,',
+        'banner_text_ConnectWithOtherUsers' => 'Anslut med andra användare',
     ),
 );
