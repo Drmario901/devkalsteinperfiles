@@ -1,3 +1,5 @@
+import { createAlert } from "./i18n";
+
 jQuery(document).ready(function($){
 
     function getParameterByName(name, url) {
@@ -154,10 +156,6 @@ jQuery(document).ready(function($){
 
     }
 
-    function cl() {
-        console.log('hola')
-    }
-
 
 
     $(document).on('click', '#btnDashboardPr01', function(){
@@ -298,7 +296,6 @@ jQuery(document).ready(function($){
         $('#btnRentalEquipments').removeClass('active')
         searchListServices()
         tblReportsTickets()
-        cl()
     })
 
     
@@ -5538,7 +5535,6 @@ jQuery(document).ready(function($){
         })
 
     }
-
 
     function searchCountrySettingsEU(consulta){
         $.ajax({
