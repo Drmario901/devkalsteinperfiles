@@ -85,5 +85,12 @@
     "yaRegistrado": "Heeft u al een account?",
     "iniciarSesion": "Inloggen",
     "confirmEmail": "Bevestig uw e-mailadres",
-    "sendLinkPassword": "Stuur wachtwoordherstel link"
+    "sendLinkPassword": "Stuur wachtwoordherstel link",
+    "placeholderName": "Voer uw naam in",
+    "apellidoPlace": "Voer uw achternaam in",
+    "emailPlace": "Voer uw e-mailadres in",
+    "passwordPlace": "Voer uw wachtwoord in",
+    "confirmPlace": "Bevestig uw wachtwoord",
+    "direccionPlace": "Voer uw adres in",
+    "telefonoPlace": "Voer uw telefoonnummer in"
 }

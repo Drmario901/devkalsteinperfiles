@@ -85,5 +85,12 @@
     "yaRegistrado": "Har du redan ett konto?",
     "iniciarSesion": "Logga in",
     "confirmEmail": "Bekräfta din e-postadress",
-    "sendLinkPassword": "Skicka länk för att återställa lösenordet"
+    "sendLinkPassword": "Skicka länk för att återställa lösenordet",
+    "placeholderName": "Ange ditt namn",
+    "apellidoPlace": "Ange ditt efternamn",
+    "emailPlace": "Ange din e-postadress",
+    "passwordPlace": "Ange ditt lösenord",
+    "confirmPlace": "Bekräfta ditt lösenord",
+    "direccionPlace": "Ange din adress",
+    "telefonoPlace": "Ange ditt telefonnummer"
 }

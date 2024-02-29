@@ -87,7 +87,7 @@
                 
                 <li>
                     <a id="link-home" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/dashboard" class="navbar-link icon-box">
-                        <span data-i18n='manofacturer:editarPlantilla'>Dashboard</span>
+                        <span>Dashboard</span>
                     </a>
                 </li>
     
