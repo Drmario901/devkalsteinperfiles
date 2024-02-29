@@ -1,4 +1,10 @@
-import { createAlert } from "./translateAlert";
+const createAlert = (type, message) => {
+    const message = i18next.t(alerts[message], { ns: 'alerts' });
+    
+    iziToast[type]({
+      message: message
+    });
+  };
 
 jQuery(document).ready(function($){
     function getParameterByName(name, url) {
@@ -5161,17 +5167,7 @@ jQuery(document).ready(function($){
 
                 $('#Rnivel').val('0')
 
-                //createAlert(success, 'supportTicketGerenerated')
-
-                iziToast.success({
-
-                    title: 'Success',
-
-                    message: 'Ticket generated',
-
-                    position: 'topRight'
-
-                })
+                createAlert(success, 'supportTicketGerenerated')
 
             }else{
 
