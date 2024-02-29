@@ -1,3 +1,5 @@
+import { alertsTranslations } from './traducciones.js';
+
 const showTranslatedAlert = (type, language) => {
     const translation = alertsTranslations[language][type];
     
@@ -5,4 +7,5 @@ const showTranslatedAlert = (type, language) => {
       message: translation
     });
   };
-  
+
+ export { showTranslatedAlert }; 

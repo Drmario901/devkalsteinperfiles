@@ -1,4 +1,4 @@
-import i18next from "./i18next.min.js";
+import { showTranslatedAlert } from "./i19n.js";
 
 jQuery(document).ready(function($){
 
@@ -5170,7 +5170,11 @@ jQuery(document).ready(function($){
 
                 $('#Rnivel').val('0')
 
-                createAlert(success, 'supportTicketGerenerated')
+                const cookie = getCookie('lang')
+
+                showTranslatedAlert('supportTicketGerenerated', cookie)
+
+                // createAlert(success, 'supportTicketGerenerated')
 
             }else{
 
