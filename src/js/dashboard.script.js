@@ -5163,6 +5163,16 @@ jQuery(document).ready(function($){
 
                 createAlert(success, 'supportTicketGerenerated')
 
+                iziToast.success({
+
+                    title: 'Success',
+
+                    message: 'Ticket generated',
+
+                    position: 'topRight'
+
+                })
+
             }else{
 
                 iziToast.error({
