@@ -14,7 +14,9 @@
 
         <?php
             $banner_img = 'Header-distribuidor-IMG.jpg';
-            
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             require __DIR__. '/../../../php/translateTextBanner.php';
             $banner = 'banner_text_calculator_sends';
             $banner_text = translateTextBanner($banner);
