@@ -13,7 +13,7 @@
             
             require __DIR__. '/../../../php/translateTextBanner.php';
             $banner = 'banner_text_welcome';
-            $banner_text = translateTextBanner($banner)  .', '. $acc_name .' '. $acc_lname;
+            $banner_text = translateTextBanner($banner)  .', '. $name .' '. $lastname;
             include 'banner.php';
         ?>
         <div class='row'>
