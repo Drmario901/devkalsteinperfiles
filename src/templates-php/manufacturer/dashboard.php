@@ -109,7 +109,7 @@
     
                     <div class="card task-card">
                         <div class="card-icon icon-box green">
-                            <span class="material-symbols-rounded  icon" data-i18n="manofacturer:inventario">Inventory</span>
+                            <span class="material-symbols-rounded  icon">Inventory</span>
                         </div>
                         <div>
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
@@ -124,7 +124,7 @@
     
                     <div class="card task-card">
                         <div class="card-icon icon-box blue">
-                            <span class="material-symbols-rounded icon" data-i18n="manofacturer:costoEnvio">
+                            <span class="material-symbols-rounded icon">
                                 pending_actions
                             </span>
                         </div>
