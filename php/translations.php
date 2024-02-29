@@ -39,6 +39,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Shipping calculator',
         'banner_text_welcomeTwo' => 'Welcome,',
         'banner_text_ConnectWithOtherUsers' => 'Connect with other users',
+        'banner_text_CanceledOrders' => 'Canceled Orders',
+        'banner_text_ProcessedOrders' => 'Processed Orders',
+        'banner_text_YourOrders' => 'Your Orders',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -78,6 +81,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Calculadora de envíos',
         'banner_text_welcomeTwo' => 'Bienvenido,',
         'banner_text_ConnectWithOtherUsers' => 'Conectar con otros usuarios',
+        'banner_text_CanceledOrders' => 'Pedidos Cancelados',
+        'banner_text_ProcessedOrders' => 'Pedidos Procesados',
+        'banner_text_YourOrders' => 'Sus pedidos',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -117,6 +123,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Calculateur d\'expédition',
         'banner_text_welcomeTwo' => 'Bienvenue,',
         'banner_text_ConnectWithOtherUsers' => 'Connectez-vous avec d\'autres utilisateurs',
+        'banner_text_CanceledOrders' => 'Commandes Annulées',
+        'banner_text_ProcessedOrders' => 'Commandes Traitées',
+        'banner_text_YourOrders' => 'Vos commandes',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -156,6 +165,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Calcolatore di spedizione',
         'banner_text_welcomeTwo' => 'Benvenuto,',
         'banner_text_ConnectWithOtherUsers' => 'Connettiti con altri utenti',
+        'banner_text_CanceledOrders' => 'Ordini Annullati',
+        'banner_text_ProcessedOrders' => 'Ordini Elaborati',
+        'banner_text_YourOrders' => 'I tuoi ordini',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -195,6 +207,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Calculadora de frete',
         'banner_text_welcomeTwo' => 'Bem-vindo,',
         'banner_text_ConnectWithOtherUsers' => 'Conecte-se com outros usuários',
+        'banner_text_CanceledOrders' => 'Pedidos Cancelados',
+        'banner_text_ProcessedOrders' => 'Pedidos Processados',
+        'banner_text_YourOrders' => 'Seus pedidos',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -234,6 +249,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Kalkulator wysyłki',
         'banner_text_welcomeTwo' => 'Witaj,',
         'banner_text_ConnectWithOtherUsers' => 'Połącz się z innymi użytkownikami',
+        'banner_text_CanceledOrders' => 'Anulowane Zamówienia',
+        'banner_text_ProcessedOrders' => 'Zrealizowane Zamówienia',
+        'banner_text_YourOrders' => 'Twoje Zamówienia',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -273,6 +291,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Verzendcalculator',
         'banner_text_welcomeTwo' => 'Welkom,',
         'banner_text_ConnectWithOtherUsers' => 'Maak contact met andere gebruikers',
+        'banner_text_CanceledOrders' => 'Geannuleerde Bestellingen',
+        'banner_text_ProcessedOrders' => 'Verwerkte Bestellingen',
+        'banner_text_YourOrders' => 'Uw Bestellingen',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -312,6 +333,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Versandkostenrechner',
         'banner_text_welcomeTwo' => 'Willkommen,',
         'banner_text_ConnectWithOtherUsers' => 'Vernetzen Sie sich mit anderen Benutzern',
+        'banner_text_CanceledOrders' => 'Stornierte Bestellungen',
+        'banner_text_ProcessedOrders' => 'Bearbeitete Bestellungen',
+        'banner_text_YourOrders' => 'Ihre Bestellungen',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -351,6 +375,9 @@ $translations = array(
         'banner_text_calculator_sends' => 'Saatekulu kalkulaator',
         'banner_text_welcomeTwo' => 'Tere tulemast,',
         'banner_text_ConnectWithOtherUsers' => 'Ühendage teiste kasutajatega',
+        'banner_text_CanceledOrders' => 'Tühistatud Tellimused',
+        'banner_text_ProcessedOrders' => 'Töödeldud Tellimused',
+        'banner_text_YourOrders' => 'Teie Tellimused',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -390,5 +417,8 @@ $translations = array(
         'banner_text_calculator_sends' => 'Kalkylator för fraktkostnad',
         'banner_text_welcomeTwo' => 'Välkommen,',
         'banner_text_ConnectWithOtherUsers' => 'Anslut med andra användare',
+        'banner_text_CanceledOrders' => 'Annullerade Beställningar',
+        'banner_text_ProcessedOrders' => 'Bearbetade Beställningar',
+        'banner_text_YourOrders' => 'Dina Beställningar',
     ),
 );
