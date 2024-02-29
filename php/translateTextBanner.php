@@ -3,7 +3,7 @@
 
 
 function translateTextBanner($banner) {
-    require __DIR__. '/../../../php/translations.php';
+    require 'translations.php';
     // Include the translations file
     $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
             // Determinar el texto del banner según el idioma
