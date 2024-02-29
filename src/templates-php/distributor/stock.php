@@ -32,9 +32,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos" data-i18n="distribuidor:productsExist" >Existencias de productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos/agregar" data-i18n="distribuidor:addProduct">Agregar un producto</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/distribuidor/productos" data-i18n="distribuidor:productsExist" >Existencias de productos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/distribuidor/productos/agregar" data-i18n="distribuidor:addProduct">Agregar un producto</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
         </nav>
         <br>        
         <div class="table-responsive">
@@ -144,7 +144,7 @@
                         <br>
                         <button class='material-symbols-rounded'  id='btnEditProduct' value='$id'>edit</button>
                         <br>
-                        <a href='https://plataforma.kalstein.net/index.php/distribuidor/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
+                        <a href='https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
                     </td>
                 </tr>
                 ");

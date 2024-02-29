@@ -30,7 +30,7 @@
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https:/dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
             <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/procesadas" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</a>
             <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/canceladas" data-i18n="distribuidor:parrafoOrdenesCancel">Órdenes canceladas</a>
             <a class="nav-link" href="https:/dev.kalstein.plus/plataforma/index.php/editor-de-plantillas" data-i18n="distribuidor:linkEditarPlantilla">Editar plantilla</a>
