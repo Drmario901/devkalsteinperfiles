@@ -20,12 +20,21 @@ const getLanguage = () => {
 const rerender = () => {
   // Traduce cada elemento individualmente
   jQuery(document).ready(function($){
-    $('[data-i18n]').each(function() {
+    $('[data-i18n], [data-placeholder]').each(function() {
         const key = $(this).attr('data-i18n');
-        $(this).text(i18next.t(key));
+        const placeholderKey = $(this).attr('data-placeholder');
+        // Actualiza el texto del elemento si existe el atributo data-i18n
+        if (key) {
+            $(this).text(i18next.t(key));
+        }
+        // Actualiza el placeholder del elemento si existe el atributo data-placeholder
+        if (placeholderKey) {
+            $(this).attr('placeholder', i18next.t(placeholderKey));
+        }
     });
   });
 }
+
 
 // Inicializar i18next y jquery-i18next
 jQuery(document).ready(function($){
@@ -38,7 +47,7 @@ jQuery(document).ready(function($){
       lng: getLanguage(),
       fallbackLng: 'en',
 
-      ns: ['account', 'prueba', 'client', 'support', 'moderator', 'distribuidor','manofacturer','rentalsale'],
+      ns: ['account', 'prueba', 'client', 'support', 'moderator', 'distribuidor','manofacturer'],
       
       defaultNS: 'account', // Establecer el namespace predeterminado
       resources: {}
