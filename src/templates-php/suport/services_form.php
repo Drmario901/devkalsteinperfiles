@@ -158,7 +158,7 @@
                 name="service_company"
                 class="form-control validate"
                 value="<?php echo $acc_company ?>"
-                data-placeholder="nombreCompany"
+                data-placeholder="support:nombreCompany"
                 placeholder="Nombre de Compañia"
             />
         </div>
@@ -170,7 +170,7 @@
                 name="service_agente"
                 class="form-control validate"
                 value="<?php echo $acc_name; echo $acc_lname ?>"
-                data-placeholder="nombreApellido"
+                data-placeholder="support:nombreApellido"
                 placeholder="nombre y apellido"
             />
         </div>
@@ -182,7 +182,8 @@
                 type="number"
                 class="form-control validate"
                 value="<?php echo $acc_correo; ?>"
-                placeholder="numero de Telefono"
+                data-placeholder="client:numeroTlf"
+                placeholder=""
                 name="service_telefono"
             />
         </div>
@@ -193,6 +194,7 @@
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_correo; ?>"
+                data-placeholder="client:direccionCorreo"
                 placeholder="Correo de contacto"
                 name="service_correo"
             />
@@ -215,6 +217,7 @@
                 type="text"
                 name="service_direccion"
                 class="form-control validate"
+                data-placeholder="client:direccionS"
                 placeholder="Dirección"
             />
         </div>
@@ -225,6 +228,7 @@
                 type="text"
                 name="service_estadolugar"
                 class="form-control validate"
+                data-placeholder="client:estatus"
                 placeholder="Estado"
             />
         </div>
