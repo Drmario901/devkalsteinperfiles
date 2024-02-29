@@ -16,15 +16,24 @@
     <article class="container article">
         <?php
             $banner_img = 'Header-distribuidor-IMG.jpg';
-            $banner_text = "Órdenes pendientes";
+            $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+            // Incluir el archivo de traducciones
+            require __DIR__. '/../../../php/translations.php';
+
+            // Determinar el texto del banner según el idioma
+            $banner_text_translation = isset($translations[$language]['banner_text_pending_orders']) ? $translations[$language]['banner_text_pending_orders'] : $translations['en']['banner_text_pending_orders'];
+            
+            // Incluir el banner.php pasando el texto traducido y el nombre del usuario
+            $banner_text = $banner_text_translation;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes/procesadas" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes/canceladas" data-i18n="distribuidor:parrafoOrdenesCancel">Órdenes canceladas</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/editor-de-plantillas" data-i18n="distribuidor:linkEditarPlantilla">Editar plantilla</a>
+            <a class="nav-link active" href="https:/dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
+            <a class="nav-link" href="https:/dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/procesadas" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</a>
+            <a class="nav-link" href="https:/dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/canceladas" data-i18n="distribuidor:parrafoOrdenesCancel">Órdenes canceladas</a>
+            <a class="nav-link" href="https:/dev.kalstein.plus/plataforma/index.php/editor-de-plantillas" data-i18n="distribuidor:linkEditarPlantilla">Editar plantilla</a>
         </nav>
         
         <br>

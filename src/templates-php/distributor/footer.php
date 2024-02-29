@@ -1,34 +1,34 @@
-<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
+<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
     <div class="container">
         <div>
-            <img class='kalstein-logo-footer' src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
+            <img class='kalstein-logo-footer' src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
             <p><span data-i18n="distribuidor:spanFooterUno">Haznos saber qué necesitas y nosotros nos encargaremos del resto</span></p>
         </div>
         <div>
             <h5 data-i18n="distribuidor:h5FastAccess">Acceso rápido</h5>
             <ul>
                 <li class="footer-item">
-                    <a id="link-stock-footer" href="https://plataforma.kalstein.net/index.php/distribuidor/productos" data-i18n="distribuidor:linkProducts">Productos</a>
+                    <a id="link-stock-footer" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos" data-i18n="distribuidor:linkProducts">Productos</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a id="link-list-order-footer" href="https://plataforma.kalstein.net/index.php/distribuidor/ordenes" data-i18n="distribuidor:linkOrders">Órdenes</a>
+                    <a id="link-list-order-footer" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes" data-i18n="distribuidor:linkOrders">Órdenes</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a id="link-sales-report-footer" href="https://plataforma.kalstein.net/index.php/distribuidor/ventas" data-i18n="distribuidor:linkRepVentas">Reporte de ventas</a>
+                    <a id="link-sales-report-footer" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ventas" data-i18n="distribuidor:linkRepVentas">Reporte de ventas</a>
                 </li>
 
                 <li class="footer-item">
-                    <a id="link-catalogs-footer" href="https://plataforma.kalstein.net/index.php/distribuidor/catalogos" data-i18n="distribuidor:linkCatalogs">Catálogos</a>
+                    <a id="link-catalogs-footer" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/catalogos" data-i18n="distribuidor:linkCatalogs">Catálogos</a>
                 </li>
 
                 <li class="footer-item">
-                    <a id="link-shop-footer" href="https://plataforma.kalstein.net/index.php/distribuidor/tienda" data-i18n="distribuidor:linkShop">Tienda</a>
+                    <a id="link-shop-footer" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/tienda" data-i18n="distribuidor:linkShop">Tienda</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a id="link-home-footer" href="https://plataforma.kalstein.net/index.php/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
+                    <a id="link-home-footer" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
                 </li>
             </ul>
         </div>
@@ -63,11 +63,11 @@
         </div>
         <div class="order-first order-md-last">
             <h5 data-i18n="distribuidor:h5ToBeSeen">Ser visto</h5>
-            <a href='https://plataforma.kalstein.net/index.php/distribuidor/productos/agregar'>
+            <a href='https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/agregar'>
                 <div class="footer-main-button" data-i18n="distribuidor:btnAgregarProducto">AGREGAR UN PRODUCTO</div>
             </a>
 
-            <a href='https://plataforma.kalstein.net/template-editor/dashboard.php'>
+            <a href='https://dev.kalstein.plus/plataforma/template-editor/dashboard.php'>
                 <div class="footer-main-button_editor" data-i18n="distribuidor:btnEditorTienda">EDITOR DE LA TIENDA VIRTUAL</div>
             </a>
         </div>

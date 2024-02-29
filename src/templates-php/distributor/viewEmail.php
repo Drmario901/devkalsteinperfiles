@@ -20,13 +20,13 @@
 <div class="container">
     <div class="email-app mb-4">
         <nav>
-            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff !important" class="btn btn-danger btn-block">New Message</a>
+            <a href="https://dev.kalstein.plus/plataforma/index.php/distributor/inbox/compose" style="color: #fff !important" class="btn btn-danger btn-block">New Message</a>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i> Inbox</a>
+                    <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distributor/inbox/"><i class="fa fa-inbox"></i> Inbox</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/sent"><i class="fa fa-rocket"></i> Sent</a>
+                    <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distributor/inbox/sent"><i class="fa fa-rocket"></i> Sent</a>
                 </li>
             </ul>
         </nav>
@@ -66,8 +66,8 @@
 
                         $sender_avatar_url = getSenderProfileImage($conexion, $message['remitente_id']);
 
-                        $default_avatar_url = 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
-                        $avatar_url = $sender_avatar_url ? 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$sender_avatar_url : $default_avatar_url;
+                        $default_avatar_url = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
+                        $avatar_url = $sender_avatar_url ? 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$sender_avatar_url : $default_avatar_url;
 
                         echo '<img class="avatar" src="' . $avatar_url . '">';
                         echo '<div class="from">';
