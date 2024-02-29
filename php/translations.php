@@ -37,6 +37,7 @@ $translations = array(
         'banner_text_preview_product' => 'Preview of your product',
         'banner_text_manage_products' => 'Manage products',
         'banner_text_calculator_sends' => 'Shipping calculator',
+        'banner_text_welcomeTwo' => 'Welcome,',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -74,6 +75,7 @@ $translations = array(
         'banner_text_preview_product' => 'Vista previa de tu producto',
         'banner_text_manage_products' => 'Gestión de productos',
         'banner_text_calculator_sends' => 'Calculadora de envíos',
+        'banner_text_welcomeTwo' => 'Bienvenido,',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -111,6 +113,7 @@ $translations = array(
         'banner_text_preview_product' => 'Aperçu de votre produit',
         'banner_text_manage_products' => 'Gestion des produits',
         'banner_text_calculator_sends' => 'Calculateur d\'expédition',
+        'banner_text_welcomeTwo' => 'Accueillir,',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -147,6 +150,8 @@ $translations = array(
         'banner_text_edit_product' => 'Modifica un prodotto',
         'banner_text_preview_product' => 'Anteprima del tuo prodotto',
         'banner_text_manage_products' => 'Gestione dei prodotti',
+        'banner_text_calculator_sends' => 'Calcolatore di spedizione',
+        'banner_text_welcomeTwo' => 'Benvenuto,',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -183,6 +188,8 @@ $translations = array(
         'banner_text_edit_product' => 'Editar um produto',
         'banner_text_preview_product' => 'Visualização do seu produto',
         'banner_text_manage_products' => 'Gerenciar produtos',
+        'banner_text_calculator_sends' => 'Calculadora de frete',
+        'banner_text_welcomeTwo' => 'Bem-vindo,',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -219,6 +226,8 @@ $translations = array(
         'banner_text_edit_product' => 'Edytuj produkt',
         'banner_text_preview_product' => 'Podgląd twojego produktu',
         'banner_text_manage_products' => 'Zarządzanie produktami',
+        'banner_text_calculator_sends' => 'Kalkulator wysyłki',
+        'banner_text_welcomeTwo' => 'Witaj,',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -255,6 +264,8 @@ $translations = array(
         'banner_text_edit_product' => 'Bewerk een product',
         'banner_text_preview_product' => 'Voorbeeld van uw product',
         'banner_text_manage_products' => 'Beheer van producten',
+        'banner_text_calculator_sends' => 'Verzendcalculator',
+        'banner_text_welcomeTwo' => 'Welkom,',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -291,6 +302,8 @@ $translations = array(
         'banner_text_edit_product' => 'Ein Produkt bearbeiten',
         'banner_text_preview_product' => 'Vorschau Ihres Produkts',
         'banner_text_manage_products' => 'Produktverwaltung',
+        'banner_text_calculator_sends' => 'Versandkostenrechner',
+        'banner_text_welcomeTwo' => 'Willkommen,',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -327,6 +340,8 @@ $translations = array(
         'banner_text_edit_product' => 'Muuda toodet',
         'banner_text_preview_product' => 'Teie toote eelvaade',
         'banner_text_manage_products' => 'Toodete haldamine',
+        'banner_text_calculator_sends' => 'Saatekulu kalkulaator',
+        'banner_text_welcomeTwo' => 'Tere tulemast,',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -363,5 +378,7 @@ $translations = array(
         'banner_text_edit_product' => 'Redigera en produkt',
         'banner_text_preview_product' => 'Förhandsgranska din produkt',
         'banner_text_manage_products' => 'Hantera produkter',
+        'banner_text_calculator_sends' => 'Kalkylator för fraktkostnad',
+        'banner_text_welcomeTwo' => 'Välkommen,',
     ),
 );
