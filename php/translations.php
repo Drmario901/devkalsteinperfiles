@@ -36,6 +36,7 @@ $translations = array(
         'banner_text_edit_product' => 'Edit a product',
         'banner_text_preview_product' => 'Preview of your product',
         'banner_text_manage_products' => 'Manage products',
+        'banner_text_calculator_sends' => 'Shipping calculator',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -109,6 +110,7 @@ $translations = array(
         'banner_text_edit_product' => 'Modifier un produit',
         'banner_text_preview_product' => 'Aperçu de votre produit',
         'banner_text_manage_products' => 'Gestion des produits',
+        'banner_text_calculator_sends' => 'Calculateur d\'expédition',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
