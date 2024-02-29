@@ -1,13 +1,5 @@
 jQuery(document).ready(function($){
 
-    function createAlert(type, message) {
-        const message = i18next.t(alerts[message], { ns: 'alerts' });
-        
-        iziToast[type]({
-          message: message
-        });
-      };
-
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, '\\$&');
@@ -5644,6 +5636,14 @@ jQuery(document).ready(function($){
     }
 
     setInterval(keepSessionAlive, 300000); 
+
+    function createAlert(type, message) {
+        const message = i18next.t(alerts[message], { ns: 'alerts' });
+        
+        iziToast[type]({
+          message: message
+        });
+      };
 
 
 })
