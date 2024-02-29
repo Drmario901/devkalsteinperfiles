@@ -52,11 +52,13 @@
                 // Incluir el archivo de traducciones
                 include '../../../php/translations.php';
 
-                // Determinar el texto del banner según el idioma
-                $banner_text_translation = isset($translations[$language]['banner_text_parameters']) ? $translations[$language]['banner_text_parameters'] : $translations['en']['banner_text_parameters'];
+                $banner_text_key = 'banner_text_parameters'; // Clave para el texto de los catálogos (por defecto)
+                if (isset($translations[$language]['banner_text_parameters'])) {
+                    $banner_text_key = 'banner_text_parameters';
+                }
 
-                // Incluir el banner.php pasando el texto traducido
-                $banner_text = $banner_text_translation;
+                // Determinar el texto del banner según el idioma
+                $banner_text = isset($translations[$language][$banner_text_key]) ? $translations[$language][$banner_text_key] : 'Parameters';
                 include 'banner.php';
 
                 //PROFILE SETTINGS
