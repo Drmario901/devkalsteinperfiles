@@ -15,10 +15,10 @@
     $firstLyricsLastname = strtoupper($acc_lname[0]);
 
     if ($acc_img == ''){
-        $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
+        $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
     }
     else{
-        $urlImagePerfil == 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$imgPerfil;
+        $urlImagePerfil == 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$imgPerfil;
     }
 
 ?>
@@ -26,7 +26,7 @@
     <div class="container">
         
         <h1>
-            <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png" alt="Kalstein" width="200" height="40">
+            <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png" alt="Kalstein" width="200" height="40">
         </h1>
         
         <button class='menu-toggle-btn icon-box' data-menu-toggle-btn aria-label='Toggle Menu'>
@@ -39,7 +39,7 @@
 
                     <div class="d-flex flex-row">
                         <li>
-                            <a href='https://plataforma.kalstein.net/index.php/support/inbox/' class='navbar-link icon-box'>
+                            <a href='https://dev.kalstein.plus/plataforma/index.php/support/inbox/' class='navbar-link icon-box'>
                                 <span class='material-symbols-rounded icon position-relative'>
                                     mail
                                     <span id='messagesBaloon' class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style='font-family: sans-serif; font-size: 10px' hidden>
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://plataforma.kalstein.net/index.php/support/edit-profile/" class="navbar-link icon-box">
+                            <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
                                 <span class='material-symbols-rounded  icon'>settings</span>
                             </a>
                         </li>
@@ -77,45 +77,45 @@
 
                 <ul class="navbar-list">
                     <li>
-                        <a id="home" href="https://plataforma.kalstein.net/index.php/support/dashboard" class="navbar-link icon-box">
+                        <a id="home" href="https://dev.kalstein.plus/plataforma/index.php/support/dashboard" class="navbar-link icon-box">
                             <span data-i18n="support:desk" >Escritorio</span>
                         </a>
                     </li>
                     <li>
-                        <a id="reports" href="https://plataforma.kalstein.net/index.php/support/reports/" class="navbar-link icon-box">
+                        <a id="reports" href="https://dev.kalstein.plus/plataforma/index.php/support/reports/" class="navbar-link icon-box">
                             <span data-i18n="support:report" >Reportes</span>
                         </a>
                     </li>
                     <li>
-                        <a id="services" href="https://plataforma.kalstein.net/index.php/support/services/" class="navbar-link icon-box">
+                        <a id="services" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" class="navbar-link icon-box">
                             <span data-i18n="support:myServices" >Mis Servicios</span>
                         </a>
                     </li>
                     <li>
-                        <a id="quotes" href="https://plataforma.kalstein.net/index.php/support/quotes/" class="navbar-link icon-box">
+                        <a id="quotes" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" class="navbar-link icon-box">
                             <span data-i18n="support:orders" >Ordenes</span>
                         </a>
                     </li>
                     <li>
-                        <a id="catalog" href="https://plataforma.kalstein.net/index.php/support/manuals/" class="navbar-link icon-box">
+                        <a id="catalog" href="https://dev.kalstein.plus/plataforma/index.php/support/manuals/" class="navbar-link icon-box">
                             <span data-i18n="support:manuals" >Manuales</span>
                         </a>
                     </li>
                     <li>
-                        <a id="shop" href="https://plataforma.kalstein.net/index.php/support/shop" class="navbar-link icon-box">
+                        <a id="shop" href="https://dev.kalstein.plus/plataforma/index.php/support/shop" class="navbar-link icon-box">
                             <span data-i18n="support:store" >Tienda</span>
                         </a>
                     </li>
                     <li class='generate-quote'> <!-- only style class-->
-                        <a id='btnGenQuote' href="https://plataforma.kalstein.net/index.php/support/services/add" class='navbar-link icon-box text-white'>
+                        <a id='btnGenQuote' href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" class='navbar-link icon-box text-white'>
                             <span data-i18n="support:addService" >AÑADIR SERIVICIO</span>
                         </a>
                     </li>
                 </ul>
 
             </div>
-            <script src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/manufacturer/js/inbox-notification.js"></script>
-            <script src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/js/script.cot2.lite.sup.js"></script>
+            <script src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/manufacturer/js/inbox-notification.js"></script>
+            <script src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/js/script.cot2.lite.sup.js"></script>
         </nav>
     </div>
     <div class="container flex-column">

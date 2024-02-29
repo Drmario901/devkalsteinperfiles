@@ -20,7 +20,7 @@
             $pathAcc = __DIR__ .'/../../../../../uploads/kalsteinQuote/'; // home4545/testing.kalstei ...
             $uploadFileAcc = $pathAcc.basename($newNameAcc);                  // home4545/testing.kalstei ... images/upload/64asd55645.png
     
-            $uploadNameAcc = 'https://plataforma.kalstein.net/wp-content/uploads/kalsteinQuote/'.$newNameAcc; // https://testing.kalstei ... images/upload/64asd55645.png
+            $uploadNameAcc = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'.$newNameAcc; // https://testing.kalstei ... images/upload/64asd55645.png
 
             move_uploaded_file($fileAcc['tmp_name'], $uploadFileAcc);
 

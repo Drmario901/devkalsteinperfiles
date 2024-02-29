@@ -21,9 +21,9 @@
     try {
         $mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
         $mail->isSMTP();
-        $mail->Host = 'plataforma.kalstein.net';  // Host de conexión SMTP
+        $mail->Host = 'dev.kalstein.plus/plataforma';  // Host de conexión SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = 'no-reply2@plataforma.kalstein.net';                 // Usuario SMTP
+        $mail->Username = 'no-reply2@dev.kalstein.plus/plataforma';                 // Usuario SMTP
         $mail->Password = 'XsI2C;6d{++-';                           // Password SMTP
         $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
         $mail->Port = 587;                                    // Puerto SMTP
@@ -32,7 +32,7 @@
         #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
         #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
      
-        $mail->setFrom('no-reply2@plataforma.kalstein.net');		// Mail del remitente
+        $mail->setFrom('no-reply2@dev.kalstein.plus/plataforma');		// Mail del remitente
         $mail->addAddress($email);     // Mail del destinatario
 
         $position = strpos($email, '@');
@@ -44,11 +44,11 @@
             <div style="width: 100%; background-color: #fff;">
                 <div style="width: 50%; margin-left: 25%;">
                     <div style="width: 100%; color: #000;">
-                        <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
+                        <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
                         <h1 style="text-align: center; color: #000;">Hola, '.$nameEmail.'</h1>
                         <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para continuar con el proceso de restablecimiento de su contraseña debe hacer clic en el siguiente enlace. Si no ha realizado esta solicitud, puede omitir este mensaje.</p>
                         <p style="text-align: center; color: #000; font-size: 1.2em; font-weight: bold;">Enlace de restablecimiento de contraseña</p>
-                        <p style="text-align: center; color: #000; font-weight: bold; font-size: 2.5em;">https://plataforma.kalstein.net/reestablecer-contrasena?email='.$encryptEmail.'</p>
+                        <p style="text-align: center; color: #000; font-weight: bold; font-size: 2.5em;">https://dev.kalstein.plus/plataforma/reestablecer-contrasena?email='.$encryptEmail.'</p>
                         <p style="text-align: center; color: #000; ">(Este enlace es válido durante 10 minutos)</p>
                         <hr>
                         <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kalstein + nunca le enviará un correo electrónico ni le pedirá que revele o verifique su contraseña, tarjeta de crédito o número de cuenta bancaria.</p>

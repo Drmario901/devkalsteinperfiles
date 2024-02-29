@@ -28,7 +28,7 @@
             <div class="custom-file mt-3 mb-3">
                 <label for="file-inputAcc" class="drop-container" id="dropcontainerImageAcc">
                     <span class="drop-title" data-i18n='manofacturer:seleccionarOdrop'>Seleccionar o arrastrar y soltar una imagen</span>
-                    <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
+                    <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnailAcc"/>
                 </label>
                 <input type="file" id="file-inputAcc">

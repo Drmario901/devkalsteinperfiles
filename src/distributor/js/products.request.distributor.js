@@ -1,5 +1,5 @@
-let plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/';
-let domain = 'https://plataforma.kalstein.net/index.php/';
+let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
+let domain = 'https://dev.kalstein.plus/plataforma/index.php/';
 
 
 jQuery(document).ready(function($){
@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 
   function products(consulta){
       $.ajax({
-          url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php',
+          url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php',
           type: 'POST',
           data: {consulta},
       })
@@ -28,7 +28,7 @@ jQuery(document).ready(function($){
 
   function categorys(consulta){
       $.ajax({
-          url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php',
+          url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php',
           type: 'POST',
           data: {consulta},
       })
@@ -171,7 +171,7 @@ function savedDataUpload(name, description, category, weight, stock, length, wid
 
   $.ajax({
     contentType: "multipart/form-data",
-    url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/uploadDataForm.php',
+    url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/uploadDataForm.php',
     type: 'POST',
     data: formData,
     dataType: 'text',
@@ -185,7 +185,7 @@ function savedDataUpload(name, description, category, weight, stock, length, wid
         message: 'The data has been successfully uploaded.',
         position: 'center'
       });
-      window.location.href = 'https://plataforma.kalstein.net/index.php/distributor/stock';
+      window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/distributor/stock';
     },
     error: function(xhr, status, error) {
       console.log(xhr.responseText);
@@ -333,7 +333,7 @@ function updateDataUpload(id, name, description, category, weight, stock, length
 
   $.ajax({
     contentType: "multipart/form-data",
-    url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/updateStatus.php',
+    url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/updateStatus.php',
     type: 'POST',
     data: formData,
     dataType: 'text',
@@ -347,7 +347,7 @@ function updateDataUpload(id, name, description, category, weight, stock, length
         message: 'Data updated successfully.',
         position: 'center'
       });
-      window.location.href = 'https://plataforma.kalstein.net/index.php/distributor/stock';
+      window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/distributor/stock';
     },
     error: function(xhr, status, error) {
       console.log(xhr.responseText);
@@ -403,7 +403,7 @@ $(document).on('click', '#btnDeleteProduct', function(){
 
 function productsTable(delete_aid){
   $.ajax({
-    url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/deleteProduct.php',
+    url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/deleteProduct.php',
     type: 'POST',
     data: {delete_aid},
   })
@@ -430,7 +430,7 @@ $(document).on('click', '#btnView', function(){
 
 
 function showImage(image) {
-    let imageUrl = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/' + image;
+    let imageUrl = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/' + image;
 
 
     iziToast.show({
@@ -446,7 +446,7 @@ function showImage(image) {
 
 function imageView(){
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php',
         type: 'POST',
         dataType: 'html',
     })
@@ -466,7 +466,7 @@ allProductsCount()
 
 function allProductsCount(consulta){
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/allProducts.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/allProducts.php',
         type: 'POST',
         data: {consulta},
     })
@@ -486,7 +486,7 @@ allOrdersCount()
 
 function allOrdersCount(consulta){
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrders.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrders.php',
         type: 'POST',
         data: {consulta},
     })
@@ -598,7 +598,7 @@ $(document).on('click', '#nextPage', function() {
 
 function loadQuotes(page) {
   $.ajax({
-    url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/quotes.php',
+    url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quotes.php',
     method: 'POST',
     data: { page },
   })
@@ -625,7 +625,7 @@ quoteProcessed();
 
 function quoteProcessed() {
   $.ajax({
-    url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteProcessed.php',
+    url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteProcessed.php',
     type: 'POST',
     data: { page: page }, 
 
@@ -664,7 +664,7 @@ quoteCancelled();
 
 function quoteCancelled() {
   $.ajax({
-    url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php',
+    url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php',
     type: 'POST',
     data: { page: page },
 
@@ -700,7 +700,7 @@ allOrdersCardCount()
 
 function allOrdersCardCount(consulta){
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrdersCard.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrdersCard.php',
         type: 'POST',
         data: {consulta},
     })
@@ -721,7 +721,7 @@ allPendingCardCount()
 
 function allPendingCardCount(consulta){
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCard.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCard.php',
         type: 'POST',
         data: {consulta},
     })
@@ -741,7 +741,7 @@ allPendingCirculatorCount()
 
 function allPendingCirculatorCount(consulta){
     $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCirculator.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCirculator.php',
         type: 'POST',
         data: {consulta},
     })
@@ -763,7 +763,7 @@ function allPendingCirculatorCount(consulta){
 
 
       $.ajax({
-        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/cotizacionInfo.php',
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/cotizacionInfo.php',
           method: 'POST', 
           data: {quote_id}
       })

@@ -44,9 +44,9 @@
     
             $firstLyricsName = strtoupper($usuario[0]);
             if ($image == ''){
-                $urlImagePerfil = 'https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.'.png';
+                $urlImagePerfil = 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.'.png';
             }else{
-                $urlImagePerfil = 'https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$image;
+                $urlImagePerfil = 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$image;
             }
             $html.= "                                    
                 <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-3' id='servicesPagination'>                         

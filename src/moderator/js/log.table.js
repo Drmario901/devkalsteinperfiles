@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
         let per_page = 10;
 
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/movesLog.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/movesLog.php",
             type: "POST",
             data: { type, search_term, page, per_page },
         })

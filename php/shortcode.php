@@ -98,21 +98,21 @@
                     echo "
                     <script>
                         alert('Su cuenta está siendo verificada, en un plazo de 24 a 48 horas recibirá un correo electrónico de confirmación.');
-                        window.location.replace('https://plataforma.kalstein.net/acceder');
+                        window.location.replace('https://dev.kalstein.plus/plataforma/acceder');
                     </script>";
                 }
                 else if ($suspended) {
                     echo "
                     <script>
                         alert('Debido a que se han encontrado ciertas llamadas de atención en su historial, hemos suspendido su cuenta hasta el $time.');
-                        window.location.replace('https://plataforma.kalstein.net/acceder');
+                        window.location.replace('https://dev.kalstein.plus/plataforma/acceder');
                     </script>";
                 }
 
                 $conexion->close();
 
                 if ($rol != $rolacc){
-                    echo "<script>window.location.replace('https://plataforma.kalstein.net/index.php/account_redirect');</script>";
+                    echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/account_redirect');</script>";
                 }
 
 
@@ -124,7 +124,7 @@
             else {
                 $search = '';
             }
-            echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder$search');</script>";
+            echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder$search');</script>";
         }
     }
     
@@ -145,7 +145,7 @@
             if(isset($_SESSION["emailAccount"])){
                 $email = $_SESSION["emailAccount"];
             }else{
-                header('Location: https://plataforma.kalstein.net/');
+                header('Location: https://dev.kalstein.plus/plataforma/');
             }
             return render_php_file('accounts/register.php');
         }
@@ -154,7 +154,7 @@
             if(isset($_SESSION["emailAccount"])){
                 $email = $_SESSION["emailAccount"];
             }else{
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/');</script>";
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/');</script>";
                 return '';
             }
 
@@ -170,26 +170,26 @@
             
             if($rolAccount == 1){
                 $search = $_GET ? '?search='.$_GET['search'] : '';
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/index.php/dashboard/');</script>";
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/dashboard/');</script>";
                 return '';
             } elseif($rolAccount == 2){
                 $search = $_GET ? '?search='.$_GET['search'] : '';
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/index.php/distribuidor/dashboard');</script>"; 
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/distribuidor/dashboard');</script>"; 
                 return '';
             } elseif($rolAccount == 3){
                 $search = $_GET ? '?search='.$_GET['search'] : '';
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/index.php/manufacturer/dashboard');</script>"; 
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/manufacturer/dashboard');</script>"; 
                 return '';
             } elseif($rolAccount == 4){
                 $search = $_GET ? '?search='.$_GET['search'] : '';
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/index.php/support/dashboard');</script>"; 
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/support/dashboard');</script>"; 
                 return '';
             } elseif($rolAccount == 5){
                 $search = $_GET ? '?search='.$_GET['search'] : '';
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/index.php/rentalsale/dashboard');</script>"; 
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/rentalsale/dashboard');</script>"; 
                 return '';
             } else {
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder/');</script>"; 
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>"; 
                 return '';
             }
         }*/
@@ -200,7 +200,7 @@
             if(isset($_SESSION["emailAccount"])){
                 $email = $_SESSION["emailAccount"];
             }else{
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/');</script>";
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/');</script>";
                 return '';
             }
 
@@ -214,7 +214,7 @@
             $resultConsulta = $conexion->query($consulta);
         
             if(!$resultConsulta || $resultConsulta->num_rows == 0){
-                echo "<script>window.location.replace('https://plataforma.kalstein.net/acceder/');</script>";
+                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>";
                 return '';
             }
 

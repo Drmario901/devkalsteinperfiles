@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
 
     function maritimalPrice() {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryMaritimal.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryMaritimal.php',
             method: 'GET',
             
             success: function (consulta) {
@@ -151,7 +151,7 @@ jQuery(document).ready(function ($) {
 
         $.ajax({
 
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryAerial.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryAerial.php',
 
             method: 'GET',
 
@@ -237,7 +237,7 @@ jQuery(document).ready(function ($) {
 
         $.ajax({
 
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/getRateForCountry.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getRateForCountry.php',
 
             type: 'POST',
 

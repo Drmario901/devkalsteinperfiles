@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
         formData.append('Registrar_id_servicio',R_id_servicio);
         formData.append('Registrar_company',R_company);
         formData.append('Registrar_company_soporte',R_company_soporte);
-        $.ajax({ contentType: "multipart/form-data", url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/insert.php',
+        $.ajax({ contentType: "multipart/form-data", url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/insert.php',
             type: 'POST', 
             data: formData, 
             dataType: 'text', 
@@ -143,7 +143,7 @@ jQuery(document).ready(function($) {
             contentType: false, 
             cache: false, 
             success: function(response) {
-                console.log(response); alert('alert'); window.location.href = 'https://plataforma.kalstein.net/index.php/kalstein-support/reports/';
+                console.log(response); alert('alert'); window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/kalstein-support/reports/';
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText);
@@ -156,7 +156,7 @@ jQuery(document).ready(function($) {
     category();  
     function category(consulta) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
             type: 'POST',
             data: { consulta },
         })
@@ -175,7 +175,7 @@ jQuery(document).ready(function($) {
 
     function products(categoryProduct){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/data_productos.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/data_productos.php',
             type: 'POST',
             data: {categoryProduct},
         })

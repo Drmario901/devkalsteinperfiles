@@ -9,27 +9,27 @@ if(isset($_SESSION["nameQuery"])){
     echo "<script>
     alert('Inicia sesión.');
 
-    window.location.replace('https://plataforma.kalstein.net/acceder/'); 
+    window.location.replace('https://dev.kalstein.plus/plataforma/acceder/'); 
     </script>";
 }
 
-$image_path = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/caret-down-fill.svg";
-$image_path2 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-left.svg";
-$image_path3 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-right.svg";
-$image_path4 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/clean.svg";
-$image_path5 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/text-left.svg";
-$image_path6 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/text-center.svg";
-$image_path7 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/text-right.svg";
-$image_path8 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/justify.svg";
-$image_path9 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-compact-up.svg";
-$image_path10 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-up.svg";
-$image_path11 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-double-up.svg";
-$image_path12 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-bar-up.svg";
-$image_path13 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/box-arrow-in-up.svg";
-$image_path14 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg";
-$image_path15 = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/uploadsvg.svg";
+$image_path = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/caret-down-fill.svg";
+$image_path2 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-left.svg";
+$image_path3 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-right.svg";
+$image_path4 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/clean.svg";
+$image_path5 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/text-left.svg";
+$image_path6 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/text-center.svg";
+$image_path7 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/text-right.svg";
+$image_path8 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/justify.svg";
+$image_path9 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-compact-up.svg";
+$image_path10 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-up.svg";
+$image_path11 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-double-up.svg";
+$image_path12 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/chevron-bar-up.svg";
+$image_path13 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/box-arrow-in-up.svg";
+$image_path14 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg";
+$image_path15 = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/uploadsvg.svg";
 $titleContent = "UN ACOMPAÑAMIENTO DIFERENTE, A SU SERVICIO";
-include_once("https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/customizeTemplateQuerys.php");
+include_once("https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/customizeTemplateQuerys.php");
 ?>
 <!-- <div class="container"> -->
 <div class='row' id='content'>
@@ -184,7 +184,7 @@ include_once("https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfil
                         </div>
                         <div class="p1TitleOptionsFlex" style="display: none; align-items: center; margin-left: 15px; margin-bottom: 8px;">
                             <label style="display: none; padding-top: 5px;" class="disabled p1TitleDisplayLabel">LADO</label>
-                            <button class="btn mt-0 mb-0 pt-0 pb-0 p1SideChange1" id="p1SideChange" style="display: none;"><img src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
+                            <button class="btn mt-0 mb-0 pt-0 pb-0 p1SideChange1" id="p1SideChange" style="display: none;"><img src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
                         </div> -->
                     <p id="titleTextOption">TEXTO</p>
                         <label style="display: none;" id="p1TitleTextLabel1" class="disabled">Título 1</label>
@@ -429,7 +429,7 @@ include_once("https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfil
 <!--                     <p id="p1FooterDispositionOption" class="p1FooterOptionDesp">DISPOSICION</p>
                         <div class="p1FootersOptionsFlex" style="display: none; margin-top: -10px; align-items: center; margin-left: 15px; margin-bottom: 8px;">
                             <label style="display: none; padding-top: 5px;" class="disabled p1FooterDispLabel">LADO</label>
-                            <button class="btn mt-0 mb-0 pt-0 pb-0 p1SideChange2" id="p1SideChange2" style="display: none;"><img src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
+                            <button class="btn mt-0 mb-0 pt-0 pb-0 p1SideChange2" id="p1SideChange2" style="display: none;"><img src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
                         </div>
                         <div class="p1FootersOptionsFlex" style="display: none; align-items: center; margin-bottom: 7px; margin-left: 15px;">
                             <label style="display: none;" id="p1QRDisplayLabel" class="disabled p1FooterDispLabel">QR</label>
@@ -881,11 +881,11 @@ include_once("https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfil
 
                 <div class="my-0" style="display: flex; align-items: center;">
                     <label style="display: none; padding-top: 5px;" class="disabled p3DspOptionsDesplg">ENCABEZADO </label>
-                    <button class="btn mt-0 mb-0 pt-0 pb-0 p3DspOptionsDesplg" id="p3SideChange1" style="display: none;"><img src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
+                    <button class="btn mt-0 mb-0 pt-0 pb-0 p3DspOptionsDesplg" id="p3SideChange1" style="display: none;"><img src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
                 </div>
                 <div class="my-0" style="display: flex; align-items: center;">
                     <label style="display: none; padding-top: 5px;" class="disabled p3DspOptionsDesplg">BODY </label>
-                    <button class="btn mt-0 mb-0 pt-0 pb-0 p3DspOptionsDesplg" id="p3SideChange2" style="display: none;"><img src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
+                    <button class="btn mt-0 mb-0 pt-0 pb-0 p3DspOptionsDesplg" id="p3SideChange2" style="display: none;"><img src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/svg/arrows.svg" alt="change"></button>
                 </div>
 
             </div> -->
@@ -1068,9 +1068,9 @@ include_once("https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfil
 </div>
 <!-- </div> -->
 
-<script src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsP1.js"></script>
-<!-- <script src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsG.js"></script> -->
-<script src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsP2.js"></script>
-<script src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsP3.js"></script>
-<script src="https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/js/templateSubmit.js"></script>
+<script src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsP1.js"></script>
+<!-- <script src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsG.js"></script> -->
+<script src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsP2.js"></script>
+<script src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/templateOptionsP3.js"></script>
+<script src="https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/templateSubmit.js"></script>
 

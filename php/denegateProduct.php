@@ -59,7 +59,7 @@
         $resultRol = $resRol[0];
         $makerTag = $resRol[1];
     
-        $link = $resultRol == '3'? '<a style="color: #2271b3 !important" href="https://plataforma.kalstein.net/index.php/fabricante/productos/editar?edit='.$denegate_aid.'">Edit publication</a>' : '<a href="https://plataforma.kalstein.net/index.php/distribuidor/productos/editar?edit='.$denegate_aid.'">Edit publication</a>';
+        $link = $resultRol == '3'? '<a style="color: #2271b3 !important" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/productos/editar?edit='.$denegate_aid.'">Edit publication</a>' : '<a href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/editar?edit='.$denegate_aid.'">Edit publication</a>';
     
         $senderId = $acc_id;
         $destinatarioId = $resultMaker;
@@ -98,9 +98,9 @@
             
             //$mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
             $mail->isSMTP();
-            $mail->Host = 'plataforma.kalstein.net';  // Host de conexión SMTP
+            $mail->Host = 'dev.kalstein.plus/plataforma';  // Host de conexión SMTP
             $mail->SMTPAuth = true;
-            $mail->Username = 'no-reply@plataforma.kalstein.net';                 // Usuario SMTP
+            $mail->Username = 'no-reply@dev.kalstein.plus/plataforma';                 // Usuario SMTP
             $mail->Password = 'XsI2C;6d{++-';                           // Password SMTP
             $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
             $mail->Port = 587;                                    // Puerto SMTP
@@ -110,7 +110,7 @@
             #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
             #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
             
-            $mail->setFrom('no-reply@plataforma.kalstein.net');		// Mail del remitente
+            $mail->setFrom('no-reply@dev.kalstein.plus/plataforma');		// Mail del remitente
             $mail->addAddress($email);     // Mail del destinatario
     
             $position = strpos($email, '@');

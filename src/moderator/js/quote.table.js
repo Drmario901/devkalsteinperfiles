@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
 
     function searchDataProductTbl(consulta, status, dateFrom, dateTo) {
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchQuoteTbl.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchQuoteTbl.php",
             type: "POST",
             data: { consulta, status, dateFrom, dateTo },
         })
@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
             var nextPage = $(this).find("input[name=u]").val();
       
             $.ajax({
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchQuoteTbl.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchQuoteTbl.php',
                 type: "POST",
                 data: { consulta, status, dateFrom, dateTo, u: nextPage },
                 success: function(data) {
@@ -55,7 +55,7 @@ jQuery(document).ready(function($){
             var nextPage = $(this).find("input[name=u]").val();
         
             $.ajax({
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchQuoteTbl.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchQuoteTbl.php',
                 type: "POST",
                 data: { consulta, status, dateFrom, dateTo, u: nextPage },
                 success: function(data) {
@@ -110,7 +110,7 @@ jQuery(document).ready(function($){
         var quote_id = $(this).attr('value');
 
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/cotizacionInfo.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/cotizacionInfo.php',
             method: 'POST', 
             data: {quote_id}
         })
@@ -224,7 +224,7 @@ jQuery(document).ready(function($){
 
     function quoteUpdateStatus(cotizacion_id, cotizacion_status) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/updateStatus.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/updateStatus.php',
             method: 'POST', 
             data: {cotizacion_id, cotizacion_status}
         })
@@ -247,7 +247,7 @@ jQuery(document).ready(function($){
     $(document).on('click', '#btnInfoClientQuote', function(){
         let aid = $(this).val()
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoClientQuote.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoClientQuote.php',
             method: 'POST', 
             data: {aid}
         })
@@ -261,7 +261,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccClient', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoClientAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoClientAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -274,7 +274,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccDistribuitor', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoDistribuitorAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoDistribuitorAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -287,7 +287,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccManufacturer', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoManufacturerAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoManufacturerAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -300,7 +300,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccRental', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoRental&SalesAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoRental&SalesAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -313,7 +313,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccTechnical', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoTechnicalAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoTechnicalAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -326,7 +326,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccScientist', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoScientistAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoScientistAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -339,7 +339,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnViewMoreAccUndetermined', function(){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoUndeterminedAcc.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchInfoUndeterminedAcc.php',
             method: 'POST'
         })
         .done(function(respuesta){            
@@ -352,7 +352,7 @@ jQuery(document).ready(function($){
 
     $(document).on('click', '#btnDonwloadInfoClientQuote', function(){
         let code = $(this).val()
-        window.location.href = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/generateCSVDataClient.php?code='+code
+        window.location.href = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/generateCSVDataClient.php?code='+code
     })
 
     $(document).on('click', '#btnExportAllDataCSV', function(){
@@ -368,7 +368,7 @@ jQuery(document).ready(function($){
         let fecha = Y+'-'+m+'-'+d
 
         if (valor != '' && valor2 != '' || valor3 != '' && valor4 != '' && valor5 != ''){
-            window.location.href = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/generateCSVAllDataClient.php?typeClient='+valor+'&dayShifts='+valor2+'&currentDate='+fecha+'&dateFrom='+valor3+'&dateTo='+valor4+'&typeClient2='+valor5
+            window.location.href = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/generateCSVAllDataClient.php?typeClient='+valor+'&dayShifts='+valor2+'&currentDate='+fecha+'&dateFrom='+valor3+'&dateTo='+valor4+'&typeClient2='+valor5
         }else{
             iziToast.warning({
                 title: 'Caution',
@@ -516,13 +516,13 @@ jQuery(document).ready(function($){
         let email = $(this).attr('email')
 
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchHistoryQuotesAccount.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchHistoryQuotesAccount.php',
             method: 'POST', 
             data: {email}
         })
         .done(function (response){
             $.ajax({
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/moderator/searchHistoryActivityAccount.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/searchHistoryActivityAccount.php',
                 method: 'POST', 
                 data: {email}
             })

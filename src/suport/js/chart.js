@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    let plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/';
+    let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/';
 
     let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'June', 'Julio', 'Agosto ', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 

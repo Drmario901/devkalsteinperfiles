@@ -1,6 +1,6 @@
 var verify = false;
 
-var plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/';
+var plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
 
 jQuery(document).ready(function($){
 
@@ -131,7 +131,7 @@ jQuery(document).ready(function($){
                                     message: 'Validate successful!',
                                     position: 'center',
                                 });
-                                window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/products';
+                                window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/products';
                             }
                             else{
                                 iziToast.error({
@@ -205,7 +205,7 @@ jQuery(document).ready(function($){
                                             message: 'Message sent successful!',
                                             position: 'center',
                                         });
-                                        window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/products';
+                                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/products';
                                     }
                                     else{
                                         iziToast.error({
@@ -250,7 +250,7 @@ jQuery(document).ready(function($){
         console.log(quote_id)
 
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getAccessoryInfo.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getAccessoryInfo.php',
             method: 'POST', 
             data: {quote_id}
         })

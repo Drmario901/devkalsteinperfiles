@@ -181,7 +181,7 @@ document.getElementById('p3Img01BtnClearG').addEventListener('click', function()
         cont.style.top = '21mm';
         cont.style.left = '131mm';
     } */
-    img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
+    img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
     checkbox.checked = true;
 });
 
@@ -228,7 +228,7 @@ document.getElementById('p3Img02BtnClearG').addEventListener('click', function()
     let checkbox = document.getElementById('p3Img02Display');
     let p3Img03 = document.querySelector('.p2img-03');
     img.style.display = 'block';
-    img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/img2p.png';
+    img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/img2p.png';
     checkbox.checked = true;
     p3Img03.style.bottom = '3mm';
 });
@@ -276,7 +276,7 @@ document.getElementById('p3Img03BtnClearG').addEventListener('click', function()
     let p3Img02 = document.querySelector('.p2img-02');
     let checkbox = document.getElementById('p3Img03Display');
     img.style.display = 'block';
-    img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/img1p.png';
+    img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/img1p.png';
     checkbox.checked = true;
     p3Img02.style.top = '79.9mm';
 });
@@ -300,14 +300,14 @@ document.querySelector('#p3ImgBtnClearG').addEventListener('click', function(){
         cont.style.top = '21mm';
         cont.style.left = '131mm';
     } */
-    img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
+    img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
     checkbox.checked = true;
 
     // IMG02
     let img2 = document.getElementById('p3P2');
     let checkbox2 = document.getElementById('p3Img02Display');
     img2.style.display = 'block';
-    img2.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/img2p.png';
+    img2.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/img2p.png';
     checkbox2.checked = true;
     let p3Img02 = document.querySelector('.p2img-02');
     p3Img02.style.top = '79.9mm';
@@ -316,7 +316,7 @@ document.querySelector('#p3ImgBtnClearG').addEventListener('click', function(){
     let img3 = document.getElementById('p3P3');
     let checkbox3 = document.getElementById('p3Img03Display');
     img3.style.display = 'block';
-    img3.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/img1p.png';
+    img3.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/img1p.png';
     checkbox3.checked = true;
     let p3Img03 = document.querySelector('.p2img-03');
     p3Img03.style.bottom = '3mm';

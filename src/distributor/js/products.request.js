@@ -1,5 +1,5 @@
-/*let plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/';
-let domain = 'https://plataforma.kalstein.net/index.php/distributor/';*/
+/*let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
+let domain = 'https://dev.kalstein.plus/plataforma/index.php/distributor/';*/
 
 
 function validateProductData(name, brand, model, description, category, fileInput, stock, status,

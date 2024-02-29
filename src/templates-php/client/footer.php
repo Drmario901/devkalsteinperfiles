@@ -1,7 +1,7 @@
-<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
+<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
     <div class="container">
         <div>
-            <img class='kalstein-logo-footer' src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
+            <img class='kalstein-logo-footer' src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
             <p><span data-i18n="client:dejaSaber">Déjanos saber lo que necesitas y nosotros nos encargaremos del resto</span></p>
         </div>
         <div>

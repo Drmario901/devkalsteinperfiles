@@ -24,9 +24,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/quotes/" data-i18n="support:allOrders" >Todas las ordenes</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas" >Ordenes Procesadas</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders" >Ordenes Canceladas</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="support:allOrders" >Todas las ordenes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas" >Ordenes Procesadas</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders" >Ordenes Canceladas</a>
         </nav>
         
         <br>
@@ -164,7 +164,7 @@
             /* alert(form); */
 
             /* $.ajax({
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php',
                 method: 'POST', */
                 /* dataType: 'json', */
                /*  data: form
@@ -174,7 +174,7 @@
                 /* console.log(respuesta);
                 console.log(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
                /*  alert(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
-                /* window.location = "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/Suport_Quotes.php"; */
+                /* window.location = "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/Suport_Quotes.php"; */
             /* });
 
         });

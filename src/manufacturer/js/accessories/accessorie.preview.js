@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
         console.log(quote_id);
 
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getAccessoryInfo.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getAccessoryInfo.php',
             method: 'POST',
             data: { quote_id }
         })

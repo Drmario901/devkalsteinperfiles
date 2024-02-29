@@ -4,7 +4,7 @@
     
     El link utilizado para las pruebas en el hosting sera:
     
-    https://plataforma.kalstein.net/test/HolaMundo.php
+    https://dev.kalstein.plus/plataforma/test/HolaMundo.php
 
     Nombres de las tablas a usar:
     

@@ -45,7 +45,7 @@
             <div style="width: 100%; background-color: #fff;">
                 <div style="width: 50%; margin-left: 25%;">
                     <div style="width: 100%; color: #000;">
-                        <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
+                        <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
                         <h1 style="text-align: center; color: #000;">Hola, '.$nameEmail.'</h1>
                         <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gracias por iniciar el proceso de creación de su nueva cuenta Kalstein France. Queremos asegurarnos de que realmente es usted. Por favor, introduzca el siguiente código de verificación cuando se le solicite. Si no desea crear una cuenta, puede omitir este mensaje.</p>
                         <p style="text-align: center; color: #000; font-size: 1.2em; font-weight: bold;">Código de verificación</p>

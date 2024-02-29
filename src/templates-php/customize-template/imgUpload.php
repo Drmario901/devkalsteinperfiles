@@ -1,5 +1,5 @@
 <?php
-$directorioDestino = '/home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/ImgUpload';
+$directorioDestino = '/home/he270716/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/ImgUpload';
 
 if (!empty($_FILES['imagenes']['name'][0])) {
     $imagenes = $_FILES['imagenes'];

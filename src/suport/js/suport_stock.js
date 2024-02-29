@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
     function Stock_suport(inputSearch, category){
         
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/suport_stock.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/suport_stock.php",
             type: "POST",
             data: {inputSearch, category},
         })
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
     category();  
     function category(consulta) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
             type: 'POST',
             data: { consulta },
         })
@@ -64,7 +64,7 @@ jQuery(document).ready(function($){
 
         console.log('detectó');
 
-        let form = $("<form action='https://plataforma.kalstein.net/index.php/addreports/'" + "' method='get' hidden>" +
+        let form = $("<form action='https://dev.kalstein.plus/plataforma/index.php/addreports/'" + "' method='get' hidden>" +
             "<input type='hidden' name='edit' value='" + edit_id + "' /></form>");
 
         $('body').append(form);

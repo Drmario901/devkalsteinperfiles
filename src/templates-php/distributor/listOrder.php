@@ -111,7 +111,7 @@
                                     </center>
                                 </td>
                                 <td>
-                                    <a href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
+                                    <a href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
                                 </td>
                                 <td>
                                     <select name='cotizacion_status' style='color: #000 !important; border: 1px solid #aaa !important; border-radius: 4px' class='status-select''>

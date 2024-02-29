@@ -20,9 +20,9 @@
         ?>
     
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
+            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
         </nav>
         
         <br>
@@ -103,7 +103,7 @@
                 let form = $("#addservices_form").serialize();
                 /* alert(form); */
                 $.ajax({
-                    url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/service-update.php",
+                    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/service-update.php",
                     method: "POST",
                     data: form
                 })
@@ -117,7 +117,7 @@
                             position: 'bottomLeft'
                     });
                         $("#addservices_form")[0].reset()
-                        window.location.href = 'https://plataforma.kalstein.net/index.php/support/services/'
+                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/support/services/'
                     }
 
                     /* alert(response.id + ", " + response.service + ", " + response.company) */

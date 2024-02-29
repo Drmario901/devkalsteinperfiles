@@ -173,7 +173,7 @@ jQuery(document).ready(function($){
 
     function validarCorreo(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/searchAccount.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchAccount.php',
             type: 'POST',
             data: {consulta},
         })
@@ -200,7 +200,7 @@ jQuery(document).ready(function($){
 
     function registrarCuenta(consulta, consulta1){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/registerAccount.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/registerAccount.php',
             type: 'POST',
             data: {consulta, consulta1},
         })
@@ -220,7 +220,7 @@ jQuery(document).ready(function($){
 
     function enviarCorreo(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/testmail.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/testmail.php',
             type: 'POST',
             data: {consulta},
         })
@@ -244,7 +244,7 @@ jQuery(document).ready(function($){
 
     function reenviarCorreo(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/newCodeValidation.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/newCodeValidation.php',
             type: 'POST',
             data: {consulta},
         })
@@ -258,7 +258,7 @@ jQuery(document).ready(function($){
 
     function validarCode(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/validarCode.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/validarCode.php',
             type: 'POST',
             data: {consulta},
         })

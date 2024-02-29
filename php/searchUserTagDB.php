@@ -85,7 +85,7 @@
                     $elemento = "
                     <li>
                         <div class='user-container'>
-                            <img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/$image' class='user-image'> 
+                            <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/$image' class='user-image'> 
                             <div class='user-info'>
                                 <a class='user-link' href='#' value='$userTag'> $name ($userTag)</a>
                             </div>

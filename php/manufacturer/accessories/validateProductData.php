@@ -104,7 +104,7 @@
         $path = __DIR__ .'/../../src/images/upload/';         // home4545/testing.kalstei ...
         $uploadFile   = $path.basename($newName);             // home4545/testing.kalstei ... images/upload/64asd55645.png
 
-        $uploadName = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$newName; // https://testing.kalstei ... images/upload/64asd55645.png
+        $uploadName = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$newName; // https://testing.kalstei ... images/upload/64asd55645.png
     }
     else $file = '';
 

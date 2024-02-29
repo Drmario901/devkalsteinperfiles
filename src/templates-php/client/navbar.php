@@ -1,7 +1,7 @@
 <header class='header' data-header>
     <div class='container'>
         <h1 class='mt-auto pb-3'>
-            <a id='btn-logo' href='https://plataforma.kalstein.net/'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
+            <a id='btn-logo' href='https://dev.kalstein.plus/plataforma/'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
         </h1>                
         <button class='menu-toggle-btn icon-box' data-menu-toggle-btn aria-label='Toggle Menu'>
             <span class='material-symbols-rounded  icon' style='color: #213280'>menu</span>
@@ -34,7 +34,7 @@
                     <li>
                         <a href='#' class='header-profile'>
                             <figure class='profile-avatar' style='margin-top: 0.5rem;'>
-                                <img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/<?php echo $urlImagePerfil?>' alt='Profile 1' style='width: 50px; height: 50px'>
+                                <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/<?php echo $urlImagePerfil?>' alt='Profile 1' style='width: 50px; height: 50px'>
                             </figure>                            
                             <div>
                                 <p class='profile-title' style='color: #000;'><?php echo $name." ".$lastname?></p>
@@ -96,7 +96,7 @@
     var link = document.getElementById('diagnosis-app');
 
         link.onclick = function() {
-            window.location.href = 'https://plataforma.kalstein.net/diagnosis/diagsys.php';
+            window.location.href = 'https://dev.kalstein.plus/plataforma/diagnosis/diagsys.php';
         };
     </script>
 

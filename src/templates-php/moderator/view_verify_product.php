@@ -74,7 +74,7 @@
                     echo "
                     <script>
                         alert('another user is in this task');
-                        window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/products';
+                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/products';
                     </script>
                     ";
                 }
@@ -129,7 +129,7 @@
 
                     $divpdf = "
                         <b class='d-inline'>Manual</b>:
-                        <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/manuals/upload/$pdf'>
+                        <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/manuals/upload/$pdf'>
                         <i class='fa-solid fa-file-pdf'></i>$namepdf.pdf</a>
                         <input class='d-inline' type='checkbox' id='manual'>
                     ";
@@ -150,7 +150,7 @@
 
                     $divpdfcat = "
                         <b class='d-inline'>Catalog</b>:
-                        <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>
+                        <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>
                         <i class='fa-solid fa-file-pdf'></i>$namepdf.pdf</a>
                         <input class='d-inline' type='checkbox' id='catalog'><br><br>
                     ";

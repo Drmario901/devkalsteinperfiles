@@ -20,9 +20,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
+            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
             <hr class="mt-0 mb-4">
         </nav>
         
@@ -80,7 +80,7 @@
             let form = $("#addservices_form").serialize();
             /* alert(form); */
             $.ajax({
-                url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/service_insert.php",
+                url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/service_insert.php",
                 method: "POST",
                 data: form
             })

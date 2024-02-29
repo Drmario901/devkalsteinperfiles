@@ -16,16 +16,16 @@
 
 
     if ($acc_img == ''){
-        $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
+        $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
     }else{
-        $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
+        $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
     }
 
 ?>
 <div class="container">
 
     <h1 class='mt-auto pb-3'>
-        <a id='btn-logo' href='https://dev.kalstein.plus/plataforma/distribuidor/dashboard/'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
+        <a id='btn-logo' href='https://dev.kalstein.plus/plataforma/distribuidor/dashboard/'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
     </h1>
 
     <button class='menu-toggle-btn icon-box' data-menu-toggle-btn aria-label='Toggle Menu'>

@@ -21,9 +21,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/support/reports/" target="__blank" data-i18n="support:listReports" >List Reports
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/reports/" target="__blank" data-i18n="support:listReports" >List Reports
             </a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/support/reports/management" target="__blank" data-i18n="support:reportManagement" >Report Management</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/reports/management" target="__blank" data-i18n="support:reportManagement" >Report Management</a>
         </nav>
         
         <br>

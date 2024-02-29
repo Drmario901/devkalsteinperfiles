@@ -19,7 +19,7 @@
                     </div>
                     <div class='card-body text-center' style='margin: 0 auto;'>
                         <img class='img-account-profile rounded-circle mb-2'
-                            src='<?php echo isset($outerClient) ? $urlImagePerfil : 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/'.$urlImagePerfil?>'
+                            src='<?php echo isset($outerClient) ? $urlImagePerfil : 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/'.$urlImagePerfil?>'
                             alt>
                         <div class='small font-italic text-muted mb-4'>
                             JPG o PNG
@@ -266,7 +266,7 @@
                                 <div class='custom-file mt-3 mb-3'>
                                     <label for='catalogPDF' class='drop-container' id='dropcontainerImage'>
                                         <span class='drop-title'>Select or drag and drop an image</span>
-                                        <img class='drop-image' src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png' alt='jpg/png'>
+                                        <img class='drop-image' src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png' alt='jpg/png'>
                                         <img id='thumbnail'/>
                                     </label>
                                     <input type='file' id='i-uploadImageIDCard' class='filedrop-input'>
@@ -283,14 +283,14 @@
                         }else{
                             $html.= "
                                 <img class='img-account-profil mb-2' style='max-height: 16rem;'
-                                    src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'
+                                    src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'
                                     alt>
                                 <div class='small font-italic text-muted mb-4'>
                                     $iDocument
                                 </div>
                                 <div style='margin: 0 auto; width: 5rem; height: 3rem;'>
                                     <img class='img-account-profil mb-2'
-                                        src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/verify.png'
+                                        src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/verify.png'
                                         alt>
                                 </div>
                             ";
@@ -313,7 +313,7 @@
                                 <div class='custom-file mt-3 mb-3'>
                                     <label for='catalogPDF' class='drop-container' id='dropcontainerImage'>
                                         <span class='drop-title' data-i18n='client:selectDrop' >Select or drag and drop an image</span>
-                                        <img class='drop-image' src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png' alt='jpg/png'>
+                                        <img class='drop-image' src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png' alt='jpg/png'>
                                         <img id='thumbnail'/>
                                     </label>
                                     <input type='file' id='i-uploadImageTaxDocument' class='filedrop-input'>
@@ -330,14 +330,14 @@
                         }else{
                             $html.= "
                                 <img class='img-account-profil mb-2'
-                                    src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$company_image_rif'
+                                    src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$company_image_rif'
                                     alt>
                                 <div class='small font-italic text-muted mb-4'>
                                     $companyRif
                                 </div>
                                 <div style='margin: 0 auto; width: 5rem; height: 3rem;'>
                                     <img class='img-account-profil mb-2'
-                                        src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/verify.png'
+                                        src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/verify.png'
                                         alt>
                                 </div>
                             ";

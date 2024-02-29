@@ -1128,11 +1128,11 @@ document.querySelector('#p1BackgroundCheck').addEventListener('change', function
     if (checkbox.checked) {
         elementToShowHide.style.display = 'block';
         texto.style.color = 'white';
-        img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/k+blanco.png';
+        img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/k+blanco.png';
     } else {
         elementToShowHide.style.display = 'none';
         texto.style.color = '#333';
-        img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/k+azul.png';
+        img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/k+azul.png';
     }
 });
 
@@ -1501,7 +1501,7 @@ document.getElementById('p1Img02FileInput').addEventListener('change', function(
 document.querySelector('#p1Img02BtnClearG').addEventListener('click', function() {
 /* if (disp !== 2){ */
     let displayCheckboxImg02 = document.querySelector('#p1Img02Display');
-    let imagenPredeterminadaSrc = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
+    let imagenPredeterminadaSrc = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
     let imagenExistente = document.getElementById('p1Img02');
     imagenExistente.src = imagenPredeterminadaSrc;
 
@@ -1683,9 +1683,9 @@ document.querySelector('#p1Img03BtnClearG').addEventListener('click', function()
     bgCheckbox2.checked = true; */
     let imagenPredeterminadaSrc;
     if (bgCheckbox.checked){
-        imagenPredeterminadaSrc = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/k+blanco.png';
+        imagenPredeterminadaSrc = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/k+blanco.png';
     } else {
-        imagenPredeterminadaSrc = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/k+azul.png';
+        imagenPredeterminadaSrc = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/k+azul.png';
     }
 
 
@@ -2166,9 +2166,9 @@ document.querySelector('#p1FooterBtnClearG').addEventListener('click', function(
     bgCheckbox.checked = true;
     bgCheckbox2.checked = true; */
     if (bgCheckbox.checked){
-        imagenPredeterminadaSrc = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/k+blanco.png';
+        imagenPredeterminadaSrc = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/k+blanco.png';
     } else {
-        imagenPredeterminadaSrc = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/k+azul.png';
+        imagenPredeterminadaSrc = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/k+azul.png';
     }
 
     imagenExistente.src = imagenPredeterminadaSrc;

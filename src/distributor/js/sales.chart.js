@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-    let plugin_dir = 'https://plataforma.kalstein.net/wp-local/wp-content/plugins/kalsteinPerfiles/';
+    let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/';
 
 
 

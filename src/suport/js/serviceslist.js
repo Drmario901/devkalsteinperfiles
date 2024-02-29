@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
 
     function tablaconsulta(inputSearch, status, category){
         $.ajax({
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
             type: "POST",
             data: {inputSearch, status, category},
         })
@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
     function tblListServicePagination() {
         function tableContent(nextPage) {
             $.ajax({
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php',
                 type: "GET",
                 data: { e: nextPage },
                 success: function (data) {
@@ -212,7 +212,7 @@ jQuery(document).ready(function($) {
                 
         $.ajax({
             contentType: "multipart/form-data",
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/service_insert.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/service_insert.php',
             type: 'POST', 
             data: formData, 
             dataType: 'text', 
@@ -226,7 +226,7 @@ jQuery(document).ready(function($) {
                     message: 'Data updated successfully.',
                     position: 'center'
                 });
-                window.location.href = 'https://plataforma.kalstein.net/index.php/support/services';
+                window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/support/services';
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText);
@@ -241,7 +241,7 @@ jQuery(document).ready(function($) {
 
     /*function dataCMB(consulta) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/selectservice.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/selectservice.php',
             type: 'POST',
             data: { consulta },
         })
@@ -258,7 +258,7 @@ jQuery(document).ready(function($) {
     function mostrarDatos(consulta){
         $.ajax({
             // Cambia mificherophp.php por el nombre de tu fichero
-            url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php",
+            url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php",
             type: "POST",
             data: {consulta},
         })
@@ -421,7 +421,7 @@ jQuery(document).ready(function($) {
         formData.append('service_tiempo',SE_tiempo);
         formData.append('service_description',SE_descripcion);
         
-        $.ajax({ contentType: "multipart/form-data", url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/service-update.php',
+        $.ajax({ contentType: "multipart/form-data", url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/service-update.php',
             type: 'POST',
             data: formData,
             dataType: 'text',  
@@ -435,7 +435,7 @@ jQuery(document).ready(function($) {
                     message: 'Data updated successfully.',
                     position: 'center'
                 });
-                //window.location.href = 'https://plataforma.kalstein.net/index.php/support/services';
+                //window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/support/services';
             },
             error: function(xhr, status, error){
                 console.log(xhr.responseText);
@@ -450,7 +450,7 @@ jQuery(document).ready(function($) {
         var service_id = $(this).val();
 
         $.ajax({
-            url:'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/serviceinfo.php',
+            url:'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/serviceinfo.php',
             method: 'POST', 
             data: {service_id}
         })
@@ -479,7 +479,7 @@ jQuery(document).ready(function($) {
     category();  
     function category(consulta) {
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php',
             type: 'POST',
             data: { consulta },
         })
@@ -498,7 +498,7 @@ jQuery(document).ready(function($){
         let edit_id = $(this).val();
         console.log('detectó');
 
-        let form = $("<form action='https://plataforma.kalstein.net/index.php/support/services/edit/' method='get' hidden>" +
+        let form = $("<form action='https://dev.kalstein.plus/plataforma/index.php/support/services/edit/' method='get' hidden>" +
             "<input type='hidden' name='edit' value='" + edit_id + "' /></form>");
 
         $('body').append(form);
@@ -512,7 +512,7 @@ jQuery(document).ready(function($){
     function searchCountry(consulta){
 
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/pais.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/pais.php',
             type: 'POST',
             data: {consulta},
         })
@@ -544,7 +544,7 @@ jQuery(document).ready(function($) {
                 ['<button><b>Yes</b></button>', function(instance, toast) {
                     // Realizar una solicitud AJAX para eliminar el servicio
                     $.ajax({
-                        url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/suport/delete-service.php',
+                        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/delete-service.php',
                         type: 'POST',
                         data: { delete_aid },
                     })
@@ -558,7 +558,7 @@ jQuery(document).ready(function($) {
                                 position: 'center',
                                 onClosing: function() {
                                     setTimeout(function() {
-                                        window.location.href = 'https://plataforma.kalstein.net/index.php/support/services';
+                                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/support/services';
                                     }, 1000);
                                 }
                             });

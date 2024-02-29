@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 
             $.ajax({
 
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/getUnseenMessages.php'
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getUnseenMessages.php'
 
             })
 
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
                     var audio = new Audio();
 
-                    audio.src = "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/audio/inbox.tone.mp3";
+                    audio.src = "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/audio/inbox.tone.mp3";
 
                     audio.play();
 

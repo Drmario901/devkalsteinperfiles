@@ -22,9 +22,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock"><i class="fa-solid fa-share" data-i18n='manofacturer:volver'></i> Volver</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock"><i class="fa-solid fa-share" data-i18n='manofacturer:volver'></i> Volver</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
         </nav>
         
         <hr class="mt-0 mb-4">

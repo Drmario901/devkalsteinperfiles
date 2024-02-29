@@ -25,7 +25,7 @@
 <div class="container">
 
     <h1 class='mt-auto pb-3'>
-        <a id='btn-logo' href='https://plataforma.kalstein.net/index.php/fabricante/dashboard'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
+        <a id='btn-logo' href='https://dev.kalstein.plus/plataforma/index.php/fabricante/dashboard'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
     </h1>
 
     <button class='menu-toggle-btn icon-box' data-menu-toggle-btn aria-label='Toggle Menu'>
@@ -40,7 +40,7 @@
             <ul class="navbar-list">
                 <div class="d-flex flex-row">
                     <li>
-                        <a href='https://plataforma.kalstein.net/index.php/fabricante/inbox/' id='link-mail' class='navbar-link icon-box'>
+                        <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/inbox/' id='link-mail' class='navbar-link icon-box'>
                             <span class='material-symbols-rounded icon position-relative'>
                                 mail
                                 <span id='messagesBaloon' class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style='font-family: sans-serif; font-size: 10px' hidden>
@@ -51,7 +51,7 @@
                     </li>
         
                     <li>
-                        <a href='https://plataforma.kalstein.net/index.php/fabricante/configuracion/' id='link-config' class='navbar-link icon-box'>
+                        <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/configuracion/' id='link-config' class='navbar-link icon-box'>
                             <span class='material-symbols-rounded icon'>settings</span>
                         </a>
                     </li>
@@ -86,52 +86,52 @@
             <ul class="navbar-list">
                 
                 <li>
-                    <a id="link-home" href="https://plataforma.kalstein.net/index.php/fabricante/dashboard" class="navbar-link icon-box">
+                    <a id="link-home" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/dashboard" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:editarPlantilla'>Dashboard</span>
                     </a>
                 </li>
     
                 <li>
-                    <a id="link-stock" href="https://plataforma.kalstein.net/index.php/fabricante/productos" class="navbar-link icon-box">
+                    <a id="link-stock" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/productos" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:productos'>Productos</span>
                     </a>
                 </li>
     
                 <li>
-                    <a id="link-list-order" href="https://plataforma.kalstein.net/index.php/fabricante/ordenes" class="navbar-link icon-box">
+                    <a id="link-list-order" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:ordenes'>Órdenes</span>
                     </a>
                 </li>
 
                 <li>
-                    <a id="link-catalogs" href="https://plataforma.kalstein.net/index.php/fabricante/catalogos" class="navbar-link icon-box">
+                    <a id="link-catalogs" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/catalogos" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:catalogos'>Catálogos</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a id="link-shop" href="https://plataforma.kalstein.net/index.php/fabricante/tienda" class="navbar-link icon-box">
+                    <a id="link-shop" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/tienda" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:tienda'>Tienda</span>
                     </a>
                 </li>
     
                 <li>
-                    <a id="link-sales-report" href="https://plataforma.kalstein.net/index.php/fabricante/ventas" class="navbar-link icon-box">
+                    <a id="link-sales-report" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ventas" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:reportesVentas'>Reportes de ventas</span>
                     </a>
                 </li>
 
 
                 <li class='generate-quote'> <!-- only style class-->
-                    <a id='btnGenQuote' href="https://plataforma.kalstein.net/index.php/fabricante/productos/agregar" class='navbar-link icon-box text-white' style='color: white !important;'>
+                    <a id='btnGenQuote' href="https://dev.kalstein.plus/plataforma/index.php/fabricante/productos/agregar" class='navbar-link icon-box text-white' style='color: white !important;'>
                         <span data-i18n='manofacturer:agregarProductoMayus'>AGREGAR PRODUCTO</span>
                     </a>
                 </li>
             </ul>
 
         </div>
-        <script src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/manufacturer/js/inbox-notification.js"></script>
-        <script src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/js/script.cot2.lite.manu.js"></script>
+        <script src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/manufacturer/js/inbox-notification.js"></script>
+        <script src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/js/script.cot2.lite.manu.js"></script>
     </nav>
 </div>
 <div class="container flex-column">

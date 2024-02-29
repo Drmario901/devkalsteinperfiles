@@ -57,9 +57,9 @@
             
             //$mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
             $mail->isSMTP();
-            $mail->Host = 'plataforma.kalstein.net';  // Host de conexión SMTP
+            $mail->Host = 'dev.kalstein.plus/plataforma';  // Host de conexión SMTP
             $mail->SMTPAuth = true;
-            $mail->Username = 'no-reply@plataforma.kalstein.net';                 // Usuario SMTP
+            $mail->Username = 'no-reply@dev.kalstein.plus/plataforma';                 // Usuario SMTP
             $mail->Password = '-GAo^)d)F}j8';                           // Password SMTP
             $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
             $mail->Port = 587;                                    // Puerto SMTP
@@ -69,7 +69,7 @@
             #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
             #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
             
-            $mail->setFrom('no-reply@plataforma.kalstein.net');		// Mail del remitente
+            $mail->setFrom('no-reply@dev.kalstein.plus/plataforma');		// Mail del remitente
             $mail->addAddress($email);     // Mail del destinatario
     
             $position = strpos($email, '@');
@@ -81,7 +81,7 @@
                 <div style="width: 100%; background-color: #fff;">
                     <div style="width: 50%; margin-left: 25%;">
                         <div style="width: 100%; color: #000;">
-                            <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
+                            <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
                             <h1 style="text-align: center; color: #000;">Hi, '.$nameEmail.'</h1>
                             <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parece que nuestro equipo de moderadores está teniendo problemas para identificar sus datos por las siguientes razones:</p>
                             <p style="text-align: center; color: #000; font-weight: bold;">'.$message.'</p>

@@ -21,10 +21,10 @@
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order" data-i18n='manofacturer:todosPedidos'>Todos los pedidos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/processed" data-i18n='manofacturer:pedidosProcesados'>Pedidos procesados</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/cancelled" data-i18n='manofacturer:pedidosCancelados'>Pedidos cancelados</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/editor-de-plantillas/" data-i18n='manofacturer:editarPlantilla'>Editar plantilla</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order" data-i18n='manofacturer:todosPedidos'>Todos los pedidos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order/processed" data-i18n='manofacturer:pedidosProcesados'>Pedidos procesados</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order/cancelled" data-i18n='manofacturer:pedidosCancelados'>Pedidos cancelados</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/editor-de-plantillas/" data-i18n='manofacturer:editarPlantilla'>Editar plantilla</a>
         </nav>
         
         <br>
@@ -102,7 +102,7 @@
                                     </center>
                                 </td>
                                 <td>
-                                    <a href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
+                                    <a href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
                                 </td>
                                 <td>
                                     <select name='cotizacion_status' style='color: #000 !important; border: 1px solid #aaa !important; border-radius: 4px' class='status-select''>

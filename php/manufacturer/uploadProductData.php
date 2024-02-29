@@ -76,7 +76,7 @@
 
         $thumbnailName = uniqid('', true) . '.jpg';
 
-        $thumbnailPath = "/home/he270716/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$thumbnailName";
+        $thumbnailPath = "/home/he270716/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$thumbnailName";
 
         $imagick = new Imagick();
         $imagick->setResolution(300, 300); 
@@ -272,7 +272,7 @@
         $conexion->query($sql5);
 
         // Ruta de la galería de imágenes 
-        $gallery_image = 'https://plataforma.kalstein.net/wp-content/uploads/kalsteinQuote/';
+        $gallery_image = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/';
 
         $image_path = $newName;
         $sql7 = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value)
