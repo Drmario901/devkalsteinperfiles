@@ -185,5 +185,6 @@
     "accesoriosAdic":"Additional accessories",
     "ver":"Show",
     "descripcionProducto":"Product Description",
-    "accesos":"Access"
+    "accesos":"Access",
+    "addEmail": "Enter your email address"
 }

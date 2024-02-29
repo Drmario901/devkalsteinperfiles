@@ -185,5 +185,6 @@
     "deleteTable": "Eliminar",
     "dataNotFound": "No se encontraron datos",
     "previo": "Anterior",
-    "next": "Siguiente"
+    "next": "Siguiente",
+    "addEmail": "Ingresa tu dirección de correo electrónico"
 }
