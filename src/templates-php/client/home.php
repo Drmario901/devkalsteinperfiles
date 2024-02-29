@@ -27,7 +27,7 @@
             
             require __DIR__. '/../../../php/translateTextBanner.php';
             $banner = 'banner_text_welcome';
-            translateTextBanner($banner);
+            $banner_text = translateTextBanner($banner);
             include 'banner.php';
         ?>
         <div class='row'>
