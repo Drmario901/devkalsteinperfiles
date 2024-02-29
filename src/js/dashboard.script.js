@@ -5534,6 +5534,7 @@ jQuery(document).ready(function($){
 
     }
 
+
     function searchCountrySettingsEU(consulta){
         $.ajax({
             url: plugin_quote + '/classes/searchCountryEUsettings.php',
@@ -5636,15 +5637,6 @@ jQuery(document).ready(function($){
     }
 
     setInterval(keepSessionAlive, 300000); 
-
-    function createAlert(type, message) {
-        const message = i18next.t(alerts[message], { ns: 'alerts' });
-        
-        iziToast[type]({
-          message: message
-        });
-      };
-
 
 })
 
