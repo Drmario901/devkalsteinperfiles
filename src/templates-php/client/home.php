@@ -15,6 +15,7 @@
             $banner = 'banner_text_welcome';
             $banner_text = translateTextBanner($banner);
             include 'banner.php';
+            sprintf($banner_text, $name, $lastname);
         ?>
         <div class='row'>
             <div class='col-12 col-md-4'>
