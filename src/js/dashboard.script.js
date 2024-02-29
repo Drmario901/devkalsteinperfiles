@@ -1,12 +1,12 @@
 jQuery(document).ready(function($){
 
-    const createAlert = (type, message) => {
+    /* const createAlert = (type, message) => {
         const message = i18next.t(alerts[message], { ns: 'alerts' });
         
         iziToast[type]({
           message: message
         });
-      };
+      }; */
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
