@@ -186,5 +186,7 @@
     "ver": "Visa",
     "descripcionProducto": "Produktbeskrivning",
     "accesos":"Tillgång",
-    "addEmail": "Ange din e-postadress"
+    "addEmail": "Ange din e-postadress",
+    "zipPlaceHolder": "Ange ditt postnummer",
+    "organizationNamePlaceholder": "Ange namnet på din organisation"
 }
