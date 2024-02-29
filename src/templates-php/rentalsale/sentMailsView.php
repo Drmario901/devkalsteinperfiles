@@ -14,13 +14,13 @@
 <div class="container">
     <div class="email-app mb-4">
         <nav>
-            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff !important" class="btn btn-danger btn-block">New Message</a>
+            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff !important" class="btn btn-danger btn-block" data-i18n="rentalsale:elementNewMessage">New Message</a>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i> Inbox</a>
+                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i> <span data-i18n="rentalsale:aInbox">Inbox</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/sent"><i class="fa fa-rocket"></i> Sent</a>
+                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/sent"><i class="fa fa-rocket"></i> <span data-i18n="rentalsale:aSent">Sent</span></a>
                 </li>
             </ul>
         </nav>
@@ -61,7 +61,7 @@
                         $sender_avatar_url = $sender_avatar_url ? 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$sender_avatar_url : $default_avatar_url;
                         echo '<img class="avatar" src="' . $sender_avatar_url . '">';
                         echo '<div class="from">';
-                        echo '<span style="color: #000">From: ' . $message['remitente_id'] . '</span>';
+                        echo '<span style="color: #000"><strong data-i18n="rentalsale:labelFrom">From:</strong> ' . $message['remitente_id'] . '</span>';
                         echo '</div>';
                         echo '</div>';
 
@@ -72,7 +72,7 @@
                         $recipient_avatar_url = $recipient_avatar_url ? 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$recipient_avatar_url : $recipient_default_avatar_url;
                         echo '<img class="avatar" src="' . $recipient_avatar_url . '">';
                         echo '<div class="to">';
-                        echo '<span style="color: #000">To: ' . $message['destinatario_id'] . '</span>';
+                        echo '<span style="color: #000"><strong data-i18n="rentalsale:labelTo">To:</strong> ' . $message['destinatario_id'] . '</span>';
                         echo '</div>';
                         echo '<div class="date" style="text-align: right;">';
                         $formatted_date = date('F j, Y, g:i a', strtotime($message['fecha_envio']));
@@ -86,12 +86,12 @@
                         echo '<p>' . $message['contenido'] . '</p>';
                         echo '</div>';
                     } else {
-                        echo '<div class="title">Message not found</div>';
+                        echo '<div class="title" data-i18n="rentalsale:MessageNotFound">Message not found</div>';
                     }
 
                     $conexion->close();
                 } else {
-                    echo '<div class="title">Invalid message ID</div>';
+                    echo '<div class="title" data-i18n="rentalsale:InvalidMessageID">Invalid message ID</div>';
                 }
                 ?>
             </div>

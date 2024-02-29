@@ -11,35 +11,33 @@
 </header>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <?php
-require __DIR__.'/../../../php/conexion.php';
+    require __DIR__.'/../../../php/conexion.php';
 
-$query = "SELECT 
-            wp_account.account_nombre, 
-            wp_account.account_apellido, 
-            wp_account.account_correo, 
-            wp_paises.en AS nombre_pais, 
-            wp_account.account_url_image_perfil, 
-            wp_cotizacion.rental_status
-          FROM wp_account
-          INNER JOIN wp_cotizacion ON wp_account.account_correo = wp_cotizacion.cotizacion_id_user
-          INNER JOIN wp_paises ON wp_account.account_pais = wp_paises.iso 
-          WHERE wp_cotizacion.rental_status IN ('activated', 'disable')";
+    $query = "SELECT 
+                wp_account.account_nombre, 
+                wp_account.account_apellido, 
+                wp_account.account_correo, 
+                wp_paises.en AS nombre_pais, 
+                wp_account.account_url_image_perfil, 
+                wp_cotizacion.rental_status
+            FROM wp_account
+            INNER JOIN wp_cotizacion ON wp_account.account_correo = wp_cotizacion.cotizacion_id_user
+            INNER JOIN wp_paises ON wp_account.account_pais = wp_paises.iso 
+            WHERE wp_cotizacion.rental_status IN ('activated', 'disable')";
 
-
-
-$result = mysqli_query($conexion, $query);
+    $result = mysqli_query($conexion, $query);
 
 
-$itemsPerPage = 4; 
-$totalItems = mysqli_num_rows($result);
+    $itemsPerPage = 4; 
+    $totalItems = mysqli_num_rows($result);
 
-$page = isset($_GET['i']) ? (int)$_GET['i'] : 1;
-$page = max(1, min($page, ceil($totalItems / $itemsPerPage)));
+    $page = isset($_GET['i']) ? (int)$_GET['i'] : 1;
+    $page = max(1, min($page, ceil($totalItems / $itemsPerPage)));
 
-$offset = ($page - 1) * $itemsPerPage;
-$query .= " LIMIT $offset, $itemsPerPage";
+    $offset = ($page - 1) * $itemsPerPage;
+    $query .= " LIMIT $offset, $itemsPerPage";
 
-$result = mysqli_query($conexion, $query);
+    $result = mysqli_query($conexion, $query);
 ?>
 <style>
         body { margin-top: 20px; }
@@ -76,7 +74,8 @@ $result = mysqli_query($conexion, $query);
         .profile-image {
             max-width: 50px; 
         }
-    </style>
+</style>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -86,13 +85,13 @@ $result = mysqli_query($conexion, $query);
                         <table class="table user-list">
                             <thead>
                                 <tr>
-                                    <th><span>Image</span></th>
-                                    <th><span>Name</span></th>
-                                    <th><span>Country</span></th>
-                                    <th><span>Price</span></th>
-                                    <th><span>Rental time</span></th>
-                                    <th><span>Time left</span></th>
-                                    <th><span>Service details</span></th>
+                                    <th><span data-i18n="rentalsale:spanImage">Image</span></th>
+                                    <th><span data-i18n="rentalsale:placeholderName">Name</span></th>
+                                    <th><span data-i18n="rentalsale:spanCountry">Country</span></th>
+                                    <th><span data-i18n="rentalsale:spanPrice">Price</span></th>
+                                    <th><span data-i18n="rentalsale:spanRentalTime">Rental time</span></th>
+                                    <th><span data-i18n="rentalsale:spanTimeLeft">Time left</span></th>
+                                    <th><span data-i18n="rentalsale:spanServiceDetails">Service details</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -149,7 +148,7 @@ $result = mysqli_query($conexion, $query);
                             </ul>
                         </center>
                     <?php else : ?>
-                        <center><b><p>No services yet.</p></b></center>
+                        <center><b><p data-i18n="rentalsale:NoServicesYet">No services yet.</p></b></center>
                     <?php endif; ?>
                 </div>
             </div>
