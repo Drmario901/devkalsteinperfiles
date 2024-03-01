@@ -2,13 +2,25 @@
 
 jQuery(document).ready(function($){
 
-    const showTranslatedAlert = (type, language) => {
-        const translation = alertsTranslations[language][type];
-        
-        iziToast[type]({
-          message: translation
+
+    function translateAlert(type, msg, lng) {
+        $.ajax({
+            url: plugin_dir + '/php/translations.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                
+                const translation = response[lng][msg];
+                iziToast[type]({
+                    message: translation
+                });
+
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
         });
-      };
+    } 
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -5174,7 +5186,7 @@ jQuery(document).ready(function($){
 
                 
 
-                showTranslatedAlert('supportTicketGerenerated', cookie)
+                translateAlert('success', 'supportTicketGerenerated', cookie)
 
                 // createAlert(success, 'supportTicketGerenerated')
 
