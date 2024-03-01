@@ -10,6 +10,7 @@ jQuery(document).ready(function($){
             .then(response => response.json())
             .then(translation => {
                 // save in a global variable
+                console.log(translation, 'translation')
                 alertsTranslations[lng] = translation;
             });
     }; 
