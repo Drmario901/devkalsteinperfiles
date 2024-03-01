@@ -7,6 +7,9 @@ $dateTo = $_POST['dateTo'];
 $q = $conexion->real_escape_string($_POST['inputSearch']);
 $a = $_POST['status'];
 
+include 'translateText.php';
+translateText();
+
 
     if ($dateTo == '' && $dateFrom == '') {
         if ($q == ''){
@@ -48,13 +51,13 @@ $html = "
 <thead class='headTableForQuote'>
     <tr>
     <td class='fw-bold' style='background-color: #213280; color: white;'>ID</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Name</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>usuario</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>nivel</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>estado</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>agente soporte</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>fecha</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>vista</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:nombre'>Name</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:usuario'>usuario</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:nivel'>nivel</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:estatus'>estado</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:agenteSoporte'>agente soporte</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:fechaTable'>fecha</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;'  data-i17n='client:vista'>vista</td>
     </tr>
 </thead>
 <tbody class='bodyTableForQuote'>
@@ -91,7 +94,7 @@ if ($resultado->num_rows > 0){
     $msjNoData = "
         <div class='contentNoDataQuote'>
         <center><span class='material-symbols-rounded  icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>Datos no encontrados</p></center>
+            <center><p style='color: #000;'  data-i17n='client:dataNotFound'>Datos no encontrados</p></center>
         </div>
     ";
 }

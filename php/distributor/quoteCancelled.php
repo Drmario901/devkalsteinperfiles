@@ -7,18 +7,21 @@ $page = isset($_POST['page']) ? $_POST['page'] : 1;
 $offset = ($page - 1) * $perPage;
 $limit = $perPage;
 
+include 'translateText.php';
+translateText();
+
 $html = "
 <table class='table custom-table'>
     <thead class='headTableForQuote'>
         <tr>
             <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Client</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Product name</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 100px;'>Model</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 80px;'>Quantity</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 100px;'>Status</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 100px;'>Image</th>
-            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Date</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i17n='client:cliente'>Client</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i17n='client:nombreProducto'>Product name</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 100px;' data-i17n='client:model'>Model</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 80px;'  data-i17n='client:cantidad'>Quantity</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 100px;' data-i17n='client:estatus'>Status</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 100px;' data-i17n='client:imagen'>Image</th>
+            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i17n='client:fecha'>Date</th>
         </tr>
     </thead>
     <tbody class='bodyTableForQuote'>
@@ -116,7 +119,7 @@ if ($resultado->num_rows > 0) {
             <td colspan='8'>
                 <div class='contentNoDataQuote'>
                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                    <center><p style='color: #000;'>No data found</p></center>
+                    <center><p style='color: #000;' data-i17n='client:dataNotFound'>No data found</p></center>
                 </div>
             </td>
         </tr>
@@ -134,8 +137,8 @@ $nextPage = $page + 1;
 
 $html .= "
 <div class='pagination'>
-<a id='prevPage' class='page-link'>&laquo; Previous</a>
-<a id='nextPage' class='page-link'>Next &raquo;</a>
+<a id='prevPage' class='page-link' data-i17n='client:previo'>&laquo; Previous</a>
+<a id='nextPage' class='page-link' data-i17n='client:next'>Next &raquo;</a>
 </div>
 ";
 

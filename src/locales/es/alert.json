@@ -63,5 +63,12 @@
     "sureYouWantToDeleteThisService": "¿Está seguro de que desea eliminar este servicio?",
     "serviceNotdeleted": "Servicio no eliminado",
     "serviceDeleted": "Servicio eliminado",
-    "serviceDeletedCanceled": "Servicio eliminado cancelado"
+    "serviceDeletedCanceled": "Servicio eliminado cancelado",
+    "CountDown": "La cuenta se reiniciará en",
+    "textDays": "días",
+    "SalesOfMonth": "Ventas del mes",
+    "PrevMonth": "Mes anterior",
+    "ClientsOfTheMonth": "Clientes del mes",
+    "ProductsSold": "Productos vendidos",
+    "TotalSold": "Total vendido"
 }

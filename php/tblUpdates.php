@@ -17,13 +17,16 @@
 
     $i = 0;
 
+    include 'translateText.php';
+    translateText();
+
     $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
-                    <td scope='col'>Fecha</td>
-                    <td scope='col'>Hora</td>
-                    <td scope='col'>Acciones</td>
+                    <td scope='col' data-i17n='client:fechaTable'>Fecha</td>
+                    <td scope='col' data-i17n='client:horaTable'>Hora</td>
+                    <td scope='col' data-i17n='client:actions'>Acciones</td>
                 </tr>
             </thead>
             <tbody id='tblUpdatesPag'class='bodyTableForQuote'>
@@ -59,7 +62,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                <p>No se encontraron datos</p>
+                <p data-i17n='client:dataNotFound'>No se encontraron datos</p>
             </div>
         ";
     }
@@ -80,11 +83,11 @@ $html .= "
         <div id='currentPageIndicatorUpdates'>Page: $page</div>
         <form id='form-previous-updates' action='' method='get' style='margin-right: 8px'>
             <input id='previous' type='hidden' name='e' value='$prevPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Anterior'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:previo'>
         </form>
         <form id='form-next-updates' action='' method='get'>
             <input id='next' class='next' type='hidden' name='e' value='$nextPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Próximo &raquo;'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
         </form>
     </div>
     <input id='hiddenPage' type='hidden' value='$page'>

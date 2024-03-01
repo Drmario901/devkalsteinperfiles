@@ -7,15 +7,18 @@
 
     $resultado = $conexion->query($consulta);
     $html = '';
+
+    include 'translateText.php';
+    translateText();
                     
     if ($resultado->num_rows > 0) {
         $html.='
                 <table style="width: 100%;">
                     <thead class="headTableForQuote">
                         <tr>
-                            <td scope="col">QUO</td>
-                            <td>Product Qty</td>
-                            <td>Date</td>
+                            <td scope="col" data-i17n="client:itemTabla">QUO</td>
+                            <td data-i17n="client:productQty">Product Qty</td>
+                            <td data-i17n="client:fecha">Date</td>
                         </tr>
                     </thead>
                     <tbody class="bodyTableForQuote">';
@@ -38,7 +41,7 @@
         $html.=' </tbody>
         </table>';
     }else{
-        $html.= '<p>This user has no Quotes</p>';
+        $html.= '<p data-i17n="client:noCotizaciones">This user has no Quotes</p>';
     }
 
     echo $html;

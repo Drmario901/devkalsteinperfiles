@@ -4,11 +4,14 @@
     $consulta2 = "SELECT * FROM wp_account WHERE account_rol_aid = '0' ORDER BY account_aid DESC";   
     $resultado2 = $conexion->query($consulta2);
 
+    include 'translateText.php';
+    translateText();
+
     $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
-                    <td scope='col'>Correo</td>
+                    <td scope='col' data-i17n='client:correo'>Correo</td>
                 </tr>
             </thead>
             <tbody class='bodyTableForQuote'>
@@ -28,7 +31,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                <p>No se encontraron datos</p>
+                <p data-i17n='client:dataNotFound'>No se encontraron datos</p>
             </div>
         ";
     }

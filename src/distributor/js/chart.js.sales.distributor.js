@@ -17,23 +17,32 @@ function sumArray(array) {
 }
 
 
-
 jQuery(document).ready(function($) {
 
     let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
 
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
 
     let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-
 
 
     function prevMonthList(month){
 
 
-
         let res = [];
-
 
 
         for (let i = 5; i >= 0; i--){
@@ -43,17 +52,14 @@ jQuery(document).ready(function($) {
         }
 
 
-
         return res;
 
     }
 
 
-
     let date = new Date();
 
     let prevMonths = prevMonthList(date.getMonth());
-
 
 
     $.ajax({
@@ -75,27 +81,15 @@ jQuery(document).ready(function($) {
         let data = JSON.parse(response);
 
 
-
         // La cuenta se reiniciará en...
 
         $("#will-restart").html(`
-
-            count will restart in ${data.will_restart} days
-
+            ${alertsTranslations.CountDown} ${data.will_restart} ${alertsTranslations.textDays}
         `);
-
-
-
-
 
         let graph_3_quan = data.graph_3_quan;
 
         let graph_3_names = data.graph_3_names;
-
-
-
-
-
 
 
         var ctx3 = document.getElementById('products').getContext('2d');
@@ -110,11 +104,9 @@ jQuery(document).ready(function($) {
 
                 datasets: [{
 
-                    label: 'Products Sold',
+                    label: alertsTranslations.ProductsSold,
 
                     data: graph_3_quan,
-
-                    
 
                     backgroundColor: [
 
@@ -184,8 +176,6 @@ jQuery(document).ready(function($) {
 
         });
 
-        
-
 
 
         let total_sold = sumArray(graph_3);
@@ -194,16 +184,14 @@ jQuery(document).ready(function($) {
 
             <data class="revenue-item-data">${total_sold}</data>
 
-            <p class="revenue-item-text">Total Sold</p>
+            <p class="revenue-item-text">${alertsTranslations.TotalSold}</p>
 
         `);
 
     });
 
 
-
     // DINERO GANADO
-
 
 
         $("#income").html(parse_dec(JSON.parse(response).total_income));

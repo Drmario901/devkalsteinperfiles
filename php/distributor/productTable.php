@@ -32,24 +32,27 @@ $resultado = $conexion->query($consulta);
 
 $i = 0;
 
+include 'translateText.php';
+    translateText();
+
 $html = "
     <table class='table custom-table'>
     <thead class='headTableForQuote'>
         <tr>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>ID</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Name</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Description</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Category</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Weight</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Stock</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Length</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Width</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Height</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Status</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Price ($)</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Image</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Date</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Delete</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' >ID</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:nombre'>Name</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:descripcion'>Description</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:categoria'>Category</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:peso'>Weight</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:inventario'>Stock</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:largo'>Length</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:ancho'>Width</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:alto'>Height</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:estatus'>Status</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:precio'>Price ($)</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:image'>Image</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:fechaTable'>Date</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:eliminar'>Delete</td>
         </tr>
     </thead>
     <tbody class='bodyTableForQuote'>
@@ -87,9 +90,9 @@ if ($resultado->num_rows > 0) {
                     <td>$height</td>
                     <td>$status</td>
                     <td>$price $</td>
-                    <td><button class='material-symbols-rounded'  id='btnView' value='$image'>preview</button><br>View</br></td>
+                    <td><button class='material-symbols-rounded'  id='btnView' value='$image'>preview</button><brdata-i17n='client:see'>View</br></td>
                     <td>$date</td>
-                    <td><button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id'>delete</button></td>
+                    <td><button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id' data-i17n='client:eliminar'>delete</button></td>
                 </tr>
             ";
     }
@@ -99,7 +102,7 @@ if ($resultado->num_rows > 0) {
     $msjNoData = "
             <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded  icon'>sentiment_dissatisfied</span></center>
-                <center><p style='color: #000;'>No data found</p></center>
+                <center><p style='color: #000;' data-i17n='client:dataNotFound'>No data found</p></center>
             </div>
         ";
 }
