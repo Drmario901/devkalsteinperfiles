@@ -35,5 +35,9 @@
     "PrevMonth": "Mes anterior",
     "ClientsOfTheMonth": "Clientes del mes",
     "ProductsSold": "Productos vendidos",
-    "TotalSold": "Total vendido"
+    "TotalSold": "Total vendido",
+    "CurrentlyUploaded": "Actualmente subido",
+    "FileUploaded": "Archivo subido",
+    "textModel": "Model:",
+    "textPrice": "Price:"
 }

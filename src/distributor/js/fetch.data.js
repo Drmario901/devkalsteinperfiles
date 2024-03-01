@@ -1,4 +1,19 @@
 jQuery(document).ready(function($) {
+
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
     
     mostrarDatos($("#dataEdit").val());
 
@@ -59,7 +74,7 @@ jQuery(document).ready(function($) {
 
             if (data.pdf != ''){
                 $('#currentlyUploadedManual').html(`
-                <p><b class='d-inline'>Currently Uploaded</b>:
+                <p><b class='d-inline'>${alertsTranslations.CurrentlyUploaded}</b>:
                 <a target='_blank' style='dislpay: inline; text-decoration: underline' href='${plugin_dir}src/manuals/upload/${data.pdf}'><i class="fa-solid fa-file-pdf"></i> ${data.namepdf}.pdf</a></p>
                 `);
             }
@@ -69,7 +84,7 @@ jQuery(document).ready(function($) {
 
             if (data.catalog != '' ){
                 $('#currentlyUploadedCatalog').html(`
-                <p><b class='d-inline'>Archivo subido</b>:
+                <p><b class='d-inline'>${alertsTranslations.FileUploaded}</b>:
                 <a target='_blank' style='dislpay: inline; text-decoration: underline' href='${plugin_dir}src/catalogs/upload/${data.catalog}'><i class="fa-solid fa-file-pdf"></i> ${data.namecatalog}.pdf</a></p>
                 `);
             }
@@ -151,8 +166,8 @@ jQuery(document).ready(function($) {
                                 <img src="" width="150" style="background-color: white; background-image: url('${accessory_array.fileInput}'); background-size: contain; background-position: 50% 50%;">
                                 <div class="ms-3">
                                     <h6>${accessory_array.name}</h6>
-                                    <p><b>Model: </b> ${accessory_array.model}</p>
-                                    <p><b>Price: </b> ${accessory_array.price} ${money}</p>
+                                    <p><b>${alertsTranslations.textModel} </b> ${accessory_array.model}</p>
+                                    <p><b>${alertsTranslations.textPrice} </b> ${accessory_array.price} ${money}</p>
                                 </div>
                             </div>
                         </div>
