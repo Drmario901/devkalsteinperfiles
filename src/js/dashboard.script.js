@@ -5203,6 +5203,13 @@ jQuery(document).ready(function($){
 
                 
 
+                iziToast.success({
+
+                    title: 'Success',
+                    message: alertsTranslations.supportTicketGerenerated,
+                    position: 'topRight'
+                })
+
                 // translateAlert('success', 'supportTicketGerenerated', cookie)
 
                 // createAlert(success, 'supportTicketGerenerated')
@@ -5681,7 +5688,6 @@ jQuery(document).ready(function($){
     }
 
     setInterval(keepSessionAlive, 300000); 
-    alert(alertsTranslations)
 
 })
 
