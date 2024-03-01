@@ -16,6 +16,20 @@ jQuery(document).ready(function($) {
 
     let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
 
 
     let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
@@ -48,13 +62,12 @@ jQuery(document).ready(function($) {
 
         console.log(response)
         $("#will-restart").html(`
-            La cuenta se reiniciará en ${JSON.parse(response).will_restart} días
+            ${alertsTranslations.CountDown} ${JSON.parse(response).will_restart} ${alertsTranslations.textDays}
         `);
 
         // GRAFICO 1 VENTAS
         var ctx = document.getElementById('sales');
         let graph_1 = JSON.parse(response).graph_1;
-
 
 
         var sales = new Chart(ctx, {
@@ -67,7 +80,7 @@ jQuery(document).ready(function($) {
 
                 datasets: [{
 
-                    label: 'Ventas del mes',
+                    label: alertsTranslations.SalesOfMonth,
 
                     data: graph_1,
 
@@ -161,7 +174,7 @@ jQuery(document).ready(function($) {
 
                 <data class="revenue-item-data">${parse_dec(grow_1) + "% <br>(" + parse_dec(graph_1[3]) + "$ to " + parse_dec(graph_1[4]) + "$)"}</data>
 
-                <p class="revenue-item-text">Prev Month (${prevMonths[4]})</p>
+                <p class="revenue-item-text">${alertsTranslations.PrevMonth} (${prevMonths[4]})</p>
 
             </div>
 
@@ -205,7 +218,7 @@ jQuery(document).ready(function($) {
 
                 datasets:[{
 
-                    label: 'Costumers of the month',
+                    label: alertsTranslations.ClientsOfTheMonth,
 
                     data: graph_2,
 
@@ -257,7 +270,7 @@ jQuery(document).ready(function($) {
 
                 <data class="revenue-item-data">${parse_dec(grow_2) + "% <br>(" + parse_dec(graph_2[3]) + " sales to " + parse_dec(graph_2[4]) + " sales)"}</data>
 
-                <p class="revenue-item-text">Prev Month (${prevMonths[4]})</p>
+                <p class="revenue-item-text">${alertsTranslations.PrevMonth} (${prevMonths[4]})</p>
 
             </div>
 
