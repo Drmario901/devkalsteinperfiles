@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
 
     if (isset($_GET['search'])){        
         $search = $_GET? $_GET['search'] : '';
