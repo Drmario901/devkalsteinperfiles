@@ -28,5 +28,12 @@
     "quoteGenerated": "Cotización generada",
     "areYouSureYouWantToChangeTheStatus": "¿Está seguro de que desea cambiar el estado",
     "selectOption": "¡Por favor seleccione una opción!",
-    "updateSuccessful": "¡Actualización exitosa!"
+    "updateSuccessful": "¡Actualización exitosa!",
+    "CountDown": "La cuenta se reiniciará en",
+    "textDays": "días",
+    "SalesOfMonth": "Ventas del mes",
+    "PrevMonth": "Mes anterior",
+    "ClientsOfTheMonth": "Clientes del mes",
+    "ProductsSold": "Productos vendidos",
+    "TotalSold": "Total vendido"
 }
