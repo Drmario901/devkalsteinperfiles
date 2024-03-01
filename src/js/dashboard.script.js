@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
             .then(translation => {
                 // save in a global variable
                 console.log(translation, 'translation')
-                alertsTranslations[lng] = translation;
+                alertsTranslations = translation;
             });
     }; 
 
