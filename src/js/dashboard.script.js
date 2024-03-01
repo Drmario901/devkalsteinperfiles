@@ -10,10 +10,6 @@ jQuery(document).ready(function($){
         });
       };
 
-      import { alertsTranslations } from './traducciones.js';
-
-      console.log(alertsTranslations)
-
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, '\\$&');
