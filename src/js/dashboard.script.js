@@ -3,7 +3,7 @@
 jQuery(document).ready(function($){
 
 
-    function translateAlert(type, msg, lng) {
+    /* function translateAlert(type, msg, lng) {
         $.ajax({
             url: plugin_dir + '/php/translations.php',
             type: 'GET',
@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
                 console.error(error);
             }
         });
-    } 
+    }  */
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -5186,7 +5186,7 @@ jQuery(document).ready(function($){
 
                 
 
-                translateAlert('success', 'supportTicketGerenerated', cookie)
+                // translateAlert('success', 'supportTicketGerenerated', cookie)
 
                 // createAlert(success, 'supportTicketGerenerated')
 
