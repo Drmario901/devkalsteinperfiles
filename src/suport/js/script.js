@@ -1,4 +1,18 @@
 jQuery(document).ready(function($) {
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
     $(document).on('click', '#registrar', function(e) {
         var R_name = $('#Rnombre').val();
         var R_description = $('#RDescription').val();
@@ -19,7 +33,7 @@ jQuery(document).ready(function($) {
         if (R_name === '') {
             iziToast.error({
                 title: 'Error',
-                message: 'agregue el nombre',
+                message: alertsTranslations.addName,
                 position: 'center'
             });
         }
@@ -27,7 +41,7 @@ jQuery(document).ready(function($) {
             if (R_usuario === '') {
                 iziToast.error({
                     title: 'Error',
-                    message: 'agregue el usuario',
+                    message: alertsTranslations.addUser,
                     position: 'center'
                 });
             }
@@ -35,7 +49,7 @@ jQuery(document).ready(function($) {
                 if (R_Tipo_US === '') {
                     iziToast.error({
                         title: 'Error',
-                        message: 'agregue el tipo de usuario',
+                        message: alertsTranslations.addUserType,
                         position: 'center'
                     });
                 }
@@ -43,7 +57,7 @@ jQuery(document).ready(function($) {
                     if (R_category === '0') {
                         iziToast.error({
                             title: 'Error',
-                            message: 'selecione categoria',
+                            message: alertsTranslations.selectCategory,
                             position: 'center'
                         });
                     }
@@ -51,7 +65,7 @@ jQuery(document).ready(function($) {
                         if (R_producto === '0') {
                             iziToast.error({
                                 title: 'Error',
-                                message: 'selecione el producto en el que presenta el problema',
+                                message: alertsTranslations.selectProductYouHaveIssueWith,
                                 position: 'center'
                             });
                         }
@@ -59,7 +73,7 @@ jQuery(document).ready(function($) {
                             if (R_description === '0') {
                                 iziToast.error({
                                     title: 'Error',
-                                    message: 'inserte descripcion del producto',
+                                    message: alertsTranslations.insertDescription,
                                     position: 'center'
                                 });
                             }
@@ -67,7 +81,7 @@ jQuery(document).ready(function($) {
                                 if (R_nivel === '0') {
                                     iziToast.error({
                                         title: 'Error',
-                                        message: 'fije nivel del exijencia',
+                                        message: alertsTranslations.selectRequirementLevel,
                                         position: 'center'
                                     });
                                 }
@@ -75,7 +89,7 @@ jQuery(document).ready(function($) {
                                     if (R_agente === '0') {
                                         iziToast.error({
                                             title: 'Error',
-                                            message: 'asigne su reporte a un agente de soporte',
+                                            message: alertsTranslations.assignReportToAgent,
                                             position: 'center'
                                         });
                                     }
@@ -83,7 +97,7 @@ jQuery(document).ready(function($) {
                                         if (R_correo === '0') {
                                             iziToast.error({
                                                 title: 'Error',
-                                                message: 'asigne su reporte a un agente de soporte',
+                                                message: alertsTranslations.assignReportToAgent,
                                                 position: 'center'
                                             });
                                         }
@@ -91,7 +105,7 @@ jQuery(document).ready(function($) {
                                             if (R_company === '0') {
                                                 iziToast.error({
                                                     title: 'Error',
-                                                    message: 'asigne la compania de su agente',
+                                                    message: alertsTranslations.assignCompanyofTheAgent,
                                                     position: 'center'
                                                 });
                                             }
@@ -99,7 +113,7 @@ jQuery(document).ready(function($) {
                                                 if (R_company_soporte === '0') {
                                                     iziToast.error({
                                                         title: 'Error',
-                                                        message: 'asigne la compania de sopporte',
+                                                        message: alertsTranslations.assignSupportCompany,
                                                         position: 'center'
                                                     });
                                                 }

@@ -1790,7 +1790,7 @@ jQuery(document).ready(function($){
 
                 title: 'Info',
 
-                message: 'Enter your ID number',
+                message: alertsTranslations.enterIdNumber,
 
                 position: 'topRight'
 
@@ -1806,7 +1806,7 @@ jQuery(document).ready(function($){
 
                     title: 'Success',
 
-                    message: 'Upload the capture of the identity document',
+                    message: alertsTranslations.uploadIdentityImage,
 
                     position: 'topRight'
 
@@ -1864,7 +1864,7 @@ jQuery(document).ready(function($){
 
                     title: 'Success',
 
-                    message: 'The data were saved successfully!',
+                    message: alertsTranslations.dataSuccessfullySaved,
 
                     position: 'topRight'
 
@@ -1904,7 +1904,7 @@ jQuery(document).ready(function($){
 
                 title: 'Info',
 
-                message: 'Enter your ID number',
+                message: alertsTranslations.enterIdNumber,
 
                 position: 'topRight'
 
@@ -1920,7 +1920,7 @@ jQuery(document).ready(function($){
 
                     title: 'Success',
 
-                    message: 'Upload the capture of the identity document',
+                    message: alertsTranslations.uploadIdentityImage,
 
                     position: 'topRight'
 
@@ -1978,7 +1978,7 @@ jQuery(document).ready(function($){
 
                     title: 'Success',
 
-                    message: 'The data were saved successfully!',
+                    message: alertsTranslations.dataSuccessfullySaved,
 
                     position: 'topRight'
 
@@ -2067,7 +2067,7 @@ jQuery(document).ready(function($){
             if (data.update === 'correcto'){
                 iziToast.success({
                     title: 'Success',
-                    message: 'The data were saved successfully!',
+                    message: alertsTranslations.dataSuccessfullySaved,
                     position: 'center'
                 })            
 
@@ -2166,7 +2166,7 @@ jQuery(document).ready(function($){
 
                     iziToast.success({
                         title: 'Success',
-                        message: 'Password sucessfuly updated!',
+                        message: alertsTranslations.passwordSuccessfullyChanged,
                         position: 'topRight'    
                     })                                
     
@@ -2314,7 +2314,7 @@ jQuery(document).ready(function($){
             displayMode: 'once', 
             zindex: 999,
             title: 'Confirmation',
-            message: 'Are you sure you want to delete this account?',
+            message: alertsTranslations.deleteReportConfirmation,
             position: 'center',
             buttons: [
                 ['<button><b>Yes</b></button>', function (instance, toast) {
@@ -2351,7 +2351,7 @@ jQuery(document).ready(function($){
             if (data.update === 'correcto'){
                 iziToast.success({
                     title: 'Success',
-                    message: 'The data were saved successfully!',
+                    message: alertsTranslations.dataSuccessfullySaved,
                     position: 'topRight'
                 })                                
 
@@ -4195,7 +4195,7 @@ jQuery(document).ready(function($){
 
             title: 'Confirmation',
 
-            message: 'Are you sure you want to delete this report?',
+            message: alertsTranslations.deleteReportConfirmation,
 
             position: 'center',
 
@@ -5218,7 +5218,7 @@ jQuery(document).ready(function($){
 
                     title: 'Error',
 
-                    message: 'Ticket not generated',
+                    message: alertsTranslations.ticketNotGenerated,
 
                     position: 'topRight'
 
@@ -5274,7 +5274,7 @@ jQuery(document).ready(function($){
 
                 title: 'Warning',
 
-                message: 'You must select a product',
+                message: alertsTranslations.selectProduct,
 
                 position: 'topRight'
 
@@ -5290,7 +5290,7 @@ jQuery(document).ready(function($){
 
                     title: 'Warning',
 
-                    message: 'You must enter a description',
+                    message: alertsTranslations.enterDescription,
 
                     position: 'topRight'
 
@@ -5306,7 +5306,7 @@ jQuery(document).ready(function($){
 
                         title: 'Warning',
 
-                        message: 'You must select a level',
+                        message: alertsTranslations.selectLevel,
 
                         position: 'topRight'
 
@@ -5468,7 +5468,7 @@ jQuery(document).ready(function($){
 
                     title: 'Success',
 
-                    message: 'Report deleted',
+                    message: alertsTranslations.reportDeleted,
 
                     position: 'topRight'
 
@@ -5616,14 +5616,14 @@ jQuery(document).ready(function($){
         if (address == ''){
             iziToast.info({
                 title: 'Info',    
-                message: 'Address is required',    
+                message: alertsTranslations.addresRequired,    
                 position: 'topRight'    
             })
         }else{
             if (zipcode == ''){
                 iziToast.info({
                     title: 'Info',    
-                    message: 'Zipcode is required',    
+                    message: alertsTranslations.zipCodeRequired,    
                     position: 'topRight'    
                 })
             }else{                
@@ -5644,7 +5644,7 @@ jQuery(document).ready(function($){
             if (data.emailStatus === 'noavaliable'){
                 iziToast.info({
                     title: 'Info',    
-                    message: 'This quotation does not belong to the logged in user!',    
+                    message: alertsTranslations.quotationDontBelongToLoggedUser,    
                     position: 'topRight'    
                 })
                 location.href = domain + '/dashboard/#dashboard'
@@ -5652,14 +5652,14 @@ jQuery(document).ready(function($){
                 if (data.register === 'correcto'){
                     iziToast.success({
                         title: 'Success',    
-                        message: 'The price request was sent successfully',    
+                        message: alertsTranslations.priceRequestSentSuccessfully,    
                         position: 'topRight'    
                     })
                     location.href = domain + '/dashboard/#dashboard'
                 }else{
                     iziToast.info({
                         title: 'Success',    
-                        message: 'An error has occurred',    
+                        message: alertsTranslations.errorHasOcurred,    
                         position: 'topRight'    
                     })
                 }

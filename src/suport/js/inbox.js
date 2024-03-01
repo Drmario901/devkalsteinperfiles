@@ -5,6 +5,20 @@ let domain = 'https://dev.kalstein.plus/plataforma/wp-content/';
 
 //COMPONER CORREO
 jQuery(document).ready(function($) {
+  const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
     console.log(document);
 
     $(document).on('click', '#sendMessage', function(e) {
@@ -17,7 +31,7 @@ jQuery(document).ready(function($) {
       if (!destinatarioId.startsWith('@')) {
         iziToast.error({
           title: 'Error',
-          message: 'The "Addressee ID" must start with an "@" symbol.',
+          message: alertsTranslations.addressIdMustStartWith,
           position: 'center'
         });
         return;
@@ -32,7 +46,7 @@ jQuery(document).ready(function($) {
           id: 'question',
           zindex: 999,
           title: 'Confirmación',
-          message: 'Are you sure you want to send this message?',
+          message: alertsTranslations.areYouSureYouWantToSendThisMessage,
           position: 'center',
           buttons: [
             ['<button><b>Yes</b></button>', function(instance, toast) {
@@ -47,7 +61,7 @@ jQuery(document).ready(function($) {
       } else {
         iziToast.error({
           title: 'Error',
-          message: 'Please fill in all the required fields.',
+          message: alertsTranslations.pleaseFillRequiredFields,
           position: 'center'
         });
       }
@@ -74,7 +88,7 @@ jQuery(document).ready(function($) {
           console.log(response);
           iziToast.success({
             title: 'Success',
-            message: 'Data updated successfully.',
+            message: alertsTranslations.dataSuccessfullySaved,
             position: 'center'
           });
           window.location.href = domain + 'suport/compose';
