@@ -2098,6 +2098,7 @@ Stack trace:
 [27-Feb-2024 17:38:19 UTC] PHP Warning:  Undefined array key "emailAccount" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getUnseenMessages.php on line 5
 [27-Feb-2024 17:38:20 UTC] PHP Warning:  Undefined array key "emailAccount" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getUnseenMessages.php on line 5
 [27-Feb-2024 17:38:21 UTC] PHP Warning:  Undefined array key "emailAccount" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getUnseenMessages.php on line 5
+<<<<<<< HEAD
 [27-Feb-2024 18:03:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/accessAcount.php on line 48
 [27-Feb-2024 18:03:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/accessAcount.php on line 49
 [27-Feb-2024 18:03:35 UTC] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/accessAcount.php on line 59
@@ -12485,3 +12486,69 @@ Stack trace:
 [01-Mar-2024 15:49:03 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
 [01-Mar-2024 15:49:03 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
 [01-Mar-2024 15:49:03 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+=======
+>>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:52:42 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "inputSearch" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:52:42 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:52:42 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:53:00 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "inputSearch" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:53:00 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:00 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:53:11 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "inputSearch" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:53:11 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:11 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:53:24 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 4
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "inputSearch" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:53:24 UTC] PHP Deprecated:  mysqli::real_escape_string(): Passing null to parameter #1 ($string) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 5
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42
+[01-Mar-2024 15:53:24 UTC] PHP Warning:  Undefined array key "id" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php on line 42

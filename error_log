@@ -35,6 +35,7 @@
 [27-Feb-2024 15:06:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php:9) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 14
 [27-Feb-2024 15:06:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php:9) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 14
 [27-Feb-2024 15:06:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php:9) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 14
+<<<<<<< HEAD
 [27-Feb-2024 18:40:13 UTC] PHP Fatal error:  Uncaught TypeError: Twilio\Rest\Api\V2010\Account\MessageList::create(): Argument #1 ($to) must be of type string, array given, called in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/twilioTest.php on line 25 and defined in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/MessageList.php:61
 Stack trace:
 #0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/twilioTest.php(25): Twilio\Rest\Api\V2010\Account\MessageList->create(Array, Array)
@@ -73,3 +74,5 @@ Stack trace:
 [27-Feb-2024 20:43:16 UTC] PHP Warning:  Undefined array key "language" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/twilioTest.php on line 11
 [27-Feb-2024 20:46:07 UTC] PHP Warning:  Undefined array key "language" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/twilioTest.php on line 11
 [28-Feb-2024 16:38:21 UTC] PHP Warning:  Undefined array key "language" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/twilioTest.php on line 11
+=======
+>>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
