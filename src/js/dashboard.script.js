@@ -12,6 +12,7 @@ jQuery(document).ready(function($){
                 // save in a global variable
                 console.log(translation, 'translation')
                 alertsTranslations = translation;
+                console.log(alertsTranslations, 'alertsTranslations')
             });
     }; 
 
