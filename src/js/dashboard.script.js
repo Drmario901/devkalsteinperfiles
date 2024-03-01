@@ -3,7 +3,24 @@
 jQuery(document).ready(function($){
 
 
-    function translateAlert(type, msg, lng) {
+    const cookieLng = getCookie('lang').split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations[lng] = translation;
+            });
+    };
+
+    loadTranslations(cookieLng)
+
+    console.log(alertsTranslations, cookieLng, 'Funciona?')
+
+    /* function translateAlert(type, msg, lng) {
         $.ajax({
             url: plugin_dir + '/php/translations.php',
             type: 'GET',
@@ -20,7 +37,7 @@ jQuery(document).ready(function($){
                 console.error(error);
             }
         });
-    } 
+    }  */
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -5147,7 +5164,7 @@ jQuery(document).ready(function($){
     }
 
     //get the lang cookie 
-    const cookie = getCookie('lang').split('=')[1]
+    //const cookie = getCookie('lang').split('=')[1]
 
 
     function registerTicketSupport(idServices, emailAgent, model, description, level){
@@ -5186,7 +5203,7 @@ jQuery(document).ready(function($){
 
                 
 
-                translateAlert('success', 'supportTicketGerenerated', cookie)
+                // translateAlert('success', 'supportTicketGerenerated', cookie)
 
                 // createAlert(success, 'supportTicketGerenerated')
 
