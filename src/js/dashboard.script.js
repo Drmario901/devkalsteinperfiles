@@ -3,6 +3,23 @@
 jQuery(document).ready(function($){
 
 
+    const cookieLng = getCookie('lang').split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations[lng] = translation;
+            });
+    };
+
+    loadTranslations(cookieLng)
+
+    console.log(alertsTranslations, cookieLng)
+
     /* function translateAlert(type, msg, lng) {
         $.ajax({
             url: plugin_dir + '/php/translations.php',
@@ -5147,7 +5164,7 @@ jQuery(document).ready(function($){
     }
 
     //get the lang cookie 
-    const cookie = getCookie('lang').split('=')[1]
+    //const cookie = getCookie('lang').split('=')[1]
 
 
     function registerTicketSupport(idServices, emailAgent, model, description, level){
