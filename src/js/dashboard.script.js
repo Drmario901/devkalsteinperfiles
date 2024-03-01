@@ -1,6 +1,18 @@
-import { showTranslatedAlert } from "./i19n.js";
+
 
 jQuery(document).ready(function($){
+
+    const showTranslatedAlert = (type, language) => {
+        const translation = alertsTranslations[language][type];
+        
+        iziToast[type]({
+          message: translation
+        });
+      };
+
+      import { alertsTranslations } from './traducciones.js';
+
+      console.log(alertsTranslations)
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
