@@ -1,4 +1,4 @@
-export const alertsTranslations = {
+const alertsTranslations = {
     en: {
       supportTicketGenerated: 'Support ticket generated',
       enterIdNumber: 'Please enter your ID number',
