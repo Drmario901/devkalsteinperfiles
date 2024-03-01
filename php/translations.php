@@ -52,10 +52,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Welcome,',
         'banner_text_catalog' => 'Catalog',
         'banner_text_services' => 'Services',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Support ticket generated',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -108,10 +105,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Bienvenido(a),',
         'banner_text_catalog' => 'Catalogar',
         'banner_text_services' => 'Servicios',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Ticket de soporte generado',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -164,10 +158,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Bienvenue,',
         'banner_text_catalog' => 'Catalogue',
         'banner_text_services' => 'Prestations de service',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Ticket de support généré',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -220,10 +211,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Benvenuto/a,',
         'banner_text_catalog' => 'Catalogo',
         'banner_text_services' => 'Servizi',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Ticket di supporto generato',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -276,10 +264,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Bem-vindo/a,',
         'banner_text_catalog' => 'Catálogo',
         'banner_text_services' => 'Serviços',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Ticket de suporte gerado',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -332,10 +317,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Witaj,',
         'banner_text_catalog' => 'Katalog',
         'banner_text_services' => 'Usługi',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Wygenerowano zgłoszenie wsparcia',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -388,10 +370,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Welkom,',
         'banner_text_catalog' => 'Catalogus',
         'banner_text_services' => 'Diensten',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Ondersteuningsticket gegenereerd',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -444,10 +423,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Willkommen,',
         'banner_text_catalog' => 'Katalog',
         'banner_text_services' => 'Dienstleistungen',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Support-Ticket generiert',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -500,10 +476,7 @@ $translations = array(
         'banner_text_welcomeThree' => 'Tere tulemast,',
         'banner_text_catalog' => 'Kataloog',
         'banner_text_services' => 'Teenused',
-<<<<<<< HEAD
-=======
         'supportTicketGenerated' => 'Toetusticket loodud',
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -556,13 +529,8 @@ $translations = array(
         'banner_text_welcomeThree' => 'Välkommen,',
         'banner_text_catalog' => 'Katalog',
         'banner_text_services' => 'Tjänster',
-<<<<<<< HEAD
-    ),
-);
-=======
         'supportTicketGenerated' => 'Supportbiljett genererad',
     ),
 );
-
+        
 echo json_encode($translations);
->>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
