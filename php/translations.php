@@ -532,5 +532,3 @@ $translations = array(
         'supportTicketGenerated' => 'Supportbiljett genererad',
     ),
 );
-        
-echo json_encode($translations);
