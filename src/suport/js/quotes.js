@@ -1,4 +1,19 @@
 jQuery(document).ready(function($) {
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
+        
     $(document).on('click', '#btn-update', function() {
 
         var id = $(this).val();
@@ -14,7 +29,7 @@ jQuery(document).ready(function($) {
                 id: 'question',
                 zindex: 999,
                 title: 'Confirmation',
-                message: 'Are you sure you want to change the status for ' + customerName + '?',
+                message: `${youSureYouWantToChangeTheStatusFor} ${customerName}?`,
                 position: 'center',
                 buttons: [
                     ['<button><b>Yes</b></button>', function(instance, toast) {
@@ -36,7 +51,7 @@ jQuery(document).ready(function($) {
         else{
             iziToast.warning({
                 title: 'Warning',
-                message: 'Please select an option!',
+                message: alertsTranslations.pleaseSelectOption,
                 position: 'topRight',
             });
         }
@@ -57,7 +72,7 @@ jQuery(document).ready(function($) {
             if (data.update === 'correcto') {
                 iziToast.success({
                     title: 'Success',
-                    message: 'Update successful!',
+                    message: alertsTranslations.updateSuccessful,
                     position: 'topRight',
                     timeout: 1500, 
                 });
@@ -118,7 +133,7 @@ jQuery(document).ready(function($) {
                                 ' Agente de soporte: ' + product_maker + '<br>';
 
                 iziToast.show({
-                    title: 'Quote details (ID: ' + quotes_id + ')',
+                    title: `${quoteDetails} (ID:${quotes_id})`, 
                     message: details,
                     position: 'center',
                     timeout: false,

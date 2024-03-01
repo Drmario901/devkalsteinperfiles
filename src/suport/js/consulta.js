@@ -19,7 +19,23 @@ jQuery(document).ready(function($) {
 
     }*/
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
+
     function mostrarDatos(consulta){
+
         $.ajax({
             // Cambia mificherophp.php por el nombre de tu fichero
             url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportdata.php",
@@ -70,14 +86,14 @@ jQuery(document).ready(function($) {
         if (A_id === '0') {
             iziToast.error({
                 title: 'Error',
-                message: 'selecione id',
+                message: alertsTranslations.selectId,
                 position: 'center'
               });
         } else { 
             if (A_observacion === '0') {
                 iziToast.error({
                     title: 'Error',
-                    message: 'ingrese su respuesta',
+                    message: alertsTranslations.insertAnswer,
                     position: 'center'
                 });
             }
@@ -146,7 +162,7 @@ jQuery(document).ready(function($) {
         if (R_name === '') {
             iziToast.error({
                 title: 'Error',
-                message: 'agregue el nombre',
+                message: alertsTranslations.addName,
                 position: 'center'
             });
         }
@@ -154,7 +170,7 @@ jQuery(document).ready(function($) {
             if (R_usuario === '') {
                 iziToast.error({
                     title: 'Error',
-                    message: 'agregue el usuario',
+                    message: alertsTranslations.addUser,
                     position: 'center'
                 });
             }
@@ -162,7 +178,7 @@ jQuery(document).ready(function($) {
                 if (R_Tipo_US === '') {
                     iziToast.error({
                         title: 'Error',
-                        message: 'agregue el tipo de usuario',
+                        message: alertsTranslations.addUserType,
                         position: 'center'
                       });
                 }
@@ -170,7 +186,7 @@ jQuery(document).ready(function($) {
                     if (R_category === '0') {
                         iziToast.error({
                             title: 'Error',
-                            message: 'selecione categoria',
+                            message: alertsTranslations.selectCategory,
                             position: 'center'
                         });
                     }
@@ -178,7 +194,7 @@ jQuery(document).ready(function($) {
                         if (R_producto === '0') {
                             iziToast.error({
                                 title: 'Error',
-                                message: 'selecione el producto en el que presenta el problema',
+                                message: alertsTranslations.selectProductYouHaveIssueWith,
                                 position: 'center'
                             });
                         }
@@ -186,7 +202,7 @@ jQuery(document).ready(function($) {
                             if (R_description === '0') {
                                 iziToast.error({
                                     title: 'Error',
-                                    message: 'inserte descripcion del producto',
+                                    message: alertsTranslations.insertDescription,
                                     position: 'center'
                                 });
                             }
@@ -195,7 +211,7 @@ jQuery(document).ready(function($) {
                                 if (R_nivel === '0') {
                                     iziToast.error({
                                         title: 'Error',
-                                        message: 'fije nivel del exijencia',
+                                        message: alertsTranslations.selectRequirementLevel,
                                         position: 'center'
                                     });
                               
@@ -204,7 +220,7 @@ jQuery(document).ready(function($) {
                                     if (R_agente === '0') {
                                         iziToast.error({
                                             title: 'Error',
-                                            message: 'asigne su reporte a un agente de soporte',
+                                            message: alertsTranslations.assignReportToAgent,
                                             position: 'center'
                                         });
                                     }
@@ -212,7 +228,7 @@ jQuery(document).ready(function($) {
                                         if (R_correo === '0') {
                                             iziToast.error({
                                                 title: 'Error',
-                                                message: 'asigne su reporte a un agente de soporte',
+                                                message: alertsTranslations.assignReportToAgent,
                                                 position: 'center'
                                             });
                                         }
@@ -220,7 +236,7 @@ jQuery(document).ready(function($) {
                                             if (R_metodo === '0') {
                                                 iziToast.error({
                                                     title: 'Error',
-                                                    message: 'asigne EL METODO',
+                                                    message: alertsTranslations.asssignMethod,
                                                     position: 'center'
                                                 });
                                             }
@@ -265,7 +281,7 @@ jQuery(document).ready(function($) {
                 console.log(response);
                 iziToast.success({
                     title: 'Success',
-                    message: 'Data updated successfully.',
+                    message: alertsTranslations.updateSuccessful,
                     position: 'center'
                 });
             },

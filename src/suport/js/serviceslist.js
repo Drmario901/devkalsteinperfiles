@@ -1,4 +1,19 @@
 jQuery(document).ready(function($){
+
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
  
     //Funcion para mostrar la tabla de reportes
     let category= $('#category').val()
@@ -115,55 +130,55 @@ jQuery(document).ready(function($) {
         let err_msg = '';
 
         if (SE_servicio === '0') {
-            err_msg == 'name empty';
+            err_msg == alertsTranslations.emptyName;
         }
         else{
             if (SE_category === '0') {
-                err_msg == 'category empty';
+                err_msg == alertsTranslations.emptyCategory;
             }
             else{
                 if(SE_company === '0') {
-                    err_msg == 'company name empty';
+                    err_msg == alertsTranslations.emptyCompanyName;
                 }
                 else{
                     if(SE_pais === '0') {
-                        err_msg == 'country name empty';
+                        err_msg == alertsTranslations.countryNameEmpty;
                     }
                     else{
                         if(SE_direccion === '0') {
-                            err_msg == 'address empty';
+                            err_msg == alertsTranslations.addressEmpty;
                         }
                         else{                
                             if (SE_agente === '0') {
-                                err_msg == 'service agent name empty';
+                                err_msg == alertsTranslations.serviceAgentNameEmpty;
                             }
                             else {
                                 if (SE_correo === '0') {
-                                    err_msg == 'email empty';
+                                    err_msg == alertsTranslations.emailEmpty;
                                 }
                                 else{
                                     if (SE_descripcion === '0') {
-                                        err_msg == 'description empty';
+                                        err_msg == alertsTranslations.descriptionEmpty;
                                     }
                                     else {
                                         if (SE_estado === '0') {
-                                            err_msg == 'status empty';
+                                            err_msg == descriptionEmpty.emptyStatus;
                                         }
                                         else {
                                             if (SE_tiempo === '0') {
-                                                err_msg == 'expected time empty';
+                                                err_msg == alertsTranslations.expiredtimeEmpty;
                                             }
                                             else {
                                                 if (SE_tiempo < 0) {
-                                                    err_msg == 'expected time can not be less than 0';
+                                                    err_msg == alertsTranslations.expectedTimeCantBeLessThanZero;
                                                 }
                                                 else {
                                                     if (SE_telefono === '0') {
-                                                        err_msg == 'phone number empty';
+                                                        err_msg == alertsTranslations.phoneEmpty;
                                                     }
                                                     else {
                                                         if (SE_telefono < 0) {
-                                                            err_msg == 'invalid phone number';
+                                                            err_msg == alertsTranslations.invalidPhoneNumber;
                                                         }
                                                         else {
                                                             uploadFormData(SE_servicio, SE_company, SE_agente, SE_telefono, SE_correo, SE_pais, SE_direccion, SE_estadolugar, SE_ciudad, SE_provincia, SE_category, SE_descripcion, SE_tiempo, SE_estado);
@@ -527,6 +542,23 @@ jQuery(document).ready(function($){
 });
 
 jQuery(document).ready(function($) {
+
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
+
+
     // Sección: Eliminar producto desde el botón de la página
 
     $(document).on('click', '#btnDeleteService', function() {
@@ -535,7 +567,7 @@ jQuery(document).ready(function($) {
         // Mostrar una alerta de confirmación usando IziToast
         iziToast.question({
             title: 'Confirmation',
-            message: 'Are you sure you want to delete this service?',
+            message: alertsTranslations.sureYouWantToDeleteThisService,
             close: false,
             overlay: true,
             timeout: false,
@@ -554,7 +586,7 @@ jQuery(document).ready(function($) {
                         if (response === 'done') {
                             iziToast.success({
                                 title: 'Success',
-                                message: 'Service deleted.',
+                                message: alertsTranslations.serviceDeleted,
                                 position: 'center',
                                 onClosing: function() {
                                     setTimeout(function() {
@@ -565,7 +597,7 @@ jQuery(document).ready(function($) {
                         } else {
                             iziToast.error({
                                 title: 'Error',
-                                message: 'Service not deleted',
+                                message: alertsTranslations.serviceNotdeleted,
                                 position: 'center',
                             });
                         }
@@ -573,7 +605,7 @@ jQuery(document).ready(function($) {
                     .fail(function() {
                         iziToast.error({
                             title: 'Error',
-                            message: "Can't connect with database",
+                            message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                             position: 'center',
                         });
                     });
@@ -585,7 +617,7 @@ jQuery(document).ready(function($) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     iziToast.error({
                         title: 'Error',
-                        message: 'Service delete canceled.',
+                        message: alertsTranslations.serviceDeletedCanceled,
                         position: 'center',
                     });
                 }]

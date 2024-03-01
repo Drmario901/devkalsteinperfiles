@@ -4,6 +4,21 @@ jQuery(document).ready(function($) {
     var inbox_page = 'inbox';
     var inbox_page_index = 1;
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
+
     searchUserTag()
     function addClickSendListener() {
         document.querySelector('#sendMessage').addEventListener('click', function(e) {
@@ -16,7 +31,7 @@ jQuery(document).ready(function($) {
                 if (!destinatarioId.startsWith('@')) {
                     iziToast.error({
                         title: 'Error',
-                        message: 'Please start the usertag with "@"',
+                        message: alertsTranslations.pleaseStartUserTagWith,
                         position: 'center'
                     });
                     return;
@@ -30,7 +45,7 @@ jQuery(document).ready(function($) {
                     id: 'question',
                     zindex: 999,
                     title: 'Confirmation',
-                    message: 'Are you sure you want to send this message?',
+                    message: alertsTranslations.areYouSureYouWantToSendThisMessage,
                     position: 'center',
                     buttons: [
                         ['<button><b>Sí</b></button>', function(instance, toast) {
@@ -46,7 +61,7 @@ jQuery(document).ready(function($) {
             else {
                 iziToast.error({
                     title: 'Error',
-                    message: 'Please fill in the required fields',
+                    message: alertsTranslations.pleaseFillRequiredFields,
                     position: 'center'
                 });
             }
@@ -74,13 +89,13 @@ jQuery(document).ready(function($) {
                 if (resultado == 'The user does not exist..') {
                     iziToast.error({
                         title: 'Error',
-                        message: 'The user does not exist.',
+                        message: alertsTranslations.userDoesntExist,
                         position: 'center'
                     });
                 } else {
                     iziToast.success({
                         title: 'Éxito',
-                        message: 'Message sent successfully.',
+                        message: alertsTranslations.messageSentSuccessfully,
                         position: 'center'
                     });
                     changePage('inbox');
@@ -89,7 +104,7 @@ jQuery(document).ready(function($) {
             error: function(xhr, status, error) {
                 iziToast.error({
                     title: 'Error',
-                    message: 'An error occurred while sending the message.',
+                    message: alertsTranslations.errorSendingMessage,
                     position: 'center'
                 });
             }

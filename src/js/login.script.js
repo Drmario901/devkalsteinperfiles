@@ -1,5 +1,20 @@
 jQuery(document).ready(function($){
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
+
     var path = $(location).attr('pathname')
 
     if (path == '/registrarse/'){       
@@ -954,7 +969,7 @@ jQuery(document).ready(function($){
 
                 title: 'Mail sent',
 
-                message: 'Check your inbox or spam folder',
+                message: alertsTranslations.checkInboxOrSpam,
 
                 position: 'center'
 
@@ -970,7 +985,7 @@ jQuery(document).ready(function($){
 
                 title: 'Error',
 
-                message: 'Unsent mail',
+                message: alertsTranslations.errorSendingMessage,
 
                 position: 'center'
 
@@ -1099,7 +1114,7 @@ jQuery(document).ready(function($){
 
                         title: 'Éxito',
 
-                        message: 'Correo electrónico verificado',
+                        message: alertsTranslations.emailVerified,
 
                         position: 'topRight'
 
@@ -1184,7 +1199,7 @@ jQuery(document).ready(function($){
 
                     title: 'Success',
 
-                    message: 'Password updated',
+                    message: alertsTranslations.passwordSuccessfullyChanged,
 
                     position: 'center'
 
@@ -1198,7 +1213,7 @@ jQuery(document).ready(function($){
 
                     title: 'Error',
 
-                    message: 'Failed to update password',
+                    message: alertsTranslations.failedToUpdatePassword,
 
                     position: 'center'
 

@@ -112,6 +112,21 @@ jQuery(document).ready(function($){
         savedGeneratedQuo(id, description, datas, precioMoneda)
     })
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
+
     function savedGeneratedQuo(id, description, datas, precioMoneda){
         $.ajax({
             url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
@@ -124,7 +139,7 @@ jQuery(document).ready(function($){
             if (data.registro === 'correcto'){
                 iziToast.success({
                     title: 'Exito',
-                    message: 'Cotización Generada',
+                    message: alertsTranslations.quoteGenerated,
                     position: 'topRight'
                 })
                 createdSessionCotizacion(data.id)

@@ -1,6 +1,21 @@
 jQuery(document).ready(function($) {
     let plugin_dir = 'http://127.0.0.1/wp-local/wp-content/plugins/KalsteinPerfiles/';
 
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+        let alertsTranslations = {};
+
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+            return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+                .then(response => response.json())
+                .then(translation => {
+                    // save in a global variable
+                    alertsTranslations = translation;
+                });
+        }; 
+
+        loadTranslations(cookieLng)
+
     $.ajax({
         url: plugin_dir + 'php/getChartInfoSales.php',
         type: 'POST',
@@ -164,7 +179,7 @@ jQuery(document).ready(function($) {
     .fail(function (){
         iziToast.warning({
             title: 'Warning',
-            message: 'Could not retrieve the information from the database!',
+            message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
             position: 'topRight',
         });
     })
