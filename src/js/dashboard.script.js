@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 
     loadTranslations(cookieLng)
 
-    console.log(alertsTranslations, cookieLng, 'Funciona?')
+    
 
     /* function translateAlert(type, msg, lng) {
         $.ajax({
@@ -5681,6 +5681,7 @@ jQuery(document).ready(function($){
     }
 
     setInterval(keepSessionAlive, 300000); 
+    console.log(alertsTranslations, cookieLng, 'Funciona?')
 
 })
 
