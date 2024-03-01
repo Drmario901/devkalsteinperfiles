@@ -5134,6 +5134,8 @@ jQuery(document).ready(function($){
 
     }
 
+    //get the lang cookie 
+    const cookie = getCookie('lang').split('=')[1]
 
 
     function registerTicketSupport(idServices, emailAgent, model, description, level){
@@ -5170,7 +5172,7 @@ jQuery(document).ready(function($){
 
                 $('#Rnivel').val('0')
 
-                const cookie = getCookie('lang')
+                
 
                 showTranslatedAlert('supportTicketGerenerated', cookie)
 
