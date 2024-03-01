@@ -1,0 +1,129 @@
+.footer-kalstein * {
+    color: white !important;
+}
+
+.footer-kalstein {
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 25px 30px;
+    margin-bottom: -45px;
+    
+    width: 100vw;
+    margin-left: calc(((100% - 100vw) / 2));
+}
+
+.footer-kalstein .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.footer-kalstein .container::before, .footer-kalstein .container::after{
+    display: none;
+}
+
+.footer-kalstein > div > div {
+    margin-top: 20px;
+}
+
+.footer-logo-banner > p {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.kalstein-logo-footer {
+    margin-top: 0;
+}
+
+.footer-item {
+    margin-top: 12px !important;
+}
+.footer-item > a:hover{
+    color: white !important;
+}
+.footer-item::after{
+    display: none;
+}
+
+
+.footer-icon {
+    margin-top: 5px !important;
+    font-size: 15px;
+}
+
+.footer-main-button {
+    margin-right: 20px;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    color: #213280 !important;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer-main-button:hover {
+    background-color: #ddd;
+}
+
+.footer-main-button_editor {
+    margin-top: 15px;
+    margin-right: 20px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000 !important;
+    transition: 0.3s ease all;
+}
+
+.footer-main-button_editor:hover {
+    background-color: hsl(229.26deg 59.01% 31.57%);
+    color: #ffffff !important;
+}
+
+.footer-main-button-quo {
+    padding: 6px 12px;
+    background-color: white;
+    color: #213280 !important;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.banner {
+    background-position-x: left;
+    background-size: cover;
+    padding: 85px;
+    padding-left: 0;
+    padding-right: 0;
+
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+    margin-bottom: 33px;
+}
+
+.banner.client{
+    background-position-x: right;
+}
+
+.banner h3 {
+    padding-bottom: 0;
+
+}
+
+@media screen and (max-width: 767px){
+    .banner{
+        padding: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .banner h3 {
+        font-size: 26px;
+        margin-left: 0 !important;
+    }
+}

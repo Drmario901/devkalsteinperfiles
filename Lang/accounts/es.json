@@ -1,0 +1,9 @@
+{
+    "placeholderName": "Ingresa tu nombre",
+    "apellidoPlace": "Ingresa tu apellido",
+    "emailPlace": "Ingresa tu correo",
+    "passwordPlace": "Ingresa tu contraseña",
+    "confirmPlace": "Confirma tu contraseña",
+    "direccionPlace": "Ingresa tu dirección",
+    "telefonoPlace": "Ingresa tu teléfono"
+}

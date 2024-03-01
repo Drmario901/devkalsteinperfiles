@@ -1,0 +1,59 @@
+.input-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.input-wrapper-p {
+    position: relative;
+    cursor: pointer;
+}
+
+.fa-user-pen{
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+    right: 12px;
+    font-size: 1.2em;
+}
+
+.fa-eye{
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+    right: 12px;
+    font-size: 1.2em;
+}
+
+.fa-eye-slash{
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+    right: 12px;
+    font-size: 1.2em;
+}
+
+.required-info{
+    border: 1px solid #213280;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 0.8rem;
+}
+
+.newCode:hover{
+    font-weight: bold;
+}

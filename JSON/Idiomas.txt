@@ -1,0 +1,21 @@
+Ingles (en), 
+español (es), 
+frances (fr), 
+italiano (it), 
+portugues (pt), 
+sueco (se), 
+aleman (de), 
+polaco (pl), 
+estonio (ee), 
+holandes (nl)
+
+
+
+LOS TEMPLATEOPTIONS.JS DE 
+/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js
+NO LOS MODIFIQUÉ
+
+
+
+
+
