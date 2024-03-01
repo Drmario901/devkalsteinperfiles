@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 
-    const cookieLng = getCookie('lang').split('=')[1]
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
     let alertsTranslations = {};
 
     // cargar json de traducciones
