@@ -47,19 +47,19 @@ if (!empty($_FILES['imagenes']['name'][0])) {
             $rutaArchivoDestino = $directorioDestino . '/' . $nombreArchivo;
 
             if (move_uploaded_file($nombreTemp, $rutaArchivoDestino)) {
-                echo "La imagen $nombre ha sido subida correctamente a: " . $rutaArchivoDestino . ";";
+                echo "<span data-i18n='customizeTemplate:elementEchoOne'>La imagen $nombre ha sido subida correctamente a: '$rutaArchivoDestino'</span>";
                 $archivosSubidos++; // Incrementar contador de archivos subidos
             } else {
-                echo "Hubo un error al subir la imagen $nombre";
+                echo "<span data-i18n='customizeTemplate:elementEchoTwo'>Hubo un error al subir la imagen $nombre</span>";
             }
         }
     }
 
     // Si todos los archivos han sido subidos con éxito, enviar un mensaje indicando que todos los archivos están listos
     if ($archivosSubidos === count(array_filter($imagenes['name']))) {
-        echo "Todos los archivos han sido subidos correctamente";
+        echo "<span data-i18n='customizeTemplate:elementEchoThree'>Todos los archivos han sido subidos correctamente</span>";
     }
 }else {
-    echo "No se han seleccionado archivos para subir";
+    echo "<span data-i18n='customizeTemplate:elementEchoFour'>No se han seleccionado archivos para subir</span>";
 }
 ?>
