@@ -3,7 +3,7 @@
 jQuery(document).ready(function($){
 
 
-    const cookieLng = getCookie('lang').split('=')[1]
+    /* const cookieLng = getCookie('lang').split('=')[1]
     let alertsTranslations = {};
 
     // cargar json de traducciones
@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 
     loadTranslations(cookieLng)
 
-    console.log(alertsTranslations, cookieLng, 'Funciona?')
+    console.log(alertsTranslations, cookieLng, 'Funciona?') */
 
     /* function translateAlert(type, msg, lng) {
         $.ajax({
