@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 
     loadTranslations(cookieLng)
 
-    console.log(alertsTranslations, cookieLng)
+    console.log(alertsTranslations, cookieLng, 'Funciona?')
 
     /* function translateAlert(type, msg, lng) {
         $.ajax({
