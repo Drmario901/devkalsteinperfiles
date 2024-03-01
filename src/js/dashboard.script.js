@@ -24,14 +24,6 @@ jQuery(document).ready(function($){
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 
-    const createAlert = (type, message) => {
-        const message = i18next.t(alerts[message], { ns: 'alerts' });
-        
-        iziToast[type]({
-          message: message
-        });
-      };
-    
     $('#inputShippingCost-subject').focus()
 
     dataForDonutsChartjsAccount()
