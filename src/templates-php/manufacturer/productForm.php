@@ -209,7 +209,7 @@
         <div class="col-12 col-md-6">
 
             <label data-i18n='manofacturer:nombre'>Nombre</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre" data-placeholder="nombre"/>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre" data-placeholder="client:nombre"/>
 
             <!-- true brand input -->
             <input type="hidden" id="productBrand" value="<?php
