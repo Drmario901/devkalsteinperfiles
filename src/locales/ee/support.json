@@ -124,5 +124,6 @@
     "labelProvinciaOpcional": "Maakond (valikuline)",
     "aboutProduct": "Toote kohta",
     "productCategory": "Tootekategooria",
-    "estimatedTime": "Eeldatav aeg"
+    "estimatedTime": "Eeldatav aeg",
+    "placeholderFirstNameLastName": "Ees- ja perekonnanimi"
 }

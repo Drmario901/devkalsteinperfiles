@@ -17,14 +17,17 @@
 
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Añadir un nuevo producto";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_AddaNewProduct';
+            $banner_text = translateTextBanner($banner);
             include 'banner.php';
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock" data-i18n='manofacturer:volver'><i class="fa-solid fa-share"></i> Volver</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock" data-i18n='manofacturer:volver'><i class="fa-solid fa-share"></i> Volver</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock/add" data-i18n='manofacturer:agregarProducto'>Añadir producto</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock/shipping" data-i18n='manofacturer:costosEnvios'>Costos de envíos</a>
         </nav>
     
         <hr class="mt-0 mb-4">

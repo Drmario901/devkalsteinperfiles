@@ -85,5 +85,12 @@
     "yaRegistrado": "Masz już konto?",
     "iniciarSesion": "Zaloguj się",
     "confirmEmail": "Confirme seu endereço de e-mail",
-    "sendLinkPassword": "Enviar link de redefinição de senha"
+    "sendLinkPassword": "Enviar link de redefinição de senha",
+    "placeholderName": "Wprowadź swoje imię",
+    "apellidoPlace": "Wprowadź swoje nazwisko",
+    "emailPlace": "Wprowadź swój adres e-mail",
+    "passwordPlace": "Wprowadź swoje hasło",
+    "confirmPlace": "Potwierdź swoje hasło",
+    "direccionPlace": "Wprowadź swój adres",
+    "telefonoPlace": "Wprowadź swój numer telefonu"
 }

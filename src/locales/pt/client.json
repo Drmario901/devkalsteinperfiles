@@ -186,5 +186,8 @@
     "accesoriosAdic": "Acessórios adicionais",
     "ver": "Ver",
     "descripcionProducto": "Descrição do Produto",
-    "accesos":"Acesso"
-    }
+    "accesos":"Acesso",
+    "addEmail": "Insira seu endereço de email",
+    "zipPlaceHolder": "Insira seu código postal",
+    "organizationNamePlaceholder": "Insira o nome da sua organização"
+}

@@ -1,4 +1,7 @@
 <?php
+/*     ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL); */
     /*
         Plugin Name: Kalstein - Perfiles
         Description:  Plugin desarrollado para la administración de los distintos roles de las distintas cuentas!
@@ -713,6 +716,7 @@
             wp_enqueue_script('i18n', plugins_url('src/js/i18n.js',__FILE__),array('jquery'));
             wp_enqueue_script('jQuery-3.4.0', plugins_url('src/js/jquery-migrate-3.4.0.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('jQuery-i18n', plugins_url('src/js/jquery-i18next.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('traducciones', plugins_url('src/js/traducciones.js',__FILE__),array('jquery'));
         }
 
     function perfiles_styles() {

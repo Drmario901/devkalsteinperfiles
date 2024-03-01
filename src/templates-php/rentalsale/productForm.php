@@ -175,15 +175,15 @@
 <form method="post" class="tm-edit-product-form">
     <div class="row">
 
-        <?php echo $add ? '<div class="col-12"><div class="stock-title">Add new rental service</div></div>' : '<div class="col-12"><div class="stock-title">Edit product</div></div>'?>
+        <?php echo $add ? '<div class="col-12"><div class="stock-title" data-i18n="rentalsale:addNewRentalServ">Add new rental service</div></div>' : '<div class="col-12"><div class="stock-title" data-i18n="rentalsale:editProduct">Edit product</div></div>'?>
         <!-- BASIC DATA -->
         <div class="col-12 col-md-6">
-
             <label data-i18n="rentalsale:labelEquipmentName">Equipment Name</label>
             <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="placeholderName" placeholder="Name"/>
 
             <label data-i18n="rentalsale:labelEquipmentBrand">Equipment Brand</label>
             <input id="productBrand" class="form-control validate mb-3" data-placeholder="placeholderBrand" placeholder ='Brand'>
+
             <label data-i18n="rentalsale:labelEquipmentModel">Equipment Model</label>
             <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="placeholderModel" placeholder="Model"/>
         </div>
@@ -232,7 +232,6 @@
             <div id="stock-basic-table" class="mb-4" hidden>
                 
                 <div>
-
                     <div class='stock-table-buttons mb-3'>
                         <button id="stock-table-button-plus">+</button>
                         <button id="stock-table-button-minus">-</button>

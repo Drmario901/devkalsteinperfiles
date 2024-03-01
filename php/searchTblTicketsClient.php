@@ -176,7 +176,7 @@
             
             let valorBoton = $(this).attr('value')
             $.ajax({
-                url: 'https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/showReportEdit.php',
+                url: 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/showReportEdit.php',
                 method: 'POST',
                 data: { valorBoton },
                 success: function (respuesta) {
@@ -205,7 +205,7 @@
         $(document).on('click', '#guardarReporteMod', function(){
             let form = $("#formModReportes").serialize()
             $.ajax({
-                url: 'https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/modReporte.php',
+                url: 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/modReporte.php',
                 method: 'POST',
                 data: form
             })
@@ -219,7 +219,7 @@
                 });
                 $("#formModReportes")[0].reset()
                     $("#exampleModalEdit").modal('hide')
-                    /* window.location.href = "https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/modReporte.php" */
+                    /* window.location.href = "https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/modReporte.php" */
                     location.reload();
 
 

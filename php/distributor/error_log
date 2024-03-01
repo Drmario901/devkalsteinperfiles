@@ -78,3 +78,18 @@ Stack trace:
 #0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/getChartInfo.php(166): days_until_monthend()
 #1 {main}
   thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/getChartInfo.php on line 15
+<<<<<<< HEAD
+[29-Feb-2024 13:06:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php:9
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php(9): mysqli->__construct('localhost', 'kalsteinplus', 'OqA;}vKA94PO', 'kalsteinplus_he...')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getDate.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 9
+[29-Feb-2024 13:06:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php:9
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php(9): mysqli->__construct('localhost', 'kalsteinplus', 'OqA;}vKA94PO', 'kalsteinplus_he...')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getDate.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php on line 9
+=======
+>>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340

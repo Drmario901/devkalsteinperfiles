@@ -13,7 +13,7 @@
 <br>
 <br>
 <nav class="nav nav-borders">
-    <a class="nav-link active ms-0" target="__blank" style="color: #31363a !important">Sales Analytics</a>
+    <a class="nav-link active ms-0" target="__blank" style="color: #31363a !important" data-i18n="rentalsale:linkSalesAnalytics">Sales Analytics</a>
 </nav>
 <br>
 <article class="container article">
@@ -26,14 +26,12 @@
 
         <div class="card profile-card">
 
-
-          
           </ul>
 
           <div class="profile-card-wrapper">
-        <h2 class="h2 article-title">Sales Statistics</h2>
-        <canvas id="products">
-        </canvas>
+          <h2 class="h2 article-title" data-i18n="rentalsale:linkSalesStatistics">Sales Statistics</h2>
+          <canvas id="products">
+          </canvas>
        
 
           </div>
@@ -50,13 +48,13 @@
             <div class="card task-card">
 
                 <div class="card-icon icon-box blue">
-                <span class="material-symbols-rounded  icon">sell</span>
+                <span class="material-symbols-rounded icon">sell</span>
                 </div>
 
                 <div>
                 <center><data id="processed-orders" class="card-data"> -- </data></center>
 
-                <center><p id="product-selled" class="card-text">Products selled</p></center>
+                <center><p id="product-selled" class="card-text" data-i18n="rentalsale:elementProductsSelled">Products selled</p></center>
                 </div>
 
             </div>
@@ -67,13 +65,13 @@
 
           </ul>
 
-          <p class="card-title">Month sales</p>
+          <p class="card-title" data-i18n="rentalsale:elementMonthSales">Month sales</p>
 
           <canvas id="sales">
          </canvas>
          <br>
 
-         <p class="card-title">Customers</p>
+         <p class="card-title" data-i18n="rentalsale:elementCustomers">Customers</p>
 
          <canvas id="activity"></canvas>
 

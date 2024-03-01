@@ -17,14 +17,24 @@
 
         <?php
             $banner_img = 'Header-distribuidor-IMG.jpg';
+            $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+            // Incluir el archivo de traducciones
+            require __DIR__. '/../../../php/translations.php';
+
+            // Determinar el texto del banner según el idioma
+            $banner_text_translation = isset($translations[$language]['banner_text_manage_product']) ? $translations[$language]['banner_text_manage_product'] : $translations['en']['banner_text_manage_products'];
+            
+            // Incluir el banner.php pasando el texto traducido y el nombre del usuario
+            $banner_text = $banner_text_translation;
             $banner_text = "Gestión de productos";
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos" data-i18n="distribuidor:productsExist" >Existencias de productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/distribuidor/productos/agregar" data-i18n="distribuidor:addProduct">Agregar un producto</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/distribuidor/productos" data-i18n="distribuidor:productsExist" >Existencias de productos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/distribuidor/productos/agregar" data-i18n="distribuidor:addProduct">Agregar un producto</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/distribuidor/productos/calculadora" data-i18n="distribuidor:linkSendsCalculator">Calculadora de envíos</a>
         </nav>
         <br>        
         <div class="table-responsive">
@@ -134,7 +144,7 @@
                         <br>
                         <button class='material-symbols-rounded'  id='btnEditProduct' value='$id'>edit</button>
                         <br>
-                        <a href='https://plataforma.kalstein.net/index.php/distribuidor/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
+                        <a href='https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
                     </td>
                 </tr>
                 ");

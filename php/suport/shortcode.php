@@ -328,7 +328,7 @@
             <div class="container">
         
             <h1>
-            <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein_blanco.png" alt="Kalstein" width="100" height="40">
+            <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein_blanco.png" alt="Kalstein" width="100" height="40">
           </h1>
         
         
@@ -342,7 +342,7 @@
                   <ul class="navbar-list">
         
                     <li>
-                      <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/dashboard.php" class="navbar-link active icon-box" style="color: white;">
+                      <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/dashboard.php" class="navbar-link active icon-box" style="color: white;">
                         <span class="material-symbols-rounded  icon">grid_view</span>
         
                         <span>Home</span>
@@ -350,7 +350,7 @@
                     </li>
         
                     <li>
-                      <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/report.php" class="navbar-link icon-box" style="color: white;">
+                      <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/report.php" class="navbar-link icon-box" style="color: white;">
                         <span class="material-symbols-rounded  icon">folder</span>
         
                         <span>listado</span>
@@ -358,7 +358,7 @@
                     </li>
                     
                     <li>
-                      <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/report_add.php" class="navbar-link icon-box" style="color: white;">
+                      <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/report_add.php" class="navbar-link icon-box" style="color: white;">
                         <span class="material-symbols-rounded  icon">list</span>
         
                         <span>reportar falla</span>
@@ -366,7 +366,7 @@
                     </li>
         
                     <li>
-                      <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
+                      <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
                         <span class="material-symbols-rounded  icon">bar_chart</span>
         
                         <span>modificacion de reportes</span>
@@ -661,7 +661,7 @@ function reports(){
     <div class="container">
 
     <h1>
-    <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein_blanco.png" alt="Kalstein" width="100" height="40">
+    <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein_blanco.png" alt="Kalstein" width="100" height="40">
   </h1>
 
 
@@ -675,7 +675,7 @@ function reports(){
           <ul class="navbar-list">
 
             <li>
-              <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/dashboard.php" class="navbar-link active icon-box" style="color: white;">
+              <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/dashboard.php" class="navbar-link active icon-box" style="color: white;">
                 <span class="material-symbols-rounded  icon">grid_view</span>
 
                 <span>Home</span>
@@ -683,7 +683,7 @@ function reports(){
             </li>
 
             <li>
-              <a href="https://plataforma.kalstein.net/wp-content/plugin/kalsteinPerfiles/src/templates-php/suport/listOrderProcessed.php" class="navbar-link icon-box" style="color: white;">
+              <a href="https://dev.kalstein.plus/plataforma/wp-content/plugin/kalsteinPerfiles/src/templates-php/suport/listOrderProcessed.php" class="navbar-link icon-box" style="color: white;">
                 <span class="material-symbols-rounded  icon">folder</span>
 
                 <span>listado</span>
@@ -691,7 +691,7 @@ function reports(){
             </li>
             
             <li>
-              <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/template-php/suport/report.php" class="navbar-link icon-box" style="color: white;">
+              <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/template-php/suport/report.php" class="navbar-link icon-box" style="color: white;">
                 <span class="material-symbols-rounded  icon">list</span>
 
                 <span>reportar falla</span>
@@ -699,7 +699,7 @@ function reports(){
             </li>
 
             <li>
-              <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
+              <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
                 <span class="material-symbols-rounded  icon">bar_chart</span>
 
                 <span>modificacion de reportes</span>
@@ -743,9 +743,9 @@ function reports(){
         <br>
         <br>
     <nav class="nav nav-borders">
-    <a class="nav-link" href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/stock_suport.php" target="__blank">Products stock</a>
-    <a class="nav-link" href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/stock-add.php" target="__blank">Add product</a>
-    <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/stock-edit.php" target="__blank">Edit product</a>
+    <a class="nav-link" href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/stock_suport.php" target="__blank">Products stock</a>
+    <a class="nav-link" href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/stock-add.php" target="__blank">Add product</a>
+    <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/stock-edit.php" target="__blank">Edit product</a>
     <hr class="mt-0 mb-4">
     </nav>
     <br>
@@ -776,7 +776,7 @@ return $html;
           <div class="container">
       
           <h1>
-          <img src="/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein_blanco.png" alt="Kalstein" width="100" height="40">
+          <img src="/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein_blanco.png" alt="Kalstein" width="100" height="40">
         </h1>
       
       
@@ -790,7 +790,7 @@ return $html;
                 <ul class="navbar-list">
       
                   <li>
-                    <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/dashboard.php" class="navbar-link active icon-box" style="color: white;">
+                    <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/dashboard.php" class="navbar-link active icon-box" style="color: white;">
                       <span class="material-symbols-rounded  icon">grid_view</span>
       
                       <span>Home</span>
@@ -798,7 +798,7 @@ return $html;
                   </li>
       
                   <li>
-                    <a href="https://plataforma.kalstein.net/wp-content/plugin/kalsteinPerfiles/src/templates-php/suport/listOrderProcessed.php" class="navbar-link icon-box" style="color: white;">
+                    <a href="https://dev.kalstein.plus/plataforma/wp-content/plugin/kalsteinPerfiles/src/templates-php/suport/listOrderProcessed.php" class="navbar-link icon-box" style="color: white;">
                       <span class="material-symbols-rounded  icon">folder</span>
       
                       <span>listado</span>
@@ -806,7 +806,7 @@ return $html;
                   </li>
                   
                   <li>
-                    <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/template-php/suport/report.php" class="navbar-link icon-box" style="color: white;">
+                    <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/template-php/suport/report.php" class="navbar-link icon-box" style="color: white;">
                       <span class="material-symbols-rounded  icon">list</span>
       
                       <span>reportar falla</span>
@@ -814,7 +814,7 @@ return $html;
                   </li>
       
                   <li>
-                    <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
+                    <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
                       <span class="material-symbols-rounded  icon">bar_chart</span>
       
                       <span>modificacion de reportes</span>
@@ -1006,7 +1006,7 @@ return $html;
                   </li>
       
                   <li>
-                    <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
+                    <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
                       <span class="material-symbols-rounded  icon">bar_chart</span>
       
                       <span>modificacion de reportes</span>
@@ -1140,7 +1140,7 @@ return $html;
                   </li>
       
                   <li>
-                    <a href="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
+                    <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/reports_mod.php" class="navbar-link icon-box" style="color: white;">
                       <span class="material-symbols-rounded  icon">bar_chart</span>
       
                       <span>modificacion de reportes</span>

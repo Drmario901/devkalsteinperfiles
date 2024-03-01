@@ -39,13 +39,13 @@
                     <div class='row'>
                         <div class='col-sm-6 mb-3 mb-sm-0'>
                             <div class='form-floating input-wrapper'>
-                                <input type='text' class='form-control' id='nameUser' placeholder='Juan' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32) || event.charCode == 39">
+                                <input type='text' class='form-control' id='nameUser' data-placeholder="account:placeholderName" placeholder='Juan' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32) || event.charCode == 39">
                                 <label for='nameUser' data-i18n="account:registerNombreLabel" >Nombre</label>
                             </div>
                         </div>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper'>
-                                <input type='text' class='form-control' id='lastnameUser' placeholder='Peréz' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32) || event.charCode == 39">
+                                <input type='text' class='form-control' id='lastnameUser' data-placeholder="account:apellidoPlace" placeholder='Peréz' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32) || event.charCode == 39">
                                 <label for='lastnameUser' data-i18n="account:registerApellidoLabel">Apellido</label>                               
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                     <div class='row' style='display: none;'>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper' style='margin-top: 6rem;'>
-                                <input type='text' class='form-control' id='identityPassport' placeholder='Suzy Queue 4455 Landing Lange, APT 4 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='text' class='form-control' id='identityPassport' data-placeholder="account:direccionPlace" placeholder='Suzy Queue 4455 Landing Lange, APT 4 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='identityPassport' data-i18n="account:document">Documento de identidad/pasaporte (opcional)</label>                                
                             </div>
                         </div>
@@ -113,14 +113,14 @@
                     <div class='row' style='margin-top: 2rem; display: none;'>    
                         <div class='col-sm-6 mb-3 mb-sm-0'>
                             <div class='form-floating input-wrapper'>
-                                <input type='text' class='form-control' id='addressUser' placeholder='Suzy Queue 4455 Landing Lange, APT 4
+                                <input type='text' class='form-control' id='addressUser' data-placeholder="account:direccionPlace" placeholder='Suzy Queue 4455 Landing Lange, APT 4
                                 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='addressUser' data-i18n="account:labelDireccion" >Dirección</label>                               
                             </div>
                         </div>            
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper'>
-                                <input type='number' class='form-control' id='zipcodeUser' placeholder='Suzy Queue 4455 Landing Lange, APT 4
+                                <input type='number' class='form-control' id='zipcodeUser' data-placeholder="account:direccionPlace" placeholder='Suzy Queue 4455 Landing Lange, APT 4
                                 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='zipcodeUser' data-i18n="account:labelPostal" >Código postal</label>                            
                             </div>
@@ -197,7 +197,7 @@
                     <div class="row" style='display: none;'>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper' style='margin-top: 6rem;'>
-                                <input type='text' class='form-control' id='taxDocument' placeholder='Suzy Queue 4455 Landing Lange, APT 4 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='text' class='form-control' id='taxDocument'  placeholder='' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='taxDocument' data-i18n="account:documentFiscal" >Documento fiscal (opcional)</label>                                
                             </div>
                         </div>
@@ -214,8 +214,7 @@
                     <div class='row'>
                         <div class='col-sm-6 mb-3 mb-sm-0'>
                             <div class='form-floating input-wrapper'>
-                                <input type='text' class='form-control' id='BusinessName' placeholder='Suzy Queue 4455 Landing Lange, APT 4
-                                Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='text' class='form-control' id='BusinessName' placeholder='' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='BusinessName' data-i18n="account:labelRazon" >Razón social</label>                               
                             </div>
                         </div>
@@ -231,14 +230,13 @@
                     <div class='row' style='margin-top: 2rem;'>
                         <div class='col-sm-6 mb-3 mb-sm-0'>
                             <div class='form-floating input-wrapper'>
-                                <input type='text' class='form-control' id='stateBusiness' placeholder='Suzy Queue 4455 Landing Lange, APT 4 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='text' class='form-control' id='stateBusiness' placeholder='' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='stateBusiness' data-i18n="account:labelEstado" >Estado</label>                               
                             </div>
                         </div>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper'>
-                                <input type='text' class='form-control' id='addressBusiness' placeholder='Suzy Queue 4455 Landing Lange, APT 4
-                                Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='text' class='form-control' id='addressBusiness' placeholder='' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='addressBusiness' data-i18n="account:labelDireccionFiscal" >Dirección fiscal</label>                               
                             </div>                                        
                         </div>
@@ -246,8 +244,7 @@
                     <div class='row' style='margin-top: 2rem;'>
                         <div class='col-sm-6 mb-3 mb-sm-0'>
                             <div class='form-floating input-wrapper'>  
-                                <input type='number' class='form-control' id='zipcodeBusiness' placeholder='Suzy Queue 4455 Landing Lange, APT 4
-                                Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='number' class='form-control' id='zipcodeBusiness' placeholder='' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='zipcodeBusiness' data-i18n="account:labelPostal" >Código postal</label>                                
                             </div>
                         </div>
@@ -286,7 +283,7 @@
                     <div class='row'>
                         <div class='col-sm-6'>
                             <div class='form-floating input-wrapper' style='margin-top: 6rem;'>
-                                <input type='text' class='form-control' id='identityPassportManu' placeholder='Suzy Queue 4455 Landing Lange, APT 4 Louisville, KY 40018-1234' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type='text' class='form-control' id='identityPassportManu' placeholder='' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <label for='identityPassportManu' data-i18n="account:labelDocumentoObligatorio" >Documento de identidad/Pasaporte</label>                                
                             </div>
                         </div>

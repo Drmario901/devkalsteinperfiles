@@ -124,5 +124,6 @@
     "labelProvinciaOpcional": "Provincie (optioneel)",
     "aboutProduct": "Over het product",
     "productCategory": "Productcategorie",
-    "estimatedTime": "Geschatte tijd"
+    "estimatedTime": "Geschatte tijd",
+    "placeholderFirstNameLastName": "Voer uw naam en achternaam in"
 }

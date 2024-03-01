@@ -85,5 +85,12 @@
     "yaRegistrado": "Kas teil on juba konto?",
     "iniciarSesion": "Logi sisse",
     "confirmEmail": "Kinnitage oma e-posti aadress",
-    "sendLinkPassword": "Saada parooli lähtestamise link"
+    "sendLinkPassword": "Saada parooli lähtestamise link",
+    "placeholderName": "Sisestage oma nimi",
+    "apellidoPlace": "Sisestage oma perekonnanimi",
+    "emailPlace": "Sisestage oma e-post",
+    "passwordPlace": "Sisestage oma parool",
+    "confirmPlace": "Kinnitage oma parool",
+    "direccionPlace": "Sisestage oma aadress",
+    "telefonoPlace": "Sisestage oma telefoninumber"
 }

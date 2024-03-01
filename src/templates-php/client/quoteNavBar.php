@@ -5,7 +5,7 @@
                             <ul class='navbar-nav me-auto mb-2 mb-lg-0'>    
                                 <form class='d-flex ms-2 border border-2 rounded' role='search'>
                                     <li class='nav-item dropdown' style='margin-left: -1.5mm;'>
-                                        <input style='border: none; border-radius: 0; outline: none; width: 100mm; height: 100%;' class='form-control rounded-start' id='i-search' type='search' data-placeholder='buscar' placeholder='Search...' aria-label='Search'>
+                                        <input style='border: none; border-radius: 0; outline: none; width: 100mm; height: 100%;' class='form-control rounded-start' id='i-search' type='search' data-placeholder='client:buscar' placeholder='Search...' aria-label='Search'>
                                         <ul class='dropdown-menu sc'>
 
                                         </ul>

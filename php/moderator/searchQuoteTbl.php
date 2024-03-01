@@ -130,7 +130,7 @@
                         <div class='d-flex flex-row align-items-center justify-content-around'>                        
                             <button type='button' id='btnInfoClientQuote' style='color: #444 !important; font-size: 16px;' data-bs-toggle='modal' data-bs-target='#exampleModal' value='$id'><i class='fa-solid fa-address-book'></i></button>
                             <button type='button' class='fa-solid fa-eye btn-details' style='color: #444 !important; font-size: 16px;' value='$id'></button>
-                            <a href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$id' target='__blank' style='color: green'>
+                            <a href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$id' target='__blank' style='color: green'>
                                 <i class='fa-solid fa-up-right-from-square'></i>
                             </a>
                             <button type='button' id='btnDonwloadInfoClientQuote' style='color: #444 !important; font-size: 16px;' value='$id'><i class='fa-solid fa-download'></i></button>

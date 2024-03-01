@@ -18,10 +18,10 @@
         $firstLyricsLastname = strtoupper($acc_lname[0]);
     
         if ($acc_img == ''){
-            $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
+            $urlImagePerfil = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
         }
         else{
-            $urlImagePerfil = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$imgPerfil;
+            $urlImagePerfil = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$imgPerfil;
         }
     
     ?>
@@ -36,7 +36,10 @@
 
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Bienvenido, $acc_name $acc_lname";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeTwo';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 

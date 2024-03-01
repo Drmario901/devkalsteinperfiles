@@ -17,14 +17,17 @@
 
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Gestión de productos";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_ProductManagement';
+            $banner_text = translateTextBanner($banner);
             include 'banner.php';
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/fabricante/productos" data-i18n='manofacturer:existenciaProductos'>Existencias de productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/fabricante/productos/agregar" data-i18n='manofacturer:agregarProducto'>Agregar productos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/fabricante/productos/calculadora" data-i18n='manofacturer:costoEnvio'>Costos de envíos</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/productos" data-i18n='manofacturer:existenciaProductos'>Existencias de productos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/productos/agregar" data-i18n='manofacturer:agregarProducto'>Agregar productos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/productos/calculadora" data-i18n='manofacturer:costoEnvio'>Costos de envíos</a>
         </nav>
         <br>        
         <div class="table-responsive">
@@ -133,7 +136,7 @@
                                         <br>
                                         <button class='material-symbols-rounded'  id='btnEditProduct' value='$id' data-i18n='manofacturer:editar'>edit</button>
                                         <br>
-                                        <a href='https://plataforma.kalstein.net/index.php/fabricante/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
+                                        <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
                                     </td>
                                 </tr>
                                 ");

@@ -63,7 +63,7 @@
                 <div class="col-10 col-sm-11">
                     <br>
                     <?php $subject = (isset($_GET['subject']) && $_GET['subject'] != "")? " value='Re: ".$_GET['subject']."'" : ''; ?>
-                    <input style="color: #000 !important" type="text" id="asunto" name="asunto" data-placeholder='asuntoMsj' placeholder="Asunto"<?php echo $subject?>>
+                    <input style="color: #000 !important" type="text" id="asunto" name="asunto" data-placeholder='client:asuntoMsj' placeholder="Asunto"<?php echo $subject?>>
                 </div>
             </div>
         </form>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="form-group mt-4">
-                    <textarea style="color: #000 !important" id="contenido" name="contenido" rows="12" data-placeholder='componerMsj' placeholder="Escribe tu mensaje aquí"></textarea>
+                    <textarea style="color: #000 !important" id="contenido" name="contenido" rows="12" data-placeholder='client:componerMsj' placeholder="Escribe tu mensaje aquí"></textarea>
                 </div>
                 <br>
                 <div class="form-group">

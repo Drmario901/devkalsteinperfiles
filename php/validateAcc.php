@@ -76,11 +76,11 @@
                 <div style="width: 100%; background-color: #fff;">
                     <div style="width: 50%; margin-left: 25%;">
                         <div style="width: 100%; color: #000;">
-                            <img src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
+                            <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px;  margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
                             <h1 style="text-align: center; color: #000;">Hola, '.$nameEmail.'</h1>
                             <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nuestro equipo de moderadores ha validado tu cuenta. Ya puede iniciar sus actividades en nuestra plataforma</p>
                             <p style="text-align: center; color: #000; font-size: 1.2em; font-weight: bold;">Comenzar ahora</p>
-                            <p style="text-align: center; color: #000; font-weight: bold; font-size: 2em;">https://plataforma.kalstein.net/acceder</p>
+                            <p style="text-align: center; color: #000; font-weight: bold; font-size: 2em;">https://dev.kalstein.plus/plataforma/acceder</p>
                             <hr>
                             <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kalstein France nunca enviará un correo electrónico o solicitará que revele o verifique su contraseña, tarjeta de crédito o número de cuenta bancaria.</p>
                             <p style="color: #000;">2023 © Todos los derechos reservados</p>

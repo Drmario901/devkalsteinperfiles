@@ -5,7 +5,7 @@
 
         $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-        include 'translations.php';
+        require __DIR__. '/../../../php/translations.php';
 
         $banner_text_translation = isset($translations[$language]['banner_text_registration']) ? $translations[$language]['banner_text_registration'] : $translations['en']['banner_text_registration'];
 

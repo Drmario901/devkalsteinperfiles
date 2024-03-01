@@ -1,6 +1,6 @@
 var verify = false;
 
-var plugin_dir = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/';
+var plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
 
 jQuery(document).ready(function($){
 
@@ -121,7 +121,7 @@ jQuery(document).ready(function($){
                                     message: 'Validate successful!',
                                     position: 'center',
                                 });
-                                window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/accounts';
+                                window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/accounts';
                             }
                             else{
                                 iziToast.error({
@@ -194,7 +194,7 @@ jQuery(document).ready(function($){
                                             message: 'Message sent successful!',
                                             position: 'center',
                                         });
-                                        window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/accounts';
+                                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/accounts';
                                     }
                                     else{
                                         iziToast.error({

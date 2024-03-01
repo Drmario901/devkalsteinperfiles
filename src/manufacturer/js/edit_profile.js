@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 
         $.ajax({
 
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/infoAccount.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoAccount.php',
 
             type: 'POST',
 
@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
 
             $.ajax({
 
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
 
                 type: 'POST',
 
@@ -278,7 +278,7 @@ jQuery(document).ready(function($){
 
             contentType: "multipart/form-data",
 
-			url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/updateInfoAccount.php",
+			url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/updateInfoAccount.php",
 
 			type: "POST",
 
@@ -402,7 +402,7 @@ jQuery(document).ready(function($){
 
         $.ajax({
 
-			url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/savedNewPassword.php",
+			url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedNewPassword.php",
 
 			type: "POST",
 
@@ -498,7 +498,7 @@ jQuery(document).ready(function($){
 
         $.ajax({
 
-			url: "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/deleteAccount.php",
+			url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/deleteAccount.php",
 
 			type: "POST",
 
@@ -510,7 +510,7 @@ jQuery(document).ready(function($){
 
             let data = JSON.parse(respuesta)
 
-            window.location.href = 'https://plataforma.kalstein.net/index.php/login/';
+            window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/login/';
 
         })
 

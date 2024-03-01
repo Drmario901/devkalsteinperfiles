@@ -55,7 +55,7 @@
                     echo "
                     <script>
                         alert('another user is in this taks');
-                        window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/accounts';
+                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/accounts';
                     </script>
                     ";
                 }
@@ -131,8 +131,8 @@
                                 <h6>Conuntry and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
                                 $countryAcc<br>
                                 Register: $document
-                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
-                                    <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
+                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
+                                    <img style='border: 1px solid #999' width=200px src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
                                 </a>
                                 <br>
                             
@@ -174,8 +174,8 @@
 
                                 <h6>RIF <input class='d-inline' type='checkbox' id='rif-b'></h6>
                                 Register: $rifCompany
-                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
-                                    <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
+                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
+                                    <img style='border: 1px solid #999' width=200px src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
                                 </a>
                             
                             </div>

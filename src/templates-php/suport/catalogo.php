@@ -15,7 +15,10 @@
 
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Bievenidoi(a), $acc_name $acc_lname";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeThree';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
@@ -64,7 +67,7 @@
 
                 <div class="search col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fas fa-search mx-3"></i>
-                    <input class="mb-0" data-placeholder="searchManual" data-i18n="support:searchManual" type="text" id="searchreport-ma" style="padding-left: 10px; height: 100%" placeholder="Busqueda para un manual">
+                    <input class="mb-0" data-placeholder="support:searchManual" data-i18n="support:searchManual" type="text" id="searchreport-ma" style="padding-left: 10px; height: 100%" placeholder="Busqueda para un manual">
                 </div>
             </div>
 
@@ -75,7 +78,10 @@
         <div id='container-catalogs' hidden>
             <?php
                 $banner_img = 'Header-fabricante-IMG.png';
-                $banner_text = "Catalog";
+
+                require __DIR__. '/../../../php/translateTextBanner.php';
+                $banner = 'banner_text_catalog';
+                $banner_text = translateTextBanner($banner);
                 include 'banner.php';
             ?>
         
@@ -116,7 +122,7 @@
 
                 <div class="search col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fas fa-search mx-3"></i>
-                    <input type="text" data-placeholder="searchCatalogo" data-i18n="support:searchCatalogo" placeholder="Busqueda para un catalogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
+                    <input type="text" data-placeholder="support:searchCatalogo" data-i18n="support:searchCatalogo" placeholder="Busqueda para un catalogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
                 </div>
             </div>
         

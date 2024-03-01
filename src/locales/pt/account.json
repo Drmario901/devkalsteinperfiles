@@ -83,5 +83,12 @@
     "codigoNoValido": "O código de verificação não é válido.",
     "nuevoCodigo": "Solicite um novo código de verificação aqui",
     "yaRegistrado": "Já tem uma conta?",
-    "iniciarSesion": "Iniciar sessão"
+    "iniciarSesion": "Iniciar sessão",
+    "placeholderName": "Inserisci il tuo nome",
+    "apellidoPlace": "Inserisci il tuo cognome",
+    "emailPlace": "Inserisci la tua email",
+    "passwordPlace": "Inserisci la tua password",
+    "confirmPlace": "Conferma la tua password",
+    "direccionPlace": "Inserisci il tuo indirizzo",
+    "telefonoPlace": "Inserisci il tuo numero di telefono"
 }

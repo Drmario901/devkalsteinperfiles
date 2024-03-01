@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
     var currentPage = 'diagsys'; 
     var pageParameters = {
-        'diagsys': 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/diagnosis/diagsys.php',
-        'register': 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/diagnosis/register.php',
-        'exit': 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/diagnosis/exit.php'
+        'diagsys': 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/diagnosis/diagsys.php',
+        'register': 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/diagnosis/register.php',
+        'exit': 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/diagnosis/exit.php'
     };
 
     function addLinkClickListeners() {

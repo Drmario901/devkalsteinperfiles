@@ -23,10 +23,10 @@
 <br>
 
 <nav class="nav nav-borders">
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock">Products stock</a>
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add"> Add rental service</a>
-    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add/used">Add used product</a>
-    <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/stock/edit">Edit product</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock" data-i18n="rentalsale:aProductsStock">Products stock</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add" data-i18n="rentalsale:aAddRentalService"> Add rental service</a>
+    <a class="nav-link" href="https://testing.kalstein.digital/index.php/rentalsale/stock/add/used" data-i18n="rentalsale:addUsedProduct">Add used product</a>
+    <a class="nav-link active" href="https://testing.kalstein.digital/index.php/rentalsale/stock/edit" data-i18n="rentalsale:editProduct">Edit product</a>
 </nav>
 
 <hr class="mt-0 mb-4">
@@ -39,7 +39,7 @@
                     <div class="col-12">
                     </div>
                     <select class="custom-select tm-select-accounts" style="color: #000 !important;" id="dataEdit" name="consulta">
-                        <option selected value='0'>Please, choose an option</option>
+                        <option selected value='0' data-i18n="rentalsale:pleaseChooseAnOption">Please, choose an option</option>
                         <?php
                             
                             require __DIR__.'/../../../php/conexion.php';
@@ -79,7 +79,7 @@
                     ?>
                 </div>
                 <div id="formElementsbutton" class="col-12" hidden>
-                    <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData">Edit Product Now</button></center>
+                    <center><button type="button" id="btnUpdateData" class="btn btn-primary btn-block text-uppercase" id="btnUpdateData" data-i18n="rentalsale:EditProductNow">Edit Product Now</button></center>
                 </div>
             </div>
         </div>

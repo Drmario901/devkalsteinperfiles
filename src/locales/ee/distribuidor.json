@@ -131,5 +131,7 @@
     "elementoAcciones": "Tegevused",
     "Pendiente": "Ootel",
     "Validado": "Kinnitatud",
-    "Denegado": "Tagasi lükatud"
+    "Denegado": "Tagasi lükatud",
+    "labelCantidad": "Kogus",
+    "labelResultado": "Tulemus"
 }

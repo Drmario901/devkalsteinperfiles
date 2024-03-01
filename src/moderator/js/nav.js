@@ -60,7 +60,7 @@ jQuery(document).ready(function($){
 
         $.ajax({
 
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/logoutMod.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/logoutMod.php',
 
             type: 'POST',
 
@@ -70,7 +70,7 @@ jQuery(document).ready(function($){
 
         .done(function(respuesta){
 
-            $(location).attr('href','https://plataforma.kalstein.net/acceder');
+            $(location).attr('href','https://dev.kalstein.plus/plataforma/acceder');
 
         })
 

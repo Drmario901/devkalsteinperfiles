@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var totalArchivos = formData.getAll('imagenes[]').length;
         
             $.ajax({
-                url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/templates-php/customize-template/imgUpload.php',
+                url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/customize-template/imgUpload.php',
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let cName = cNameElement.dataset.name;
 
 
-    fetch('https:///plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/customizeTemplateQuerys.php', {
+    fetch('https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/customizeTemplateQuerys.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -508,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(data); // Puedes hacer algo con la respuesta si lo deseas
 
         // Construir la URL con el parámetro emailAcc
-        let url = 'https:///plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/createCustomPDF.php';
+        let url = 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createCustomPDF.php';
         // Abrir la URL en una nueva ventana
         window.open(url, '_blank');
     })

@@ -185,6 +185,9 @@
     "accesoriosAdic": "Dodatkowe akcesoria",
     "ver": "Pokaż",
     "descripcionProducto": "Opis produktu",
-    "accesos":"Dostęp"
+    "accesos":"Dostęp",
+    "addEmail": "Wprowadź swój adres e-mail",
+    "zipPlaceHolder": "Wprowadź swój kod pocztowy",
+    "organizationNamePlaceholder": "Wprowadź nazwę swojej organizacji"
 }
 

@@ -152,7 +152,7 @@
                 $conexion->query($insertCRM);
 
                 $slug1 = slug_sanitize($nameB);
-                $insertSlug = "INSERT INTO tienda_virtual(ID_tienda, ID_user, titulo_t, subtitulo_t, descripcion, mision, vision, logo_t, quienes_somos_t, facebook_t, twitter_t, instagram_t, color_p, color_s, banner_t, img_quienes_s, img_mision, img_vision, ID_idioma, ID_slug) VALUES ('', '$email', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 'https://plataforma.kalstein.net/$slug1/')";
+                $insertSlug = "INSERT INTO tienda_virtual(ID_tienda, ID_user, titulo_t, subtitulo_t, descripcion, mision, vision, logo_t, quienes_somos_t, facebook_t, twitter_t, instagram_t, color_p, color_s, banner_t, img_quienes_s, img_mision, img_vision, ID_idioma, ID_slug) VALUES ('', '$email', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 'https://dev.kalstein.plus/plataforma/$slug1/')";
                 $conexion->query($insertSlug);
                 if (!$conexion->query($insertSlug)) {
                     echo "Error en la consulta: " . $conexion->error;
@@ -202,7 +202,7 @@
                 $slug = slug_sanitize($nameB);
                 $empty_template = 'empty.php';
                 
-                $insertSlug = "INSERT INTO tienda_virtual(`ID_tienda`, `ID_user`, `titulo_t`, `titulo_t`, `subtitulo_t`, `descripcion`, `mision`, `vision`, `logo_t`, `quienes_somos_t`, `facebook_t`, `twitter_t`, `instagram_t`, `color_p`, `color_s`, `banner_t`, `img_quienes_s`, `img_mision`, `img_vision`, `ID_idioma`, `ID_slug`) VALUES ('', '$email', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'https://plataforma.kalstein.net/$slug/')";
+                $insertSlug = "INSERT INTO tienda_virtual(`ID_tienda`, `ID_user`, `titulo_t`, `titulo_t`, `subtitulo_t`, `descripcion`, `mision`, `vision`, `logo_t`, `quienes_somos_t`, `facebook_t`, `twitter_t`, `instagram_t`, `color_p`, `color_s`, `banner_t`, `img_quienes_s`, `img_mision`, `img_vision`, `ID_idioma`, `ID_slug`) VALUES ('', '$email', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'https://dev.kalstein.plus/plataforma/$slug/')";
                 $conexion->query($insertSlug);
 
                 $post_date = date('Y-m-d H:i:s');

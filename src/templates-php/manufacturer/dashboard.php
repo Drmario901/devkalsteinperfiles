@@ -19,7 +19,10 @@
         
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Bienvenido, $acc_name $acc_lname";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeTwo';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
@@ -78,7 +81,7 @@
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
                                             <div  data-i18n='manofacturer:de' > De <b>$client</b></div>
-                                            <a href='https://plataforma.kalstein.net/index.php/fabricante/ordenes'>
+                                            <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
                                         </div>
@@ -106,13 +109,13 @@
     
                     <div class="card task-card">
                         <div class="card-icon icon-box green">
-                            <span class="material-symbols-rounded  icon" data-i18n="manofacturer:inventario">Inventory</span>
+                            <span class="material-symbols-rounded  icon">Inventory</span>
                         </div>
                         <div>
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
                             <center style="display: flex; flex-direction: columns">
                                 <p class="card-text" data-i18n="manofacturer:ordenesProcesadas">Órdenes procesadas</p>
-                                <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/procesadas">
+                                <a href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes/procesadas">
                                     &nbsp; <span class='fa-solid fa-eye btn-details'
                                         style='color: #444 !important; font-size: 16px;'></span></a>
                             </center>
@@ -121,7 +124,7 @@
     
                     <div class="card task-card">
                         <div class="card-icon icon-box blue">
-                            <span class="material-symbols-rounded icon" data-i18n="manofacturer:costoEnvio">
+                            <span class="material-symbols-rounded icon">
                                 pending_actions
                             </span>
                         </div>
@@ -129,7 +132,7 @@
                             <center><data id="pending-orders" class="card-data" data-i18n="manofacturer:noDatos">No hay datos</data>
                                 <center style="display: flex; flex-direction: columns">
                                     <p class="card-text" data-i18n="manofacturer:ordenesPendientes">Órdenes pendientes</p>
-                                    <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/"> &nbsp;
+                                    <a href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes/"> &nbsp;
                                         <span class='fa-solid fa-eye btn-details'
                                             style='color: #444 !important; font-size: 16px;'>
                                         </span>

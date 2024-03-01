@@ -131,5 +131,7 @@
     "elementoAcciones": "Ações",
     "Pendiente": "Pendente",
     "Validado": "Validado",
-    "Denegado": "Negado"
+    "Denegado": "Negado",
+    "labelCantidad": "Quantidade",
+    "labelResultado": "Resultado"
 }

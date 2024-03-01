@@ -1,26 +1,26 @@
-<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
+<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
     <div class="container">
         <div>
-            <img class='kalstein-logo-footer' src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
+            <img class='kalstein-logo-footer' src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
             <p><span data-i18n="support:letUsKnow" >Déjanos saber lo que necesitas y nosotros nos encargaremos del resto.</span></p>
         </div>
         <div>
             <h5 data-i18n="support:quickAccess" >Acceso rapido</h5>
             <ul>
                 <li class="footer-item">
-                    <a id="link-stock-footer" data-i18n="support:existencias" href="https://plataforma.kalstein.net/index.php/manufacturer/stock">Existencias</a>
+                    <a id="link-stock-footer" data-i18n="support:existencias" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock">Existencias</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a id="link-list-order-footer" data-i18n="support:orders" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order">Ordenes</a>
+                    <a id="link-list-order-footer" data-i18n="support:orders" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order">Ordenes</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a id="link-sales-report-footer" data-i18n="support:reportSales" href="https://plataforma.kalstein.net/index.php/manufacturer/sales-report">Reporte de Ventas</a>
+                    <a id="link-sales-report-footer" data-i18n="support:reportSales" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/sales-report">Reporte de Ventas</a>
                 </li>
                 
                 <li class="footer-item">
-                    <a id="link-home-footer" data-i18n="support:costShips" href="https://plataforma.kalstein.net/index.php/manufacturer/stock/shipping">Costos de envío</a>
+                    <a id="link-home-footer" data-i18n="support:costShips" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock/shipping">Costos de envío</a>
                 </li>
             </ul>
         </div>
@@ -55,7 +55,7 @@
         </div>
         <div class="order-first order-md-last">
             <h5 data-i18n="support:seen">Ser visto</h5>
-            <a href='https://plataforma.kalstein.net/index.php/manufacturer/stock/add'><div class="footer-main-button" data-i18n="support:addProduct" >AGREGAR PRODUCTO</div></a>
+            <a href='https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock/add'><div class="footer-main-button" data-i18n="support:addProduct" >AGREGAR PRODUCTO</div></a>
         </div>
     </div>
     <div data-i18n="support:copyright" class='text-white my-3 text-center'>© <?php echo date('Y') ?> Kalstein. Reservados todos los derechos</div>

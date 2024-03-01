@@ -85,7 +85,7 @@ if ($resultado) {
                         echo '
                                 <div class="header-mail">';
                         $sender_avatar_url = getProfileImage($conexion, $message['remitente_id']);
-                        $sender_avatar_url = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/'.$sender_avatar_url;
+                        $sender_avatar_url = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/'.$sender_avatar_url;
                         echo '
                                     <img class="avatar" src="' . $sender_avatar_url . '">
                                     <div class="from">
@@ -97,7 +97,7 @@ if ($resultado) {
                         echo '
                                 <div class="header-mail" style="display: flex; align-items: center; justify-content: space-between;">';
                         $recipient_avatar_url = getProfileImage($conexion, $message['destinatario_id']);
-                        $recipient_avatar_url = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/'.$recipient_avatar_url;
+                        $recipient_avatar_url = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/'.$recipient_avatar_url;
                         echo '
                                     <img class="avatar" src="' . $recipient_avatar_url . '">
                                     <div class="to">

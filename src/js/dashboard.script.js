@@ -1,4 +1,42 @@
 jQuery(document).ready(function($){
+
+
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
+
+    
+
+    /* function translateAlert(type, msg, lng) {
+        $.ajax({
+            url: plugin_dir + '/php/translations.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                
+                const translation = response[lng][msg];
+                iziToast[type]({
+                    message: translation
+                });
+
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }  */
+
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, '\\$&');
@@ -8,7 +46,7 @@ jQuery(document).ready(function($){
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
-    
+
     $('#inputShippingCost-subject').focus()
 
     dataForDonutsChartjsAccount()
@@ -5123,6 +5161,8 @@ jQuery(document).ready(function($){
 
     }
 
+    //get the lang cookie 
+    //const cookie = getCookie('lang').split('=')[1]
 
 
     function registerTicketSupport(idServices, emailAgent, model, description, level){
@@ -5159,15 +5199,18 @@ jQuery(document).ready(function($){
 
                 $('#Rnivel').val('0')
 
+                
+
                 iziToast.success({
 
                     title: 'Success',
-
-                    message: 'Ticket generated',
-
+                    message: alertsTranslations.supportTicketGerenerated,
                     position: 'topRight'
-
                 })
+
+                // translateAlert('success', 'supportTicketGerenerated', cookie)
+
+                // createAlert(success, 'supportTicketGerenerated')
 
             }else{
 
@@ -5643,7 +5686,6 @@ jQuery(document).ready(function($){
     }
 
     setInterval(keepSessionAlive, 300000); 
-
 
 })
 

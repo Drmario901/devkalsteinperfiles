@@ -208,15 +208,15 @@
         <div class="col-12 col-md-6">
 
             <label data-i18n="distribuidor:labelNombre">Nombre</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="labelNombre" placeholder="Nombre"/>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelNombre" placeholder="Nombre"/>
 
             
             <!-- no fake brand input -->
                 <label data-i18n="distribuidor:labelMarca">Marca</label>
-                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="labelMarca" placeholder="Marca"/>
+                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="distribuidor:labelMarca" placeholder="Marca"/>
             
             <label data-i18n="distribuidor:labelModelo">Modelo</label>
-            <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="labelModelo" placeholder="Modelo"/>
+            <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelModelo" placeholder="Modelo"/>
             
         </div>
 
@@ -228,7 +228,7 @@
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
                     <span class="drop-title" data-i18n="distribuidor:labelDragAndDrop">Selecciona o arrastra y suelta una imágen</span>
-                    <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
+                    <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
                 <input type="file" id="file-input">
@@ -237,7 +237,7 @@
 
         <div class="col-12 mb-4">
             <label data-i18n="distribuidor:labelDescripcion">Descripción</label>
-            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" data-placeholder="placeholderDescripcion" placeholder="Describe tu producto en menos de 5000 carácteres
+            <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" data-placeholder="distribuidor:placeholderDescripcion" placeholder="Describe tu producto en menos de 5000 carácteres
             "></textarea>
         </div>
     </div>
@@ -565,7 +565,7 @@
             <p id='currentlyUploadedCatalog'></p>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
                 <span class="drop-title" data-i18n="distribuidor:dragAndDrop" >Selecciona o arrastra y suelta tu archivo</span>
-                <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
+                <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
         </div>
@@ -574,7 +574,7 @@
             <p id='currentlyUploadedManual'></p>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
                 <span class="drop-title" data-i18n="distribuidor:dragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
-                <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
+                <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>
         </div>

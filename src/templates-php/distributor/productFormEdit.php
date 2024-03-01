@@ -228,7 +228,7 @@
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
                     <span class="drop-title" data-i18n="distribuidor:dragAndDrop">Selecciona o arrastra y suelta una imágen</span>
-                    <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
+                    <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
                 <input type="file" id="file-input">
@@ -565,7 +565,7 @@
             <p id='currentlyUploadedCatalog'></p>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
                 <span class="drop-title" data-i18n="distribuidor:labelDragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
-                <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
+                <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
         </div>
@@ -574,7 +574,7 @@
             <p id='currentlyUploadedManual'></p>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
                 <span class="drop-title" data-i18n="distribuidor:labelDragAndDrop">Selecciona o arrastra y suelta tu archivo</span>
-                <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
+                <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>
         </div>

@@ -10,7 +10,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/cientifico/savedInfoCientifico.php",
+    CURLOPT_URL => "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/cientifico/savedInfoCientifico.php",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,

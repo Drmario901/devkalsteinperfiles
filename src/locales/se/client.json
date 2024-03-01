@@ -185,5 +185,8 @@
     "accesoriosAdic": "Ytterligare tillbehör",
     "ver": "Visa",
     "descripcionProducto": "Produktbeskrivning",
-    "accesos":"Tillgång"
-    }
+    "accesos":"Tillgång",
+    "addEmail": "Ange din e-postadress",
+    "zipPlaceHolder": "Ange ditt postnummer",
+    "organizationNamePlaceholder": "Ange namnet på din organisation"
+}

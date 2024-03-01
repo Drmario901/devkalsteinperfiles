@@ -22,13 +22,13 @@ function enviarCorreo($destinatarioEmail, $email, $idCotizacion)
     try {
         $mail->SMTPDebug = 2;
         $mail->isSMTP();
-        $mail->Host = 'plataforma.kalstein.net';
+        $mail->Host = 'dev.kalstein.plus/plataforma';
         $mail->SMTPAuth = true;
-        $mail->Username = 'no-reply@plataforma.kalstein.net';
+        $mail->Username = 'no-reply@dev.kalstein.plus/plataforma';
         $mail->Password = 'XsI2C;6d{++-';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
-        $mail->setFrom('no-reply@plataforma.kalstein.net');
+        $mail->setFrom('no-reply@dev.kalstein.plus/plataforma');
         $mail->addAddress($destinatarioEmail);
 
         $mail->isHTML(true);

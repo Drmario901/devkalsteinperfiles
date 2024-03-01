@@ -4,7 +4,7 @@
     <div class='row align-items-start'>
         <div class='col'>
             <div class='card' style='min-width: 18rem; max-width: 30rem; margin: 0 auto; margin-top: 10rem; -webkit-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75);'>
-                <a href='https://plataforma.kalstein.net/' style='margin: 0 auto;'><img src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png' class='card-img-top' style='width: 200px;  margin-top: 4rem; margin-bottom: 2rem;'></a>
+                <a href='https://dev.kalstein.plus/plataforma/' style='margin: 0 auto;'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png' class='card-img-top' style='width: 200px;  margin-top: 4rem; margin-bottom: 2rem;'></a>
                 <div class='card-body'>
                     <h5 class='card-title text-center fs-5' data-i18n="account:titleNewPassword">Hola, introduzca su nueva contraseña.</h5>
                     <div class='col-md' style='margin-top: 1rem;'>

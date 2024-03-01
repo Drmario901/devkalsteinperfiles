@@ -133,7 +133,7 @@ jQuery(document).ready(function($) {
 
             console.log('gergergegegegerg')
             $.ajax({
-                url:  "https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/distributor/accesories/fetchAccessories.php",
+                url:  "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/accesories/fetchAccessories.php",
                 type: "POST",
                 data: {product_aid : consulta},
             })

@@ -16,14 +16,17 @@
     <article class="container article">
         <?php
             $banner_img = 'Header-fabricante-IMG.png';
-            $banner_text = "Pedidos Cancelados";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_CanceledOrders';
+            $banner_text = translateTextBanner($banner);
             include 'banner.php';
         ?>
         
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order" data-i18n="manofacturer:todosPedidos">Todos los pedidos</a>
-            <a class="nav-link" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/processed" data-i18n="manofacturer:pedidosProcesados">Pedidos procesados</a>
-            <a class="nav-link active" href="https://plataforma.kalstein.net/index.php/manufacturer/list-order/cancelled" data-i18n="manofacturer:pedidosCancelados">Pedidos cancelados</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order" data-i18n="manofacturer:todosPedidos">Todos los pedidos</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order/processed" data-i18n="manofacturer:pedidosProcesados">Pedidos procesados</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/list-order/cancelled" data-i18n="manofacturer:pedidosCancelados">Pedidos cancelados</a>
         </nav>
         <br>
         <div id="listOrderCancelledTable" class="table-responsive">

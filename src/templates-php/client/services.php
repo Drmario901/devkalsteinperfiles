@@ -5,7 +5,7 @@
         $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
                 // Incluir el archivo de traducciones
-                include 'translations.php';
+                require __DIR__. '/../../../php/translations.php';
 
                 // Determinar el texto del banner según el idioma
                 $banner_text_translation = isset($translations[$language]['banner_text_find_support_agent']) ? $translations[$language]['banner_text_find_support_agent'] : $translations['en']['banner_text_find_support_agent'];
@@ -26,7 +26,7 @@
         <div class='row'>
             <div class='col-12 input-wrapper-p'>
                 <i class='fa-solid fa-magnifying-glass second-glass second-glass-2'></i>
-                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar el servicio de su requerimiento' data-placeholder='buscarServicio'>
+                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar el servicio de su requerimiento' data-placeholder='client:buscarServicio'>
             </div>
             <div id='c-listSupportReports' class='col-12 table-responsive'>
         
@@ -37,7 +37,7 @@
         <div class='row'>
             <div class='col-12 input-wrapper-p'>
                 <i class='fa-solid fa-magnifying-glass second-glass second-glass-2'></i>
-                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar un agente de soporte' data-placeholder='buscarAgente'>
+                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Buscar un agente de soporte' data-placeholder='client:buscarAgente'>
             </div>
             <div id='c-listSupportServices' class='col-12'>
             </div>
@@ -68,7 +68,7 @@
                     <select id='Rproduct' class='custom-select tm-select-accounts' name='category'>
                         
                     </select>
-                    <input type="text" id='otherModel' style='display: none; margin-top: 1rem;' placeholder='Modelo de Equipo' data-placeholder='modeloEquipo'>                 
+                    <input type="text" id='otherModel' style='display: none; margin-top: 1rem;' placeholder='Modelo de Equipo' data-placeholder='client:modeloEquipo'>                 
                     <br>
                     <div class='row tm-edit-product-row'>
                         <div class='form-group mb-3'>

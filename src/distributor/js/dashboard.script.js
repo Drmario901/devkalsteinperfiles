@@ -69,7 +69,7 @@ jQuery(document).ready(function($){
 
     function searchDataUserDashboard(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
             type: 'POST',
             data: {consulta},
         })
@@ -86,7 +86,7 @@ jQuery(document).ready(function($){
 
     function showTblQuoteUsers(email){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php',
             type: 'POST',
             data: {email},
         })
@@ -100,7 +100,7 @@ jQuery(document).ready(function($){
 
     function logout(consulta){
         $.ajax({
-            url: 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/logout.php',
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/logout.php',
             type: 'POST',
             data: {consulta},
         })

@@ -16,12 +16,15 @@
 
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Bienvenido(a), $acc_name $acc_lname";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeThree';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
     
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://plataforma.kalstein.net/index.php/support/reports/" target="__blank" data-i18n="support:listaReportes" >Lista de  Reportes</a>
+            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/reports/" target="__blank" data-i18n="support:listaReportes" >Lista de  Reportes</a>
             <hr class="mt-0 mb-4">
         </nav>
         

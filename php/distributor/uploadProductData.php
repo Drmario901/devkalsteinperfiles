@@ -64,7 +64,7 @@
         if ($catalog != '') {
            /* $randomFileName = uniqid() . '.jpg';
         
-            $thumbnailPath = '/home/he270716/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/' . $randomFileName;*/
+            $thumbnailPath = '/home/he270716/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/' . $randomFileName;*/
         
             $query2 = "INSERT INTO wp_catalogs_es
             (catalog_name_es, catalog_maker, catalog_category_es, catalog_model, catalog_image,  catalog_pdf) VALUES
@@ -155,7 +155,7 @@
         $conexion->query($sql5);
 
         // Ruta de la galería de imágenes 
-        $gallery_image = 'https://plataforma.kalstein.net/wp-content/uploads/kalsteinQuote/';
+        $gallery_image = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/';
 
         /*// Insertar imagen de galería
         $sql6 = "INSERT INTO wp_posts (post_author, post_date, post_date_gmt, post_title, post_mime_type, post_status, post_type)  

@@ -154,7 +154,7 @@ document.getElementById('p2Img01BtnClearG').addEventListener('click', function()
     img.style.width = '249px';
     img.style.height = '73.28px';
     cont.style.top = '16mm';
-    img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
+    img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
     checkbox.checked = true;
 
 });
@@ -249,7 +249,7 @@ document.querySelector('#p2ImgBtnClearG').addEventListener('click', function(){
     img.style.width = '249px';
     img.style.height = '73.28px';
     cont.style.top = '16mm';
-    img.src = 'https://plataforma.kalstein.net/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
+    img.src = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png';
     checkbox.checked = true;
 
     //IMG02

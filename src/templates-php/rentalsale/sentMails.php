@@ -18,50 +18,50 @@
 <br>
 <br>
 <?php
-require __DIR__ . '/../../../php/conexion.php';
+    require __DIR__ . '/../../../php/conexion.php';
 
-function getSentMessages($conexion, $email)
-{
-    $consulta = "SELECT * FROM wp_mensajes WHERE remitente_id = '$email' ORDER BY fecha_envio DESC";
-    $resultado = $conexion->query($consulta);
+    function getSentMessages($conexion, $email)
+    {
+        $consulta = "SELECT * FROM wp_mensajes WHERE remitente_id = '$email' ORDER BY fecha_envio DESC";
+        $resultado = $conexion->query($consulta);
 
-    $messages = array();
+        $messages = array();
 
-    if ($resultado->num_rows > 0) {
-        while ($row = $resultado->fetch_assoc()) {
-            $messages[] = $row;
+        if ($resultado->num_rows > 0) {
+            while ($row = $resultado->fetch_assoc()) {
+                $messages[] = $row;
+            }
         }
+
+        return $messages;
     }
 
-    return $messages;
-}
 
+    $sentMessages = getSentMessages($conexion, $email);
+    $conexion->close();
 
-$sentMessages = getSentMessages($conexion, $email);
-$conexion->close();
+    $messagesPerPage = 5;
+    $currentPage = isset($_GET['i']) ? max(1, (int)$_GET['i']) : 1;
+    $start = ($currentPage - 1) * $messagesPerPage;
+    $end = $start + $messagesPerPage;
+    $end = min($end, count($sentMessages));
 
-$messagesPerPage = 5;
-$currentPage = isset($_GET['i']) ? max(1, (int)$_GET['i']) : 1;
-$start = ($currentPage - 1) * $messagesPerPage;
-$end = $start + $messagesPerPage;
-$end = min($end, count($sentMessages));
-
-function limitDescription($description, $limit)
-{
-    if (strlen($description) > $limit) {
-        $description = substr($description, 0, $limit) . '...';
+    function limitDescription($description, $limit)
+    {
+        if (strlen($description) > $limit) {
+            $description = substr($description, 0, $limit) . '...';
+        }
+        return $description;
     }
-    return $description;
-}
 ?>
 
 <div class="container bootdey">
     <div class="email-app mb-4">
         <nav>
-            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff" class="btn btn-danger btn-block">New Message</a>
+            <a href="https://testing.kalstein.digital/index.php/distributor/inbox/compose" style="color: #fff" class="btn btn-danger btn-block" data-i18n="rentalsale:elementNewMessage">New Message</a>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i>Inbox</a>
+                    <a class="nav-link" href="https://testing.kalstein.digital/index.php/distributor/inbox/"><i class="fa fa-inbox"></i> <span data-i18n="rentalsale:aInbox">Inbox</span></a>
                 </li>
             </ul>
         </nav>
@@ -101,7 +101,7 @@ function limitDescription($description, $limit)
             <?php } else { ?>
                 <div class="no-messages">
                     <i style="color: #000 !important" class="fa fa-frown"></i>
-                    <p style="color: #000 !important">No messages</p>
+                    <p style="color: #000 !important" data-i18n="rentalsale:elementNoMessages">No messages</p>
                 </div>
             <?php } ?>
         </main>

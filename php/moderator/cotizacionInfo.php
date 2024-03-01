@@ -25,7 +25,7 @@
                     "product_name" => $name,
                     "product_model" => $model,
                     "product_quantity" => $cant,
-                    "product_image" => 'https://plataforma.kalstein.net/wp-content/uploads/kalsteinQuote/'.$image
+                    "product_image" => 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'.$image
                 );
                 
                 if($parent != ''){

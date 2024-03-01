@@ -209,7 +209,7 @@
         <div class="col-12 col-md-6">
 
             <label data-i18n='manofacturer:nombre'>Nombre</label>
-            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre" data-placeholder="nombre"/>
+            <input id="nameProduct" type="text" class="form-control validate mb-3" placeholder="Nombre" data-placeholder="client:nombre"/>
 
             <!-- true brand input -->
             <input type="hidden" id="productBrand" value="<?php
@@ -236,7 +236,7 @@
             <div class="custom-file mt-3 mb-3">
                 <label for="file-input" class="drop-container" id="dropcontainerImage">
                     <span class="drop-title" data-i18n='manofacturer:seleccionarOdrop'>Seleccionar o arrastrar y soltar una imagen</span>
-                    <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
+                    <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/IMAGE-document.png" alt="pdf">
                     <img id="thumbnail"/>
                 </label>
                 <input type="file" id="file-input">
@@ -563,7 +563,7 @@
             <label data-i18n='manofacturer:catalogoInfo'>Información del catálogo (opcional)</label>
             <label for="catalogPDF" class="drop-container" id="dropcontainerCatalog">
                 <span class="drop-title" data-i18n='manofacturer:seleccioneArrastreArch'>Seleccione o arrastre y suelte su archivo</span>
-                <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
+                <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="catalogPDF" accept="application/pdf" required>
             <p id='currentlyUploadedCatalog'></p>
@@ -572,7 +572,7 @@
             <label data-i18n='manofacturer:manualTec'>Manual técnico (opcional)</label>
             <label for="manualPDF" class="drop-container" id="dropcontainerManual">
                 <span class="drop-title" data-i18n='manofacturer:seleccioneArrastreArch'>Seleccione o arrastre y suelte su archivo</span>
-                <img class="drop-image" src="https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
+                <img class="drop-image" src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/PDF-document-upload.png" alt="pdf">
             </label>
             <input type="file" id="manualPDF" accept="application/pdf" required>
             <p id='currentlyUploadedManual'></p>

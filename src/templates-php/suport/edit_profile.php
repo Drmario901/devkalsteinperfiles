@@ -10,7 +10,10 @@
 
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Welcome, $acc_name $acc_lname";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeTwo';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 

@@ -19,7 +19,10 @@
         
         <?php
             $banner_img = 'Header-distribuidor-IMG.jpg';
-            $banner_text = "Bienvenido, $acc_name $acc_lname";
+            
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcome';
+            $banner_text = translateTextBanner($banner)  .', '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
@@ -78,7 +81,7 @@
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
                                             <div> De <b>$client</b></div>
-                                            <a href='https://plataforma.kalstein.net/index.php/fabricante/ordenes'>
+                                            <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
                                         </div>
@@ -112,7 +115,7 @@
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
                             <center style="display: flex; flex-direction: columns">
                                 <p class="card-text" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</p>
-                                <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/procesadas">
+                                <a href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes/procesadas">
                                     &nbsp; <span class='fa-solid fa-eye btn-details'
                                         style='color: #444 !important; font-size: 16px;'></span></a>
                             </center>
@@ -129,7 +132,7 @@
                             <center><data id="pending-orders" class="card-data" data-i18n="distribuidor:DontHaveData">No hay datos</data>
                                 <center style="display: flex; flex-direction: columns">
                                     <p class="card-text" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</p>
-                                    <a href="https://plataforma.kalstein.net/index.php/fabricante/ordenes/"> &nbsp;
+                                    <a href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes/"> &nbsp;
                                         <span class='fa-solid fa-eye btn-details'
                                             style='color: #444 !important; font-size: 16px;'>
                                         </span>

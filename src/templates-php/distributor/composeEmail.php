@@ -45,7 +45,7 @@
                 <label for="to" class="col-2 col-sm-1 col-form-label" data-i18n="distribuidor:labelTo">To:</label>
                 <div class="col-10 col-sm-11">
                     <br>
-                <input style="color: #000 !important" type="text" class="form-control" id="destinatarioId" name="destinatario" data-placeholder="placeholderEmail" placeholder="Email">
+                <input style="color: #000 !important" type="text" class="form-control" id="destinatarioId" name="destinatario" data-placeholder="distribuidor:placeholderEmail" placeholder="Email">
                 </div>
             </div>
             <div class="form-row mb-3">
@@ -53,7 +53,7 @@
                 <label for="cc" class="col-2 col-sm-1 col-form-label" data-i18n="distribuidor:labelSubject">Subject:</label>
                 <div class="col-10 col-sm-11">
                     <br>
-                   <input style="color: #000 !important" type="text" id="asunto" name="asunto" data-placeholder="placeholderSubject" placeholder="Subject">
+                   <input style="color: #000 !important" type="text" id="asunto" name="asunto" data-placeholder="distribuidor:placeholderSubject" placeholder="Subject">
                 </div>
             </div>
         </form>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="form-group mt-4">
-                    <textarea style="color: #000 !important" id="contenido" name="contenido" rows="12" data-placeholder="placeholderTypeMessage" placeholder="Type a message here"></textarea>
+                    <textarea style="color: #000 !important" id="contenido" name="contenido" rows="12" data-placeholder="distribuidor:placeholderTypeMessage" placeholder="Type a message here"></textarea>
                 </div>
                 <br>
                 <div class="form-group">

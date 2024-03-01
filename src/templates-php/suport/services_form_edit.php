@@ -156,7 +156,7 @@
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_company ?>"
-                placeholder="company name"
+                data-placeholder="support:nombreCompany"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
@@ -166,6 +166,7 @@
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_name; echo $acc_lname ?>"
+                data-placeholder="support:placeholderFirstNameLastName"
                 placeholder="firstname and lastname"
             />
         </div>
@@ -176,6 +177,7 @@
                 id="SEtelefono"
                 type="number"
                 class="form-control validate"
+                data-placeholder="client:numeroTlf"
                 value="<?php echo $acc_correo; ?>"
                 placeholder="phone number"
             />
@@ -186,6 +188,7 @@
                 id="SEcorreo"
                 type="text"
                 class="form-control validate"
+                data-placeholder="client:direccionCorreo"
                 value="<?php echo $acc_correo; ?>"
                 placeholder="contact email"
             />
