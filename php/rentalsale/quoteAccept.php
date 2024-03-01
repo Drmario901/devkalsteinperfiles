@@ -9,18 +9,21 @@
         $offset = ($page - 1) * $perPage;
         $limit = $perPage;
 
+        include 'translateText.php';
+        translateText();
+
         $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
                     <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Client</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Sending method</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total (USD)</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Date</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Status</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Details</th>
-                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Actions</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i17n='client:cliente'>Client</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i17n='client:metodoEnvio'>Sending method</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i17n='client:total'>Total (USD)</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i17n='client:fechaTable'>Date</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i17n='client:estatus'>Status</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i17n='client:detalles'>Details</th>
+                    <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i17n='client:actions'>Actions</th>
                 </tr>
             </thead>
             <tbody class='bodyTableForQuote'>
@@ -55,11 +58,11 @@
                         </td>
                         <td>
                         <select name='cotizacion_status' class='status-select' style='color: #000 !important;'>
-                        <option value='Processed'>Processed</option>
-                        <option value='Cancelled'>Cancelled</option>
+                        <option value='Processed' data-i17n='client:procesado'>Processed</option>
+                        <option value='Cancelled' data-i17n='client:cancelado'>Cancelled</option>
                     </select>
                     <br>
-                    <button type='button' class='btn-update' style='color: #000 !important; font-size: 12px; margin: auto;' value='$quoteId'>Change status</button>
+                    <button type='button' class='btn-update' style='color: #000 !important; font-size: 12px; margin: auto;' value='$quoteId' data-i17n='client:cambiarEstatus'>Change status</button>
                         </td>
                     </tr>";
             }
@@ -71,7 +74,7 @@
                     <td colspan='9'>
                         <div class='contentNoDataQuote'>
                             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                            <center><p style='color: #000;'>No data found</p></center>
+                            <center><p style='color: #000;' data-i17n='client:dataNotFound'>No data found</p></center>
                         </div>
                     </td>
                 </tr>
@@ -91,11 +94,11 @@
             <div class='pagination'>
                 <form action='' method='get' style='margin-right: 8px'>
                     <input type='hidden' name='i' value=".($prevPage).">
-                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previous'>
+                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:previo'>
                 </form>
                 <form action='' method='get'>
                     <input type='hidden' name='i' value=".($nextPage).">
-                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Next &raquo;'>
+                    <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
                 </form>
             </div>
             <input id='hiddenPage' type='hidden' value='$page'>

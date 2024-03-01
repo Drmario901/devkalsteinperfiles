@@ -15,6 +15,9 @@ $page = isset($_GET['e']) ? intval($_GET['e']) : 1;
 $offset = ($page - 1) * $perPage;
 $limit = $perPage;
 
+include 'translateText.php';
+translateText();
+
 if ($cate == '') {
     if ($a == '') {
         $consulta = "SELECT * FROM wp_servicios where SE_correo= '$acc_id' LIMIT $offset, $limit";
@@ -37,16 +40,16 @@ $html = "
 <table class='table custom-table' width='auto'>
 <thead class='headTableForQuote'>
     <tr>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Numero</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Servicio</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Categoria</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Compañia</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Agente de Soporte</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Correo</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Descripción</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Fecha</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Status</td>
-        <td class='fw-bold' style='background-color: #213280; color: white;'>Editar</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:numero'>Numero</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:servicio'>Servicio</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:categoria'>Categoria</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:company'>Compañia</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:agenteSoporte'>Agente de Soporte</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:correo'>Correo</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:descripcion'>Descripción</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:fechaTable'>Fecha</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:estatus'>Status</td>
+        <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:editar'>Editar</td>
     </tr>
 </thead>
 <tbody id='tblListService' class='bodyTableForQuote'>
@@ -73,12 +76,12 @@ if ($resultado->num_rows != 0) {
                 <td>$company</td>
                 <td>$usuario</td>
                 <td>$correo</td>
-                <td> <button class='material-symbols-rounded' type='button' name='view' id='btn-service-details' value='$id'>visibility</button></td>
+                <td> <button class='material-symbols-rounded' type='button' name='view' id='btn-service-details' value='$id' data-i17n='client:visibilidad'>visibility</button></td>
                 <td>$fecha</td>
                 <td>$estado</td>
                 <td>
-                    <button class='material-symbols-rounded' id='btnEditService' value='$id'> edit</button>
-                    <button class='material-symbols-rounded' id='btnDeleteService' value='$id'>delete</button>
+                    <button class='material-symbols-rounded' id='btnEditService' value='$id' data-i17n='client:editar'> edit</button>
+                    <button class='material-symbols-rounded' id='btnDeleteService' value='$id' data-i17n='client:eliminar'>delete</button>
                 </td>
             </tr>
         ";
@@ -90,7 +93,7 @@ if ($resultado->num_rows != 0) {
     $msjNoData = "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No data found</p></center>
+            <center><p style='color: #000;' data-i17n='client:dataNotFound' data-i17n='client:dataNotFound'>No data found</p></center>
         </div>
     ";
 }
@@ -109,11 +112,11 @@ $html .= "
         <div id='currentPageIndicatorService'>Pagina: $page</div>
         <form id='form-previous-service' action='' method='get' style='margin-right: 8px'>
             <input id='previous' type='hidden' name='e' value='$prevPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:previo'>
         </form>
         <form id='form-next-service' action='' method='get'>
             <input id='next' class='next' type='hidden' name='e' value='$nextPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
         </form>
     </div>
     <input id='hiddenPage' type='hidden' value='$page'>

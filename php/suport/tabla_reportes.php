@@ -6,6 +6,9 @@ $acc_id = $_SESSION['emailAccount'];
 
 require __DIR__ . '/../conexion.php';
 
+include 'translateText.php';
+translateText();
+
 $dateFrom = $_POST['dateFrom'];
 $dateTo = $_POST['dateTo'];
 $a = $_POST['status'];
@@ -42,12 +45,12 @@ $html = "
 <thead class='headTableForQuote'>
     <tr>
     <td class='fw-bold' style='background-color: #213280; color: white;'>ID</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Fecha</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Cliente</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Servicio</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Descripción</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Status</td>
-    <td class='fw-bold' style='background-color: #213280; color: white;'>Acciones</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:fechaTable'>Fecha</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:cliente'>Cliente</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:servicio'>Servicio</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:descripcion'>Descripción</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:estatus'>Status</td>
+    <td class='fw-bold' style='background-color: #213280; color: white;' data-i17n='client:acciones'>Acciones</td>
     
     </tr>
 </thead>
@@ -90,7 +93,7 @@ if ($resultado->num_rows > 0){
                 <td>$nameService</td>
                 <td>$description</td>
                 <td>$estado</td>
-                <td><button class='btn btn-info' type='button' id='btn-report-details' value='$id' data-bs-toggle='modal' data-bs-target='#modalReportSupport'>Responder</button>
+                <td><button class='btn btn-info' type='button' id='btn-report-details' value='$id' data-bs-toggle='modal' data-bs-target='#modalReportSupport' data-i17n='client:responder'>Responder</button>
                 </td>
             </tr>
         ";
@@ -101,7 +104,7 @@ if ($resultado->num_rows > 0){
     $msjNoData = "
         <div class='contentNoDataQuote'>
         <center><span class='material-symbols-rounded  icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No data found</p></center>
+            <center><p style='color: #000;' data-i17n='client:dataNotFound'>No data found</p></center>
         </div>
     ";
 }

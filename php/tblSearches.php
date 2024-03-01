@@ -17,15 +17,18 @@ $resultado = $conexion->query($consulta);
 
 $i = ($page - 1) * $perPage;
 
+include 'translateText.php';
+translateText();
+
 $html = "
     <table class='table custom-table'>
         <thead class='headTableForQuote'>
             <tr>
-                <td scope='col'>Item</td>
-                <td scope='col'>Fecha</td>
-                <td scope='col'>Hora</td>
-                <td scope='col'>Buscado</td>
-                <td scope='col'>Ver</td>
+                <td scope='col' data-i17n='client:itemTabla'>Item</td>
+                <td scope='col' data-i17n='client:fechaTable'>Fecha</td>
+                <td scope='col' data-i17n='client:horaTable'>Hora</td>
+                <td scope='col' data-i17n='client:buscador'>Buscador</td>
+                <td scope='col' data-i17n='client:seeTable'>Ver</td>
             </tr>
         </thead>
 ";
@@ -64,7 +67,7 @@ if ($resultado->num_rows > 0) {
     $msjNoData = "
         <div class='contentNoDataQuote'>
             <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-            <p>No se encontraron datos</p>
+            <p data-i17n='client:dataNotFound'>No se encontraron datos</p>
         </div>
     ";
 }
@@ -81,11 +84,12 @@ $html .= "
         <div id='currentPageIndicatorSearch'>Page: $page</div>
         <form id='form-previous-search' action='' method='get' style='margin-right: 8px'>
             <input id='previous' type='hidden' name='o' value='$prevPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Anterior'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value=''
+            data-i17n='client:previo'>
         </form>
         <form id='form-next-search' action='' method='get'>
             <input id='next' class='next' type='hidden' name='o' value='$nextPage'>
-            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Próximo &raquo;'>
+            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
         </form>
     </div>
     <input id='hiddenPage' type='hidden' value='$page'>

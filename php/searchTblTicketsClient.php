@@ -16,7 +16,6 @@
     $resultado = $conexion->query($consulta);
 
     include 'translateText.php';
-
     translateText();
 
     $i = 0;
@@ -153,19 +152,19 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar la Solicitud</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel" data-i17n='client:editarSolicitud'>Editar la Solicitud</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form id="formModReportes">
             <input type="hidden" name="idModReporte" id="idModReporte" >
-      <input type="text" id="otherModelEdit" style="display: block; margin-top: 1rem;" placeholder="Modelo de Equipo" name="otherModelEdit">
+      <input type="text" id="otherModelEdit" style="display: block; margin-top: 1rem;" placeholder="Modelo de Equipo" name="otherModelEdit" data-placeholder='client:model'>
       <textarea id="RDescriptionEdit" class="form-control validate" required="" name="RDescriptionEdit"></textarea>
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" id="guardarReporteMod">Guardar Cambio</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i17n='client:cerrar' >Cerrar</button>
+        <button type="button" class="btn btn-primary" id="guardarReporteMod" data-i17n='client:guardarCambio'>Guardar Cambio</button>
       </div>
     </div>
   </div>

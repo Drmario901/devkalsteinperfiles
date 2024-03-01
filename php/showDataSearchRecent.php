@@ -11,12 +11,15 @@
 
     $i = 0;
 
+    include 'translateText.php';
+    translateText();
+
     $html = "
         <table class='table'>
             <thead class='headTableForQuoteRecent'>
                 <tr>
-                    <td scope='col'>Término de búsqueda</td>
-                    <td scope='col'>Fecha</td>
+                    <td scope='col' data-i17n='client:terminoDeBusqueda'>Término de búsqueda</td>
+                    <td scope='col' data-i17n='client:fechaTable'>Fecha</td>
                 </tr>
             </thead>
             <tbody class='bodyTableForQuote'>
@@ -50,7 +53,7 @@
         $msjNoData = "
             <div class='contentNoDataQuoteRecent'>
                 <i class='fa-solid fa-magnifying-glass' style='font-size: 4rem; color: #212380;  margin-top: 12rem;'></i>
-                <p style='font-size: 1.4em; font-weight: bold; margin-top: 2rem;width: 90%; margin-left: 5%;'>¡Aquí puedes ver todas tus búsquedas en Kalstein!</p>
+                <p style='font-size: 1.4em; font-weight: bold; margin-top: 2rem;width: 90%; margin-left: 5%;' data-i17n='client:verBusquedas' >¡Aquí puedes ver todas tus búsquedas en Kalstein!</p>
             </div>
         ";
     }

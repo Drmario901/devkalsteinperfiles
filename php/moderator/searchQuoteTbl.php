@@ -54,18 +54,21 @@
     
     $resultado = $conexion->query($consulta);
 
+    include 'translateText.php';
+    translateText();
+
     $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
-                    <td>Item</td>
-                    <td>N° Quote</td>
-                    <td>Applicant</td>
-                    <td>Date</td>
-                    <td>Country</td>
-                    <td>Status</td>
-                    <td>Actions</td>
-                    <!--td scope='col'>Status</td-->
+                    <td data-i17n='client:itemTabla'>Item</td>
+                    <td data-i17n='client:nQuotes'>N° Quote</td>
+                    <td data-i17n='client:aplication'>Applicant</td>
+                    <td data-i17n='client:fechaTable'>Date</td>
+                    <td data-i17n='client:pais'>Country</td>
+                    <td data-i17n='client:estatus'>Status</td>
+                    <td data-i17n='client:actions'>Actions</td>
+                    <!--td scope='col' data-i17n='client:estatus' >Status</td-->
                 </tr>
             </thead>
             <tbody id='tblQuoteClientBody' class='bodyTableForQuote'>
@@ -107,8 +110,8 @@
 
             $statusButtons = $status == '1'? "
             <div class='d-flex flex-row'>
-                <button type='button' id='btnProcess' class='btn btn-info btn-block p-2 mt-2 mx-auto' value='$id'>Process</button>
-                <button type='button' id='btnDeny' class='btn btn-danger btn-block p-2 mt-2 mx-auto' value='$id'>Deny</button>
+                <button type='button' id='btnProcess' class='btn btn-info btn-block p-2 mt-2 mx-auto' value='$id' data-i17n='client:procesar'>Process</button>
+                <button type='button' id='btnDeny' class='btn btn-danger btn-block p-2 mt-2 mx-auto' value='$id' data-i17n='client:denegar'>Deny</button>
             </div>" : '';
 
             $html.= "                                    
@@ -143,7 +146,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                <p>No data found</p>
+                <p data-i17n='client:dataNotFound'>No data found</p>
             </div>
         ";
     }
@@ -162,11 +165,11 @@
         <div id='currentPageIndicator'>Page: 1</div>
             <form id='form-previous' action='' method='get' style='margin-right: 8px'>
                 <input id='previous' type='hidden' name='u' value='$prevPage'>
-                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previous'>
+                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:previo'>
             </form>
             <form id='form-next' action='' method='get'>
                 <input class='next' type='hidden' name='u' value='$nextPage'>
-                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Next &raquo;'>
+                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
             </form>
         </div>
         <input id='hiddenPage' type='hidden' value='$page'>
@@ -176,8 +179,8 @@
             <div class='modal-dialog'>
                 <div class='modal-content'>
                 <div class='modal-header'>
-                    <h1 class='modal-title fs-5' id='modelInfoClientQuote'>Información de Cliente</h1>
-                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                    <h1 class='modal-title fs-5' id='modelInfoClientQuote' data-i17n='client:infoCliente'>Información de Cliente</h1>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close' data-i17n='client:cerrar'></button>
                 </div>
                 <div class='modal-body'>
                     <div class='tblInfoClient'>
@@ -185,7 +188,7 @@
                     </div>
                 </div>
                 <div class='modal-footer'>
-                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' data-i17n='client:cerrar'>Close</button>
                 </div>
                 </div>
             </div>

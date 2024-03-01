@@ -190,7 +190,6 @@
         $resultado = $conexion->query($consulta);
 
         include 'translateText.php';
-
         translateText();
 
         $html = "
