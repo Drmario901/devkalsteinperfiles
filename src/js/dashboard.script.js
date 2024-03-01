@@ -5681,7 +5681,7 @@ jQuery(document).ready(function($){
     }
 
     setInterval(keepSessionAlive, 300000); 
-    console.log(alertsTranslations, cookieLng, 'Funciona?')
+    setTimeout(console.log(alertsTranslations, cookieLng, 'Funciona?'), 5000);
 
 })
 
