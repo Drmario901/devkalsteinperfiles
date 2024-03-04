@@ -234,3 +234,4 @@ Stack trace:
 #0 /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php(102): days_until_monthend()
 #1 {main}
   thrown in /home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getChartInfoSales.php on line 15
+[04-Mar-2024 12:30:50 UTC] PHP Warning:  Undefined variable $quotes in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/manufacturer/getAccessoryInfo.php on line 36

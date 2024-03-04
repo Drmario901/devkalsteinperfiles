@@ -2357,3 +2357,616 @@ Stack trace:
 #1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
 #2 {main}
   thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:17:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:17:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:17:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:18:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:19:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:19:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:20:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:20:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:21:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:21:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:36:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:36:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:37:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:38:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:42:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:45:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:49:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:52:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:52:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 16:59:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:00:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:00:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:02:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:03:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:04:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:06:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:08:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:08:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:08:33 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:08:33 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:08:33 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:10:08 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:10:08 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:10:08 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:10:19 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:10:19 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:10:19 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:13:25 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:13:25 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:13:25 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:13:37 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:13:37 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:13:37 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:13:38 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:13:38 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:13:38 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:14:00 UTC] PHP Warning:  Undefined array key "dateFrom" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[01-Mar-2024 17:14:00 UTC] PHP Warning:  Undefined array key "dateTo" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[01-Mar-2024 17:14:00 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 11
+[01-Mar-2024 17:21:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:23:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:24:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:27:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:29:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:33:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:36:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:36:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:38:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:40:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:43:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:46:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:48:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:51:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:51:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:51:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 17:52:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 20:02:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[01-Mar-2024 20:02:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 15:49:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 15:50:40 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 15:50:40 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 15:50:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:05:37 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:05:37 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:05:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:29:06 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:29:06 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:29:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:29:24 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:29:24 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:29:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:34:39 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:34:39 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:34:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:34:45 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:34:45 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:34:45 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:34:45 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:34:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:34:45 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:34:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:34:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:35:23 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:35:23 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:35:23 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:35:23 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:35:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:35:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:35:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:35:23 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:35:34 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:35:34 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:35:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:35:39 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:35:39 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 9
+[04-Mar-2024 16:35:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/tabla_reportes.php on line 10
+[04-Mar-2024 16:35:44 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:35:44 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:35:44 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:35:44 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:35:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:35:44 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:35:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:35:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'he270716'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'he270716', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:37:47 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:37:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:37:47 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:37:47 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:37:47 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:37:47 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:37:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:37:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:39:31 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:39:31 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:39:31 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:39:31 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:39:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:39:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:39:31 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:39:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:40:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:42:21 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:42:21 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:42:21 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:42:21 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:42:21 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:42:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:42:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:42:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:43:24 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:43:24 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:43:24 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:43:24 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:43:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:43:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:43:24 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:43:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:44:39 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:44:39 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:44:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:44:39 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:44:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:44:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:47:58 UTC] PHP Warning:  Undefined array key "category" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 8
+[04-Mar-2024 16:47:58 UTC] PHP Warning:  Undefined array key "status" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 10
+[04-Mar-2024 16:47:58 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:47:58 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:47:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:49:16 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:49:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:49:17 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:53:28 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:56:00 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 16:56:00 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:56:00 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 16:56:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 16:56:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 16:56:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:04:51 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 17:04:51 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 18
+[04-Mar-2024 17:04:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php on line 19
+[04-Mar-2024 17:04:51 UTC] PHP Warning:  Undefined array key "consulta" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php on line 4
+[04-Mar-2024 17:04:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:04:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:07:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:09:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:12:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:21:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
+[04-Mar-2024 17:42:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'kalsteinplus'@'localhost' (using password: YES) in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php(8): mysqli->__construct('localhost', 'kalsteinplus', '.Kx7*WTp@{,g', 'he270716_wp_es')
+#1 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php(2): require('/home/kalsteinp...')
+#2 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/conexion.php on line 8
