@@ -13,6 +13,7 @@
     session_write_close();
 ?>
 
+<?php echo $search ?>
 <input type="hidden" id="search-product" value="<?php echo $search ?>">
 <link rel="icon" type="image/x-icon" href="https://kalstein.us/wp-content/plugins/kalsteinPerfiles/src/images/favicon.ico">
 <script src="https://cdn.tailwindcss.com"></script>
