@@ -17,6 +17,7 @@ const loadTranslations = (lng) => {
 };
 
 loadTranslations(cookieLng);
+console.log('holas')
 
 jQuery(document).ready(function($){
 
