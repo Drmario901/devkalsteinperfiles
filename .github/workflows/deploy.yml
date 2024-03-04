@@ -4,16 +4,19 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  update_server:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Updating server with the latest changes from main
-        uses: appleboy/ssh-action@master
-        with:
-          host: "185.28.22.84"
-          username: "kalsteinplus"
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 42
-          script: |
-            cd /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles
-            git pull https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
+            update_server:
+              runs-on: ubuntu-latest
+              steps:
+                - name: Updating server with the latest changes from main
+                  uses: appleboy/ssh-action@master
+                  with:
+                    host: "185.28.22.84"
+                    username: "kalsteinplus"
+                    password: ${{ secrets.SSH_PASSWORD }}
+                    port: 42
+                    script: |
+                      cd /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles
+                      git pull https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
+          
+          
+  
