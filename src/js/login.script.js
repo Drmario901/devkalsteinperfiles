@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  const cookieLng = document.cookie
+  /* const cookieLng = document.cookie
     .split("; ")
     .find((row) => row.startsWith("language="))
     .split("=")[1];
@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
       });
   };
 
-  loadTranslations(cookieLng);
+  loadTranslations(cookieLng); */
 
   var path = $(location).attr("pathname");
 
