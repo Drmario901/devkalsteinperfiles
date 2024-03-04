@@ -1,7 +1,7 @@
 <?php
     $hostdb = "localhost";
     $userdb = "kalsteinplus";
-    $passdb = ".Kx7*WTp@{,g";
+    $passdb = "OqA;}vKA94PO";
     $namedb = "he270716_wp_es";
     $namedb2 = "he270716_wp4";
 
