@@ -1,6 +1,20 @@
 var verify = false;
 
 var plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
+const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
 
 jQuery(document).ready(function($){
 
@@ -45,7 +59,7 @@ jQuery(document).ready(function($){
                 $('#strikeContainer').removeAttr('hidden');
                 $('#btnValidate').html(`
                     <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
-                        <h4 class="text-white pb-0">Denegate</h4>
+                        <h4 class="text-white pb-0">${alertsTranslations.denegate}</h4>
                     </button>
                 `);
             }
@@ -66,7 +80,7 @@ jQuery(document).ready(function($){
                     $('#strikeContainer').attr('hidden', '');
                     $('#btnValidate').html(`
                         <button type='button' class='btn btn-info btn-block p-2 px-4 mx-auto'>
-                            <h4 class="text-white pb-0">Verify</h4>
+                            <h4 class="text-white pb-0">${alertsTranslations.verify}</h4>
                         </button>
                     `);
                 }
@@ -77,7 +91,7 @@ jQuery(document).ready(function($){
                     $('#strikeContainer').removeAttr('hidden');
                     $('#btnValidate').html(`
                         <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
-                            <h4 class="text-white pb-0">Denegate</h4>
+                            <h4 class="text-white pb-0">${alertsTranslations.denegate}</h4>
                         </button>
                     `);
                 }
@@ -99,11 +113,11 @@ jQuery(document).ready(function($){
                 displayMode: 'once',
                 id: 'question',
                 zindex: 999,
-                title: 'Confirmation',
-                message: 'Are you sure you want <b>validate</b> this product?',
+                title: alertsTranslations.confirmacion,
+                message: alertsTranslations.areYouSureWantToValidateThisProduct,
                 position: 'center',
                 buttons: [
-                ['<button><b>Yes</b></button>', function(instance, toast) {
+                [`<button><b>${alertsTranslations.yes}</b></button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
 
                     let p_id = $('#p-id').val();
@@ -117,8 +131,8 @@ jQuery(document).ready(function($){
                         if (JSON.parse(response).status == 'busy'){
                             iziToast.error({
                                 overlay: true,
-                                title: 'Error',
-                                message: 'Another moderator has already done this action!',
+                                title: alertsTranslations.error,
+                                message: alertsTranslations.anotherModeratorHasAlreadyDonethisAction,
                                 position: 'center'
                             });
                         }
@@ -127,8 +141,8 @@ jQuery(document).ready(function($){
 
                                 iziToast.success({
                                     overlay: true,
-                                    title: 'Success',
-                                    message: 'Validate successful!',
+                                    title: alertsTranslations.exito,
+                                    message: alertsTranslations.validateSuccess,
                                     position: 'center',
                                 });
                                 window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/products';
@@ -136,8 +150,8 @@ jQuery(document).ready(function($){
                             else{
                                 iziToast.error({
                                     overlay: true,
-                                    title: 'Error',
-                                    message: 'Error trying to validate user!',
+                                    title: alertsTranslations.error,
+                                    message: alertsTranslations.errorValidatingUser,
                                     position: 'center'
                                 });
                             }
@@ -146,8 +160,8 @@ jQuery(document).ready(function($){
                     .fail(function (){
                         iziToast.error({
                             overlay: true,
-                            title: 'Error',
-                            message: 'Unable to connect whit the database!',
+                            title: alertsTranslations.error,
+                            message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                             position: 'center'
                         });
                     });
@@ -169,11 +183,11 @@ jQuery(document).ready(function($){
                     displayMode: 'once',
                     id: 'question',
                     zindex: 999,
-                    title: 'Confirmation',
-                    message: 'Are you sure you want <b>deny</b> this product?',
+                    title: alertsTranslations.confirmacion,
+                    message: alertsTranslations.areYouSureWantToDenyThisProduct,
                     position: 'center',
                     buttons: [
-                        ['<button><b>Yes</b></button>', function(instance, toast) {
+                        [`<button><b>${alertsTranslations.yes}</b></button>`, function(instance, toast) {
                             instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                             
                             let p_id = $('#p-id').val();
@@ -190,8 +204,8 @@ jQuery(document).ready(function($){
                                 if (JSON.parse(response).status == 'busy'){
                                     iziToast.error({
                                         overlay: true,
-                                        title: 'Error',
-                                        message: 'Another moderator has already done this action!',
+                                        title: alertsTranslations.error,
+                                        message: alertsTranslations.anotherModeratorHasAlreadyDonethisAction,
                                         position: 'center'
                                     });
                                 }
@@ -201,8 +215,8 @@ jQuery(document).ready(function($){
     
                                         iziToast.success({
                                             overlay: true,
-                                            title: 'Success',
-                                            message: 'Message sent successful!',
+                                            title: alertsTranslations.exito,
+                                            message: alertsTranslations.messageSentSuccessfully,
                                             position: 'center',
                                         });
                                         window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/products';
@@ -210,8 +224,8 @@ jQuery(document).ready(function($){
                                     else{
                                         iziToast.error({
                                             overlay: true,
-                                            title: 'Error',
-                                            message: 'Error trying to send message!',
+                                            title: alertsTranslations.error,
+                                            message: alertsTranslations.errorSendingMessage,
                                             position: 'center'
                                         });
                                     }
@@ -221,8 +235,8 @@ jQuery(document).ready(function($){
                             .fail(function (){
                                 iziToast.error({
                                     overlay: true,
-                                    title: 'Error',
-                                    message: 'Unable to connect whit the database!',
+                                    title: alertsTranslations.error,
+                                    message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                                     position: 'center'
                                 });
                             });
@@ -236,8 +250,8 @@ jQuery(document).ready(function($){
             else {
                 iziToast.error({
                     overlay: true,
-                    title: 'Warning',
-                    message: 'Specify in the text field the reasons of the deny!',
+                    title: alertsTranslations.warning,
+                    message: alertsTranslations.specifyReasonOfDeny,
                     position: 'center',
                 });
             }
@@ -267,11 +281,11 @@ jQuery(document).ready(function($){
                 productImage = elem.product_image;
                 product_price = elem.product_price;
                 
-                var details = 'Nombre del producto: ' + productName + '<br>' +
-                              'Modelo del producto: ' + productModel + '<br>' +
-                              'Descripción: ' + product_description + '<br>' +
-                              'Precio: USD ' + product_price + '<br>' +
-                              'Imagen: <img style="max-width: 200px;" src="' + productImage + '">';
+                var details = `${alertsTranslations.nombreDelProducto}: ${productName} <br>` +
+                `${alertsTranslations.modelProduct}: ${productModel} <br>` +
+                `${alertsTranslations.description}: ${product_description} <br>` +
+                `${alertsTranslations.price}: ${product_price} <br>` +
+                `${alertsTranslations.image}: <img style="max-width: 200px;" src="https://kalstein.net/es/wp-content/uploads/kalsteinQuote/'${productImage}'">`;
       
                 iziToast.show({
                     title: 'Detalles',
@@ -285,8 +299,8 @@ jQuery(document).ready(function($){
         })
         .fail(function(){
             iziToast.error({
-                title: 'Error',
-                message: "No se pueden obtener datos de la base de datos",
+                title: alertsTranslations.error,
+                message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                 position: 'center',
                 timeout: false,
                 closeOnClick: true,

@@ -1,4 +1,18 @@
 jQuery(document).ready(function($){
+    const cookieLng = document.cookie.split('; ').find(row => row.startsWith('language=')).split('=')[1]
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(`https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`)
+            .then(response => response.json())
+            .then(translation => {
+                // save in a global variable
+                alertsTranslations = translation;
+            });
+    }; 
+
+    loadTranslations(cookieLng)
     let status = $('#cmbStatus').val();
     let inputSearch = $('#inputSearchQuote').val();
     searchDataProductTbl(inputSearch, status);
@@ -38,14 +52,14 @@ jQuery(document).ready(function($){
                     }
 
                     var currentPage = nextPage;
-                    $("#currentPageIndicator").text("Page: " + currentPage);
+                    $("#currentPageIndicator").text(`${alertsTranslations.page}: ${currentPage}`);
             
                     $(".pagination #form-next input[name=u]").val(parseInt(currentPage) + 1);
                     let prev = parseInt(currentPage) > 1? parseInt(currentPage) - 1 : 1;
                     $(".pagination #form-previous input[name=u]").val(prev);
                 },
                 error: function() {
-                    alert("Error charging quote data.");
+                    alert(alertsTranslations.errorLoadingQuoteData);
                 }
             });
         });
@@ -74,7 +88,7 @@ jQuery(document).ready(function($){
                     $(".pagination #form-previous input[name=u]").val(prev);
                 },
                 error: function() {
-                    alert("Error charging quote data.");
+                    alert(alertsTranslations.errorLoadingQuoteData);
                 }
             });
         });
@@ -126,13 +140,13 @@ jQuery(document).ready(function($){
                 productQuantity = elem.product_quantity;
                 productImage = elem.product_image;
                 
-                var details = 'Product Name: ' + productName + '<br>' +
-                              'Product Model: ' + productModel + '<br>' +
-                              'Quantity: ' + productQuantity + '<br>' +
-                              'Image: <img style="max-width: 200px;" src="' + productImage + '">';
+                var details = `${alertsTranslations.nombreDelProducto}: ${productName} <br>` +
+                `${alertsTranslations.modelProduct}: ${productModel} <br>` +
+                `${alertsTranslations.qty}: ${productQuantity} <br>` +
+                `${alertsTranslations.image}: <img style="max-width: 200px;" src="https://kalstein.net/es/wp-content/uploads/kalsteinQuote/'${productImage}'">`;
       
                 iziToast.show({
-                    title: 'Quote Details (ID: ' + quote_id + ')',
+                    title: `${alertsTranslations.quoteDetails} (ID:  ${quote_id} ')`,
                     message: details,
                     position: 'center',
                     timeout: false,
@@ -143,8 +157,8 @@ jQuery(document).ready(function($){
         })
         .fail(function(){
             iziToast.error({
-                title: 'Error',
-                message: "Can't fetch data from database",
+                title: alertsTranslations.error,
+                message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                 position: 'center',
                 timeout: false,
                 closeOnClick: true,
@@ -164,17 +178,17 @@ jQuery(document).ready(function($){
             displayMode: 'once',
             id: 'question',
             zindex: 999,
-            title: 'Confirmation',
-            message: 'Are you sure you want to process QUO' + id + '?',
+            title: alertsTranslations.confirmacion,
+            message: `${alertsTranslations.areYouSureYouWantToProcessTheQuote} ${id} ?`,
             position: 'center',
             buttons: [
-                ['<button><b>Yes</b></button>', function(instance, toast) {
+                [`<button><b>${alertsTranslations.yes}</b></button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     quoteUpdateStatus(id, 3);
                 },
                 true
                 ],
-                ['<button>No</button>', function(instance, toast) {
+                [`<button>${alertsTranslations.no}</button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                 }]
             ],
@@ -198,17 +212,17 @@ jQuery(document).ready(function($){
             displayMode: 'once',
             id: 'question',
             zindex: 999,
-            title: 'Confirmation',
-            message: 'Are you sure you want to deny QUO' + id + '?',
+            title: alertsTranslations.confirmacion,
+            message: `${alertsTranslations.areYouSureYouWantToDeniedTheQuote} ${id}?`,
             position: 'center',
             buttons: [
-                ['<button><b>Yes</b></button>', function(instance, toast) {
+                [`<button><b>${alertsTranslations.yes}</b></button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     quoteUpdateStatus(id, 4);
                 },
                 true
                 ],
-                ['<button>No</button>', function(instance, toast) {
+                [`<button>${alertsTranslations.no}</button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                 }]
             ],
@@ -233,8 +247,8 @@ jQuery(document).ready(function($){
             let data = JSON.parse(respuesta)
             if (data.update === 'correcto'){
             iziToast.success({
-                title: 'Success',
-                message: 'Update successful!',
+                title: alertsTranslations.exito,
+                message: alertsTranslations.updateSuccessful,
                 position: 'topRight',
             });
         }
@@ -371,8 +385,8 @@ jQuery(document).ready(function($){
             window.location.href = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/generateCSVAllDataClient.php?typeClient='+valor+'&dayShifts='+valor2+'&currentDate='+fecha+'&dateFrom='+valor3+'&dateTo='+valor4+'&typeClient2='+valor5
         }else{
             iziToast.warning({
-                title: 'Caution',
-                message: 'Do not leave empty fields.',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.doNotLeaveFieldsEmpty,
                 position: 'center',
                 timeout: 2000,
                 closeOnClick: true,
@@ -397,8 +411,8 @@ jQuery(document).ready(function($){
         if (valor != 0 || valor2 != '' || valor3 != ''){
             $('#cmbTypeClient').val(0)
             iziToast.warning({
-                title: 'Caution',
-                message: 'For data export it has to be within the same parameters (per day or per date range)',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.dataParameters,
                 position: 'center',
                 timeout: 2000,
                 closeOnClick: true,
@@ -423,8 +437,8 @@ jQuery(document).ready(function($){
         if (valor != 0 || valor2 != '' || valor3 != ''){
             $('#cmbDayShifts').val(0)
             iziToast.warning({
-                title: 'Caution',
-                message: 'For data export it has to be within the same parameters (per day or per date range)',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.dataParameters,
                 position: 'center',
                 timeout: 2000,
                 closeOnClick: true,
@@ -448,8 +462,8 @@ jQuery(document).ready(function($){
         if (valor != 0 || valor2 != 0){
             $('#cmbTypeClient2').val(0)
             iziToast.warning({
-                title: 'Caution',
-                message: 'For data export it has to be within the same parameters (per day or per date range)',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.dataParameters,
                 position: 'center',
                 timeout: 2000,
                 closeOnClick: true,
@@ -473,8 +487,8 @@ jQuery(document).ready(function($){
         if (valor != 0 || valor2 != 0){
             $('#dateFromCSV').val('')
             iziToast.warning({
-                title: 'Caution',
-                message: 'For data export it has to be within the same parameters (per day or per date range)',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.dataParameters,
                 position: 'center',
                 timeout: 2000,
                 closeOnClick: true,
@@ -498,8 +512,8 @@ jQuery(document).ready(function($){
         if (valor != 0 || valor2 != 0){
             $('#dateFromCSV').val('')
             iziToast.warning({
-                title: 'Caution',
-                message: 'For data export it has to be within the same parameters (per day or per date range)',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.dataParameters,
                 position: 'center',
                 timeout: 2000,
                 closeOnClick: true,
@@ -548,8 +562,8 @@ jQuery(document).ready(function($){
             })
             .fail(function(){
                 iziToast.error({
-                    title: 'Error',
-                    message: "Can't fetch data from database",
+                    title: alertsTranslations.error,
+                    message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                     position: 'center',
                     timeout: false,
                     closeOnClick: true,
@@ -559,8 +573,8 @@ jQuery(document).ready(function($){
         })
         .fail(function(){
             iziToast.error({
-                title: 'Error',
-                message: "Can't fetch data from database",
+                title: alertsTranslations.error,
+                message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                 position: 'center',
                 timeout: false,
                 closeOnClick: true,
