@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
 
     if (isset($_GET['search'])){        
         $search = $_GET? $_GET['search'] : '';
@@ -85,19 +85,6 @@
     </div>
 </div>
 </body>
-
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#000000',
-          }
-        }
-      }
-    }
-</script>
-
 
 <script>
 jQuery(document).ready(function($) {
