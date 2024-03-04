@@ -28,7 +28,7 @@ jQuery(document).ready(function ($) {
 
   function tablaconsulta(inputSearch, status, category) {
     $.ajax({
-      url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
       type: "POST",
       data: { inputSearch, status, category },
     })
@@ -204,7 +204,7 @@ jQuery(document).ready(function ($) {
 
     if (err_msg != "") {
       iziToast.error({
-        title: alertsTranslations.error,
+        title: "Error",
         message: err_msg,
         position: "center",
       });
@@ -428,7 +428,7 @@ jQuery(document).ready(function ($) {
 
     if (err_msg != "") {
       iziToast.error({
-        title: alertsTranslations.error,
+        title: "Error",
         message: err_msg,
         position: "center",
       });
@@ -529,7 +529,7 @@ jQuery(document).ready(function ($) {
   category();
   function category(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
       type: "POST",
       data: { consulta },
     })
@@ -640,7 +640,7 @@ jQuery(document).ready(function ($) {
                   });
                 } else {
                   iziToast.error({
-                    title: alertsTranslations.error,
+                    title: "Error",
                     message: alertsTranslations.serviceNotdeleted,
                     position: "center",
                   });
@@ -648,7 +648,7 @@ jQuery(document).ready(function ($) {
               })
               .fail(function () {
                 iziToast.error({
-                  title: alertsTranslations.error,
+                  title: "Error",
                   message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                   position: "center",
                 });
@@ -663,7 +663,7 @@ jQuery(document).ready(function ($) {
           function (instance, toast) {
             instance.hide({ transitionOut: "fadeOut" }, toast, "button");
             iziToast.error({
-              title: alertsTranslations.error,
+              title: "Error",
               message: alertsTranslations.serviceDeletedCanceled,
               position: "center",
             });
