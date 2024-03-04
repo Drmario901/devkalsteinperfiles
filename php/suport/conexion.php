@@ -1,6 +1,6 @@
 <?php
     $hostdb = "localhost";
-    $userdb = "he270716";
+    $userdb = "kalsteinplus";
     $passdb = ".Kx7*WTp@{,g";
     $namedb = "he270716_wp_es";
     /* $namedb2 = "he270716_wp4"; */
