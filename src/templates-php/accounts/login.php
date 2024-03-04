@@ -1,8 +1,10 @@
 <?php
     session_start();
 
+    $search = '';
+
     if (isset($_GET['search'])){        
-        $search = $_GET? $_GET['search'] : '';
+        $search = $_GET ? $_GET['search'] : '';
     }
     else {
         if(isset($_SESSION['model-to-open-in-platform'])) {
@@ -21,9 +23,6 @@
 <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
-
-<select id="languageSwitcher">
-</select>
 
 <body>
 <div class='container'>
@@ -85,19 +84,6 @@
     </div>
 </div>
 </body>
-
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#000000',
-          }
-        }
-      }
-    }
-</script>
-
 
 <script>
 jQuery(document).ready(function($) {

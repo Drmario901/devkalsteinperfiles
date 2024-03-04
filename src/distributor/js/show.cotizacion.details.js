@@ -1,4 +1,24 @@
 jQuery(document).ready(function($) {
+    const cookieLng = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(
+        `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+        )
+        .then((response) => response.json())
+        .then((translation) => {
+            // save in a global variable
+            alertsTranslations = translation;
+        });
+    };
+
+    loadTranslations(cookieLng);
+
     $(document).on('click', '.btn-details', function() {
 
         var quote_id = $(this).val();
@@ -20,13 +40,13 @@ jQuery(document).ready(function($) {
                 productQuantity = elem.product_quantity;
                 productImage = elem.product_image;
                 
-                var details = 'Nombre de producto: ' + productName + '<br>' +
-                              'Modelo de producto: ' + productModel + '<br>' +
-                              'Cantidad: ' + productQuantity + '<br>' +
-                              'Imágen: <img style="max-width: 200px;" src="https://kalstein.net/es/wp-content/uploads/kalsteinQuote/' + productImage + '">';
+                var details = `${alertsTranslations.nombreDelProducto}: ${productName} <br>` +
+                              `${alertsTranslations.modelProduct}: ${productModel} <br>` +
+                              `${alertsTranslations.qty}: ${productQuantity} <br>` +
+                              `${alertsTranslations.image}: <img style="max-width: 200px;" src="https://kalstein.net/es/wp-content/uploads/kalsteinQuote/'${productImage}'">`;
       
                 iziToast.show({
-                    title: 'Detalles de cotización (ID: ' + quote_id + ')',
+                    title: `${alertsTranslations.quoteDetails} (ID:  ${quote_id} ')`,
                     message: details,
                     position: 'center',
                     timeout: false,
@@ -37,8 +57,8 @@ jQuery(document).ready(function($) {
         })
         .fail(function(){
             iziToast.error({
-                title: 'Error',
-                message: "No se puede conectar con la base de datos",
+                title: alertsTranslations.error,
+                message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
                 position: 'center',
                 timeout: false,
                 closeOnClick: true,
