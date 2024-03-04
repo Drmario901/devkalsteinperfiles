@@ -18,6 +18,26 @@ function validateProductDataAcc(name, model, description,
         document.querySelector(selector).focus();
     }
 
+    const cookieLng = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
+
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
+
+  loadTranslations(cookieLng);
+
     var ignore_description;
 
     if (description === '') {
@@ -26,105 +46,105 @@ function validateProductDataAcc(name, model, description,
 
     // void verifications
     if (name === '') {
-        err_msg = 'Nombre vacío';
+        err_msg = alertsTranslations.nombreVacio;
         scroll('#nameProductAcc');
     }
     else if (model === '') {
-        err_msg = 'Modelo vacio';
+        err_msg = alertsTranslations.modeloVacio;
         scroll('#modelProductAcc');
     }
     else if (weight === '') {
-        err_msg = 'Peso vacio';
+        err_msg = alertsTranslations.pesoVacio;
         scroll('#weProductAcc');
     }
     else if (width === '') {
-        err_msg = 'Ancho vacio';
+        err_msg = alertsTranslations.anchoVacio;
         scroll('#wiProductAcc');
     }
     else if (height === '') {
-        err_msg = 'Alto vacio';
+        err_msg = alertsTranslations.altoVacio;
         scroll('#heProductAcc');
     }
     else if (length === '') {
-        err_msg = 'Largo vacio';
+        err_msg = alertsTranslations.largoVacio;
         scroll('#leProductAcc');
     }
     else if (weight_pa === '') {
-        err_msg = 'Peso de empaquetado vacio';
+        err_msg = alertsTranslations.pesoEmpaquetado;
         scroll('#weProductPaAcc');
     }
     else if (width_pa === '') {
-        err_msg = 'Ancho de empaquetado vacio';
+        err_msg = alertsTranslations.anchoEmpaquetado;
         scroll('#wiProductPaAcc');
     }
     else if (height_pa === '') {
-        err_msg = 'Altura de empaquetado vacio';
+        err_msg = alertsTranslations.alturaEmpaquetado;
         scroll('#heProductPaAcc');
     } 
     else if (length_pa === '') {
-        err_msg = 'Largo de empaquetado vacio';
+        err_msg = alertsTranslations.largoEmpaquetado;
         scroll('#leProductPaAcc');
     }
     else if (pa_type === '') {
-        err_msg = 'Tipo de empaquetado vacio';
+        err_msg = alertsTranslations.tipoEmpaquetado;
         scroll('#packageTypeAcc');
     } 
     else if (price === '') {
-        err_msg = 'Precio unitario vacio';
+        err_msg = alertsTranslations.precioUnitario;
         scroll('#priceProductAcc');
     }
     else if (currency === '') {
-        err_msg = 'Moneda vacio';
+        err_msg = alertsTranslations.monedaVacio;
         scroll('#currencyAcc');
     }
     // negative verification
     else if (parseFloat(price) <= 0) {
-        err_msg = 'El precio no puede ser menor que 0';
+        err_msg = alertsTranslations.precioMenor0;
         scroll('#priceProductAcc');
     }
     else if (parseFloat(weight) <= 0) {
-        err_msg = 'El peso no puede ser menor que 0';
+        err_msg = alertsTranslations.pesoMenor0;
         scroll('#weProductAcc');
     }
     else if (parseFloat(width) <= 0) {
-        err_msg = 'La longitud no puede ser menor que 0';
+        err_msg = alertsTranslations.longitudMenor0;
         scroll('#wiProductAcc');
     }
     else if (parseFloat(height) <= 0) {
-        err_msg = 'El ancho no puede ser menor que 0';
+        err_msg = alertsTranslations.anchoMenor0;
         scroll('#heProductAcc');
     }
     else if (parseFloat(length) <= 0) {
-        err_msg = 'La altura no puede ser menor que 0';
+        err_msg = alertsTranslations.alturaMenor0;
         scroll('#leProductAcc');
     } 
     else if (parseFloat(weight_pa) <= 0) {
-        err_msg = 'El peso del empquetado no puede ser menor que 0';
+        err_msg = alertsTranslations.pesoEmpaquetadoMenor0;
         scroll('#weProductPaAcc');
     }
     else if (parseFloat(width_pa) <= 0) {
-        err_msg = 'La altura del empaquetado no puede ser menor que 0';
+        err_msg = alertsTranslations.alturaEmpaquetadoMenor0;
         scroll('#wiProductPaAcc');
     }
     else if (parseFloat(height_pa) <= 0) {
-        err_msg = 'El ancho del empaquetado no puede ser menor que 0';
+        err_msg = alertsTranslations.anchoEmpaquetadoMenor0;
         scroll('#heProductPaAcc');
     }
     else if (parseFloat(length_pa) <= 0) {
-        err_msg = 'El peso del empaquetado no puede ser menor que 0';
+        err_msg = alertsTranslations.largoEmpaquetadoMenor0;
         scroll('#leProductPaAcc');
     }
     // length validations
     else if (name.length > 200) {
-        err_msg = 'El nombre no puede tener más de 200 caracteres';
+        err_msg = alertsTranslations.nombreMenor200;
         scroll('#nameProductAcc');
     }
     else if (model.length > 50) {
-        err_msg = 'El nombre no puede tener más de 60 caracteres';
+        err_msg = alertsTranslations.modeloMenor60;
         scroll('#modelProductAcc');
     }
     else if (description.length > 1000) {
-        err_msg = 'La descripción no puede tener más de 1000 caracteres';
+        err_msg = alertsTranslations.descriptionMenor1k;
         scroll('#descriptionProductAcc');
     }
     else {
@@ -142,12 +162,12 @@ function validateProductDataAcc(name, model, description,
 
 
         if(name_r){
-            err_msg = 'Por favor, evite incluir enlaces a sitios web externos en el título';
+            err_msg = alertsTranslations.noEnlaces;
             scroll('#nameProduct');
         }
         else if (!ignore_description){
             if(description_r){
-                err_msg = 'Por favor, evite incluir enlaces a sitios web externos en la descripción';
+                err_msg = alertsTranslations.noEnlancesDescripcion;
                 scroll('#descriptionProduct');
             }
         }
@@ -161,12 +181,12 @@ function validateProductDataAcc(name, model, description,
 
 
         if (reg_ex1.test(name) || reg_ex2.test(name)){
-            err_msg = 'Please avoid using expressions of the form "&lt;xxx&gt;", "&lt;xxx/&gt;".';
+            err_msg = alertsTranslations.evitarExpresiones;
             scroll('#nameProduct');
         }
         if (!ignore_description){
             if (reg_ex1.test(description) || reg_ex2.test(description)){
-                err_msg = 'Por favor, evite usar expresiones de la forma "&lt;xxx&gt;", "&lt;xxx/&gt;".';
+                err_msg = alertsTranslations.evitarExpresiones;
                 scroll('#descriptionProduct');
             }
         }
@@ -174,37 +194,37 @@ function validateProductDataAcc(name, model, description,
         // palabras clave
 
         const words = [
-            "Exclusivo",
-            "barato",
-            "Increíble",
-            "Milagroso",
-            "Garantizado",
-            "Sin riesgo",
-            "100% seguro",
-            "Oferta limitada",
-            "Ahorro garantizado",
-            "Producto antiguo",
-            "Solución definitiva",
-            "Testimonios sorprendentes",
-            "Secreto revelado",
-            "Fácil de ganar dinero",
-            "Número 1 en ventas",
-            "Precios de liquidación",
-            "Descuentos exagerados",
-            "Gane premios instantáneos",
-            "Inigualable",
-            "Supera todas las expectativas",
-        ];
+            `${alertsTranslations.exclusive}`,
+            `${alertsTranslations.cheap}`,
+            `${alertsTranslations.incredible}`,
+            `${alertsTranslations.miraculous}`,
+            `${alertsTranslations.garanteed}`,
+            `${alertsTranslations.withoutRisk}`,
+            `${alertsTranslations.oneHundredSecure}`,
+            `${alertsTranslations.limitedOffer}`,
+            `${alertsTranslations.garanteedSaving}`,
+            `${alertsTranslations.oldProduct}`,
+            `${alertsTranslations.definitiveSolution}`,
+            `${alertsTranslations.incredibleTestimonies}`,
+            `${alertsTranslations.revealedSecret}`,
+            `${alertsTranslations.earnMoneyEasily}`,
+            `${alertsTranslations.numberOneInSales}`,
+            `${alertsTranslations.liquidationPrice}`,
+            `${alertsTranslations.discountsExagerated}`,
+            `${alertsTranslations.winInstantPrices}`,
+            `${alertsTranslations.withoutPar}`,
+            `${alertsTranslations.surpassAllExpectations}`,
+          ];
 
 
         for (let word of words){
             if(name.includes(word)){
-                err_msg = 'Por favor, evite poner palabras publicitarias en el nombre del producto';
+                err_msg = alertsTranslations.evitarPalabrasPublicidad;
                 scroll('#nameProduct');
             }
             else if (!ignore_description){
                 if(description.includes(word)){
-                    err_msg = 'Evite incluir palabras publicitarias en la descripción';
+                    err_msg = alertsTranslations.evitarPublicidad;
                     scroll('#descriptionProduct');
                 }
             }
@@ -214,7 +234,7 @@ function validateProductDataAcc(name, model, description,
 
     if (err_msg != ""){
         iziToast.error({
-            title: 'Error',
+            title: alertsTranslations.error,
             message: err_msg,
             position: 'center'
         });
@@ -237,11 +257,11 @@ function imgVal(file, id){
 
 
     if (file.size > maxSize) {
-        err_msg = 'El tamaño del archivo supera el límite de 10 MB.';
+        err_msg = alertsTranslations.noMayor10mb;
     }
     // formato de imagen
     else if (!allowedTypes.includes(fileType)) {
-        err_msg = 'Sólo se admiten archivos JPG, PNG y JPEG.';
+        err_msg = alertsTranslations.archivosAdmitidos;
     }
 
 
@@ -259,8 +279,8 @@ function imgVal(file, id){
             if (image.width < 900 || image.height < 900) {
     
                 iziToast.error({
-                    title: 'Error',
-                    message: 'La imagen debe tener un tamaño mínimo de 900x900px.',
+                    title: alertsTranslations.error,
+                    message: alertsTranslations.img900,
                     position: 'center'
                 });
     

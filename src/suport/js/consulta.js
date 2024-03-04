@@ -85,14 +85,14 @@ jQuery(document).ready(function($) {
         
         if (A_id === '0') {
             iziToast.error({
-                title: 'Error',
+                title: alertsTranslations.error,
                 message: alertsTranslations.selectId,
                 position: 'center'
               });
         } else { 
             if (A_observacion === '0') {
                 iziToast.error({
-                    title: 'Error',
+                    title: alertsTranslations.error,
                     message: alertsTranslations.insertAnswer,
                     position: 'center'
                 });

@@ -1,6 +1,26 @@
 jQuery(document).ready(function($){
     let isToastOpen = false; 
 
+      const cookieLng = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("language="))
+        .split("=")[1];
+      let alertsTranslations = {};
+
+      // cargar json de traducciones
+      const loadTranslations = (lng) => {
+        return fetch(
+          `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+        )
+          .then((response) => response.json())
+          .then((translation) => {
+            // save in a global variable
+            alertsTranslations = translation;
+          });
+      };
+
+      loadTranslations(cookieLng);
+
     $(document).on('click', '.btn-view-accessory', function() {
         if (isToastOpen) {
             return; 
@@ -25,14 +45,14 @@ jQuery(document).ready(function($){
                 productImage = elem.product_image;
                 product_price = elem.product_price;
 
-                var details = 'Nombre del producto: ' + productName + '<br>' +
-                            'Modelo del producto: ' + productModel + '<br>' +
-                            'Descripción: ' + product_description + '<br>' +
-                            'Precio: USD ' + product_price + '<br>' +
+                var details = `${alertsTranslations.nombreProducto}:` + productName + '<br>' +
+                              `${alertsTranslations.modeloProducto}:` + productModel + '<br>' +
+                              `${alertsTranslations.descripcion}:` + product_description + '<br>' +
+                              `${alertsTranslations.precio}:` + product_price + '<br>' +
                             'Imagen: <img style="max-width: 200px;" src="' + productImage + '">';
 
                 iziToast.show({
-                    title: 'Detalles',
+                    title: alertsTranslations.titleDetalles,
                     message: details,
                     position: 'center',
                     timeout: false,
@@ -47,8 +67,8 @@ jQuery(document).ready(function($){
         })
         .fail(function(){
             iziToast.error({
-                title: 'Error',
-                message: "No se pueden obtener datos de la base de datos",
+                title: alertsTranslations.error,
+                message: alertsTranslations.obtenerError,
                 position: 'center',
                 timeout: false,
                 closeOnClick: true,

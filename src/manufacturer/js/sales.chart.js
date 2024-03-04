@@ -1,3 +1,24 @@
+const cookieLng = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+    
+    let alertsTranslations = {};
+
+    // cargar json de traducciones
+    const loadTranslations = (lng) => {
+        return fetch(
+        `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+        )
+        .then((response) => response.json())
+        .then((translation) => {
+            // save in a global variable
+            alertsTranslations = translation;
+        });
+    };
+
+    loadTranslations(cookieLng);
+
 jQuery(document).ready(function($) {
 
     let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
@@ -362,9 +383,9 @@ jQuery(document).ready(function($) {
 
         iziToast.warning({
 
-            title: 'Adventencia',
+            title: alertsTranslations.advertencia,
 
-            message: '¡No se puede traer los datos de la base de datos!',
+            message: alertsTranslations.noBd,
 
             position: 'topRight',
 
