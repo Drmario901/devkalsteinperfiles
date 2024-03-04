@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 jobs:
 <<<<<<< HEAD
+<<<<<<< HEAD
   update_server:
     runs-on: ubuntu-latest
     steps:
@@ -19,6 +20,8 @@ jobs:
             cd /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles
             git pull https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
 =======
+=======
+>>>>>>> bf66d6ba7a98b034e48bbcc07bf1447d0c302cbd
             update_server:
               runs-on: ubuntu-latest
               steps:
@@ -34,5 +37,9 @@ jobs:
                       git pull https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
           
           
+<<<<<<< HEAD
   
 >>>>>>> 8ca320a2 (Cambios deploy.yml)
+=======
+  
+>>>>>>> bf66d6ba7a98b034e48bbcc07bf1447d0c302cbd
