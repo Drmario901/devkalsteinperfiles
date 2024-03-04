@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    $search = '';
+
     if (isset($_GET['search'])){        
         $search = $_GET ? $_GET['search'] : '';
     }
