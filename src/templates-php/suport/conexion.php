@@ -2,7 +2,7 @@
     $hostdb = "localhost";
     $userdb = "kalsteinplus";
     $passdb = "OqA;}vKA94PO";
-    $namedb = "he270716_wp_es";
+    $namedb = "kalsteinplus_he270716_wp_es";
     $namedb2 = "he270716_wp4";
 
     $conexion = new mysqli($hostdb, $userdb, $passdb, $namedb);
