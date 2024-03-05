@@ -20,7 +20,7 @@
                 $subField = "product_subcategory";
             }
 
-            // get lines
+            // get linesss
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
