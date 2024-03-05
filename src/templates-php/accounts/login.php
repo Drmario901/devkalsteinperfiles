@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    //prueba
     $search = '';
 
     if (isset($_GET['search'])){        

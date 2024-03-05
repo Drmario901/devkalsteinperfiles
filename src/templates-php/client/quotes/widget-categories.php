@@ -1,22 +1,41 @@
 <div class='asideCategory w-100'>
     <span class='tltAsideCategory'>
-        <h6>Categorías de productos</h6>
+        <h6 data-i18n="client:productCategories">Categorías de productos</h6>
     </span>
     <ul class='cCategory'>
         <?php
             $html = '';
 
-            // get lines
+            $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-            $queryLines = "SELECT categorie_line_es FROM wp_categories ORDER BY categorie_line_es ASC";	
+            // Adjust these fields based on the language
+            $lineField = "product_line_" . $lang;
+            $descriptionField = "product_category_" . $lang;
+            $subField = "product_subcategory_" . $lang;
+
+            // if cookie = en then remove _en from the fields1
+            if ($lang == 'en') {
+                $lineField = "product_line";
+                $descriptionField = "product_category";
+                $subField = "product_subcategory";
+            }
+
+            // get linesss
+
+            $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
+
 
             $already_printed = [];
                 
             if ($resultLines->num_rows > 0) {
                 while ($value = $resultLines->fetch_assoc()) {
-                    if (!in_array($value['categorie_line_es'], $already_printed)){
-                        array_push($already_printed, $value['categorie_line_es']);
+                    // Trim y convertir a minúsculas para la comparación
+                    $lineValueLower = mb_strtolower(trim($value[$lineField]), 'UTF-8');
+            
+                    // Verificar que el valor no sea vacío y no esté ya en el array (sin distinguir mayúsculas de minúsculas)
+                    if (!empty($lineValueLower) && !in_array($lineValueLower, array_map('mb_strtolower', $already_printed))) {
+                        array_push($already_printed, $value[$lineField]);
                     }
                 }
             }
@@ -40,15 +59,15 @@
                     <ul class='acordeon-category-ul-$raw_line' hidden>
                 ";
 
-                $consulta = "SELECT categorie_description_es FROM wp_categories WHERE categorie_line_es = '$line' ORDER BY categorie_description_es ASC";	
+                $consulta = "SELECT $descriptionField FROM wp_k_products WHERE $lineField = '$line' ORDER BY $descriptionField ASC";	
                 $resultado = $conexion->query($consulta);
 
                 $already_printed = [];
                     
                 if ($resultado->num_rows > 0) {
                     while ($value = $resultado->fetch_assoc()) {
-                        if (!in_array($value['categorie_description_es'], $already_printed)){
-                            array_push($already_printed, $value['categorie_description_es']);
+                        if (!in_array($value[$descriptionField], $already_printed)){
+                            array_push($already_printed, $value[$descriptionField]);
                         }
                     }
                 }
@@ -57,8 +76,14 @@
                     $raw_category = str_replace(' ', '-', $category);
         
                     
-                    $sql2 = "SELECT * FROM wp_categories WHERE categorie_description_es = '$category'";
+                    $sql2 = "SELECT * FROM wp_k_products WHERE $descriptionField = '$category'";
                     $rs2 = $conexion->query($sql2);
+
+                    if ($rs2 === false) {
+                        // Error en la consulta, maneja el error aquí
+                        error_log("Error en la consulta SQL: " . $conexion->error);
+                        continue; // Salta al siguiente ciclo en el bucle
+                    }
                     
                     // elemento de categoria
                     $html .= "
@@ -79,7 +104,7 @@
                         ";
         
                         while ($value = $rs2->fetch_assoc()) {
-                            $subcategory = $value['categorie_sub_es'];
+                            $subcategory = $value[$subField];
                             $html .= "<li class='list-subcategory-widget border-bottom'>$subcategory</li>";
                         }
         

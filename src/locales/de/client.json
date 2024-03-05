@@ -188,5 +188,6 @@
     "accesos":"Zugang",
     "addEmail": "Geben Sie Ihre E-Mail-Adresse ein",
     "zipPlaceHolder": "Geben Sie Ihre Postleitzahl ein",
-    "organizationNamePlaceholder": "Geben Sie den Namen Ihrer Organisation ein"
+    "organizationNamePlaceholder": "Geben Sie den Namen Ihrer Organisation ein",
+    "productCategories": "Produktkategorien"
 }
