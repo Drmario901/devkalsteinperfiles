@@ -78,11 +78,17 @@ $html .= "
     <div id='currentPageIndicatorCatalog'>Page: $page</div>
     <form id='form-previous-catalog' action='' method='get' style='margin-right: 8px'>
         <input id='previous' type='hidden' name='o' value='$prevPage'>
-        <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Anterior'>
+        <div style='position: relative; display: inline-block;'>
+            <input type='submit' value='' style='color: black !important; border: 1px solid #555 !important; padding-left: 30px;'>
+            <i class='fa-solid fa-arrow-left' style='position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: black; pointer-events: none;'></i>
+        </div>
     </form>
     <form id='form-next-catalog' action='' method='get'>
         <input id='next' class='next' type='hidden' name='o' value='$nextPage'>
-        <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Próximo &raquo;'>
+        <div style='position: relative; display: inline-block;'>
+            <input type='submit' value='' style='color: black !important; border: 1px solid #555 !important; padding-left: 30px;'>
+            <i class='fa-solid fa-arrow-right' style='position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: black; pointer-events: none;'></i>
+        </div>
     </form>
 </div>
 <input id='hiddenPage' type='hidden' value='$page'>";
