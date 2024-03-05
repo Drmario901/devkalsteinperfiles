@@ -73,6 +73,12 @@
                     
                     $sql2 = "SELECT * FROM wp_k_products WHERE $descriptionField = '$category'";
                     $rs2 = $conexion->query($sql2);
+
+                    if ($rs2 === false) {
+                        // Error en la consulta, maneja el error aquí
+                        error_log("Error en la consulta SQL: " . $conexion->error);
+                        continue; // Salta al siguiente ciclo en el bucle
+                    }
                     
                     // elemento de categoria
                     $html .= "
