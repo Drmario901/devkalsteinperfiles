@@ -9,13 +9,20 @@
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
             // Adjust these fields based on the language
-            $lineField = "categorie_line_" . $lang;
-            $descriptionField = "categorie_description_" . $lang;
-            $subField = "categorie_sub_" . $lang;
+            $lineField = "product_line_" . $lang;
+            $descriptionField = "product_category_" . $lang;
+            $subField = "product_subcategory_" . $lang;
+
+            // if cookie = en then remove _en from the fields
+            if ($lang == 'en') {
+                $lineField = "product_line";
+                $descriptionField = "product_category";
+                $subField = "product_subcategory";
+            }
 
             // get lines
 
-            $queryLines = "SELECT $lineField FROM wp_categories ORDER BY $lineField ASC";	
+            $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
 
             $already_printed = [];
