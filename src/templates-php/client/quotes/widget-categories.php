@@ -54,15 +54,15 @@
                     <ul class='acordeon-category-ul-$raw_line' hidden>
                 ";
 
-                $consulta = "SELECT $descriptionField FROM wp_categories WHERE $lineField = '$line' ORDER BY $descriptionField ASC";	
+                $consulta = "SELECT $descriptionField FROM wp_k_products WHERE $lineField = '$line' ORDER BY $descriptionField ASC";	
                 $resultado = $conexion->query($consulta);
 
                 $already_printed = [];
                     
                 if ($resultado->num_rows > 0) {
                     while ($value = $resultado->fetch_assoc()) {
-                        if (!in_array($value['$descriptionField'], $already_printed)){
-                            array_push($already_printed, $value['$descriptionField']);
+                        if (!in_array($value[$descriptionField], $already_printed)){
+                            array_push($already_printed, $value[$descriptionField]);
                         }
                     }
                 }
@@ -71,7 +71,7 @@
                     $raw_category = str_replace(' ', '-', $category);
         
                     
-                    $sql2 = "SELECT * FROM wp_categories WHERE $descriptionField = '$category'";
+                    $sql2 = "SELECT * FROM wp_k_products WHERE $descriptionField = '$category'";
                     $rs2 = $conexion->query($sql2);
                     
                     // elemento de categoria
