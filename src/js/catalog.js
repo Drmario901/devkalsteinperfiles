@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
 
   function catalogo(inputSearch, category) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
+      url: plugin_dir + "/php/catalog.php",
       type: "POST",
       data: { inputSearch, category },
     })
@@ -46,11 +46,9 @@ jQuery(document).ready(function ($) {
     let inputSearch = $("#searchreport").val();
     let category = $("#category").val();
 
-    //test1
-
     function tableContent(nextPage) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
+        url: plugin_dir + "/php/catalog.php",
         type: "POST",
         data: { inputSearch: inputSearch, category: category, o: nextPage },
         success: function (data) {
@@ -110,7 +108,7 @@ jQuery(document).ready(function ($) {
   category();
   function category(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
+      url: plugin_dir + "/php/suport/category_product.php",
       type: "POST",
       data: { consulta },
     })

@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/conexion.php';
 
-require 'translateText.php';
-translateText();
+/* require 'translateText.php';
+translateText(); */
 
 $cate = $conexion->real_escape_string($_POST['category']);
 $q = $conexion->real_escape_string($_POST['inputSearch']);
