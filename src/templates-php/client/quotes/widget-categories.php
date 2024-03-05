@@ -13,7 +13,7 @@
             $descriptionField = "product_category_" . $lang;
             $subField = "product_subcategory_" . $lang;
 
-            // if cookie = en then remove _en from the fields
+            // if cookie = en then remove _en from the fields1
             if ($lang == 'en') {
                 $lineField = "product_line";
                 $descriptionField = "product_category";
