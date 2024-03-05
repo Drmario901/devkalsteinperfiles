@@ -2,7 +2,7 @@
 
 		<?php
 			// Incluir el archivo de traducciones
-			include __DIR__.'../../../php/translations.php';
+			include __DIR__.'/../../../php/translations.php';
 			
 			$banner_img = 'Header-usuario-IMG.png';
 

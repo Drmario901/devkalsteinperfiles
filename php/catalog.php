@@ -60,7 +60,7 @@ if ($resultado->num_rows > 0) {
     $html .= "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No se encontraron datos</p></center>
+            <center><p style='color: #000;' data-i17n='client:dataNotFound'>No se encontraron datos</p></center>
         </div>
     ";
 }
@@ -75,11 +75,11 @@ $html .= "
     <div id='currentPageIndicatorCatalog'>Page: $page</div>
     <form id='form-previous-catalog' action='' method='get' style='margin-right: 8px'>
         <input id='previous' type='hidden' name='o' value='$prevPage'>
-        <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Anterior'>
+        <input type='submit' style='color: black !important; border: 1px solid #555 data-i17n='client:previo' !important' value=''>
     </form>
     <form id='form-next-catalog' action='' method='get'>
         <input id='next' class='next' type='hidden' name='o' value='$nextPage'>
-        <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Próximo &raquo;'>
+        <input type='submit' style='color: black !important; border: 1px solid #555 data-i17n='client:next' !important' value=''>
     </form>
 </div>
 <input id='hiddenPage' type='hidden' value='$page'>";
