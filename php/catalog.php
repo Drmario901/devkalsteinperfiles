@@ -80,14 +80,14 @@ $html .= "
         <input id='previous' type='hidden' name='o' value='$prevPage'>
         <div style='position: relative; display: inline-block;'>
             <input type='submit' value='' style='color: black !important; border: 1px solid #555 !important; padding-left: 30px;'>
-            <i class='fa-solid fa-arrow-left' style='position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: black; pointer-events: none;'></i>
+            <i class='fa-solid fa-arrow-left' style='position: absolute; left: 10px; top: 70%; transform: translateY(-50%); color: black; pointer-events: none;'></i>
         </div>
     </form>
     <form id='form-next-catalog' action='' method='get'>
         <input id='next' class='next' type='hidden' name='o' value='$nextPage'>
         <div style='position: relative; display: inline-block;'>
             <input type='submit' value='' style='color: black !important; border: 1px solid #555 !important; padding-left: 30px;'>
-            <i class='fa-solid fa-arrow-right' style='position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: black; pointer-events: none;'></i>
+            <i class='fa-solid fa-arrow-right' style='position: absolute; left: 10px; top: 70%; transform: translateY(-50%); color: black; pointer-events: none;'></i>
         </div>
     </form>
 </div>
