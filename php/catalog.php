@@ -1,6 +1,10 @@
 <?php
 require __DIR__ . '/conexion.php';
 
+include 'translateText.php';
+
+translateText();
+
 $cate = $conexion->real_escape_string($_POST['category']);
 $q = $conexion->real_escape_string($_POST['inputSearch']);
 
@@ -50,7 +54,7 @@ if ($resultado->num_rows > 0) {
                     <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$imagen' class='catalog-img card-img border' alt='...'>
                     <div class='card-body d-flex flex-column justify-content-between'>
                         <center><h5 class='card-title' style='font-size: 16px;'>$nombre</h5></center>
-                        <center><button class='_df_button' id='book1' source='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>Ver</button></center>
+                        <center><button class='_df_button' id='book1' source='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf' data-i17n='client:seeTable'>Ver</button></center>
                     </div>
                 </div>
             </div>

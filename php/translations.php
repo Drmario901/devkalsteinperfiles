@@ -20,7 +20,6 @@ $translations = array(
         'client:actions' => 'Actions',
         'client:terminoDeBusqueda' => 'Search term',
         'client:verBusquedas' => 'Here you can see all your searches on Kalstein!',
-
         'client:horaTable' => 'Time',
         'client:navegadorTable' => 'Browser',
         'client:buscador' => 'Search Engine',
