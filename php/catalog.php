@@ -1,6 +1,9 @@
 <?php
 require __DIR__ . '/conexion.php';
 
+include 'translateText.php';
+    translateText();
+
 $cate = $conexion->real_escape_string($_POST['category']);
 $q = $conexion->real_escape_string($_POST['inputSearch']);
 
@@ -50,7 +53,7 @@ if ($resultado->num_rows > 0) {
                     <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$imagen' class='catalog-img card-img border' alt='...'>
                     <div class='card-body d-flex flex-column justify-content-between'>
                         <center><h5 class='card-title' style='font-size: 16px;'>$nombre</h5></center>
-                        <center><button class='_df_button' id='book1' source='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>Ver</button></center>
+                        <center><button data-i17n='client:seeTable' class='_df_button' id='book1' source='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>Ver</button></center>
                     </div>
                 </div>
             </div>
@@ -60,7 +63,7 @@ if ($resultado->num_rows > 0) {
     $html .= "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No se encontraron datos</p></center>
+            <center><p data-i17n='client:dataNotFound' style='color: #000;'>No se encontraron datos</p></center>
         </div>
     ";
 }
@@ -75,11 +78,11 @@ $html .= "
     <div id='currentPageIndicatorCatalog'>Page: $page</div>
     <form id='form-previous-catalog' action='' method='get' style='margin-right: 8px'>
         <input id='previous' type='hidden' name='o' value='$prevPage'>
-        <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Anterior'>
+        <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:previo' value='&laquo; Anterior'>
     </form>
     <form id='form-next-catalog' action='' method='get'>
         <input id='next' class='next' type='hidden' name='o' value='$nextPage'>
-        <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Próximo &raquo;'>
+        <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:next' value='Próximo &raquo;'>
     </form>
 </div>
 <input id='hiddenPage' type='hidden' value='$page'>";
