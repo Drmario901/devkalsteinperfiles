@@ -189,5 +189,14 @@
   "addEmail": "Enter your email address",
   "zipPlaceHolder": "Enter your zip code",
   "organizationNamePlaceholder": "Enter your organization name",
-  "productCategories": "Product Categories"
+  "productCategories": "Product Categories",
+  "quote2": "Quote",
+  "paymentMethod": "Payment Method",
+  "subtotal": "Subtotal",
+  "total": "Total",
+  "discount": "Discount",
+  "arancel": "Duty",
+  "shipping": "Shipping",
+  "metodo": "Method",
+  "generar": "Generate"
 }

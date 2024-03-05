@@ -189,5 +189,14 @@
   "addEmail": "Ange din e-postadress",
   "zipPlaceHolder": "Ange ditt postnummer",
   "organizationNamePlaceholder": "Ange namnet på din organisation",
-  "productCategories": "Produktkategorier"
+  "productCategories": "Produktkategorier",
+  "quote2": "Citera",
+  "paymentMethod": "Betalningsmetod",
+  "subtotal": "Delsumma",
+  "total": "Total",
+  "discount": "Rabatt",
+  "arancel": "Tull",
+  "shipping": "Frakt",
+  "metodo": "Metod",
+  "generarOrden": "Generera order"
 }

@@ -189,5 +189,14 @@
   "addEmail": "Entrez votre adresse e-mail",
   "zipPlaceHolder": "Entrez votre code postal",
   "organizationNamePlaceholder": "Entrez le nom de votre organisation",
-  "productCategories": "Catégories de produits"
+  "productCategories": "Catégories de produits",
+  "quote2": "Citer",
+  "paymentMethod": "Méthode de paiement",
+  "subtotal": "Sous-total",
+  "total": "Total",
+  "discount": "Remise",
+  "arancel": "Droits de douane",
+  "shipping": "Expédition",
+  "metodo": "Méthode",
+  "generar": "Générer"
 }

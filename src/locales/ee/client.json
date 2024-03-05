@@ -189,5 +189,14 @@
   "addEmail": "Sisestage oma e-posti aadress",
   "zipPlaceHolder": "Sisestage oma postiindeks",
   "organizationNamePlaceholder": "Sisestage oma organisatsiooni nimi",
-  "productCategories": "Tootekategooriad"
+  "productCategories": "Tootekategooriad",
+  "quote2": "Tsitaat",
+  "paymentMethod": "Makseviis",
+  "subtotal": "Vahesumma",
+  "total": "Kokku",
+  "discount": "Allahindlus",
+  "arancel": "Toll",
+  "shipping": "Kohaletoimetamine",
+  "metodo": "Meetod",
+  "generar": "Genereeri"
 }
