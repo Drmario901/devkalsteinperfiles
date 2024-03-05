@@ -1,5 +1,25 @@
-let plugin_dir = 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/';
-let domain = 'https://testing.kalstein.digital/index.php/rentalsale/';
+let plugin_dir = 'https://dev.kalstein.digital/wp-content/plugins/kalsteinPerfiles/';
+let domain = 'https://dev.kalstein.digital/index.php/rentalsale/';
+
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
 
 function validateProductData(name, brand, model, description, category, fileInput, stock, status, weight, length, width, height, weight_pa, length_pa, width_pa, height_pa, pa_type, price, rentaltime, currency, dont_image = false){
     
@@ -16,63 +36,63 @@ function validateProductData(name, brand, model, description, category, fileInpu
 
     // void verifications
     if (name === '') {
-        err_msg = 'Name empty';
+        err_msg = alertsTranslations.nombreVacio;
         scroll('#nameProduct');
     }
     else if (brand === '') {
-      err_msg = 'Brand empty';
+      err_msg = alertsTranslations.marcaVacio;
       scroll('#productBrand');
   }
     else if (model === '') {
-        err_msg = 'Model empty';
+        err_msg = alertsTranslations.modeloVacio;
         scroll('#modelProduct');
     }
     else if (description === '') {
-        err_msg = 'Description empty';
+        err_msg = alertsTranslations.descripcionVacio;
         scroll('#descriptionProduct');
     }
     else if ((fileInput === undefined || fileInput === '') && !dont_image) {
-        err_msg = 'Add an image or fix problems with the current image';
+        err_msg = alertsTranslations.addImg;
         scroll('#file-input');
     }
     else if (category === '') {
-        err_msg = 'Category empty';
+        err_msg = alertsTranslations.categoriaVacio;
         scroll('#dataCategory');
     }
     else if (stock === '') {
-        err_msg = 'Stock empty';
+        err_msg = alertsTranslations.stockVacio;
         scroll('#stockProduct');
     }
     else if (status === '') {
-        err_msg = 'Stock status empty';
+        err_msg = alertsTranslations.estatusVacio;
         scroll('#statusProduct');
     }
     else if (weight === '') {
-        err_msg = 'Weight empty';
+        err_msg = alertsTranslations.pesoVacio;
         scroll('#weProduct');
     }
     else if (width === '') {
-        err_msg = 'Width empty';
+        err_msg = alertsTranslations.anchoVacio;
         scroll('#wiProduct');
     }
     else if (height === '') {
-        err_msg = 'Height empty';
+        err_msg = alertsTranslations.altoVacio;
         scroll('#heProduct');
     }
     else if (length === '') {
-        err_msg = 'Length empty';
+        err_msg = alertsTranslations.largoVacio;
         scroll('#leProduct');
     }
     else if (weight_pa === '') {
-        err_msg = 'Packing weight empty';
+        err_msg = alertsTranslations.pesoEmpaquetado;
         scroll('#weProductPa');
     }
     else if (width_pa === '') {
-        err_msg = 'Packing width empty';
+        err_msg = alertsTranslations.anchoEmpaquetado;
         scroll('#wiProductPa');
     }
     else if (height_pa === '') {
-        err_msg = 'Packing height empty';
+        err_msg = alertsTranslations.alturaEmpaquetado;
         scroll('#heProductPa');
     } 
     else if (length_pa === '') {
@@ -80,73 +100,73 @@ function validateProductData(name, brand, model, description, category, fileInpu
         scroll('#leProductPa');
     }
     else if (pa_type === '') {
-        err_msg = 'Packing type empty';
+        err_msg = alertsTranslations.largoEmpaquetado;
         scroll('#packageType');
     } 
     else if (price === '') {
-        err_msg = 'Unit price empty';
+        err_msg = alertsTranslations.precioUnitario;
         scroll('#priceProduct');
     }
     else if (rentaltime === '') {
-      err_msg = 'Rental Type empty';
+      err_msg = alertsTranslations.tipoAlquiler;
       scroll('#rentalType');
    }
     else if (currency === '') {
-        err_msg = 'Currency empty';
+        err_msg = alertsTranslations.monedaVacia;
         scroll('#currency');
     }
     // negative verification
     else if (parseFloat(stock) <= 0) {
-        err_msg = 'Stock cannot be less than 0';
+        err_msg = alertsTranslations.stockMenor0;
         scroll('#stockProduct');
     }
     else if (parseFloat(price) <= 0) {
-        err_msg = 'Price cannot be less than 0';
+        err_msg = alertsTranslations.precioMenor0;
         scroll('#priceProduct');
     }
     else if (parseFloat(weight) <= 0) {
-        err_msg = 'Weight cannot be less than 0';
+        err_msg = alertsTranslations.pesoMenor0;
         scroll('#weProduct');
     }
     else if (parseFloat(width) <= 0) {
-        err_msg = 'Length cannot be less than 0';
+        err_msg = alertsTranslations.anchoMenor0;
         scroll('#wiProduct');
     }
     else if (parseFloat(height) <= 0) {
-        err_msg = 'Width cannot be less than 0';
+        err_msg =  alertsTranslations.alturaMenor0;
         scroll('#heProduct');
     }
     else if (parseFloat(length) <= 0) {
-        err_msg = 'Height cannot be less than 0';
+        err_msg =  alertsTranslations.longitudMenor0;
         scroll('#leProduct');
     } 
     else if (parseFloat(weight_pa) <= 0) {
-        err_msg = 'Packing weight cannot be less than 0';
+        err_msg =  alertsTranslations.pesoEmpaquetadoMenor0;
         scroll('#weProductPa');
     }
     else if (parseFloat(width_pa) <= 0) {
-        err_msg = 'Packing length cannot be less than 0';
+        err_msg =  alertsTranslations.anchoEmpaquetadoMenor0;
         scroll('#wiProductPa');
     }
     else if (parseFloat(height_pa) <= 0) {
-        err_msg = 'Packing width cannot be less than 0';
+        err_msg = alertsTranslations.alturaEmpaquetadoMenor0;
         scroll('#heProductPa');
     }
     else if (parseFloat(length_pa) <= 0) {
-        err_msg = 'Packing height cannot be less than 0';
+        err_msg =  alertsTranslations.largoEmpaquetadoMenor0;
         scroll('#leProductPa');
     }
     // length validations
     else if (name.length > 200) {
-        err_msg = 'Name must be less than 200 characters';
+        err_msg =  alertsTranslations.nombreMayor200;
         scroll('#nameProduct');
     }
     else if (model.length > 50) {
-        err_msg = 'Name must be less than 50 characters';
+        err_msg =  alertsTranslations.modeloMenor60;
         scroll('#modelProduct');
     }
     else if (description.length > 5000) {
-        err_msg = 'Descriptiom must be less than 5000 characters';
+        err_msg = alertsTranslations.descripcionMenor1k;
         scroll('#descriptionProduct');
     }
     else {
@@ -159,11 +179,11 @@ function validateProductData(name, brand, model, description, category, fileInpu
         let description_r = reg.test(description);
 
         if(name_r){
-            err_msg = 'please avoid linking to external websites in the title';
+            err_msg = alertsTranslations.evitarVincular;
             scroll('#nameProduct');
         }
         else if(description_r){
-            err_msg = 'please avoid linking to external websites in the descrption';
+            err_msg = alertsTranslations.evitarVincular;
             scroll('#descriptionProduct');
         }
 
@@ -173,11 +193,11 @@ function validateProductData(name, brand, model, description, category, fileInpu
         reg_ex2 = RegExp(/<(\S*?)[^>]*>/g);
 
         if (reg_ex1.test(name) || reg_ex2.test(name)){
-            err_msg = 'Please avoid using expressions of the form "&lt;xxx&gt;", "&lt;xxx/&gt;".';
+            err_msg = alertsTranslations.evitarExpresiones;
             scroll('#nameProduct');
         }
         if (reg_ex1.test(description) || reg_ex2.test(description)){
-            err_msg = 'Please avoid using expressions of the form "&lt;xxx&gt;", "&lt;xxx/&gt;".';
+            err_msg = alertsTranslations.evitarExpresiones;
             scroll('#descriptionProduct');
         }
 
@@ -186,43 +206,42 @@ function validateProductData(name, brand, model, description, category, fileInpu
         let con2 = name.toLowerCase().includes(document.querySelector('#productBrand').value.toLowerCase());
 
         if(con2){
-            err_msg = 'Please avoid placing the name of your brand in the name of your product<br>\
-            Your brand will be filled in with your account information';
+            err_msg = alertsTranslations.evitarMarca;
             scroll('#nameProduct');
         }
 
         // palabras clave
 
         const words = [
-            "Exclusive",
-            "cheap",
-            "Incredible",
-            "Miraculous",
-            "Guaranteed",
-            "Risk-free",
-            "100% safe",
-            "Limited offer",
-            "Guaranteed savings",
-            "Ancient product",
-            "Definitive solution",
-            "Amazing testimonials",
-            "Secret revealed",
-            "Easy money-making",
-            "Number 1 in sales",
-            "Clearance prices",
-            "Exaggerated discounts",
-            "Win instant prizes",
-            "Unmatched",
-            "Exceeds all expectations",
-        ];
+            `${alertsTranslations.exclusive}`,
+            `${alertsTranslations.cheap}`,
+            `${alertsTranslations.incredible}`,
+            `${alertsTranslations.miraculous}`,
+            `${alertsTranslations.garanteed}`,
+            `${alertsTranslations.withoutRisk}`,
+            `${alertsTranslations.oneHundredSecure}`,
+            `${alertsTranslations.limitedOffer}`,
+            `${alertsTranslations.garanteedSaving}`,
+            `${alertsTranslations.oldProduct}`,
+            `${alertsTranslations.definitiveSolution}`,
+            `${alertsTranslations.incredibleTestimonies}`,
+            `${alertsTranslations.revealedSecret}`,
+            `${alertsTranslations.earnMoneyEasily}`,
+            `${alertsTranslations.numberOneInSales}`,
+            `${alertsTranslations.liquidationPrice}`,
+            `${alertsTranslations.discountsExagerated}`,
+            `${alertsTranslations.winInstantPrices}`,
+            `${alertsTranslations.withoutPar}`,
+            `${alertsTranslations.surpassAllExpectations}`,
+          ];
 
         for (let word of words){
             if(description.includes(word)){
-                err_msg = 'Please avoid placing advertising words in the description';
+                err_msg = alertsTranslations.evitarPublicidad;
                 scroll('#descriptionProduct');
             }
             else if(name.includes(word)){
-                err_msg = 'Please avoid placing advertising words in the name of the product';
+                err_msg = alertsTranslations.evitarPalabrasPublicidad;
                 scroll('#nameProduct');
             }
         }
@@ -230,7 +249,7 @@ function validateProductData(name, brand, model, description, category, fileInpu
 
     if (err_msg != ""){
         iziToast.error({
-            title: 'Error',
+            title: alertsTranslations.error,
             message: err_msg,
             position: 'center'
         });
@@ -248,11 +267,11 @@ function imgVal(file, id){
     var fileType = file.type;
 
     if (file.size > maxSize) {
-        err_msg = 'The file size exceeds the limit of 10 MB.';
+        err_msg = alertsTranslations.noMayor10mb;
     }
     // formato de imagen
     else if (!allowedTypes.includes(fileType)) {
-        err_msg = 'Only JPG, PNG, and JPEG files are allowed.';
+        err_msg = alertsTranslations.archivosAdmitidos;
     }
 
     // tamaño mínimo
@@ -268,8 +287,8 @@ function imgVal(file, id){
             if (image.width < 900 || image.height < 900) {
     
                 iziToast.error({
-                    title: 'Error',
-                    message: 'The image must be at least 900x900px in size.',
+                    title: alertsTranslations.error,
+                    message: alertsTranslations.img9000,
                     position: 'center'
                 });
     
@@ -283,7 +302,7 @@ function imgVal(file, id){
 
     if (err_msg != ""){
         iziToast.error({
-            title: 'Error',
+            title: alertsTranslations.error,
             message: err_msg,
             position: 'center'
         });
@@ -302,17 +321,17 @@ function pdfVal(file){
         var fileType = file.type;
     
         if (file.size > maxSize) {
-            err_msg = 'File size exceeds the limit of 20 MB.';
+            err_msg = alertsTranslations.archivoMenor20mb;
         }
         // formato de imagen
         else if (!allowedTypes.includes(fileType)) {
-            err_msg = 'Only PDF files are allowed.';
+            err_msg = alertsTranslations.soloPDF;
         }
     
         if (err_msg != ""){
             iziToast.error({
-                title: 'Error',
-                message: err_msg + ' The file will be discarded',
+                title: alertsTranslations.error,
+                message: `${err_msg} ${alertsTranslations.archivoDescartado}`,
                 position: 'center'
             });
             return false;
@@ -460,15 +479,15 @@ jQuery(document).ready(function($) {
             $('#btnSendData').removeAttr('disabled');
             if(!JSON.parse(response).err_msg){
                 iziToast.success({
-                    title: 'Success',
-                    message: 'The data has been successfully uploaded.',
+                    title: alertsTranslations.exito,
+                    message: alertsTranslations.FileUploaded,
                     position: 'center'
                 });
                 window.location.href = domain + 'stock';
             }
             else {
                 iziToast.error({
-                    title: 'Error',
+                    title: alertsTranslations.error,
                     message: JSON.parse(response).err_msg,
                     position: 'center'
                 });
@@ -478,8 +497,8 @@ jQuery(document).ready(function($) {
         .fail(function (){
             //$('#btnSendData').removeAttr('disabled');
             iziToast.error({
-                title: 'Error',
-                message: 'Unable to connect whit the database!',
+                title: alertsTranslations.error,
+                message: alertsTranslations.noDbs,
                 position: 'center'
             });
         });
@@ -544,11 +563,11 @@ jQuery(document).ready(function($) {
         discount_1, discount_1_amount, discount_2, discount_2_amount, dont_image)){
         
             iziToast.question({
-                title: 'Confirmation',
-                message: 'Are you sure you want to edit the product?',
+                title: alertsTranslations.confirmacion,
+                message: alertsTranslations.seguroEditar,
                 position: 'center',
                 buttons: [
-                    ['<button><b>Yes</b></button>', function (instance, toast) {
+                    [`<button><b>${alertsTranslations.si}</b></button>`, function (instance, toast) {
                         instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     
                         updateDataUpload(id, name, model, description, category, fileInput, stock, status,
@@ -559,7 +578,7 @@ jQuery(document).ready(function($) {
                             longDescription, longDescriptionCSV);
                     },
                     true], 
-                    ['<button>No</button>', function (instance, toast) {
+                    [`<button><b>${alertsTranslations.no}</b></button>`, function (instance, toast) {
                         instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     }]
                 ]
@@ -648,15 +667,15 @@ jQuery(document).ready(function($) {
             //$('#btnUpdateData').removeAttr('disabled');
             if(!JSON.parse(response).err_msg){
                 iziToast.success({
-                    title: 'Success',
-                    message: 'The data has been successfully updated.',
+                    title: alertsTranslations.exito,
+                    message: alertsTranslations.datosActualizados,
                     position: 'center'
                 });
                 window.location.href = domain + 'stock';
             }
             else {
                 iziToast.error({
-                    title: 'Error',
+                    title: alertsTranslations.error,
                     message: JSON.parse(response).err_msg,
                     position: 'center'
                 });
@@ -666,8 +685,8 @@ jQuery(document).ready(function($) {
         .fail(function (){
             $('#btnUpdateData').removeAttr('disabled');
             iziToast.error({
-                title: 'Error',
-                message: 'Unable to connect whit the database!',
+                title: alertsTranslations.error,
+                message: alertsTranslations.noDb,
                 position: 'center'
             });
         });
@@ -683,14 +702,14 @@ jQuery(document).ready(function($){
         let delete_aid = $(this).val();
 
         iziToast.question({
-            title: 'Confirmation',
-            message: 'Are you sure you want to delete the product?',
+            title: alertsTranslations.confirmacion,
+            message: alertsTranslations.seguroDeEliminar,
             close: false,
             overlay: true,
             timeout: false,
             position: 'center',
             buttons: [
-                ['<button><b>Yes</b></button>', function (instance, toast) {
+                [`<button><b>${alertsTranslations.si}</b></button>`, function (instance, toast) {
 
                     $.ajax({
                         url: plugin_dir + 'php/manufacturer/deleteProduct.php',
@@ -703,8 +722,8 @@ jQuery(document).ready(function($){
                             // muestra el iziToast
                             instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                             iziToast.success({
-                                title: 'Success',
-                                message: 'Product deleted.',
+                                title: alertsTranslations.exito,
+                                message: alertsTranslations.productoEliminado,
                                 position: 'center'
                             });
 
@@ -720,8 +739,8 @@ jQuery(document).ready(function($){
                         else {
                             instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                             iziToast.error({
-                                title: 'Error',
-                                message: 'Product not deleted',
+                                title: alertsTranslations.error,
+                                message: alertsTranslations.productoNoEliminado,
                                 position: 'center'
                             });
                         }
@@ -730,8 +749,8 @@ jQuery(document).ready(function($){
                     .fail(function(){
                         instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                         iziToast.error({
-                            title: 'Error',
-                            message: "Can't connect with database",
+                            title: alertsTranslations.error,
+                            message: alertsTranslations.noDb,
                             position: 'center'
                         });
                     });
@@ -741,8 +760,8 @@ jQuery(document).ready(function($){
                 ['<button>No</button>', function (instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     iziToast.error({
-                        title: 'Error',
-                        message: 'Product delete canceled.',
+                        title: alertsTranslations.error,
+                        message: alertsTranslations.productoCancelado,
                         position: 'center'
                     });
                 }]
@@ -804,14 +823,14 @@ jQuery(document).ready(function($){
                 id: 'question',
                 zindex: 999,
                 title: 'Confirmation',
-                message: 'Are you sure you want to change the status for ' + customerName + '?',
+                message:`${alertsTranslations.cambiarEstado} ${customerName}?`,
                 position: 'center',
                 buttons: [
-                ['<button><b>Yes</b></button>', function(instance, toast) {
+                [`<button><b>${alertsTranslations.si}</b></button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                     quoteUpdateStatus(id, selectedStatus, customerName);
                 }, true],
-                ['<button>No</button>', function(instance, toast) {
+                [`<button><b>${alertsTranslations.no}</b></button>`, function(instance, toast) {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                 }]
                 ],
@@ -825,8 +844,8 @@ jQuery(document).ready(function($){
         }
         else{
             iziToast.warning({
-                title: 'Warning',
-                message: 'Please select an option!',
+                title: alertsTranslations.warning,
+                message: alertsTranslations.seleccionarOpcion,
                 position: 'topRight',
             });
         }
@@ -842,8 +861,8 @@ jQuery(document).ready(function($){
             let data = JSON.parse(respuesta)
             if (data.update === 'correcto'){
             iziToast.success({
-                title: 'Success',
-                message: 'Update successful!',
+                title: alertsTranslations.exito,
+                message: alertsTranslations.datosActualizados,
                 position: 'topRight',
             });
             window.location.href = domain + 'list-order/?i=' + $('#hiddenPage').val();
@@ -880,26 +899,26 @@ jQuery(document).ready(function($) {
         let err_msg = '';
 
         if (country == '') {
-            err_msg = 'Country empty';
+            err_msg = alertsTranslations.paisVacio;
         }
         else if (aerial_weigth == '') {
-            err_msg = 'Aerial weigth empty';
+            err_msg = alertsTranslations.pesoAereoVacio
         }
         else if (aerial_price == '') {
-            err_msg = 'Aerial price empty';
+            err_msg = alertsTranslations.precioAreoVacio;
         }
         else if (maritimal == '') {
-            err_msg = 'Maritimal price empty';
+            err_msg = alertsTranslations.precioMaritimoVacio;
         }
         // negative verification
         else if (parseFloat(aerial_weigth) <= 0) {
-            err_msg = 'Aerial weigth cannot be less than 0';
+            err_msg = alertsTranslations.pesoAreoMenor0;
         }
         else if (parseFloat(aerial_price) <= 0) {
-            err_msg = 'Aerial price cannot be less than 0';
+            err_msg = alertsTranslations.precioAereoMenor0;
         }
         else if (parseFloat(maritimal) <= 0) {
-            err_msg = 'Maritimal cannot be less than 0';
+            err_msg = alertsTranslations.maritimoMenor0;
         }
         console.log(err_msg);
         if (err_msg == ''){
@@ -925,14 +944,14 @@ jQuery(document).ready(function($) {
                 console.log(response);
                 if(!JSON.parse(response).err_msg){
                     iziToast.success({
-                        title: 'Success',
-                        message: 'The data has been successfully uploaded.',
+                        title: alertsTranslations.exito,
+                        message: alertsTranslations.CurrentlyUploaded,
                         position: 'center'
                     });
                 }
                 else {
                     iziToast.error({
-                        title: 'Error',
+                        title: alertsTranslations.error,
                         message: JSON.parse(response).err_msg,
                         position: 'center'
                     });
@@ -941,15 +960,15 @@ jQuery(document).ready(function($) {
             })
             .fail(function (){
                 iziToast.error({
-                    title: 'Error',
-                    message: 'Unable to connect whit the database!',
+                    title: alertsTranslations.error,
+                    message: alertsTranslations.noDb,
                     position: 'center'
                 });
             });
         }
         else {
             iziToast.error({
-                title: 'Error',
+                title: alertsTranslations.error,
                 message: err_msg,
                 position: 'center'
             });

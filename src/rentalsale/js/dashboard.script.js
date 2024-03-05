@@ -1,9 +1,30 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
 jQuery(document).ready(function($){
     searchDataUserDashboard()
     $('.vce-row-content').attr('id', 'vce-row-content')
 
     $(document).on('click', '#btnNewQuote', function(){
-        $(location).attr('href','https://kalstein.us/quote/')
+        $(location).attr('href','https://dev.kalstein.plus/quote/')
     })
 
     $(document).on('click', '#btn-logout', function(){
@@ -69,7 +90,7 @@ jQuery(document).ready(function($){
 
     function searchDataUserDashboard(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
             type: 'POST',
             data: {consulta},
         })
@@ -86,7 +107,7 @@ jQuery(document).ready(function($){
 
     function showTblQuoteUsers(email){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php',
             type: 'POST',
             data: {email},
         })
@@ -100,12 +121,12 @@ jQuery(document).ready(function($){
 
     function logout(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/logout.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/logout.php',
             type: 'POST',
             data: {consulta},
         })
         .done(function(respuesta){
-            $(location).attr('href','https://kalstein.us/login/')
+            $(location).attr('href','https://dev.kalstein.plus/login/')
         })
         .fail(function(){
             console.log("error")
@@ -116,7 +137,7 @@ jQuery(document).ready(function($){
 
     function dataForLineChartjsQuote(consulta){
         $.ajax({
-            url: 'https://127.0.0.1/wp-local/wp-content/plugins/kalsteinPerfiles/php/salesMonth.php',
+            url: 'https://dev.kalstein.plus/wp-local/wp-content/plugins/kalsteinPerfiles/php/salesMonth.php',
             type: 'POST',
             data: {consulta},
         })
@@ -189,12 +210,12 @@ jQuery(document).ready(function($){
             let months = []
             var dataQuote = ''
             if (mesActual == 0){
-                months = ['August', 
-                        'September', 
-                        'October', 
-                        'November', 
-                        'December', 
-                        'January']
+                months = [alertsTranslations.agosto, 
+                        alertsTranslations.septiembre,
+                        alertsTranslations.octubre,
+                        alertsTranslations.noviembre, 
+                        alertsTranslations.diciembre, 
+                        alertsTranslations.enero]
 
                 dataQuote = [
                             august,
@@ -206,12 +227,14 @@ jQuery(document).ready(function($){
                         ]
             }else{
                 if (mesActual == 1){
-                    months = ['September', 
-                        'October', 
-                        'November', 
-                        'December', 
-                        'January', 
-                        'February']
+                    months = [
+                        alertsTranslations.septiembre,
+                        alertsTranslations.octubre,
+                        alertsTranslations.noviembre, 
+                        alertsTranslations.diciembre, 
+                        alertsTranslations.enero, 
+                        alertsTranslations.febrero
+                    ]
 
                 dataQuote = [
                             september,
@@ -223,12 +246,14 @@ jQuery(document).ready(function($){
                         ]
                 }else{
                     if (mesActual == 2){
-                        months = ['October', 
-                            'November', 
-                            'December', 
-                            'January', 
-                            'February', 
-                            'March']
+                        months = [
+                            alertsTranslations.octubre, 
+                            alertsTranslations.noviembre, 
+                            alertsTranslations.diciembre, 
+                            alertsTranslations.enero, 
+                            alertsTranslations.febrero, 
+                            alertsTranslations.marzo
+                        ]
     
                     dataQuote = [
                                 october,
@@ -240,12 +265,14 @@ jQuery(document).ready(function($){
                             ]
                     }else{
                         if (mesActual == 3){
-                            months = ['November', 
-                                'December', 
-                                'January', 
-                                'February', 
-                                'March',
-                                'April']
+                            months = [
+                                alertsTranslations.noviembre, 
+                                alertsTranslations.diciembre, 
+                                alertsTranslations.enero, 
+                                alertsTranslations.febrero, 
+                                alertsTranslations.marzo,
+                                alertsTranslations.abril
+                            ]
         
                         dataQuote = [
                                     november,
@@ -257,12 +284,14 @@ jQuery(document).ready(function($){
                                 ]
                         }else{
                             if (mesActual == 4){
-                                months = ['December', 
-                                    'January', 
-                                    'February', 
-                                    'March',
-                                    'April',
-                                    'May']
+                                months = [
+                                    alertsTranslations.diciembre,  
+                                    alertsTranslations.enero, 
+                                    alertsTranslations.febrero, 
+                                    alertsTranslations.marzo,
+                                    alertsTranslations.abril,
+                                    alertsTranslations.mayo
+                                ]
             
                             dataQuote = [
                                         december,
@@ -274,12 +303,14 @@ jQuery(document).ready(function($){
                                     ]
                             }else{
                                 if (mesActual == 5){
-                                    months = ['January', 
-                                        'February', 
-                                        'March',
-                                        'April',
-                                        'May',
-                                        'June']
+                                    months = [
+                                        alertsTranslations.enero, 
+                                        alertsTranslations.febrero, 
+                                        alertsTranslations.marzo,
+                                        alertsTranslations.abril,
+                                        alertsTranslations.mayo,
+                                        alertsTranslations.junio
+                                    ]
                 
                                 dataQuote = [
                                             january,
@@ -291,12 +322,14 @@ jQuery(document).ready(function($){
                                         ]
                                 }else{
                                     if (mesActual == 6){
-                                        months = ['February', 
-                                            'March',
-                                            'April',
-                                            'May',
-                                            'June',
-                                            'July']
+                                        months = [
+                                            alertsTranslations.febrero, 
+                                            alertsTranslations.marzo,
+                                            alertsTranslations.abril,
+                                            alertsTranslations.mayo,
+                                            alertsTranslations.junio,
+                                            alertsTranslations.julio
+                                        ]
                     
                                     dataQuote = [
                                                 february,
@@ -308,12 +341,14 @@ jQuery(document).ready(function($){
                                             ]
                                     }else{
                                         if (mesActual == 7){
-                                            months = ['March',
-                                                'April',
-                                                'May',
-                                                'June',
-                                                'July',
-                                                'August']
+                                            months = [
+                                                alertsTranslations.marzo,
+                                                alertsTranslations.abril,
+                                                alertsTranslations.mayo,
+                                                alertsTranslations.junio,
+                                                alertsTranslations.julio,
+                                                alertsTranslations.agosto
+                                            ]
                         
                                         dataQuote = [
                                                     march,
@@ -325,12 +360,14 @@ jQuery(document).ready(function($){
                                                 ]
                                         }else{
                                             if (mesActual == 8){
-                                                months = ['April',
-                                                    'May',
-                                                    'June',
-                                                    'July',
-                                                    'August',
-                                                    'September']
+                                                months = [
+                                                    alertsTranslations.abril,
+                                                    alertsTranslations.mayo,
+                                                    alertsTranslations.junio,
+                                                    alertsTranslations.julio,
+                                                    alertsTranslations.agosto,
+                                                    alertsTranslations.septiembre
+                                                ]
                             
                                             dataQuote = [
                                                         april,
@@ -342,12 +379,14 @@ jQuery(document).ready(function($){
                                                     ]
                                             }else{
                                                 if (mesActual == 9){
-                                                    months = ['May',
-                                                        'June',
-                                                        'July',
-                                                        'August',
-                                                        'September',
-                                                        'October']
+                                                    months = [
+                                                        alertsTranslations.mayo,
+                                                        alertsTranslations.junio,
+                                                        alertsTranslations.julio,
+                                                        alertsTranslations.agosto,
+                                                        alertsTranslations.septiembre,
+                                                        alertsTranslations.octubre,
+                                                    ]
                                 
                                                 dataQuote = [
                                                             may,
@@ -359,12 +398,14 @@ jQuery(document).ready(function($){
                                                         ]
                                                 }else{
                                                     if (mesActual == 10){
-                                                        months = ['June',
-                                                            'July',
-                                                            'August',
-                                                            'September',
-                                                            'October',
-                                                            'November']
+                                                        months = [
+                                                            alertsTranslations.junio,
+                                                            alertsTranslations.julio,
+                                                            alertsTranslations.agosto,
+                                                            alertsTranslations.septiembre,
+                                                            alertsTranslations.octubre,
+                                                            alertsTranslations.noviembre
+                                                        ]
                                     
                                                     dataQuote = [
                                                                 june,
@@ -376,12 +417,14 @@ jQuery(document).ready(function($){
                                                             ]
                                                     }else{
                                                         if (mesActual == 11){
-                                                            months = ['July',
-                                                                'August',
-                                                                'September',
-                                                                'October',
-                                                                'November',
-                                                                'December']
+                                                            months = [
+                                                                alertsTranslations.julio,
+                                                                alertsTranslations.agosto,
+                                                                alertsTranslations.septiembre,
+                                                                alertsTranslations.octubre,
+                                                                alertsTranslations.noviembre,
+                                                                alertsTranslations.diciembre
+                                                            ]
                                         
                                                         dataQuote = [
                                                                     july,
@@ -409,7 +452,7 @@ jQuery(document).ready(function($){
                 data: {
                     labels: months,
                     datasets: [{
-                        label: 'Sales of month',
+                        label: alertsTranslations.ventasDelMes,
                         data: dataQuote,
                         fill: false,
                         borderColor: 'rgb(75, 192, 192)',

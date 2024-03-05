@@ -1,3 +1,25 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
+
 jQuery(document).ready(function($){
     $.getJSON('https://api.ipify.org?format=json', function(dataIP){
         $('#ipConnect').val(dataIP.ip)
@@ -7,7 +29,12 @@ jQuery(document).ready(function($){
         let user = $('#emailUser').val()
         let password = $('#passwordGrid').val()
         if (user == ''){
-            alert("Mail is required")
+            // alert("Mail is required")
+            iziToast.error({
+                title : alertsTranslations.error,
+                message : alertsTranslations.emailRequerido,
+                position: 'center'
+              });
         }else{
             if(user.includes('@')){
                 let position = user.indexOf('@')
@@ -52,7 +79,12 @@ jQuery(document).ready(function($){
         let user = $('#emailUser').val()
         let password = $('#passwordGrid').val()
         if (password == ''){
-            alert("Password is required")
+            // alert("Password is required")
+            iziToast.error({
+                title : alertsTranslations.error,
+                message : alertsTranslations.passwordRequerida,
+                position: 'center'
+              });
         }else{
             accessAccount(user, password, ip, browser)    
         }
@@ -62,7 +94,12 @@ jQuery(document).ready(function($){
         let user = $('#emailUser').val()
         let password = $('#passwordGrid').val()
         if (user == ''){
-            alert("Mail is required")
+            // alert("Mail is required")
+            iziToast.error({
+                title : alertsTranslations.error,
+                message : alertsTranslations.emailRequerido,
+                position: 'center'
+              });
         }else{
             if(user.includes('@')){
                 let position = user.indexOf('@')
@@ -84,7 +121,12 @@ jQuery(document).ready(function($){
         let user = $('#emailUser').val()
         let password = $('#passwordGrid').val()
         if (password == ''){
-            alert("Password is required")
+            // alert("Password is required")
+            iziToast.error({
+                title : alertsTranslations.error,
+                message : alertsTranslations.passwordRequerida,
+                position: 'center'
+              });
         }else{
             if ($('.p01').hasClass('aprobado') && $('.p02').hasClass('aprobado') && $('.p03').hasClass('aprobado') && $('.p04').hasClass('aprobado') && $('.p05').hasClass('aprobado')){
                 registrarCuenta(user, password)
@@ -194,7 +236,7 @@ jQuery(document).ready(function($){
 
     function validarCorreo(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/searchAccount.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchAccount.php',
             type: 'POST',
             data: {consulta},
         })
@@ -221,7 +263,7 @@ jQuery(document).ready(function($){
 
     function validarCorreoLogin(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/accessEmail.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/accessEmail.php',
             type: 'POST',
             data: {consulta},
         })
@@ -248,7 +290,7 @@ jQuery(document).ready(function($){
 
     function accessAccount(consulta, consulta1, ip, browser){
             $.ajax({
-                url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/accessAcount.php',
+                url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/accessAcount.php',
                 type: 'POST',
                 data: {consulta, consulta1, ip, browser},
             })
@@ -257,9 +299,9 @@ jQuery(document).ready(function($){
                 let data = JSON.parse(respuesta)
                 if (data.status === 'correcto'){           
                     if (data.name != ''){
-                        $(location).attr('href','https://kalstein.us/dashboard/')
+                        $(location).attr('href','https://dev.kalstein.plus/dashboard/')
                     }else{
-                        $(location).attr('href','https://kalstein.us/assistant/')
+                        $(location).attr('href','https://dev.kalstein.plus/assistant/')
                     }
                 }else{
                     $('.passwordIncorrect').css({'display' : 'block'})
@@ -273,7 +315,7 @@ jQuery(document).ready(function($){
 
     function registrarCuenta(consulta, consulta1){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/registerAccount.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/registerAccount.php',
             type: 'POST',
             data: {consulta, consulta1},
         })
@@ -293,7 +335,7 @@ jQuery(document).ready(function($){
 
     function enviarCorreo(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/testmail.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/testmail.php',
             type: 'POST',
             data: {consulta},
         })
@@ -317,7 +359,7 @@ jQuery(document).ready(function($){
 
     function reenviarCorreo(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/newCodeValidation.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/newCodeValidation.php',
             type: 'POST',
             data: {consulta},
         })
@@ -331,7 +373,7 @@ jQuery(document).ready(function($){
 
     function validarCode(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/validarCode.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/validarCode.php',
             type: 'POST',
             data: {consulta},
         })
@@ -342,8 +384,13 @@ jQuery(document).ready(function($){
                 $('.codeExpired').css({'display' : 'block'})
             }else{
                 if (data.sameCode === 'coinciden'){
-                    alert('email verificado!!')
-                    $(location).attr('href','https://kalstein.us/assistant/')
+                    alert(alertsTranslations.emailVerificado)
+                    iziToast.success({
+                        title : alertsTranslations.exito,
+                        message : alertsTranslations.emailVerificado,
+                        position: 'center'
+                      });
+                    $(location).attr('href','https://dev.kalstein.plus/assistant/')
                 }else{
                     $('.codeError').css({'display' : 'block'})
                 }
@@ -356,7 +403,7 @@ jQuery(document).ready(function($){
 
     function issetSessionUser(consulta){
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/issetSessionUser.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/issetSessionUser.php',
             type: 'POST',
             data: {consulta},
         })
@@ -364,7 +411,12 @@ jQuery(document).ready(function($){
             console.log(respuesta)            
             let data = JSON.parse(respuesta)
             if (data.emailAcc === ''){
-                alert('No hay session iniciada')
+                // alert(alertsTranslations.noHaySesion)
+                iziToast.error({
+                    title : alertsTranslations.error,
+                    message : alertsTranslations.noHaySesion,
+                    position: 'center'
+                  });
             }else{
                 
             }

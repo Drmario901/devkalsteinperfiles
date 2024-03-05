@@ -19,11 +19,13 @@ const loadTranslations = (lng) => {
 loadTranslations(cookieLng);
 console.log('holas')
 
+
+
 jQuery(document).ready(function($){
 
     function infoAccount(){
         $.ajax({
-            url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/infoAccount.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/infoAccount.php',
             type: 'POST',
             data: {},
         })
@@ -129,7 +131,7 @@ jQuery(document).ready(function($){
 
         $.ajax({
             contentType: "multipart/form-data",
-			url: "https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/updateInfoAccount.php",
+			url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/updateInfoAccount.php",
 			type: "POST",
 			data: formData,
 			dataType: "text",

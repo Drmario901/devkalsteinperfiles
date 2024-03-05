@@ -29,12 +29,12 @@ jQuery(document).ready(function($){
 jQuery(document).ready(function($){
     $(document).on('click', '#btn-logout', function(){
         $.ajax({
-            url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/logout.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/logout.php',
             type: 'POST',
             data: {},
         })
         .done(function(respuesta){
-            $(location).attr('href','https://testing.kalstein.digital/index.php/login');
+            $(location).attr('href','https://dev.kalstein.plus/index.php/login');
         })
         .fail(function(){
             console.log("error");

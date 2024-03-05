@@ -1,3 +1,25 @@
+
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
 jQuery(document).ready(function($) {
     mostrarDatos($("#dataEdit").val());
 
@@ -10,7 +32,7 @@ jQuery(document).ready(function($) {
     function mostrarDatos(consulta){
         $.ajax({
             // Cambia mificherophp.php por el nombre de tu fichero
-            url: "https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/productData.php",
+            url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/productData.php",
             type: "POST",
             data: {consulta},
         })
@@ -55,7 +77,7 @@ jQuery(document).ready(function($) {
 
             if (data.pdf != ''){
                 $('#currentlyUploadedManual').html(`
-                <p><b class='d-inline'>Currently Uploaded</b>:
+                <p><b class='d-inline'>${alertsTranslations.CurrentlyUploaded}</b>:
             <p id='currentlyUploadedCatalog'></p>
                 <a target='_blank' style='display: inline; text-decoration: underline; color: #000 !important' href='${plugin_dir}src/manuals/upload/${data.pdf}'><i class="fa-solid fa-file-pdf"></i> ${data.namepdf}.pdf</a></p>
                 `);
@@ -66,7 +88,7 @@ jQuery(document).ready(function($) {
 
             if (data.catalog != '' ){
                 $('#currentlyUploadedCatalog').html(`
-                <p><b class='d-inline'>Currently Uploaded</b>:
+                <p><b class='d-inline'>${alertsTranslations.CurrentlyUploaded}</b>:
                 <a target='_blank' style='dislpay: inline; text-decoration: underline; color: #000 !important' href='${plugin_dir}src/manuals/upload/${data.catalog}'><i class="fa-solid fa-file-pdf"></i> ${data.namecatalog}.pdf</a></p>
                 `);
             }

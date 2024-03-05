@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     function searchDataUserDashboard(consulta){
 
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php',
             type: 'POST',
             data: {consulta},
         })

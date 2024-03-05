@@ -1,3 +1,24 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
 jQuery(document).ready(function ($) {
     updateFieldsVisibility();
     maritimalPrice();
@@ -26,7 +47,7 @@ jQuery(document).ready(function ($) {
 
     function maritimalPrice() {
         $.ajax({
-            url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryMaritimal.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryMaritimal.php',
             method: 'GET',
             success: function (consulta) {
                 $('#selectCountryMaritimal').html(consulta);
@@ -38,7 +59,12 @@ jQuery(document).ready(function ($) {
                 });
             },
             error: function () {
-                alert("Error seleccionando el país para el precio marítimo.");
+                // alert(alertsTranslations.errorPaisMaritimo);
+                iziToast.error({
+                    title: alertsTranslations.error,
+                    message: alertsTranslations.errorPaisMaritimo,
+                    position: 'center'
+                });
             }
         });
     }
@@ -56,15 +82,20 @@ jQuery(document).ready(function ($) {
         } else if (precio_total > 1) {
             const cubicMeters = (precio_total / tarifa);
             var totalPrice = cubicMeters * tarifa;
-
-            alert(`El precio calculado es menor de un metro cubico, el precio se ha ajustado para ${cubicMeters} metro(s) cúbico(s) a la tarifa principal.`);
+            // alert(`El precio calculado es menor de un metro cubico, el precio se ha ajustado para ${cubicMeters} metro(s) cúbico(s) a la tarifa principal.`);
+						iziToast.error({
+							title: alertsTranslations.error,
+							message: `${alertsTranslations.precioCalculadoPara} ${cubicMeters} ${alertsTranslations.metroCubico}`,
+							position: 'center'
+					});
+            
             precio_total = totalPrice;
             $('#result-m').attr('placeholder', precio_total.toFixed(2));
 
             $('#results-history').prepend(`
                 <div class='result-div d-flex flex-column'>
                     <div>
-                        <b>Maritimal:&nbsp;</b>
+                        <b>${alertsTranslations.maritimal}</b>
                         <b>${ctry}</b>
                     <div>
                     <b>USD ${precio_total.toFixed(2)}</b>
@@ -77,7 +108,7 @@ jQuery(document).ready(function ($) {
             $('#results-history').prepend(`
                 <div class='result-div d-flex flex-column'>
                     <div>
-                        <b>Maritimal:&nbsp;</b>
+                        <b>${alertsTranslations.maritimal}</b>
                         <b>${ctry}</b>
                     <div>
                     <b>USD ${precio_total.toFixed(2)}</b>
@@ -88,7 +119,7 @@ jQuery(document).ready(function ($) {
 
     function aerialPrice() {
         $.ajax({
-            url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryAerial.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/selectCountryAerial.php',
             method: 'GET',
             success: function (consulta) {
                 $('#selectCountryAerial').html(consulta);
@@ -104,7 +135,12 @@ jQuery(document).ready(function ($) {
                 });
             },
             error: function () {
-                alert("Error selecting country.");
+                // alert( alertsTranslations.errorPais);
+								iziToast.error({
+									title: alertsTranslations.error,
+									message: alertsTranslations.errorPais,
+									position: 'center'
+							});
             }
         });
     }
@@ -131,7 +167,7 @@ jQuery(document).ready(function ($) {
 
     function traerPrecios(country, peso){
         $.ajax({
-            url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/getRateForCountry.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/getRateForCountry.php',
             type: 'POST',
             data: {country, peso},
             
@@ -145,7 +181,7 @@ jQuery(document).ready(function ($) {
             $('#results-history').prepend(`
                 <div class='result-div d-flex flex-column'>
                     <div>
-                        <b>Aerial:&nbsp;</b>
+                        <b>${alertsTranslations.arereo}}</b>
                         <b>${ctry}</b>
                     <div>
                     <b>USD ${data.priceE}</b>

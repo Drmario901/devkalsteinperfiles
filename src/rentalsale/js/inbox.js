@@ -1,5 +1,28 @@
-let plugin_dir = 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/';
-let domain = 'https://testing.kalstein.digital/index.php/';
+let plugin_dir = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/';
+let domain = 'https://dev.kalstein.plus/index.php/';
+
+
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+
+
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
 
 
 
@@ -22,8 +45,8 @@ jQuery(document).ready(function($) {
           displayMode: 'once',
           id: 'question',
           zindex: 999,
-          title: 'Confirmación',
-          message: 'Are you sure you want to send this message?',
+          title: alertsTranslations.confirmacion,
+          message: alertsTranslations.enviarMensaje,
           position: 'center',
           buttons: [
             ['<button><b>Yes</b></button>', function(instance, toast) {
@@ -37,8 +60,8 @@ jQuery(document).ready(function($) {
         });
       } else {
         iziToast.error({
-          title: 'Error',
-          message: 'Please fill in all the required fields.',
+          title: alertsTranslations.error,
+          message: alertsTranslations.camposRequeridos,
           position: 'center'
         });
       }
@@ -64,8 +87,8 @@ jQuery(document).ready(function($) {
         success: function(response) {
           console.log(response);
           iziToast.success({
-            title: 'Success',
-            message: 'Data updated successfully.',
+            title: alertsTranslations.exito,
+            message: alertsTranslations.datosActualizados,
             position: 'center'
           });
           window.location.href = domain + 'inbox/compose';

@@ -1,12 +1,33 @@
-let plugin_dir = 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/';
-let domain = 'https://testing.kalstein.digital/index.php/';
+let plugin_dir = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/';
+let domain = 'https://dev.kalstein.plus/index.php/';
+
+
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
 
 jQuery(document).ready(function($){
   products()
 
   function products(consulta){
       $.ajax({
-          url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php',
+          url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php',
           type: 'POST',
           data: {consulta},
       })
@@ -24,7 +45,7 @@ jQuery(document).ready(function($){
 
   function categorys(consulta){
       $.ajax({
-          url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php',
+          url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php',
           type: 'POST',
           data: {consulta},
       })
@@ -58,68 +79,68 @@ $(document).on('click', '#btnSendData', function(e) {
 
   if (fileInput === undefined) {
     iziToast.error({
-      title: 'Error',
-      message: 'Add an image to save the product.',
+      title: alertsTranslations.error,
+      message: alertsTranslations.productoImg,
       position: 'center'
     });
   } else if (name === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Name empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.nombreVacio,
       position: 'center'
     });
   } else if (description === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Description empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.descripcionVacia,
       position: 'center'
     });
   } else if (category === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Category empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.categoriaVacia,
       position: 'center'
     });
   } else if (weight === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Weight empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.pesoVacio,
       position: 'center'
     });
   } else if (stock === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Stock empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.stockVacio,
       position: 'center'
     });
   } else if (length === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Length empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.largoVacio,
       position: 'center'
     });
   } else if (width === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Width empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.anchoVacio,
       position: 'center'
     });
   } else if (height === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Height empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.alturaVacio,
       position: 'center'
     });
   } else if (status === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Status empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.estatusVacio,
       position: 'center'
     });
   } else if (price === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Price empty',
+      title: alertsTranslations.error,
+      message: alertsTranslations.precioVacio,
       position: 'center'
     });
   } else {
@@ -130,14 +151,14 @@ $(document).on('click', '#btnSendData', function(e) {
 
     if (fileInput.size > maxSize) {
       iziToast.error({
-        title: 'Error',
-        message: 'The file size exceeds the limit of 10 MB.',
+        title: alertsTranslations.error,
+        message: alertsTranslations.noMayor10mb,
         position: 'center'
       });
     } else if (!allowedTypes.includes(fileType)) {
       iziToast.error({
-        title: 'Error',
-        message: 'Only JPG, PNG, and JPEG files are allowed.',
+        title: alertsTranslations.error,
+        message: alertsTranslations.archivosAdmitidos,
         position: 'center'
       });
     } else {
@@ -162,7 +183,7 @@ function savedDataUpload(name, description, category, weight, stock, length, wid
 
   $.ajax({
     contentType: "multipart/form-data",
-    url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/uploadDataForm.php',
+    url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/uploadDataForm.php',
     type: 'POST',
     data: formData,
     dataType: 'text',
@@ -172,11 +193,11 @@ function savedDataUpload(name, description, category, weight, stock, length, wid
     success: function(response) {
       console.log(response);
       iziToast.success({
-        title: 'Success',
-        message: 'The data has been successfully uploaded.',
+        title:  alertsTranslations.exito,
+        message: alertsTranslations.datosCargados,
         position: 'center'
       });
-      window.location.href = 'https://testing.kalstein.digital/index.php/distributor/stock';
+      window.location.href = 'https://dev.kalstein.plus/index.php/distributor/stock';
     },
     error: function(xhr, status, error) {
       console.log(xhr.responseText);
@@ -202,69 +223,69 @@ $(document).on('click', '#btnUpdateData', function(e) {
 
   if (name === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty name',
+      title: alertsTranslations.error,
+      message: alertsTranslations.nombreVacio,
       position: 'center'
     });
   } else if (description === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty description',
+      title: alertsTranslations.error,
+      message: alertsTranslations.descripcionVacia,
       position: 'center'
     });
   } else if (category === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty category',
+      title: alertsTranslations.error,
+      message: alertsTranslations.categoriaVacia,
       position: 'center'
     });
   } else if (weight === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty weight',
+      title: alertsTranslations.error,
+      message: alertsTranslations.pesoVacio,
       position: 'center'
     });
   } else if (stock === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty stock',
+      title: alertsTranslations.error,
+      message: alertsTranslations.stockVacio,
       position: 'center'
     });
   } else if (length === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty length',
+      title: alertsTranslations.error,
+      message: alertsTranslations.largoVacio,
       position: 'center'
     });
   } else if (width === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty width',
+      title: alertsTranslations.error,
+      message: alertsTranslations.anchoVacio,
       position: 'center'
     });
   } else if (height === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty height',
+      title: alertsTranslations.error,
+      message: alertsTranslations.altoVacio,
       position: 'center'
     });
   } else if (status === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty status',
+      title: alertsTranslations.error,
+      message: alertsTranslations.estatusVacio,
       position: 'center'
     });
   } else if (price === '') {
     iziToast.error({
-      title: 'Error',
-      message: 'Empty price',
+      title: alertsTranslations.error,
+      message: alertsTranslations.precioVacio,
       position: 'center'
     });
   } else {
 
     iziToast.question({
-      title: 'Confirmation',
-      message: 'Are you sure you want to edit the product?',
+      title: alertsTranslations.confirmacion,
+      message: alertsTranslations.seguroEditar,
       position: 'center',
       buttons: [
         ['<button><b>Yes</b></button>', function (instance, toast) {
@@ -276,14 +297,14 @@ $(document).on('click', '#btnUpdateData', function(e) {
 
           if (fileInput && fileInput.size > maxSize) {
             iziToast.error({
-              title: 'Error',
-              message: 'The file size exceeds the limit of 10 MB.',
+              title: alertsTranslations.error,
+              message: alertsTranslations.noMayor10mb,
               position: 'center'
             });
           } else if (fileInput && !allowedTypes.includes(fileType)) {
             iziToast.error({
-              title: 'Error',
-              message: 'Only JPG, PNG, and JPEG files are allowed.',
+              title: alertsTranslations.error,
+              message: alertsTranslations.archivosAdmitidos,
               position: 'center'
             });
           } else {
@@ -318,7 +339,7 @@ function updateDataUpload(id, name, description, category, weight, stock, length
 
   $.ajax({
     contentType: "multipart/form-data",
-    url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/updateStatus.php',
+    url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/updateStatus.php',
     type: 'POST',
     data: formData,
     dataType: 'text',
@@ -328,11 +349,11 @@ function updateDataUpload(id, name, description, category, weight, stock, length
     success: function(response) {
       console.log(response);
       iziToast.success({
-        title: 'Success',
+        title:  alertsTranslations.exito,
         message: 'Data updated successfully.',
         position: 'center'
       });
-      window.location.href = 'https://testing.kalstein.digital/index.php/distributor/stock';
+      window.location.href = 'https://dev.kalstein.plus/index.php/distributor/stock';
     },
     error: function(xhr, status, error) {
       console.log(xhr.responseText);
@@ -351,8 +372,8 @@ $(document).on('click', '#btnDeleteProduct', function(){
   let valor = $(this).val();
 
   iziToast.question({
-    title: 'Confirmation',
-    message: 'Are you sure you want to delete the product?',
+    title: alertsTranslations.confirmacion,
+    message: alertsTranslations.seguroDeEliminar,
     close: false,
     overlay: true,
     timeout: false,
@@ -362,8 +383,8 @@ $(document).on('click', '#btnDeleteProduct', function(){
         productsTable(valor);
         instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
         iziToast.success({
-          title: 'Success',
-          message: 'Product deleted.',
+          title:  alertsTranslations.exito,
+          message: alertsTranslations.productoEliminado,
           position: 'center'
         });
 
@@ -371,8 +392,8 @@ $(document).on('click', '#btnDeleteProduct', function(){
       ['<button>No</button>', function (instance, toast) {
         instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
         iziToast.error({
-          title: 'Error',
-          message: 'Product delete canceled.',
+          title: alertsTranslations.error,
+          message: alertsTranslations.productoCancelado,
           position: 'center'
         });
       }]
@@ -382,7 +403,7 @@ $(document).on('click', '#btnDeleteProduct', function(){
 
 function productsTable(delete_aid){
   $.ajax({
-    url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/deleteProduct.php',
+    url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/deleteProduct.php',
     type: 'POST',
     data: {delete_aid},
   })
@@ -406,7 +427,7 @@ $(document).on('click', '#btnView', function(){
 
 
 function showImage(image) {
-    let imageUrl = 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/images/upload/' + image;
+    let imageUrl = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/' + image;
 
     iziToast.show({
         title: '',
@@ -420,7 +441,7 @@ function showImage(image) {
 
 function imageView(){
     $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php',
         type: 'POST',
         dataType: 'html',
     })
@@ -438,7 +459,7 @@ allProductsCount()
 
 function allProductsCount(consulta){
     $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/allProducts.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/allProducts.php',
         type: 'POST',
         data: {consulta},
     })
@@ -456,7 +477,7 @@ allOrdersCount()
 
 function allOrdersCount(consulta){
     $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrders.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrders.php',
         type: 'POST',
         data: {consulta},
     })
@@ -485,8 +506,8 @@ $(document).on('click', '.btn-update', function() {
         displayMode: 'once',
         id: 'question',
         zindex: 999,
-        title: 'Confirmation',
-        message: 'Are you sure you want to change the status for ' + customerName + '?',
+        title: alertsTranslations.confirmacion,
+        message: `${alertsTranslations.cambiarEstado} ${customerName}?`,
         position: 'center',
         buttons: [
         ['<button><b>Yes</b></button>', function(instance, toast) {
@@ -507,8 +528,8 @@ $(document).on('click', '.btn-update', function() {
 }
 else{
     iziToast.warning({
-        title: 'Warning',
-        message: 'Please select an option!',
+        title: alertsTranslations.warning,
+        message: alertsTranslations.seleccionarOpcion,
         position: 'topRight',
     });
 }
@@ -529,8 +550,8 @@ function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
       let data = JSON.parse(respuesta);
       if (data.update === 'correcto') {
         iziToast.success({
-          title: 'Success',
-          message: 'Update successful!',
+          title:  alertsTranslations.exito,
+          message: alertsTranslations.datosActualizados,
           position: 'topRight',
           timeout: 1500,
           onClosing: function(instance, toast, closedBy) {
@@ -560,7 +581,7 @@ $(document).on('click', '#nextPage', function() {
 
 function loadQuotes(page) {
   $.ajax({
-    url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/quotes.php',
+    url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/quotes.php',
     method: 'POST',
     data: { page },
   })
@@ -583,7 +604,7 @@ quoteProcessed();
 
 function quoteProcessed() {
   $.ajax({
-    url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteProcessed.php',
+    url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteProcessed.php',
     type: 'POST',
     data: { page: page }, 
 
@@ -616,7 +637,7 @@ quoteCancelled();
 
 function quoteCancelled() {
   $.ajax({
-    url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php',
+    url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php',
     type: 'POST',
     data: { page: page },
 
@@ -647,7 +668,7 @@ allOrdersCardCount()
 
 function allOrdersCardCount(consulta){
     $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrdersCard.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/allOrdersCard.php',
         type: 'POST',
         data: {consulta},
     })
@@ -666,7 +687,7 @@ allPendingCardCount()
 
 function allPendingCardCount(consulta){
     $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCard.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCard.php',
         type: 'POST',
         data: {consulta},
     })
@@ -684,7 +705,7 @@ allPendingCirculatorCount()
 
 function allPendingCirculatorCount(consulta){
     $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCirculator.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/allPendingCirculator.php',
         type: 'POST',
         data: {consulta},
     })
@@ -703,7 +724,7 @@ jQuery(document).ready(function($) {
       var quote_id = $(this).val();
 
       $.ajax({
-        url: 'https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/php/distributor/cotizacionInfo.php',
+        url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/distributor/cotizacionInfo.php',
           method: 'POST', 
           data: {quote_id}
       })
@@ -716,13 +737,14 @@ jQuery(document).ready(function($) {
               productQuantity = elem.product_quantity;
               productImage = elem.product_image;
               
-              var details = 'Product Name: ' + productName + '<br>' +
-                            'Product Model: ' + productModel + '<br>' +
-                            'Quantity: ' + productQuantity + '<br>' +
+              var details = `${alertsTranslations.nombreProducto}:` + productName + '<br>' +
+                            `${alertsTranslations.modeloProducto}:` + productModel + '<br>' +
+                            `${alertsTranslations.cantidad}:` + productQuantity + '<br>' +
                             'Image: <img style="max-width: 200px;" src="' + productImage + '">';
     
               iziToast.show({
-                  title: 'Quote Details (ID: ' + quote_id + ')',
+                  // title: 'Quote Details (ID: ' + quote_id + ')',
+                  title: `${detallesCotizacion} ${quote_id}`,
                   message: details,
                   position: 'center',
                   timeout: false,

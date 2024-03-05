@@ -1,5 +1,28 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
+
+
 jQuery(document).ready(function($) {
-    let plugin_dir = 'http://127.0.0.1/wp-local/wp-content/plugins/KalsteinPerfiles/';
+    let plugin_dir = 'http://dev.kalstein.plus/wp-local/wp-content/plugins/KalsteinPerfiles/';
 
     $.ajax({
         url: plugin_dir + 'php/getChartInfoSales.php',
@@ -15,7 +38,20 @@ jQuery(document).ready(function($) {
 
         // LABELS DE LOS MESES
 
-        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August ', 'September', 'Octuber', 'November', 'December'];
+        let months = [
+            alertsTranslations.enero, 
+            alertsTranslations.febrero, 
+            alertsTranslations.marzo, 
+            alertsTranslations.abril, 
+            alertsTranslations.mayo, 
+            alertsTranslations.junio, 
+            alertsTranslations.julio, 
+            alertsTranslations.agosto, 
+            alertsTranslations.septiembre, 
+            alertsTranslations.octubre, 
+            alertsTranslations.noviembre, 
+            alertsTranslations.diciembre
+        ];
 
         function prevMonthList(month){
 
@@ -222,7 +258,7 @@ jQuery(document).ready(function($) {
         let total_sold = sumArray(graph_3);
         $('#graph-3-totalSold').html(`
             <data class="revenue-item-data">${total_sold}</data>
-            <p class="revenue-item-text">Total Sold</p>
+            <p class="revenue-item-text">${alertsTranslations.ventasTotal}</p>
         `);
 
 });

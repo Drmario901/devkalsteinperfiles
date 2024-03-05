@@ -1,3 +1,23 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
 jQuery(document).ready(function($){
     $(document).on('click', '#btnNext1', function(){
         let cmb = $('#cmbPrimary').val()
@@ -242,7 +262,7 @@ jQuery(document).ready(function($){
     function searchCountry(consulta){
 
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
             type: 'POST',
             data: {consulta},
         })
@@ -259,7 +279,7 @@ jQuery(document).ready(function($){
     function savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, phoneB, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, phoneUser, jobRole){
 
         $.ajax({
-            url: 'https://kalstein.us/wp-content/plugins/kalsteinPerfiles/php/savedInfoClient.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/savedInfoClient.php',
             type: 'POST',
             data: {nameB, countryB, stateB, addressB, zipcodeB, phoneB, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, phoneUser, jobRole},
         })
@@ -267,7 +287,7 @@ jQuery(document).ready(function($){
             console.log(respuesta)            
             let data = JSON.parse(respuesta)
             if (data.update === 'correcto'){
-                $(location).attr('href','https://kalstein.us/dashboard/')
+                $(location).attr('href','https://dev.kalstein.plus/dashboard/')
             }else{
                 console.log("error")
             }
