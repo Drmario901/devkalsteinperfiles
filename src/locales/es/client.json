@@ -188,5 +188,6 @@
     "next": "Siguiente",
     "addEmail": "Ingresa tu dirección de correo electrónico",
     "zipPlaceHolder": "Ingresa tu código postal",
-    "organizationNamePlaceholder": "Ingresa el nombre de tu organización"
+    "organizationNamePlaceholder": "Ingresa el nombre de tu organización",
+    "productCategories": "Categorías de productos"
 }
