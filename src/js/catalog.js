@@ -46,6 +46,8 @@ jQuery(document).ready(function ($) {
     let inputSearch = $("#searchreport").val();
     let category = $("#category").val();
 
+    //test
+
     function tableContent(nextPage) {
       $.ajax({
         url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
