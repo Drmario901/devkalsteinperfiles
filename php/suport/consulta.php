@@ -1,6 +1,11 @@
 <?php
 require_once("conexion.php");
 
+
+include 'translateText.php';
+translateText();
+
+
 $conexion=mysqli_connect($servidor, $usuario, $contraseña);
 if (mysqli_connect_errno()) {
 	echo "Conexion fallida";
@@ -18,7 +23,7 @@ while($fila=mysqli_fetch_row($producto)){
 	echo "<td>" . $fila[5] . "</td>";
 	echo "<td>" . $fila[6] . "</td>";
 	echo "<td>" . $fila[7] . "</td>";
-   echo '<td><a href="#" class="btn btn-sm btn-primary button">Vista</a></td>
+   echo '<td><a href="#" class="btn btn-sm btn-primary button" data-i17n="client:eligeOpcion"  >Vista</a></td>
    </tr>';
 }
 mysqli_close($conexion);

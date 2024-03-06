@@ -2,7 +2,10 @@
      
 	require __DIR__ . '/../conexion.php';
 
-	$salida = "<option value='0'>Selecciona el producto que deseas editar.</option>";
+	include 'translateText.php';
+	translateText();
+
+	$salida = "<option value='0' data-i17n='client:seleccionarEditar'>Selecciona el producto que deseas editar.</option>";
 
 	$consulta = "SELECT * FROM wp_k_products_add";		
 	$resultado = $conexion->query($consulta);

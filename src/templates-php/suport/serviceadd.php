@@ -33,22 +33,40 @@
         <br>
         
         <?php
-            session_start();
-        
-            $acc_id = $_SESSION['emailAccount'];
-        
-            $query = "SELECT wp_account.account_nombre, wp_account.account_apellido, wp_account.account_url_image_perfil,wp_account.account_correo, wp_company.company_nombre,wp_company.company_pais,wp_company.company_ciudad, wp_company.company_direccion FROM wp_account INNER JOIN wp_company ON wp_account.account_correo = wp_company.company_account_correo WHERE account_correo = '$acc_id'";
-            $row = $conexion->query($query)->fetch_assoc();
-        
-            $acc_name = $row['account_nombre'];
-            $acc_lname = $row['account_apellido'];
-            $acc_correo = $row['account_correo'];
-            $acc_company= $row['company_nombre'];
-            $acc_pais= $row['company_pais'];
-            $acc_ciudad= $row['company_ciudad'];
-            $acc_direccion= $row['company_direccion'];
-        
-        ?>
+    session_start();
+
+    if ($conexion->connect_error) {
+        die("Connection failed: " . $conexion->connect_error);
+    }
+
+    $acc_id = $_SESSION['emailAccount'];
+    
+    // Preparar la consulta para evitar inyecciones SQL
+    $stmt = $conexion->prepare("SELECT wp_account.account_nombre, wp_account.account_apellido, wp_account.account_url_image_perfil,wp_account.account_correo, wp_company.company_nombre,wp_company.company_pais,wp_company.company_ciudad, wp_company.company_direccion FROM wp_account INNER JOIN wp_company ON wp_account.account_correo = wp_company.company_account_correo WHERE account_correo = ?");
+    $stmt->bind_param("s", $acc_id); // "s" indica el tipo de dato (string)
+    
+    // Ejecutar la consulta
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // Obtener los datos si la consulta fue exitosa
+        $row = $result->fetch_assoc();
+
+        $acc_name = $row['account_nombre'];
+        $acc_lname = $row['account_apellido'];
+        $acc_correo = $row['account_correo'];
+        $acc_company= $row['company_nombre'];
+        $acc_pais= $row['company_pais'];
+        $acc_ciudad= $row['company_ciudad'];
+        $acc_direccion= $row['company_direccion'];
+    } else {
+        echo "0 results";
+    }
+
+    $stmt->close();
+    $conexion->close();
+?>
         <div class="container tm-mt-big tm-mb-big">
             <div class="row">
                 <div class="col-12 mx-auto">

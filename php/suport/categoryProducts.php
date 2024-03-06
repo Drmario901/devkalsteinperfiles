@@ -1,7 +1,10 @@
 <?php 
 	require __DIR__ . '/../conexion.php';
 
-	$salida = "<option selected value='0' style='color: #000 !important;'>Choose an option</option>";
+	include 'translateText.php';
+	translateText();
+
+	$salida = "<option selected value='0' style='color: #000 !important;' data-i17n='client:eligeOpcion' >Choose an option</option>";
 
 	$consulta = "SELECT * FROM `wp_categories` ORDER BY `wp_categories`.`categorie_description` ASC";		
 		
