@@ -200,5 +200,20 @@
   "metodo": "Methode",
   "generar": "Genereren",
   "discount2": "Korting 2% (online aankoop)",
-  "discount4": "Korting 4% (online aankoop)"
+  "discount4": "Korting 4% (online aankoop)",
+  "infoReqCotizacion": "Vereiste informatie - Offerte",
+  "sirs": "Geachte heren:",
+  "attention": "Attentie:",
+  "selectAlmacen": "Selecteer een magazijn",
+  "retirementMethod": "Ophaalmethode",
+  "envioDestino": "Verzending naar bestemming",
+  "retiroFabrica": "Afhalen in fabriek",
+  "discountCode": "Kortingscode",
+  "codeNoAvailable": "Code niet beschikbaar",
+  "codeAvailable": "Code beschikbaar",
+  "postalCode": "Postcode:",
+  "deliveryTime": "Levertijd",
+  "insideFrance": "In Frankrijk",
+  "otrosPaisesUE": "Andere EU-landen",
+  "codeHere": "Code hier"
 }

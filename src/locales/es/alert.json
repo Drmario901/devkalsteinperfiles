@@ -329,5 +329,7 @@
   "ultimoMes": "Ultimo Mes",
   "bienvenido": "Bienvenido",
   "pagina": "Pagina",
-  "cargarCotizacionError": "Error al cargar cotización"
+  "cargarCotizacionError": "Error al cargar cotización",
+  "cotizacionCorrectamente": "La cotizacion se ha realizado correctamente",
+  "verPdf": "Ver PDF"
 }

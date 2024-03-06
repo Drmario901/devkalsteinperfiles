@@ -328,5 +328,7 @@
   "ultimoMes": "Dernier mois",
   "bienvenido": "Bienvenue",
   "pagina": "Page",
-  "cargarCotizacionError": "Erreur lors du chargement du devis"
+  "cargarCotizacionError": "Erreur lors du chargement du devis",
+  "cotizacionCorrectamente": "Le devis a été créé avec succès",
+  "verPdf": "Voir le PDF"
 }

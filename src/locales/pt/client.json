@@ -200,5 +200,20 @@
   "metodo": "Método",
   "generar": "Gerar",
   "discount2": "Desconto 2% (compra online)",
-  "discount4": "Desconto 4% (compra online)"
+  "discount4": "Desconto 4% (compra online)",
+  "infoReqCotizacion": "Informações Requeridas - Cotação",
+  "sirs": "Senhores:",
+  "attention": "Atenção:",
+  "selectAlmacen": "Selecione um armazém",
+  "retirementMethod": "Método de Retirada",
+  "envioDestino": "Envio ao Destino",
+  "retiroFabrica": "Retirada na Fábrica",
+  "discountCode": "Código de Desconto",
+  "codeNoAvailable": "Código Não Disponível",
+  "codeAvailable": "Código Disponível",
+  "postalCode": "Código Postal:",
+  "deliveryTime": "Tempo de Entrega",
+  "insideFrance": "Dentro da França",
+  "otrosPaisesUE": "Outros Países da UE",
+  "codeHere": "Insira o código aqui"
 }

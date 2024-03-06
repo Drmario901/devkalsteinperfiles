@@ -328,5 +328,7 @@
   "ultimoMes": "Letzter Monat",
   "bienvenido": "Willkommen",
   "pagina": "Seite",
-  "cargarCotizacionError": "Fehler beim Laden des Angebots"
+  "cargarCotizacionError": "Fehler beim Laden des Angebots",
+  "cotizacionCorrectamente": "Das Angebot wurde erfolgreich erstellt",
+  "verPdf": "PDF anzeigen"
 }

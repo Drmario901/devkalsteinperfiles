@@ -328,5 +328,7 @@
   "ultimoMes": "Vorige maand",
   "bienvenido": "Welkom",
   "pagina": "Pagina",
-  "cargarCotizacionError": "Fout bij het laden van offerte"
+  "cargarCotizacionError": "Fout bij het laden van offerte",
+  "cotizacionCorrectamente": "De offerte is succesvol gemaakt",
+  "verPdf": "Bekijk PDF"
 }

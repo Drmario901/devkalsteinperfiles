@@ -200,5 +200,20 @@
   "metodo": "Método",
   "generar": "Generar",
   "discount2": "Descuento 2% (compra en linea) ",
-  "discount4": "Descuento 4% (compra en linea) "
+  "discount4": "Descuento 4% (compra en linea) ",
+  "infoReqCotizacion": "Información requerida - Cotización",
+  "sirs": "Señores: ",
+  "attention": "Atención:",
+  "selectAlmacen": "Selecciona un almacén",
+  "retirementMethod": "Método de retiro",
+  "envioDestino": "Envío al destino",
+  "retiroFabrica": "Retiro en fábrica",
+  "discountCode": "Código de descuento",
+  "codeNoAvailable": "Código no disponible",
+  "codeAvailable": "Código disponible",
+  "postalCode": "Código postal: ",
+  "deliveryTime": "Tiempo de entrega",
+  "insideFrance": "Dentro de Francia",
+  "otrosPaisesUE": "Otros países de la UE",
+  "codeHere": "Código aquí"
 }
