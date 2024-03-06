@@ -21,16 +21,20 @@ function translateText($translationsFile = 'translations.php') {
         // Safely add the translation value, escaping single quotes
         $safeValue = str_replace("'", "\\'", $value);
     
-        // Update elements with data-i17n attribute
+        // Update elements with data-i17n attribute for inner text or value
         $html .= "var elements = document.querySelectorAll('[data-i17n=\"$key\"]');";
         $html .= "elements.forEach(function(element) {";
         $html .= "if (element.tagName === 'INPUT' || element.tagName === 'SELECT' || element.tagName === 'TEXTAREA') {";
         $html .= "element.value = '$safeValue';";
-        $html .= "} else if (element.hasAttribute('placeholder')) {"; // Check for placeholder attribute
-        $html .= "element.setAttribute('placeholder', '$safeValue');"; // Set placeholder value
         $html .= "} else {";
         $html .= "element.innerText = '$safeValue';";
         $html .= "}";
+        $html .= "});";
+    
+        // Update elements with data-placeholder attribute for placeholder text
+        $html .= "var placeholderElements = document.querySelectorAll('[data-placeholder=\"$key\"]');";
+        $html .= "placeholderElements.forEach(function(element) {";
+        $html .= "element.setAttribute('placeholder', '$safeValue');"; // Set placeholder value
         $html .= "});";
     }
 
