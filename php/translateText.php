@@ -20,12 +20,14 @@ function translateText($translationsFile = 'translations.php') {
     foreach ($translations[$lang] as $key => $value) {
         // Safely add the translation value, escaping single quotes
         $safeValue = str_replace("'", "\\'", $value);
-
+    
         // Update elements with data-i17n attribute
         $html .= "var elements = document.querySelectorAll('[data-i17n=\"$key\"]');";
         $html .= "elements.forEach(function(element) {";
         $html .= "if (element.tagName === 'INPUT' || element.tagName === 'SELECT' || element.tagName === 'TEXTAREA') {";
         $html .= "element.value = '$safeValue';";
+        $html .= "} else if (element.hasAttribute('placeholder')) {"; // Check for placeholder attribute
+        $html .= "element.setAttribute('placeholder', '$safeValue');"; // Set placeholder value
         $html .= "} else {";
         $html .= "element.innerText = '$safeValue';";
         $html .= "}";

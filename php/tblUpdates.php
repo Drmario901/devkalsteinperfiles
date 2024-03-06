@@ -44,7 +44,7 @@
 
             $description = str_replace('The status of', 'El estatus de la', $description);
             $description = str_replace('was changed', 'ha cambiado', $description);
-            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizad', $description);
+            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizados', $description);
             $description = str_replace('Password has been updated', 'Contraseña ha sido actualizada', $description);
             $description = str_replace('has been deleted', 'ha sido eliminada', $description);
 
