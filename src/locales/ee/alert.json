@@ -328,5 +328,7 @@
   "ultimoMes": "Eelmine kuu",
   "bienvenido": "Tere tulemast",
   "pagina": "Lehekülg",
-  "cargarCotizacionError": "Tsiteeringu laadimisel ilmnes viga"
+  "cargarCotizacionError": "Tsiteeringu laadimisel ilmnes viga",
+  "cotizacionCorrectamente": "Hinnapakkumus on edukalt tehtud",
+  "verPdf": "Vaata PDF-i"
 }

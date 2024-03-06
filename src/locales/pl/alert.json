@@ -328,5 +328,7 @@
   "ultimoMes": "Ostatni miesiąc",
   "bienvenido": "Witaj",
   "pagina": "Strona",
-  "cargarCotizacionError": "Błąd podczas ładowania wyceny"
+  "cargarCotizacionError": "Błąd podczas ładowania wyceny",
+  "cotizacionCorrectamente": "Wycena została pomyślnie przeprowadzona",
+  "verPdf": "Zobacz PDF"
 }

@@ -328,5 +328,7 @@
   "ultimoMes": "Último mês",
   "bienvenido": "Bem-vindo",
   "pagina": "Página",
-  "cargarCotizacionError": "Erro ao carregar cotação"
+  "cargarCotizacionError": "Erro ao carregar cotação",
+  "cotizacionCorrectamente": "A cotação foi realizada com sucesso",
+  "verPdf": "Ver PDF"
 }

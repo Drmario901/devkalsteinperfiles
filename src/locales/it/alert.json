@@ -328,5 +328,7 @@
   "ultimoMes": "Ultimo mese",
   "bienvenido": "Benvenuto",
   "pagina": "Pagina",
-  "cargarCotizacionError": "Errore durante il caricamento del preventivo"
+  "cargarCotizacionError": "Errore durante il caricamento del preventivo",
+  "cotizacionCorrectamente": "Il preventivo è stato generato con successo",
+  "verPdf": "Visualizza PDF"
 }

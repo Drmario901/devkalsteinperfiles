@@ -328,5 +328,7 @@
   "ultimoMes": "Senaste månaden",
   "bienvenido": "Välkommen",
   "pagina": "Sida",
-  "cargarCotizacionError": "Fel vid laddning av offert"
+  "cargarCotizacionError": "Fel vid laddning av offert",
+  "cotizacionCorrectamente": "Offerten har framgångsrikt genererats",
+  "verPdf": "Visa PDF"
 }
