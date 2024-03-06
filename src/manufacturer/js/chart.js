@@ -1,3 +1,24 @@
+let plugin_dir =
+  "https://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
+
+const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
 function array_sum(array) {
   let res = 0;
 
@@ -98,7 +119,9 @@ jQuery(document).ready(function ($) {
                   "$)"
                 }</data>
 
-                <p class="revenue-item-text">Prev Month (${prevMonths[4]})</p>
+                <p class="revenue-item-text">${
+                  alertsTranslations.mesPrevio
+                } (${prevMonths[4]})</p>
 
             </div>
 
@@ -183,7 +206,9 @@ jQuery(document).ready(function ($) {
                   " clientes)"
                 }</data>
 
-                <p class="revenue-item-text">Mes previo (${prevMonths[4]})</p>
+                <p class="revenue-item-text">${
+                  alertsTranslations.mesPrevio
+                } (${prevMonths[4]})</p>
 
             </div>
 

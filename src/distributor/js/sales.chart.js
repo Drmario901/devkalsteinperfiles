@@ -345,7 +345,7 @@ jQuery(document).ready(function ($) {
 
             <data class="revenue-item-data">${total_sold}</data>
 
-            <p class="revenue-item-text">Total Sold</p>
+            <p class="revenue-item-text">${alertsTranslations.ventasTotal}</p>
 
         `);
 });
