@@ -1,0 +1,76 @@
+@keyframes shadow-pulse {
+	0% {
+		box-shadow: 0 0 0px #233280;
+	}
+	50% {
+		box-shadow: 0 0 10px 5px #233280; /* Ajusta para cambiar la intensidad y el alcance de la luz */
+	}
+	100% {
+		box-shadow: 0 0 0px #233280;
+	}
+}
+
+.generate-quote {
+	animation: shadow-pulse 2s infinite; /* Ajusta la duración según lo necesites */
+}
+
+@keyframes shadow-pulse-2 {
+	0% {
+		box-shadow: 0 0 0px #233280;
+	}
+	50% {
+		box-shadow: 0 0 3px 1px #233280; /* Ajusta para cambiar la intensidad y el alcance de la luz */
+	}
+	100% {
+		box-shadow: 0 0 0px #233280;
+	}
+}
+
+.product-search-bar .container ul form .nav-item{
+	animation: shadow-pulse-2 2s infinite; /* Ajusta la duración según lo necesites */
+}   
+
+@keyframes shadow-pulse-3 {
+	0% {
+		box-shadow: 0 0 0px #fff;
+	}
+	50% {
+		box-shadow: 0 0 3px 1px #fff; /* Ajusta para cambiar la intensidad y el alcance de la luz */
+	}
+	100% {
+		box-shadow: 0 0 0px #fff;
+	}
+}
+
+.product-search-bar .container ul form button{
+	animation: shadow-pulse-3 2s infinite; /* Ajusta la duración según lo necesites */
+} 
+
+.cCategory {
+	animation: shadow-pulse 2s infinite; /* Ajusta la duración según lo necesites */
+} 
+
+.btnQuo{
+	animation: shadow-pulse 2s infinite; /* Ajusta la duración según lo necesites */
+}
+
+@keyframes shadow-pulse-4 {
+	0% {
+		box-shadow: 0 0 0px #7688e2;
+	}
+	50% {
+		box-shadow: 0 0 10px 5px #7688e2; /* Ajusta para cambiar la intensidad y el alcance de la luz */
+	}
+	100% {
+		box-shadow: 0 0 0px #7688e2;
+	}
+}
+
+#btnSavedInfoQuote {
+	animation: shadow-pulse-4 2s infinite;
+}
+
+.btn-generate-animado{
+	animation: shadow-pulse 2s infinite;
+	border-color: #233280 !important;
+}

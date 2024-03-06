@@ -1,0 +1,77 @@
+body {
+    margin: 20px 60px;
+}
+
+.drop-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border: 1px solid #999;
+    border-bottom: none;
+    color: #eee;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover,
+.drop-container.drag-active {
+    background: #cfcfcf;
+}
+
+.drop-container * {
+    pointer-events: none;
+}
+
+.drop-container:hover .drop-title,
+.drop-container.drag-active .drop-title {
+    color: #999;
+}
+
+.drop-image {
+    width: 100px;
+    height: auto;
+}
+
+.drop-title {
+    color: #bbb;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+#catalogPDF, #manualPDF, #file-input, .filedrop-input, #file-inputAcc {
+    max-width: 100% !important;
+    color: #444 !important;
+    font-weight: bold !important;
+    padding: 5px !important;
+    background: #bbb !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+    border: 1px solid #555 !important;
+    padding: 0 !important;
+}
+
+#catalogPDF::file-selector-button, #manualPDF::file-selector-button, #file-input::file-selector-button, .filedrop-input::file-selector-button, #file-inputAcc::file-selector-button {
+    height: 100% !important;
+    margin-right: 30px !important;
+    border: none !important;
+    background: #333 !important;
+    padding: 10px 20px !important;
+    border-radius: 0px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    transition: background .2s ease-in-out !important;
+}
+
+#catalogPDF::file-selector-button:hover, #manualPDF::file-selector-button:hover, #file-input::file-selector-button:hover, .filedrop-input::file-selector-button:hover, #file-inputAcc::file-selector-button:hover {
+    background: #555 !important;
+}

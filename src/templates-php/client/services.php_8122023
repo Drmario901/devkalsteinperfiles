@@ -1,0 +1,102 @@
+<div id='c-panel05' style='display: none;'>
+
+    <?php
+        $banner_img = 'Header-usuario-IMG.png';
+        $banner_text = "Find a support agent";
+        include 'banner.php';
+    ?>
+
+    <nav class='nav nav-borders'>
+        <a class='nav-link active ms-0' href='#' id='btnHistorySupportPR01'>History</a>
+        <a class='nav-link' href='#' id='btnOrderSupportPR01'>Order Services</a>
+    </nav>
+    
+    <hr>
+
+    <div id='c-historySupportPR01' style='display: none;'>
+        <div class='row'>
+            <div class='col-12 input-wrapper-p'>
+                <i class='fa-solid fa-magnifying-glass second-glass second-glass-2'></i>
+                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Search your required services'>
+            </div>
+            <div id='c-listSupportReports' class='col-12 table-responsive'>
+        
+            </div>
+        </div>
+    </div>
+    <div id='c-orderSupportPR01' style='display: none;'>
+        <div class='row'>
+            <div class='col-12 input-wrapper-p'>
+                <i class='fa-solid fa-magnifying-glass second-glass second-glass-2'></i>
+                <input type='text' id='inputSearchServiceSupport' class="border border-2 rounded ps-4" placeholder='Find a support agent'>
+            </div>
+            <div id='c-listSupportServices' class='col-12'>
+            </div>
+        </div>
+    </div>
+    <div id='c-rental-equipments' style='display: none;'>
+        <?php
+            require __DIR__.'/quotes/rental.php';
+        ?>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-body'>
+                <div class='row'>
+                    <div class='col-12'>
+                        <span class='titleRequestServices' id='tltNameAgent'></span>
+                        <span class='titleRequestServices' id='tltServiceAgent'></span>
+                        <span class='titleRequestServices' id='tltCategorieService'></span>
+                    </div>
+                </div>
+                <hr>
+                <div class='form-group mb-3'>
+                    <label for='product'>Product Model:</label>
+                    <select id='Rproduct' class='custom-select tm-select-accounts' name='category'>
+                        
+                    </select>
+                    <input type="text" id='otherModel' style='display: none; margin-top: 1rem;' placeholder='Enter the equipment model'>                 
+                    <br>
+                    <div class='row tm-edit-product-row'>
+                        <div class='form-group mb-3'>
+                            <label for='description'>Write the application:</label>
+                            <textarea id='RDescription' class='form-control validate' required></textarea>
+                        </div>   
+                        <div class='form-group mb-3'>                                               
+                            <label for='Level'>Level of exigency:</label>
+                            <select id='Rnivel' class='custom-select tm-select-accounts' name='category'>
+                                <option selected value='0'>Choose an option</option>
+                                <option value='Low'>Low</option>
+                                <option value='Mid'>Mid</option>
+                                <option value='High'>High</option>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class='modal-footer'>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' id='btnClosedModalTicket'>Close</button>
+                <button type='button' class='btn btn-primary' id='savedTicket'>Generate ticket</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal View -->
+<div class='modal fade' id='modelViewReport' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-body'>
+                <div class='form-group mb-3' id='c-reportSelect'>
+                </div>
+            </div>
+            <div class='modal-footer'>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' id='btnClosedModalTicket'>Close</button>
+            </div>
+        </div>
+    </div>
+</div>

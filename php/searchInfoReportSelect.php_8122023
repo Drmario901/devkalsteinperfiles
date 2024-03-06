@@ -1,0 +1,53 @@
+<?php
+
+  require __DIR__ . '/conexion.php';
+
+  $id = $_POST['consulta'];
+
+  $sql = "SELECT * FROM wp_reportes WHERE R_id = '$id'";
+  $resultado = $conexion->query($sql);
+  $row = mysqli_fetch_array($resultado);
+  $idServices = $row['R_id_servicio'];
+  $email = $row['R_usuario_agente'];
+  $description = $row['R_Description'];
+  $categorie = $row['R_category'];
+  $model = $row['R_product'];
+  $level = $row['R_Nivel'];
+  $status = $row['R_estado'];
+  $observation = $row['R_observacion'];
+  $quote = $row['R_id_cotizacion'];
+  $sql2 = "SELECT * FROM wp_account WHERE account_correo = '$email'";
+  $resultado2 = $conexion->query($sql2);
+  $row2 = mysqli_fetch_array($resultado2);
+  $name = $row2['account_nombre'];
+  $lastname = $row2['account_apellido'];
+  $nameAgent = $name.' '.$lastname;
+
+  $sql3 = "SELECT * FROM wp_servicios WHERE SE_id = '$idServices'";
+  $resultado3 = $conexion->query($sql3);
+  $row3 = mysqli_fetch_array($resultado3);
+  $nameService = $row3['SE_servicio'];
+
+  $html = "
+    <span><b>Support Agent:</b> $nameAgent</span>
+    <span><b>Services:</b> $nameService</span>
+    <span><b>Categorie:</b> $categorie</span>
+    <span><b>Model:</b> $model</span>
+    <span><b>Description:</b> $description</span> 
+    <span><b>Level:</b> $level</span>
+    <hr>
+  ";
+
+  if ($status == 'Pending'){
+    $html.="
+      <span style='text-align: center; width: 100%; height: 4rem; padding-top: 1rem; background-color: #e38512; color: #fff;'>$status</span>
+    ";
+  }else{
+    $html.="
+      <span style='text-align: center; width: 100%; height: 4rem; padding-top: 1rem; background-color: #0eab13; color: #fff;'>$status</span><br>
+      <span><b>Observation applied:</b> $observation</span><br>
+      <button class='btn' id='btnViewQuoteReportClient' value='$quote' style='width: 100%; height: 4rem; padding-top: 1rem; background-color: #213280; color: #fff;'><center>View QUO$quote</center></button>
+    ";
+  }
+
+  echo $html;
