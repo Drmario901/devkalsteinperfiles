@@ -200,5 +200,19 @@
   "metodo": "Méthode",
   "generar": "Générer",
   "discount2": "Remise 2% (achat en ligne)",
-  "discount4": "Remise 4% (achat en ligne)"
+  "discount4": "Remise 4% (achat en ligne)",
+  "infoReqCotizacion": "Informations requises - Devis",
+  "sirs": "Messieurs,",
+  "attention": "Attention :",
+  "selectAlmacen": "Sélectionnez un entrepôt",
+  "retirementMethod": "Méthode de retrait",
+  "envioDestino": "Livraison à destination",
+  "retiroFabrica": "Retrait en usine",
+  "discountCode": "Code de réduction",
+  "codeNoAvailable": "Code non disponible",
+  "codeAvailable": "Code disponible",
+  "postalCode": "Code postal :",
+  "deliveryTime": "Délai de livraison",
+  "insideFrance": "En France",
+  "otrosPaisesUE": "Autres pays de l'UE"
 }

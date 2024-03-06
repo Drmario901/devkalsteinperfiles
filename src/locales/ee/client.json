@@ -200,5 +200,19 @@
   "metodo": "Meetod",
   "generar": "Genereeri",
   "discount2": "Allahindlus 2% (võrguost)",
-  "discount4": "Allahindlus 4% (võrguost)"
+  "discount4": "Allahindlus 4% (võrguost)",
+  "infoReqCotizacion": "Nõutav teave - Pakkumine",
+  "sirs": "Lugupeetud daamid ja härrad:",
+  "attention": "Tähelepanu:",
+  "selectAlmacen": "Vali ladu",
+  "retirementMethod": "Kättesaamise meetod",
+  "envioDestino": "Saatmine sihtkohta",
+  "retiroFabrica": "Äravõtmine tehases",
+  "discountCode": "Soodustuskood",
+  "codeNoAvailable": "Kood pole saadaval",
+  "codeAvailable": "Kood on saadaval",
+  "postalCode": "Sihtnumber:",
+  "deliveryTime": "Tarneaeg",
+  "insideFrance": "Prantsusmaal",
+  "otrosPaisesUE": "Teised EL-i riigid"
 }

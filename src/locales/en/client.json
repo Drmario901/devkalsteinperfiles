@@ -200,5 +200,19 @@
   "metodo": "Method",
   "generar": "Generate",
   "discount2": "2% Discount (online purchase)",
-  "discount4": "4% Discount (online purchase)"
+  "discount4": "4% Discount (online purchase)",
+  "infoReqCotizacion": "Required Information - Quote",
+  "sirs": "Dear Sirs:",
+  "attention": "Attention:",
+  "selectAlmacen": "Select a warehouse",
+  "retirementMethod": "Retirement Method",
+  "envioDestino": "Delivery to destination",
+  "retiroFabrica": "Pickup from factory",
+  "discountCode": "Discount Code",
+  "codeNoAvailable": "Code not available",
+  "codeAvailable": "Code available",
+  "postalCode": "Postal Code:",
+  "deliveryTime": "Delivery Time",
+  "insideFrance": "Inside France",
+  "otrosPaisesUE": "Other EU countries"
 }

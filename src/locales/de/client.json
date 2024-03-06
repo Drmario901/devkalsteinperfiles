@@ -200,5 +200,19 @@
   "metodo": "Methode",
   "generar": "Erstellen",
   "discount2": "Rabatt 2% (Online-Kauf)",
-  "discount4": "Rabatt 4% (Online-Kauf)"
+  "discount4": "Rabatt 4% (Online-Kauf)",
+  "infoReqCotizacion": "Benötigte Informationen - Angebot",
+  "sirs": "Sehr geehrte Damen und Herren:",
+  "attention": "Achtung:",
+  "selectAlmacen": "Wählen Sie ein Lager",
+  "retirementMethod": "Abhol-Methode",
+  "envioDestino": "Versand an Zielort",
+  "retiroFabrica": "Abholung ab Werk",
+  "discountCode": "Rabattcode",
+  "codeNoAvailable": "Code nicht verfügbar",
+  "codeAvailable": "Code verfügbar",
+  "postalCode": "Postleitzahl:",
+  "deliveryTime": "Lieferzeit",
+  "insideFrance": "Innerhalb Frankreichs",
+  "otrosPaisesUE": "Andere EU-Länder"
 }

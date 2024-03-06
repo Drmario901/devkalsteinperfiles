@@ -200,5 +200,19 @@
   "metodo": "Metod",
   "generarOrden": "Generera order",
   "discount2": "Rabatt 2% (köp online)",
-  "discount4": "Rabatt 4% (köp online)"
+  "discount4": "Rabatt 4% (köp online)",
+  "infoReqCotizacion": "Begärd information - Offert",
+  "sirs": "Härmed:",
+  "attention": "Observera:",
+  "selectAlmacen": "Välj ett lager",
+  "retirementMethod": "Hämtningsmetod",
+  "envioDestino": "Leverans till destination",
+  "retiroFabrica": "Hämtning från fabrik",
+  "discountCode": "Rabattkod",
+  "codeNoAvailable": "Kod ej tillgänglig",
+  "codeAvailable": "Kod tillgänglig",
+  "postalCode": "Postnummer:",
+  "deliveryTime": "Leveranstid",
+  "insideFrance": "Inrikes Frankrike",
+  "otrosPaisesUE": "Andra EU-länder"
 }
