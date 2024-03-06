@@ -110,6 +110,8 @@ $translations = array(
         'banner_text_catalog' => 'Catalog',
         'banner_text_services' => 'Services',
         'supportTicketGenerated' => 'Support ticket generated',
+        'search' => 'Search by reference, catalog, product, keyword or brand...',
+        'all' => 'All',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -219,6 +221,8 @@ $translations = array(
         'banner_text_catalog' => 'Catalogar',
         'banner_text_services' => 'Servicios',
         'supportTicketGenerated' => 'Ticket de soporte generado',
+        'search' => 'Buscar por referencia, catálogo, producto, palabra clave o marca...',
+        'all' => 'Todos',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -328,6 +332,8 @@ $translations = array(
         'banner_text_catalog' => 'Catalogue',
         'banner_text_services' => 'Prestations de service',
         'supportTicketGenerated' => 'Ticket de support généré',
+        'search' => 'Recherchez par référence, catalogue, produit, mot-clé ou marque...',
+        'all' => 'Tous',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -437,6 +443,8 @@ $translations = array(
         'banner_text_catalog' => 'Catalogo',
         'banner_text_services' => 'Servizi',
         'supportTicketGenerated' => 'Ticket di supporto generato',
+        'search' => 'Cerca per riferimento, catalogo, prodotto, parola chiave o marca...',
+        'all' => 'Tutti',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -546,6 +554,8 @@ $translations = array(
         'banner_text_catalog' => 'Catálogo',
         'banner_text_services' => 'Serviços',
         'supportTicketGenerated' => 'Ticket de suporte gerado',
+        'search' => 'Pesquise por referência, catálogo, produto, palavra-chave ou marca...',
+        'all' => 'Todos',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -655,6 +665,8 @@ $translations = array(
         'banner_text_catalog' => 'Katalog',
         'banner_text_services' => 'Usługi',
         'supportTicketGenerated' => 'Wygenerowano zgłoszenie wsparcia',
+        'search' => 'Wyszukaj według referencji, katalogu, produktu, słowa kluczowego lub marki...',
+        'all' => 'Wszystkie',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -764,6 +776,8 @@ $translations = array(
         'banner_text_catalog' => 'Catalogus',
         'banner_text_services' => 'Diensten',
         'supportTicketGenerated' => 'Ondersteuningsticket gegenereerd',
+        'search' => 'Zoek op referentie, catalogus, product, trefwoord of merk...',
+        'all' => 'Alle',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -873,6 +887,8 @@ $translations = array(
         'banner_text_catalog' => 'Katalog',
         'banner_text_services' => 'Dienstleistungen',
         'supportTicketGenerated' => 'Support-Ticket generiert',
+        'search' => 'Suchen Sie nach Referenz, Katalog, Produkt, Schlüsselwort oder Marke...',
+        'all' => 'Alle',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -982,6 +998,8 @@ $translations = array(
         'banner_text_catalog' => 'Kataloog',
         'banner_text_services' => 'Teenused',
         'supportTicketGenerated' => 'Toetusticket loodud',
+        'search' => 'Otsi viite, kataloogi, toote, võtmesõna või kaubamärgi järgi...',
+        'all' => 'Kõik',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1091,5 +1109,7 @@ $translations = array(
         'banner_text_catalog' => 'Katalog',
         'banner_text_services' => 'Tjänster',
         'supportTicketGenerated' => 'Supportbiljett genererad',
+        'search' => 'Sök efter referens, katalog, produkt, nyckelord eller varumärke...',
+        'all' => 'Alla',
     ),
 );
