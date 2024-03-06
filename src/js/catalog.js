@@ -2,6 +2,9 @@ jQuery(document).ready(function ($) {
   let category = $("#category").val();
   let inputSearch = $("#searchreport").val();
 
+  let plugin_dir =
+    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+
   catalogo(inputSearch, category);
 
   const cookieLng = document.cookie
