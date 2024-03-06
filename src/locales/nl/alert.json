@@ -314,5 +314,19 @@
   "passwordRequerida": "Wachtwoord vereist",
   "emailVerificado": "E-mail geverifieerd",
   "noHaySesion": "Geen sessie gestart",
-  "mesPrevio": "Vorige maand"
+  "mesPrevio": "Vorige maand",
+
+  "cuentaReinicio": "teller wordt opnieuw gestart in",
+  "days": "dagen",
+  "ventasA": "verkopen aan",
+  "completoA": "volledig aan",
+  "reportes": "rapporten",
+  "productosVendidos": "Verkochte producten",
+  "nombreDelServicio": "Naam van de dienst",
+  "agenteSoporte": "Ondersteuningsagent",
+  "vendido": "Verkocht",
+  "ultimoMes": "Vorige maand",
+  "bienvenido": "Welkom",
+  "pagina": "Pagina",
+  "cargarCotizacionError": "Fout bij het laden van offerte"
 }

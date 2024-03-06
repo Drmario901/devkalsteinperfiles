@@ -314,5 +314,19 @@
   "passwordRequerida": "Mot de passe requis",
   "emailVerificado": "Email vérifié",
   "noHaySesion": "Aucune session n'est démarrée",
-  "mesPrevio": "Mois précédent"
+  "mesPrevio": "Mois précédent",
+
+  "cuentaReinicio": "le compte redémarrera dans",
+  "days": "jours",
+  "ventasA": "ventes à",
+  "completoA": "complet à",
+  "reportes": "rapports",
+  "productosVendidos": "Produits vendus",
+  "nombreDelServicio": "Nom du service",
+  "agenteSoporte": "Agent de support",
+  "vendido": "Vendu",
+  "ultimoMes": "Dernier mois",
+  "bienvenido": "Bienvenue",
+  "pagina": "Page",
+  "cargarCotizacionError": "Erreur lors du chargement du devis"
 }

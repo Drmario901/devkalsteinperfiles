@@ -314,5 +314,19 @@
   "passwordRequerida": "Wymagane hasło",
   "emailVerificado": "Zweryfikowany e-mail",
   "noHaySesion": "Brak rozpoczętej sesji",
-  "mesPrevio": "Poprzedni miesiąc"
+  "mesPrevio": "Poprzedni miesiąc",
+
+  "cuentaReinicio": "licznik zresetuje się za",
+  "days": "dni",
+  "ventasA": "sprzedaży do",
+  "completoA": "kompletny do",
+  "reportes": "raporty",
+  "productosVendidos": "Sprzedane produkty",
+  "nombreDelServicio": "Nazwa usługi",
+  "agenteSoporte": "Agent wsparcia",
+  "vendido": "Sprzedane",
+  "ultimoMes": "Ostatni miesiąc",
+  "bienvenido": "Witaj",
+  "pagina": "Strona",
+  "cargarCotizacionError": "Błąd podczas ładowania wyceny"
 }

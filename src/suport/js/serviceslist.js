@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
           }
 
           var currentPage = nextPage;
-          $("#currentPageIndicatorService").text("Page: " + currentPage);
+          $("#currentPageIndicatorService").text(`${alertsTranslations.pagina}: ` + currentPage);
 
           $("#tblListService").html(tableContent);
 
@@ -67,6 +67,11 @@ jQuery(document).ready(function ($) {
         },
         error: function () {
           alert("Error charging quote data.");
+          iziToast.error({
+            title: alertsTranslations.error,
+            message: alertsTranslations.cargarCotizacionError,
+            position: 'topRight',
+        });
         },
       });
     }
@@ -257,8 +262,8 @@ jQuery(document).ready(function ($) {
       success: function (response) {
         console.log(response);
         iziToast.success({
-          title: "Success",
-          message: "Data updated successfully.",
+          title: alertsTranslations.exito,
+          message: alertsTranslations.datosActualizados,
           position: "center",
         });
         window.location.href =
@@ -357,43 +362,43 @@ jQuery(document).ready(function ($) {
     let err_msg = "";
 
     if (SE_servicio === "0") {
-      err_msg == "name empty";
+      err_msg == alertsTranslations.nombreVacio;
     } else {
       if (SE_category === "0") {
-        err_msg == "category empty";
+        err_msg == alertsTranslations.categoriaVacia;
       } else {
         if (SE_company === "0") {
-          err_msg == "company name empty";
+          err_msg == alertsTranslations.emptyCompanyName;
         } else {
           if (SE_pais === "0") {
-            err_msg == "country name empty";
+            err_msg == alertsTranslations.paisVacio;
           } else {
             if (SE_direccion === "0") {
-              err_msg == "address empty";
+              err_msg == alertsTranslations.addressEmpty;
             } else {
               if (SE_agente === "0") {
-                err_msg == "service agent name empty";
+                err_msg == alertsTranslations.serviceAgentNameEmpty;
               } else {
                 if (SE_correo === "0") {
-                  err_msg == "email empty";
+                  err_msg == alertsTranslations.emailEmpty;
                 } else {
                   if (SE_descripcion === "0") {
-                    err_msg == "description empty";
+                    err_msg == alertsTranslations.descriptionEmpty;
                   } else {
                     if (SE_estado === "0") {
-                      err_msg == "status empty";
+                      err_msg == alertsTranslations.estatusVacio;
                     } else {
                       if (SE_tiempo === "0") {
-                        err_msg == "expected time empty";
+                        err_msg == alertsTranslations.expectedTimeCantBeLessThanZero;
                       } else {
                         if (SE_tiempo < 0) {
-                          err_msg == "expected time can not be less than 0";
+                          err_msg == alertsTranslations.expectedTimeCantBeLessThanZero;
                         } else {
                           if (SE_telefono === "0") {
-                            err_msg == "phone number empty";
+                            err_msg == alertsTranslations.phoneEmpty;
                           } else {
                             if (SE_telefono < 0) {
-                              err_msg == "invalid phone number";
+                              err_msg == alertsTranslations.invalidPhoneNumber;
                             } else {
                               updateFormData(
                                 actualizar_id,
@@ -484,7 +489,7 @@ jQuery(document).ready(function ($) {
         console.log(response);
         iziToast.success({
           title: "Success",
-          message: "Data updated successfully.",
+          message: alertsTranslations.datosActualizados,
           position: "center",
         });
         //window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/support/services';
@@ -615,7 +620,7 @@ jQuery(document).ready(function ($) {
       position: "center",
       buttons: [
         [
-          "<button><b>Yes</b></button>",
+          `<button><b>${alertsTranslations.yes}</b></button>`,
           function (instance, toast) {
             // Realizar una solicitud AJAX para eliminar el servicio
             $.ajax({

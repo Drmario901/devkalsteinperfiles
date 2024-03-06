@@ -314,5 +314,19 @@
   "passwordRequerida": "Lösenord krävs",
   "emailVerificado": "E-post verifierad",
   "noHaySesion": "Ingen session startad",
-  "mesPrevio": "Föregående månad"
+  "mesPrevio": "Föregående månad",
+
+  "cuentaReinicio": "räkning återställs om",
+  "days": "dagar",
+  "ventasA": "försäljning till",
+  "completoA": "komplett till",
+  "reportes": "rapporter",
+  "productosVendidos": "Sålda produkter",
+  "nombreDelServicio": "Tjänstens namn",
+  "agenteSoporte": "Supportagent",
+  "vendido": "Såld",
+  "ultimoMes": "Senaste månaden",
+  "bienvenido": "Välkommen",
+  "pagina": "Sida",
+  "cargarCotizacionError": "Fel vid laddning av offert"
 }

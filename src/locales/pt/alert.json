@@ -314,5 +314,19 @@
   "passwordRequerida": "Senha necessária",
   "emailVerificado": "E-mail verificado",
   "noHaySesion": "Nenhuma sessão iniciada",
-  "mesPrevio": "Mês anterior"
+  "mesPrevio": "Mês anterior",
+
+  "cuentaReinicio": "contagem reiniciará em",
+  "days": "dias",
+  "ventasA": "vendas para",
+  "completoA": "completo para",
+  "reportes": "relatórios",
+  "productosVendidos": "Produtos vendidos",
+  "nombreDelServicio": "Nome do serviço",
+  "agenteSoporte": "Agente de suporte",
+  "vendido": "Vendido",
+  "ultimoMes": "Último mês",
+  "bienvenido": "Bem-vindo",
+  "pagina": "Página",
+  "cargarCotizacionError": "Erro ao carregar cotação"
 }

@@ -1,7 +1,42 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
+
 jQuery(document).ready(function($) {
     let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/';
 
-    let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'June', 'Julio', 'Agosto ', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    let months = [
+        alertsTranslations.enero, 
+        alertsTranslations.febrero, 
+        alertsTranslations.marzo, 
+        alertsTranslations.abril, 
+        alertsTranslations.mayo, 
+        alertsTranslations.junio, 
+        alertsTranslations.julio, 
+        alertsTranslations.agosto, 
+        alertsTranslations.septiembre, 
+        alertsTranslations.octubre,  
+        alertsTranslations.noviembre, 
+        alertsTranslations.diciembre
+    ];
 
     function prevMonthList(month){
 
@@ -31,7 +66,7 @@ jQuery(document).ready(function($) {
         console.log(response);
 
         $("#will-restart").html(`
-            el conteo se reiniciará en ${JSON.parse(response).will_restart} dias
+        ${alertsTranslations.cuentaReinicio} ${JSON.parse(response).will_restart} ${alertsTranslations.days}
         `);
 
         // GRAFICO 1 VENTAS
@@ -44,7 +79,7 @@ jQuery(document).ready(function($) {
             data: {
                 labels: prevMonths,
                 datasets: [{
-                    label: 'Ventas de el mes',
+                    label: alertsTranslations.ventasDelMes,
                     data: graph_1,
                     backgroundColor: [
                         'rgba(33, 35, 128, 0.2)',
@@ -88,7 +123,7 @@ jQuery(document).ready(function($) {
             <span class="material-symbols-rounded icon ${grow_1 >= 0? "green" : "red"}">trending_${grow_1 >= 0? "up" : "down"}</span>
             <div>
                 <data class="revenue-item-data">${parse_dec(grow_1) + "% <br>(" + parse_dec(graph_1[3]) + "$ to " + parse_dec(graph_1[4]) + "$)"}</data>
-                <p class="revenue-item-text">Mes Previo (${prevMonths[4]})</p>
+                <p class="revenue-item-text">${alertsTranslations.mesPrevio}, (${prevMonths[4]})</p>
             </div>
         `);
 
@@ -107,7 +142,7 @@ jQuery(document).ready(function($) {
             data: {
                 labels: prevMonths,
                 datasets:[{
-                    label: 'Clientes del mes',
+                    label: alertsTranslations.clienteMes,
                     data: graph_2,
                     backgroundColor: [
                         'rgba(33, 35, 128, 0.2)'
@@ -132,7 +167,7 @@ jQuery(document).ready(function($) {
         $('#graph-2-prevMonth').html(`
             <span class="material-symbols-rounded icon ${grow_2 >= 0? "green" : "red"}">trending_${grow_2 >= 0? "up" : "down"}</span>
             <div>
-                <data class="revenue-item-data">${parse_dec(grow_2) + "% <br>(" + parse_dec(graph_2[3]) + " Completo a " + parse_dec(graph_2[4]) + " Reportes)"}</data>
+                <data class="revenue-item-data">${parse_dec(grow_2) + "% <br>(" + parse_dec(graph_2[3]) + `${alertsTranslations.completoA}` + parse_dec(graph_2[4]) + ` ${alertsTranslations.reportes})`}</data>
                 <p class="revenue-item-text">Mes anterior (${prevMonths[4]})</p>
             </div>
         `);

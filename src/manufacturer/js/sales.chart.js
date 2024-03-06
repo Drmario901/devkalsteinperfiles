@@ -1,399 +1,284 @@
 const cookieLng = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("language="))
-    .split("=")[1];
-    
-    let alertsTranslations = {};
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
 
-    // cargar json de traducciones
-    const loadTranslations = (lng) => {
-        return fetch(
-        `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-        )
-        .then((response) => response.json())
-        .then((translation) => {
-            // save in a global variable
-            alertsTranslations = translation;
-        });
-    };
+let alertsTranslations = {};
 
-    loadTranslations(cookieLng);
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
 
-jQuery(document).ready(function($) {
+loadTranslations(cookieLng);
 
-    let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
+jQuery(document).ready(function ($) {
+  let plugin_dir =
+    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
 
+  $.ajax({
+    url: plugin_dir + "php/manufacturer/getChartInfoSales.php",
 
+    type: "POST",
 
-    $.ajax({
+    data: "",
 
-        url: plugin_dir + 'php/manufacturer/getChartInfoSales.php',
+    dataType: "html",
+  })
 
-        type: 'POST',
+    .done(function (response) {
+      function parse_dec(val) {
+        return Math.floor(parseFloat(val) * 100) / 100;
+      }
 
-        data: '',
+      // LABELS DE LOS MESES
 
-        dataType: 'html',
+      let months = [
+        `${alertsTranslations.enero}`,
+        `${alertsTranslations.febrero}`,
+        `${alertsTranslations.marzo}`,
+        `${alertsTranslations.abril}`,
+        `${alertsTranslations.mayo}`,
+        `${alertsTranslations.junio}`,
+        `${alertsTranslations.julio}`,
+        `${alertsTranslations.agosto}`,
+        `${alertsTranslations.septiembre}`,
+        `${alertsTranslations.octubre}`,
+        `${alertsTranslations.noviembre}`,
+        `${alertsTranslations.diciembre}`,
+      ];
 
-    })
+      function prevMonthList(month) {
+        let res = [];
 
-    .done(function (response){
-
-
-
-        function parse_dec(val){
-
-            return Math.floor(parseFloat(val) * (100)) / (100);
-
+        for (let i = 5; i >= 0; i--) {
+          month - i < 0
+            ? res.push(months[month - i + 12])
+            : res.push(months[month - i]);
         }
 
+        return res;
+      }
 
+      let date = new Date();
 
-        // LABELS DE LOS MESES
+      let prevMonths = prevMonthList(date.getMonth());
 
+      let graph_1 = JSON.parse(response).graph_1;
 
+      // TARJETA 1
 
-        let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+      // GRAFICO DE RUEDA DE VENTAS
 
+      var ctx = document.getElementById("sales2");
 
+      var products = new Chart(ctx, {
+        type: "pie",
 
-        function prevMonthList(month){
+        data: {
+          labels: JSON.parse(response).graph_3_names,
 
+          datasets: [
+            {
+              label: "Vendidos",
 
+              data: JSON.parse(response).graph_3_quan,
 
-            let res = [];
+              backgroundColor: [
+                "rgba(33, 35, 128, 0.2)",
 
+                "rgba(54, 162, 235, 0.2)",
 
+                "rgba(255, 99, 132, 0.2)",
 
-            for (let i = 5; i >= 0; i--){
+                "rgba(255, 205, 86, 0.2)",
 
-                (month - i) < 0 ? res.push(months[month - i + 12]) : res.push(months[month - i]);
+                "rgba(75, 192, 192, 0.2)",
 
-            }
+                "rgba(153, 102, 255, 0.2)",
 
+                "rgba(255, 159, 64, 0.2)",
+              ],
 
+              borderColor: [
+                "rgba(33, 35, 128, 1)",
 
-            return res;
+                "rgba(54, 162, 235, 1)",
 
-        }
+                "rgba(255, 99, 132, 1)",
 
+                "rgba(255, 205, 86, 1)",
 
+                "rgba(75, 192, 192, 1)",
 
-        let date = new Date();
+                "rgba(153, 102, 255, 1)",
 
-        let prevMonths = prevMonthList(date.getMonth());
+                "rgba(255, 159, 64, 1)",
+              ],
 
-
-
-        let graph_1 = JSON.parse(response).graph_1;
-
-
-
-        // TARJETA 1
-
-
-
-        // GRAFICO DE RUEDA DE VENTAS
-
-
-
-        var ctx = document.getElementById('sales2');
-
-
-
-        var products = new Chart(ctx, {
-
-            type: 'pie',
-
-            data: {
-
-                labels: JSON.parse(response).graph_3_names,
-
-                datasets: [{
-
-                    label: 'Vendidos',
-
-                    data: JSON.parse(response).graph_3_quan,
-
-                    
-
-                    backgroundColor: [
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(54, 162, 235, 0.2)',
-
-                        'rgba(255, 99, 132, 0.2)',
-
-                        'rgba(255, 205, 86, 0.2)',
-
-                        'rgba(75, 192, 192, 0.2)',
-
-                        'rgba(153, 102, 255, 0.2)',
-
-                        'rgba(255, 159, 64, 0.2)'
-
-                    ],
-
-                    borderColor: [
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(54, 162, 235, 1)',
-
-                        'rgba(255, 99, 132, 1)',
-
-                        'rgba(255, 205, 86, 1)',
-
-                        'rgba(75, 192, 192, 1)',
-
-                        'rgba(153, 102, 255, 1)',
-
-                        'rgba(255, 159, 64, 1)'
-
-                    ],
-
-                    borderWidth: 1
-
-                }]
-
+              borderWidth: 1,
             },
+          ],
+        },
 
-            options: {
+        options: {
+          plugins: {
+            legend: {
+              position: "bottom",
+            },
+          },
 
-                plugins: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
 
-                    legend: {
+      // TARJETA 2 MES ANTERIOR
 
-                        position: 'bottom',
+      //TITULO
 
-                    }
+      $("#last-month-h2").html(
+        `${alertsTranslations.mesPrevio} (${prevMonths[4]})`
+      );
 
-                },
+      // CREIMIENTO DE VENTAS DEL MES ANTERIOR
 
-                scales: {
+      let grow_1;
 
-                    y: {
-
-                        beginAtZero: true
-
-                    }
-
-                }
-
-            }
-
-        });
-
-
-
-        // TARJETA 2 MES ANTERIOR
-
-
-
-        //TITULO
-
-
-
-        $('#last-month-h2').html(`Último mes (${prevMonths[4]})`);
-
-
-
-        // CREIMIENTO DE VENTAS DEL MES ANTERIOR
-
-
-
-        let grow_1;
-
-
-
-        if(graph_1[4] != 0){
-
-            if(graph_1[3] != 0){
-
-                grow_1 = 100*(graph_1[4] - graph_1[3])/graph_1[3];
-
-            }
-
-            else {
-
-                grow_1 = 100;
-
-            }
-
+      if (graph_1[4] != 0) {
+        if (graph_1[3] != 0) {
+          grow_1 = (100 * (graph_1[4] - graph_1[3])) / graph_1[3];
+        } else {
+          grow_1 = 100;
         }
-
-        else{
-
-            if(graph_1[3] != 0){
-
-                grow_1 = -100;
-
-            }
-
-            else{
-
-                grow_1 = 0;
-
-            }
-
+      } else {
+        if (graph_1[3] != 0) {
+          grow_1 = -100;
+        } else {
+          grow_1 = 0;
         }
+      }
 
+      $("#graph-1-month").html(`
 
-
-        $('#graph-1-month').html(`
-
-            <span class="material-symbols-rounded icon ${grow_1 >= 0? "green" : "red"}">trending_${grow_1 >= 0? "up" : "down"}</span>
+            <span class="material-symbols-rounded icon ${
+              grow_1 >= 0 ? "green" : "red"
+            }">trending_${grow_1 >= 0 ? "up" : "down"}</span>
 
             <div>
 
-                <data class="revenue-item-data">${parse_dec(grow_1) + "%"}</data>
+                <data class="revenue-item-data">${
+                  parse_dec(grow_1) + "%"
+                }</data>
 
             </div>
 
         `);
 
+      // DINERO GANADO
 
+      $("#income").html(parse_dec(JSON.parse(response).total_income));
 
-        // DINERO GANADO
+      // EL CONTEO SE REINICIA EN
 
+      $("#will-restart").html(`
 
-
-        $("#income").html(parse_dec(JSON.parse(response).total_income));
-
-
-
-        // EL CONTEO SE REINICIA EN 
-
-
-
-        $("#will-restart").html(`
-
-            El conteo debería reiniciarse en ${JSON.parse(response).will_restart} días
+      ${
+        alertsTranslations.CountDown
+      } ${JSON.parse(response).will_restart} ${alertsTranslations.textDays}
 
         `);
 
+      // TOTAL VENDIDO
 
+      $("#products-sold").html(JSON.parse(response).sold_products);
 
-        // TOTAL VENDIDO
+      // TARJETA 3
 
+      // GRAFICO DE VENTAS
 
+      var ctx = document.getElementById("sales");
 
-        $('#products-sold').html(JSON.parse(response).sold_products);
+      var sales = new Chart(ctx, {
+        type: "bar",
 
+        data: {
+          labels: prevMonths,
 
+          datasets: [
+            {
+              label: "Sales of the month",
 
-        // TARJETA 3
+              data: graph_1,
 
-        
+              backgroundColor: [
+                "rgba(33, 35, 128, 0.2)",
 
-        // GRAFICO DE VENTAS
+                "rgba(33, 35, 128, 0.2)",
 
+                "rgba(33, 35, 128, 0.2)",
 
+                "rgba(33, 35, 128, 0.2)",
 
-        var ctx = document.getElementById('sales');
+                "rgba(33, 35, 128, 0.2)",
 
+                "rgba(33, 35, 128, 0.2)",
 
+                "rgba(33, 35, 128, 0.2)",
+              ],
 
-        var sales = new Chart(ctx, {
+              borderColor: [
+                "rgba(33, 35, 128, 1)",
 
-            type: 'bar',
+                "rgba(33, 35, 128, 1)",
 
-            data: {
+                "rgba(33, 35, 128, 1)",
 
-                labels: prevMonths,
+                "rgba(33, 35, 128, 1)",
 
-                datasets: [{
+                "rgba(33, 35, 128, 1)",
 
-                    label: 'Sales of the month',
+                "rgba(33, 35, 128, 1)",
 
-                    data: graph_1,
+                "rgba(33, 35, 128, 1)",
+              ],
 
-                    backgroundColor: [
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(33, 35, 128, 0.2)',
-
-                        'rgba(33, 35, 128, 0.2)'
-
-                    ],
-
-                    borderColor: [
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(33, 35, 128, 1)',
-
-                        'rgba(33, 35, 128, 1)'
-
-                    ],
-
-                    borderWidth: 1
-
-                }]
-
-
-
+              borderWidth: 1,
             },
+          ],
+        },
 
-            options: {
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
 
-                scales: {
+      // COSTUMERS
 
-                    y: {
-
-                        beginAtZero: true
-
-                    }
-
-                }
-
-            }
-
-        });
-
-
-
-        // COSTUMERS
-
-
-
-        $('#total-costumers').html(JSON.parse(response).total_costumers);
-
+      $("#total-costumers").html(JSON.parse(response).total_costumers);
     })
 
-    .fail(function (){
+    .fail(function () {
+      iziToast.warning({
+        title: alertsTranslations.advertencia,
 
-        iziToast.warning({
+        message: alertsTranslations.noBd,
 
-            title: alertsTranslations.advertencia,
-
-            message: alertsTranslations.noBd,
-
-            position: 'topRight',
-
-        });
-
-    })
-
-
-
+        position: "topRight",
+      });
+    });
 });
-

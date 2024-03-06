@@ -1,3 +1,25 @@
+const cookieLng = document.cookie
+.split("; ")
+.find((row) => row.startsWith("language="))
+.split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+    return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+    .then((response) => response.json())
+    .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
+
+
 function sumArray(array) {
     let res = 0;
     
@@ -9,9 +31,22 @@ function sumArray(array) {
 }
 
 jQuery(document).ready(function($) {
-    let plugin_dir = 'http://127.0.0.1/wp-local/wp-content/plugins/KalsteinPerfiles/';
+    let plugin_dir = 'http://dev.kalstein.plus/wp-local/wp-content/plugins/KalsteinPerfiles/';
 
-    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August ', 'September', 'October', 'November', 'December'];
+    let months = [
+        alertsTranslations.enero, 
+        alertsTranslations.febrero, 
+        alertsTranslations.marzo, 
+        alertsTranslations.abril, 
+        alertsTranslations.mayo, 
+        alertsTranslations.junio, 
+        alertsTranslations.julio, 
+        alertsTranslations.agosto, 
+        alertsTranslations.septiembre, 
+        alertsTranslations.octubre,  // Corregido de "Octuber" a "octubre"
+        alertsTranslations.noviembre, 
+        alertsTranslations.diciembre
+    ];
 
     function prevMonthList(month){
 
@@ -39,7 +74,7 @@ jQuery(document).ready(function($) {
 
         // La cuenta se reiniciará en...
         $("#will-restart").html(`
-            count will restart in ${data.will_restart} days
+        ${alertsTranslations.cuentaReinicio} ${data.will_restart} ${alertsTranslations.days}
         `);
 
 
@@ -54,7 +89,7 @@ jQuery(document).ready(function($) {
             data: {
                 labels: data.graph_3_names,
                 datasets: [{
-                    label: 'Products Sold',
+                    label: alertsTranslations.productosVendidos,
                     data: graph_3_quan,
                     
                     backgroundColor: [
@@ -96,7 +131,7 @@ jQuery(document).ready(function($) {
         let total_sold = sumArray(graph_3);
         $('#graph-3-totalSold').html(`
             <data class="revenue-item-data">${total_sold}</data>
-            <p class="revenue-item-text">Total Sold</p>
+            <p class="revenue-item-text">${alertsTranslations.ventasTotal}</p>
         `);
     });
 

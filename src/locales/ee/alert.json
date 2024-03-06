@@ -314,5 +314,19 @@
   "passwordRequerida": "Salasõna nõutud",
   "emailVerificado": "E-post on kontrollitud",
   "noHaySesion": "Sessiooni pole alustatud",
-  "mesPrevio": "Eelmine kuu"
+  "mesPrevio": "Eelmine kuu",
+
+  "cuentaReinicio": "loend taaskäivitub",
+  "days": "päeva",
+  "ventasA": "müügiks",
+  "completoA": "täielikult",
+  "reportes": "aruanded",
+  "productosVendidos": "Müüdud tooted",
+  "nombreDelServicio": "Teenuse nimi",
+  "agenteSoporte": "Toetustöötaja",
+  "vendido": "Müüdud",
+  "ultimoMes": "Eelmine kuu",
+  "bienvenido": "Tere tulemast",
+  "pagina": "Lehekülg",
+  "cargarCotizacionError": "Tsiteeringu laadimisel ilmnes viga"
 }
