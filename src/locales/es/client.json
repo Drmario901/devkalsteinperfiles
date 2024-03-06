@@ -214,5 +214,6 @@
   "postalCode": "Código postal: ",
   "deliveryTime": "Tiempo de entrega",
   "insideFrance": "Dentro de Francia",
-  "otrosPaisesUE": "Otros países de la UE"
+  "otrosPaisesUE": "Otros países de la UE",
+  "codeHere": "Código aquí"
 }

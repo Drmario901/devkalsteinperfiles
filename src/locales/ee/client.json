@@ -214,5 +214,6 @@
   "postalCode": "Sihtnumber:",
   "deliveryTime": "Tarneaeg",
   "insideFrance": "Prantsusmaal",
-  "otrosPaisesUE": "Teised EL-i riigid"
+  "otrosPaisesUE": "Teised EL-i riigid",
+  "codeHere": "Sisesta kood siia"
 }
