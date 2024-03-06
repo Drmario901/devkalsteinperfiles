@@ -245,7 +245,7 @@ jQuery(document).ready(function($){
     function searchCountry(consulta){
 
         $.ajax({
-            url: 'https://kalstein.co.ve/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
             type: 'POST',
             data: {consulta},
         })
@@ -262,7 +262,7 @@ jQuery(document).ready(function($){
     function savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, phoneB, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, phoneUser, jobRole){
 
         $.ajax({
-            url: 'https://kalstein.co.ve/wp-content/plugins/kalsteinPerfiles/php/savedInfoClient.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/savedInfoClient.php',
             type: 'POST',
             data: {nameB, countryB, stateB, addressB, zipcodeB, phoneB, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, phoneUser, jobRole},
         })
@@ -270,7 +270,7 @@ jQuery(document).ready(function($){
             console.log(respuesta)            
             let data = JSON.parse(respuesta)
             if (data.update === 'correcto'){
-                $(location).attr('href','https://kalstein.co.ve/dashboard/')
+                $(location).attr('href','https://dev.kalstein.plus/dashboard/')
             }else{
                 console.log("error")
             }
@@ -484,7 +484,7 @@ jQuery(document).ready(function($){
     function searchCountry(consulta){
 
         $.ajax({
-            url: 'https://kalstein.co.ve/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php',
             type: 'POST',
             data: {consulta},
         })
@@ -501,7 +501,7 @@ jQuery(document).ready(function($){
     function savedInformationsoporte(nameB, countryB, stateB, addressB, zipcodeB, phoneB, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, phoneUser, jobRole){
 
         $.ajax({
-            url: 'https://kalstein.co.ve/wp-content/plugins/kalsteinPerfiles/php/savedInfoClient.php',
+            url: 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/savedInfoClient.php',
             type: 'POST',
             data: {nameB, countryB, stateB, addressB, zipcodeB, phoneB, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, phoneUser, jobRole},
         })
@@ -509,7 +509,7 @@ jQuery(document).ready(function($){
             console.log(respuesta)            
             let data = JSON.parse(respuesta)
             if (data.update === 'correcto'){
-                $(location).attr('href','http://127.0.0.1/wp-local/suport/home')
+                $(location).attr('href','http://dev.kalstein.plus/wp-local/suport/home')
             }else{
                 console.log("error")
             }

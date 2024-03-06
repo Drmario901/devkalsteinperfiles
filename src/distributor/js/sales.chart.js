@@ -146,7 +146,9 @@ jQuery(document).ready(function ($) {
 
       //TITULO
 
-      $("#last-month-h2").html(`Mes pasado (${prevMonths[4]})`);
+      $("#last-month-h2").html(
+        `${alertsTranslations.mesPrevio}(${prevMonths[4]})`
+      );
 
       // CREIMIENTO DE VENTAS DEL MES ANTERIOR
 
@@ -177,7 +179,10 @@ jQuery(document).ready(function ($) {
 
       $("#will-restart").html(`
 
-            El conteo se reiniciará en ${JSON.parse(response).will_restart} días
+           
+            ${
+              alertsTranslations.CountDown
+            } ${JSON.parse(response).will_restart} ${alertsTranslations.textDays}
 
         `);
 
@@ -340,7 +345,7 @@ jQuery(document).ready(function ($) {
 
             <data class="revenue-item-data">${total_sold}</data>
 
-            <p class="revenue-item-text">Total Sold</p>
+            <p class="revenue-item-text">${alertsTranslations.ventasTotal}</p>
 
         `);
 });

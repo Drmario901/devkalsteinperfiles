@@ -314,5 +314,19 @@
   "passwordRequerida": "Password richiesta",
   "emailVerificado": "Email verificata",
   "noHaySesion": "Nessuna sessione avviata",
-  "mesPrevio": "Mese precedente"
+  "mesPrevio": "Mese precedente",
+
+  "cuentaReinicio": "conteggio si riavvierà in",
+  "days": "giorni",
+  "ventasA": "vendite a",
+  "completoA": "completare a",
+  "reportes": "report",
+  "productosVendidos": "Prodotti venduti",
+  "nombreDelServicio": "Nome del servizio",
+  "agenteSoporte": "Agente di supporto",
+  "vendido": "Venduto",
+  "ultimoMes": "Ultimo mese",
+  "bienvenido": "Benvenuto",
+  "pagina": "Pagina",
+  "cargarCotizacionError": "Errore durante il caricamento del preventivo"
 }

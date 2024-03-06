@@ -1,3 +1,23 @@
+const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
 jQuery(document).ready(function ($) {
   let category = $("#category").val();
   let inputSearch = $("#searchreport").val();
@@ -61,7 +81,9 @@ jQuery(document).ready(function ($) {
           }
 
           var currentPage = nextPage;
-          $("#currentPageIndicatorCatalog").text("Page: " + currentPage);
+          $("#currentPageIndicatorCatalog").text(
+            `${alertsTranslations.pagina}: ` + currentPage
+          );
 
           $("#catalogPag").html(tableContent);
 

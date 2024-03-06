@@ -314,7 +314,19 @@
   "passwordRequerida": "Password required",
   "emailVerificado": "Email verified",
   "noHaySesion": "No session started",
-  "mesPrevio": "Previous month"
+  "mesPrevio": "Previous month",
 
-  
+  "cuentaReinicio": "Zähler wird neu gestartet in",
+  "days": "Tage",
+  "ventasA": "Verkäufe an",
+  "completoA": "vollständig an",
+  "reportes": "Berichte",
+  "productosVendidos": "Verkaufte Produkte",
+  "nombreDelServicio": "Servicename",
+  "agenteSoporte": "Support-Mitarbeiter",
+  "vendido": "Verkauft",
+  "ultimoMes": "Letzter Monat",
+  "bienvenido": "Willkommen",
+  "pagina": "Seite",
+  "cargarCotizacionError": "Fehler beim Laden des Angebots"
 }

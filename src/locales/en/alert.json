@@ -314,5 +314,19 @@
   "passwordRequerida": "Password required",
   "emailVerificado": "Email verified",
   "noHaySesion": "No session started",
-  "mesPrevio": "Previous month"
+  "mesPrevio": "Previous month",
+
+  "cuentaReinicio": "count will restart in",
+  "days": "days",
+  "ventasA": "sales to",
+  "completoA": "complete to",
+  "reportes": "reports",
+  "productosVendidos": "Sold products",
+  "nombreDelServicio": "Service name",
+  "agenteSoporte": "Support agent",
+  "vendido": "Sold",
+  "ultimoMes": "Last Month",
+  "bienvenido": "Welcome",
+  "pagina": "Page",
+  "cargarCotizacionError": "Error loading quotation"
 }
