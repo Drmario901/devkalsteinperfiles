@@ -198,5 +198,7 @@
   "arancel": "Arancel",
   "shipping": "Envío",
   "metodo": "Método",
-  "generar": "Generar"
+  "generar": "Generar",
+  "discount2": "Descuento 2% (compra en linea) ",
+  "discount4": "Descuento 4% (compra en linea) "
 }

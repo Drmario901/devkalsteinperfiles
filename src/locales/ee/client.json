@@ -198,5 +198,7 @@
   "arancel": "Toll",
   "shipping": "Kohaletoimetamine",
   "metodo": "Meetod",
-  "generar": "Genereeri"
+  "generar": "Genereeri",
+  "discount2": "Allahindlus 2% (võrguost)",
+  "discount4": "Allahindlus 4% (võrguost)"
 }

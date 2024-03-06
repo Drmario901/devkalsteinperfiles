@@ -198,5 +198,7 @@
   "arancel": "Tull",
   "shipping": "Frakt",
   "metodo": "Metod",
-  "generarOrden": "Generera order"
+  "generarOrden": "Generera order",
+  "discount2": "Rabatt 2% (köp online)",
+  "discount4": "Rabatt 4% (köp online)"
 }

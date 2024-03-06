@@ -198,5 +198,7 @@
   "arancel": "Duty",
   "shipping": "Shipping",
   "metodo": "Method",
-  "generar": "Generate"
+  "generar": "Generate",
+  "discount2": "2% Discount (online purchase)",
+  "discount4": "4% Discount (online purchase)"
 }
