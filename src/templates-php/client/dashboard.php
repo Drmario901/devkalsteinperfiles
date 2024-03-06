@@ -4,8 +4,6 @@
     require __DIR__. '/../../../php/clientStuff.php';
 ?>
 <div class='container' style='background-color: #fff; scroll-behavior: smooth;'>
-
-    <?php echo $_COOKIE['en']; ?>
     
     <?php
         //NAVBAR
