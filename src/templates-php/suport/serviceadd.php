@@ -18,49 +18,41 @@
     </script>
 
     <article class="container article">
-        <?php
-        $banner_img = 'Header-servicio-tecnico-IMG.jpg';
+    <?php
+    session_start();
 
-        require __DIR__ . '/../../../php/translateTextBanner.php';
-        $banner = 'banner_text_welcomeThree';
-        $banner_text = translateTextBanner($banner) . ' ' . $acc_name . ' ' . $acc_lname;
-        include __DIR__ . '/../manufacturer/banner.php';
+    if ($conexion->connect_error) {
+        die("Connection failed: " . $conexion->connect_error);
+    }
 
-        // Verifica si la conexión a la base de datos fue exitosa antes de proceder
-        if ($conexion->connect_error) {
-            die("Connection failed: " . $conexion->connect_error);
-        }
+    $acc_id = $_SESSION['emailAccount'];
+    
+    // Preparar la consulta para evitar inyecciones SQL
+    $stmt = $conexion->prepare("SELECT wp_account.account_nombre, wp_account.account_apellido, wp_account.account_url_image_perfil,wp_account.account_correo, wp_company.company_nombre,wp_company.company_pais,wp_company.company_ciudad, wp_company.company_direccion FROM wp_account INNER JOIN wp_company ON wp_account.account_correo = wp_company.company_account_correo WHERE account_correo = ?");
+    $stmt->bind_param("s", $acc_id); // "s" indica el tipo de dato (string)
+    
+    // Ejecutar la consulta
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        $acc_id = $_SESSION['emailAccount'];
+    if ($result->num_rows > 0) {
+        // Obtener los datos si la consulta fue exitosa
+        $row = $result->fetch_assoc();
 
-        // Preparar la consulta para evitar inyecciones SQL
-        $stmt = $conexion->prepare("SELECT wp_account.account_nombre, wp_account.account_apellido, wp_account.account_url_image_perfil, wp_account.account_correo, wp_company.company_nombre, wp_company.company_pais, wp_company.company_ciudad, wp_company.company_direccion FROM wp_account INNER JOIN wp_company ON wp_account.account_correo = wp_company.company_account_correo WHERE account_correo = ?");
-        
-        if ($stmt === false) {
-            die("Error preparing statement: " . $conexion->error);
-        }
+        $acc_name = $row['account_nombre'];
+        $acc_lname = $row['account_apellido'];
+        $acc_correo = $row['account_correo'];
+        $acc_company= $row['company_nombre'];
+        $acc_pais= $row['company_pais'];
+        $acc_ciudad= $row['company_ciudad'];
+        $acc_direccion= $row['company_direccion'];
+    } else {
+        echo "0 results";
+    }
 
-        $stmt->bind_param("s", $acc_id); // "s" indica el tipo de dato (string)
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-
-            $acc_name = $row['account_nombre'];
-            $acc_lname = $row['account_apellido'];
-            $acc_correo = $row['account_correo'];
-            $acc_company = $row['company_nombre'];
-            $acc_pais = $row['company_pais'];
-            $acc_ciudad = $row['company_ciudad'];
-            $acc_direccion = $row['company_direccion'];
-        } else {
-            echo "0 results";
-        }
-
-        $stmt->close();
-        $conexion->close();
-        ?>
+    $stmt->close();
+    $conexion->close();
+?>
         <div class="container tm-mt-big tm-mb-big">
             <div class="row">
                 <div class="col-12 mx-auto">
