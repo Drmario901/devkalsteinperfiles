@@ -20,6 +20,28 @@
     include 'translateText.php';
     translateText();
 
+    // Cargar el archivo de traducciones
+    $translations = require __DIR__ . '/translation.php';
+
+    // Leer la cookie de idioma o establecer un idioma por defecto
+    $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en'; // Ejemplo: 'es' para español como predeterminado
+
+    // Acceder a las traducciones basadas en el idioma seleccionado
+    $translationsForLanguage = $translations[$language];
+
+    // Función de ayuda para obtener la traducción
+    function translate($text, $translations) {
+        return isset($translations[$text]) ? $translations[$text] : $text;
+    }
+
+    $dataUpdated = translate('dataAccountUpdated', $translationsForLanguage);
+    $statusChanged = translate('statusFor', $translationsForLanguage);
+    $was = translate('wasChanged', $translationsForLanguage);
+    $password = translate('passwordUpdated', $translationsForLanguage);
+    $beenDeleted = translate('hasBeenDeleted', $translationsForLanguage);
+
+
+
     $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
@@ -42,11 +64,11 @@
             $fecha = date_format($date, 'Y-m-d');
             $hour = date_format($date, 'H:i A');
 
-            $description = str_replace('The status of', 'El estatus de la', $description);
-            $description = str_replace('was changed', 'ha cambiado', $description);
-            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizados', $description);
-            $description = str_replace('Password has been updated', 'Contraseña ha sido actualizada', $description);
-            $description = str_replace('has been deleted', 'ha sido eliminada', $description);
+            $description = str_replace('The status of', 'El estatus de la', $statusChanged);
+            $description = str_replace('was changed', 'ha cambiado', $was);
+            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizados', $dataUpdated);
+            $description = str_replace('Password has been updated', 'Contraseña ha sido actualizada', $password);
+            $description = str_replace('has been deleted', 'ha sido eliminada', $beenDeleted);
 
             $html.= "                                    
                 <tr>
