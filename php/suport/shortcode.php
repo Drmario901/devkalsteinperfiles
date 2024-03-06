@@ -1,5 +1,8 @@
 <?php
     session_start();
+
+    include 'translateText.php';
+    translateText();
     class shortcodePerfiles{
         function login(){
             $html = "
@@ -10,25 +13,25 @@
                             <div class='card' style='min-width: 18rem; max-width: 26rem; margin: 0 auto; margin-top: 10rem; -webkit-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75);'>
                                 <img src='https://kalstein.co.ve/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png' class='card-img-top' style='width: 200px; margin: 0 auto; margin-top: 4rem; margin-bottom: 2rem;'>
                                 <div class='card-body'>
-                                    <h5 class='card-title text-center fs-5'>Hi, we're glad to see you again!</h5>
+                                    <h5 class='card-title text-center fs-5' data-i17n='client:tipoServicio'>Hi, we're glad to see you again!</h5>
                                     <div class='col-md' style='margin-top: 1rem;'>
                                         <div class='form-floating input-wrapper'>
                                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                            <label for='emailUser'>Email address</label>                               
+                                            <label for='emailUser' data-i17n='client:tipoServicio' >Email address</label>                               
                                         </div>
-                                        <div class='emailError' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Email is not valid</p></div>
+                                        <div class='emailError' style='display: none;'><p style='color: #de3a46; font-weight: bold;' data-i17n='client:tipoServicio'>Email is not valid</p></div>
                                         <div id='c-password' style='margin-top: 1rem; display: none;'>
                                             <div class='form-floating input-wrapper-p'>
                                                 <input type='password' class='form-control' id='passwordGrid' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                                <label for='passwordGrid'>Password</label>
+                                                <label for='passwordGrid' data-i17n='client:tipoServicio'>Password</label>
                                                 <i class='fa-sharp fa-solid fa-eye'></i>
                                             </div>
-                                            <p style='margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'><span class='forgotpw' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='#'>Forgot password?</a></span></p>
+                                            <p style='margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'><span class='forgotpw' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='#' data-i17n='client:tipoServicio'>Forgot password?</a></span></p>
                                         </div>
                                         <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueLogIn'>Continue</button>
-                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2'>Continue</button>
+                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueLogIn2' data-i17n='client:tipoServicio'>Continue</button>
                                     </div>
-                                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>Don't have an account? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://kalstein.co.ve/signup/'>Sign Up</a></span></p>
+                                    <p style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;' data-i17n='client:tipoServicio'>Don't have an account? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://dev.kalstein.plus/signup/'>Sign Up</a></span></p>
                                 </div>
                             </div>
                         </div>
@@ -48,46 +51,46 @@
                             <div class='card' style='min-width: 18rem; max-width: 26rem; margin: 0 auto; margin-top: 10rem; -webkit-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75);'>
                                 <img src='https://kalstein.co.ve/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png' class='card-img-top' style='width: 200px; margin: 0 auto; margin-top: 4rem; margin-bottom: 2rem;'>
                                 <div class='card-body'>
-                                    <h5 class='card-title text-center fs-5'>Create your account</h5>
+                                    <h5 class='card-title text-center fs-5' data-i17n='client:tipoServicio' >Create your account</h5>
                                     <div class='col-md' style='margin-top: 1rem;'>
                                         <div class='form-floating input-wrapper c-email'>
                                             <input type='email' class='form-control' id='emailUser' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                            <label for='emailUser'>Email address</label>                               
+                                            <label for='emailUser' data-i17n='client:tipoServicio'>Email address</label>                               
                                         </div>
-                                        <div class='emailError'  style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Email is not valid</p></div>
-                                        <div class='availableMail'  style='display: none;'><p style='color: #229e1e; font-weight: bold;'>Available Mail</p></div>
-                                        <div class='mailExists'  style='display: none;'><p style='color: #de3a46; font-weight: bold;'>This email is already registered, try logging in.</p></div>
+                                        <div class='emailError'  style='display: none;'><p style='color: #de3a46; font-weight: bold;' data-i17n='client:tipoServicio' >Email is not valid</p></div>
+                                        <div class='availableMail'  style='display: none;'><p style='color: #229e1e; font-weight: bold;' data-i17n='client:tipoServicio'>Available Mail</p></div>
+                                        <div class='mailExists'  style='display: none;'><p style='color: #de3a46; font-weight: bold;' data-i17n='client:tipoServicio'>This email is already registered, try logging in.</p></div>
                                         <div id='c-password' style='margin-top: 1rem; display: none;'>
                                             <div class='form-floating input-wrapper-p'>
                                                 <input type='password' class='form-control' id='passwordGrid' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                                <label for='passwordGrid'>Password</label>
+                                                <label for='passwordGrid' data-i17n='client:tipoServicio'>Password</label>
                                                 <i class='fa-sharp fa-solid fa-eye'></i>
                                             </div>
                                             <div class='container required-info'>
                                                 <p>Your password must containt:</p>
                                                 <div class='container subRequired-info'>
-                                                    <p class='p01'>• At least 8 characters</p>
-                                                    <p class='p02'>• Lower case letters (a-z)</p>
-                                                    <p class='p03'>• Upper case letters (A-Z)</p>
-                                                    <p class='p04'>• Numbers (0-9)</p>
-                                                    <p class='p05'>• Special characters (!@#$%^&*)</p>
+                                                    <p class='p01' data-i17n='client:tipoServicio'>• At least 8 characters</p>
+                                                    <p class='p02' data-i17n='client:tipoServicio'>• Lower case letters (a-z)</p>
+                                                    <p class='p03' data-i17n='client:tipoServicio'>• Upper case letters (A-Z)</p>
+                                                    <p class='p04' data-i17n='client:tipoServicio'>• Numbers (0-9)</p>
+                                                    <p class='p05' data-i17n='client:tipoServicio'>• Special characters (!@#$%^&*)</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class='c-codeVerification' style='display: none;'>
-                                            <p style='font-size: 1.3em; text-align: justify;'>We have sent an email to <span class='spanEmail' style='font-weight: bold;'></span> with the verification code.</p>
+                                            <p style='font-size: 1.3em; text-align: justify;' data-i17n='client:tipoServicio'>We have sent an email to <span class='spanEmail' style='font-weight: bold;'></span> with the verification code.</p>
                                             <hr>
                                             <div class='form-floating'>
                                                 <input type='text' class='form-control' id='txtCodeVerification' placeholder='name@example.com' style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;' autofocus>
-                                                <label for='txtCodeVerification'>Code Verification</label>                               
+                                                <label for='txtCodeVerification' data-i17n='client:tipoServicio'>Code Verification</label>                               
                                             </div>
-                                            <div class='codeExpired' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>The validation code has expired, request a new code.</p></div>
-                                            <div class='codeError' style='display: none;'><p style='color: #de3a46; font-weight: bold;'>Validation code is invalid.</p></div>
-                                            <p class='newCode' style='cursor: pointer; margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'>Request new validation code here!</p>
+                                            <div class='codeExpired' style='display: none;'><p style='color: #de3a46; font-weight: bold;' data-i17n='client:tipoServicio'>The validation code has expired, request a new code.</p></div>
+                                            <div class='codeError' style='display: none;'><p style='color: #de3a46; font-weight: bold;' data-i17n='client:tipoServicio'>Validation code is invalid.</p></div>
+                                            <p class='newCode' style='cursor: pointer; margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;' data-i17n='client:tipoServicio'>Request new validation code here!</p>
                                         </div>
-                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueSignUp'>Continue</button>
-                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp2'>Continue</button>
-                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp3'>Continue</button>
+                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnContinueSignUp' data-i17n='client:tipoServicio'>Continue</button>
+                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp2' data-i17n='client:tipoServicio'>Continue</button>
+                                        <button type='button' class='btn' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnContinueSignUp3' data-i17n='client:tipoServicio'>Continue</button>
                                     </div>
                                     <p class='redirectLogin' style='margin-top: 1rem; margin-bottom: 4rem; font-size: 1.2em;'>Already have an account? <span class='singup' style='color: #213280; cursor: pointer; font-weight: bold;'><a href='https://kalstein.co.ve/login/'>Log in</a></span></p>
                                 </div>

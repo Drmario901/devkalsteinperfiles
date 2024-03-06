@@ -133,15 +133,24 @@
     }
 </style>
 
-<?php session_start(); $a = !$add ? 'A' : '' ?>
+<?php 
+
+include 'translateText.php';
+translateText();
+
+session_start(); $a = !$add ? 'A' : '' 
+
+?>
+
+
 
 <div class="row tm-edit-product-form">
     <form id="addservices_form">
-    <div class="col-12"><div class="stock-title">Tipo de Servicio</div></div>
+    <div class="col-12"><div class="stock-title" data-i17n='client:tipoServicio'>Tipo de Servicio</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Titulo de Servicio</label>
+            <label data-i17n='client:tituloServicio'>Titulo de Servicio</label>
             <input
                 id="SE<?php echo$a?>nombre"
                 name="service"
@@ -151,7 +160,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Compañia</label>
+            <label data-i17n='client:company' >Compañia</label>
             <input
                 id="SE<?php echo$a?>company"
                 type="text"
@@ -174,7 +183,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <!-- HACER QUE SE REGISTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-            <label for="Email">Telefono</label>
+            <label for="Email" data-i17n='client:telefono' >Telefono</label>
             <input
                 id="SE<?php echo$a?>telefono"
                 type="number"
@@ -185,7 +194,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Email">Correo</label>
+            <label for="Email" data-i17n='client:correo'>Correo</label>
             <input
                 id="SE<?php echo$a?>correo"
                 type="text"
@@ -197,17 +206,17 @@
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">Dirección</div></div>
+    <div class="col-12"><div class="stock-title" data-i17n='client:direccion'>Dirección</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Pais</label>
+            <label for="Level" data-i17n='client:pais' >Pais</label>
             <select id="SE<?php echo$a?>pais" class="tm-select-accounts" name="category">
-                <option selected value='0'>Elige una Opción</option>
+                <option selected value='0' data-i17n='client:eligeOpcion'>Elige una Opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Dirección</label>
+            <label data-i17n='client:direccion'>Dirección</label>
             <input
                 id="SE<?php echo$a?>direccion"
                 type="text"
@@ -217,7 +226,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Estado (opcional?)</label>
+            <label data-i17n='client:estadoOpcional'>Estado (opcional?)</label>
             <input
                 id="SE<?php echo$a?>estadoLugar"
                 type="text"
@@ -227,7 +236,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Ciudad (opcional?)</label>
+            <label for="name" data-i17n='client:ciudadOpcional' >Ciudad (opcional?)</label>
             <input
                 id="SE<?php echo$a?>ciudad"
                 type="text"
@@ -237,7 +246,7 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Provincia (opcional?)</label>
+            <label for="name" data-i17n='client:provinciaOpcional'>Provincia (opcional?)</label>
             <input
                 id="SE<?php echo$a?>provincia"
                 type="text"
@@ -248,25 +257,25 @@
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">Acerca del producto</div></div>
+    <div class="col-12"><div class="stock-title" data-i17n='client:acercaDelProducto'>Acerca del producto</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Categoria de Producto</label>
+            <label for="Level" data-i17n='client:categoriaProducto'>Categoria de Producto</label>
             <select id="SE<?php echo$a?>category" name="service_category" class="custom-select tm-select-accounts">
-                <option selected value='0'>Elige una opción</option>
+                <option selected value='0' data-i17n='client:eligeOpcion'>Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
         <label for="Level">Status</label>
             <select id="SE<?php echo$a?>estado" class="custom-select tm-select-accounts" name="service_estado">
-                <option value='0' selected>Elige una opción</option>
-                <option value="Activated">Activado</option>
-                <option value="Disabled">Desactivado</option>
+                <option value='0' selected data-i17n='client:eligeOpcion'>Elige una opción</option>
+                <option value="Activated" data-i17n='client:activado'>Activado</option>
+                <option value="Disabled" data-i17n='client:desactivado'>Desactivado</option>
             </select>
         </div>
         <div class="col-12 col-md-12 col-lg-4">
-            <label for="name">Tiempo Estimado</label>
+            <label for="name" data-i17n='client:tiempoEstimado'>Tiempo Estimado</label>
             <input
                 id="SE<?php echo$a?>tiempoEstimado"
                 type="text"
@@ -276,7 +285,7 @@
             />
         </div>
         <div class="col-12">
-            <label for="description">Descripción</label>
+            <label for="description" data-i17n='client:descripcion'>Descripción</label>
             <textarea
                 id="SE<?php echo$a?>Descripción"                   
                 class="form-control validate"

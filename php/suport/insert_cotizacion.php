@@ -3,6 +3,8 @@
 
 require __DIR__ . '/../conexion.php';
 
+
+
 $id_servicio=$_POST['Registrar_id_servicio'];
 $Name = $_POST['Registrar_name'];
 $Description = $_POST['Registrar_description'];

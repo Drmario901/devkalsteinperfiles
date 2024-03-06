@@ -84,7 +84,7 @@ if ($resultado->num_rows > 0){
                 <td>$estado</td>
                 <td>$agente_soporte</td>
                 <td>$fecha</td>
-                <td> <button class='btn btn-info btn-block' type='button' name='view' id='btn-report-details' value='$id'>view</button></td>
+                <td> <button class='btn btn-info btn-block' type='button' name='view' id='btn-report-details' value='$id'  data-i17n='client:vista'>view</button></td>
             </tr>
         ";
     }

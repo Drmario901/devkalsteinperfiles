@@ -3,6 +3,9 @@
 
      session_start();
 
+     include 'translateText.php';
+     translateText();
+
 $acc_id = $_SESSION['emailAccount'];
 
       $consulta = "SELECT * FROM wp_reportes WHERE R_usuario_agente='$acc_id' and R_estado  = 'Pending'";
@@ -18,7 +21,7 @@ $acc_id = $_SESSION['emailAccount'];
 
         $salida = '  <center><data class="card-data">'.$contador.'</data></center>';
       } else {
-        $salida =  '<center><data class="card-data">No Hay Datos</data></center>';
+        $salida =  '<center><data class="card-data" data-i17n="client:dataNotFound">No Hay Datos</data></center>';
       }
 
       echo $salida; 

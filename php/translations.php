@@ -184,6 +184,25 @@ $translations = array(
         'client:company' => 'Compañia',
         'client:agenteSoporte' => 'Agente de Soporte',
         'client:responder' => 'Responder',
+
+
+        'client:seleccionarEditar' => 'Selecciona el producto que deseas editar.',
+        'client:seleccionarReporte' => 'Seleccione el informe que desea editar.',
+        'client:tipoServicio' => 'Tipo de servicio',
+        'client:tituloServicio' => 'Titulo del servicio',
+        'client:eligeOpcion' => 'Elige una opcion',
+        'client:direccion' => 'Dirección',
+        'client:estadoOpcional' => 'Estado (opcional?)',
+        'client:ciudadOpcional'=> 'Ciudad (opcional?)',
+        'client:provinciaOpcional' => 'Provincia (opcional?)',
+        'client:acercaDelProducto' => 'Acerca del producto',
+        'client:categoriaProducto' => 'Categoria producto',
+        'client:activado' => 'Activado',
+        'client:desactivo' => 'Desactivado',
+        'client:tiempoEstimado' => 'Tiempo estimado',
+        
+
+
         'banner_text_parameters' => 'Parámetros',
         'banner_text_connect_with_others' => 'Conectar con otros usuarios',
         'banner_text_registration' => 'Registro',

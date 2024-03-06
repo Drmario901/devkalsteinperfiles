@@ -1,7 +1,10 @@
 <?php
 require __DIR__ . '/../conexion.php';
 
-$salida="<option selected value='0'>Choose an option</option>";
+include 'translateText.php';
+translateText();
+
+$salida="<option selected value='0' data-i17n='client:eligeOpcion' >Choose an option</option>";
 $t = $_POST["categoryProduct"];
 $consulta = "SELECT * FROM wp_k_products WHERE product_category = '$t'";
 $resultado = $conexion->query($consulta);
@@ -13,7 +16,7 @@ if ($count > 0){
         $salida.= "<option style='color: #000 !important;' value='$name' >$name</option>";
     }
 } else {
-    $salida.= "<option value='0'>No hay datos</option>";
+    $salida.= "<option value='0' data-i17n='client:dataNotFound' >No hay datos</option>";
 }
 
 echo $salida;
