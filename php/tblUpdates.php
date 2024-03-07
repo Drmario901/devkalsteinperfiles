@@ -21,7 +21,7 @@
     $i = 0;
 
     include 'translateText.php';
-    include 'translations.php';
+    require_once 'translations.php';
     translateText();
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
