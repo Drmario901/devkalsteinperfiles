@@ -539,7 +539,7 @@ if (curl_errno($ch)) {
 curl_close($ch);
 
 //imprimir en pantalla el resultado
-echo $result;
+var_dump($result);
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
