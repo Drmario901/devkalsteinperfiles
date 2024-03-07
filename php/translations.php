@@ -126,7 +126,7 @@ $translations = array(
         'cancelar' => 'Cancel',
         'procesar' => 'Process',
         'empresa' => 'Company',
-        'descuento18' => '18% discount with pre-orden',,
+        'descuento18' => '18% discount with pre-orden',
         'fabricante' => 'Manufacturer',
     ),
     'es' => array(

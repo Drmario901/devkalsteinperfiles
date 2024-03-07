@@ -504,7 +504,7 @@ error_reporting(E_ALL);
 include __DIR__.'/../../../php/translations.php';
 //translateText();
 
-/* $api_key = "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";
+$api_key = "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";
 $data = [
     "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
     "prompt" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
@@ -530,7 +530,7 @@ if (curl_errno($ch)) {
 curl_close($ch);
 
 //imprimir en pantalla el resultado
-echo $result; */
+echo $result;
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
