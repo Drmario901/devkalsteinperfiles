@@ -498,7 +498,7 @@ if ($count > 0){
 <!-- PRODUCT HEADING-->
 
 <?php 
-include 'translateText.php';
+include '/../../../php/translateText.php';
 translateText();
 ?>
 
