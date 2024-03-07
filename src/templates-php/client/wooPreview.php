@@ -516,9 +516,7 @@ $data = [
             "role" => "user",
             "content" => "Italian - $description"
         ]
-    ], // Aquí pones tu prompt
-    "temperature" => 0.7,
-    "max_tokens" => 5000
+    ], 
 ];
 
 $ch = curl_init();
