@@ -528,6 +528,8 @@ if (curl_errno($ch)) {
 }
 curl_close($ch);
 
+echo $result;
+
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
 $pais = $translations[$lang]['client:pais'];
