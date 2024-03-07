@@ -536,8 +536,8 @@ $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
 $pais = $translations[$lang]['client:pais'];
 $fabricante = $translations[$lang]['client:fabricante'];
-$modelo = $translations[$lang]['client:modelo'];
-$descuento18 = $translations[$lang]['client:descuento18'];
+$modelo = $translations[$lang]['client:model'];
+$descuento18 = $translations[$lang]['descuento18'];
 ?>
 
 <div class="row">
