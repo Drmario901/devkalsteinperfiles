@@ -507,7 +507,7 @@ include __DIR__.'/../../../php/translations.php';
 $api_key = "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";
 $data = [
     "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
-    "prompt" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
+    "messages" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
     "temperature" => 0.7,
     "max_tokens" => 150
 ];
