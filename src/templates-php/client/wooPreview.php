@@ -514,7 +514,7 @@ $data = [
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/completions");
+curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/chat/completions");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
