@@ -9,6 +9,8 @@
 	$categorys = [];	
 
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+    $categoryLeng = 'categorie_description_'.$lang;
 		
 	if ($resultado->num_rows > 0) {
 		while ($value = $resultado->fetch_assoc()) {
@@ -28,6 +30,9 @@
 	}
 	
 	echo $salida;
+
+    echo $categoryLeng;
+    print_r($categoryLeng);
 	print_r($categorys);
 	$conexion->close();
  ?>
