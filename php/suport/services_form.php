@@ -134,12 +134,7 @@
 </style>
 
 <?php 
-
-require __DIR__ . '/../translateText.php';
-translateText();
-
 session_start(); $a = !$add ? 'A' : '' 
-
 ?>
 
 
