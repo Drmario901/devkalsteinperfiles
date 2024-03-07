@@ -38,7 +38,7 @@
 
     if ($resultado->num_rows > 0) {
         $i = 0;
-        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'es'; // Suponiendo que el cookie se llama 'language'
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en'; // Suponiendo que el cookie se llama 'language'
         while ($value = $resultado->fetch_assoc()) {
             $i++;
             $date = new DateTime($value['updates_date']);
@@ -47,8 +47,8 @@
             $description = $value['update_description'];
     
             // Reemplazar descripciones usando el array de traducciones
-            foreach ($translations[$lang] as $english => $translated) {
-                $description = str_replace($english, $translated, $description);
+            foreach ($translations[$lang] as $languagee => $translated) {
+                $description = str_replace($languagee, $translated, $description);
             }
     
             $html .= "
@@ -59,6 +59,7 @@
                 </tr>
             ";
         }
+        $msjNoData = "";
     } else {
         $msjNoData = "
             <div class='contentNoDataQuote'>
