@@ -538,11 +538,13 @@ if (curl_errno($ch)) {
 }
 curl_close($ch);
 
-//imprimir en pantalla el resultado
-if (!empty($response['choices'][0]['message']['content'])) {
-    echo trim($response['choices'][0]['message']['content']);
+$responseArray = json_decode($result, true);
+
+// Verificar y mostrar el contenido del mensaje
+if (!empty($responseArray['choices'][0]['message']['content'])) {
+    echo trim($responseArray['choices'][0]['message']['content']);
 } else {
-    echo "No hay mensaje de respuesta disponible.";
+    echo "No se pudo obtener una respuesta.";
 }
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
