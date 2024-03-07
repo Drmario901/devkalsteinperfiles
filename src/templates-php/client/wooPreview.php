@@ -507,14 +507,23 @@ include __DIR__.'/../../../php/translations.php';
 $api_key = "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";
 $data = [
     "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
-    "prompt" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
+    "messages" => [
+        [
+            "role" => "system",
+            "content" => "You are a professional translator who knows every languange, you will translate the following text to the languange i will tell you to do it and you will do it in a perfect way, you will only answer with the text translated not anything else, i will give you the language desired and then separated with a '-' the message to translate, also if there are html tags you will leave them the same way they are placed and you will translate only the real words"
+        ],
+        [
+            "role" => "user",
+            "content" => "Italian - $description"
+        ]
+    ], // Aquí pones tu prompt
     "temperature" => 0.7,
-    "max_tokens" => 150
+    "max_tokens" => 5000
 ];
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/completions");
+curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/chat/completions");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
@@ -529,8 +538,14 @@ if (curl_errno($ch)) {
 }
 curl_close($ch);
 
-//imprimir en pantalla el resultado
-echo $result;
+$responseArray = json_decode($result, true);
+
+// Verificar y mostrar el contenido del mensaje
+if (!empty($responseArray['choices'][0]['message']['content'])) {
+    echo trim($responseArray['choices'][0]['message']['content']);
+} else {
+    echo "No se pudo obtener una respuesta.";
+}
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
