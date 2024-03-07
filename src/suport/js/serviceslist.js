@@ -55,7 +55,9 @@ jQuery(document).ready(function ($) {
           }
 
           var currentPage = nextPage;
-          $("#currentPageIndicatorService").text(`${alertsTranslations.pagina}: ` + currentPage);
+          $("#currentPageIndicatorService").text(
+            `${alertsTranslations.pagina}: ` + currentPage
+          );
 
           $("#tblListService").html(tableContent);
 
@@ -70,8 +72,8 @@ jQuery(document).ready(function ($) {
           iziToast.error({
             title: alertsTranslations.error,
             message: alertsTranslations.cargarCotizacionError,
-            position: 'topRight',
-        });
+            position: "topRight",
+          });
         },
       });
     }
@@ -389,10 +391,12 @@ jQuery(document).ready(function ($) {
                       err_msg == alertsTranslations.estatusVacio;
                     } else {
                       if (SE_tiempo === "0") {
-                        err_msg == alertsTranslations.expectedTimeCantBeLessThanZero;
+                        err_msg ==
+                          alertsTranslations.expectedTimeCantBeLessThanZero;
                       } else {
                         if (SE_tiempo < 0) {
-                          err_msg == alertsTranslations.expectedTimeCantBeLessThanZero;
+                          err_msg ==
+                            alertsTranslations.expectedTimeCantBeLessThanZero;
                         } else {
                           if (SE_telefono === "0") {
                             err_msg == alertsTranslations.phoneEmpty;
@@ -533,18 +537,26 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   category();
   function category(consulta) {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
-      type: "POST",
-      data: { consulta },
-    })
-      .done(function (respuesta) {
-        $("#SEcategory").html(respuesta);
-        $("#SEAcategory").html(respuesta);
+    try {
+      $.ajax({
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
+        type: "POST",
+        data: { consulta },
       })
-      .fail(function () {
-        console.log("error");
-      });
+        .done(function (respuesta) {
+          $("#SEcategory").html(respuesta);
+          $("#SEAcategory").html(respuesta);
+        })
+        .fail(function () {
+          console.log("error");
+          // Aquí puedes manejar el error de la petición AJAX.
+          // Por ejemplo, podrías mostrar un mensaje de error al usuario.
+        });
+    } catch (error) {
+      console.error("Error capturado: ", error);
+      // Manejo de errores sincrónicos.
+      // Este bloque catch capturará errores que ocurran al preparar la petición AJAX, pero no los errores de la petición misma.
+    }
   }
 });
 
