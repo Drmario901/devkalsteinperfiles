@@ -138,6 +138,7 @@
         }
 
         require __DIR__.'/conexion.php';
+        require __DIR__.'/translation.php';
 
         $perPage = 10;
         $page = isset($_POST['u']) ? $_POST['u'] : 1;
@@ -209,6 +210,9 @@
                 <tbody id='tblQuoteClientCuca' class='bodyTableForQuote'>
         ";
 
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+        require_once 'translations.php';
+
         if ($resultado->num_rows > 0){
             $i = ($page - 1) * $perPage;
             while ($value = $resultado->fetch_assoc()) {
@@ -225,9 +229,9 @@
                 $newData = date_format($date, 'Y-m-d H:iA');
 
                 if ($shippingM == 0.00){
-                    $m = "Retiro en fábrica";
+                    $m = $translations[$lang]['retiroFabrica'];
                 } else {
-                    $m = "Envío a destino";
+                    $m = $translations[$lang]['envioDestino'];
                 }
 
                 if ($status == '0' || $status == '' || $status == 'Pending'){
@@ -242,17 +246,18 @@
                     }                
                 }
                 
+                // Asignar valor del select de estatus acorde al idioma de la cookie
 
                 $status_dir = array(
-                    '' => 'Pendiente',
-                    '0' => 'Pendiente',
-                    '1' => 'Procesar',
-                    '2' => 'Cancelar',
-                    '3' => 'Procesado',
-                    '4' => 'Cancelado'
+                    '' => $translations[$lang]['pendiente'],
+                    '0' => $translations[$lang]['pendiente'],
+                    '1' => $translations[$lang]['procesar'],
+                    '2' => $translations[$lang]['cancelar'],
+                    '3' => $translations[$lang]['processed'],
+                    '4' => $translations[$lang]['cancelado']
                 );
 
-                $status_text = isset($status_dir[$status]) ? $status_dir[$status] : 'Pendiente';
+                $status_text = isset($status_dir[$status]) ? $status_dir[$status] : $translations[$lang]['pendiente'];
 
                 $html.= "                                    
                     <tr>
