@@ -513,6 +513,13 @@ $data = [
     "format" => "text"
 ];
 
+$data2 = [
+    "q" => $table,
+    "source" => "en",
+    "target" => 'et',
+    "format" => "text"
+];
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
@@ -531,6 +538,26 @@ if (curl_errno($ch)) {
 curl_close($ch);
 
 $translatedDescription = json_decode($result, true)['translatedText'];
+
+$ch2 = curl_init();
+
+curl_setopt($ch2, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch2, CURLOPT_POST, 1);
+curl_setopt($ch2, CURLOPT_POSTFIELDS, json_encode($data2));
+curl_setopt($ch2, CURLOPT_HTTPHEADER, [
+    "Content-Type: application/json",
+    //"Authorization: Bearer {$api_key}"
+]);
+
+$result2 = curl_exec($ch2);
+
+if (curl_errno($ch2)) {
+    echo 'Error:' . curl_error($ch2);
+}
+curl_close($ch2);
+
+$tableTranslated = json_decode($result2, true)['translatedText'];
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
@@ -645,21 +672,21 @@ $descuento18 = $translations[$lang]['descuento18'];
     <!-- RENDER TABLE -->
 
     <?php
-        if (strpos($table, '</table>')){
+        if (strpos($tableTranslated, '</table>')){
             echo "
             <h4>Detalles</h4>
             <div class='p-prev-table' style='overflow-x: scroll'>
-                $table
+                $tableTranslated
             </div>
             ";
         }
         else {
-            if ($table != ''){
+            if ($tableTranslated != ''){
                 echo "
                 <h4 data-i18n='client:guardar' >Detalles</h4>
                 <div style='overflow-x: scroll'>
                     <table class='p-prev-table'>
-                        $table
+                        $tableTranslated
                     </table>
                 </div>
                 ";
