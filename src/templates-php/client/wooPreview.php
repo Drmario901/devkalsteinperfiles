@@ -498,52 +498,11 @@ if ($count > 0){
 <!-- PRODUCT HEADING-->
 
 <?php 
-ini_set('display_errors', 1);
+/* ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL); */
 include __DIR__.'/../../../php/translations.php';
 //translateText();
-
-$api_key = "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";
-$data = [
-    "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
-    "messages" => [
-        [
-            "role" => "system",
-            "content" => "You are a professional translator who knows every languange, you will translate the following text to the languange i will tell you to do it and you will do it in a perfect way, you will only answer with the text translated not anything else, i will give you the language desired and then separated with a '-' the message to translate, also if there are html tags you will leave them the same way they are placed and you will translate only the real words"
-        ],
-        [
-            "role" => "user",
-            "content" => "Italian - $description"
-        ]
-    ], 
-];
-
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/chat/completions");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Content-Type: application/json",
-    "Authorization: Bearer {$api_key}"
-]);
-
-$result = curl_exec($ch);
-if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
-}
-curl_close($ch);
-
-$responseArray = json_decode($result, true);
-
-// Verificar y mostrar el contenido del mensaje
-if (!empty($responseArray['choices'][0]['message']['content'])) {
-    echo trim($responseArray['choices'][0]['message']['content']);
-} else {
-    echo "No se pudo obtener una respuesta.";
-}
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
