@@ -40,6 +40,9 @@
     include 'translateText.php';
 
     translateText();
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+    $product_name = 'product_name_'.$lang;
 
     if ($resultado->num_rows > 0){
         $i = 0;
@@ -58,6 +61,7 @@
                     $resultado3 = $conexion->query($consulta3);
                     $row = mysqli_fetch_array($resultado3);
                     $imgProducto = $row['product_image'];
+                    $nombreProductLang = $row[$product_name];
 
                     $maxDescripcionLength = 100; 
                     $descripcionRecortada = (strlen($nameProducto) > $maxDescripcionLength) ? substr($nameProducto, 0, $maxDescripcionLength - 3) . "..." : $nameProducto;
@@ -70,7 +74,7 @@
                             <tr class='content-td'>
                                 <td class='imgProduct'><img src='$imgProducto' class='product-image'></td>
                                 <td class='descriptionProduct'>
-                                    <p class='fw-bold product-name'>$descripcionRecortada</p>
+                                    <p class='fw-bold product-name'>$nombreProductLang</p>
                                     <Button value='$id' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></Button>
                                 </td>
                             </tr>
