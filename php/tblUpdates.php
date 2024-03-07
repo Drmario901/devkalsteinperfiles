@@ -46,10 +46,11 @@
             $hour = $date->format('H:i A');
             $description = $value['update_description'];
     
-            // Reemplazar descripciones usando el array de traducciones
-            foreach ($translations[$lang] as $languagee => $translated) {
-                $description = str_replace($languagee, $translated, $description);
-            }
+            $originalDescription = $value['update_description'];
+        
+        // Buscar la descripción completa en el array de traducciones
+        $description = array_key_exists($originalDescription, $translations[$lang]) ? $translations[$lang][$originalDescription] : $originalDescription;
+
     
             $html .= "
                 <tr>
