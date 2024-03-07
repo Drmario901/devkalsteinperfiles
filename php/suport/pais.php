@@ -1,11 +1,14 @@
 <?php 
-	
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
 
 	require __DIR__ . '/../conexion.php';
 
+	require __DIR__ . '/../translateText.php';
+	translateText();
 
-
-	$salida = "<option selected value='0' >Choose an option</option>";
+	$salida = "<option selected value='0' data-i17n='client:elegirOpcion'>Choose an option</option>";
 
 	$consulta = "SELECT * FROM wp_paises ORDER BY en ASC";		
 		
@@ -24,7 +27,7 @@
 	
 		$salida.="</tbody></table>";
 	} else {
-		$salida.="<div class='nodatos'><h5>No data found in your search</h5></div>";
+		$salida.="<div class='nodatos'><h5 data-i17n='client:dataNotFound'>No data found in your search</h5></div>";
 	}
 	
 	echo $salida;
