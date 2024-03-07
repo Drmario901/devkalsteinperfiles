@@ -47,9 +47,11 @@
             $fecha = date_format($date, 'Y-m-d');
             $hour = date_format($date, 'H:i A');
 
-            if (array_key_exists($description, $translations[$lang])) {
-                $description = $translations[$lang][$description];
-            }
+            $description = str_replace('The status of', 'El estatus de la', $description);
+            $description = str_replace('was changed', 'ha cambiado', $description);
+            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizados', $description);
+            $description = str_replace('Password has been updated', 'Contraseña ha sido actualizada', $description);
+            $description = str_replace('has been deleted', 'ha sido eliminada', $description);
 
             $html.= "                                    
                 <tr>
