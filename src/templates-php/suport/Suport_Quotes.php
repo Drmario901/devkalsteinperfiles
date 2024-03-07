@@ -25,7 +25,7 @@
             $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
             // require __DIR__. '/../../../php/translateText.php';
-            translateText();
+            // translateText()
         ?>
 
         <nav class="nav nav-borders">
@@ -141,11 +141,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:previo'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>
