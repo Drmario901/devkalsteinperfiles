@@ -25,11 +25,11 @@
     translateText();
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-    $statusOf = $translations[$lang]['client:statusFor'];
-    $wasChanged = $translations[$lang]['client:wasChanged'];
-    $accountData = $translations[$lang]['client:dataAccountUpdated'];
-    $passwordUpdated = $translations[$lang]['client:passwordUpdated'];
-    $hasBeenDeleted = $translations[$lang]['client:hasBeenDeleted'];
+    $statusOf = $translations[$lang]['statusFor'];
+    $wasChanged = $translations[$lang]['wasChanged'];
+    $accountData = $translations[$lang]['dataAccountUpdated'];
+    $passwordUpdated = $translations[$lang]['passwordUpdated'];
+    $hasBeenDeleted = $translations[$lang]['hasBeenDeleted'];
 
     $html = "
         <table class='table custom-table'>
