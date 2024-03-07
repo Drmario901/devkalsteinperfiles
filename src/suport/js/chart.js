@@ -184,9 +184,9 @@ jQuery(document).ready(function ($) {
                   parse_dec(grow_2) +
                   "% <br>(" +
                   parse_dec(graph_2[3]) +
-                  `${alertsTranslations.completoA}` +
+                  ` ${alertsTranslations.completoA} ` +
                   parse_dec(graph_2[4]) +
-                  ` ${alertsTranslations.reportes})`
+                  ` ${alertsTranslations.reportes}) `
                 }</data>
                 <p class="revenue-item-text">${
                   alertsTranslations.mesPrevio
