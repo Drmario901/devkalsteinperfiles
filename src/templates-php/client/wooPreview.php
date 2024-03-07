@@ -509,7 +509,7 @@ $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $data = [
     "q" => $description,
     "source" => "en",
-    "target" => $lang,
+    "target" => 'et',
     "format" => "text"
 ];
 
