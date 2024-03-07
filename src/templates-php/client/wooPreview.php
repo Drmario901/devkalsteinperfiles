@@ -504,6 +504,30 @@ error_reporting(E_ALL); */
 include __DIR__.'/../../../php/translations.php';
 //translateText();
 
+$data = [
+    "q" => 'This is a test',
+    "source" => "en",
+    "target" => "es",
+    "format" => "text"
+];
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Content-Type: application/json",
+    //"Authorization: Bearer {$api_key}"
+]);
+
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+}
+curl_close($ch);
+
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
 $pais = $translations[$lang]['client:pais'];
