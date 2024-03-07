@@ -517,7 +517,7 @@ $data2 = [
     "q" => $table,
     "source" => "en",
     "target" => 'et',
-    "format" => "text"
+    "format" => "html"
 ];
 
 $ch = curl_init();
