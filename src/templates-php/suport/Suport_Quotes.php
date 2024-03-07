@@ -24,6 +24,8 @@
             $banner = 'banner_text_welcomeThree';
             $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
+            require __DIR__. '/../../../php/translateText.php';
+            translateText();
         ?>
 
         <nav class="nav nav-borders">
@@ -53,14 +55,14 @@
                 <table class='table custom-table'>
                     <thead class='headTableForQuote'>
                         <tr>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Cliente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;'>Total (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Fecha</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Status</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Remitente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Detalles</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;'>Acciones</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;' >ID</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:client'>Cliente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:total'>Total (USD)</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:date'>Fecha</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:status'>Status</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:remitente'>Remitente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:details'>Detalles</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:Actions'>Acciones</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -99,13 +101,13 @@
                                 <td>
                                     <form id='cotizacion_status_form'>
                                         <select name='cotizacion_status' id='cotizacion_status' class='status-select' style='color: #000 !important;'>
-                                            <option value=''></option>
-                                            <option value='3'>Procesado</option>
-                                            <option value='2'>Cancelado</option>
+                                            <option value='' ></option>
+                                            <option value='3' data-i18n='support:procesado'>Procesado</option>
+                                            <option value='2' data-i18n='support:selectCancelado'>Cancelado</option>
                                         </select>
                                         <br>
                                         <input type='hidden' id='$quoteId' name='cotizacion_status_nombre' class='$quoteId' value='$quoteId'>
-                                        <button type='button' id='btn-update' class='btn btn-info btn-block' value='$quoteId'>Cambiar status</button>
+                                        <button type='button' id='btn-update' class='btn btn-info btn-block' value='$quoteId' data-i18n='support:changeStatus'>Cambiar status</button>
                                     </form>
                                 </td>
                             </tr>
@@ -119,7 +121,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;'>Datos no encontrados</p></center>
+                                    <center><p style='color: #000;' data-i18n='support:notfound'>Datos no encontrados</p></center>
                                 </div>
                             </td>
                         </tr>
@@ -139,11 +141,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:previo'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='' data-i17n='client:next'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>
