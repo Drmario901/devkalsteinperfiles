@@ -126,6 +126,7 @@ $translations = array(
         'cancelar' => 'Cancel',
         'procesar' => 'Process',
         'empresa' => 'Company',
+        'descuento18' => '18% discount with pre-orden',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -270,6 +271,7 @@ $translations = array(
         'cancelar' => 'Cancelar',
         'procesar' => 'Procesar',
         'empresa' => 'Empresa',
+        'descuento18' => '18% de descuento con pre-orden',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -395,6 +397,7 @@ $translations = array(
         'cancelar' => 'Annuler',
         'procesar' => 'Traiter',
         'empresa' => 'Entreprise',
+        'descuento18' => '18% de réduction avec pré-commande',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -520,6 +523,7 @@ $translations = array(
         'cancelar' => 'Annulla',
         'procesar' => 'Elabora',
         'empresa' => 'Azienda',
+        'descuento18' => '18% di sconto con pre-ordine',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -645,6 +649,7 @@ $translations = array(
         'cancelar' => 'Cancelar',
         'procesar' => 'Processar',
         'empresa' => 'Empresa',
+        'descuento18' => '18% de desconto com pré-encomenda',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -770,6 +775,7 @@ $translations = array(
         'cancelar' => 'Anuluj',
         'procesar' => 'Przetwórz',
         'empresa' => 'Firma',
+        'descuento18' => '18% zniżki z pre-orderem',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -894,6 +900,7 @@ $translations = array(
         'cancelado' => 'Geannuleerd',
         'cancelar' => 'Annuleren',
         'empresa' => 'Bedrijf',
+        'descuento18' => '18% korting met pre-order',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -1019,6 +1026,7 @@ $translations = array(
         'cancelar' => 'Stornieren',
         'procesar' => 'Verarbeiten',
         'empresa' => 'Firma',
+        'descuento18' => '18% Rabatt bei Vorbestellung',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -1144,6 +1152,7 @@ $translations = array(
         'cancelar' => 'Tühistama',
         'procesar' => 'Töötlema',
         'empresa' => 'Firma',
+        'descuento18' => '18% allahindlus eeltellimusega',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1269,5 +1278,6 @@ $translations = array(
         'cancelar' => 'Avbryt',
         'procesar' => 'Bearbeta',
         'empresa' => 'Företag',
+        'descuento18' => '18% rabatt med förbeställning',
     ),
 );

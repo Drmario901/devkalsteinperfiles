@@ -501,7 +501,7 @@ if ($count > 0){
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-//include __DIR__.'/../../../php/translateText.php';
+//include __DIR__.'/../../../php/translations.php';
 //translateText();
 
 /* $api_key = "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";
@@ -531,6 +531,13 @@ curl_close($ch);
 
 //imprimir en pantalla el resultado
 echo $result; */
+
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+$empresa = $translations[$lang]['empresa'];
+$pais = $translations[$lang]['client:pais'];
+$fabricante = $translations[$lang]['client:fabricante'];
+$modelo = $translations[$lang]['client:modelo'];
+$descuento18 = $translations[$lang]['client:descuento18'];
 ?>
 
 <div class="row">
