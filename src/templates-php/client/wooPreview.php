@@ -294,6 +294,11 @@
 </div> */
 
 require __DIR__ . '/../../../php/conexion.php';
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+// si la cookie es en, se quitara el sufijo _es
+$productName = $lang == 'en' ? 'product_name' : 'product_name_'.$lang;
+$productDescription = $lang == 'en' ? 'product_description' : 'product_description_'.$lang;
     
 $p_id = isset($_GET['p']) ? $_GET['p'] : '';
 if($p_id == ''){
@@ -311,11 +316,11 @@ $row = mysqli_fetch_array($resultado);
 $count = mysqli_num_rows($resultado);
 
 if ($count > 0){
-    $name = $row["product_name_es"];
+    $name = $row[$productName];
     $maker = $row["product_maker"];
     $model = $row["product_model"];
     $brand = $row["product_brand"];
-    $description = $row["product_description_es"];
+    $description = $row[$productDescription];
     $category = $row["product_category"];
     $subcategory = $row["product_subcategory"];
     $image = $row["product_image"];
