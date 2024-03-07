@@ -501,8 +501,36 @@ if ($count > 0){
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include __DIR__.'/../../../php/translateText.php';
-translateText();
+//include __DIR__.'/../../../php/translateText.php';
+//translateText();
+
+$api_key = "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";
+$data = [
+    "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
+    "prompt" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
+    "temperature" => 0.7,
+    "max_tokens" => 150
+];
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/completions");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Content-Type: application/json",
+    "Authorization: Bearer {$api_key}"
+]);
+
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+}
+curl_close($ch);
+
+//imprimir en pantalla el resultado
+echo $result;
 ?>
 
 <div class="row">
