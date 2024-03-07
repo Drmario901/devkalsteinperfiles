@@ -199,7 +199,7 @@
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Pais</label>
+            <label for="Level" data-i18n="support:pais">Pais</label>
             <select id="SEpais" class="tm-select-accounts" name="category">
                 <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
             </select>

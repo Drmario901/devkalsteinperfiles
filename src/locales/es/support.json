@@ -125,5 +125,6 @@
   "aboutProduct": "Acerca del Producto",
   "productCategory": "Categoría de Producto",
   "estimatedTime": "Tiempo Estimado",
-  "placeholderFirstNameLastName": "Nombre y Apellido"
+  "placeholderFirstNameLastName": "Nombre y Apellido",
+  "pais": "Pais"
 }
