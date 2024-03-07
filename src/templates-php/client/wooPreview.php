@@ -501,7 +501,7 @@ if ($count > 0){
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-//include __DIR__.'/../../../php/translations.php';
+include __DIR__.'/../../../php/translations.php';
 //translateText();
 
 /* $api_key = "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";
