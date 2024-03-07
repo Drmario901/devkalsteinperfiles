@@ -539,7 +539,11 @@ if (curl_errno($ch)) {
 curl_close($ch);
 
 //imprimir en pantalla el resultado
-var_dump($result);
+if (!empty($response['choices'][0]['message']['content'])) {
+    echo trim($response['choices'][0]['message']['content']);
+} else {
+    echo "No hay mensaje de respuesta disponible.";
+}
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
