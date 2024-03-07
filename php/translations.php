@@ -125,6 +125,7 @@ $translations = array(
         'cancelado' => 'Cancelled',
         'cancelar' => 'Cancel',
         'procesar' => 'Process',
+        'empresa' => 'Company',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -268,6 +269,7 @@ $translations = array(
         'cancelado' => 'Cancelado',
         'cancelar' => 'Cancelar',
         'procesar' => 'Procesar',
+        'empresa' => 'Empresa',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -392,6 +394,7 @@ $translations = array(
         'cancelado' => 'Annulé',
         'cancelar' => 'Annuler',
         'procesar' => 'Traiter',
+        'empresa' => 'Entreprise',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -516,6 +519,7 @@ $translations = array(
         'cancelado' => 'Annullato',
         'cancelar' => 'Annulla',
         'procesar' => 'Elabora',
+        'empresa' => 'Azienda',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -640,6 +644,7 @@ $translations = array(
         'cancelado' => 'Cancelado',
         'cancelar' => 'Cancelar',
         'procesar' => 'Processar',
+        'empresa' => 'Empresa',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -764,6 +769,7 @@ $translations = array(
         'cancelado' => 'Anulowane',
         'cancelar' => 'Anuluj',
         'procesar' => 'Przetwórz',
+        'empresa' => 'Firma',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -887,6 +893,7 @@ $translations = array(
         'processed' => 'Verwerkt',
         'cancelado' => 'Geannuleerd',
         'cancelar' => 'Annuleren',
+        'empresa' => 'Bedrijf',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -1011,6 +1018,7 @@ $translations = array(
         'cancelado' => 'Abgebrochen',
         'cancelar' => 'Stornieren',
         'procesar' => 'Verarbeiten',
+        'empresa' => 'Firma',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -1135,6 +1143,7 @@ $translations = array(
         'cancelado' => 'Tühistatud',
         'cancelar' => 'Tühistama',
         'procesar' => 'Töötlema',
+        'empresa' => 'Firma',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1259,5 +1268,6 @@ $translations = array(
         'cancelado' => 'Avbruten',
         'cancelar' => 'Avbryt',
         'procesar' => 'Bearbeta',
+        'empresa' => 'Företag',
     ),
 );

@@ -497,20 +497,25 @@ if ($count > 0){
 
 <!-- PRODUCT HEADING-->
 
+<?php 
+include 'translateText.php';
+translateText();
+?>
+
 <div class="row">
     <div class="col-sm-6 order-sm-last">
         <img
             src="<?php echo $image?>"
             title="<?php echo $name?>"
         />
-        <p class='mb-0'><strong data-i18n='client:empresa' >Empresa</strong>: <em id='btnCompanyPreview'><?php echo $company?></em></p>
+        <p class='mb-0'><strong data-i17n='client:empresa' >Empresa</strong>: <em id='btnCompanyPreview'><?php echo $company?></em></p>
         <p class='mb-0'><strong data-i18n='client:pais' >País</strong>: <em><?php echo $country?></em></p>
     </div>
 
     <div class="col-12 col-sm-6">
         <input type="hidden" id="woo-meta-model" data-model="<?php echo $model?>">
         <div>
-            <p class='mb-0'><strong data-i18n='client:fabricante' >Fabricante</strong>: <em><?php echo $brand?></em></p>
+            <p class='mb-0'><strong data-i18n='client:fabricante'>Fabricante</strong>: <em><?php echo $brand?></em></p>
             <p class='mb-0'><strong data-i18n='client:modelo' >Modelo</strong>: <em><?php echo $model?></em></p>
             <?php echo $used?>
             <p>
