@@ -510,11 +510,11 @@ $data = [
     "messages" => [
         [
             "role" => "system",
-            "content" => "You are a professional translator who knows every languange, you will translate the following text to the languange i will tell you to do it and you will do it in a perfect way, you will only answer with the text translated not anything else, i will give you the language desired and then separated with a '-' the message to translate"
+            "content" => "You are a professional translator who knows every languange, you will translate the following text to the languange i will tell you to do it and you will do it in a perfect way, you will only answer with the text translated not anything else, i will give you the language desired and then separated with a '-' the message to translate, also if there are html tags you will leave them the same way they are placed and you will translate only the real words"
         ],
         [
             "role" => "user",
-            "content" => "Italian - this is a test to translate this content to italian"
+            "content" => "Italian - $description"
         ]
     ], // Aquí pones tu prompt
     "temperature" => 0.7,
