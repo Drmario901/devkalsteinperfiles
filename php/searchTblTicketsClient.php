@@ -16,7 +16,9 @@
     $resultado = $conexion->query($consulta);
 
     include 'translateText.php';
+    include 'translations.php';
     translateText();
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
     $i = 0;
 
@@ -61,6 +63,7 @@
             $resultado3 = $conexion->query($consulta3);
             $row3 = mysqli_fetch_array($resultado3);
             $nameService = $row3['SE_servicio'];
+            $statusTranslated;
 
             if ($i < 10){
                 $i = '000'.$i;
@@ -78,11 +81,14 @@
 
             if ($status == 'Pendiente'){
                 $bgStatus = '#e38512';
+                $statusTranslated = $translations[$lang]['pendiente'];
             }else{
                 if ($status == 'Procesado'){
                     $bgStatus = '#0eab13';
+                    $statusTranslated = $translations[$lang]['processed'];
                 }else{
                     $bgStatus = '#e61212';
+                    $statusTranslated = $translations[$lang]['cancelado'];
                 }                
             }
 
@@ -93,7 +99,7 @@
                     <td style='max-width: 15rem;'>$nameService</td>
                     <td style='max-width: 4rem;'>$model</td>
                     <td>$completeNameAgent</td>
-                    <td style='background-color: $bgStatus;'><button style='width: 100%; height: 100%; background-color: $bgStatus; color: #fff; text-align: center; font-weight: bold;' id='btn_ChangeStatus' value='$id'>$status</button></td>
+                    <td style='background-color: $bgStatus;'><button style='width: 100%; height: 100%; background-color: $bgStatus; color: #fff; text-align: center; font-weight: bold;' id='btn_ChangeStatus' value='$id'>$statusTranslated</button></td>
                     <td><Button value='$id' id='btnViewReportEdit' style='margin: 0 auto; color: black;' data-bs-toggle='modal' data-bs-target='#exampleModalEdit'><i class='fa fa-pencil'></i></Button><Button value='$id' id='btnViewReport' style='margin: 0 auto; color: green;' data-bs-toggle='modal' data-bs-target='#modelViewReport'><i class='fa-solid fa-up-right-from-square'></i></Button><Button value='$id' id='btnDeleteReport' style='margin: 0 auto; color: red;'><i class='fa-solid fa-trash'></i></Button></td>                    
                 </tr>
             ";

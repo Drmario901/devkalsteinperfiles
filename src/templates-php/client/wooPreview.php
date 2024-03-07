@@ -505,6 +505,34 @@ include __DIR__.'/../../../php/translations.php';
 //translateText();
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+$data = [
+    "q" => $description,
+    "source" => "en",
+    "target" => 'et',
+    "format" => "text"
+];
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Content-Type: application/json",
+    //"Authorization: Bearer {$api_key}"
+]);
+
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+}
+curl_close($ch);
+
+$translatedDescription = json_decode($result, true)['translatedText'];
+
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
 $pais = $translations[$lang]['client:pais'];
 $fabricante = $translations[$lang]['fabricante'];
@@ -611,7 +639,7 @@ $descuento18 = $translations[$lang]['descuento18'];
     <h4 data-i18n='client:descripcionProducto' >Descripción de producto</h4>
 
     <p>
-        <?php echo $description?>
+        <?php echo $translatedDescription?>
     </p>
 
     <!-- RENDER TABLE -->
