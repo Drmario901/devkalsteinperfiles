@@ -35,6 +35,7 @@
             </thead>
             <tbody id='tblUpdatesPag'class='bodyTableForQuote'>
     ";
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'es';
 
     if ($resultado->num_rows > 0) {
         while ($value = $resultado->fetch_assoc()) {
