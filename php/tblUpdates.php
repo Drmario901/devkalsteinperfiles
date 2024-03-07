@@ -21,7 +21,7 @@
     $i = 0;
 
     include 'translateText.php';
-    require_once 'translations.php';
+    include 'translations.php';
     translateText();
 
     $html = "
@@ -35,29 +35,32 @@
             </thead>
             <tbody id='tblUpdatesPag'class='bodyTableForQuote'>
     ";
-    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'es';
 
-    if ($resultado->num_rows > 0) {
+    if ($resultado->num_rows > 0){
+        $i = 0;
         while ($value = $resultado->fetch_assoc()) {
-            $date = new DateTime($value['updates_date']);
-            $fecha = $date->format('Y-m-d');
-            $hour = $date->format('H:i A');
+            $i = $i + 01;
+            $date = $value['updates_date'];
             $description = $value['update_description'];
-    
-            // Realizar las traducciones usando el array $translations
-            foreach ($translations[$lang] as $key => $translation) {
-                $description = str_replace($key, $translation, $description);
+            $date = new DateTime($date);
+            $fecha = date_format($date, 'Y-m-d');
+            $hour = date_format($date, 'H:i A');
+
+            if (array_key_exists($description, $translations[$lang])) {
+                $description = $translations[$lang][$description];
             }
-    
-            $html .= "
+
+            $html.= "                                    
                 <tr>
                     <td>$fecha</td>
                     <td>$hour</td>
                     <td>$description</td>
                 </tr>
             ";
-        }
-    } else {
+		}
+
+        $msjNoData = "";
+    }else{
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
