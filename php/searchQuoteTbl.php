@@ -141,7 +141,7 @@ error_reporting(E_ALL);
         }
 
         require __DIR__.'/conexion.php';
-        require __DIR__.'/translation.php';
+        require __DIR__.'/translations.php';
 
         $perPage = 10;
         $page = isset($_POST['u']) ? $_POST['u'] : 1;
