@@ -117,6 +117,7 @@ $translations = array(
         'wasChanged' => 'was changed',
         'passwordUpdated' => 'Password has been updated',
         'hasBeenDeleted' => 'has been deleted',
+        'client:allCategories' => 'All Categories',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -252,6 +253,7 @@ $translations = array(
         'wasChanged' => 'ha sido cambiado',
         'passwordUpdated' => 'La contraseña ha sido actualizada',
         'hasBeenDeleted' => 'ha sido eliminado',
+        'client:allCategories' => 'Todas las Categorias',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -368,6 +370,7 @@ $translations = array(
         'wasChanged' => 'a été changé',
         'passwordUpdated' => 'Le mot de passe a été mis à jour',
         'hasBeenDeleted' => 'a été supprimé',
+        'client:allCategories' => 'Toutes les catégories',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -478,12 +481,13 @@ $translations = array(
         'banner_text_services' => 'Servizi',
         'supportTicketGenerated' => 'Ticket di supporto generato',
         'search' => 'Cerca per riferimento, catalogo, prodotto, parola chiave o marca...',
-        'all' => 'Tutti',,
+        'all' => 'Tutti',
         'dataAccountUpdated' => 'I dati dell\'account sono stati aggiornati',
         'statusFor' => 'Lo stato di',
         'wasChanged' => 'è stato cambiato',
         'passwordUpdated' => 'La password è stata aggiornata',
         'hasBeenDeleted' => 'è stato eliminato',
+        'client:allCategories' => 'Tutte le categorie',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -600,6 +604,7 @@ $translations = array(
         'wasChanged' => 'foi alterado',
         'passwordUpdated' => 'A senha foi atualizada',
         'hasBeenDeleted' => 'foi deletado',
+        'client:allCategories' => 'Todas as Categorias',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -716,6 +721,7 @@ $translations = array(
         'wasChanged' => 'został zmieniony',
         'passwordUpdated' => 'Hasło zostało zaktualizowane',
         'hasBeenDeleted' => 'zostało usunięte',
+        'client:allCategories' => 'Wszystkie kategorie',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -832,6 +838,7 @@ $translations = array(
         'wasChanged' => 'is gewijzigd',
         'passwordUpdated' => 'Het wachtwoord is bijgewerkt',
         'hasBeenDeleted' => 'is verwijderd',
+        'client:allCategories' => 'Alle categorieën',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -948,6 +955,7 @@ $translations = array(
         'wasChanged' => 'wurde geändert',
         'passwordUpdated' => 'Das Passwort wurde aktualisiert',
         'hasBeenDeleted' => 'wurde gelöscht',
+        'client:allCategories' => 'Alle Kategorien',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -1064,6 +1072,7 @@ $translations = array(
         'wasChanged' => 'oli muudetud',
         'passwordUpdated' => 'Parool on värskendatud',
         'hasBeenDeleted' => 'on kustutatud',
+        'client:allCategories' => 'Kõik kategooriad',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1180,5 +1189,6 @@ $translations = array(
         'wasChanged' => 'har ändrats',
         'passwordUpdated' => 'Lösenordet har uppdaterats',
         'hasBeenDeleted' => 'har tagits bort',
+        'client:allCategories' => 'Alla kategorier',
     ),
 );
