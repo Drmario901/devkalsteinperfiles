@@ -23,6 +23,7 @@
     include 'translateText.php';
     include 'translations.php';
     translateText();
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
     $html = "
         <table class='table custom-table'>
