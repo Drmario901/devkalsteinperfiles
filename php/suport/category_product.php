@@ -39,9 +39,12 @@
 
     if ($resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
-            if (in_array($fila[$descriptionField], $categorys)) {
-            } else {
-                array_push($categorys, $fila[$descriptionField]);
+            // Asegúrate de que la variable $descriptionField haya sido definida antes de este bloque,
+            // y que contenga el nombre del campo que deseas verificar.
+            if (!empty($fila[$descriptionField])) {
+                if (!in_array($fila[$descriptionField], $categorys)) {
+                    array_push($categorys, $fila[$descriptionField]);
+                }
             }
         }
     } else {
