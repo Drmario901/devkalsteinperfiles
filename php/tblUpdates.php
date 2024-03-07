@@ -21,6 +21,7 @@
     $i = 0;
 
     include 'translateText.php';
+    require_once 'translations.php';
     translateText();
 
     $html = "
@@ -35,33 +36,30 @@
             <tbody id='tblUpdatesPag'class='bodyTableForQuote'>
     ";
 
-    if ($resultado->num_rows > 0){
+    if ($resultado->num_rows > 0) {
         $i = 0;
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'es'; // Suponiendo que el cookie se llama 'language'
         while ($value = $resultado->fetch_assoc()) {
-            $i = $i + 01;
-            $date = $value['updates_date'];
+            $i++;
+            $date = new DateTime($value['updates_date']);
+            $fecha = $date->format('Y-m-d');
+            $hour = $date->format('H:i A');
             $description = $value['update_description'];
-            $date = new DateTime($date);
-            $fecha = date_format($date, 'Y-m-d');
-            $hour = date_format($date, 'H:i A');
-
-            $description = str_replace('The status of', 'El estatus de la', $description);
-            $description = str_replace('was changed', 'ha cambiado', $description);
-            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizados', $description);
-            $description = str_replace('Password has been updated', 'Contraseña ha sido actualizada', $description);
-            $description = str_replace('has been deleted', 'ha sido eliminada', $description);
-
-            $html.= "                                    
+    
+            // Reemplazar descripciones usando el array de traducciones
+            foreach ($translations[$lang] as $english => $translated) {
+                $description = str_replace($english, $translated, $description);
+            }
+    
+            $html .= "
                 <tr>
                     <td>$fecha</td>
                     <td>$hour</td>
                     <td>$description</td>
                 </tr>
             ";
-		}
-
-        $msjNoData = "";
-    }else{
+        }
+    } else {
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
