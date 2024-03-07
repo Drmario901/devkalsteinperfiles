@@ -7,13 +7,17 @@
 		
 	$resultado = $conexion->query($consulta);
 	$categorys = [];	
+
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+    $categoryLeng = 'categorie_description_'.$lang;
 		
 	if ($resultado->num_rows > 0) {
 		while ($value = $resultado->fetch_assoc()) {
             //$products = $value["categorie_description"];
-           if (in_array($value['categorie_description_fr'], $categorys)){
+           if (in_array($value['categorie_description_'.$lang], $categorys)){
 			}else{
-				array_push($categorys, $value['categorie_description_fr']);
+				array_push($categorys, $value['categorie_description_'.$lang]);
 			}
 			
 		}
@@ -26,6 +30,9 @@
 	}
 	
 	echo $salida;
+
+    echo $categoryLeng;
+    print_r($categoryLeng);
 	print_r($categorys);
 	$conexion->close();
  ?>
