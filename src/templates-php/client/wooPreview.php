@@ -530,7 +530,7 @@ if (curl_errno($ch)) {
 }
 curl_close($ch);
 
-echo $result;
+$translatedDescription = json_decode($result, true)['translatedText'];
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
@@ -639,7 +639,7 @@ $descuento18 = $translations[$lang]['descuento18'];
     <h4 data-i18n='client:descripcionProducto' >Descripción de producto</h4>
 
     <p>
-        <?php echo $description?>
+        <?php echo $translatedDescription?>
     </p>
 
     <!-- RENDER TABLE -->
