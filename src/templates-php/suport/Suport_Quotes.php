@@ -24,7 +24,7 @@
             $banner = 'banner_text_welcomeThree';
             $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
-            require __DIR__. '/../../../php/translateText.php';
+            // require __DIR__. '/../../../php/translateText.php';
             translateText();
         ?>
 
