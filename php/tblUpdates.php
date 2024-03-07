@@ -25,6 +25,12 @@
     translateText();
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
+    $statusOf = $translations[$lang]['client:statusFor'];
+    $wasChanged = $translations[$lang]['client:wasChanged'];
+    $accountData = $translations[$lang]['client:dataAccountUpdated'];
+    $passwordUpdated = $translations[$lang]['client:passwordUpdated'];
+    $hasBeenDeleted = $translations[$lang]['client:hasBeenDeleted'];
+
     $html = "
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
@@ -47,11 +53,11 @@
             $fecha = date_format($date, 'Y-m-d');
             $hour = date_format($date, 'H:i A');
 
-            $description = str_replace('The status of', 'El estatus de la', $description);
-            $description = str_replace('was changed', 'ha cambiado', $description);
-            $description = str_replace('Account data has been updated', 'Datos de cuenta actualizados', $description);
-            $description = str_replace('Password has been updated', 'Contraseña ha sido actualizada', $description);
-            $description = str_replace('has been deleted', 'ha sido eliminada', $description);
+            $description = str_replace('The status of', $statusOf, $description);
+            $description = str_replace('was changed', $wasChanged, $description);
+            $description = str_replace('Account data has been updated', $accountData, $description);
+            $description = str_replace('Password has been updated', $passwordUpdated, $description);
+            $description = str_replace('has been deleted', $hasBeenDeleted, $description);
 
             $html.= "                                    
                 <tr>
