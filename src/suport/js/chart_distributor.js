@@ -196,7 +196,7 @@ jQuery(document).ready(function ($) {
                   parse_dec(graph_2[3]) +
                   ` ${alertsTranslations.ventasA} ` +
                   parse_dec(graph_2[4]) +
-                  " sales)"
+                  ` ${alertsTranslations.reportes}) `
                 }</data>
                 <p class="revenue-item-text">${
                   alertsTranslations.mesPrevio
