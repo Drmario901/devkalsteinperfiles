@@ -1,7 +1,8 @@
 <?php
 require 'conexion.php';
 
-include 'translateText.php';
+
+require __DIR__ . '/../translateText.php';
 translateText();
 
 $salida = "<option selected value='' style='color: #000 !important;'  data-i17n='client:eligeOpcion'  >Elige una opción</option>";
