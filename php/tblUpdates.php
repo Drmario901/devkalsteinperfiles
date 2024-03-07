@@ -37,20 +37,16 @@
     ";
 
     if ($resultado->num_rows > 0) {
-        $i = 0;
-        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en'; // Suponiendo que el cookie se llama 'language'
         while ($value = $resultado->fetch_assoc()) {
-            $i++;
             $date = new DateTime($value['updates_date']);
             $fecha = $date->format('Y-m-d');
             $hour = $date->format('H:i A');
             $description = $value['update_description'];
     
-            $originalDescription = $value['update_description'];
-        
-        // Buscar la descripción completa en el array de traducciones
-        $description = array_key_exists($originalDescription, $translations[$lang]) ? $translations[$lang][$originalDescription] : $originalDescription;
-
+            // Realizar las traducciones usando el array $translations
+            foreach ($translations[$lang] as $key => $translation) {
+                $description = str_replace($key, $translation, $description);
+            }
     
             $html .= "
                 <tr>
@@ -60,7 +56,6 @@
                 </tr>
             ";
         }
-        $msjNoData = "";
     } else {
         $msjNoData = "
             <div class='contentNoDataQuote'>
