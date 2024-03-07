@@ -504,7 +504,7 @@ error_reporting(E_ALL);
 //include __DIR__.'/../../../php/translateText.php';
 //translateText();
 
-$api_key = "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";
+$api_key = "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";
 $data = [
     "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
     "prompt" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
