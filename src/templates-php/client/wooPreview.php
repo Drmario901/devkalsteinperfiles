@@ -504,10 +504,12 @@ error_reporting(E_ALL); */
 include __DIR__.'/../../../php/translations.php';
 //translateText();
 
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
 $data = [
-    "q" => 'This is a test',
+    "q" => $description,
     "source" => "en",
-    "target" => "es",
+    "target" => $lang,
     "format" => "text"
 ];
 
