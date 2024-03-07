@@ -282,7 +282,7 @@
             />
         </div>
         <div class="col-12">
-            <label for="description" data-i18n="labelDescription" >Descripción</label>
+            <label for="description" data-i18n="support:description" >Descripción</label>
             <textarea
                 id="SE<?php echo$a?>Descripción"                   
                 class="form-control validate"

@@ -4,6 +4,8 @@
         require __DIR__ .'/../../../php/conexion.php';
         include 'navdar.php';
 
+
+
     ?>
     <script>
         let page = "services";
@@ -21,9 +23,9 @@
         ?>
 
         <nav class="nav nav-borders">
-            <a class="nav-link" href="https://plateforme.kalstein.fr/index.php/support/services/">Services</a>
-            <a class="nav-link active ms-0" href="https://plateforme.kalstein.fr/index.php/support/services/add">Ajouter un service</a>
-            <a class="nav-link" href="https://plateforme.kalstein.fr/index.php/support/services/edit">Modifier le service</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/index.php/support/services/" data-i18n="support:servicios">Services</a>
+            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/index.php/support/services/add" data-i18n="support:addServices">Ajouter un service</a>
+            <a class="nav-link" href="https://dev..kalstein.plus/index.php/support/services/edit" data-i18n="support:modifyService">Modifier le service</a>
             <hr class="mt-0 mb-4">
         </nav>
         
@@ -60,7 +62,7 @@
         
                     <div class="col-12">
                         <center>
-                            <button type="button" id="Register_service" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'>AJOUTER UN SERVICE</button>
+                            <button type="button" id="Register_service" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="support:servicios" data-i18n="support:addService">AJOUTER UN SERVICE</button>
                         </center>
                     </div>
                     <form>
