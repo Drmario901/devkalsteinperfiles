@@ -518,7 +518,7 @@ $data = [
         ]
     ], // Aquí pones tu prompt
     "temperature" => 0.7,
-    "max_tokens" => 150
+    "max_tokens" => 50000
 ];
 
 $ch = curl_init();
