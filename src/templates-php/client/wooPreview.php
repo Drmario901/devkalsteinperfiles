@@ -507,7 +507,16 @@ include __DIR__.'/../../../php/translations.php';
 $api_key = "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";
 $data = [
     "model" => "gpt-3.5-turbo", // Asegúrate de usar el modelo correcto que deseas consultar
-    "messages" => "Este es un ejemplo de prompt para GPT-3", // Aquí pones tu prompt
+    "messages" => [
+        [
+            "role" => "system",
+            "content" => "You are a professional translator who knows every languange, you will translate the following text to the languange i will tell you to do it and you will do it in a perfect way, you will only answer with the text translated not anything else, i will give you the language desired and then separated with a '-' the message to translate"
+        ],
+        [
+            "role" => "user",
+            "content" => "Italian - this is a test to translate this content to italian"
+        ]
+    ], // Aquí pones tu prompt
     "temperature" => 0.7,
     "max_tokens" => 150
 ];
