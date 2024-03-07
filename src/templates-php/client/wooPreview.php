@@ -510,7 +510,7 @@ if ($count > 0){
     <div class="col-12 col-sm-6">
         <input type="hidden" id="woo-meta-model" data-model="<?php echo $model?>">
         <div>
-            <p class='mb-0'><strong data-i18n='client:fabricante' >Fabricante</strong>: <em><?php echo $brand?></em></p>
+            <p class='mb-0'><span data-i18n='client:fabricante' >Fabricante</span>: <em><?php echo $brand?></em></p>
             <p class='mb-0'><strong data-i18n='client:modelo' >Modelo</strong>: <em><?php echo $model?></em></p>
             <?php echo $used?>
             <p>
