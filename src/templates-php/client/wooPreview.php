@@ -298,7 +298,6 @@ $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
 // si la cookie es en, se quitara el sufijo _es
 $productName = $lang == 'en' ? 'product_name' : 'product_name_'.$lang;
-$productDescription = $lang == 'en' ? 'product_description' : 'product_description_'.$lang;
     
 $p_id = isset($_GET['p']) ? $_GET['p'] : '';
 if($p_id == ''){
@@ -320,7 +319,7 @@ if ($count > 0){
     $maker = $row["product_maker"];
     $model = $row["product_model"];
     $brand = $row["product_brand"];
-    $description = $row[$productDescription];
+    $description = $row['product_description'];
     $category = $row["product_category"];
     $subcategory = $row["product_subcategory"];
     $image = $row["product_image"];
