@@ -501,7 +501,7 @@ if ($count > 0){
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-//include __DIR__.'/../../../php/translateText.php';
+//include __DIR__.'/../../../php/translations.php';
 //translateText();
 
 /* $api_key = "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";
@@ -531,6 +531,13 @@ curl_close($ch);
 
 //imprimir en pantalla el resultado
 echo $result; */
+
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+$empresa = $translations[$lang]['empresa'];
+$pais = $translations[$lang]['client:pais'];
+$fabricante = $translations[$lang]['client:fabricante'];
+$modelo = $translations[$lang]['client:modelo'];
+$descuento18 = $translations[$lang]['client:descuento18'];
 ?>
 
 <div class="row">
@@ -539,15 +546,15 @@ echo $result; */
             src="<?php echo $image?>"
             title="<?php echo $name?>"
         />
-        <p class='mb-0'><strong data-i17n='client:empresa' >Empresa</strong>: <em id='btnCompanyPreview'><?php echo $company?></em></p>
-        <p class='mb-0'><strong data-i18n='client:pais' >País</strong>: <em><?php echo $country?></em></p>
+        <p class='mb-0'><strong data-i17n='client:empresa' ><?php echo $empresa ?></strong>: <em id='btnCompanyPreview'><?php echo $company?></em></p>
+        <p class='mb-0'><strong data-i18n='client:pais' ><?php echo $pais ?></strong>: <em><?php echo $country?></em></p>
     </div>
 
     <div class="col-12 col-sm-6">
         <input type="hidden" id="woo-meta-model" data-model="<?php echo $model?>">
         <div>
-            <p class='mb-0'><strong data-i18n='client:fabricante'>Fabricante</strong>: <em><?php echo $brand?></em></p>
-            <p class='mb-0'><strong data-i18n='client:modelo' >Modelo</strong>: <em><?php echo $model?></em></p>
+            <p class='mb-0'><strong data-i18n='client:fabricante'><?php echo $fabricante ?></strong>: <em><?php echo $brand?></em></p>
+            <p class='mb-0'><strong data-i18n='client:modelo' ><?php echo $modelo ?></strong>: <em><?php echo $model?></em></p>
             <?php echo $used?>
             <p>
                 <img class="alignnone size-full wp-image-29188"
@@ -555,7 +562,7 @@ echo $result; */
             </p>
             <div class='d-flex flex-row'>
                 <div>
-                    <p class='card-text'><small class='text-muted' data-i18n='client:descuento18' ><?php echo number_format($disc, 2) ?> -18% de descuento con pre-orden</small></p>
+                    <p class='card-text'><small class='text-muted' data-i18n='client:descuento18' ><?php echo number_format($disc, 2) ?> -<?php echo $descuento18 ?></small></p>
                     <h6 class='my-0 mb-1' >USD$ <?php echo number_format($price, 2)?></h6>
                     <?php
                         if (!$manu_preview){
