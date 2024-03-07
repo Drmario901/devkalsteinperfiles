@@ -2,10 +2,9 @@
 require 'conexion.php';
 
 
-require __DIR__ . '/../translateText.php';
-translateText();
 
-$salida = "<option selected value='' style='color: #000 !important;'  data-i17n='client:eligeOpcion'  >Elige una opción</option>";
+
+$salida = "<option selected value='' style='color: #000 !important;' >Elige una opción</option>";
 $consulta = "SELECT DISTINCT catalog_category_es FROM `wp_catalogs_es` ORDER BY `catalog_category_es` ASC";
 
 $resultado = $conexion->query($consulta);
