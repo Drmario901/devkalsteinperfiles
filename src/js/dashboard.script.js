@@ -3686,6 +3686,7 @@ jQuery(document).ready(function ($) {
   });
 
   function mostrarDatos(consulta) {
+    console.log("hice el pedidoooo");
     $.ajax({
       // Cambia mificherophp.php por el nombre de tu fichero
 
