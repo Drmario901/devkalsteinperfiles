@@ -622,9 +622,11 @@ if(!empty($row[$technicalDescriptionLang])){
         $tableTranslated = json_decode($result2, true)['translatedText'];
 
         //Guardar en la base de datos
-        $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
+        $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = ? WHERE product_aid = ?";
+        $stmt = $conexion->prepare($updateQuery);
+        $stmt->bind_param('si', $tableTranslated, $p_id);
 
-        if ($conexion->query($updateQuery) === TRUE) {
+        if ($stmt->execute() === TRUE) {
             //echo "Record updated successfully";
         } else {
             //echo "Error updating record: " . $conexion->error;
