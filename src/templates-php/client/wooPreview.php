@@ -556,11 +556,7 @@ if (!empty($row[$productDescription])){
     if ($conexion->real_escape_string($updateQuery2) === TRUE) {
         echo "Record updated successfully";
     } else {
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo $updateQuery2;
-
+        echo "Error updating record: " . $conexion->error;
     }
 }
 
