@@ -557,6 +557,10 @@ if (!empty($row[$productDescription])){
         echo "Record updated successfully";
     } else {
         echo "Error updating record: " . $conexion->error;
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo $updateQuery2;
     }
 }
 
