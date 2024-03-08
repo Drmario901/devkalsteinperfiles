@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
 
   function catalogo(inputSearch, category) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles//php/catalog.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
       type: "POST",
       data: { inputSearch, category },
     })

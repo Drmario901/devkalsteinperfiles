@@ -1,8 +1,13 @@
 <div class="container">
+
     <header class="header" data-header>
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <?php
+
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
             session_start(); 
             if (isset($_SESSION['emailAccount'])){
                 $email = $_SESSION['emailAccount'];
