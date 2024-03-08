@@ -314,6 +314,7 @@ $resultado = $conexion->query($consulta);
 $row = mysqli_fetch_array($resultado);
 $count = mysqli_num_rows($resultado);
 
+
 if ($count > 0){
     $name = $row[$productName];
     $maker = $row["product_maker"];
@@ -519,13 +520,6 @@ $data = [
     "format" => "html"
 ];
 
-$data2 = [
-    "q" => $table,
-    "source" => "auto",
-    "target" => $lang,
-    "format" => "html"
-];
-
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
@@ -556,16 +550,45 @@ curl_setopt($ch2, CURLOPT_HTTPHEADER, [
     //"Authorization: Bearer {$api_key}"
 ]);
 
-$result2 = curl_exec($ch2);
+$technicalDescriptionLang = 'product_technical_description_'.$lang;
 
-if (curl_errno($ch2)) {
-    echo 'Error:' . curl_error($ch2);
+//Revisar si la description tecnical existe en el idioma deseado y si existe se muestra, en caso de que no
+// Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
+if($row[$technicalDescriptionLang]){
+    $tableTranslated = $row[$technicalDescriptionLang];
+} else {
+    $data2 = [
+        "q" => $table,
+        "source" => "auto",
+        "target" => $lang,
+        "format" => "html"
+    ];
+
+    $ch2 = curl_init();
+
+    curl_setopt($ch2, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+    curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch2, CURLOPT_POST, 1);
+    curl_setopt($ch2, CURLOPT_POSTFIELDS, json_encode($data2));
+    curl_setopt($ch2, CURLOPT_HTTPHEADER, [
+        "Content-Type: application/json",
+        //"Authorization: Bearer {$api_key}"
+    ]);
+
+    $result2 = curl_exec($ch2);
+
+    if (curl_errno($ch2)) {
+        echo 'Error:' . curl_error($ch2);
+    }
+    curl_close($ch2);
+
+    $tableTranslated = json_decode($result2, true)['translatedText'];
+
+    //Guardar en la base de datos
+    $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
 }
-curl_close($ch2);
 
-$tableTranslated = json_decode($result2, true)['translatedText'];
 
-$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $empresa = $translations[$lang]['empresa'];
 $pais = $translations[$lang]['client:pais'];
 $fabricante = $translations[$lang]['fabricante'];
