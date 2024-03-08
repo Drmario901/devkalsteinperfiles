@@ -1,8 +1,8 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 require __DIR__ . '/conexion.php';
 
@@ -68,7 +68,7 @@ if ($resultado->num_rows > 0) {
     $html .= "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;' data-i17n='client:dataNotFound'>No se encontraron datos</p></center>
+            <center><p style='color: #000;'>No se encontraron datos</p></center>
         </div>
     ";
 }
