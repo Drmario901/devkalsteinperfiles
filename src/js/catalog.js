@@ -2,34 +2,11 @@ jQuery(document).ready(function ($) {
   let category = $("#category").val();
   let inputSearch = $("#searchreport").val();
 
-  let plugin_dir =
-    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
-
   catalogo(inputSearch, category);
-
-  const cookieLng = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("language="))
-    .split("=")[1];
-  let alertsTranslations = {};
-
-  // cargar json de traducciones
-  const loadTranslations = (lng) => {
-    return fetch(
-      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-    )
-      .then((response) => response.json())
-      .then((translation) => {
-        // save in a global variable
-        alertsTranslations = translation;
-      });
-  };
-
-  loadTranslations(cookieLng);
 
   function catalogo(inputSearch, category) {
     $.ajax({
-      url: plugin_dir + "/php/catalog.php",
+      url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
       type: "POST",
       data: { inputSearch, category },
     })
@@ -71,7 +48,7 @@ jQuery(document).ready(function ($) {
 
     function tableContent(nextPage) {
       $.ajax({
-        url: plugin_dir + "/php/catalog.php",
+        url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
         type: "POST",
         data: { inputSearch: inputSearch, category: category, o: nextPage },
         success: function (data) {
@@ -84,9 +61,7 @@ jQuery(document).ready(function ($) {
           }
 
           var currentPage = nextPage;
-          $("#currentPageIndicatorCatalog").text(
-            `${alertsTranslations.pagina}: ` + currentPage
-          );
+          $("#currentPageIndicatorCatalog").text("Page: " + currentPage);
 
           $("#catalogPag").html(tableContent);
 
@@ -133,7 +108,7 @@ jQuery(document).ready(function ($) {
   category();
   function category(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/suport/category_product.php",
+      url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
       type: "POST",
       data: { consulta },
     })
