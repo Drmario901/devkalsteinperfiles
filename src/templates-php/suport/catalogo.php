@@ -1,5 +1,10 @@
 |<div class="container">
+    
     <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+        
         include 'navdar.php';
         $sql = "SELECT DISTINCT M_nombre_product FROM wp_manuales";
         $res = $conexion->query($sql);
