@@ -8,7 +8,7 @@ $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
 require __DIR__ . '/conexion.php';
 
-include __DIR__.'/translations.php';
+require_once __DIR__.'/translations.php';
 //translateText();
 
 $dataNotFound = $translations[$lang]['dataNotFound'];
