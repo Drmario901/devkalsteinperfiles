@@ -547,8 +547,13 @@ if ($row[$productDescription] != '' && $row[$productDescription] != null){
     $translatedDescription = json_decode($result, true)['translatedText'];
 
     //Guardar en la base de datos
-    $updateQuery2 = "UPDATE wp_k_products SET product_description_$lang = '$translatedDescription' WHERE product_aid = '$p_id'";
-    $conexion->query($updateQuery2);
+    $updateQuery2 = "UPDATE wp_k_products SET $productDescription = '$translatedDescription' WHERE product_aid = '$p_id'";
+
+    if ($conexion->query($updateQuery2) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conexion->error;
+    }
 }
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
@@ -589,9 +594,9 @@ if($row[$technicalDescriptionLang]){
     $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
 
     if ($conexion->query($updateQuery) === TRUE) {
-        //echo "Record updated successfully";
+        echo "Record updated successfully";
     } else {
-        //echo "Error updating record: " . $conexion->error;
+        echo "Error updating record: " . $conexion->error;
     }
 }
 
