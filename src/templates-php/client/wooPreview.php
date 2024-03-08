@@ -522,11 +522,11 @@ $productDescription = 'product_description_'.$lang;
 //Verificar si la descripcion del producto existe en el idioma deseado y si existe se muestra, en caso de que no
 // Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
 if (!empty($row[$productDescription])){
-    $translatedDescription = $row['product_description_'.$lang];
+    $translatedDescription = $row[$productDescription];
 } else {
     $data = [
         "q" => $description,
-        "source" => "en",
+        "source" => "auto",
         "target" => $lang,
         "format" => "html"
     ];
@@ -556,9 +556,15 @@ if (!empty($row[$productDescription])){
     if ($conexion->query($updateQuery2) === TRUE) {
         echo "Record updated successfully";
     } else {
-        echo "Error updating record: " . $conexion->error;
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo $updateQuery2;
+        
     }
 }
+
+
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
 
