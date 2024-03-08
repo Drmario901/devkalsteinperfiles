@@ -549,7 +549,7 @@ if (!empty($row[$productDescription])){
     curl_close($ch);
     
     //Si el resultado esta vacio se asigna el mensaje de 'Sin descripcion'
-    if (empty($result)){
+    if (empty($result['translatedText'])){
         $translatedDescription = 'Sin descripción';
     } else {
         $translatedDescription = json_decode($result, true)['translatedText'];
