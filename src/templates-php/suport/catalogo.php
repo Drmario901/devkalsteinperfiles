@@ -1,8 +1,13 @@
-<div class="container">
+|<div class="container">
+    
     <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+        
         include 'navdar.php';
         $sql = "SELECT DISTINCT M_nombre_product FROM wp_manuales";
-        $res = $conexion->query($sql);        
+        $res = $conexion->query($sql);
         $consulta = "SELECT DISTINCT catalog_category FROM wp_catalogs ORDER BY catalog_category ASC";
         $res2 = $conexion->query($consulta);
     ?>
@@ -17,13 +22,16 @@
 
         <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            $banner_text = "Manuels et catalogues";
+
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcomeThree';
+            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
         <nav class="nav nav-borders">
-            <div id="catalogs-manuals-widget" class="nav-link active" href="#" style='cursor: pointer'>Manuels</div>
-            <div id="catalogs-catalogs-widget" class="nav-link" href="#" style='cursor: pointer'>Catalogues</div>
+            <div id="catalogs-manuals-widget" class="nav-link active" href="#" style='cursor: pointer'>Manuales</div>
+            <div id="catalogs-catalogs-widget" class="nav-link" href="#" style='cursor: pointer'>Catalogos</div>
         </nav>
 
         <br>
@@ -57,13 +65,16 @@
                 <div class="category-select col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fa-solid fa-filter mx-3"></i>
                     <select id="category-ma" style="padding-left: 10px;">
-                        <option value="" selected disabled hidden>Choisir une catégorie</option>
+                        <option value="" selected disabled hidden data-i18n="support:selectDefault" >Seleccione una categoria</option>
+                        <?php while($fetch = $res->fetch_assoc()) : ?>
+                            <option value="<?= $fetch['M_id']; ?>"><?= $fetch["M_nombre_product"] ?> </option>
+                        <?php endwhile ?>
                     </select>
                 </div>
 
                 <div class="search col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fas fa-search mx-3"></i>
-                    <input class="mb-0" type="text" id="searchreport-ma" style="padding-left: 10px; height: 100%" placeholder="Recherche d'un manuel">
+                    <input class="mb-0" data-placeholder="support:searchManual" data-i18n="support:searchManual" type="text" id="searchreport-ma" style="padding-left: 10px; height: 100%" placeholder="Busqueda para un manual">
                 </div>
             </div>
 
@@ -74,8 +85,12 @@
         <div id='container-catalogs' hidden>
             <?php
                 $banner_img = 'Header-fabricante-IMG.png';
-                $banner_text = "Catalog";
-                include 'banner.php';
+
+                // require __DIR__. '/../../../php/translateTextBanner.php';
+                $banner = 'banner_text_catalog';
+                $banner_text = translateTextBanner($banner);
+                // include 'banner.php';
+                // include __DIR__.'/../manufacturer/banner.php';
             ?>
         
             <style>
@@ -115,7 +130,7 @@
 
                 <div class="search col-12 col-md-6 d-flex align-items-center px-0">
                     <i class="fas fa-search mx-3"></i>
-                    <input type="text" placeholder="Recherche d'un catalogue" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
+                    <input type="text" data-placeholder="support:searchCatalogo" data-i18n="support:searchCatalogo" placeholder="Busqueda para un catalogo" id="searchreport" style="padding-left: 10px; height: 100%" class='mb-0'>
                 </div>
             </div>
         

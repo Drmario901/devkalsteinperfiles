@@ -57,7 +57,7 @@
             <img src='$imagen' class='card-img-top' alt='...'>
             <div class='card-body'>
                 <center><h5 class='card-title' style='font-size: 16px;'>$nombre</h5></center>
-                <center><button class='_df_button' id='book1' source='https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/manuals/upload/$pdf'>Vista</button></center>
+                <center><button class='_df_button' id='book1' source='https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/manuals/upload/$pdf' data-i17n='client:vista'>Vista</button></center>
             </div>
             </div>
         </div>
