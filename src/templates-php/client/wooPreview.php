@@ -516,7 +516,7 @@ $data = [
     "q" => $description,
     "source" => "en",
     "target" => $lang,
-    "format" => "text"
+    "format" => "html"
 ];
 
 $data2 = [
