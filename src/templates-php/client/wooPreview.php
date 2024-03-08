@@ -586,6 +586,12 @@ if($row[$technicalDescriptionLang]){
 
     //Guardar en la base de datos
     $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
+
+    if ($conexion->query($updateQuery) === TRUE) {
+        //echo "Record updated successfully";
+    } else {
+        //echo "Error updating record: " . $conexion->error;
+    }
 }
 
 
