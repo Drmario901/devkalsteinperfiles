@@ -330,7 +330,7 @@ if ($count > 0){
     $multi = $price * 0.18;
     $disc = round($price - $multi, 2);
     
-    $table = $row["product_technical_description_es"];
+    $table = $row["product_technical_description"];
     
     $used = $type == 'used'? "<p><strong>Condición</strong>: <em>$condition</em></p>" : '';
 
@@ -574,6 +574,8 @@ $descuento18 = $translations[$lang]['descuento18'];
 $descripcionProducto = $translations[$lang]['productDescription'];
 $ver = $translations[$lang]['client:seeTable'];
 $accesoriosAdic = $translations[$lang]['accesoriosAdic'];
+$cotizar = $translations[$lang]['client:quote'];
+$cantidad = $translations[$lang]['client:cantidad'];
 ?>
 
 <div class="row">
@@ -603,11 +605,11 @@ $accesoriosAdic = $translations[$lang]['accesoriosAdic'];
                     <?php
                         if (!$manu_preview){
                             $html = "
-                                <div><span class='quantity d-inline' data-i18n='client:cantidad' >Cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
+                                <div><span class='quantity d-inline' data-i18n='client:cantidad' >$cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
                             ";
 
                             $html.="  
-                                    <button value='$model' class='btnQuo' data-i18n='client:cotizar' >Cotizar</button>
+                                    <button value='$model' class='btnQuo' data-i18n='client:cotizar' >$cotizar</button>
                                     <button class='activeModal' data-bs-toggle='modal' data-bs-target='#cotModal' style='display: none;'></button>
                             ";
 
@@ -618,7 +620,7 @@ $accesoriosAdic = $translations[$lang]['accesoriosAdic'];
                                             <input type='hidden' id='ih-accesories-add' value='0'>
                                             <h6 class='accordion-header'>
                                                 <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne' data-i18n='client:accesoriosAdic' >
-                                                    Accesorios adicionales
+                                                    $accesoriosAdic
                                                 </button>
                                             </h6>
                                             <div id='flush-collapseOne' class='accordion-collapse collapse' data-bs-parent='#accordionFlushExample'>
