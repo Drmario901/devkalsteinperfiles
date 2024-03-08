@@ -576,6 +576,7 @@ $ver = $translations[$lang]['client:seeTable'];
 $accesoriosAdic = $translations[$lang]['accesoriosAdic'];
 $cotizar = $translations[$lang]['client:quote'];
 $cantidad = $translations[$lang]['client:cantidad'];
+$detalles = $translations[$lang]['client:detalles'];
 ?>
 
 <div class="row">
@@ -685,7 +686,7 @@ $cantidad = $translations[$lang]['client:cantidad'];
     <?php
         if (strpos($tableTranslated, '</table>')){
             echo "
-            <h4>Detalles</h4>
+            <h4>$detalles</h4>
             <div class='p-prev-table' style='overflow-x: scroll'>
                 $tableTranslated
             </div>
@@ -694,7 +695,7 @@ $cantidad = $translations[$lang]['client:cantidad'];
         else {
             if ($tableTranslated != ''){
                 echo "
-                <h4 data-i18n='client:guardar' >Detalles</h4>
+                <h4 data-i18n='client:guardar' >$detalles</h4>
                 <div style='overflow-x: scroll'>
                     <table class='p-prev-table'>
                         $tableTranslated
