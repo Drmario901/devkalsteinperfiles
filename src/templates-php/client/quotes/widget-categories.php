@@ -24,7 +24,7 @@
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
-            var_dump($resultLines);
+            echo ($resultLines);
 
             $already_printed = [];
                 
