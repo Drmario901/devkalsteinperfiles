@@ -562,7 +562,7 @@ if (!empty($row[$productDescription])){
     curl_close($ch);
     
     //Si el resultado esta vacio se asigna el mensaje de 'Sin descripcion'
-    if (empty($result['translatedText'])){
+    if (empty(json_decode($result, true)['translatedText'])){
         $translatedDescription = $withOutDescription;
     } else {
         $translatedDescription = json_decode($result, true)['translatedText'];
@@ -616,7 +616,7 @@ if(!empty($row[$technicalDescriptionLang])){
     }
     curl_close($ch2);
 
-    if (empty($result['translatedText'])){
+    if (empty(json_decode($result2, true)['translatedText'])){
         $tableTranslated = '';
     } else {
         $tableTranslated = json_decode($result2, true)['translatedText'];
