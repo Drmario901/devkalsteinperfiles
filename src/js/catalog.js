@@ -1,76 +1,147 @@
 jQuery(document).ready(function ($) {
-  // Inicialización y eventos
-  updateCatalogAndCategories();
+  let category = $("#category").val();
+  let inputSearch = $("#searchreport").val();
+
+  let plugin_dir =
+    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+
+  catalogo(inputSearch, category);
+
+  const cookieLng = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
+
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
+
+  loadTranslations(cookieLng);
+
+  function catalogo(inputSearch, category) {
+    $.ajax({
+      url: plugin_dir + "/php/catalog.php",
+      type: "POST",
+      data: { inputSearch, category },
+    })
+      .done(function (respuesta) {
+        $("#catalogo").html(JSON.parse(respuesta).html);
+        tblCatalogsPagination();
+
+        let total = JSON.parse(respuesta).total;
+
+        console.log("total: " + total);
+
+        $(".pagination #form-previous-catalog").attr("hidden", "");
+
+        if (12 >= total) $(".pagination #form-next-catalog").attr("hidden", "");
+        else $(".pagination #form-next-catalog").removeAttr("hidden");
+      })
+      .fail(function () {
+        console.log("error");
+      });
+  }
 
   $(document).on("keyup", "#searchreport", function () {
-    updateCatalog();
+    let inputSearch = $(this).val();
+    let category = $("#category").val();
+    catalogo(inputSearch, category);
   });
 
   $(document).on("change", "#category", function () {
-    updateCatalog();
+    let category = $(this).val();
+    let inputSearch = $("#searchreport").val();
+    catalogo(inputSearch, category);
   });
 
-  function updateCatalogAndCategories() {
-    let category = $("#category").val();
-    let inputSearch = $("#searchreport").val();
-    updateCatalog(inputSearch, category);
-    updateCategories();
-  }
+  //PAGINATION
 
-  function updateCatalog(inputSearch = "", category = "") {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/catalog.php",
-      type: "POST",
-      dataType: "json", // Asegurando que esperamos una respuesta JSON
-      data: { inputSearch, category },
-      success: function (response) {
-        $("#catalogo").html(response.html);
-        tblCatalogsPagination(response.total);
-      },
-      error: function () {
-        console.log("error al actualizar el catálogo");
-      },
+  function tblCatalogsPagination() {
+    let inputSearch = $("#searchreport").val();
+    let category = $("#category").val();
+
+    function tableContent(nextPage) {
+      $.ajax({
+        url: plugin_dir + "/php/catalog.php",
+        type: "POST",
+        data: { inputSearch: inputSearch, category: category, o: nextPage },
+        success: function (data) {
+          var tableContent = $(JSON.parse(data).html)
+            .find("#catalogPag")
+            .html();
+
+          if (tableContent.trim() === "") {
+            return;
+          }
+
+          var currentPage = nextPage;
+          $("#currentPageIndicatorCatalog").text(
+            `${alertsTranslations.pagina}: ` + currentPage
+          );
+
+          $("#catalogPag").html(tableContent);
+
+          $(".pagination #form-next-catalog input[name=o]").val(
+            parseInt(currentPage) + 1
+          );
+          let prev = parseInt(currentPage) > 1 ? parseInt(currentPage) - 1 : 1;
+          $(".pagination #form-previous-catalog input[name=o]").val(prev);
+
+          let total = JSON.parse(data).total;
+
+          if (currentPage == "1")
+            $(".pagination #form-previous-catalog").attr("hidden", "");
+          else $(".pagination #form-previous-catalog").removeAttr("hidden");
+
+          console.log(parseInt(currentPage) * 12);
+          console.log(total);
+
+          if (parseInt(currentPage) * 12 >= total)
+            $(".pagination #form-next-catalog").attr("hidden", "");
+          else $(".pagination #form-next-catalog").removeAttr("hidden");
+        },
+        error: function () {
+          alert("Error charging quote data.");
+        },
+      });
+    }
+
+    $(".pagination #form-next-catalog").submit(function (e) {
+      e.preventDefault();
+      var nextPage = $(this).find("input[name=o]").val();
+      tableContent(nextPage);
+    });
+
+    $(".pagination #form-previous-catalog").submit(function (e) {
+      e.preventDefault();
+      var prevPage = $(this).find("input[name=o]").val();
+      tableContent(prevPage);
     });
   }
+});
 
-  function updateCategories() {
+jQuery(document).ready(function ($) {
+  category();
+  function category(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
+      url: plugin_dir + "/php/suport/category_product.php",
       type: "POST",
-      dataType: "html", // Esperamos HTML directamente aquí
-      success: function (response) {
-        $("#category").html(response);
-      },
-      error: function () {
-        console.log("error al actualizar las categorías");
-      },
-    });
+      data: { consulta },
+    })
+      .done(function (respuesta) {
+        $("#category").html(respuesta);
+      })
+      .fail(function () {
+        console.log("error");
+      });
   }
-
-  function tblCatalogsPagination(total) {
-    let totalPages = Math.ceil(total / 12);
-    let currentPage = parseInt($("#hiddenPage").val()) || 1;
-
-    $(".pagination #form-previous-catalog").attr("hidden", currentPage <= 1);
-    $(".pagination #form-next-catalog").attr(
-      "hidden",
-      currentPage >= totalPages
-    );
-
-    $(".pagination #form-next-catalog input[name=o]").val(currentPage + 1);
-    $(".pagination #form-previous-catalog input[name=o]").val(
-      Math.max(1, currentPage - 1)
-    );
-  }
-
-  $(
-    ".pagination #form-next-catalog, .pagination #form-previous-catalog"
-  ).submit(function (e) {
-    e.preventDefault();
-    let page = $(this).find("input[name=o]").val();
-    $("#hiddenPage").val(page);
-    let category = $("#category").val();
-    let inputSearch = $("#searchreport").val();
-    updateCatalog(inputSearch, category);
-  });
 });
