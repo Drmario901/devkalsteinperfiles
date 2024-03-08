@@ -130,6 +130,7 @@ $translations = array(
         'fabricante' => 'Manufacturer',
         'productDescription' => 'Product Description',
         'accesoriosAdicionales' => 'Additional Accessories',
+        'productsRelated' => 'Related Products',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -278,6 +279,7 @@ $translations = array(
         'fabricante' => 'Fabricante',
         'productDescription' => 'Descripción del producto',
         'accesoriosAdicionales' => 'Accesorios Adicionales',
+        'productsRelated' => 'Productos Relacionados',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -407,6 +409,7 @@ $translations = array(
         'fabricante' => 'Fabricant',
         'productDescription' => 'Description du produit',
         'accesoriosAdic' => 'Accessoires supplémentaires',
+        'productsRelated' => 'Produits associés',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -536,6 +539,7 @@ $translations = array(
         'fabricante' => 'Produttore',
         'productDescription' => 'Descrizione del prodotto',
         'accesoriosAdic' => 'Accessori aggiuntivi',
+        'productsRelated' => 'Prodotti correlati',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -665,6 +669,7 @@ $translations = array(
         'fabricante' => 'Fabricante',
         'productDescription' => 'Descrição do produto',
         'accesoriosAdic' => 'Acessórios adicionais',
+        'productsRelated' => 'Produtos relacionados',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -794,6 +799,7 @@ $translations = array(
         'fabricante' => 'Producent',
         'productDescription' => 'Opis produktu',
         'accesoriosAdic' => 'Dodatkowe akcesoria',
+        'productsRelated' => 'Powiązane produkty',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -922,6 +928,7 @@ $translations = array(
         'fabricante' => 'Fabrikant',
         'productDescription' => 'Productomschrijving',
         'accesoriosAdic' => 'Extra accessoires',
+        'productsRelated' => 'Gerelateerde producten',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -1051,6 +1058,7 @@ $translations = array(
         'fabricante' => 'Hersteller',
         'productDescription' => 'Produktbeschreibung',
         'accesoriosAdic' => 'Zusätzliches Zubehör',
+        'productsRelated' => 'Verwandte Produkte',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -1180,6 +1188,7 @@ $translations = array(
         'fabricante' => 'Tootja',
         'productDescription' => 'Toote kirjeldus',
         'accesoriosAdic' => 'Lisavarustus',
+        'productsRelated' => 'Seotud tooted',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1309,5 +1318,6 @@ $translations = array(
         'fabricante' => 'Tillverkare',
         'productDescription' => 'Produktbeskrivning',
         'accesoriosAdic' => 'Extra tillbehör',
+        'productsRelated' => 'Relaterade produkter',
     ),
 );

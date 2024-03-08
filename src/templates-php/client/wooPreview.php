@@ -513,42 +513,41 @@ if ($lang === 'ee'){
     $lang = 'sv';
 }
 
-$data = [
-    "q" => $description,
-    "source" => "en",
-    "target" => $lang,
-    "format" => "html"
-];
+//Verificar si la descripcion del producto existe en el idioma deseado y si existe se muestra, en caso de que no
+// Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
+if ($row['product_description_'.$lang]){
+    $translatedDescription = $row['product_description_'.$lang];
+} else {
+    $data = [
+        "q" => $description,
+        "source" => "en",
+        "target" => $lang,
+        "format" => "html"
+    ];
+    
+    $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Content-Type: application/json",
+        //"Authorization: Bearer {$api_key}"
+    ]);
+    
+    $result = curl_exec($ch);
+    if (curl_errno($ch)) {
+        echo 'Error:' . curl_error($ch);
+    }
+    curl_close($ch);
+    
+    $translatedDescription = json_decode($result, true)['translatedText'];
 
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Content-Type: application/json",
-    //"Authorization: Bearer {$api_key}"
-]);
-
-$result = curl_exec($ch);
-if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
+    //Guardar en la base de datos
+    $updateQuery = "UPDATE wp_k_products SET product_description_$lang = '$translatedDescription' WHERE product_aid = '$p_id'";
+    $conexion->query($updateQuery);
 }
-curl_close($ch);
-
-$translatedDescription = json_decode($result, true)['translatedText'];
-
-$ch2 = curl_init();
-
-curl_setopt($ch2, CURLOPT_URL, "http://185.28.22.84:5000/translate");
-curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch2, CURLOPT_POST, 1);
-curl_setopt($ch2, CURLOPT_POSTFIELDS, json_encode($data2));
-curl_setopt($ch2, CURLOPT_HTTPHEADER, [
-    "Content-Type: application/json",
-    //"Authorization: Bearer {$api_key}"
-]);
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
 

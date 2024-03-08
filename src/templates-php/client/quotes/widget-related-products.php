@@ -1,5 +1,5 @@
 <div id='productContainer' class='row mt-3' style='width: 100%'>
-    <h3 data-i18n="client:relatedProducts" >Productos relacionados</h3>
+    <h3 data-i18n="client:relatedProducts" ><?php $productosRelacionados ?></h3>
     <?php
         if ($subcategory == NULL || $subcategory == "") {
             $queryRelated = "SELECT product_model, product_aid FROM wp_k_products WHERE product_category = '$category' AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_group = '0' AND product_type IN ('sell')";
@@ -20,6 +20,7 @@
         $productName = $lang == 'en' ? 'product_name' : 'product_name_'.$lang;
 
         $ver = $translations[$lang]['client:seeTable'];
+        $productosRelacionados = $translations[$lang]['productsRelated'];
         
         if ($resultRelated->num_rows > 0){
             while ($row = $resultRelated->fetch_assoc()) {
