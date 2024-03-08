@@ -521,7 +521,7 @@ $data = [
 
 $data2 = [
     "q" => $table,
-    "source" => "en",
+    "source" => "auto",
     "target" => $lang,
     "format" => "html"
 ];
