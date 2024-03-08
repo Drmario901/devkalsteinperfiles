@@ -131,6 +131,7 @@ $translations = array(
         'productDescription' => 'Product Description',
         'accesoriosAdicionales' => 'Additional Accessories',
         'productsRelated' => 'Related Products',
+        'productWithoutDescription' => 'This product does not have a description',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -280,6 +281,7 @@ $translations = array(
         'productDescription' => 'Descripción del producto',
         'accesoriosAdicionales' => 'Accesorios Adicionales',
         'productsRelated' => 'Productos Relacionados',
+        'productWithoutDescription' => 'Este producto no tiene descripción',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -410,6 +412,7 @@ $translations = array(
         'productDescription' => 'Description du produit',
         'accesoriosAdic' => 'Accessoires supplémentaires',
         'productsRelated' => 'Produits associés',
+        'productWithoutDescription' => 'Ce produit n\'a pas de description',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -540,6 +543,7 @@ $translations = array(
         'productDescription' => 'Descrizione del prodotto',
         'accesoriosAdic' => 'Accessori aggiuntivi',
         'productsRelated' => 'Prodotti correlati',
+        'productWithoutDescription' => 'Questo prodotto non ha una descrizione',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -670,6 +674,7 @@ $translations = array(
         'productDescription' => 'Descrição do produto',
         'accesoriosAdic' => 'Acessórios adicionais',
         'productsRelated' => 'Produtos relacionados',
+        'productWithoutDescription' => 'Este produto não tem descrição',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -800,6 +805,7 @@ $translations = array(
         'productDescription' => 'Opis produktu',
         'accesoriosAdic' => 'Dodatkowe akcesoria',
         'productsRelated' => 'Powiązane produkty',
+        'productWithoutDescription' => 'Ten produkt nie ma opisu',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -929,6 +935,7 @@ $translations = array(
         'productDescription' => 'Productomschrijving',
         'accesoriosAdic' => 'Extra accessoires',
         'productsRelated' => 'Gerelateerde producten',
+        'productWithoutDescription' => 'Dit product heeft geen beschrijving',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -1059,6 +1066,7 @@ $translations = array(
         'productDescription' => 'Produktbeschreibung',
         'accesoriosAdic' => 'Zusätzliches Zubehör',
         'productsRelated' => 'Verwandte Produkte',
+        'productWithoutDescription' => 'Dieses Produkt hat keine Beschreibung',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -1189,6 +1197,7 @@ $translations = array(
         'productDescription' => 'Toote kirjeldus',
         'accesoriosAdic' => 'Lisavarustus',
         'productsRelated' => 'Seotud tooted',
+        'productWithoutDescription' => 'Sellel tootel pole kirjeldust',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1319,5 +1328,6 @@ $translations = array(
         'productDescription' => 'Produktbeskrivning',
         'accesoriosAdic' => 'Extra tillbehör',
         'productsRelated' => 'Relaterade produkter',
+        'productWithoutDescription' => 'Denna produkt har ingen beskrivning',
     ),
 );

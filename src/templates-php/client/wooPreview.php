@@ -550,7 +550,7 @@ if (!empty($row[$productDescription])){
     
     //Si el resultado esta vacio se asigna el mensaje de 'Sin descripcion'
     if (empty($result['translatedText'])){
-        $translatedDescription = 'Sin descripción';
+        $translatedDescription = $withOutDescription;
     } else {
         $translatedDescription = json_decode($result, true)['translatedText'];
     }
@@ -602,7 +602,11 @@ if(!empty($row[$technicalDescriptionLang])){
     }
     curl_close($ch2);
 
-    $tableTranslated = json_decode($result2, true)['translatedText'];
+    if (empty($result['translatedText'])){
+        $tableTranslated = '';
+    } else {
+        $tableTranslated = json_decode($result2, true)['translatedText'];
+    }
 
     //Guardar en la base de datos
     $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
@@ -626,6 +630,7 @@ $accesoriosAdic = $translations[$lang]['accesoriosAdic'];
 $cotizar = $translations[$lang]['client:quote'];
 $cantidad = $translations[$lang]['client:cantidad'];
 $detalles = $translations[$lang]['client:detalles'];
+$withOutDescription = $translations[$lang]['productWithoutDescription'];
 ?>
 
 <div class="row">
