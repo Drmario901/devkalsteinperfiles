@@ -553,14 +553,14 @@ if (!empty($row[$productDescription])){
     //Guardar en la base de datos
     $updateQuery2 = "UPDATE wp_k_products SET $productDescription = '$translatedDescription' WHERE product_aid = '$p_id'";
 
-    if ($conexion->query($updateQuery2) === TRUE) {
+    if ($conexion->real_escape_string($updateQuery2) === TRUE) {
         echo "Record updated successfully";
     } else {
         echo "<br>";
         echo "<br>";
         echo "<br>";
         echo $updateQuery2;
-        
+
     }
 }
 
