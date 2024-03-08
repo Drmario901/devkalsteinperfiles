@@ -559,7 +559,7 @@ if (!empty($row[$productDescription])){
     } else {
         echo "Error updating record: ";
 
-        var_dump($updateQuery2);
+        echo "$updateQuery2";
     }
 }
 
