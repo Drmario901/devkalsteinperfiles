@@ -557,7 +557,7 @@ if (!empty($row[$productDescription])){
     //query
     $query = "UPDATE wp_k_products SET 'product_description_'.$lang = '$translatedDescription' WHERE product_aid = '$p_id'";
 
-    $stmt = $conexion->prepare($query);
+    $stmt = $conexion->prepare($updateQuery2);
     $stmt->bind_param('si', $translatedDescription, $p_id);
 
     if ($stmt->execute()) {
