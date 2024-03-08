@@ -24,12 +24,13 @@
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
-
+            var_dump($resultLines);
 
             $already_printed = [];
                 
             if ($resultLines->num_rows > 0) {
                 while ($value = $resultLines->fetch_assoc()) {
+                
                     // Trim y convertir a minúsculas para la comparación
                     $lineValueLower = mb_strtolower(trim($value[$lineField]), 'UTF-8');
             
