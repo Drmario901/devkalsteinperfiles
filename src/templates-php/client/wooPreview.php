@@ -559,12 +559,12 @@ if (!empty($row[$productDescription])){
         echo "Error updating record: " . $conexion->error;
         
     }
-
-    echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo $updateQuery2;
 }
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo $updateQuery2;
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
 
