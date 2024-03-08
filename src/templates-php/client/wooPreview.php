@@ -553,20 +553,21 @@ if (!empty($row[$productDescription])){
         $translatedDescription = $withOutDescription;
     } else {
         $translatedDescription = json_decode($result, true)['translatedText'];
+
+        //Guardar en la base de datos
+        $updateQuery2 = "UPDATE wp_k_products SET $productDescription = ? WHERE product_aid = ?";
+
+        $stmt = $conexion->prepare($updateQuery2);
+        $stmt->bind_param('si', $translatedDescription, $p_id);
+
+        if ($stmt->execute()) {
+            //echo "Record updated successfully";
+        } else {
+        // echo "Error updating record: ". $stmt->error;
+
+        }
     }
 
-    //Guardar en la base de datos
-    $updateQuery2 = "UPDATE wp_k_products SET $productDescription = ? WHERE product_aid = ?";
-
-    $stmt = $conexion->prepare($updateQuery2);
-    $stmt->bind_param('si', $translatedDescription, $p_id);
-
-    if ($stmt->execute()) {
-        //echo "Record updated successfully";
-    } else {
-       // echo "Error updating record: ". $stmt->error;
-
-    }
 }
 
 
@@ -606,16 +607,18 @@ if(!empty($row[$technicalDescriptionLang])){
         $tableTranslated = '';
     } else {
         $tableTranslated = json_decode($result2, true)['translatedText'];
+
+        //Guardar en la base de datos
+        $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
+
+        if ($conexion->query($updateQuery) === TRUE) {
+            //echo "Record updated successfully";
+        } else {
+            //echo "Error updating record: " . $conexion->error;
+        }
     }
 
-    //Guardar en la base de datos
-    $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
-
-    if ($conexion->query($updateQuery) === TRUE) {
-        //echo "Record updated successfully";
-    } else {
-        //echo "Error updating record: " . $conexion->error;
-    }
+    
 }
 
 
