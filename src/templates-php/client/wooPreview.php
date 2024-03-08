@@ -506,17 +506,23 @@ include __DIR__.'/../../../php/translations.php';
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
+if ($lang === 'ee'){
+    $lang = 'et';
+} else if ($lang === 'se') {
+    $lang = 'sv';
+}
+
 $data = [
     "q" => $description,
     "source" => "en",
-    "target" => 'et',
+    "target" => $lang,
     "format" => "text"
 ];
 
 $data2 = [
     "q" => $table,
     "source" => "en",
-    "target" => 'et',
+    "target" => $lang,
     "format" => "html"
 ];
 
