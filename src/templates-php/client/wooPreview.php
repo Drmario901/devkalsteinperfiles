@@ -552,8 +552,9 @@ if (!empty($row[$productDescription])){
 
     //Guardar en la base de datos
     $updateQuery2 = "UPDATE wp_k_products SET $productDescription = '$translatedDescription' WHERE product_aid = '$p_id'";
+    $safeValue = $conexion->real_escape_string($updateQuery2);
 
-    if ($conexion->real_escape_string($updateQuery2) === TRUE) {
+    if ($conexion->query($safeValue) === TRUE) {
         echo "Record updated successfully";
     } else {
         echo "Error updating record: " . $conexion->error;
