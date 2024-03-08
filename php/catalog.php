@@ -4,7 +4,14 @@
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
 require __DIR__ . '/conexion.php';
+
+include __DIR__.'/translations.php';
+//translateText();
+
+$noDataFound = $translations[$lang]['dataNotFound'];
 
 // require __DIR__ . '/translateText.php';
 // translateText();
@@ -68,7 +75,7 @@ if ($resultado->num_rows > 0) {
     $html .= "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No se encontraron datos</p></center>
+            <center><p style='color: #000;'> $dataNotFound </p></center>
         </div>
     ";
 }
