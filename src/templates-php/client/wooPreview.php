@@ -509,6 +509,19 @@ error_reporting(E_ALL); */
 include __DIR__.'/../../../php/translations.php';
 //translateText();
 
+$empresa = $translations[$lang]['empresa'];
+$pais = $translations[$lang]['client:pais'];
+$fabricante = $translations[$lang]['fabricante'];
+$modelo = $translations[$lang]['client:model'];
+$descuento18 = $translations[$lang]['descuento18'];
+$descripcionProducto = $translations[$lang]['productDescription'];
+$ver = $translations[$lang]['client:seeTable'];
+$accesoriosAdic = $translations[$lang]['accesoriosAdic'];
+$cotizar = $translations[$lang]['client:quote'];
+$cantidad = $translations[$lang]['client:cantidad'];
+$detalles = $translations[$lang]['client:detalles'];
+$withOutDescription = $translations[$lang]['productWithoutDescription'];
+
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
 if ($lang === 'ee'){
@@ -621,19 +634,6 @@ if(!empty($row[$technicalDescriptionLang])){
     
 }
 
-
-$empresa = $translations[$lang]['empresa'];
-$pais = $translations[$lang]['client:pais'];
-$fabricante = $translations[$lang]['fabricante'];
-$modelo = $translations[$lang]['client:model'];
-$descuento18 = $translations[$lang]['descuento18'];
-$descripcionProducto = $translations[$lang]['productDescription'];
-$ver = $translations[$lang]['client:seeTable'];
-$accesoriosAdic = $translations[$lang]['accesoriosAdic'];
-$cotizar = $translations[$lang]['client:quote'];
-$cantidad = $translations[$lang]['client:cantidad'];
-$detalles = $translations[$lang]['client:detalles'];
-$withOutDescription = $translations[$lang]['productWithoutDescription'];
 ?>
 
 <div class="row">
