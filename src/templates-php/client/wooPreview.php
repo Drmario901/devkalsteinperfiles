@@ -293,6 +293,10 @@
     </div>
 </div> */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require __DIR__ . '/../../../php/conexion.php';
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
@@ -314,6 +318,7 @@ $resultado = $conexion->query($consulta);
 $row = mysqli_fetch_array($resultado);
 $count = mysqli_num_rows($resultado);
 
+
 if ($count > 0){
     $name = $row[$productName];
     $maker = $row["product_maker"];
@@ -330,7 +335,7 @@ if ($count > 0){
     $multi = $price * 0.18;
     $disc = round($price - $multi, 2);
     
-    $table = $row["product_technical_description_es"];
+    $table = $row["product_technical_description"];
     
     $used = $type == 'used'? "<p><strong>Condición</strong>: <em>$condition</em></p>" : '';
 
@@ -506,38 +511,111 @@ include __DIR__.'/../../../php/translations.php';
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-$data = [
-    "q" => $description,
-    "source" => "en",
-    "target" => 'et',
-    "format" => "text"
-];
-
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Content-Type: application/json",
-    //"Authorization: Bearer {$api_key}"
-]);
-
-$result = curl_exec($ch);
-if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
+if ($lang === 'ee'){
+    $lang = 'et';
+} else if ($lang === 'se') {
+    $lang = 'sv';
 }
-curl_close($ch);
 
-$translatedDescription = json_decode($result, true)['translatedText'];
+$productDescription = 'product_description_'.$lang;
 
-$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+//Verificar si la descripcion del producto existe en el idioma deseado y si existe se muestra, en caso de que no
+// Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
+if (!empty($row[$productDescription])){
+    $translatedDescription = $row['product_description_'.$lang];
+} else {
+    $data = [
+        "q" => $description,
+        "source" => "en",
+        "target" => $lang,
+        "format" => "html"
+    ];
+    
+    $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Content-Type: application/json",
+        //"Authorization: Bearer {$api_key}"
+    ]);
+    
+    $result = curl_exec($ch);
+    if (curl_errno($ch)) {
+        echo 'Error:' . curl_error($ch);
+    }
+    curl_close($ch);
+    
+    $translatedDescription = json_decode($result, true)['translatedText'];
+
+    //Guardar en la base de datos
+    $updateQuery2 = "UPDATE wp_k_products SET $productDescription = '$translatedDescription' WHERE product_aid = '$p_id'";
+
+    if ($conexion->query($updateQuery2) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conexion->error;
+    }
+}
+
+$technicalDescriptionLang = 'product_technical_description_'.$lang;
+
+//Revisar si la description tecnical existe en el idioma deseado y si existe se muestra, en caso de que no
+// Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
+if($row[$technicalDescriptionLang]){
+    $tableTranslated = $row[$technicalDescriptionLang];
+} else {
+    $data2 = [
+        "q" => $table,
+        "source" => "auto",
+        "target" => $lang,
+        "format" => "html"
+    ];
+
+    $ch2 = curl_init();
+
+    curl_setopt($ch2, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+    curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch2, CURLOPT_POST, 1);
+    curl_setopt($ch2, CURLOPT_POSTFIELDS, json_encode($data2));
+    curl_setopt($ch2, CURLOPT_HTTPHEADER, [
+        "Content-Type: application/json",
+        //"Authorization: Bearer {$api_key}"
+    ]);
+
+    $result2 = curl_exec($ch2);
+
+    if (curl_errno($ch2)) {
+        echo 'Error:' . curl_error($ch2);
+    }
+    curl_close($ch2);
+
+    $tableTranslated = json_decode($result2, true)['translatedText'];
+
+    //Guardar en la base de datos
+    $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
+
+    if ($conexion->query($updateQuery) === TRUE) {
+        //echo "Record updated successfully";
+    } else {
+        //echo "Error updating record: " . $conexion->error;
+    }
+}
+
+
 $empresa = $translations[$lang]['empresa'];
 $pais = $translations[$lang]['client:pais'];
 $fabricante = $translations[$lang]['fabricante'];
 $modelo = $translations[$lang]['client:model'];
 $descuento18 = $translations[$lang]['descuento18'];
+$descripcionProducto = $translations[$lang]['productDescription'];
+$ver = $translations[$lang]['client:seeTable'];
+$accesoriosAdic = $translations[$lang]['accesoriosAdic'];
+$cotizar = $translations[$lang]['client:quote'];
+$cantidad = $translations[$lang]['client:cantidad'];
+$detalles = $translations[$lang]['client:detalles'];
 ?>
 
 <div class="row">
@@ -567,11 +645,11 @@ $descuento18 = $translations[$lang]['descuento18'];
                     <?php
                         if (!$manu_preview){
                             $html = "
-                                <div><span class='quantity d-inline' data-i18n='client:cantidad' >Cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
+                                <div><span class='quantity d-inline' data-i18n='client:cantidad' >$cantidad:</span> <input type='number' class='i-cant d-inline' id='i-cant-woo-$model' product='$model' value='1' style='width: 20mm; margin-left: 2mm; margin-top: -2mm;'></div>
                             ";
 
                             $html.="  
-                                    <button value='$model' class='btnQuo' data-i18n='client:cotizar' >Cotizar</button>
+                                    <button value='$model' class='btnQuo' data-i18n='client:cotizar' >$cotizar</button>
                                     <button class='activeModal' data-bs-toggle='modal' data-bs-target='#cotModal' style='display: none;'></button>
                             ";
 
@@ -582,7 +660,7 @@ $descuento18 = $translations[$lang]['descuento18'];
                                             <input type='hidden' id='ih-accesories-add' value='0'>
                                             <h6 class='accordion-header'>
                                                 <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne' data-i18n='client:accesoriosAdic' >
-                                                    Accesorios adicionales
+                                                    $accesoriosAdic
                                                 </button>
                                             </h6>
                                             <div id='flush-collapseOne' class='accordion-collapse collapse' data-bs-parent='#accordionFlushExample'>
@@ -608,7 +686,7 @@ $descuento18 = $translations[$lang]['descuento18'];
                                                     <span style='flex: 1; margin: 0 10px;'>USD$ $priceAccesorie</span>
                                                 <div style='display: flex; flex-direction: column; align-items: center; text-align: center;'>
                                                     <i class='fa-solid fa-eye btn-view-accessory' style='color: #aaa; flex: 1;' data-id='$idAccesorie'></i>
-                                                    <span data-i18n='client:ver' >Ver</span>
+                                                    <span data-i18n='client:ver' >$ver</span>
                                                 </div>
                                                     
                                                 </div>
@@ -636,7 +714,7 @@ $descuento18 = $translations[$lang]['descuento18'];
 </div>
 <!-- DESCRIPTION -->
 <div>
-    <h4 data-i18n='client:descripcionProducto' >Descripción de producto</h4>
+    <h4 data-i18n='client:descripcionProducto' ><?php echo $descripcionProducto ?></h4>
 
     <p>
         <?php echo $translatedDescription?>
@@ -645,21 +723,21 @@ $descuento18 = $translations[$lang]['descuento18'];
     <!-- RENDER TABLE -->
 
     <?php
-        if (strpos($table, '</table>')){
+        if (strpos($tableTranslated, '</table>')){
             echo "
-            <h4>Detalles</h4>
+            <h4>$detalles</h4>
             <div class='p-prev-table' style='overflow-x: scroll'>
-                $table
+                $tableTranslated
             </div>
             ";
         }
         else {
-            if ($table != ''){
+            if ($tableTranslated != ''){
                 echo "
-                <h4 data-i18n='client:guardar' >Detalles</h4>
+                <h4 data-i18n='client:guardar' >$detalles</h4>
                 <div style='overflow-x: scroll'>
                     <table class='p-prev-table'>
-                        $table
+                        $tableTranslated
                     </table>
                 </div>
                 ";

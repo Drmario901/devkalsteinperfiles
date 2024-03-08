@@ -128,6 +128,9 @@ $translations = array(
         'empresa' => 'Company',
         'descuento18' => '18% discount with pre-orden',
         'fabricante' => 'Manufacturer',
+        'productDescription' => 'Product Description',
+        'accesoriosAdicionales' => 'Additional Accessories',
+        'productsRelated' => 'Related Products',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -274,6 +277,9 @@ $translations = array(
         'empresa' => 'Empresa',
         'descuento18' => '18% de descuento con pre-orden',
         'fabricante' => 'Fabricante',
+        'productDescription' => 'Descripción del producto',
+        'accesoriosAdicionales' => 'Accesorios Adicionales',
+        'productsRelated' => 'Productos Relacionados',
     ),
     'fr' => array(
         'client:itemTabla' => 'Article',
@@ -401,6 +407,9 @@ $translations = array(
         'empresa' => 'Entreprise',
         'descuento18' => '18% de réduction avec pré-commande',
         'fabricante' => 'Fabricant',
+        'productDescription' => 'Description du produit',
+        'accesoriosAdic' => 'Accessoires supplémentaires',
+        'productsRelated' => 'Produits associés',
     ),
     'it' => array(
         'client:itemTabla' => 'Articolo',
@@ -528,6 +537,9 @@ $translations = array(
         'empresa' => 'Azienda',
         'descuento18' => '18% di sconto con pre-ordine',
         'fabricante' => 'Produttore',
+        'productDescription' => 'Descrizione del prodotto',
+        'accesoriosAdic' => 'Accessori aggiuntivi',
+        'productsRelated' => 'Prodotti correlati',
     ),
     'pt' => array(
         'client:itemTabla' => 'Artigo',
@@ -655,6 +667,9 @@ $translations = array(
         'empresa' => 'Empresa',
         'descuento18' => '18% de desconto com pré-encomenda',
         'fabricante' => 'Fabricante',
+        'productDescription' => 'Descrição do produto',
+        'accesoriosAdic' => 'Acessórios adicionais',
+        'productsRelated' => 'Produtos relacionados',
     ),
     'pl' => array(
         'client:itemTabla' => 'Artykuł',
@@ -782,6 +797,9 @@ $translations = array(
         'empresa' => 'Firma',
         'descuento18' => '18% zniżki z pre-orderem',
         'fabricante' => 'Producent',
+        'productDescription' => 'Opis produktu',
+        'accesoriosAdic' => 'Dodatkowe akcesoria',
+        'productsRelated' => 'Powiązane produkty',
     ),
     'nl' => array(
         'client:itemTabla' => 'Artikel',
@@ -908,6 +926,9 @@ $translations = array(
         'empresa' => 'Bedrijf',
         'descuento18' => '18% korting met pre-order',
         'fabricante' => 'Fabrikant',
+        'productDescription' => 'Productomschrijving',
+        'accesoriosAdic' => 'Extra accessoires',
+        'productsRelated' => 'Gerelateerde producten',
     ),
     'de' => array(
         'client:itemTabla' => 'Artikel',
@@ -1035,6 +1056,9 @@ $translations = array(
         'empresa' => 'Firma',
         'descuento18' => '18% Rabatt bei Vorbestellung',
         'fabricante' => 'Hersteller',
+        'productDescription' => 'Produktbeschreibung',
+        'accesoriosAdic' => 'Zusätzliches Zubehör',
+        'productsRelated' => 'Verwandte Produkte',
     ),
     'ee' => array(
         'client:itemTabla' => 'Artikkel',
@@ -1162,6 +1186,9 @@ $translations = array(
         'empresa' => 'Firma',
         'descuento18' => '18% allahindlus eeltellimusega',
         'fabricante' => 'Tootja',
+        'productDescription' => 'Toote kirjeldus',
+        'accesoriosAdic' => 'Lisavarustus',
+        'productsRelated' => 'Seotud tooted',
     ),
     'se' => array(
         'client:itemTabla' => 'Artikel',
@@ -1289,5 +1316,8 @@ $translations = array(
         'empresa' => 'Företag',
         'descuento18' => '18% rabatt med förbeställning',
         'fabricante' => 'Tillverkare',
+        'productDescription' => 'Produktbeskrivning',
+        'accesoriosAdic' => 'Extra tillbehör',
+        'productsRelated' => 'Relaterade produkter',
     ),
 );
