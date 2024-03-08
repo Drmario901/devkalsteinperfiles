@@ -513,9 +513,11 @@ if ($lang === 'ee'){
     $lang = 'sv';
 }
 
+$productDescription = 'product_description_'.$lang;
+
 //Verificar si la descripcion del producto existe en el idioma deseado y si existe se muestra, en caso de que no
 // Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
-if ($row['product_description_'.$lang] != '' && $row['product_description_'.$lang] != null){
+if ($row[$productDescription] != '' && $row[$productDescription] != null){
     $translatedDescription = $row['product_description_'.$lang];
 } else {
     $data = [
@@ -545,8 +547,8 @@ if ($row['product_description_'.$lang] != '' && $row['product_description_'.$lan
     $translatedDescription = json_decode($result, true)['translatedText'];
 
     //Guardar en la base de datos
-    $updateQuery = "UPDATE wp_k_products SET product_description_$lang = '$translatedDescription' WHERE product_aid = '$p_id'";
-    $conexion->query($updateQuery);
+    $updateQuery2 = "UPDATE wp_k_products SET product_description_$lang = '$translatedDescription' WHERE product_aid = '$p_id'";
+    $conexion->query($updateQuery2);
 }
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
