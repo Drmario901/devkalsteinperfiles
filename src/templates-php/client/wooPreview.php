@@ -548,26 +548,26 @@ if (!empty($row[$productDescription])){
     }
     curl_close($ch);
     
-    $translatedDescription = json_decode($result, true)['translatedText'];
+    //Si el resultado esta vacio se asigna el mensaje de 'Sin descripcion'
+    if (empty($result['translatedText'])){
+        $translatedDescription = 'Sin descripción';
+    } else {
+        $translatedDescription = json_decode($result, true)['translatedText'];
+    }
 
     //Guardar en la base de datos
     $updateQuery2 = "UPDATE wp_k_products SET $productDescription = ? WHERE product_aid = ?";
-    $safeValue = $conexion->real_escape_string($updateQuery2);
 
-    //query
-    $query = "UPDATE wp_k_products SET 'product_description_'.$lang = '$translatedDescription' WHERE product_aid = '$p_id'";
-
-    $stmt = $conexion->prepare($query);
+    $stmt = $conexion->prepare($updateQuery2);
     $stmt->bind_param('si', $translatedDescription, $p_id);
 
     if ($stmt->execute()) {
-        echo "Record updated successfully";
+        //echo "Record updated successfully";
     } else {
-        echo "Error updating record: ". $stmt->error;
+       // echo "Error updating record: ". $stmt->error;
 
     }
 }
-
 
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
