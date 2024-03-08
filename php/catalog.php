@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 require __DIR__ . '/conexion.php';
 
-require __DIR__ . '/translateText.php';
+require __DIR__ . './translateText.php';
 translateText();
 
 $cate = $conexion->real_escape_string($_POST['category']);
