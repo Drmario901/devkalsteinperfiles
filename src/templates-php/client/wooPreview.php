@@ -515,7 +515,7 @@ if ($lang === 'ee'){
 
 //Verificar si la descripcion del producto existe en el idioma deseado y si existe se muestra, en caso de que no
 // Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
-if ($row['product_description_'.$lang]){
+if ($row['product_description_'.$lang] != '' && $row['product_description_'.$lang] != null){
     $translatedDescription = $row['product_description_'.$lang];
 } else {
     $data = [
