@@ -528,7 +528,7 @@ if (!empty($row[$productDescription])){
         "q" => $description,
         "source" => "auto",
         "target" => $lang,
-        "format" => "html"
+        "format" => "text"
     ];
     
     $ch = curl_init();
