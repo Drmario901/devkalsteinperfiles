@@ -548,7 +548,12 @@ if (!empty($row[$productDescription])){
     }
     curl_close($ch);
     
-    $translatedDescription = json_decode($result, true)['translatedText'];
+    //Si el resultado esta vacio se asigna el mensaje de 'Sin descripcion'
+    if (empty($result)){
+        $translatedDescription = 'Sin descripción';
+    } else {
+        $translatedDescription = json_decode($result, true)['translatedText'];
+    }
 
     //Guardar en la base de datos
     $updateQuery2 = "UPDATE wp_k_products SET $productDescription = ? WHERE product_aid = ?";
