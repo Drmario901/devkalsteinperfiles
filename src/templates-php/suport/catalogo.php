@@ -79,7 +79,7 @@
             <?php
                 $banner_img = 'Header-fabricante-IMG.png';
 
-                require __DIR__. '/../../../php/translateTextBanner.php';
+                // require __DIR__. '/../../../php/translateTextBanner.php';
                 $banner = 'banner_text_catalog';
                 $banner_text = translateTextBanner($banner);
                 include 'banner.php';
