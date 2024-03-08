@@ -513,48 +513,31 @@ if ($lang === 'ee'){
     $lang = 'sv';
 }
 
-$productDescription = 'product_description_'.$lang;
+$data = [
+    "q" => $description,
+    "source" => "en",
+    "target" => $lang,
+    "format" => "html"
+];
 
-//Verificar si la descripcion del producto existe en el idioma deseado y si existe se muestra, en caso de que no
-// Se procede a traducir con libreTranslate y posteriormente se guarda la traduccion en la base de datos para futuras consultas
-if ($row[$productDescription] != '' && $row[$productDescription] != null){
-    $translatedDescription = $row['product_description_'.$lang];
-} else {
-    $data = [
-        "q" => $description,
-        "source" => "en",
-        "target" => $lang,
-        "format" => "html"
-    ];
-    
-    $ch = curl_init();
-    
-    curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Content-Type: application/json",
-        //"Authorization: Bearer {$api_key}"
-    ]);
-    
-    $result = curl_exec($ch);
-    if (curl_errno($ch)) {
-        echo 'Error:' . curl_error($ch);
-    }
-    curl_close($ch);
-    
-    $translatedDescription = json_decode($result, true)['translatedText'];
+$ch = curl_init();
 
-    //Guardar en la base de datos
-    $updateQuery2 = "UPDATE wp_k_products SET $productDescription = '$translatedDescription' WHERE product_aid = '$p_id'";
+curl_setopt($ch, CURLOPT_URL, "http://185.28.22.84:5000/translate");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Content-Type: application/json",
+    //"Authorization: Bearer {$api_key}"
+]);
 
-    if ($conexion->query($updateQuery2) === TRUE) {
-        echo "Record updated successfully";
-    } else {
-        echo "Error updating record: " . $conexion->error;
-    }
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
 }
+curl_close($ch);
+
+$translatedDescription = json_decode($result, true)['translatedText'];
 
 $technicalDescriptionLang = 'product_technical_description_'.$lang;
 
@@ -594,9 +577,9 @@ if($row[$technicalDescriptionLang]){
     $updateQuery = "UPDATE wp_k_products SET $technicalDescriptionLang = '$tableTranslated' WHERE product_aid = '$p_id'";
 
     if ($conexion->query($updateQuery) === TRUE) {
-        echo "Record updated successfully";
+        //echo "Record updated successfully";
     } else {
-        echo "Error updating record: " . $conexion->error;
+        //echo "Error updating record: " . $conexion->error;
     }
 }
 
