@@ -83,7 +83,7 @@
                 $banner = 'banner_text_catalog';
                 $banner_text = translateTextBanner($banner);
                 // include 'banner.php';
-                include __DIR__.'/../manufacturer/banner.php';
+                // include __DIR__.'/../manufacturer/banner.php';
             ?>
         
             <style>
