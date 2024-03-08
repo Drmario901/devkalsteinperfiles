@@ -1,8 +1,11 @@
 <?php
 require __DIR__ . '/conexion.php';
+require __DIR__ . '/translateText.php';
 
 /* require 'translateText.php';
-translateText(); */
+ */
+
+ translateText();
 
 $cate = $conexion->real_escape_string($_POST['category']);
 $q = $conexion->real_escape_string($_POST['inputSearch']);
@@ -63,7 +66,7 @@ if ($resultado->num_rows > 0) {
     $html .= "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No se encontraron datoszzz</p></center>
+            <center><p style='color: #000;' data-i17n='client:dataNotFound'>No se encontraron datos</p></center>
         </div>
     ";
 }
