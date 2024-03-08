@@ -557,7 +557,9 @@ if (!empty($row[$productDescription])){
     if ($conexion->query($safeValue) === TRUE) {
         echo "Record updated successfully";
     } else {
-        echo "Error updating record: " . $conexion->error;
+        echo "Error updating record: ";
+
+        var_dump($updateQuery2);
     }
 }
 
