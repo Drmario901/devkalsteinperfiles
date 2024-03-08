@@ -63,7 +63,7 @@ if ($resultado->num_rows > 0) {
     $html .= "
         <div class='contentNoDataQuote'>
             <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-            <center><p style='color: #000;'>No se encontraron datosasdadsa</p></center>
+            <center><p style='color: #000;'>No se encontraron datoszzz</p></center>
         </div>
     ";
 }
@@ -110,4 +110,5 @@ $response = array(
 echo json_encode($response);
 $conexion->close();
 ?>
+
 
