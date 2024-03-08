@@ -565,6 +565,9 @@ $pais = $translations[$lang]['client:pais'];
 $fabricante = $translations[$lang]['fabricante'];
 $modelo = $translations[$lang]['client:model'];
 $descuento18 = $translations[$lang]['descuento18'];
+$descripcionProducto = $translations[$lang]['productDescription'];
+$ver = $translations[$lang]['client:seeTable'];
+$accesoriosAdic = $translations[$lang]['accesoriosAdic'];
 ?>
 
 <div class="row">
@@ -635,7 +638,7 @@ $descuento18 = $translations[$lang]['descuento18'];
                                                     <span style='flex: 1; margin: 0 10px;'>USD$ $priceAccesorie</span>
                                                 <div style='display: flex; flex-direction: column; align-items: center; text-align: center;'>
                                                     <i class='fa-solid fa-eye btn-view-accessory' style='color: #aaa; flex: 1;' data-id='$idAccesorie'></i>
-                                                    <span data-i18n='client:ver' >Ver</span>
+                                                    <span data-i18n='client:ver' >$ver</span>
                                                 </div>
                                                     
                                                 </div>
@@ -663,7 +666,7 @@ $descuento18 = $translations[$lang]['descuento18'];
 </div>
 <!-- DESCRIPTION -->
 <div>
-    <h4 data-i18n='client:descripcionProducto' >Descripción de producto</h4>
+    <h4 data-i18n='client:descripcionProducto' ><?php echo $descripcionProducto ?></h4>
 
     <p>
         <?php echo $translatedDescription?>
