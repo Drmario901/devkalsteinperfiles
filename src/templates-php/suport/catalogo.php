@@ -3,6 +3,8 @@
         include 'navdar.php';
         $sql = "SELECT DISTINCT M_nombre_product FROM wp_manuales";
         $res = $conexion->query($sql);
+        $consulta = "SELECT DISTINCT catalog_category FROM wp_catalogs ORDER BY catalog_category ASC";
+        $res2 = $conexion->query($consulta);
     ?>
     <script>
         let page = "catalog";
