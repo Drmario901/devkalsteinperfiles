@@ -1,5 +1,5 @@
 <div id='productContainer' class='row mt-3' style='width: 100%'>
-    <h3>Productos relacionados</h3>
+    <h3 data-i18n="client:relatedProducts" >Productos relacionados</h3>
     <?php
         if ($subcategory == NULL || $subcategory == "") {
             $queryRelated = "SELECT product_model, product_aid FROM wp_k_products WHERE product_category = '$category' AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_group = '0' AND product_type IN ('sell')";
@@ -9,9 +9,17 @@
         }
         
         $resultRelated = $conexion->query($queryRelated);
+
+        include __DIR__.'/../../../../php/translations.php';
         
         $relatedModels = array();
         $relatedModelIDs = array();
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+        //si $lang = 'en' se quita el sufijo '_es' de la variable $productName
+        $productName = $lang == 'en' ? 'product_name' : 'product_name_'.$lang;
+
+        $ver = $translations[$lang]['client:seeTable'];
         
         if ($resultRelated->num_rows > 0){
             while ($row = $resultRelated->fetch_assoc()) {
@@ -42,7 +50,7 @@
             $count = mysqli_num_rows($resultado);
         
             if ($count > 0){
-                $name = $row["product_name_es"];
+                $name = $row[$productName];
                 $model = $row["product_model"];
                 $brand = $row["product_brand"];
                 $description = $row["product_description"];
@@ -59,7 +67,7 @@
                                 </div>
                                 <h6 class='card-title' style='font-size: 1em; margin-bottom: 0; word-break: break-all'>$name</h6>
                                 <div class='btnActions'>
-                                    <button class='img-preview-quote btnQuoClone' value='$p_id'>Ver</button>
+                                    <button class='img-preview-quote btnQuoClone' value='$p_id'>$ver</button>
                                 </div>
                             </div>
                         </div>
