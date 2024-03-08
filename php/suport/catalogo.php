@@ -5,7 +5,8 @@
     error_reporting(E_ALL);
     require __DIR__ . '/../conexion.php';
 
-    include 'translateText.php';
+    // include 'translateText.php';
+    require __DIR__ . '/../translateText.php';
     translateText();
 
 
