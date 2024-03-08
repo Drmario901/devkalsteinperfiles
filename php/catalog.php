@@ -11,7 +11,7 @@ require __DIR__ . '/conexion.php';
 require_once __DIR__.'/translations.php';
 //translateText();
 
-$dataNotFound = $translations[$lang]['dataNotFound'];
+$dataNotFound = $translations[$lang]['client:dataNotFound'];
 
 // require __DIR__ . '/translateText.php';
 // translateText();
