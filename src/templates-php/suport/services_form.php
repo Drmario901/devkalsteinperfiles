@@ -136,142 +136,159 @@
 <?php session_start(); $a = !$add ? 'A' : '' ?>
 
 <div class="row tm-edit-product-form">
-    <div class="col-12"><div class="stock-title">Type de service</div></div>
+    <form id="addservices_form">
+    <div class="col-12"><div class="stock-title" data-i18n="support:serviceType">Tipo de Servicio</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Titre du service</label>
+            <label data-i18n="support:labelServiceTitle">Titulo de Servicio</label>
             <input
-                id="SEnombre"
-                name="name"
+                id="SE<?php echo$a?>nombre"
+                name="service"
                 type="text"
                 class="form-control validate"
-                placeholder="ex : Installation d'un autoclave"
+                placeholder="ej: Instalación de Autoclave"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Entreprise</label>
+            <label data-i18n="support:labelCompany">Compañia</label>
             <input
-                id="SEcompany"
+                id="SE<?php echo$a?>company"
                 type="text"
+                name="service_company"
                 class="form-control validate"
                 value="<?php echo $acc_company ?>"
-                placeholder="nom de l'entreprise"
+                data-placeholder="support:nombreCompany"
+                placeholder="Nombre de Compañia"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Agent</label>
+            <label data-i18n="support:agente">Agente</label>
             <input
-                id="SEagente"
+                id="SE<?php echo$a?>agente"
                 type="text"
+                name="service_agente"
                 class="form-control validate"
-                value="<?php echo $acc_name?>"
-                placeholder="nom et prénom"
+                value="<?php echo $acc_name; echo $acc_lname ?>"
+                data-placeholder="support:nombreApellido"
+                placeholder="nombre y apellido"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <!-- HACER QUE SE REGISTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-            <label for="Email">Téléphone</label>
+            <label for="Email" data-i18n="support:telefono">Telefono</label>
             <input
-                id="SEtelefono"
+                id="SE<?php echo$a?>telefono"
                 type="number"
                 class="form-control validate"
                 value="<?php echo $acc_correo; ?>"
-                placeholder="numéro de téléphone"
+                data-placeholder="client:numeroTlf"
+                placeholder=""
+                name="service_telefono"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Email">Courriel</label>
+            <label for="Email" data-i18n="support:labelCorreo">Correo</label>
             <input
-                id="SEcorreo"
+                id="SE<?php echo$a?>correo"
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_correo; ?>"
-                placeholder="courriel de contact"
+                data-placeholder="client:direccionCorreo"
+                placeholder="Correo de contacto"
+                name="service_correo"
             />
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">Adresse</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:labelDireccion">Dirección</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Pays</label>
-            <select id="SEpais" class="tm-select-accounts" name="category">
-                <option selected value='0'>Choisir une option</option>
+            <label for="Level" data-i18n="support:pais">Pais</label>
+            <select id="SE<?php echo$a?>pais" class="tm-select-accounts" name="category">
+                <option selected value='0' data-i18n="support:selectOption">Elige una Opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Adresse</label>
+            <label data-i18n="support:labelDireccion">Dirección</label>
             <input
-                id="SEdireccion"
+                id="SE<?php echo$a?>direccion"
                 type="text"
+                name="service_direccion"
                 class="form-control validate"
-                placeholder="Adresse"
+                data-placeholder="client:direccionS"
+                placeholder="Dirección"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>État</label>
+            <label data-i18n="support:labelEstadoOpcional">Estado (opcional?)</label>
             <input
-                id="SEestadoLugar"
+                id="SE<?php echo$a?>estadoLugar"
                 type="text"
+                name="service_estadolugar"
                 class="form-control validate"
-                placeholder="État"
+                data-placeholder="client:estatus"
+                placeholder="Estado"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Ville</label>
+            <label for="name" data-i18n="support:labelCiudadOpcional">Ciudad (opcional?)</label>
             <input
-                id="SEciudad"
+                id="SE<?php echo$a?>ciudad"
                 type="text"
+                name="service_ciudad"
                 class="form-control validate"
-                placeholder="Ville"
+                placeholder="Ciudad"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Province</label>
+            <label for="name" data-i18n="support:labelProvinciaOpcional">Provincia (opcional?)</label>
             <input
-                id="SEprovincia"
+                id="SE<?php echo$a?>provincia"
                 type="text"
+                name="service_provincia"
                 class="form-control validate"
-                placeholder="province"
+                placeholder="Provincia"
             />
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">A propos du produit</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:aboutProduct">Acerca del producto</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Catégorie de produits</label>
-            <select id="SEcategory" class="custom-select tm-select-accounts">
-                <option selected value='0'>Choisir une option</option>
+            <label for="Level" data-i18n="support:productCategory">Categoria de Producto</label>
+            <select id="SE<?php echo$a?>category" name="service_category" class="custom-select tm-select-accounts">
+                <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-        <label for="Level">Status</label>
-            <select id="SEestado" class="custom-select tm-select-accounts">
-                <option selected value='0'>Choisir une option</option>
-                <option value="activé">activé</option>
-                <option value="désactivé">désactivé</option>
+        <label for="Level" data-i18n="support:labelEstado">Status</label>
+            <select id="SE<?php echo$a?>estado" class="custom-select tm-select-accounts" name="service_estado">
+                <option value='0' selected data-i18n="support:selectOption">Elige una opción</option>
+                <option value="Activated">Activado</option>
+                <option value="Disabled">Desactivado</option>
             </select>
         </div>
-        <div class="col-12 col-lg-4">
-            <label for="name">Temps estimé</label>
+        <div class="col-12 col-md-12 col-lg-4">
+            <label for="name" data-i18n="support:estimatedTime">Tiempo Estimado</label>
             <input
-                id="SEtiempoEstimado"
+                id="SE<?php echo$a?>tiempoEstimado"
                 type="text"
+                name="service_tiempo"
                 class="form-control validate"
-                placeholder="ex : 3 jours"
+                placeholder="ej: 3 dias"
             />
         </div>
         <div class="col-12">
-            <label for="description">Description</label>
+            <label for="description" data-i18n="support:description" >Descripción</label>
             <textarea
-                id="SEdescription"                   
+                id="SE<?php echo$a?>Descripción"                   
                 class="form-control validate"
                 rows="5"
-                placeholder="décrire ce que vous proposez"
+                placeholder="describe what you are offering"
+                name="service_description"
             ></textarea>
         </div>
     </div>
