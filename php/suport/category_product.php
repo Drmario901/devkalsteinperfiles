@@ -4,11 +4,11 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $descriptionField = "product_category_" . $lang;
 
-    require_once __DIR__.'/../translations.php';
-    //translateText();
+    require_once __DIR__.'/../translateText.php';
+    translateText();
 
-    $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
-    $dataNotFound = $translations[$lang]['client:dataNotFound'];
+    // $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
+    // $dataNotFound = $translations[$lang]['client:dataNotFound'];
 
 	// $salida = "<option selected value='0' style='color: #000 !important;'>Choisir une option</option>";
 
@@ -25,14 +25,14 @@
         $subField = "product_subcategory";
     }
 
-    echo $elegirOpcion;
+    // echo $elegirOpcion;
 
 
     $consulta = "SELECT $descriptionField FROM wp_k_products ORDER BY $descriptionField ASC";
     $resultado = $conexion->query($consulta);
     $categorys = [];
 
-	$salida = "<option selected value='0' style='color: #000 !important;'> elegir opcionnn </option>";
+	$salida = "<option selected value='0' style='color: #000 !important;' data-i17n='client:eligeOpcion'> Elegir opcion </option>";
 
 	// if ($resultado->num_rows > 0) {
 	// 	while ($value = $resultado->fetch_assoc()) {
@@ -56,7 +56,7 @@
             }
         }
     } else {
-        $salida .= "<div class='nodatos'><h5>$dataNotFound</h5></div>";
+        $salida .= "<div class='nodatos'><h5>Datos no encontrados</h5></div>";
     }
 	
 	foreach ($categorys as $value) {
