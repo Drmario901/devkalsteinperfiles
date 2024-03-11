@@ -4323,8 +4323,8 @@ jQuery(document).ready(function ($) {
       data: { id },
     })
       .done(function (response) {
+        console.log(response);
         let data = JSON.parse(response);
-        console.log(data);
         $("#preview-item").html(data);
       })
       .fail(function () {
