@@ -4324,7 +4324,7 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         let data = JSON.parse(response);
-        $("#preview-item").html(data.preview);
+        $("#preview-item").html(data);
       })
       .fail(function () {
         console.log("errorrr");
@@ -4332,10 +4332,9 @@ jQuery(document).ready(function ($) {
   }
 
   $(document).on("click", "#productPreview", function () {
-    getPreviewProduct($(this).val());
-
     // get the id from the attribute data-preview
     let id = $(this).attr("data-preview");
+    getPreviewProduct(id);
 
     console.log(id, "Click previeww");
   });
