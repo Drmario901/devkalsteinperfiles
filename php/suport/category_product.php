@@ -32,7 +32,7 @@
     $resultado = $conexion->query($consulta);
     $categorys = [];
 
-	$salida = "<option selected value='0' style='color: #000 !important;'> $elegirOpcion </option>";
+	$salida = "<option selected value='0' style='color: #000 !important;'> elegir opcionnn </option>";
 
 	// if ($resultado->num_rows > 0) {
 	// 	while ($value = $resultado->fetch_assoc()) {
