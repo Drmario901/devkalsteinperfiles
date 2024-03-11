@@ -132,9 +132,9 @@
                                     <td style=''>$currency $price</td>
                                     <td>$date</td>
                                     <td>
-                                        <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id' data-i18n='manofacturer:eliminar'>delete</button>
+                                        <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id'>delete</button>
                                         <br>
-                                        <button class='material-symbols-rounded'  id='btnEditProduct' value='$id' data-i18n='manofacturer:editar'>edit</button>
+                                        <button class='material-symbols-rounded'  id='btnEditProduct' value='$id'>edit</button>
                                         <br>
                                         <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/productos/prevista/?id=$id'><i class='fa-solid fa-eye btn-details' style='color: #000 !important; font-size: 16px;'></i></a>
                                     </td>
