@@ -1619,7 +1619,7 @@
             wp_enqueue_style( 'email-style', plugins_url('src/suport/css/email.style.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/suport/js/nav.js',__FILE__),array('jquery'));
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
-            wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
+            wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_STOCK' ) ) {
