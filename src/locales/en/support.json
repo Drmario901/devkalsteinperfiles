@@ -126,5 +126,6 @@
   "productCategory": "Product Category",
   "estimatedTime": "Estimated Time",
   "placeholderFirstNameLastName": "First and Last Name",
-  "pais": "Country"
+  "pais": "Country",
+  "catalogos": "Catalogs"
 }
