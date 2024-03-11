@@ -804,6 +804,7 @@
             //navbar script
             wp_enqueue_script('nav', plugins_url('src/js/nav.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
+            
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery'));
             //INBOX
             wp_enqueue_style( 'email-style', plugins_url('src/distributor/css/email.style.css', __FILE__));
