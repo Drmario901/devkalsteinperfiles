@@ -4324,6 +4324,7 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         let data = JSON.parse(response);
+        console.log(data);
         $("#preview-item").html(data);
       })
       .fail(function () {
