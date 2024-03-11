@@ -32,7 +32,7 @@
             <h5 data-i18n="manofacturer:atencionCliente">Atención al cliente</h5>
             <ul>
                 <li class="footer-item">
-                    <a href="#" data-i18n="manofacturer:ordenes">Chatea en línea</a>
+                    <a href="#" data-i18n="manofacturer:chateaLinea">Chatea en línea</a>
                 </li>
     
                 <li class="footer-item">
