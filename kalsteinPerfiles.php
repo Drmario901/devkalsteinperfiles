@@ -1687,8 +1687,8 @@
             wp_enqueue_style( 'banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('quote-script-js', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinCotizacion/assets/js/script.cot2.js', array('jquery'), true);
-            wp_enqueue_style( 'quote-css', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinCotizacion/assets/css/styles.cot.css', true);
+            wp_enqueue_script('quote-script-js', 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/js/script.cot2.js', array('jquery'), true);
+            wp_enqueue_style( 'quote-css', 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/css/styles.cot.css', true);
             wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js',__FILE__),array('jquery'));
             wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js',__FILE__),array('jquery'));
             wp_enqueue_script('pursaching-script', plugins_url('src/distributor/js/pursaching.js',__FILE__),array('jquery'));
