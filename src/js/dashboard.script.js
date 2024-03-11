@@ -4316,5 +4316,25 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  function getPreviewProduct(id) {
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/wooPreview.php",
+      type: "POST",
+      data: { id },
+    })
+      .done(function (response) {
+        let data = JSON.parse(response);
+        $("#preview-item").html(data.preview);
+      })
+      .fail(function () {
+        console.log("error");
+      });
+  }
+
+  $(document).on("click", "#productPreview", function () {
+    getPreviewProduct($(this).val());
+    console.log($(this).val());
+  });
+
   setInterval(keepSessionAlive, 300000);
 });
