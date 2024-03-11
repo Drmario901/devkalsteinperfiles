@@ -4334,7 +4334,10 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#productPreview", function () {
     getPreviewProduct($(this).val());
 
-    console.log($(this).val(), "Click previeww");
+    // get the id from the attribute data-preview
+    let id = $(this).attr("data-preview");
+
+    console.log(id, "Click previeww");
   });
 
   setInterval(keepSessionAlive, 300000);
