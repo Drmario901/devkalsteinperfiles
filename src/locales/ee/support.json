@@ -126,5 +126,6 @@
   "productCategory": "Tootekategooria",
   "estimatedTime": "Eeldatav aeg",
   "placeholderFirstNameLastName": "Ees- ja perekonnanimi",
-  "pais": "Riik"
+  "pais": "Riik",
+  "catalogos": "Kataloogid"
 }

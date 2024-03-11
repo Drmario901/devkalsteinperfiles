@@ -30,8 +30,8 @@
         ?>
 
         <nav class="nav nav-borders">
-            <div id="catalogs-manuals-widget" class="nav-link active" href="#" style='cursor: pointer'>Manuales</div>
-            <div id="catalogs-catalogs-widget" class="nav-link" href="#" style='cursor: pointer'>Catalogos</div>
+            <div id="catalogs-manuals-widget" class="nav-link active" href="#" style='cursor: pointer'  data-i18n="support:manuals">Manuales</div>
+            <div id="catalogs-catalogs-widget" class="nav-link" href="#" style='cursor: pointer' data-i18n="support:catalogos">Catalogos</div>
         </nav>
 
         <br>
