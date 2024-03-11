@@ -1,195 +1,167 @@
 jQuery(document).ready(function ($) {
-  const cookieLng = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("language="))
-    .split("=")[1];
-  let alertsTranslations = {};
-
-  // cargar json de traducciones
-  const loadTranslations = (lng) => {
-    return fetch(
-      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-    )
-      .then((response) => response.json())
-      .then((translation) => {
-        // save in a global variable
-        alertsTranslations = translation;
-      });
-  };
-
-  loadTranslations(cookieLng);
-
   //Funcion para mostrar la tabla de reportes
-  let category = $("#category").val();
+  let pagina = $(".pagina");
+  let sig = $(".sig");
+  let prev = $(".prev");
+  let body = $("#tblListService");
+  let page = pagina.text();
   let status = $("#estatus").val();
-  let inputSearch = $("#searchreport").val();
+  let category = $("#category").val();
 
-  tablaconsulta(inputSearch, status, category);
-
-  function tablaconsulta(inputSearch, status, category) {
+  function tablaconsulta(status, category, page, error) {
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
       type: "POST",
-      data: { inputSearch, status, category },
+      data: { status, category, page },
     })
       .done(function (respuesta) {
-        $("#report-fails").html(respuesta);
-        tblListServicePagination();
+        // console.log(respuesta)
+        respuesta = JSON.parse(respuesta);
+        body.html(respuesta.html);
+        page = respuesta.pagina;
+        pagina.text(page);
+        page <= 1 ? prev.attr("disabled", "") : prev.removeAttr("disabled");
+        page * 5 >= respuesta.total
+          ? sig.attr("disabled", "")
+          : sig.removeAttr("disabled");
+        // console.log(page)
       })
       .fail(function () {
-        console.log("error");
+        console.log("errorrrr", error);
       });
   }
 
-  function tblListServicePagination() {
-    function tableContent(nextPage) {
-      $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
-        type: "GET",
-        data: { e: nextPage },
-        success: function (data) {
-          var tableContent = $(data).find("#tblListService").html();
-
-          if (tableContent.trim() === "") {
-            return;
-          }
-
-          var currentPage = nextPage;
-          $("#currentPageIndicatorService").text(
-            `${alertsTranslations.pagina}: ` + currentPage
-          );
-
-          $("#tblListService").html(tableContent);
-
-          $(".pagination #form-next-service input[name=e]").val(
-            parseInt(currentPage) + 1
-          );
-          let prev = parseInt(currentPage) > 1 ? parseInt(currentPage) - 1 : 1;
-          $(".pagination #form-previous-service input[name=e]").val(prev);
-        },
-        error: function () {
-          alert("Error charging quote data.");
-          iziToast.error({
-            title: alertsTranslations.error,
-            message: alertsTranslations.cargarCotizacionError,
-            position: "topRight",
-          });
-        },
-      });
-    }
-
-    $(".pagination #form-next-service").submit(function (e) {
-      e.preventDefault();
-      var nextPage = $(this).find("input[name=e]").val();
-      console.log(nextPage);
-      tableContent(nextPage);
-    });
-
-    $(".pagination #form-previous-service").submit(function (e) {
-      e.preventDefault();
-      var prevPage = $(this).find("input[name=e]").val();
-      tableContent(prevPage);
-    });
-  }
-
-  $(document).on("keyup", "#searchreport", function () {
-    let inputSearch = $(this).val();
-    let category = $("#category").val();
-    let status = $("#estatus").val();
-    tablaconsulta(inputSearch, status, category);
+  tablaconsulta(status, category, page);
+  sig.click((e) => {
+    sig.attr("disable") ? e.preventDefault() : pagina.text(page++);
+    tablaconsulta($("#estatus").val(), $("#category").val(), page);
+  });
+  prev.click((e) => {
+    prev.attr("disable") ? e.preventDefault() : pagina.text(page--);
+    tablaconsulta($("#estatus").val(), $("#category").val(), page);
   });
 
   $(document).on("change", "#estatus", function () {
     let status = $(this).val();
     let category = $("#category").val();
-    let inputSearch = $("#searchreport").val();
-    tablaconsulta(inputSearch, status, category);
+    tablaconsulta(status, category, page);
   });
 
   $(document).on("change", "#category", function () {
     let category = $(this).val();
     let status = $("#estatus").val();
-    let inputSearch = $("#searchreport").val();
-    tablaconsulta(inputSearch, status, category);
+    tablaconsulta(status, category, page);
   });
-});
 
-jQuery(document).ready(function ($) {
-  const rcoma = (str) => {
-    // Verifica si str es undefined o no
-    if (typeof str === "undefined") {
-      // Retorna una cadena vacía o algún valor predeterminado
-      return "";
-    }
-    // Si str no es undefined, realiza la sustitución como antes
-    return str.replace(/'/g, "\\'").replace(/\//g, "");
-  };
-
-  $(document).on("click", "#Register_service", function (e) {
-    // const rcoma = (str) => {
-    //   return str.replace(/'/g, /\'/).replace(/\//g, "");
-    // };
-
-    let SE_servicio = rcoma($("#SEnombre").val());
-    let SE_company = rcoma($("#SEcompany").val());
-    let SE_agente = rcoma($("#SEagente").val());
-    let SE_telefono = rcoma($("#SEtelefono").val());
-    let SE_correo = rcoma($("#SEcorreo").val());
-
-    let SE_pais = rcoma($("#SEpais").val());
-    let SE_direccion = rcoma($("#SEdireccion").val());
-    let SE_estadolugar = rcoma($("#SEestadoLugar").val());
-    let SE_ciudad = rcoma($("#SEciudad").val());
-    let SE_provincia = rcoma($("#SEprovincia").val());
-
-    let SE_category = rcoma($("#SEcategory").val());
-    let SE_estado = rcoma($("#SEestado").val());
-    let SE_tiempo = rcoma($("#SEtiempoEstimado").val());
-    let SE_descripcion = rcoma($("#SEdescription").val());
-
-    console.log(SE_servicio);
+  $(document).on("click", "#Register_service", function () {
+    let SE_servicio = $("#SEnombre").val();
+    let SE_company = $("#SEcompany").val();
+    let SE_agente = $("#SEagente").val();
+    let SE_telefono = $("#SEtelefono").val();
+    let SE_correo = $("#SEcorreo").val();
+    let SE_pais = $("#SEpais").val();
+    let SE_direccion = $("#SEdireccion").val();
+    let SE_estadolugar = $("#SEestadoLugar").val();
+    let SE_ciudad = $("#SEciudad").val();
+    let SE_provincia = $("#SEprovincia").val();
+    let SE_category = $("#SEcategory").val();
+    let SE_estado = $("#SEestado").val();
+    let SE_tiempo = $("#SEtiempoEstimado").val();
+    let SE_descripcion = $("#SEdescription").val();
 
     let err_msg = "";
 
-    if (SE_servicio === "0") {
-      err_msg == alertsTranslations.emptyName;
+    if (SE_servicio === "") {
+      iziToast.error({
+        title: "Erreur",
+        message: "name empty",
+        position: "center",
+      });
     } else {
-      if (SE_category === "0") {
-        err_msg == alertsTranslations.emptyCategory;
+      if (SE_category === "") {
+        iziToast.error({
+          title: "Erreur",
+          message: "category empty",
+          position: "center",
+        });
       } else {
-        if (SE_company === "0") {
-          err_msg == alertsTranslations.emptyCompanyName;
+        if (SE_company === "") {
+          iziToast.error({
+            title: "Erreur",
+            message: "company name empty",
+            position: "center",
+          });
         } else {
           if (SE_pais === "0") {
-            err_msg == alertsTranslations.countryNameEmpty;
+            iziToast.error({
+              title: "Erreur",
+              message: "country name empty",
+              position: "center",
+            });
           } else {
-            if (SE_direccion === "0") {
-              err_msg == alertsTranslations.addressEmpty;
+            if (SE_direccion === "") {
+              iziToast.error({
+                title: "Erreur",
+                message: "address empty",
+                position: "center",
+              });
             } else {
-              if (SE_agente === "0") {
-                err_msg == alertsTranslations.serviceAgentNameEmpty;
+              if (SE_agente === "") {
+                iziToast.error({
+                  title: "Erreur",
+                  message: "service agent name empty",
+                  position: "center",
+                });
               } else {
-                if (SE_correo === "0") {
-                  err_msg == alertsTranslations.emailEmpty;
+                if (SE_correo === "") {
+                  iziToast.error({
+                    title: "Erreur",
+                    message: "email empty",
+                    position: "center",
+                  });
                 } else {
-                  if (SE_descripcion === "0") {
-                    err_msg == alertsTranslations.descriptionEmpty;
+                  if (SE_descripcion === "") {
+                    iziToast.error({
+                      title: "Erreur",
+                      message: "description empty",
+                      position: "center",
+                    });
                   } else {
                     if (SE_estado === "0") {
-                      err_msg == descriptionEmpty.emptyStatus;
+                      iziToast.error({
+                        title: "Erreur",
+                        message: "status empty",
+                        position: "center",
+                      });
                     } else {
-                      if (SE_tiempo === "0") {
-                        err_msg == alertsTranslations.expiredtimeEmpty;
+                      if (SE_tiempo === "") {
+                        iziToast.error({
+                          title: "Erreur",
+                          message: "expected time empty",
+                          position: "center",
+                        });
                       } else {
                         if (SE_tiempo < 0) {
-                          err_msg ==
-                            alertsTranslations.expectedTimeCantBeLessThanZero;
+                          iziToast.error({
+                            title: "Erreur",
+                            message: "expected time can not be less than 0",
+                            position: "center",
+                          });
                         } else {
-                          if (SE_telefono === "0") {
-                            err_msg == alertsTranslations.phoneEmpty;
+                          if (SE_telefono === "") {
+                            iziToast.error({
+                              title: "Erreur",
+                              message: "phone number empty",
+                              position: "center",
+                            });
+                            err_msg == "";
                           } else {
-                            if (SE_telefono < 0) {
-                              err_msg == alertsTranslations.invalidPhoneNumber;
+                            if (SE_telefono <= 0) {
+                              iziToast.error({
+                                title: "Erreur",
+                                message: "invalid phone number",
+                                position: "center",
+                              });
                             } else {
                               uploadFormData(
                                 SE_servicio,
@@ -220,14 +192,6 @@ jQuery(document).ready(function ($) {
         }
       }
     }
-
-    if (err_msg != "") {
-      iziToast.error({
-        title: "Error",
-        message: err_msg,
-        position: "center",
-      });
-    }
   });
 
   function uploadFormData(
@@ -246,42 +210,36 @@ jQuery(document).ready(function ($) {
     SE_tiempo,
     SE_estado
   ) {
-    var formData = new FormData();
-    formData.append("service", SE_servicio);
-    formData.append("service_company", SE_company);
-    formData.append("service_agente", SE_agente);
-    formData.append("service_telefono", SE_telefono);
-    formData.append("service_correo", SE_correo);
-
-    formData.append("service_pais", SE_pais);
-    formData.append("service_direccion", SE_direccion);
-    formData.append("service_estadolugar", SE_estadolugar);
-    formData.append("service_ciudad", SE_ciudad);
-    formData.append("service_provincia", SE_provincia);
-
-    formData.append("service_category", SE_category);
-    formData.append("service_estado", SE_estado);
-    formData.append("service_tiempo", SE_tiempo);
-    formData.append("service_description", SE_descripcion);
-
     $.ajax({
-      contentType: "multipart/form-data",
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/service_insert.php",
       type: "POST",
-      data: formData,
-      dataType: "text",
-      processData: false,
-      contentType: false,
-      cache: false,
+      data: {
+        SE_servicio,
+        SE_company,
+        SE_agente,
+        SE_telefono,
+        SE_correo,
+        SE_pais,
+        SE_direccion,
+        SE_estadolugar,
+        SE_ciudad,
+        SE_provincia,
+        SE_category,
+        SE_descripcion,
+        SE_tiempo,
+        SE_estado,
+      },
       success: function (response) {
-        console.log(response);
-        iziToast.success({
-          title: alertsTranslations.exito,
-          message: alertsTranslations.datosActualizados,
-          position: "center",
-        });
-        window.location.href =
-          "https://dev.kalstein.plus/plataforma/index.php/support/services";
+        let data = JSON.parse(response);
+        if (data.status === "correcto") {
+          iziToast.success({
+            title: "Succès",
+            message: "Data register successfully.",
+            position: "center",
+          });
+          window.location.href =
+            "https://dev.kalstein.plus/plataforma/index.php/support/services";
+        }
       },
       error: function (xhr, status, error) {
         console.log(xhr.responseText);
@@ -291,138 +249,116 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  mostrarDatos($("#dataEdit").val());
-
-  /*function dataCMB(consulta) {
-        $.ajax({
-            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/selectservice.php',
-            type: 'POST',
-            data: { consulta },
-        })
-        .done(function(respuesta) {
-            console.log(respuesta);
-            $('#dataEdit').html(respuesta);
-        })
-        .fail(function() {
-            console.log("error");
-        });
-        
-    }*/
-
-  function mostrarDatos(consulta) {
-    $.ajax({
-      // Cambia mificherophp.php por el nombre de tu fichero
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/servicedata.php",
-      type: "POST",
-      data: { consulta },
-    })
-      .done(function (respuesta) {
-        let data = JSON.parse(respuesta);
-        // Coloca el nombre del input el cual mostrara los datos dependiendo de si es un id o una clase vas a hacer lo mismo con todos
-
-        $("#SEAnombre").val(data.name);
-        $("#SEAcategory").val(data.category);
-        $("#SEAagente").val(data.usuario);
-        $("#SEAcorreo").val(data.correo);
-        $("#SEAdescription").val(data.description);
-        $("#SEAprecio").val(data.precio);
-        $("#SEAestado").val(data.estado);
-        $("#SEAcompany").val(data.company);
-        $("#SEApais").val(data.pais);
-        $("#SEAciudad").val(data.ciudad);
-        $("#SEAdireccion").val(data.direccion);
-        $("#SEAtelefono").val(data.telefono);
-        $("#SEAestadoLugar").val(data.estadolugar);
-        /* $('#SEAestadoLugar').val(data.estadolugar); */
-        $("#SEAprovincia").val(data.provincia);
-        $("#actualizar_id").val(data.id);
-      })
-      .fail(function () {
-        console.log(data.id);
-      });
-  }
-
-  // Evento on change
-
-  $(document).on("change", "#dataEdit", function () {
-    let valor = $(this).val();
-    mostrarDatos(valor);
-  });
-
   //Haciendo todo esto de manera correcta debe de cargarte los datos
 
-  $(document).on("click", "#actualizar", function (e) {
-    const rcoma = (str) => {
-      // Verifica si str es undefined o no
-      if (typeof str === "undefined") {
-        // Retorna una cadena vacía o algún valor predeterminado
-        return "";
-      }
-      // Si str no es undefined, realiza la sustitución como antes
-      return str.replace(/'/g, "\\'").replace(/\//g, "");
-    };
+  $(document).on("click", "#actualizar_btn", function (e) {
+    let actualizar_id = $("#dataEdit").val();
+    let SE_servicio = $("#SEnombre").val();
+    let SE_company = $("#SEcompany").val();
+    let SE_agente = $("#SEagente").val();
+    let SE_telefono = $("#SEtelefono").val();
+    let SE_correo = $("#SEcorreo").val();
+    let SE_pais = $("#SEpais").val();
+    let SE_direccion = $("#SEdireccion").val();
+    let SE_estadolugar = $("#SEestadoLugar").val();
+    let SE_ciudad = $("#SEciudad").val();
+    let SE_provincia = $("#SEprovincia").val();
+    let SE_category = $("#SEcategory").val();
+    let SE_estado = $("#SEestado").val();
+    let SE_tiempo = $("#SEtiempoEstimado").val();
+    let SE_descripcion = $("#SEdescription").val();
 
-    let actualizar_id = $("#actualizar_id").val();
-
-    let SE_servicio = rcoma($("#SEAnombre").val());
-    let SE_company = rcoma($("#SEAcompany").val());
-    let SE_agente = rcoma($("#SEAagente").val());
-    let SE_telefono = rcoma($("#SEAtelefono").val());
-    let SE_correo = rcoma($("#SEAcorreo").val());
-
-    let SE_pais = rcoma($("#SEApais").val());
-    let SE_direccion = rcoma($("#SEAdireccion").val());
-    let SE_estadolugar = rcoma($("#SEAestadoLugar").val());
-    let SE_ciudad = rcoma($("#SEAciudad").val());
-    let SE_provincia = rcoma($("#SEAprovincia").val());
-
-    let SE_category = rcoma($("#SEAcategory").val());
-    let SE_estado = rcoma($("#SEAestado").val());
-    let SE_tiempo = rcoma($("#SEAtiempoEstimado").val());
-    let SE_descripcion = rcoma($("#SEAdescription").val());
-
-    let err_msg = "";
-
-    if (SE_servicio === "0") {
-      err_msg == alertsTranslations.nombreVacio;
+    if (SE_servicio === "") {
+      iziToast.error({
+        title: "Erreur",
+        message: "name empty",
+        position: "center",
+      });
     } else {
-      if (SE_category === "0") {
-        err_msg == alertsTranslations.categoriaVacia;
+      if (SE_category === "") {
+        iziToast.error({
+          title: "Erreur",
+          message: "category empty",
+          position: "center",
+        });
       } else {
-        if (SE_company === "0") {
-          err_msg == alertsTranslations.emptyCompanyName;
+        if (SE_company === "") {
+          iziToast.error({
+            title: "Erreur",
+            message: "company name empty",
+            position: "center",
+          });
         } else {
           if (SE_pais === "0") {
-            err_msg == alertsTranslations.paisVacio;
+            iziToast.error({
+              title: "Erreur",
+              message: "country name empty",
+              position: "center",
+            });
           } else {
-            if (SE_direccion === "0") {
-              err_msg == alertsTranslations.addressEmpty;
+            if (SE_direccion === "") {
+              iziToast.error({
+                title: "Erreur",
+                message: "address empty",
+                position: "center",
+              });
             } else {
-              if (SE_agente === "0") {
-                err_msg == alertsTranslations.serviceAgentNameEmpty;
+              if (SE_agente === "") {
+                iziToast.error({
+                  title: "Erreur",
+                  message: "service agent name empty",
+                  position: "center",
+                });
               } else {
-                if (SE_correo === "0") {
-                  err_msg == alertsTranslations.emailEmpty;
+                if (SE_correo === "") {
+                  iziToast.error({
+                    title: "Erreur",
+                    message: "email empty",
+                    position: "center",
+                  });
                 } else {
-                  if (SE_descripcion === "0") {
-                    err_msg == alertsTranslations.descriptionEmpty;
+                  if (SE_descripcion === "") {
+                    iziToast.error({
+                      title: "Erreur",
+                      message: "description empty",
+                      position: "center",
+                    });
                   } else {
                     if (SE_estado === "0") {
-                      err_msg == alertsTranslations.estatusVacio;
+                      iziToast.error({
+                        title: "Erreur",
+                        message: "status empty",
+                        position: "center",
+                      });
                     } else {
-                      if (SE_tiempo === "0") {
-                        err_msg ==
-                          alertsTranslations.expectedTimeCantBeLessThanZero;
+                      if (SE_tiempo === "") {
+                        iziToast.error({
+                          title: "Erreur",
+                          message: "expected time empty",
+                          position: "center",
+                        });
                       } else {
                         if (SE_tiempo < 0) {
-                          err_msg ==
-                            alertsTranslations.expectedTimeCantBeLessThanZero;
+                          iziToast.error({
+                            title: "Erreur",
+                            message: "expected time can not be less than 0",
+                            position: "center",
+                          });
                         } else {
-                          if (SE_telefono === "0") {
-                            err_msg == alertsTranslations.phoneEmpty;
+                          if (SE_telefono === "") {
+                            iziToast.error({
+                              title: "Erreur",
+                              message: "phone number empty",
+                              position: "center",
+                            });
+                            err_msg == "";
                           } else {
-                            if (SE_telefono < 0) {
-                              err_msg == alertsTranslations.invalidPhoneNumber;
+                            if (SE_telefono <= 0) {
+                              iziToast.error({
+                                title: "Erreur",
+                                message: "invalid phone number",
+                                position: "center",
+                              });
                             } else {
                               updateFormData(
                                 actualizar_id,
@@ -454,14 +390,6 @@ jQuery(document).ready(function ($) {
         }
       }
     }
-
-    if (err_msg != "") {
-      iziToast.error({
-        title: "Error",
-        message: err_msg,
-        position: "center",
-      });
-    }
   });
 
   function updateFormData(
@@ -481,47 +409,48 @@ jQuery(document).ready(function ($) {
     SE_tiempo,
     SE_estado
   ) {
-    var formData = new FormData();
-    formData.append("actualizar_id", actualizar_id);
-    formData.append("service", SE_servicio);
-    formData.append("service_company", SE_company);
-    formData.append("service_agente", SE_agente);
-    formData.append("service_telefono", SE_telefono);
-    formData.append("service_correo", SE_correo);
-
-    formData.append("service_pais", SE_pais);
-    formData.append("service_direccion", SE_direccion);
-    formData.append("service_estadolugar", SE_estadolugar);
-    formData.append("service_ciudad", SE_ciudad);
-    formData.append("service_provincia", SE_provincia);
-
-    formData.append("service_category", SE_category);
-    formData.append("service_estado", SE_estado);
-    formData.append("service_tiempo", SE_tiempo);
-    formData.append("service_description", SE_descripcion);
-
     $.ajax({
-      contentType: "multipart/form-data",
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/service-update.php",
       type: "POST",
-      data: formData,
-      dataType: "text",
-      processData: false,
-      contentType: false,
-      cache: false,
-      success: function (response) {
-        console.log(response);
-        iziToast.success({
-          title: "Success",
-          message: alertsTranslations.datosActualizados,
-          position: "center",
-        });
-        //window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/support/services';
+      data: {
+        actualizar_id,
+        SE_servicio,
+        SE_company,
+        SE_agente,
+        SE_telefono,
+        SE_correo,
+        SE_pais,
+        SE_direccion,
+        SE_estadolugar,
+        SE_ciudad,
+        SE_provincia,
+        SE_category,
+        SE_descripcion,
+        SE_tiempo,
+        SE_estado,
       },
-      error: function (xhr, status, error) {
+    })
+      .done(function (response) {
+        response = JSON.parse(response);
+        if (response.status === "Correcto") {
+          iziToast.success({
+            title: "Succès",
+            message: "Data updated successfully.",
+            position: "center",
+          });
+          window.location.href =
+            "https://dev.kalstein.plus/plataforma/index.php/support/services";
+        } else {
+          iziToast.error({
+            title: "Erreur",
+            message: "An error found.",
+            position: "center",
+          });
+        }
+      })
+      .fail(function (xhr, status, error) {
         console.log(xhr.responseText);
-      },
-    });
+      });
   }
 });
 
@@ -534,7 +463,7 @@ jQuery(document).ready(function ($) {
       method: "POST",
       data: { service_id },
     }).done(function (response) {
-      console.log(response);
+      // console.log(response)
       let res = JSON.parse(response);
 
       res.forEach((elem) => {
@@ -557,26 +486,18 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   category();
   function category(consulta) {
-    try {
-      $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
-        type: "POST",
-        data: { consulta },
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/category_product.php",
+      type: "POST",
+      data: { consulta },
+    })
+      .done(function (respuesta) {
+        $("#SEcategory").html(respuesta);
+        $("#SEAcategory").html(respuesta);
       })
-        .done(function (respuesta) {
-          $("#SEcategory").html(respuesta);
-          $("#SEAcategory").html(respuesta);
-        })
-        .fail(function () {
-          console.log("error");
-          // Aquí puedes manejar el error de la petición AJAX.
-          // Por ejemplo, podrías mostrar un mensaje de error al usuario.
-        });
-    } catch (error) {
-      console.error("Error capturado: ", error);
-      // Manejo de errores sincrónicos.
-      // Este bloque catch capturará errores que ocurran al preparar la petición AJAX, pero no los errores de la petición misma.
-    }
+      .fail(function () {
+        console.log("error");
+      });
   }
 });
 
@@ -617,26 +538,6 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  const cookieLng = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("language="))
-    .split("=")[1];
-  let alertsTranslations = {};
-
-  // cargar json de traducciones
-  const loadTranslations = (lng) => {
-    return fetch(
-      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-    )
-      .then((response) => response.json())
-      .then((translation) => {
-        // save in a global variable
-        alertsTranslations = translation;
-      });
-  };
-
-  loadTranslations(cookieLng);
-
   // Sección: Eliminar producto desde el botón de la página
 
   $(document).on("click", "#btnDeleteService", function () {
@@ -645,14 +546,14 @@ jQuery(document).ready(function ($) {
     // Mostrar una alerta de confirmación usando IziToast
     iziToast.question({
       title: "Confirmation",
-      message: alertsTranslations.sureYouWantToDeleteThisService,
+      message: "Êtes-vous sûr de vouloir supprimer ce service ?",
       close: false,
       overlay: true,
       timeout: false,
       position: "center",
       buttons: [
         [
-          `<button><b>${alertsTranslations.yes}</b></button>`,
+          "<button><b>Yes</b></button>",
           function (instance, toast) {
             // Realizar una solicitud AJAX para eliminar el servicio
             $.ajax({
@@ -661,12 +562,12 @@ jQuery(document).ready(function ($) {
               data: { delete_aid },
             })
               .done(function (response) {
-                console.log(response);
+                // console.log(response);
 
                 if (response === "done") {
                   iziToast.success({
-                    title: "Success",
-                    message: alertsTranslations.serviceDeleted,
+                    title: "Succès",
+                    message: "Service supprimé.",
                     position: "center",
                     onClosing: function () {
                       setTimeout(function () {
@@ -677,16 +578,16 @@ jQuery(document).ready(function ($) {
                   });
                 } else {
                   iziToast.error({
-                    title: "Error",
-                    message: alertsTranslations.serviceNotdeleted,
+                    title: "Erreur",
+                    message: "Service non supprimé",
                     position: "center",
                   });
                 }
               })
               .fail(function () {
                 iziToast.error({
-                  title: "Error",
-                  message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
+                  title: "Erreur",
+                  message: "Impossible de se connecter à la base de données",
                   position: "center",
                 });
               });
@@ -700,8 +601,8 @@ jQuery(document).ready(function ($) {
           function (instance, toast) {
             instance.hide({ transitionOut: "fadeOut" }, toast, "button");
             iziToast.error({
-              title: "Error",
-              message: alertsTranslations.serviceDeletedCanceled,
+              title: "Erreur",
+              message: "Suppression du service annulée.",
               position: "center",
             });
           },
