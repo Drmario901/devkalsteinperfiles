@@ -13,5 +13,5 @@
         'total' => $count['total'],
         'unseen' => $count2['unseen']
     ));
-    $conexion->close();
+    // $conexion->close();
 ?>
