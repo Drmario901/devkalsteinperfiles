@@ -523,11 +523,11 @@ $detalles = $translations[$lang]['client:detalles'];
 $withOutDescription = $translations[$lang]['productWithoutDescription'];
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
-
+$langToTranslate = $lang;
 if ($lang === 'ee'){
-    $lang = 'et';
+    $langToTranslate = 'et';
 } else if ($lang === 'se') {
-    $lang = 'sv';
+    $langToTranslate = 'sv';
 }
 
 $productDescription = 'product_description_'.$lang;
@@ -540,7 +540,7 @@ if (!empty($row[$productDescription])){
     $data = [
         "q" => $description,
         "source" => "auto",
-        "target" => $lang,
+        "target" => $langToTranslate,
         "format" => "html"
     ];
     
@@ -594,7 +594,7 @@ if(!empty($row[$technicalDescriptionLang])){
     $data2 = [
         "q" => $table,
         "source" => "auto",
-        "target" => $lang,
+        "target" => $langToTranslate,
         "format" => "html"
     ];
 

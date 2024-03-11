@@ -254,6 +254,7 @@
                 SELECT term_id FROM wp_terms WHERE slug = '$categorySlug'
                 )";
 
+        echo $sql3;
         $conexion->query($sql3);
 
         // Insertar imágenes...
