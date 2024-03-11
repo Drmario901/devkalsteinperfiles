@@ -134,100 +134,106 @@
 </style>
 
 <div class="row tm-edit-product-form">
-    <div class="col-12"><div class="stock-title">Type de service</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:serviceType" >Tipo de Servicio</div></div>
 
     <div class="row mb-4 mt-3">
+    <form id="modservices_form">
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Titre du service</label>
+            <label data-i18n="support:labelServiceTitle" >Titulo del Servicio</label>
+            
             <input
                 id="SEnombre"
                 name="name"
                 type="text"
                 class="form-control validate"
-                placeholder="ex : Installation d'un autoclave"
+                placeholder="ex: Auticlave installation"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Entreprise</label>
+            <label data-i18n="support:labelCompany" >Compañia</label>
             <input
                 id="SEcompany"
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_company ?>"
-                placeholder="nom de l'entreprise"
+                data-placeholder="support:nombreCompany"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Agent</label>
+            <label data-i18n="support:agente" >Agente</label>
             <input
                 id="SEagente"
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_name; echo $acc_lname ?>"
-                placeholder="nom et prénom"
+                data-placeholder="support:placeholderFirstNameLastName"
+                placeholder="firstname and lastname"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <!-- HACER QUE SE REGISTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-            <label for="Email">Téléphone</label>
+            <label for="Email" data-i18n="support:telefono">Telefono</label>
             <input
                 id="SEtelefono"
                 type="number"
                 class="form-control validate"
+                data-placeholder="client:numeroTlf"
                 value="<?php echo $acc_correo; ?>"
-                placeholder="numéro de téléphone"
+                placeholder="phone number"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Email">Courriel</label>
+            <label for="Email" data-i18n="support:labelCorreo">Correo</label>
             <input
                 id="SEcorreo"
                 type="text"
                 class="form-control validate"
+                data-placeholder="client:direccionCorreo"
                 value="<?php echo $acc_correo; ?>"
-                placeholder="courriel de contact"
+                placeholder="contact email"
             />
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">Adresse</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:labelDireccion" >Dirección</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Pays</label>
+            <label for="Level" data-i18n="support:pais">Pais</label>
             <select id="SEpais" class="tm-select-accounts" name="category">
-                <option selected value='0'>Choisir une option</option>
+                <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>Adresse</label>
+            <label data-i18n="support:labelDireccion">Dirección</label>
             <input
                 id="SEdireccion"
                 type="text"
                 class="form-control validate"
-                placeholder="Adresse"
+                placeholder="address"
             />
+            <input type="text" id='actualizar_id' vaue=''>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label>État</label>
+            <label data-i18n="support:labelEstado">Estado</label>
             <input
                 id="SEestadoLugar"
                 type="text"
                 class="form-control validate"
-                placeholder="État"
+                placeholder="state"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Ville</label>
+            <label for="name" data-i18n="support:labelCiudad" >Ciudad</label>
             <input
                 id="SEciudad"
                 type="text"
                 class="form-control validate"
-                placeholder="Ville"
+                placeholder="city"
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="name">Province</label>
+            <label for="name" data-i18n="support:labelProvincia" >Provincia</label>
             <input
                 id="SEprovincia"
                 type="text"
@@ -237,40 +243,189 @@
         </div>
     </div>
 
-    <div class="col-12"><div class="stock-title">A propos du produit</div></div>
+    <div class="col-12"><div class="stock-title" data-i18n="support:aboutProduct" >Acerca del Producto</div></div>
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label for="Level">Catégorie de produits</label>
+            <label for="Level" data-i18n="support:productCategory">PCategoria del Producto</label>
             <select id="SEcategory" class="custom-select tm-select-accounts">
-                <option selected value='0'>Choisir une option</option>
+                <option selected value='0' data-i18n="support:selectOption">Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
         <label for="Level">Status</label>
             <select id="SEestado" class="custom-select tm-select-accounts">
-                <option selected value='0'>Choisir une option</option>
-                <option value="activé">activé</option>
-                <option value="désactivé">désactivé</option>
+                <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
+                <option value="activado" data-i18n="support:activated" >activado</option>
+                <option value="desactivado" data-i18n="support:desactivated">deasctivado</option>
             </select>
         </div>
         <div class="col-12 col-lg-4">
-            <label for="name">Temps estimé</label>
+            <label for="name" data-i18n="support:estimatedTime" >Tiempo Estimado</label>
             <input
                 id="SEtiempoEstimado"
                 type="text"
                 class="form-control validate"
-                placeholder="ex : 3 jours"
+                placeholder="ex: 3 days"
             />
         </div>
         <div class="col-12">
-            <label for="description">Description</label>
+            <label for="description" data-i18n="support:labelDescription" >Descripción</label>
             <textarea
                 id="SEdescription"                   
                 class="form-control validate"
                 rows="5"
-                placeholder="décrire ce que vous proposez"
+                placeholder="describe what you are offering"
             ></textarea>
         </div>
     </div>
+    <input type="text" id='actualizar_id' vaue=''>
+    
+    <!--div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+        <div class="row tm-edit-product-row">
+        <div class="col-xl-6 col-lg-6 col-12">
+            <form method="post" class="tm-edit-product-form">
+                <div class="form-group mb-3">
+                    <label for="name">Service title</label>
+                    <input style="color: white !important;"
+                        id="SEnombre"
+                        name="name"
+                        type="text"
+                        class="form-control validate"
+                        value=""
+                        required
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row tm-edit-product-row">
+        <div class="col-xl-6 col-lg-6 col-12">
+            <form method="post" class="tm-edit-product-form">
+                <div class="form-group mb-3">
+                    <label for="name">company</label>
+                    <input style="color: white !important;"
+                        id="SEcompany"
+                        name="title"
+                        type="text"
+                        class="form-control validate"
+                        value="<?php echo $acc_company ?>"
+                        required
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row tm-edit-product-row">
+        <div class="col-xl-6 col-lg-6 col-12">
+            <form method="post" class="tm-edit-product-form">
+                <div class="form-group mb-3">
+                    <label for="name">
+                        agente
+                    </label>
+                    <input style="color: white !important;"
+                        id="SEagente"
+                        name="name"
+                        type="text"
+                        class="form-control validate"
+                        value="<?php echo $acc_name; echo $acc_lname ?>"
+                        required
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row tm-edit-product-row">
+        <div class="col-xl-6 col-lg-6 col-12">
+            <form method="post" class="tm-edit-product-form">
+                <div class="form-group mb-5">
+                    <label for="Email">Email</label>
+                    <input style="color: white !important;"
+                        id="SEcorreo"
+                        name="usuario"
+                        type="text"
+                        class="form-control validate"
+                        required
+                        value="<?php echo $acc_correo; ?>"
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="form-group mb-3">
+        <label for="Level">pais</label>
+        <select id="SEpais" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category" >
+            <option selected value='0'>Choose an option</option>
+        </select>
+    </div>
+    
+    <div class="row tm-edit-product-row">
+        <div class="col-xl-6 col-lg-6 col-12">
+            <form method="post" class="tm-edit-product-form">
+                <div class="form-group mb-3">
+                    <label for="name">ciudad</label>
+                    <input style="color: white !important;"
+                        id="SEciudad"
+                        name="city"
+                        type="text"
+                        class="form-control validate"
+                        value=""
+                        required
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row tm-edit-product-row">
+        <div class="col-xl-6 col-lg-6 col-12">
+            <form method="post" class="tm-edit-product-form">
+                <div class="form-group mb-3">
+                    <label for="name">direccion</label>
+                    <input style="color: white !important;"
+                        id="SEdireccion"
+                        name="address"
+                        type="text"
+                        class="form-control validate"
+                        value=""
+                        required
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="form-group mb-3">
+        <label for="Level">categoria de productos</label>
+        <select id="SEcategory" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
+            <option selected value='0'  style="color: #000 !important;">Choose an option</option>
+        </select>
+    </div>
+    
+    <div class="row tm-edit-product-row">
+        <div class="form-group mb-3">
+            <label for="description">Description</label>
+            <textarea
+                id="SEdescription"                   
+                class="form-control validate"
+                style="color: #fff !important;"
+                rows="5"
+                required>
+            </textarea>
+        </div>
+    
+        <div class="form-group mb-3">
+            <label for="Level">estado</label>
+            <select id="SEestado" class="custom-select tm-select-accounts" style="color: #fff !important;" name="category">
+                <option selected value='0' style="color: #000 !important;">Choose an option</option>
+                <option value="activado" style="color: #000 !important;">activado</option>
+                <option value="desactivado" style="color: #000 !important;">deasctivado</option>
+            </select>
+        </div>
+                
+        <div class="col-12">
+            <center><button id="Register_service" name="send" class="btn btn-primary btn-block text-uppercase">agregar servicio</button></center>
+        </div>
+    </div-->
 </div>
