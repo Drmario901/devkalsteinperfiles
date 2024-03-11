@@ -25,6 +25,8 @@
         $subField = "product_subcategory";
     }
 
+    echo $elegirOpcion;
+
 
     $consulta = "SELECT $descriptionField FROM wp_k_products ORDER BY $descriptionField ASC";
     $resultado = $conexion->query($consulta);
