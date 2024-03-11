@@ -4,7 +4,7 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $descriptionField = "product_category_" . $lang;
 
-    include __DIR__.'/../translations.php';
+    require_once __DIR__.'/../translations.php';
     //translateText();
 
     $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
