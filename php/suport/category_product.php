@@ -4,11 +4,11 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $descriptionField = "product_category_" . $lang;
 
-    require_once __DIR__.'/../translations.php';
+    // require_once __DIR__.'/../translations.php';
     //translateText();
 
-    $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
-    $dataNotFound = $translations[$lang]['client:dataNotFound'];
+    // $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
+    // $dataNotFound = $translations[$lang]['client:dataNotFound'];
 
 	// $salida = "<option selected value='0' style='color: #000 !important;'>Choisir une option</option>";
 
@@ -56,7 +56,7 @@
             }
         }
     } else {
-        $salida .= "<div class='nodatos'><h5>$dataNotFound</h5></div>";
+        $salida .= "<div class='nodatos'><h5> Datos no encontrados</h5></div>";
     }
 	
 	foreach ($categorys as $value) {
