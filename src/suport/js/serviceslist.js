@@ -116,7 +116,9 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   $(document).on("click", "#Register_service", function (e) {
-    /* const rcoma = (str) => { return str.replace(/'/g, /\'/).replace(/\//g, "")} */
+    const rcoma = (str) => {
+      return str.replace(/'/g, /\'/).replace(/\//g, "");
+    };
 
     let SE_servicio = rcoma($("#SEnombre").val());
     let SE_company = rcoma($("#SEcompany").val());
@@ -340,7 +342,9 @@ jQuery(document).ready(function ($) {
   //Haciendo todo esto de manera correcta debe de cargarte los datos
 
   $(document).on("click", "#actualizar", function (e) {
-    /* const rcoma = (str) => { return str.replace(/'/g, /\'/).replace(/\//g, "")} */
+    const rcoma = (str) => {
+      return str.replace(/'/g, /\'/).replace(/\//g, "");
+    };
 
     let actualizar_id = $("#actualizar_id").val();
 

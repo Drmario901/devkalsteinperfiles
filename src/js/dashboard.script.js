@@ -71,7 +71,7 @@ jQuery(document).ready(function ($) {
 
   $(document).on("click", "#btn-logout", function () {
     $.ajax({
-      url: plugin_dir + "/php/logout.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/logout.php",
       type: "POST",
       success: function (response) {
         window.location.replace(`${main_domain}`);
@@ -1206,7 +1206,7 @@ jQuery(document).ready(function ($) {
 
   function searchDataUserDashboard(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchUserLoguer.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchUserLoguer.php",
 
       type: "POST",
 
@@ -1234,7 +1234,7 @@ jQuery(document).ready(function ($) {
 
   function dataForDonutsChartjsAccount(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/infoAccount.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoAccount.php",
 
       type: "POST",
 
@@ -1398,7 +1398,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountry(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchCountry.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchCountry.php",
 
       type: "POST",
 
@@ -1420,7 +1420,7 @@ jQuery(document).ready(function ($) {
 
   function infoAccount(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/infoAccount.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoAccount.php",
 
       type: "POST",
 
@@ -1520,7 +1520,7 @@ jQuery(document).ready(function ($) {
     $.ajax({
       contentType: "multipart/form-data",
 
-      url: plugin_dir + "/php/updateInfoID.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/updateInfoID.php",
 
       type: "POST",
 
@@ -1600,7 +1600,7 @@ jQuery(document).ready(function ($) {
     $.ajax({
       contentType: "multipart/form-data",
 
-      url: plugin_dir + "/php/updateInfoTaxCompany.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/updateInfoTaxCompany.php",
 
       type: "POST",
 
@@ -1694,7 +1694,7 @@ jQuery(document).ready(function ($) {
     $.ajax({
       contentType: "multipart/form-data",
 
-      url: plugin_dir + "/php/updateInfoAccount.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/updateInfoAccount.php",
 
       type: "POST",
 
@@ -1790,7 +1790,7 @@ jQuery(document).ready(function ($) {
 
   function savedNewPassword(currentPassword, confirmPassword) {
     $.ajax({
-      url: plugin_dir + "/php/savedNewPassword.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedNewPassword.php",
 
       type: "POST",
 
@@ -1848,7 +1848,7 @@ jQuery(document).ready(function ($) {
 
   function deleteAccount(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/deleteAccount.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/deleteAccount.php",
 
       type: "POST",
 
@@ -1943,7 +1943,7 @@ jQuery(document).ready(function ($) {
     zipcode
   ) {
     $.ajax({
-      url: plugin_dir + "/php/infoConfigQuote.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoConfigQuote.php",
 
       type: "POST",
 
@@ -2024,7 +2024,7 @@ jQuery(document).ready(function ($) {
 
   function searchInfoToQUote(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchInfoConfigQuote.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchInfoConfigQuote.php",
 
       type: "POST",
 
@@ -2092,7 +2092,7 @@ jQuery(document).ready(function ($) {
 
   function dataForLineChartjsQuote(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/infoGraphicQuote.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoGraphicQuote.php",
 
       type: "POST",
 
@@ -2540,7 +2540,7 @@ jQuery(document).ready(function ($) {
 
   function dataForLineChartjsSales(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/infoGraphicQuote.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoGraphicQuote.php",
 
       type: "POST",
 
@@ -2964,7 +2964,7 @@ jQuery(document).ready(function ($) {
 
   function dataForBarChartjsQuote(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/infoGraphicQuote.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoGraphicQuote.php",
 
       type: "POST",
 
@@ -3006,7 +3006,7 @@ jQuery(document).ready(function ($) {
 
   function searchRecentProductsQuoted(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchQuotedProducts.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchQuotedProducts.php",
 
       type: "POST",
 
@@ -3024,7 +3024,7 @@ jQuery(document).ready(function ($) {
 
   function searchDataProductTbl(consulta, status, dateFrom, dateTo) {
     $.ajax({
-      url: plugin_dir + "/php/searchQuoteTbl.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchQuoteTbl.php",
 
       type: "POST",
 
@@ -3049,7 +3049,7 @@ jQuery(document).ready(function ($) {
       var nextPage = $(this).find("input[name=u]").val();
 
       $.ajax({
-        url: plugin_dir + "/php/searchQuoteTbl.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchQuoteTbl.php",
 
         type: "POST",
 
@@ -3089,7 +3089,7 @@ jQuery(document).ready(function ($) {
       var nextPage = $(this).find("input[name=u]").val();
 
       $.ajax({
-        url: plugin_dir + "/php/searchQuoteTbl.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchQuoteTbl.php",
 
         type: "POST",
 
@@ -3293,7 +3293,7 @@ jQuery(document).ready(function ($) {
 
   function deleteQuoteClient(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/deleteQuoteClient.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/deleteQuoteClient.php",
 
       type: "POST",
 
@@ -3317,7 +3317,7 @@ jQuery(document).ready(function ($) {
 
   function updateStatusQuote(consulta, consulta2) {
     $.ajax({
-      url: plugin_dir + "/php/changeStatusQuote.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/changeStatusQuote.php",
 
       type: "POST",
 
@@ -3339,7 +3339,7 @@ jQuery(document).ready(function ($) {
 
   function tblSearches(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/tblSearches.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblSearches.php",
 
       type: "POST",
 
@@ -3360,7 +3360,7 @@ jQuery(document).ready(function ($) {
   function tblSearchesPagination() {
     function tableContent(nextPage) {
       $.ajax({
-        url: plugin_dir + "/php/tblSearches.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblSearches.php",
 
         type: "GET",
 
@@ -3415,7 +3415,7 @@ jQuery(document).ready(function ($) {
 
   function tblAccess(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/tblAccess.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblAccess.php",
 
       type: "POST",
 
@@ -3436,7 +3436,7 @@ jQuery(document).ready(function ($) {
   function tblAccessPagination() {
     function tableContentAccess(nextPage) {
       $.ajax({
-        url: plugin_dir + "/php/tblAccess.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblAccess.php",
 
         type: "GET",
 
@@ -3491,7 +3491,7 @@ jQuery(document).ready(function ($) {
 
   function tblUpdates(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/tblUpdates.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblUpdates.php",
 
       type: "POST",
 
@@ -3512,7 +3512,7 @@ jQuery(document).ready(function ($) {
   function tblUpdatesPagination() {
     function tableContentUpdates(nextPage) {
       $.ajax({
-        url: plugin_dir + "/php/tblUpdates.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblUpdates.php",
 
         type: "GET",
 
@@ -3567,7 +3567,7 @@ jQuery(document).ready(function ($) {
 
   function tblDeletes(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/tblDeletes.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblDeletes.php",
 
       type: "POST",
 
@@ -3588,7 +3588,7 @@ jQuery(document).ready(function ($) {
   function tblDeletesPagination() {
     function tableContentDeletes(nextPage) {
       $.ajax({
-        url: plugin_dir + "/php/tblDeletes.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/tblDeletes.php",
 
         type: "GET",
 
@@ -3643,7 +3643,7 @@ jQuery(document).ready(function ($) {
 
   function showDataQuoteRecent(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/showDataQuoteRecent.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/showDataQuoteRecent.php",
 
       type: "POST",
 
@@ -3661,7 +3661,7 @@ jQuery(document).ready(function ($) {
 
   function showDataSearchesRecent(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/showDataSearchRecent.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/showDataSearchRecent.php",
 
       type: "POST",
 
@@ -3686,10 +3686,11 @@ jQuery(document).ready(function ($) {
   });
 
   function mostrarDatos(consulta) {
+    console.log("hice el pedidoooo");
     $.ajax({
       // Cambia mificherophp.php por el nombre de tu fichero
 
-      url: plugin_dir + "/php/productData.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/productData.php",
 
       type: "POST",
 
@@ -3719,7 +3720,7 @@ jQuery(document).ready(function ($) {
 
   function searchListServices(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchListServices.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchListServices.php",
 
       type: "POST",
 
@@ -3761,7 +3762,7 @@ jQuery(document).ready(function ($) {
 
   function contentServices(nextPage) {
     $.ajax({
-      url: plugin_dir + "/php/searchListServices.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchListServices.php",
 
       type: "POST",
 
@@ -3876,7 +3877,7 @@ jQuery(document).ready(function ($) {
 
   function searchDataAgentSupport(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/infoAgentSupportSelect.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/infoAgentSupportSelect.php",
 
       type: "POST",
 
@@ -3911,7 +3912,7 @@ jQuery(document).ready(function ($) {
     level
   ) {
     $.ajax({
-      url: plugin_dir + "/php/savedTicketReport.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedTicketReport.php",
 
       type: "POST",
 
@@ -4031,7 +4032,7 @@ jQuery(document).ready(function ($) {
 
   function tblReportsTickets(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchTblTicketsClient.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchTblTicketsClient.php",
 
       type: "POST",
 
@@ -4052,7 +4053,7 @@ jQuery(document).ready(function ($) {
   function tblTicketsPagination() {
     function tableContentTicket(nextPage) {
       $.ajax({
-        url: plugin_dir + "/php/searchTblTicketsClient.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchTblTicketsClient.php",
 
         type: "GET",
 
@@ -4107,7 +4108,7 @@ jQuery(document).ready(function ($) {
 
   function deleteReportClient(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/deleteReport.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/deleteReport.php",
 
       type: "POST",
 
@@ -4137,7 +4138,7 @@ jQuery(document).ready(function ($) {
 
   function searchInfoReportSelect(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/searchInfoReportSelect.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/searchInfoReportSelect.php",
 
       type: "POST",
 
@@ -4157,7 +4158,8 @@ jQuery(document).ready(function ($) {
     let id = $(this).val();
 
     window.open(
-      plugin_quote + "/classes/reportQUO.php?idCotizacion=" + id,
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php?idCotizacion=" +
+        id,
       "_blank"
     );
   });
@@ -4176,7 +4178,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountrySettings(consulta, val = "") {
     $.ajax({
-      url: plugin_quote + "/classes/searchCountry.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchCountry.php",
 
       type: "POST",
 
@@ -4200,7 +4202,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountrySettingsEU(consulta) {
     $.ajax({
-      url: plugin_quote + "/classes/searchCountryEUsettings.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchCountryEUsettings.php",
       type: "POST",
       data: { consulta },
     })
@@ -4263,7 +4265,7 @@ jQuery(document).ready(function ($) {
     infoadd
   ) {
     $.ajax({
-      url: plugin_dir + "/php/registerConsultShippingCost.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/registerConsultShippingCost.php",
       type: "POST",
       data: { userEncryt, address, subject, zipcode, infoadd },
     })
@@ -4302,7 +4304,7 @@ jQuery(document).ready(function ($) {
   //USER_TAG SESSION
   function keepSessionAlive() {
     $.ajax({
-      url: plugin_dir + "/php/userTagSession.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/userTagSession.php",
       type: "GET",
       success: function (response) {
         var data = JSON.parse(response);
