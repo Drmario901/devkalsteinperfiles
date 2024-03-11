@@ -8,7 +8,7 @@
             <h5 data-i18n="manofacturer:accesoRapido">Acceso rápido</h5>
             <ul>
                 <li class="footer-item">
-                    <a id="link-stock-footer" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock" data-i18n="manofacturer:existencias ">Existencias</a>
+                    <a id="link-stock-footer" href="https://dev.kalstein.plus/plataforma/index.php/manufacturer/stock" data-i18n="manofacturer:existencias">Existencias</a>
                 </li>
                 
                 <li class="footer-item">
@@ -32,7 +32,7 @@
             <h5 data-i18n="manofacturer:atencionCliente">Atención al cliente</h5>
             <ul>
                 <li class="footer-item">
-                    <a href="#" data-i18n="manofacturer:chateLinea">Chatea en línea</a>
+                    <a href="#" data-i18n="manofacturer:chateaLinea">Chatea en línea</a>
                 </li>
     
                 <li class="footer-item">
