@@ -4,11 +4,11 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $descriptionField = "product_category_" . $lang;
 
-    require_once __DIR__.'/../translateText.php';
-    translateText();
+    require_once __DIR__.'/../translations.php';
+    // translateText();
 
-    // $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
-    // $dataNotFound = $translations[$lang]['client:dataNotFound'];
+    $elegirOpcion = $translations[$lang]['client:eligeOpcion'];
+    $dataNotFound = $translations[$lang]['client:dataNotFound'];
 
 	// $salida = "<option selected value='0' style='color: #000 !important;'>Choisir une option</option>";
 
@@ -32,7 +32,7 @@
     $resultado = $conexion->query($consulta);
     $categorys = [];
 
-	$salida = "<option selected value='0' style='color: #000 !important;' data-i17n='client:eligeOpcion'> Elegir opcion </option>";
+	$salida = "<option selected value='0' style='color: #000 !important;' data-i17n='client:eligeOpcion'> ".$elegirOpcion." </option>";
 
 	// if ($resultado->num_rows > 0) {
 	// 	while ($value = $resultado->fetch_assoc()) {

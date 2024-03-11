@@ -74,6 +74,7 @@ $translations = array(
         'client:company' => 'Company',
         'client:agenteSoporte' => 'Support Agent',
         'client:responder' => 'Respond',
+        'client:eligeOpcion' => 'Choose an option',
 
         'banner_text_parameters' => 'Parameters',
         'banner_text_connect_with_others' => 'Connect with other users',
@@ -284,6 +285,7 @@ $translations = array(
         'productWithoutDescription' => 'Este producto no tiene descripción',
     ),
     'fr' => array(
+        "client:eligeOpcion " => "Choisissez une option",
         'client:itemTabla' => 'Article',
         'client:nCotizacionTable' => 'Numéro de devis',
         'client:fechaTable' => 'Date',
@@ -415,6 +417,7 @@ $translations = array(
         'productWithoutDescription' => 'Ce produit n\'a pas de description',
     ),
     'it' => array(
+        "client:eligeOpcion" => "Scegli un'opzione",
         'client:itemTabla' => 'Articolo',
         'client:nCotizacionTable' => 'Numero di preventivo',
         'client:fechaTable' => 'Data',
@@ -546,6 +549,7 @@ $translations = array(
         'productWithoutDescription' => 'Questo prodotto non ha una descrizione',
     ),
     'pt' => array(
+        "client:eligeOpcion" => "Escolha uma opção",
         'client:itemTabla' => 'Artigo',
         'client:nCotizacionTable' => 'Número de cotação',
         'client:fechaTable' => 'Encontro',
@@ -677,6 +681,7 @@ $translations = array(
         'productWithoutDescription' => 'Este produto não tem descrição',
     ),
     'pl' => array(
+        "client:eligeOpcion" => "Wybierz opcję",
         'client:itemTabla' => 'Artykuł',
         'client:nCotizacionTable' => 'Numer oferty',
         'client:fechaTable' => 'Data',
@@ -808,6 +813,7 @@ $translations = array(
         'productWithoutDescription' => 'Ten produkt nie ma opisu',
     ),
     'nl' => array(
+        "client:eligeOpcion" => "Kies een optie",
         'client:itemTabla' => 'Artikel',
         'client:nCotizacionTable' => 'Offertenummer',
         'client:fechaTable' => 'Datum',
@@ -938,6 +944,7 @@ $translations = array(
         'productWithoutDescription' => 'Dit product heeft geen beschrijving',
     ),
     'de' => array(
+        "client:eligeOpcion" => "Wählen Sie eine Option",
         'client:itemTabla' => 'Artikel',
         'client:nCotizacionTable' => 'Angebotsnummer',
         'client:fechaTable' => 'Datum',
@@ -1069,6 +1076,7 @@ $translations = array(
         'productWithoutDescription' => 'Dieses Produkt hat keine Beschreibung',
     ),
     'ee' => array(
+        "client:eligeOpcion" => "Valige võimalus",
         'client:itemTabla' => 'Artikkel',
         'client:nCotizacionTable' => 'Pakkumise number',
         'client:fechaTable' => 'Kuupäev',
@@ -1200,6 +1208,7 @@ $translations = array(
         'productWithoutDescription' => 'Sellel tootel pole kirjeldust',
     ),
     'se' => array(
+        "client:eligeOpcion" => "Välj ett alternativ",
         'client:itemTabla' => 'Artikel',
         'client:nCotizacionTable' => 'Offertnummer',
         'client:fechaTable' => 'Datum',
