@@ -4318,7 +4318,7 @@ jQuery(document).ready(function ($) {
 
   function getPreviewProduct(id) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/wooPreview.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/client/wooPreview.php",
       type: "POST",
       data: { id },
     })
@@ -4327,7 +4327,7 @@ jQuery(document).ready(function ($) {
         $("#preview-item").html(data.preview);
       })
       .fail(function () {
-        console.log("error");
+        console.log("errorrr");
       });
   }
 
