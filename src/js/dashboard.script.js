@@ -4333,7 +4333,8 @@ jQuery(document).ready(function ($) {
 
   $(document).on("click", "#productPreview", function () {
     getPreviewProduct($(this).val());
-    console.log("hice click aki");
+
+    console.log($(this).val(), "Click previeww");
   });
 
   setInterval(keepSessionAlive, 300000);
