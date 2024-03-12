@@ -14,7 +14,7 @@
             $extension = pathinfo($fileName, PATHINFO_EXTENSION);
             $newName = uniqid().".".$extension;
 
-            $path = __DIR__ .'/../../../../../../public_html/plataforma/wp-content/uploads/kalsteinQuote/';
+            $path = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'; 
             $uploadFile = $path . basename($newName);
 
             move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
