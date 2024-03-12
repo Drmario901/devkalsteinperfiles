@@ -19,9 +19,9 @@
 
             move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
 
-            $uploadName = 'https://kalstein.net/es/wp-content/uploads/kalsteinQuote/'.$newName;
+            $uploadName = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'.$newName;
 
-            $updateImage = "product_image = 'https://kalstein.net/es/wp-content/uploads/kalsteinQuote/$newName',";
+            $updateImage = "product_image = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/$newName',";
         } else {
             $updateImage = "";
         }
@@ -266,7 +266,7 @@
                 'Viscosímetro' => 'viscosimetro'
             );
 
-            $excerpt = "<strong>Manufacturer</strong>: <em>$brand</em><img class=\"alignnone size-full wp-image-29784\" src=\"https://kalstein.net/en/wp-content/uploads/2022/04/CE.jpg\" alt=\"\" width=\"54\" height=\"53\" />";
+            $excerpt = "<strong>Manufacturer</strong>: <em>$brand</em><img class=\"alignnone size-full wp-image-29784\" src=\"https://dev.kalstein.plus/plataforma/wp-content/uploads/2022/04/CE.jpg\" alt=\"\" width=\"54\" height=\"53\" />";
             $hidden_input = "<input id=\"woocomerce-kalsteinplus-identifier\" type=\"hidden\" data-model=\"$pModel\">";
 
             $sql = "INSERT INTO wp_posts 

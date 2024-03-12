@@ -137,6 +137,8 @@ $translations = array(
         'other' => 'Other',
         'inStock' => 'In Stock',
         'outOfStock' => 'Out of Stock',
+        'validado' => 'Validated',
+        'denegado' => 'Denied',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -291,6 +293,8 @@ $translations = array(
         'other' => 'Otro',
         'inStock' => 'En Stock',
         'outOfStock' => 'Fuera de Stock',
+        'validado' => 'Validado',
+        'denegado' => 'Denegado',
     ),
     'fr' => array(
         "client:eligeOpcion " => "Choisissez une option",
@@ -427,6 +431,8 @@ $translations = array(
         'other' => 'Autre',
         'inStock' => 'En stock',
         'outOfStock' => 'En rupture de stock',
+        'validado' => 'Validé',
+        'denegado' => 'Refusé',
     ),
     'it' => array(
         "client:eligeOpcion" => "Scegli un'opzione",
@@ -563,6 +569,8 @@ $translations = array(
         'other' => 'Altro',
         'inStock' => 'In magazzino',
         'outOfStock' => 'Esaurito',
+        'validado' => 'Convalidato',
+        'denegado' => 'Negato',
     ),
     'pt' => array(
         "client:eligeOpcion" => "Escolha uma opção",
@@ -699,6 +707,8 @@ $translations = array(
         'other' => 'Outro',
         'inStock' => 'Em estoque',
         'outOfStock' => 'Fora de estoque',
+        'validado' => 'Validado',
+        'denegado' => 'Negado',
     ),
     'pl' => array(
         "client:eligeOpcion" => "Wybierz opcję",
@@ -835,6 +845,8 @@ $translations = array(
         'other' => 'Inny',
         'inStock' => 'Dostępny',
         'outOfStock' => 'Niedostępny',
+        'validado' => 'Zatwierdzony',
+        'denegado' => 'Odrzucony',
     ),
     'nl' => array(
         "client:eligeOpcion" => "Kies een optie",
@@ -971,6 +983,8 @@ $translations = array(
         'procesar' => 'In afwachting',
         'inStock' => 'Op voorraad',
         'outOfStock' => 'Uit voorraad',
+        'validado' => 'Gevalideerd',
+        'denegado' => 'Geweigerd',
     ),
     'de' => array(
         "client:eligeOpcion" => "Wählen Sie eine Option",
@@ -1107,6 +1121,8 @@ $translations = array(
         'other' => 'Andere',
         'inStock' => 'Auf Lager',
         'outOfStock' => 'Nicht auf Lager',
+        'validado' => 'Validiert',
+        'denegado' => 'Abgelehnt',
     ),
     'ee' => array(
         "client:eligeOpcion" => "Valige võimalus",
@@ -1243,6 +1259,8 @@ $translations = array(
         'other' => 'Muu',
         'inStock' => 'Laos',
         'outOfStock' => 'Pole laos',
+        'validado' => 'Kinnitatud',
+        'denegado' => 'Keeldus',
     ),
     'se' => array(
         "client:eligeOpcion" => "Välj ett alternativ",
@@ -1378,6 +1396,8 @@ $translations = array(
         'requireService' => 'Kräver service',
         'other' => 'Annat',
         'inStock' => 'I lager',
-        'outOfStock' => 'Slut i lager'
+        'outOfStock' => 'Slut i lager',
+        'validado' => 'pendiente',
+        'denegado' => 'nekad'
     ),
 );

@@ -62,7 +62,7 @@ if ($count > 0) {
         session_set_cookie_params([
             'lifetime' => $session_lifetime,
             'path' => '/',
-            'domain' => '.kalstein.net',
+            'domain' => 'dev.kalstein.plus',
             'secure' => true,
             'httponly' => true,
             'samesite' => 'Lax'
@@ -96,7 +96,7 @@ if ($count > 0) {
         session_set_cookie_params([
             'lifetime' => $session_lifetime,
             'path' => '/',
-            'domain' => '.kalstein.net',
+            'domain' => 'dev.kalstein.plus',
             'secure' => true,
             'httponly' => true,
             'samesite' => 'Lax'

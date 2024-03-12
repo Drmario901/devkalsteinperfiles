@@ -94,7 +94,7 @@
         'R2', 
         $date, 
         'es', 
-        'kalstein.net/es/'
+        'dev.kalstein.plus/plataforma/'
     );				
     array_push($datos, $data);
 
