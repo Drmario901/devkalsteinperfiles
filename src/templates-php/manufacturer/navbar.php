@@ -15,10 +15,10 @@
     $firstLyricsLastname = strtoupper($acc_lname[0]);
 
     if ($acc_img == ''){
-        $urlImagePerfil = 'https://https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
+        $urlImagePerfil = 'https:///dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
     }
     else{
-        $urlImagePerfil = 'https://https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
+        $urlImagePerfil = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
     }
 
 ?>
