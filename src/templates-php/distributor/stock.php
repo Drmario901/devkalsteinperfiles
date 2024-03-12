@@ -21,6 +21,8 @@
 
             // Incluir el archivo de traducciones
             require __DIR__. '/../../../php/translations.php';
+            $inStock = $translations[$language]['inStock'];
+            $outOfStock = $translations[$language]['outOfStock'];
 
             // Determinar el texto del banner según el idioma
             $banner_text_translation = isset($translations[$language]['banner_text_manage_product']) ? $translations[$language]['banner_text_manage_product'] : $translations['en']['banner_text_manage_products'];
@@ -100,10 +102,10 @@
                 $val_status = $value['product_validate_status'];
 
                 if ($status == 'in stock'){
-                    $status = 'En existencias';
+                    $status = $inStock;
                 }
                 else if ($status == 'out of stock'){
-                    $status = 'Agotado';
+                    $status = $outOfStock;
                 }
 
                 if ($currency == 'EUR') {
