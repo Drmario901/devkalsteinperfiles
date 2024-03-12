@@ -330,5 +330,13 @@
   "pagina": "Sida",
   "cargarCotizacionError": "Fel vid laddning av offert",
   "cotizacionCorrectamente": "Offerten har framgångsrikt genererats",
-  "verPdf": "Visa PDF"
+  "verPdf": "Visa PDF",
+
+  "pendiente": "Avvaktar",
+  "procesar": "Bearbeta",
+  "cancelado": "Avbruten",
+  "processed": "Bearbetad",
+
+  "aceptar": "Acceptera",
+  "cancelar": "Avbryt"
 }

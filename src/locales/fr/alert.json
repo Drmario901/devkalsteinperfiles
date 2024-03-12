@@ -330,5 +330,13 @@
   "pagina": "Page",
   "cargarCotizacionError": "Erreur lors du chargement du devis",
   "cotizacionCorrectamente": "Le devis a été créé avec succès",
-  "verPdf": "Voir le PDF"
+  "verPdf": "Voir le PDF",
+
+  "pendiente": "En attente",
+  "procesar": "Traiter",
+  "processed": "Traité",
+  "cancelado": "Annulé",
+
+  "aceptar": "Accepter",
+  "cancelar": "Annuler"
 }

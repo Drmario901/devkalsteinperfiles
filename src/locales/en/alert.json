@@ -330,5 +330,13 @@
   "pagina": "Page",
   "cargarCotizacionError": "Error loading quotation",
   "cotizacionCorrectamente": "The quote has been successfully generated",
-  "verPdf": "View PDF"
+  "verPdf": "View PDF",
+
+  "pendiente": "Pending",
+  "procesar": "Procesar",
+  "processed": "Processed",
+  "cancelado": "Cancelled",
+
+  "aceptar": "Accept",
+  "cancelar": "Cancel"
 }

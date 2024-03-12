@@ -330,5 +330,13 @@
   "pagina": "Pagina",
   "cargarCotizacionError": "Errore durante il caricamento del preventivo",
   "cotizacionCorrectamente": "Il preventivo è stato generato con successo",
-  "verPdf": "Visualizza PDF"
+  "verPdf": "Visualizza PDF",
+
+  "pendiente": "In attesa",
+  "procesar": "Elabora",
+  "processed": "Elaborato",
+  "cancelado": "Annullato",
+
+  "aceptar": "Accettare",
+  "cancelar": "Annulla"
 }

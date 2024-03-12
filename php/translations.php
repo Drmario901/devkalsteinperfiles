@@ -956,6 +956,7 @@ $translations = array(
         'productWithoutDescription' => 'Dit product heeft geen beschrijving',
         'requireService' => 'Dienst vereisen',
         'other' => 'Anders',
+        'procesar' => 'In afwachting',
     ),
     'de' => array(
         "client:eligeOpcion" => "Wählen Sie eine Option",

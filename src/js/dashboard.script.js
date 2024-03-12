@@ -3183,24 +3183,24 @@ jQuery(document).ready(function ($) {
 
     const id = $(this).val();
 
-    if (valor === "Pending") {
+    if (valor === alertsTranslations.pendiente) {
       var options =
         "<option selected='' style='text-align: center;' value='0'>" +
         valor +
         "</option><option value='1'>Process</option><option value='2'>Cancelar</option>";
     } else {
-      if (valor === "Process") {
+      if (valor === alertsTranslations.procesar) {
         var options =
           "<option selected='' style='text-align: center;' value='1'>Procesar</option><option value='2'>Cancel</option>";
-      } else if (valor === "Cancel") {
+      } else if (valor === alertsTranslations.cancelado) {
         var options =
           "<option selected='' style='text-align: center;' value='2'>Cancelar</option><option value='0'>Pending</option>";
       }
     }
 
-    if (valor === "Cancel") {
+    if (valor === alertsTranslations.cancelado) {
     } else {
-      if (valor === "Processed") {
+      if (valor === alertsTranslations.processed) {
       } else {
         $.jAlert({
           type: "confirm",

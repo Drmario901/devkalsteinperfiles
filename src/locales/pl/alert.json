@@ -330,5 +330,13 @@
   "pagina": "Strona",
   "cargarCotizacionError": "Błąd podczas ładowania wyceny",
   "cotizacionCorrectamente": "Wycena została pomyślnie przeprowadzona",
-  "verPdf": "Zobacz PDF"
+  "verPdf": "Zobacz PDF",
+
+  "pendiente": "Oczekujący",
+  "procesar": "Przetwórz",
+  "processed": "Przetworzone",
+  "cancelado": "Anulowane",
+
+  "aceptar": "Akceptować",
+  "cancelar": "Anuluj"
 }

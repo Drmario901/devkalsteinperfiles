@@ -330,5 +330,13 @@
   "pagina": "Pagina",
   "cargarCotizacionError": "Fout bij het laden van offerte",
   "cotizacionCorrectamente": "De offerte is succesvol gemaakt",
-  "verPdf": "Bekijk PDF"
+  "verPdf": "Bekijk PDF",
+
+  "pendiente": "In afwachting",
+  "procesar": "Verwerken",
+  "processed": "Verwerkt",
+  "cancelado": "Geannuleerd",
+
+  "aceptar": "Accepteren",
+  "cancelar": "Annuleren"
 }

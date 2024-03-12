@@ -330,5 +330,13 @@
   "pagina": "Lehekülg",
   "cargarCotizacionError": "Tsiteeringu laadimisel ilmnes viga",
   "cotizacionCorrectamente": "Hinnapakkumus on edukalt tehtud",
-  "verPdf": "Vaata PDF-i"
+  "verPdf": "Vaata PDF-i",
+
+  "pendiente": "Ootel",
+  "procesar": "Töötlema",
+  "processed": "Töödeldud",
+  "cancelado": "Tühistatud",
+
+  "aceptar": "Vastu võtma",
+  "cancelar": "Tühistama"
 }
