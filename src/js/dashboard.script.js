@@ -3164,7 +3164,7 @@ jQuery(document).ready(function ($) {
     let valor = $(this).val();
 
     window.open(
-      "https://www.platform.kalstein.net/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=" +
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=" +
         valor +
         "",
       "_blank"
@@ -3173,8 +3173,11 @@ jQuery(document).ready(function ($) {
 
   $(document).on("click", "#btnViewReport", function () {
     let valor = $(this).val();
+    let valor2 = $(this);
+    console.log("valor2", valor2);
 
     searchInfoReportSelect(valor);
+    console.log("valor", valor);
   });
 
   $(document).on("click", "#btnChangeStatus", function () {
