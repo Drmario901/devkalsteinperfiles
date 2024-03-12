@@ -885,7 +885,7 @@ jQuery(document).ready(function ($) {
         if (!JSON.parse(response).err_msg) {
           iziToast.success({
             title: alertsTranslations.exito,
-            message: alertsTranslation.datosActualizados,
+            message: alertsTranslations.datosActualizados,
             position: "center",
           });
           window.location.href = domain + "/manufacturer/stock";
