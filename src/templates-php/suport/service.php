@@ -26,7 +26,27 @@
 
     ?>
 
-    
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentPathname = window.location.pathname;
+            const navLinks = [
+                { id: 'link-services', path: '/plataforma/index.php/support/services/' },
+                { id: 'link-addServices', path: '/plataforma/index.php/support/add' },
+                { id: 'link-modifyService', path: '/plataforma/index.php/support/services/edit' }
+            ];
+
+            navLinks.forEach(linkInfo => {
+                const linkElement = document.querySelector('#' + linkInfo.id);
+                const isActive = currentPathname.includes(linkInfo.path); // Verificamos si el pathname actual incluye el path del enlace
+                linkElement.classList.toggle("active", isActive); // Aplicamos o quitamos la clase 'active' según corresponda
+
+                // Opcional: Remover el atributo style si el enlace está activo
+                if (isActive) {
+                    linkElement.removeAttribute("style");
+                }
+            });
+        });
+    </script>
 
     
 
@@ -52,9 +72,9 @@
 
             <a class="nav-link active ms-0" id="link-services" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n='support:servicios'>Services</a>
 
-            <a class="nav-link" id="link-addServices" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='support:addServices'>Ajouter un service</a>
+            <a class="nav-link " id="link-addServices" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='support:addServices'>Ajouter un service</a>
 
-            <a class="nav-link" id="link-modifyService" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='support:modifyService'>Modifier le service</a>
+            <a class="nav-link " id="link-modifyService" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='support:modifyService'>Modifier le service</a>
 
             <hr class="mt-0 mb-4">
 
