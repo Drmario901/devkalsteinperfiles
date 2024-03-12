@@ -76,7 +76,7 @@
        if($catalog != ''){
         /*$pdfPath = $_FILES['catalog']['tmp_name'];
         $catalogName = $_FILES['catalog']['name'];
-
+        
         $thumbnailName = uniqid('', true) . '.jpg';
 
         $thumbnailPath = "/home/he270716/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$thumbnailName";
@@ -97,7 +97,7 @@
             ('$wp_catalog_name', '$acc_id', '$pCategory', '$pModel', 'Icon_pdf.png', '$newCatalogName');";
         $result2 = $conexion->query($query2);
 
-        move_uploaded_file($pdfPath, $uploadCatalogFile);
+        move_uploaded_file($_FILES['catalog']['tmp_name'], $uploadCatalogFile);
         }
 
         //ORIENTADO A SOPORTE 
@@ -254,7 +254,6 @@
                         WHERE taxonomy = 'product_cat' AND term_id = (
                             SELECT term_id FROM wp_terms WHERE slug = '$categorySlug' LIMIT 1
                         )";
-        echo $sql3;
         $conexion->query($sql3);
 
         // Insertar imágenes...
