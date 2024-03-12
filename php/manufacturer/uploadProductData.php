@@ -254,7 +254,6 @@
                         WHERE taxonomy = 'product_cat' AND term_id = (
                             SELECT term_id FROM wp_terms WHERE slug = '$categorySlug' LIMIT 1
                         )";
-        echo $sql3;
         $conexion->query($sql3);
 
         // Insertar imágenes...
