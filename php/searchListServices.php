@@ -45,7 +45,7 @@
                 $description = strlen($description) >= 150 ? substr($description, 0, 147).'...' : $description;
                 $image = $value['account_url_image_perfil'];
                 $sql2 = "SELECT * FROM `wp_servicios` WHERE SE_correo LIKE ?";
-                $stmt = $conexion->prepare($sql);
+                $stmt = $conexion->prepare($sql2);
                 $stmt->bind_param("s", $correo);
                 $stmt->execute();
                 $resultado2 = $stmt->get_result();
