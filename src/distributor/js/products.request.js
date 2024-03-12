@@ -154,7 +154,7 @@ function validateProductData(
     reg_ex2 = RegExp(/<(\S*?)[^>]*>/g);
 
     if (reg_ex1.test(description) || reg_ex2.test(description)) {
-      err_msg = `${alertTranslations.avoidUsingExpressionsOfTheType} "&lt;xxx&gt;", "&lt;xxx/&gt;".`;
+      err_msg = `${alertsTranslations.avoidUsingExpressionsOfTheType} "&lt;xxx&gt;", "&lt;xxx/&gt;".`;
     }
 
     // marca y modelo en el nombre
@@ -246,7 +246,7 @@ function validateProductData(
 
   if (err_msg != "") {
     iziToast.error({
-      title: alertTranslations.error,
+      title: alertsTranslations.error,
       message: err_msg,
       position: "center",
     });
@@ -281,7 +281,7 @@ function imgVal(file, id) {
     image.onload = function () {
       if (image.width < 900 || image.height < 900) {
         iziToast.error({
-          title: alertTranslations.error,
+          title: alertsTranslations.error,
           message: alertsTranslations.imageMinSize,
           position: "center",
         });
@@ -296,7 +296,7 @@ function imgVal(file, id) {
 
   if (err_msg != "") {
     iziToast.error({
-      title: alertTranslations.error,
+      title: alertsTranslations.error,
       message: err_msg,
       position: "center",
     });
@@ -322,7 +322,7 @@ function pdfVal(file) {
 
     if (err_msg != "") {
       iziToast.error({
-        title: alertTranslations.error,
+        title: alertsTranslations.error,
         message: `${err_msg} ${alertsTranslations.fileWillBeDescarted}`,
         position: "center",
       });
@@ -576,7 +576,7 @@ jQuery(document).ready(function ($) {
           window.location.href = domain + "/productos";
         } else {
           iziToast.error({
-            title: alertTranslations.error,
+            title: alertsTranslations.error,
             message: JSON.parse(response).err_msg,
             position: "center",
           });
@@ -584,7 +584,7 @@ jQuery(document).ready(function ($) {
       })
       .fail(function () {
         iziToast.error({
-          title: alertTranslations.error,
+          title: alertsTranslations.error,
           message: `${alertsTranslations.couldNotRetrieveInfoFromDatabase}`,
           position: "center",
         });
@@ -851,7 +851,7 @@ jQuery(document).ready(function ($) {
           window.location.href = domain + "/productos";
         } else {
           iziToast.error({
-            title: alertTranslations.error,
+            title: alertsTranslations.error,
             message: JSON.parse(response).err_msg,
             position: "center",
           });
@@ -859,7 +859,7 @@ jQuery(document).ready(function ($) {
       })
       .fail(function () {
         iziToast.error({
-          title: alertTranslations.error,
+          title: alertsTranslations.error,
           message: alertsTranslations.couldNotRetrieveInfoFromDatabase,
           position: "center",
         });
