@@ -29,7 +29,8 @@
     <script>
 
         let page = "services";
-
+        let pathname = window.location.pathname;
+        console.log(pathname);
     
 
         document.addEventListener('DOMContentLoaded', function() {
