@@ -4,9 +4,14 @@
   $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
   $id = $_POST['consulta'];
 
+  //Traducciones de la página
   $agente_soporte = $translations[$lang]['client:agenteSoporte'];
   $categoria = $translations[$lang]['client:categoria'];
   $descripcion = $translations[$lang]['client:descripcion'];
+  $selectOption = $translations[$lang]['client:eligeOpcion'];
+
+  //Resto del codigo
+
   $sql = "SELECT * FROM wp_servicios WHERE SE_id = '$id'";
   $resultado = $conexion->query($sql);
   $row = mysqli_fetch_array($resultado);
@@ -25,7 +30,7 @@
 
   $categorieService = "<b>$categoria:</b> .$categorie";
   
-  $html = "<option selected value='0'>elige una opción</option>";
+  $html = "<option selected value='0'>$selectOption</option>";
   $sql3 = "SELECT * FROM wp_k_products WHERE product_category = '$categorie'";
   $resultado3 = $conexion->query($sql3);
   
