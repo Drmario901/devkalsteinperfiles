@@ -101,9 +101,9 @@
         }
 
         echo json_encode($resp);
-    } catch (Exception $e) {
-        echo 'Excepción capturada: ',  $e->getMessage(), "\n";
-    } finally {
+    }  catch (Throwable $t) {
+        echo 'Error capturado: ', $t->getMessage(), "\n";
+    }  finally {
         $conexion->close();
     }
 ?>
