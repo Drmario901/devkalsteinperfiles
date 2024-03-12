@@ -107,11 +107,11 @@
             <div id='currentPageIndicatorServices'>Page: $page</div>
             <form id='form-previous-services' action='' method='post' style='margin-right: 8px'>
                 <input id='previous' type='hidden' name='b' value='$prevPage'>
-                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+                <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:previo' value=''>
             </form>
             <form id='form-next-services' action='' method='post'>
                 <input id='next' class='next' type='hidden' name='b' value='$nextPage'>
-                <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+                <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i17n='client:next' value=''>
             </form>
         </div>
         <input id='hiddenPage' type='hidden' value='$page'>";
