@@ -143,7 +143,7 @@ jQuery(document).ready(function($){
                 var details = `${alertsTranslations.nombreDelProducto}: ${productName} <br>` +
                 `${alertsTranslations.modelProduct}: ${productModel} <br>` +
                 `${alertsTranslations.qty}: ${productQuantity} <br>` +
-                `${alertsTranslations.image}: <img style="max-width: 200px;" src="https://kalstein.net/es/wp-content/uploads/kalsteinQuote/'${productImage}'">`;
+                `${alertsTranslations.image}: <img style="max-width: 200px;" src="https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'${productImage}'">`;
       
                 iziToast.show({
                     title: `${alertsTranslations.quoteDetails} (ID:  ${quote_id} ')`,
