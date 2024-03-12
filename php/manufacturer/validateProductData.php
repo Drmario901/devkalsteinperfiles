@@ -153,7 +153,7 @@
         $fileName = $_FILES['fileName']['name'];              // my_image.png
         $extension = pathinfo($fileName, PATHINFO_EXTENSION); // .png
         $newName = uniqid().".".$extension;                   // 64asd55645.png
-        $path = '/home/he270716/public_html/es/wp-content/uploads/kalsteinQuote/';         // home4545/testing.kalstei ...
+        $path = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/';         // home4545/testing.kalstei ...
         $uploadFile   = $path.basename($newName);             // home4545/testing.kalstei ... images/upload/64asd55645.png
 
         $uploadName = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'.$newName; // https://testing.kalstei ... images/upload/64asd55645.png
