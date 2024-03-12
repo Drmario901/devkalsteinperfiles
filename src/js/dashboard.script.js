@@ -3779,19 +3779,19 @@ jQuery(document).ready(function ($) {
 
         $("#c-listSupportServices").html(data);
 
-        searchListServicesPagination();
-
         if (data.trim() === "") {
           return;
         }
 
         $(".pagination #form-next-services input[name=b]").val(
-          parseInt(currentPage) + 1
+          parseInt(nextPage) + 1
         );
 
         let prev = parseInt(currentPage) > 1 ? parseInt(currentPage) - 1 : 1;
 
         $(".pagination #form-previous-services input[name=b]").val(prev);
+
+        searchListServicesPagination();
 
         let numResults = $(data).find("#hiddenPage").length;
 
@@ -3799,18 +3799,6 @@ jQuery(document).ready(function ($) {
           $("#previous").prop("disabled", true);
         } else {
           $("#previous").prop("disabled", false);
-        }
-
-        if (numResults === 0) {
-          $("#next").prop("disabled", true);
-
-          $(".pagination #form-next-services input[name=b]").val(currentPage);
-        } else {
-          $("#next").prop("disabled", false);
-
-          $(".pagination #form-next-services input[name=b]").val(
-            parseInt(currentPage) + 1
-          );
         }
 
         if (currentPage > 1) {
@@ -3825,7 +3813,7 @@ jQuery(document).ready(function ($) {
       },
 
       error: function () {
-        alert("Error charging quote data.");
+        console.log("Error charging quote data.");
       },
     });
   }
