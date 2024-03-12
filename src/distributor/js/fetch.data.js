@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
     function mostrarDatos(consulta){
         $.ajax({
-            url: plugin_dir + "php/distributor/productData.php",
+            url: plugin_dir + "/php/distributor/productData.php",
             type: "POST",
             data: {consulta},
         })
