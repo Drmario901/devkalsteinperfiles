@@ -116,7 +116,7 @@
         echo $html;
     } catch (mysqli_sql_exception $e) {
         //throw $th;
-        echo "Error: ";
+        echo "Error: " .$e->getMessage();
     }
     
     $conexion->close();
