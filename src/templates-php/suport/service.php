@@ -89,11 +89,11 @@
 
             <select class="form-control" id="estatus">
 
-                <option value='0' selected data-i18n='suport:seleccionarEstatus'>Sélectionner un statut</option>
+                <option value='0' selected data-i18n='support:seleccionarEstatus'>Sélectionner un statut</option>
 
-                <option value="activé" data-i18n='suport:activated'>Activé</option>
+                <option value="activé" data-i18n='support:activated'>Activé</option>
 
-                <option value="désactivé" data-i18n='suport:desactivated'>Handicapés</option>
+                <option value="désactivé" data-i18n='support:desactivated'>Handicapés</option>
 
             </select>
 

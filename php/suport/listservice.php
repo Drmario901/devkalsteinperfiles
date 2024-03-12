@@ -101,8 +101,8 @@
         }
     } else {
         $resp['html'] = <<<HTML
-        <div class='container' style='display: flex; justify-content: center; align-items: center; height: 100vh;'>
-            <div class='row contentNoDataQuote' style='position: relative; width: 100%; text-align: center;'>
+        <div class='container' style='display: flex; justify-content: center; align-items: center; width: 100%; '>
+            <div class='row contentNoDataQuote' style='text-align: center;'>
                 <span class='material-symbols-rounded icon'>sentiment_dissatisfied</span>
                 <p style='color: #000;'>$datosNoEncontrados</p>
             </div>
