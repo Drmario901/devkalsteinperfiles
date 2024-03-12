@@ -157,7 +157,7 @@
                 type="text"
                 name="service_company"
                 class="form-control validate"
-                value="<?php ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);  echo $acc_company; ?>"
+                value="<?php echo$acc_company?>"
                 data-placeholder="support:nombreCompany"
                 placeholder="Nombre de Compañia"
             />
