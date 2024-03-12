@@ -14,7 +14,7 @@
             $extension = pathinfo($fileName, PATHINFO_EXTENSION);
             $newName = uniqid().".".$extension;
 
-            $path = __DIR__ .'/../../../../../../public_html/es/wp-content/uploads/kalsteinQuote/';
+            $path = __DIR__ .'/../../../../../../public_html/dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/';
             $uploadFile = $path . basename($newName);
 
             move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
@@ -67,7 +67,7 @@
             }
             // si hay, lo actualiza y elimina el antiguo
             else {
-                unlink('https://platform.kalstein.us/wp-content/plugins/kalsteinPerfiles/src/manuals/upload/'.$manualPath);
+                unlink('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/manuals/upload/'.$manualPath);
 
                 $queryUpdate = "UPDATE wp_manuales SET
                 M_nombre_product = '$wp_manual_name',
@@ -109,7 +109,7 @@
             }
             // si hay, lo actualiza y elimina el antiguo
             else {
-                unlink('https://platform.kalstein.us/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/'.$catalogPath);
+                unlink('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/'.$catalogPath);
 
                 $queryUpdate = "UPDATE wp_catalogs SET
                 catalog_name           = '$wp_catalog_name',
