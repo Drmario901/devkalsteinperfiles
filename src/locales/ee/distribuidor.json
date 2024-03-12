@@ -133,5 +133,6 @@
     "Validado": "Kinnitatud",
     "Denegado": "Tagasi lükatud",
     "labelCantidad": "Kogus",
-    "labelResultado": "Tulemus"
+    "labelResultado": "Tulemus",
+    "existencias": "Olemasolevad"
 }
