@@ -23,6 +23,9 @@
             require __DIR__. '/../../../php/translations.php';
             $inStock = $translations[$language]['inStock'];
             $outOfStock = $translations[$language]['outOfStock'];
+            $pendiente = $translations[$language]['pendiente'];
+            $validado = $translations[$language]['validado'];
+            $denegado = $translations[$language]['denegado'];
 
             // Determinar el texto del banner según el idioma
             $banner_text_translation = isset($translations[$language]['banner_text_manage_product']) ? $translations[$language]['banner_text_manage_product'] : $translations['en']['banner_text_manage_products'];
@@ -118,13 +121,13 @@
                 }
 
                 if ($val_status == 'pending'){
-                    $st = '<i class="fa-regular fa-clock h3" style="color: #ffba1f"></i><p class="mb-0"><b>Pendiente</b></p>';
+                    $st = "<i class='fa-regular fa-clock h3' style='color: #ffba1f'></i><p class='mb-0'><b>$pendiente</b></p>";
                 }
                 else if ($val_status == 'validated'){
-                    $st = '<i class="fa-regular fa-circle-check h3" style="color: #4cd17a"></i><p class="mb-0"><b>Validado</b></p>';
+                    $st = "<i class='fa-regular fa-circle-check h3' style='color: #4cd17a'></i><p class='mb-0'><b>$validado</b></p>";
                 }
                 else if ($val_status == 'denied'){
-                    $st = '<i class="fa-solid fa-triangle-exclamation h3 style="color: #d13a33"></i><p class="mb-0"><b>Denegado</b></p>';
+                    $st = "<i class='fa-solid fa-triangle-exclamation h3 style='color: #d13a33'></i><p class='mb-0'><b>$denegado</b></p>";
                 }
 
                 $date = date('d/m/Y', strtotime($date));
