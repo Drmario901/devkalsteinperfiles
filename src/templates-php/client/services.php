@@ -88,8 +88,8 @@
                 </div>
             </div>
             <div class='modal-footer'>
-                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' id='btnClosedModalTicket' data-i18n="client:historia">Cerrar</button>
-                <button type='button' class='btn btn-primary' id='savedTicket' data-i18n="client:historia">Generar Ticket</button>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal' id='btnClosedModalTicket' data-i18n="client:cerrar">Cerrar</button>
+                <button type='button' class='btn btn-primary' id='savedTicket' data-i18n="client:generar">Generar Ticket</button>
             </div>
         </div>
     </div>

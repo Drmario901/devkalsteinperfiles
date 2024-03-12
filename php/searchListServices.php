@@ -58,8 +58,8 @@
                                 <p class='card-text'>$description</p>
                             </div>
                             <ul class='list-group list-group-flush'>
-                                <li class='list-group-item' data-i18n='support:agente'><span>Agente</span>: $usuario</li>
-                                <li class='list-group-item' data-i18n='support:Category'><span>Categoria</span>: $category</li>
+                                <li class='list-group-item'><span data-i18n='support:agente'>Agente</span>: $usuario</li>
+                                <li class='list-group-item'><span data-i18n='support:Category'>Categoria</span>: $category</li>
                             </ul>
                             <button type='button' class='btnQuoClone mx-auto my-3 text-center' id='add_report' value='$id' data-bs-toggle='modal' data-bs-target='#exampleModal' style='width: 160px' data-i18n='client:requirirServicio'>Requerir Servicio</button>
                         </div>
