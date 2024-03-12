@@ -9,6 +9,7 @@
   $categoria = $translations[$lang]['client:categoria'];
   $descripcion = $translations[$lang]['client:descripcion'];
   $selectOption = $translations[$lang]['client:eligeOpcion'];
+  $other = $translations[$lang]['other'];
 
   //Resto del codigo
 
@@ -37,7 +38,7 @@
   while ($model = $resultado3->fetch_assoc()){
     $html .= '<option value="'.$model['product_model'].'">'.$model['product_model'].' - '.$model['product_brand'].'</option>';
   }
-  $html .= '<option value="Other">Otro</option>';
+  $html .= "<option value='Other'>$other</option>";
 
   $datos = array(
     'nameAgent' => $nameAgent,
