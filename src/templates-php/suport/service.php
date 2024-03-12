@@ -26,19 +26,7 @@
 
     ?>
 
-    <script>
-
-        let page = "services";
-
     
-
-        document.addEventListener('DOMContentLoaded', function() {
-        // let page = "link-services"; // Asegúrate de que este ID sea correcto
-        document.querySelector('#' + page).classList.add("active");
-        document.querySelector('#' + page).removeAttribute("style");
-});
-
-    </script>
 
     
 
