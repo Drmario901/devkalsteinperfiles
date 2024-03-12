@@ -15,8 +15,8 @@ jQuery(document).ready(function ($) {
       data: { status, category, page },
     })
       .done(function (respuesta) {
-        // console.log(respuesta)
-        respuesta = JSON.parse(respuesta);
+        console.log(respuesta);
+        respuesta = JSON.parse("respuestaa", respuesta);
         body.html(respuesta.html);
         page = respuesta.pagina;
         pagina.text(page);
