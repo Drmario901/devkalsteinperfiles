@@ -21,7 +21,7 @@
             $urlImagePerfil = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.''.$firstLyricsLastname.'.png';
         }
         else{
-            $urlImagePerfil = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$imgPerfil;
+            $urlImagePerfil = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
         }
     
     ?>
