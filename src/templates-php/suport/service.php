@@ -26,20 +26,7 @@
 
     ?>
 
-    <script>
-
-        let page = "services";
-        let pathname = window.location.pathname;
-        console.log(pathname);
     
-
-        document.addEventListener('DOMContentLoaded', function() {
-        // let page = "link-services"; // Asegúrate de que este ID sea correcto
-        document.querySelector('#' + page).classList.add("active");
-        document.querySelector('#' + page).removeAttribute("style");
-});
-
-    </script>
 
     
 
