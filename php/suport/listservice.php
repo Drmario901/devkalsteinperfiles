@@ -4,7 +4,15 @@
     error_reporting( E_ALL | E_STRICT );
     session_start();
     require __DIR__ . '/../conexion.php';
+    require_once __DIR__.'/../../php/translations.php';
 
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+    $edit = $translations[$lang]['client:editar'];
+    $delete = $translations[$lang]["client:deleteTable"];
+    $visibility = $translations[$lang]['client:visibilidad'];
+    $datosNoEncontrados = $translations[$lang]['client:dataNotFound'];
+ 
     $resp = array();
     $acc_id = $_SESSION['emailAccount'];
     $cate = $_POST['category'];
@@ -80,12 +88,12 @@
                     <td>$company</td>
                     <td>$usuario</td>
                     <td>$correo</td>
-                    <td> <button class='material-symbols-rounded' type='button' name='view' id='btn-service-details' value='$id'>visibility</button></td>
+                    <td> <button class='material-symbols-rounded' type='button' name='view' id='btn-service-details' value='$id'>$visibility</button></td>
                     <td>$fecha</td>
                     <td>$estado</td>
                     <td>
-                        <button class='material-symbols-rounded' id='btnEditService' value='$id'>Edit</button>
-                        <button class='material-symbols-rounded' id='btnDeleteService' value='$id'>Delete</button>
+                        <button class='material-symbols-rounded' id='btnEditService' value='$id'>$edit</button>
+                        <button class='material-symbols-rounded' id='btnDeleteService' value='$id'>$delete</button>
                     </td>
                 </tr>
             HTML;
@@ -95,7 +103,7 @@
         $resp['html'] = <<<HTML
             <div class='row contentNoDataQuote' style='position: relative; top: 0; left: 0; right: 0; bottom: 0; width: 100%;'>
                 <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                <center><p style='color: #000;'>Aucune donnée n'a été trouvée</p></center>
+                <center><p style='color: #000;'>$datosNoEncontrados</p></center>
             </div>
         HTML;
     }
