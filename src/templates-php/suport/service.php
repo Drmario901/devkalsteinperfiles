@@ -59,11 +59,11 @@
 
         <nav class="nav nav-borders">
 
-            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n='suport:servicios'>Services</a>
+            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n='support:servicios'>Services</a>
 
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='suport:addServices'>Ajouter un service</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='support:addServices'>Ajouter un service</a>
 
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='suport:modifyService'>Modifier le service</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='support:modifyService'>Modifier le service</a>
 
             <hr class="mt-0 mb-4">
 
@@ -77,7 +77,7 @@
 
             <select class="form-control mb-2" type="date" id="category">
 
-                <option value="0" data-i18n='suport:selectDefault'>Sélectionner une catégorie</option>
+                <option value="0" data-i18n='support:selectDefault'>Sélectionner une catégorie</option>
 
             </select>
 
@@ -107,25 +107,25 @@
 
                     <tr>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:nombre'>Nombre</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:nombre'>Nombre</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:servicios'>Service</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:servicios'>Service</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:Category'>Catégorie</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:Category'>Catégorie</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:labelCompany'>Entreprise</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:labelCompany'>Entreprise</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:agenteSoporte'>agent d'assistance</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:agenteSoporte'>agent d'assistance</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:labelCorreo'>Courriel</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:labelCorreo'>Courriel</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:description'>Description</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:description'>Description</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:date'>Date</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:date'>Date</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:servicios'>Statut</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:servicios'>Statut</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:editar'>Editer</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='support:editar'>Editer</td>
 
                     </tr>
 
