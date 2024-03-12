@@ -44,8 +44,11 @@
                 $description = $value['SE_description'];
                 $description = strlen($description) >= 150 ? substr($description, 0, 147).'...' : $description;
                 $image = $value['account_url_image_perfil'];
-                $sql2 = "SELECT * FROM wp_account WHERE account_correo = '$correo'";
-                $resultado2 = $conexion->query($sql2);
+                $sql2 = "SELECT * FROM `wp_servicios` WHERE SE_correo LIKE ?";
+                $stmt = $conexion->prepare($sql);
+                $stmt->bind_param("s", $correo);
+                $stmt->execute();
+                $resultado2 = $stmt->get_result();
                 $row = mysqli_fetch_array($resultado2);            
                 $name = $row[3];
                 $lastname = $row[4];
