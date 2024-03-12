@@ -1,8 +1,12 @@
 <?php
   require __DIR__ .'/conexion.php';
-
+  include_once './translations.php';
+  $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
   $id = $_POST['consulta'];
 
+  $agente_soporte = $translations[$lang]['client:agenteSoporte'];
+  $categoria = $translations[$lang]['client:categoria'];
+  $descripcion = $translations[$lang]['client:descripcion'];
   $sql = "SELECT * FROM wp_servicios WHERE SE_id = '$id'";
   $resultado = $conexion->query($sql);
   $row = mysqli_fetch_array($resultado);
@@ -16,9 +20,10 @@
   $name = $row2['account_nombre'];
   $lastname = $row2['account_apellido'];
 
-  $nameAgent = '<input type="hidden" id="emailAgent" value="'.$email.'"/><input type="hidden" id="idServices" value="'.$id.'"/><b>Agente de Soporte:</b> '.$name.' '.$lastname;
-  $descriptionService = '<b>Descripción:</b> '.$description;
-  $categorieService = '<b>Categoria:</b> '.$categorie;
+  $nameAgent = '<input type="hidden" id="emailAgent" value="'.$email.'"/><input type="hidden" id="idServices" value="'.$id.'"/><b>'.$agente_soporte.'</b> '.$name.' '.$lastname;
+  $descriptionService = "<b>$descripcion:</b> $description";
+
+  $categorieService = "<b>$categoria:</b> .$categorie";
   
   $html = "<option selected value='0'>elige una opción</option>";
   $sql3 = "SELECT * FROM wp_k_products WHERE product_category = '$categorie'";

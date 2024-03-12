@@ -1,8 +1,16 @@
 <?php
 
   require __DIR__ . '/conexion.php';
-
+  include_once './translations.php';
+  $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
   $id = $_POST['consulta'];
+
+  $agente_soporte = $translations[$lang]['client:agenteSoporte'];
+  $categoria = $translations[$lang]['client:categoria'];
+  $servicios = $translations[$lang]['client:servicios'];
+  $modelo = $translations[$lang]['client:modelo'];
+  $nivel = $translations[$lang]['client:nivel'];
+  $descripcion = $translations[$lang]['client:descripcion'];
 
   $sql = "SELECT * FROM wp_reportes WHERE R_id = '$id'";
   $resultado = $conexion->query($sql);
@@ -29,12 +37,12 @@
   $nameService = $row3['SE_servicio'];
 
   $html = "
-    <span><b>Agente de soporte:</b> $nameAgent</span>
-    <span><b>Servicios:</b> $nameService</span>
-    <span><b>Categoria:</b> $categorie</span>
-    <span><b>Modelo:</b> $model</span>
-    <span><b>Descripción:</b> $description</span> 
-    <span><b>Nivel:</b> $level</span>
+    <span><b>$agente_soporte:</b> $nameAgent</span>
+    <span><b>$servicios:</b> $nameService</span>
+    <span><b>$categoria:</b> $categorie</span>
+    <span><b>$modelo:</b> $model</span>
+    <span><b>$descripcion:</b> $description</span> 
+    <span><b>$nivel:</b> $level</span>
     <hr>
   ";
 
