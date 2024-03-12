@@ -133,5 +133,6 @@
     "Validado": "Validiert",
     "Denegado": "Abgelehnt",
     "labelCantidad": "Menge",
-    "labelResultado": "Ergebnis"
+    "labelResultado": "Ergebnis",
+    "existencias": "Lagerbestand"
 }

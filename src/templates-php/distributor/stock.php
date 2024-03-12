@@ -21,6 +21,8 @@
 
             // Incluir el archivo de traducciones
             require __DIR__. '/../../../php/translations.php';
+            $inStock = $translations[$language]['inStock'];
+            $outOfStock = $translations[$language]['outOfStock'];
 
             // Determinar el texto del banner según el idioma
             $banner_text_translation = isset($translations[$language]['banner_text_manage_product']) ? $translations[$language]['banner_text_manage_product'] : $translations['en']['banner_text_manage_products'];
@@ -42,14 +44,14 @@
                 <thead class='headTableForQuote'>
                     <tr>
                         <td class='fw-bold' style='background-color: #213280; color: white;'>ID</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Nombre</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Estatus</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Imágen</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Categoría</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Existencias</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;'>Precio en (USD)</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Fecha</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Acciones</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="distribuidor:labelNombre" >Nombre</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="distribuidor:elementoEstatus" >Estatus</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="distribuidor:labelImagenProduct" >Imágen</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;'data-i18n="distribuidor:labelCategoria">Categoría</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;'data-i18n="distribuidor:existencias">Existencias</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;' data-i18n="distribuidor:labelPrecioUnit">Precio en (USD)</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="distribuidor:elementoFecha">Fecha</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n="distribuidor:elementoAcciones">Acciones</td>
                     </tr>
                 </thead>
                 <tbody id="product-table-body" class='bodyTableForQuote'>
@@ -100,10 +102,10 @@
                 $val_status = $value['product_validate_status'];
 
                 if ($status == 'in stock'){
-                    $status = 'En existencias';
+                    $status = $inStock;
                 }
                 else if ($status == 'out of stock'){
-                    $status = 'Agotado';
+                    $status = $outOfStock;
                 }
 
                 if ($currency == 'EUR') {

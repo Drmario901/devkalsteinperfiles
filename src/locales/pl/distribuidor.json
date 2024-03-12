@@ -133,5 +133,6 @@
     "Validado": "Zatwierdzony",
     "Denegado": "Odrzucony",
     "labelCantidad": "Ilość",
-    "labelResultado": "Wynik"
+    "labelResultado": "Wynik",
+    "existencias": "Dostępne"
 }

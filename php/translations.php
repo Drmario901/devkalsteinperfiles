@@ -135,6 +135,8 @@ $translations = array(
         'productWithoutDescription' => 'This product does not have a description',
         'requireService' => 'Require Service',
         'other' => 'Other',
+        'inStock' => 'In Stock',
+        'outOfStock' => 'Out of Stock',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -287,6 +289,8 @@ $translations = array(
         'productWithoutDescription' => 'Este producto no tiene descripción',
         'requireService' => 'Requerir Servicio',
         'other' => 'Otro',
+        'inStock' => 'En Stock',
+        'outOfStock' => 'Fuera de Stock',
     ),
     'fr' => array(
         "client:eligeOpcion " => "Choisissez une option",
@@ -421,6 +425,8 @@ $translations = array(
         'productWithoutDescription' => 'Ce produit n\'a pas de description',
         'requireService' => 'Exiger un service',
         'other' => 'Autre',
+        'inStock' => 'En stock',
+        'outOfStock' => 'En rupture de stock',
     ),
     'it' => array(
         "client:eligeOpcion" => "Scegli un'opzione",
@@ -555,6 +561,8 @@ $translations = array(
         'productWithoutDescription' => 'Questo prodotto non ha una descrizione',
         'requireService' => 'Richiedi un servizio',
         'other' => 'Altro',
+        'inStock' => 'In magazzino',
+        'outOfStock' => 'Esaurito',
     ),
     'pt' => array(
         "client:eligeOpcion" => "Escolha uma opção",
@@ -689,6 +697,8 @@ $translations = array(
         'productWithoutDescription' => 'Este produto não tem descrição',
         'requireService' => 'Exigir serviço',
         'other' => 'Outro',
+        'inStock' => 'Em estoque',
+        'outOfStock' => 'Fora de estoque',
     ),
     'pl' => array(
         "client:eligeOpcion" => "Wybierz opcję",
@@ -823,6 +833,8 @@ $translations = array(
         'productWithoutDescription' => 'Ten produkt nie ma opisu',
         'requireService' => 'Wymagać usługi',
         'other' => 'Inny',
+        'inStock' => 'Dostępny',
+        'outOfStock' => 'Niedostępny',
     ),
     'nl' => array(
         "client:eligeOpcion" => "Kies een optie",
@@ -957,6 +969,8 @@ $translations = array(
         'requireService' => 'Dienst vereisen',
         'other' => 'Anders',
         'procesar' => 'In afwachting',
+        'inStock' => 'Op voorraad',
+        'outOfStock' => 'Uit voorraad',
     ),
     'de' => array(
         "client:eligeOpcion" => "Wählen Sie eine Option",
@@ -1091,6 +1105,8 @@ $translations = array(
         'productWithoutDescription' => 'Dieses Produkt hat keine Beschreibung',
         'requireService' => 'Service erforderlich',
         'other' => 'Andere',
+        'inStock' => 'Auf Lager',
+        'outOfStock' => 'Nicht auf Lager',
     ),
     'ee' => array(
         "client:eligeOpcion" => "Valige võimalus",
@@ -1225,6 +1241,8 @@ $translations = array(
         'productWithoutDescription' => 'Sellel tootel pole kirjeldust',
         'requireService' => 'Teenuse nõue',
         'other' => 'Muu',
+        'inStock' => 'Laos',
+        'outOfStock' => 'Pole laos',
     ),
     'se' => array(
         "client:eligeOpcion" => "Välj ett alternativ",
@@ -1359,5 +1377,7 @@ $translations = array(
         'productWithoutDescription' => 'Denna produkt har ingen beskrivning',
         'requireService' => 'Kräver service',
         'other' => 'Annat',
+        'inStock' => 'I lager',
+        'outOfStock' => 'Slut i lager'
     ),
 );
