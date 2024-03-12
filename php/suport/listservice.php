@@ -88,12 +88,12 @@
                     <td>$company</td>
                     <td>$usuario</td>
                     <td>$correo</td>
-                    <td> <button class='material-symbols-rounded' type='button' name='view' id='btn-service-details' value='$id'>$visibility</button></td>
+                    <td> <button class='material-symbols-rounded' type='button' name='view' id='btn-service-details' value='$id'>visibility</button></td>
                     <td>$fecha</td>
                     <td>$estado</td>
                     <td>
-                        <button class='material-symbols-rounded' id='btnEditService' value='$id'>$edit</button>
-                        <button class='material-symbols-rounded' id='btnDeleteService' value='$id'>$delete</button>
+                        <button class='material-symbols-rounded' id='btnEditService' value='$id'>Edit</button>
+                        <button class='material-symbols-rounded' id='btnDeleteService' value='$id'>Delete</button>
                     </td>
                 </tr>
             HTML;
@@ -101,11 +101,13 @@
         }
     } else {
         $resp['html'] = <<<HTML
-            <div class='row contentNoDataQuote' style='position: relative; top: 0; left: 0; right: 0; bottom: 0; width: 100%;'>
-                <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                <center><p style='color: #000;'>$datosNoEncontrados</p></center>
+        <div class='container' style='display: flex; justify-content: center; align-items: center; height: 100vh;'>
+            <div class='row contentNoDataQuote' style='position: relative; width: 100%; text-align: center;'>
+                <span class='material-symbols-rounded icon'>sentiment_dissatisfied</span>
+                <p style='color: #000;'>$datosNoEncontrados</p>
             </div>
-        HTML;
+        </div>
+    HTML;
     }
 
     echo json_encode($resp);
