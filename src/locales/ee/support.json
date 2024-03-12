@@ -127,5 +127,7 @@
   "estimatedTime": "Eeldatav aeg",
   "placeholderFirstNameLastName": "Ees- ja perekonnanimi",
   "pais": "Riik",
-  "catalogos": "Kataloogid"
+  "catalogos": "Kataloogid",
+  "nombre": "Nimi",
+  "editar": "Muuda"
 }

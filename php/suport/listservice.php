@@ -4,7 +4,15 @@
     error_reporting( E_ALL | E_STRICT );
     session_start();
     require __DIR__ . '/../conexion.php';
+    require_once __DIR__.'/../../php/translations.php';
 
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+    $edit = $translations[$lang]['client:editar'];
+    $delete = $translations[$lang]["client:deleteTable"];
+    $visibility = $translations[$lang]['client:visibilidad'];
+    $datosNoEncontrados = $translations[$lang]['client:dataNotFound'];
+ 
     $resp = array();
     $acc_id = $_SESSION['emailAccount'];
     $cate = $_POST['category'];
@@ -93,11 +101,13 @@
         }
     } else {
         $resp['html'] = <<<HTML
-            <div class='row contentNoDataQuote' style='position: relative; top: 0; left: 0; right: 0; bottom: 0; width: 100%;'>
-                <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                <center><p style='color: #000;'>Aucune donnée n'a été trouvée</p></center>
+        <div class='container' style='display: flex; justify-content: center; align-items: center; height: 100vh;'>
+            <div class='row contentNoDataQuote' style='position: relative; width: 100%; text-align: center;'>
+                <span class='material-symbols-rounded icon'>sentiment_dissatisfied</span>
+                <p style='color: #000;'>$datosNoEncontrados</p>
             </div>
-        HTML;
+        </div>
+    HTML;
     }
 
     echo json_encode($resp);

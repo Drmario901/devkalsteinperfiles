@@ -127,5 +127,7 @@
   "estimatedTime": "Geschatte tijd",
   "placeholderFirstNameLastName": "Voer uw naam en achternaam in",
   "pais": "Land",
-  "catalogos": "Catalogi"
+  "catalogos": "Catalogi",
+  "nombre": "Naam",
+  "editar": "Bewerken"
 }

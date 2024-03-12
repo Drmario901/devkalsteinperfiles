@@ -46,11 +46,12 @@
 
         <?php
 
-            $banner_img = 'Header-servicio-tecnico-IMG.jpg';
+        $banner_img = 'Header-servicio-tecnico-IMG.jpg';
 
-            $banner_text = "Mes services";
-
-            include __DIR__.'/../manufacturer/banner.php';
+        require __DIR__. '/../../../php/translateTextBanner.php';
+        $banner = 'banner_text_services';
+        $banner_text = translateTextBanner($banner);
+        include __DIR__.'/../manufacturer/banner.php';
 
         ?>
 
@@ -58,11 +59,11 @@
 
         <nav class="nav nav-borders">
 
-            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/">Services</a>
+            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n='suport:servicios'>Services</a>
 
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add">Ajouter un service</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='suport:addServices'>Ajouter un service</a>
 
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit">Modifier le service</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='suport:modifyService'>Modifier le service</a>
 
             <hr class="mt-0 mb-4">
 
@@ -76,7 +77,7 @@
 
             <select class="form-control mb-2" type="date" id="category">
 
-                <option value="0">Sélectionner une catégorie</option>
+                <option value="0" data-i18n='suport:selectDefault'>Sélectionner une catégorie</option>
 
             </select>
 
@@ -88,11 +89,11 @@
 
             <select class="form-control" id="estatus">
 
-                <option value='0' selected>Sélectionner un statut</option>
+                <option value='0' selected data-i18n='suport:seleccionarEstatus'>Sélectionner un statut</option>
 
-                <option value="activé">Activé</option>
+                <option value="activé" data-i18n='suport:activated'>Activé</option>
 
-                <option value="désactivé">Handicapés</option>
+                <option value="désactivé" data-i18n='suport:desactivated'>Handicapés</option>
 
             </select>
 
@@ -106,25 +107,25 @@
 
                     <tr>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Nombre</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:nombre'>Nombre</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Service</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:servicios'>Service</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Catégorie</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:Category'>Catégorie</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Entreprise</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:labelCompany'>Entreprise</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>agent d'assistance</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:agenteSoporte'>agent d'assistance</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Courriel</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:labelCorreo'>Courriel</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Description</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:description'>Description</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Date</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:date'>Date</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Statut</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:servicios'>Statut</td>
 
-                        <td class='fw-bold' style='background-color: #213280; color: white;'>Editer</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='suport:editar'>Editer</td>
 
                     </tr>
 

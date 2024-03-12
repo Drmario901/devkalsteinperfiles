@@ -127,5 +127,7 @@
   "estimatedTime": "Geschätzte Zeit",
   "placeholderFirstNameLastName": "Vorname und Nachname",
   "pais": "Land",
-  "catalogos": "Kataloge"
+  "catalogos": "Kataloge",
+  "nombre": "Name",
+  "editar": "Bearbeiten"
 }

@@ -127,5 +127,7 @@
   "estimatedTime": "Tempo Estimado",
   "placeholderFirstNameLastName": "Digite seu nome e sobrenome",
   "pais": "País",
-  "catalogos": "Catálogos"
+  "catalogos": "Catálogos",
+  "nombre": "Nome",
+  "editar": "Editar"
 }
