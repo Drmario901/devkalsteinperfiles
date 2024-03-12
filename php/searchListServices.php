@@ -1,5 +1,7 @@
 <?php
     require __DIR__ . '/conexion.php';
+    include_once './translations.php';
+    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $consulta = $_POST['consulta'];
     $q = $conexion->real_escape_string($_POST['consulta']);
 
@@ -19,6 +21,10 @@
     $i = 0;
 
     $html = '<div class="row">';
+
+    $agente = $translations[$lang]['client:agente'];
+    $categoria = $translations[$lang]['client:categoria'];
+    $requireService = $translations[$lang]['requireService'];
 
     if ($resultado->num_rows > 0){
         $i = 0;
@@ -44,9 +50,9 @@
     
             $firstLyricsName = strtoupper($usuario[0]);
             if ($image == ''){
-                $urlImagePerfil = 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.'.png';
+                $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/'.$firstLyricsName.'/'.$firstLyricsName.'.png';
             }else{
-                $urlImagePerfil = 'https:///dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$image;
+                $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$image;
             }
             $html.= "                                    
                 <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-3' id='servicesPagination'>                         
@@ -58,10 +64,10 @@
                                 <p class='card-text'>$description</p>
                             </div>
                             <ul class='list-group list-group-flush'>
-                                <li class='list-group-item' data-i18n='support:agente'><span>Agente</span>: $usuario</li>
-                                <li class='list-group-item' data-i18n='support:Category'><span>Categoria</span>: $category</li>
+                                <li class='list-group-item'><span>$agente</span>: $usuario</li>
+                                <li class='list-group-item'><span>$categoria</span>: $category</li>
                             </ul>
-                            <button type='button' class='btnQuoClone mx-auto my-3 text-center' id='add_report' value='$id' data-bs-toggle='modal' data-bs-target='#exampleModal' style='width: 160px' data-i18n='client:requirirServicio'>Requerir Servicio</button>
+                            <button type='button' class='btnQuoClone mx-auto my-3 text-center' id='add_report' value='$id' data-bs-toggle='modal' data-bs-target='#exampleModal' style='width: 160px'>$requireService</button>
                         </div>
                     </div>
                 </div>

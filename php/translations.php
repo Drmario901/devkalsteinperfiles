@@ -133,6 +133,8 @@ $translations = array(
         'accesoriosAdicionales' => 'Additional Accessories',
         'productsRelated' => 'Related Products',
         'productWithoutDescription' => 'This product does not have a description',
+        'requireService' => 'Require Service',
+        'other' => 'Other',
     ),
     'es' => array(
         'client:itemTabla' => 'Item',
@@ -283,6 +285,8 @@ $translations = array(
         'accesoriosAdicionales' => 'Accesorios Adicionales',
         'productsRelated' => 'Productos Relacionados',
         'productWithoutDescription' => 'Este producto no tiene descripción',
+        'requireService' => 'Requerir Servicio',
+        'other' => 'Otro',
     ),
     'fr' => array(
         "client:eligeOpcion " => "Choisissez une option",
@@ -415,6 +419,8 @@ $translations = array(
         'accesoriosAdic' => 'Accessoires supplémentaires',
         'productsRelated' => 'Produits associés',
         'productWithoutDescription' => 'Ce produit n\'a pas de description',
+        'requireService' => 'Exiger un service',
+        'other' => 'Autre',
     ),
     'it' => array(
         "client:eligeOpcion" => "Scegli un'opzione",
@@ -547,6 +553,8 @@ $translations = array(
         'accesoriosAdic' => 'Accessori aggiuntivi',
         'productsRelated' => 'Prodotti correlati',
         'productWithoutDescription' => 'Questo prodotto non ha una descrizione',
+        'requireService' => 'Richiedi un servizio',
+        'other' => 'Altro',
     ),
     'pt' => array(
         "client:eligeOpcion" => "Escolha uma opção",
@@ -679,6 +687,8 @@ $translations = array(
         'accesoriosAdic' => 'Acessórios adicionais',
         'productsRelated' => 'Produtos relacionados',
         'productWithoutDescription' => 'Este produto não tem descrição',
+        'requireService' => 'Exigir serviço',
+        'other' => 'Outro',
     ),
     'pl' => array(
         "client:eligeOpcion" => "Wybierz opcję",
@@ -811,6 +821,8 @@ $translations = array(
         'accesoriosAdic' => 'Dodatkowe akcesoria',
         'productsRelated' => 'Powiązane produkty',
         'productWithoutDescription' => 'Ten produkt nie ma opisu',
+        'requireService' => 'Wymagać usługi',
+        'other' => 'Inny',
     ),
     'nl' => array(
         "client:eligeOpcion" => "Kies een optie",
@@ -942,6 +954,8 @@ $translations = array(
         'accesoriosAdic' => 'Extra accessoires',
         'productsRelated' => 'Gerelateerde producten',
         'productWithoutDescription' => 'Dit product heeft geen beschrijving',
+        'requireService' => 'Dienst vereisen',
+        'other' => 'Anders',
     ),
     'de' => array(
         "client:eligeOpcion" => "Wählen Sie eine Option",
@@ -1074,6 +1088,8 @@ $translations = array(
         'accesoriosAdic' => 'Zusätzliches Zubehör',
         'productsRelated' => 'Verwandte Produkte',
         'productWithoutDescription' => 'Dieses Produkt hat keine Beschreibung',
+        'requireService' => 'Service erforderlich',
+        'other' => 'Andere',
     ),
     'ee' => array(
         "client:eligeOpcion" => "Valige võimalus",
@@ -1206,6 +1222,8 @@ $translations = array(
         'accesoriosAdic' => 'Lisavarustus',
         'productsRelated' => 'Seotud tooted',
         'productWithoutDescription' => 'Sellel tootel pole kirjeldust',
+        'requireService' => 'Teenuse nõue',
+        'other' => 'Muu',
     ),
     'se' => array(
         "client:eligeOpcion" => "Välj ett alternativ",
@@ -1338,5 +1356,7 @@ $translations = array(
         'accesoriosAdic' => 'Extra tillbehör',
         'productsRelated' => 'Relaterade produkter',
         'productWithoutDescription' => 'Denna produkt har ingen beskrivning',
+        'requireService' => 'Kräver service',
+        'other' => 'Annat',
     ),
 );

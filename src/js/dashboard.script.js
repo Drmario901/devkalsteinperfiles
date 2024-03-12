@@ -4326,8 +4326,9 @@ jQuery(document).ready(function ($) {
       data: { id },
     })
       .done(function (response) {
+        console.log(response);
         let data = JSON.parse(response);
-        $("#preview-item").html(data.preview);
+        $("#preview-item").html(data);
       })
       .fail(function () {
         console.log("errorrr");
@@ -4335,8 +4336,11 @@ jQuery(document).ready(function ($) {
   }
 
   $(document).on("click", "#productPreview", function () {
-    getPreviewProduct($(this).val());
-    console.log("hice click aki");
+    // get the id from the attribute data-preview
+    let id = $(this).attr("data-preview");
+    getPreviewProduct(id);
+
+    console.log(id, "Click previeww");
   });
 
   setInterval(keepSessionAlive, 300000);
