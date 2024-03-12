@@ -55,15 +55,32 @@
 
         ?>
 
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentUrl = window.location.href;
+            const links = document.querySelectorAll('.nav-link');
+
+            links.forEach(link => {
+                if (link.href === currentUrl) {
+                    link.classList.add("active");
+                    link.style.color = "#ffffff"; // Ajusta el estilo como lo necesites
+                } else {
+                    link.classList.remove("active");
+                    link.removeAttribute("style");
+                }
+            });
+        });
+        </script>
+
     
 
         <nav class="nav nav-borders">
 
-            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n='support:servicios'>Services</a>
+            <a class="nav-link active ms-0" id="link-services" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n='support:servicios'>Services</a>
 
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='support:addServices'>Ajouter un service</a>
+            <a class="nav-link active" id="link-addServices" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n='support:addServices'>Ajouter un service</a>
 
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='support:modifyService'>Modifier le service</a>
+            <a class="nav-link active" id="link-modifyService" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n='support:modifyService'>Modifier le service</a>
 
             <hr class="mt-0 mb-4">
 
