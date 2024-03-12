@@ -330,5 +330,13 @@
   "pagina": "Seite",
   "cargarCotizacionError": "Fehler beim Laden des Angebots",
   "cotizacionCorrectamente": "Das Angebot wurde erfolgreich erstellt",
-  "verPdf": "PDF anzeigen"
+  "verPdf": "PDF anzeigen",
+
+  "pendiente": "Ausstehend",
+  "procesar": "Verarbeiten",
+  "cancelado": "Abgebrochen",
+  "processed": "Verarbeitet",
+
+  "aceptar": "Akzeptieren",
+  "cancelar": "Abbrechen"
 }

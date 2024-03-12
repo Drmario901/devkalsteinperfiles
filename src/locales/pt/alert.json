@@ -330,5 +330,13 @@
   "pagina": "Página",
   "cargarCotizacionError": "Erro ao carregar cotação",
   "cotizacionCorrectamente": "A cotação foi realizada com sucesso",
-  "verPdf": "Ver PDF"
+  "verPdf": "Ver PDF",
+
+  "pendiente": "Pendente",
+  "procesar": "Processar",
+  "processed": "Processado",
+  "cancelado": "Cancelado",
+
+  "aceptar": "Aceitar",
+  "cancelar": "Cancelar"
 }

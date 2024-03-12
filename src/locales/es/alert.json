@@ -331,5 +331,13 @@
   "pagina": "Pagina",
   "cargarCotizacionError": "Error al cargar cotización",
   "cotizacionCorrectamente": "La cotizacion se ha realizado correctamente",
-  "verPdf": "Ver PDF"
+  "verPdf": "Ver PDF",
+
+  "pendiente": "Pendiente",
+  "processed": "Procesado",
+  "cancelado": "Cancelado",
+  "procesar": "Procesar",
+
+  "aceptar": "Aceptar",
+  "cancelar": "Cancelar"
 }

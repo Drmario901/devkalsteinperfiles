@@ -968,6 +968,7 @@ $translations = array(
         'productWithoutDescription' => 'Dit product heeft geen beschrijving',
         'requireService' => 'Dienst vereisen',
         'other' => 'Anders',
+        'procesar' => 'In afwachting',
         'inStock' => 'Op voorraad',
         'outOfStock' => 'Uit voorraad',
     ),
