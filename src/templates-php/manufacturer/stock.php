@@ -40,7 +40,7 @@
                         <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:imagenProducto'>Imagen</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:categoria'>Categoría</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:existencias'>Existencia</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;' data-i18n='manofacturer:precio'>Precio</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white; min-width: 76px;' data-i18n='manofacturer:precios'>Precio</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:fecha'>Fecha</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;' data-i18n='manofacturer:acciones'>Acciones</td>
                     </tr>
