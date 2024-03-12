@@ -15,8 +15,9 @@ jQuery(document).ready(function ($) {
       data: { status, category, page },
     })
       .done(function (respuesta) {
-        // console.log(respuesta)
+        console.log("respuestaa", respuesta);
         respuesta = JSON.parse(respuesta);
+
         body.html(respuesta.html);
         page = respuesta.pagina;
         pagina.text(page);
@@ -24,7 +25,7 @@ jQuery(document).ready(function ($) {
         page * 5 >= respuesta.total
           ? sig.attr("disabled", "")
           : sig.removeAttr("disabled");
-        // console.log(page)
+        console.log("paginaaaa", page);
       })
       .fail(function () {
         console.log("errorrrr", error);
