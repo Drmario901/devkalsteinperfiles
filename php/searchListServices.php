@@ -1,6 +1,6 @@
 <?php
     require __DIR__ . '/conexion.php';
-    require __DIR__ .'./translations.php';
+    include_once './translations.php';
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $consulta = $_POST['consulta'];
     $q = $conexion->real_escape_string($_POST['consulta']);
