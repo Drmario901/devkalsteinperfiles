@@ -223,7 +223,7 @@
             $catalogName = $_FILES['catalog']['name'];
             $catalogExtension = pathinfo($catalogName, PATHINFO_EXTENSION);
             $newCatalogName = uniqid() . "." . $catalogExtension;
-            $catalogPath = '/home/he270716/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload';
+            $catalogPath = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload';
             $uploadCatalogFile = $catalogPath . $newCatalogName;
     
             $wp_catalog_name = pathinfo($catalogName, PATHINFO_FILENAME);
