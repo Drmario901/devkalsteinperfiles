@@ -1893,7 +1893,7 @@
             wp_enqueue_script('dashboard', plugins_url('src/manufacturer/js/dashboard.script.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'email-style', plugins_url('src/manufacturer/css/email.style.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
+            wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
             wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
