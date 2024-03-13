@@ -40,6 +40,8 @@
                 }
             }
 
+            var_dump($already_printed);
+
             // print lines
 
             foreach ($already_printed as $i => $line) {
