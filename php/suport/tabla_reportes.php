@@ -10,7 +10,7 @@ $acc_id = $_SESSION['emailAccount'];
 
 require __DIR__ . '/../conexion.php';
 
-include 'translateText.php';
+require_once __DIR__ .'/../translateText.php';
 translateText();
 
 $dateFrom = $_POST['dateFrom'];
