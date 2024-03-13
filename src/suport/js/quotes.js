@@ -126,11 +126,13 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   $(document).on("click", "#", function () {
+    console.log("asdsadasdd");
+
     var quotes_id = $(this).val();
     console.log(quotes_id);
 
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/cotizacioninfo.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/cotizacionInfo.php",
       method: "POST",
       data: { quotes_id },
     }).done(function (response) {
