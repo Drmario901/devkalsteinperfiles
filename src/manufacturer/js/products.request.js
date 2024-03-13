@@ -881,7 +881,7 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         //$('#btnUpdateData').removeAttr('disabled');
-        console.log(response);
+        console.log(JSON.parse(response));
         if (!JSON.parse(response).err_msg) {
           iziToast.success({
             title: alertsTranslations.exito,
