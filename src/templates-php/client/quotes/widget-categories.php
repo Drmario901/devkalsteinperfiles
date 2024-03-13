@@ -75,7 +75,7 @@
                 foreach ($already_printed as $i => $category) {
                     $raw_category = str_replace(' ', '-', $category);
         
-                    echo "<script>console.log('PHP: ', " . json_encode($already_printed) . ");</script>";
+                    var_dump($already_printed);
                     
                     $sql2 = "SELECT * FROM wp_k_products WHERE $descriptionField = '$category'";
                     $rs2 = $conexion->query($sql2);
