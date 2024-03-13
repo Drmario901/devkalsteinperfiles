@@ -40,7 +40,7 @@
                 }
             }
 
-            var_dump($already_printed);
+            echo "<script>console.log('PHP: ', " . json_encode($already_printed) . ");</script>";
 
             // print lines
 
