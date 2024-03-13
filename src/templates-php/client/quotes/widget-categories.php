@@ -4,6 +4,7 @@
     </span>
     <ul class='cCategory'>
         <?php
+        use function GuzzleHttp\json_encode;
             $html = '';
 
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
@@ -126,7 +127,7 @@
                 ";
             }
 
-            var_dump($already_printed);
+            echo json_encode($already_printed);
             echo $html;
         ?>
     </ul>
