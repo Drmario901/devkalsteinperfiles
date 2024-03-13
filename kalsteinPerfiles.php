@@ -10,10 +10,6 @@
         Version: 1.0 (Beta)
     */
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
    
     
 
@@ -1450,6 +1446,8 @@
             wp_enqueue_script('nav', plugins_url('src/suport/js/nav.js',__FILE__),array('jquery'));
             wp_enqueue_script('Reportes', plugins_url('src/suport/js/reportes.js',__FILE__),array('jquery'));  
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_REPORTS' ) ) {
             translations();
@@ -1543,6 +1541,8 @@
             wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('service.js', plugins_url('src/suport/js/serviceslist.js',__FILE__),array('jquery'));
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast.js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
         
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_SERVICESMOD' ) ) {
@@ -1561,6 +1561,8 @@
             wp_enqueue_script('service.js', plugins_url('src/suport/js/serviceslist.js',__FILE__),array('jquery')); 
             wp_enqueue_script('servicesmod.js', plugins_url('src/suport/js/servicesmod.js',__FILE__),array('jquery')); 
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast.js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_QUOTES' ) ) {
@@ -1595,6 +1597,8 @@
             wp_enqueue_script('iziToast.js', plugins_url('src/suport/js/iziToast.js',__FILE__),array('jquery'));
             wp_enqueue_script('quotes.js', plugins_url('src/suport/js/quotes.js',__FILE__),array('jquery'));
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_QUOTESCANCELLED' ) ) {
@@ -1612,6 +1616,8 @@
             wp_enqueue_script('iziToast.js', plugins_url('src/suport/js/iziToast.js',__FILE__),array('jquery'));
             wp_enqueue_script('quotes.js', plugins_url('src/suport/js/quotes.js',__FILE__),array('jquery'));
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_INBOX' ) ) {
@@ -1625,6 +1631,10 @@
             wp_enqueue_script('nav', plugins_url('src/suport/js/nav.js',__FILE__),array('jquery'));
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
             wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
+            wp_enqueue_style( 'izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast.js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_STOCK' ) ) {
@@ -1641,6 +1651,8 @@
             wp_enqueue_script('iziToast.js', plugins_url('src/suport/js/iziToast.js',__FILE__),array('jquery'));
             wp_enqueue_script('stock_suport', plugins_url('src/suport/js/suport_stock.js',__FILE__),array('jquery'));
             wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_CATALOGO' ) ) {
             translations();
@@ -1660,6 +1672,8 @@
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
             wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js',__FILE__),array('jquery'));
             wp_enqueue_script('catalog-script', plugins_url('src/js/catalog.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_EDIT_PROFILE' ) ) {
@@ -1678,6 +1692,8 @@
             wp_enqueue_script('edit_profile', plugins_url('src/manufacturer/js/edit_profile.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
             wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast.js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'SUPORT_PURSACHING' ) ) {
@@ -1696,6 +1712,10 @@
             wp_enqueue_style( 'AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css',__FILE__));
             wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast.js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
         }
 
         //RENTAL AND USED EQUIPMENT
