@@ -126,6 +126,8 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   $(document).on("click", "#", function () {
+    console.log("asdsadasdd");
+
     var quotes_id = $(this).val();
     console.log(quotes_id);
 
