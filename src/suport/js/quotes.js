@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
         id: "question",
         zindex: 999,
         title: "Confirmation",
-        message: `${youSureYouWantToChangeTheStatusFor} ${customerName}?`,
+        message: `${alertsTranslations.youSureYouWantToChangeTheStatusFor} ${alertsTranslations.customerName}?`,
         position: "center",
         buttons: [
           [
