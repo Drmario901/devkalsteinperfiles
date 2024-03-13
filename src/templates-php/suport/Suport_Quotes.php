@@ -1,8 +1,3 @@
-/**
-
-    * TODO: Finilizar traduccion de la tabla de cotizaciones
-*/
-
 <div class="container">
     <?php
             
@@ -17,21 +12,29 @@
 
     <article class="container article">
 
-        <?php
+    <?php
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            
+            $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
             require __DIR__. '/../../../php/translateTextBanner.php';
-            $banner = 'banner_text_welcomeThree';
-            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
+            $banner = 'banner_text_my_quotes';
+            $banner_text = translateTextBanner($banner);
             include __DIR__.'/../manufacturer/banner.php';
-            // require __DIR__. '/../../../php/translateText.php';
+            require __DIR__. '/../../../php/translations.php';
+
+            $enEspera = $translations[$lang]['client:enEspera'];
+            $cancelado = $translations[$lang]['client:cancelado'];
+            $procesado = $translations[$lang]['processed'];
+            
+           
+
             // translateText()
-        ?>
+    ?>
+        
 
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="support:allOrders" >Todas las ordenes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas" >Ordenes Procesadas</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders" >Ordenes Canceladas</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="">Toutes les commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders"  data-i18n="">Traitement des commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders"  data-i18n="">Commandes annulées</a>
         </nav>
         
         <br>
@@ -55,14 +58,14 @@
                 <table class='table custom-table'>
                     <thead class='headTableForQuote'>
                         <tr>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;' >ID</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:client'>Cliente</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 50px;'>ID</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:client'>Client</th>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 150px;' data-i18n='support:total'>Total (USD)</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:date'>Fecha</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:status'>Status</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:remitente'>Remitente</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:details'>Detalles</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:Actions'>Acciones</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:date'>Date</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:status'>Statut</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:remitente'>Expéditeur</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:details'>Détails</th>
+                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='support:Actions'>Actions</th>
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -83,31 +86,43 @@
                         $quoteStatus = $row['cotizacion_status'];
                         $quoteremitenteid = $row['cotizacion_id_remitente'];
                         $quoteremitentesres = $row['cotizacion_sres_remitente'];
+
+                        switch ($quoteStatus) {
+                            case '0':
+                                $quoteStatus = 'En attente';
+                                break;
+                            case '2':
+                                $quoteStatus = 'Annulé';
+                                break;
+                            case '3':
+                                $quoteStatus = 'Traitée';
+                                break;
+                        }
         
                         $html .= "
                             <tr>
                                 <td>$quoteId</td>
-                                <td class='customer-name'>$quoteClient $quoteClientEmail</td>
+                                <td class='customer-name'>$quoteClient $quoteremitenteid</td>
                                 <td>$quoteTotal</td>
                                 <td>$quoteDate</td>
                                 <td>$quoteStatus</td>
-                                <td>$quoteremitentesres $quoteremitenteid </td>
+                                <td>$quoteClientEmail</td>
                                 <td>
                                     <center>
                                         <button type='button' class='btn btn-info btn-block' id='btn-details'
-                                        value='$quoteId'>view</button>
+                                        value='$quoteId' data-i18n='support:vista'>Voir</button>
                                     </center>
                                 </td>
                                 <td>
                                     <form id='cotizacion_status_form'>
                                         <select name='cotizacion_status' id='cotizacion_status' class='status-select' style='color: #000 !important;'>
-                                            <option value=''data-i18n='support:selectOption'>Seleccionar</option>
-                                            <option value='3' data-i18n='support:procesado'>Procesado</option>
-                                            <option value='2' data-i18n='support:selectCancelado'>Cancelado</option>
+                                            <option value='0' data-i18n='support:selectOption'>Sélectionner</option>
+                                            <option value='3' data-i18n='support:procesado'>Traitée</option>
+                                            <option value='2' data-i18n='support:selectCancelado'>Annulé</option>
                                         </select>
                                         <br>
                                         <input type='hidden' id='$quoteId' name='cotizacion_status_nombre' class='$quoteId' value='$quoteId'>
-                                        <button type='button' id='btn-update' class='btn btn-info btn-block' value='$quoteId' data-i18n='support:changeStatus'>Cambiar status</button>
+                                        <button type='button' id='btn-update_quotes' class='btn btn-info btn-block' value='$quoteId' data-i18n='support:changeStatus'>Changement de statut</button>
                                     </form>
                                 </td>
                             </tr>
@@ -121,7 +136,7 @@
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
                                     <center><span class='material-symbols-rounded icon'>sentiment_dissatisfied</span></center>
-                                    <center><p style='color: #000;' data-i18n='support:notfound'>Datos no encontrados</p></center>
+                                    <center><p style='color: #000;' data-i18n='support:notfound'>Données non trouvées</p></center>
                                 </div>
                             </td>
                         </tr>
@@ -141,11 +156,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Précédent'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Siguiente &raquo;'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Suivant &raquo;'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>
@@ -163,25 +178,45 @@
 </div>
 
 <script>
-    /* jQuery(document).ready(function($){
-        $(document).on("click", "#btn-update", function(){
-            let form = $("#cotizacion_status_form").serialize(); */
-            /* alert(form); */
+    jQuery(document).ready(function($){
+        $(document).on("click", "#btn-update_quotes", function(){
+            /* if($("#cotizacion_status").val() === '0'){
+                    iziToast.show({
+                        title: 'Atención!',
+                        message: 'Por favor debe elegir el tipo de status',
+                        position: 'center', // Puedes elegir entre "bottomRight", "bottomLeft", "topRight", "topLeft", "topCenter", "bottomCenter"
+                        color: 'red', // Puedes elegir entre "red", "orange", "green", "blue", "purple"
+                    });
 
-            /* $.ajax({
+            } */
+            let form = $("#cotizacion_status_form").serialize();
+            /* alert(form); */
+        
+            console.log('adadasdsdasddasda')        
+            $.ajax({
                 url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php',
-                method: 'POST', */
+                method: 'POST',
                 /* dataType: 'json', */
-               /*  data: form
+                data: form
             })
-            .done(function(respuesta){ */
+            .done(function(respuesta){
                 /* let response = JSON.parse(respuesta); */
-                /* console.log(respuesta);
-                console.log(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
-               /*  alert(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
-                /* window.location = "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/templates-php/suport/Suport_Quotes.php"; */
-            /* });
+                console.log(respuesta);
+                console.log(respuesta.status + " " + respuesta.mensaje);
+                if(respuesta.status === "Correcto"){
+                    /* alert(respuesta.status + " " + respuesta.mensaje); */
+                    iziToast.show({
+                        title: 'Réussite!',
+                        message: 'La commande a été mise à jour avec succès',
+                        position: 'center', // Puedes elegir entre "bottomRight", "bottomLeft", "topRight", "topLeft", "topCenter", "bottomCenter"
+                        color: 'green', // Puedes elegir entre "red", "orange", "green", "blue", "purple"
+                    });
+
+                }
+                /* alert(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
+                window.location.href = "https://dev.kalstein.plus/plataforma/index.php/support/quotes/";
+            });
 
         });
-    }); */
+    });
 </script>

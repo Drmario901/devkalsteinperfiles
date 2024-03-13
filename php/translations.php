@@ -229,6 +229,8 @@ $translations = array(
         'client:activado' => 'Activado',
         'client:desactivo' => 'Desactivado',
         'client:tiempoEstimado' => 'Tiempo estimado',
+
+        'client:enEspera' => 'En espera',
         
 
 
@@ -416,7 +418,7 @@ $translations = array(
         'retiroFabrica' => 'Retrait en usine',
         'envioDestino' => 'Expédition de destination',
         'pendiente' => 'En attente',
-        'processed' => 'Traité',
+        'processed' => 'Traitée',
         'cancelado' => 'Annulé',
         'cancelar' => 'Annuler',
         'procesar' => 'Traiter',

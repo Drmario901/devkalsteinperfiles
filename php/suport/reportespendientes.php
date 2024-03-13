@@ -7,7 +7,8 @@
 
      session_start();
 
-     include 'translateText.php';
+   
+     require_once __DIR__ .'/../translateText.php';
      translateText();
 
 $acc_id = $_SESSION['emailAccount'];

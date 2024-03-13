@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
   loadTranslations(cookieLng);
 
-  $(document).on("click", "#btn-update", function () {
+  $(document).on("click", "#btn-update_quote", function () {
     var id = $(this).val();
     var selectedStatus = $(this).siblings(".status-select").val();
     var customerName = $(this).closest("tr").find(".customer-name").text();
@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 
   function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateStatus.php",
       method: "POST",
       data: {
         cotizacion_id,
