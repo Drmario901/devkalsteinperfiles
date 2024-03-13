@@ -55,6 +55,9 @@
                     <h6 data-i18n="support:recentReports" class="card-title"> Reportes Recientes</h6>
                     <?php
                         require __DIR__.'/../../../php/conexion.php';
+                        ini_set('display_errors', 1);
+                        ini_set('display_startup_errors', 1);
+                        error_reporting(E_ALL);
     
                         function time_elapsed_string($datetime, $full = false) {
                             $now = new DateTime;
