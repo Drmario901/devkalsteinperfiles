@@ -101,7 +101,7 @@
                                 <td>
                                     <form id='cotizacion_status_form'>
                                         <select name='cotizacion_status' id='cotizacion_status' class='status-select' style='color: #000 !important;'>
-                                            <option value='' ></option>
+                                            <option value=''data-i18n='support:selectOption'>Seleccionar</option>
                                             <option value='3' data-i18n='support:procesado'>Procesado</option>
                                             <option value='2' data-i18n='support:selectCancelado'>Cancelado</option>
                                         </select>
