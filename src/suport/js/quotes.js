@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 
   function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateStatus.php",
       method: "POST",
       data: {
         cotizacion_id,
