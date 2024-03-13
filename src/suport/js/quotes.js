@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 
   function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateStatus.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php",
       method: "POST",
       data: {
         cotizacion_id,
@@ -125,7 +125,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  $(document).on("click", "#", function () {
+  const cookieLng = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
+
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
+
+  loadTranslations(cookieLng);
+
+  $(document).on("click", "#btn-details", function () {
     console.log("asdsadasdd");
 
     var quotes_id = $(this).val();
@@ -151,7 +171,7 @@ jQuery(document).ready(function ($) {
           "<br>";
 
         iziToast.show({
-          title: `${quoteDetails} (ID:${quotes_id})`,
+          title: `${alertsTranslations.quoteDetails} (ID:${quotes_id})`,
           message: details,
           position: "center",
           timeout: false,
