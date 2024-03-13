@@ -125,6 +125,26 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
+
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
+
+  loadTranslations(cookieLng);
+
   $(document).on("click", "#btn-details", function () {
     console.log("asdsadasdd");
 
