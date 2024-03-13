@@ -191,7 +191,8 @@
             } */
             let form = $("#cotizacion_status_form").serialize();
             /* alert(form); */
-
+        
+            console.log('adadasdsdasddasda')        
             $.ajax({
                 url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php',
                 method: 'POST',
