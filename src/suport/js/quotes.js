@@ -171,7 +171,7 @@ jQuery(document).ready(function ($) {
           "<br>";
 
         iziToast.show({
-          title: `${quoteDetails} (ID:${quotes_id})`,
+          title: `${alertsTranslations.quoteDetails} (ID:${quotes_id})`,
           message: details,
           position: "center",
           timeout: false,
