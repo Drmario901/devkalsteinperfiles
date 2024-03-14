@@ -9,6 +9,8 @@ jQuery(document).ready(function ($) {
   let category = $("#category").val();
 
   function tablaconsulta(status, category, page, error) {
+    console.log("status ", status, "category", category);
+
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/listservice.php",
       type: "POST",
