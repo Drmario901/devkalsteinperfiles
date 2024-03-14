@@ -25,6 +25,36 @@
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
 
+            $categoriesArray = [];
+
+            if ($resultLines) {
+                while ($row = $resultLines->fetch_assoc()) {
+                    $id = $row['id'];
+                    $lineName = $row[$lineField];
+                    $descriptionName = $row[$descriptionField];
+                    $subCategoryName = $row[$subField];
+
+                    // Crear la entrada para la línea si aún no existe
+                    if (!isset($categoriesArray[$id])) {
+                        $categoriesArray[$id] = [
+                            'line' => $lineName,
+                            'description' => [$descriptionName => []]
+                        ];
+                    }
+
+                    // Agregar la subcategoría si no está vacía
+                    if (!empty($subCategoryName) && !in_array($subCategoryName, $categoriesArray[$id]['description'][$descriptionName])) {
+                        $categoriesArray[$id]['description'][$descriptionName][] = $subCategoryName;
+                    }
+                }
+            }
+
+            // Convertir el arreglo a JSON
+            $json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+            // Imprimir el JSON
+            echo $json;
+
             $already_printed = [];
                 
             if ($resultLines->num_rows > 0) {
