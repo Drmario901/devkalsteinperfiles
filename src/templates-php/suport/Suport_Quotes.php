@@ -112,8 +112,6 @@
                         //         break;
                         // }
                         $status = '';
-
-                        if($quoteStatus){
                             if($quoteStatus == '0') {
                                 $status = 'En attente';
                             } 
@@ -123,7 +121,7 @@
                             elseif($quoteStatus == '3'){
                                 $status = 'Traitee';
                             } 
-                        }
+                  
 
                         echo $status;
         
