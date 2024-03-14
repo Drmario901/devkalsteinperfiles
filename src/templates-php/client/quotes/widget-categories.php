@@ -164,8 +164,6 @@
                 </li>
                 ";
             }
-
-            var_dump($already_printed);
             echo $html;
         ?>
     </ul>
