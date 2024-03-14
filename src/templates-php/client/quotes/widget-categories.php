@@ -20,51 +20,60 @@
                 $subField = "product_subcategory";
             }
 
+            $rows_array = []; // Array para almacenar las filas con el ID como clave
+
+    // Obtener líneas
+    $queryLines = "SELECT categorie_line_es FROM wp_categories ORDER BY categorie_line_es ASC";	
+    $resultLines = $conexion->query($queryLines);
+
+    $already_printed = [];
+        
+    if ($resultLines->num_rows > 0) {
+        while ($value = $resultLines->fetch_assoc()) {
+            if (!in_array($value['categorie_line_es'], $already_printed)){
+                // Guardar en el array con el ID como clave
+                $rows_array[$value['categorie_line_es']] = [];
+                array_push($already_printed, $value['categorie_line_es']);
+            }
+        }
+    }
+
+    // Imprimir líneas
+    foreach ($already_printed as $i => $line) {
+        // Línea comienza
+        $raw_line = str_replace(' ', '-', $line);
+        $raw_line = str_replace('&', 'and', $raw_line);
+
+        // Construir la estructura del array
+        $rows_array[$line] = [
+            'categories' => []
+        ];
+
+        $consulta = "SELECT categorie_description_es FROM wp_categories WHERE categorie_line_es = '$line' ORDER BY categorie_description_es ASC";	
+        $resultado = $conexion->query($consulta);
+
+        $already_printed = [];
+            
+        if ($resultado->num_rows > 0) {
+            while ($value = $resultado->fetch_assoc()) {
+                if (!in_array($value['categorie_description_es'], $already_printed)){
+                    // Guardar en el array con el ID como clave
+                    array_push($rows_array[$line]['categories'], $value['categorie_description_es']);
+                    array_push($already_printed, $value['categorie_description_es']);
+                }
+            }
+        }
+    }
+
+    // Imprimir el array (para fines de demostración)
+    print_r($rows_array);
+
             // get linesss
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
 
             $already_printed = [];
-
-            $query = "SELECT categorie_id, $lineField AS linea, $descriptionField AS descripcion, $subField AS subcategoria FROM wp_k_products ORDER BY id ASC";
-            $result = $conexion->query($query);
-
-            $categoriesArray = [];
-
-            if ($result) {
-                while ($row = $result->fetch_assoc()) {
-                    $id = $row['categorie_id'];
-                    $linea = $row['linea'];
-                    $descripcion = $row['descripcion'];
-                    $subcategoria = $row['subcategoria'];
-
-                    // Verificar si la subcategoría está vacía
-                    if (!empty($subcategoria)) {
-                        // Si la subcategoría no está vacía, inclúyela en la estructura
-                        $categoriesArray[$id] = [
-                            'linea' => $linea,
-                            'descripcion' => [
-                                $descripcion => [$subcategoria]
-                            ]
-                        ];
-                    } else {
-                        // Si la subcategoría está vacía, omite el arreglo de subcategorías
-                        $categoriesArray[$id] = [
-                            'linea' => $linea,
-                            'descripcion' => [
-                                $descripcion => []
-                            ]
-                        ];
-                    }
-                }
-            }
-
-            // Convertir el arreglo a JSON
-            $json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
-            // Imprimir el JSON
-            echo $json;
                 
             if ($resultLines->num_rows > 0) {
                 while ($value = $resultLines->fetch_assoc()) {
@@ -164,6 +173,8 @@
                 </li>
                 ";
             }
+
+            var_dump($already_printed);
             echo $html;
         ?>
     </ul>
