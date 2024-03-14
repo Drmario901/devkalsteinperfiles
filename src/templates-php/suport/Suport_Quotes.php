@@ -1,11 +1,10 @@
 <div class="container">
     <?php
-            
+        
         include 'navdar.php';
     ?>
     <script>
-        let page = "quotes";
-
+  
         document.querySelector('#' + page).classList.add("active");
         document.querySelector('#' + page).removeAttribute("style");
     </script>
@@ -24,6 +23,10 @@
             $enEspera = $translations[$lang]['client:enEspera'];
             $cancelado = $translations[$lang]['client:cancelado'];
             $procesado = $translations[$lang]['processed'];
+            $cambiarEstado = $translations[$lang]['client:cambiarEstatus'];
+            $seleccionarOpcion = $translations[$lang]['client:eligeOpcion'];
+            $next = $translations[$lang]['client:next'];
+            $prev = $translations[$lang]['client:previo'];
             
            
 
@@ -32,9 +35,9 @@
         
 
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="">Toutes les commandes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders"  data-i18n="">Traitement des commandes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders"  data-i18n="">Commandes annulées</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="support:allOrders">Toutes les commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders"  data-i18n="support:ordersProcesadas">Traitement des commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders"  data-i18n="support:cancelOrders">Commandes annulées</a>
         </nav>
         
         <br>
@@ -156,11 +159,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Précédent'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='$prev'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Suivant &raquo;'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='$next'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>
@@ -191,9 +194,23 @@
             } */
             let form = $("#cotizacion_status_form").serialize();
             /* alert(form); */
-        
-            console.log('adadasdsdasddasda')        
-            $.ajax({
+            if (form) {
+      iziToast.question({
+        timeout: false,
+        close: false,
+        overlay: true,
+        displayMode: "once",
+        id: "question",
+        zindex: 999,
+        title: "Confirmation",
+        message: '<?php echo $cambiarEstado ?>?',
+        position: "center",
+        buttons: [
+          [
+            `<button><b>✅</b></button>`,
+            function (instance, toast) {
+              instance.hide({ transitionOut: "fadeOut" }, toast, "button");
+              $.ajax({
                 url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php',
                 method: 'POST',
                 /* dataType: 'json', */
@@ -216,6 +233,32 @@
                 /* alert(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
                 window.location.href = "https://dev.kalstein.plus/plataforma/index.php/support/quotes/";
             });
+            },
+            true,
+          ],
+          [
+            `<button><b>❌</b></button>`,
+            function (instance, toast) {
+              instance.hide({ transitionOut: "fadeOut" }, toast, "button");
+            },
+          ],
+        ],
+        onClosing: function (instance, toast, closedBy) {
+          console.log("Closing...");
+        },
+        onClosed: function (instance, toast, closedBy) {
+          console.log("Closed...");
+        },
+      });
+    } else {
+      iziToast.warning({
+        title: "Warning",
+        message: '<?php echo $seleccionarOpcion ?>',
+        position: "topRight",
+      });
+    }
+                   
+
 
         });
     });
