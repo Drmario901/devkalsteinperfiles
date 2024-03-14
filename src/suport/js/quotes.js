@@ -92,8 +92,8 @@ jQuery(document).ready(function ($) {
             $("#hiddenPage").val();
         }
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error", error);
       });
   }
 
