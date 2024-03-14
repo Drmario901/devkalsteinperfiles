@@ -51,7 +51,7 @@
             }
         
             // Imprimir en formato JSON
-            echo json_encode($rows_array, JSON_PRETTY_PRINT, JSON_UNESCAPED_UNICODE);
+            echo json_encode($rows_array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
             // get linesss
 
