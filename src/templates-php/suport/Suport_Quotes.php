@@ -103,9 +103,9 @@
                         // }
 
                         if($quoteStatus){
-                            if($quoteStatus == 0) return 'En attente';
-                            if($quoteStatus == 2) return 'Annule';
-                            if($quoteStatus == 3) return 'Traitee';
+                            if($quoteStatus == 0) return $quoteStatus = 'En attente';
+                            if($quoteStatus == 2) return $quoteStatus = 'Annule';
+                            if($quoteStatus == 3) return $quoteStatus = 'Traitee';
                         }
         
                         $html .= "
