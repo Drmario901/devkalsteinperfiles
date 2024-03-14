@@ -19,12 +19,19 @@ jQuery(document).ready(function ($) {
 
   loadTranslations(cookieLng);
 
-  $(document).on("click", "#btn-update_quote", function () {
-    var id = $(this).val();
-    var selectedStatus = $(this).siblings(".status-select").val();
-    var customerName = $(this).closest("tr").find(".customer-name").text();
+  $(document).on("click", "#btn-update_quotes", function () {
+    /* if($("#cotizacion_status").val() === '0'){
+            iziToast.show({
+                title: 'Atención!',
+                message: 'Por favor debe elegir el tipo de status',
+                position: 'center', // Puedes elegir entre "bottomRight", "bottomLeft", "topRight", "topLeft", "topCenter", "bottomCenter"
+                color: 'red', // Puedes elegir entre "red", "orange", "green", "blue", "purple"
+            });
 
-    if (selectedStatus != "") {
+    } */
+    let form = $("#cotizacion_status_form").serialize();
+    /* alert(form); */
+    if (form) {
       iziToast.question({
         timeout: false,
         close: false,
@@ -33,19 +40,40 @@ jQuery(document).ready(function ($) {
         id: "question",
         zindex: 999,
         title: "Confirmation",
-        message: `${alertsTranslations.youSureYouWantToChangeTheStatusFor} ${alertsTranslations.customerName}?`,
+        message: "<?php echo $cambiarEstado ?>?",
         position: "center",
         buttons: [
           [
-            `<button><b>${alertsTranslations.si}</b></button>`,
+            `<button><b>✅</b></button>`,
             function (instance, toast) {
               instance.hide({ transitionOut: "fadeOut" }, toast, "button");
-              quoteUpdateStatus(id, selectedStatus, customerName);
+              $.ajax({
+                url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php",
+                method: "POST",
+                /* dataType: 'json', */
+                data: form,
+              }).done(function (respuesta) {
+                /* let response = JSON.parse(respuesta); */
+                console.log(respuesta);
+                console.log(respuesta.status + " " + respuesta.mensaje);
+                if (respuesta.status === "Correcto") {
+                  /* alert(respuesta.status + " " + respuesta.mensaje); */
+                  iziToast.show({
+                    title: "Réussite!",
+                    message: "La commande a été mise à jour avec succès",
+                    position: "center", // Puedes elegir entre "bottomRight", "bottomLeft", "topRight", "topLeft", "topCenter", "bottomCenter"
+                    color: "green", // Puedes elegir entre "red", "orange", "green", "blue", "purple"
+                  });
+                }
+                /* alert(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
+                window.location.href =
+                  "https://dev.kalstein.plus/plataforma/index.php/support/quotes/";
+              });
             },
             true,
           ],
           [
-            `<button><b>${alertsTranslations.no}</b></button>`,
+            `<button><b>❌</b></button>`,
             function (instance, toast) {
               instance.hide({ transitionOut: "fadeOut" }, toast, "button");
             },
@@ -61,41 +89,11 @@ jQuery(document).ready(function ($) {
     } else {
       iziToast.warning({
         title: "Warning",
-        message: alertsTranslations.pleaseSelectOption,
+        message: "<?php echo $seleccionarOpcion ?>",
         position: "topRight",
       });
     }
   });
-
-  function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateStatus.php",
-      method: "POST",
-      data: {
-        cotizacion_id,
-        cotizacion_status,
-      },
-    })
-      .done(function (respuesta) {
-        console.log(respuesta);
-        let data = JSON.parse(respuesta);
-        if (data.update === "correcto") {
-          iziToast.success({
-            title: "Success",
-            message: alertsTranslations.updateSuccessful,
-            position: "topRight",
-            timeout: 1500,
-          });
-          window.location.href =
-            domain +
-            "https://dev.kalstein.plus/wp-local/orders/?i=" +
-            $("#hiddenPage").val();
-        }
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
-  }
 
   $(document).on("click", "#prevPage", function () {
     var page = $(this).data("page");
