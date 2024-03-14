@@ -109,7 +109,6 @@
                             if($quoteStatus == 2) {
                                 return $status = 'Annule';
                             }
-                            
                             if($quoteStatus == 3){
                                 return $status = 'Traitee';
                             } 
