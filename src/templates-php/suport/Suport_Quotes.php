@@ -26,7 +26,7 @@
             $cambiarEstado = $translations[$lang]['client:cambiarEstatus'];
             $seleccionarOpcion = $translations[$lang]['client:eligeOpcion'];
             $next = $translations[$lang]['client:next'];
-            $prev = $translations[$lang]['prev'];
+            $prev = $translations[$lang]['client:previo'];
             
            
 
