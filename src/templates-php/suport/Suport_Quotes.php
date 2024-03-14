@@ -100,30 +100,30 @@
                         $quoteremitentesres = $row['cotizacion_sres_remitente'];
                         var_dump($quoteStatus); 
                         echo $quoteStatus;
-                        // switch ($quoteStatus) {
-                        //     case '0':
-                        //         $quoteStatus = 'En attente';
-                        //         break;
-                        //     case '2':
-                        //         $quoteStatus = 'Annulé';
-                        //         break;
-                        //     case '3':
-                        //         $quoteStatus = 'Traitée';
-                        //         break;
-                        // }
-                        $status = '';
-                            if($quoteStatus == '0') {
-                                $status = 'En attente';
-                            } 
-                            if($quoteStatus == '2') {
-                                $status = 'Annule';
-                            }
-                            if($quoteStatus == '3'){
-                                $status = 'Traitee';
-                            } 
+                        switch ($quoteStatus) {
+                            case '0':
+                                $quoteStatus = 'En attente';
+                                break;
+                            case '2':
+                                $quoteStatus = 'Annulé';
+                                break;
+                            case '3':
+                                $quoteStatus = 'Traitée';
+                                break;
+                        }
+                        // $status = '';
+                        //     if($quoteStatus == '0') {
+                        //         $status = 'En attente';
+                        //     } 
+                        //     if($quoteStatus == '2') {
+                        //         $status = 'Annule';
+                        //     }
+                        //     if($quoteStatus == '3'){
+                        //         $status = 'Traitee';
+                        //     } 
                   
 
-                        echo $status;
+                        // echo $status;
         
                         $html .= "
                             <tr>
@@ -131,7 +131,7 @@
                                 <td class='customer-name'>$quoteClient $quoteremitenteid</td>
                                 <td>$quoteTotal</td>
                                 <td>$quoteDate</td>
-                                <td>$status</td>
+                                <td>$quoteStatus</td>
                                 <td>$quoteClientEmail</td>
                                 <td>
                                     <center>
