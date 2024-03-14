@@ -98,7 +98,8 @@
                         $quoteStatus = $row['cotizacion_status'];
                         $quoteremitenteid = $row['cotizacion_id_remitente'];
                         $quoteremitentesres = $row['cotizacion_sres_remitente'];
-
+                        var_dump($quoteStatus); 
+                        echo $quoteStatus;
                         // switch ($quoteStatus) {
                         //     case '0':
                         //         $quoteStatus = 'En attente';
@@ -110,18 +111,21 @@
                         //         $quoteStatus = 'Traitée';
                         //         break;
                         // }
+                        $status = '';
 
                         if($quoteStatus){
-                            if($quoteStatus == 0) {
-                                return $status = 'En attente';
+                            if($quoteStatus == '0') {
+                                $status = 'En attente';
                             } 
-                            if($quoteStatus == 2) {
-                                return $status = 'Annule';
+                            elseif($quoteStatus == '2') {
+                                $status = 'Annule';
                             }
-                            if($quoteStatus == 3){
-                                return $status = 'Traitee';
+                            elseif($quoteStatus == '3'){
+                                $status = 'Traitee';
                             } 
                         }
+
+                        echo $status;
         
                         $html .= "
                             <tr>
