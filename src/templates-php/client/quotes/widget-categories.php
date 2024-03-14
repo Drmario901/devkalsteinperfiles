@@ -74,7 +74,6 @@
 
                 foreach ($already_printed as $i => $category) {
                     $raw_category = str_replace(' ', '-', $category);
-        
                     
                     $sql2 = "SELECT * FROM wp_k_products WHERE $descriptionField = '$category'";
                     $rs2 = $conexion->query($sql2);
@@ -127,6 +126,7 @@
                 ";
             }
 
+            var_dump($already_printed);
             echo $html;
         ?>
     </ul>
