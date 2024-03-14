@@ -27,14 +27,14 @@
 
             $already_printed = [];
 
-            $query = "SELECT id, $lineField AS linea, $descriptionField AS descripcion, $subField AS subcategoria FROM wp_k_products ORDER BY id ASC";
+            $query = "SELECT categorie_id, $lineField AS linea, $descriptionField AS descripcion, $subField AS subcategoria FROM wp_k_products ORDER BY id ASC";
             $result = $conexion->query($query);
 
             $categoriesArray = [];
 
             if ($result) {
                 while ($row = $result->fetch_assoc()) {
-                    $id = $row['id'];
+                    $id = $row['categorie_id'];
                     $linea = $row['linea'];
                     $descripcion = $row['descripcion'];
                     $subcategoria = $row['subcategoria'];
