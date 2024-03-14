@@ -1,11 +1,10 @@
 <div class="container">
     <?php
-            
+        
         include 'navdar.php';
     ?>
     <script>
-        let page = "quotes";
-
+  
         document.querySelector('#' + page).classList.add("active");
         document.querySelector('#' + page).removeAttribute("style");
     </script>
@@ -24,6 +23,8 @@
             $enEspera = $translations[$lang]['client:enEspera'];
             $cancelado = $translations[$lang]['client:cancelado'];
             $procesado = $translations[$lang]['processed'];
+            $cambiarEstado = $translations[$lang]['client:cambiarEstatus'];
+            $seleccionarOpcion = $translations[$lang]['client:eligeOpcion'];
             
            
 
@@ -200,11 +201,11 @@
         id: "question",
         zindex: 999,
         title: "Confirmation",
-        message: `${alertsTranslations.youSureYouWantToChangeTheStatusFor} ${alertsTranslations.customerName}?`,
+        message: '<?php echo $cambiarEstado ?>?',
         position: "center",
         buttons: [
           [
-            `<button><b>${alertsTranslations.si}</b></button>`,
+            `<button><b>✅</b></button>`,
             function (instance, toast) {
               instance.hide({ transitionOut: "fadeOut" }, toast, "button");
               $.ajax({
@@ -234,7 +235,7 @@
             true,
           ],
           [
-            `<button><b>${alertsTranslations.no}</b></button>`,
+            `<button><b>❌</b></button>`,
             function (instance, toast) {
               instance.hide({ transitionOut: "fadeOut" }, toast, "button");
             },
@@ -250,7 +251,7 @@
     } else {
       iziToast.warning({
         title: "Warning",
-        message: alertsTranslations.pleaseSelectOption,
+        message: '<?php echo $seleccionarOpcion ?>',
         position: "topRight",
       });
     }
