@@ -98,7 +98,8 @@
                         $quoteStatus = $row['cotizacion_status'];
                         $quoteremitenteid = $row['cotizacion_id_remitente'];
                         $quoteremitentesres = $row['cotizacion_sres_remitente'];
-
+                        var_dump($quoteStatus); 
+                        echo $quoteStatus;
                         // switch ($quoteStatus) {
                         //     case '0':
                         //         $quoteStatus = 'En attente';
