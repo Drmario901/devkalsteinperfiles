@@ -22,33 +22,36 @@
 
             // get linesss
 
-            $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
-            $resultLines = $conexion->query($queryLines);
+            $query = "SELECT $lineField, $descriptionField, $subField, id FROM wp_k_products ORDER BY $lineField ASC, $descriptionField ASC, $subField ASC";
+            $result = $conexion->query($query);
 
             $categoriesArray = [];
 
-            if ($resultLines) {
-                while ($row = $resultLines->fetch_assoc()) {
-                    $id = $row['id'];
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
                     $lineName = $row[$lineField];
                     $descriptionName = $row[$descriptionField];
-                    $subCategoryName = $row[$subField];
+                    $subCategoryName = trim($row[$subField]);
 
-                    // Crear la entrada para la línea si aún no existe
-                    if (!isset($categoriesArray[$id])) {
-                        $categoriesArray[$id] = [
-                            'line' => $lineName,
-                            'description' => [$descriptionName => []]
-                        ];
-                    }
+                    // Asegúrate de que tanto la línea como la descripción tienen valores antes de intentar agregarlos.
+                    if (!empty($lineName) && !empty($descriptionName)) {
+                        // Crea un nuevo grupo para esta línea si aún no existe
+                        if (!isset($categoriesArray[$lineName])) {
+                            $categoriesArray[$lineName] = [];
+                        }
 
-                    // Agregar la subcategoría si no está vacía
-                    if (!empty($subCategoryName) && !in_array($subCategoryName, $categoriesArray[$id]['description'][$descriptionName])) {
-                        $categoriesArray[$id]['description'][$descriptionName][] = $subCategoryName;
+                        // Crea un nuevo grupo para esta descripción dentro de la línea si aún no existe
+                        if (!isset($categoriesArray[$lineName][$descriptionName])) {
+                            $categoriesArray[$lineName][$descriptionName] = [];
+                        }
+
+                        // Agrega la subcategoría si no está vacía y no existe ya
+                        if (!empty($subCategoryName) && !in_array($subCategoryName, $categoriesArray[$lineName][$descriptionName])) {
+                            $categoriesArray[$lineName][$descriptionName][] = $subCategoryName;
+                        }
                     }
                 }
             }
-
             // Convertir el arreglo a JSON
             $json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
