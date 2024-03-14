@@ -110,16 +110,17 @@
                         //         $quoteStatus = 'Traitée';
                         //         break;
                         // }
+                        $status = '';
 
                         if($quoteStatus){
                             if($quoteStatus == 0) {
-                                return $status = 'En attente';
+                                $status = 'En attente';
                             } 
-                            if($quoteStatus == 2) {
-                                return $status = 'Annule';
+                            elseif($quoteStatus == 2) {
+                                $status = 'Annule';
                             }
-                            if($quoteStatus == 3){
-                                return $status = 'Traitee';
+                            elseif($quoteStatus == 3){
+                                $status = 'Traitee';
                             } 
                         }
         
