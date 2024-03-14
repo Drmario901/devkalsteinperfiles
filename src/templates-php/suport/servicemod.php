@@ -23,9 +23,9 @@
         ?>
     
         <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
+            <a class="nav-link ms-0" href="https://dev.kalstein.plus/plataforma/index.php/support/services/" data-i18n="support:servicios" >Servicios</a>
             <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" data-i18n="support:addServices" >Añadir Servicio</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/services/edit" data-i18n="support:modifyService" >Modificar Servicio</a>
         </nav>
         
         <br>
