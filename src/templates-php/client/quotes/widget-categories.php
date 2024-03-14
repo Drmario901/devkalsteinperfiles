@@ -22,43 +22,49 @@
 
             // get linesss
 
-            $query = "SELECT $lineField, $descriptionField, $subField, id FROM wp_k_products ORDER BY $lineField ASC, $descriptionField ASC, $subField ASC";
+            $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
+            $resultLines = $conexion->query($queryLines);
+
+            $already_printed = [];
+
+            $query = "SELECT id, $lineField AS linea, $descriptionField AS descripcion, $subField AS subcategoria FROM wp_k_products ORDER BY id ASC";
             $result = $conexion->query($query);
 
             $categoriesArray = [];
 
             if ($result) {
                 while ($row = $result->fetch_assoc()) {
-                    $lineName = $row[$lineField];
-                    $descriptionName = $row[$descriptionField];
-                    $subCategoryName = trim($row[$subField]);
+                    $id = $row['id'];
+                    $linea = $row['linea'];
+                    $descripcion = $row['descripcion'];
+                    $subcategoria = $row['subcategoria'];
 
-                    // Asegúrate de que tanto la línea como la descripción tienen valores antes de intentar agregarlos.
-                    if (!empty($lineName) && !empty($descriptionName)) {
-                        // Crea un nuevo grupo para esta línea si aún no existe
-                        if (!isset($categoriesArray[$lineName])) {
-                            $categoriesArray[$lineName] = [];
-                        }
-
-                        // Crea un nuevo grupo para esta descripción dentro de la línea si aún no existe
-                        if (!isset($categoriesArray[$lineName][$descriptionName])) {
-                            $categoriesArray[$lineName][$descriptionName] = [];
-                        }
-
-                        // Agrega la subcategoría si no está vacía y no existe ya
-                        if (!empty($subCategoryName) && !in_array($subCategoryName, $categoriesArray[$lineName][$descriptionName])) {
-                            $categoriesArray[$lineName][$descriptionName][] = $subCategoryName;
-                        }
+                    // Verificar si la subcategoría está vacía
+                    if (!empty($subcategoria)) {
+                        // Si la subcategoría no está vacía, inclúyela en la estructura
+                        $categoriesArray[$id] = [
+                            'linea' => $linea,
+                            'descripcion' => [
+                                $descripcion => [$subcategoria]
+                            ]
+                        ];
+                    } else {
+                        // Si la subcategoría está vacía, omite el arreglo de subcategorías
+                        $categoriesArray[$id] = [
+                            'linea' => $linea,
+                            'descripcion' => [
+                                $descripcion => []
+                            ]
+                        ];
                     }
                 }
             }
+
             // Convertir el arreglo a JSON
             $json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
             // Imprimir el JSON
             echo $json;
-
-            $already_printed = [];
                 
             if ($resultLines->num_rows > 0) {
                 while ($value = $resultLines->fetch_assoc()) {
@@ -158,7 +164,6 @@
                 </li>
                 ";
             }
-
             echo $html;
         ?>
     </ul>
