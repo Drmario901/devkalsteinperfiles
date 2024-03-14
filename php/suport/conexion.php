@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../conexion.php';
+    require_once '../conexionbuena.php';
 
     // $hostdb = "localhost";
     // $userdb = "kalsteinplus";

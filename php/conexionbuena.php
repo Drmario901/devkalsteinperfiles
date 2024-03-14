@@ -1,5 +1,4 @@
 <?php
-    
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
