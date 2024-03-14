@@ -20,50 +20,6 @@
                 $subField = "product_subcategory";
             }
 
-            $categoriesArray = [];
-
-            // Consulta para obtener líneas de productos únicas
-            $queryLines = "SELECT DISTINCT $lineField FROM wp_k_products ORDER BY $lineField ASC";
-$resultLines = $conexion->query($queryLines);
-
-if ($resultLines) {
-    while ($line = $resultLines->fetch_assoc()) {
-        $lineName = $line[$lineField];
-        $categoriesArray[$lineName] = []; // Inicializa el arreglo de categorías para esta línea
-
-        // Consulta para obtener categorías únicas dentro de esta línea
-        $queryCategories = "SELECT DISTINCT $descriptionField FROM wp_k_products WHERE $lineField = '{$lineName}' ORDER BY $descriptionField ASC";
-        $resultCategories = $conexion->query($queryCategories);
-
-        if ($resultCategories) {
-            while ($category = $resultCategories->fetch_assoc()) {
-                $categoryName = $category[$descriptionField];
-                $categoriesArray[$lineName][$categoryName] = []; // Inicializa el arreglo de subcategorías para esta categoría
-
-                // Consulta para obtener subcategorías únicas dentro de esta categoría
-                $querySubCategories = "SELECT DISTINCT $subField FROM wp_k_products WHERE $lineField = '{$lineName}' AND $descriptionField = '{$categoryName}' ORDER BY $subField ASC";
-                $resultSubCategories = $conexion->query($querySubCategories);
-
-                if ($resultSubCategories) {
-                    while ($subCategory = $resultSubCategories->fetch_assoc()) {
-                        $subCategoryName = $subCategory[$subField];
-                        // Añade la subcategoría al arreglo de la categoría correspondiente
-                        if (!empty($subCategoryName)) { // Asegura que la subcategoría no esté vacía
-                            $categoriesArray[$lineName][$categoryName][] = $subCategoryName;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Convertir el arreglo a JSON
-$json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
-// Imprimir el JSON
-echo $json;
-
             // get linesss
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
