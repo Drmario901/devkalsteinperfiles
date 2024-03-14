@@ -177,7 +177,7 @@
     ?>
 </div>
 
-<!-- <script>
+<script>
     jQuery(document).ready(function($){
         $(document).on("click", "#btn-update_quotes", function(){
             /* if($("#cotizacion_status").val() === '0'){
@@ -219,4 +219,4 @@
 
         });
     });
-</script> -->
+</script>
