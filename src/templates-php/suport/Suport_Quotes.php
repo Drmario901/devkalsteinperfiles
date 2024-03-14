@@ -115,10 +115,10 @@
                             if($quoteStatus == '0') {
                                 $status = 'En attente';
                             } 
-                            elseif($quoteStatus == '2') {
+                            if($quoteStatus == '2') {
                                 $status = 'Annule';
                             }
-                            elseif($quoteStatus == '3'){
+                            if($quoteStatus == '3'){
                                 $status = 'Traitee';
                             } 
                   
