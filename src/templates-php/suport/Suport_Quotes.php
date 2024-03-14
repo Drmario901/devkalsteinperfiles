@@ -1,5 +1,8 @@
 <div class="container">
     <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
         
         include 'navdar.php';
     ?>
@@ -12,6 +15,9 @@
     <article class="container article">
 
     <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
             require __DIR__. '/../../../php/translateTextBanner.php';
@@ -44,6 +50,9 @@
         
         <div id="listOrderTable" class="table-responsive">
             <?php
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
                 session_start();
                 $acc_id = $_SESSION['emailAccount'];
             
