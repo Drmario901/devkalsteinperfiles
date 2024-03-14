@@ -83,7 +83,7 @@
                         <td class='customer-name'>$quoteClient $quoteClientEmail</td>
                         <td>$quoteTotal</td>
                         <td>$quoteDate</td>
-                        <td>$quoteStatus</td>
+                        <td>'jorge es gay'</td>
                         <td>$quoteremitentesres $quoteremitenteid </td>
                         <td>
                             <center>
