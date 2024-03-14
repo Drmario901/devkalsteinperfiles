@@ -191,9 +191,23 @@
             } */
             let form = $("#cotizacion_status_form").serialize();
             /* alert(form); */
-        
-            console.log('adadasdsdasddasda')        
-            $.ajax({
+            if (form) {
+      iziToast.question({
+        timeout: false,
+        close: false,
+        overlay: true,
+        displayMode: "once",
+        id: "question",
+        zindex: 999,
+        title: "Confirmation",
+        message: `${alertsTranslations.youSureYouWantToChangeTheStatusFor} ${alertsTranslations.customerName}?`,
+        position: "center",
+        buttons: [
+          [
+            `<button><b>${alertsTranslations.si}</b></button>`,
+            function (instance, toast) {
+              instance.hide({ transitionOut: "fadeOut" }, toast, "button");
+              $.ajax({
                 url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/updateCotizacion.php',
                 method: 'POST',
                 /* dataType: 'json', */
@@ -216,6 +230,32 @@
                 /* alert(respuesta.cotizacion_status + " " + respuesta.cotizacion_status_nombre); */
                 window.location.href = "https://dev.kalstein.plus/plataforma/index.php/support/quotes/";
             });
+            },
+            true,
+          ],
+          [
+            `<button><b>${alertsTranslations.no}</b></button>`,
+            function (instance, toast) {
+              instance.hide({ transitionOut: "fadeOut" }, toast, "button");
+            },
+          ],
+        ],
+        onClosing: function (instance, toast, closedBy) {
+          console.log("Closing...");
+        },
+        onClosed: function (instance, toast, closedBy) {
+          console.log("Closed...");
+        },
+      });
+    } else {
+      iziToast.warning({
+        title: "Warning",
+        message: alertsTranslations.pleaseSelectOption,
+        position: "topRight",
+      });
+    }
+                   
+
 
         });
     });
