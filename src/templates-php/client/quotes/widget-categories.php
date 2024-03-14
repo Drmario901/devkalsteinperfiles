@@ -64,7 +64,7 @@
             $json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
             // Imprimir el JSON
-            var_dump($json);
+            echo $json;
                 
             if ($resultLines->num_rows > 0) {
                 while ($value = $resultLines->fetch_assoc()) {
