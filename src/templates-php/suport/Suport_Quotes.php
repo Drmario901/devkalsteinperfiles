@@ -103,9 +103,9 @@
                         // }
 
                         if($quoteStatus){
-                            if($quoteStatus == 0) return $quoteStatus = 'En attente';
-                            if($quoteStatus == 2) return $quoteStatus = 'Annule';
-                            if($quoteStatus == 3) return $quoteStatus = 'Traitee';
+                            if($quoteStatus == 0) return $status = 'En attente';
+                            if($quoteStatus == 2) return $status = 'Annule';
+                            if($quoteStatus == 3) return $status = 'Traitee';
                         }
         
                         $html .= "
@@ -114,7 +114,7 @@
                                 <td class='customer-name'>$quoteClient $quoteremitenteid</td>
                                 <td>$quoteTotal</td>
                                 <td>$quoteDate</td>
-                                <td>$quoteStatus</td>
+                                <td>$status</td>
                                 <td>$quoteClientEmail</td>
                                 <td>
                                     <center>
