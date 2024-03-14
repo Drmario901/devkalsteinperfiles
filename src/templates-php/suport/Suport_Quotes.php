@@ -113,16 +113,18 @@
                         $status = '';
 
                         if($quoteStatus){
-                            if($quoteStatus == 0) {
+                            if($quoteStatus == '0') {
                                 $status = 'En attente';
                             } 
-                            elseif($quoteStatus == 2) {
+                            elseif($quoteStatus == '2') {
                                 $status = 'Annule';
                             }
-                            elseif($quoteStatus == 3){
+                            elseif($quoteStatus == '3'){
                                 $status = 'Traitee';
                             } 
                         }
+
+                        echo $status;
         
                         $html .= "
                             <tr>
