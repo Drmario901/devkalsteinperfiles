@@ -22,51 +22,36 @@
 
             $rows_array = []; // Array para almacenar las filas con el ID como clave
 
-    // Obtener líneas
-    $queryLines = "SELECT categorie_line_es FROM wp_categories ORDER BY categorie_line_es ASC";	
-    $resultLines = $conexion->query($queryLines);
-
-    $already_printed = [];
+            // Obtener líneas
+            $queryLines = "SELECT * FROM wp_categories ORDER BY categorie_line_es ASC";	
+            $resultLines = $conexion->query($queryLines);
         
-    if ($resultLines->num_rows > 0) {
-        while ($value = $resultLines->fetch_assoc()) {
-            if (!in_array($value['categorie_line_es'], $already_printed)){
-                // Guardar en el array con el ID como clave
-                $rows_array[$value['categorie_line_es']] = [];
-                array_push($already_printed, $value['categorie_line_es']);
-            }
-        }
-    }
-
-    // Imprimir líneas
-    foreach ($already_printed as $i => $line) {
-        // Línea comienza
-        $raw_line = str_replace(' ', '-', $line);
-        $raw_line = str_replace('&', 'and', $raw_line);
-
-        // Construir la estructura del array
-        $rows_array[$line] = [
-            'categories' => []
-        ];
-
-        $consulta = "SELECT categorie_description_es FROM wp_categories WHERE categorie_line_es = '$line' ORDER BY categorie_description_es ASC";	
-        $resultado = $conexion->query($consulta);
-
-        $already_printed = [];
-            
-        if ($resultado->num_rows > 0) {
-            while ($value = $resultado->fetch_assoc()) {
-                if (!in_array($value['categorie_description_es'], $already_printed)){
-                    // Guardar en el array con el ID como clave
-                    array_push($rows_array[$line]['categories'], $value['categorie_description_es']);
-                    array_push($already_printed, $value['categorie_description_es']);
+            if ($resultLines->num_rows > 0) {
+                while ($row = $resultLines->fetch_assoc()) {
+                    $id = $row['categorie_id'];
+                    $line = $row['categorie_line_es'];
+                    $description = $row['categorie_description_es'];
+                    $sub = $row['categorie_sub_es'];
+        
+                    // Verificar si la fila ya existe en el array
+                    if (!array_key_exists($id, $rows_array)) {
+                        // Si no existe, crear un nuevo array para la fila
+                        $rows_array[$id] = [
+                            'categorie_line_es' => $line,
+                            'categories' => []
+                        ];
+                    }
+        
+                    // Agregar la descripción y la subcategoría al array de categorías
+                    $rows_array[$id]['categories'][] = [
+                        'categorie_description_es' => $description,
+                        'categorie_sub_es' => $sub
+                    ];
                 }
             }
-        }
-    }
-
-    // Imprimir en formato JSON
-    echo json_encode($rows_array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        
+            // Imprimir en formato JSON
+            echo json_encode($rows_array);
 
             // get linesss
 
