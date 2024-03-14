@@ -13,18 +13,31 @@
     <article class="contanier article">
 
         <?php
-            $banner_img = 'Header-servicio-tecnico-IMG.jpg';
-            
-            require __DIR__. '/../../../php/translateTextBanner.php';
-            $banner = 'banner_text_welcomeTwo';
-            $banner_text = translateTextBanner($banner) .' '. $acc_name .' '. $acc_lname;
-            include __DIR__.'/../manufacturer/banner.php';
+           ini_set('display_errors', 1);
+           ini_set('display_startup_errors', 1);
+           error_reporting(E_ALL);
+           $banner_img = 'Header-servicio-tecnico-IMG.jpg';
+           $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+           require __DIR__. '/../../../php/translateTextBanner.php';
+           $banner = 'banner_text_my_quotes';
+           $banner_text = translateTextBanner($banner);
+           include __DIR__.'/../manufacturer/banner.php';
+           require __DIR__. '/../../../php/translations.php';
+
+           $cancelado = $translations[$lang]['client:cancelado'];
+           $procesado = $translations[$lang]['processed'];
+           $cambiarEstado = $translations[$lang]['client:cambiarEstatus'];
+           $seleccionarOpcion = $translations[$lang]['client:eligeOpcion'];
+           $next = $translations[$lang]['client:next'];
+           $prev = $translations[$lang]['client:previo'];
+           
+
         ?>
 
         <nav class="nav nav-borders">
             <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="support:allOrders" >Todas las Ordenes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas">Ordenes Procesadas</a>
-            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders">Ordenes Canceladas</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders" data-i18n="support:ordersProcesadas">Ordenes Procesadas</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders" data-i18n="support:cancelOrders">Ordenes Canceladas</a>
         </nav>
         
         <br>
@@ -85,7 +98,7 @@
                             <td class='customer-name'>$quoteClient $quoteClientEmail</td>
                             <td>$quoteTotal</td>
                             <td>$quoteDate</td>
-                            <td>$quoteStatus</td>
+                            <td>$procesado</td>
                             <td>$quoteremitentesres $quoteremitenteid </td>
                             <td>
                                 <center>
@@ -124,11 +137,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:prev' value='&laquo; Previo'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:prev' value='$prev'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:next' value='Siguiente &raquo;'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' data-i18n='support:next' value='$next'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>

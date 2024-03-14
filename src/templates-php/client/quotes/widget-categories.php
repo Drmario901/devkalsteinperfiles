@@ -20,39 +20,6 @@
                 $subField = "product_subcategory";
             }
 
-            $rows_array = []; // Array para almacenar las filas con el ID como clave
-
-            // Obtener líneas
-            $queryLines = "SELECT * FROM wp_categories ORDER BY categorie_line_es ASC";	
-            $resultLines = $conexion->query($queryLines);
-        
-            if ($resultLines->num_rows > 0) {
-                while ($row = $resultLines->fetch_assoc()) {
-                    $id = $row['categorie_id'];
-                    $line = $row['categorie_line_es'];
-                    $description = $row['categorie_description_es'];
-                    $sub = $row['categorie_sub_es'];
-        
-                    // Verificar si la fila ya existe en el array
-                    if (!array_key_exists($id, $rows_array)) {
-                        // Si no existe, crear un nuevo array para la fila
-                        $rows_array[$id] = [
-                            'categorie_line_es' => $line,
-                            'categories' => []
-                        ];
-                    }
-        
-                    // Agregar la descripción y la subcategoría al array de categorías
-                    $rows_array[$id]['categories'][] = [
-                        'categorie_description_es' => $description,
-                        'categorie_sub_es' => $sub
-                    ];
-                }
-            }
-        
-            // Imprimir en formato JSON
-            echo json_encode($rows_array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
             // get linesss
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
@@ -159,7 +126,6 @@
                 ";
             }
 
-            var_dump($already_printed);
             echo $html;
         ?>
     </ul>
