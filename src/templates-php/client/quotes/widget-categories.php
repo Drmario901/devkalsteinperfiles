@@ -65,8 +65,8 @@
         }
     }
 
-    // Imprimir el array (para fines de demostración)
-    print_r($rows_array);
+    // Imprimir en formato JSON
+    echo json_encode($rows_array);
 
             // get linesss
 
