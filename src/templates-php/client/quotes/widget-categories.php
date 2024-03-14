@@ -20,6 +20,36 @@
                 $subField = "product_subcategory";
             }
 
+            $categoriesArray = [];
+
+            // Consulta para obtener líneas de productos únicas
+            $queryLines = "SELECT DISTINCT $lineField FROM wp_k_products ORDER BY $lineField ASC";
+            $resultLines = $conexion->query($queryLines);
+
+            if ($resultLines) {
+                while ($line = $resultLines->fetch_assoc()) {
+                    $lineName = $line[$lineField];
+                    $categoriesArray[$lineName] = []; // Inicializa el arreglo de categorías para esta línea
+
+                    // Consulta para obtener categorías únicas dentro de esta línea
+                    $queryCategories = "SELECT DISTINCT $descriptionField FROM wp_k_products WHERE $lineField = '{$lineName}' ORDER BY $descriptionField ASC";
+                    $resultCategories = $conexion->query($queryCategories);
+
+                    if ($resultCategories) {
+                        while ($category = $resultCategories->fetch_assoc()) {
+                            $categoryName = $category[$descriptionField];
+                            $categoriesArray[$lineName][] = $categoryName; // Añade la categoría al arreglo de la línea correspondiente
+                        }
+                    }
+                }
+            }
+
+            // Convertir el arreglo a JSON
+            $json = json_encode($categoriesArray, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+            // Imprimir el JSON
+            echo $json;
+
             // get linesss
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
@@ -126,7 +156,6 @@
                 ";
             }
 
-            var_dump($already_printed);
             echo $html;
         ?>
     </ul>
