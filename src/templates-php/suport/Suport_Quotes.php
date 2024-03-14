@@ -26,7 +26,7 @@
             include __DIR__.'/../manufacturer/banner.php';
             require __DIR__. '/../../../php/translations.php';
 
-            $enEspera = $translations[$lang]['client:enEspera'];
+            // $enEspera = $translations[$lang]['client:enEspera'];
             $cancelado = $translations[$lang]['client:cancelado'];
             $procesado = $translations[$lang]['processed'];
             $cambiarEstado = $translations[$lang]['client:cambiarEstatus'];
@@ -42,8 +42,8 @@
 
         <nav class="nav nav-borders">
             <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="support:allOrders">Toutes les commandes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders"  data-i18n="support:ordersProcesadas">Traitement des commandes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders"  data-i18n="support:cancelOrders">Commandes annulées</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/support/services/processed-orders"  data-i18n="support:ordersProcesadas">Traitement des commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/support/services/cancelled-orders"  data-i18n="support:cancelOrders">Commandes annulées</a>
         </nav>
         
         <br>
@@ -53,7 +53,7 @@
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 error_reporting(E_ALL);
-                session_start();
+                // session_start();
                 $acc_id = $_SESSION['emailAccount'];
             
                 require __DIR__.'/../../../php/conexion.php';
