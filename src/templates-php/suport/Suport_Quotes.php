@@ -1,5 +1,8 @@
 <div class="container">
     <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
         
         include 'navdar.php';
     ?>
@@ -12,6 +15,9 @@
     <article class="container article">
 
     <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             $banner_img = 'Header-servicio-tecnico-IMG.jpg';
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
             require __DIR__. '/../../../php/translateTextBanner.php';
@@ -44,6 +50,9 @@
         
         <div id="listOrderTable" class="table-responsive">
             <?php
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
                 session_start();
                 $acc_id = $_SESSION['emailAccount'];
             
@@ -90,16 +99,28 @@
                         $quoteremitenteid = $row['cotizacion_id_remitente'];
                         $quoteremitentesres = $row['cotizacion_sres_remitente'];
 
-                        switch ($quoteStatus) {
-                            case '0':
-                                $quoteStatus = 'En attente';
-                                break;
-                            case '2':
-                                $quoteStatus = 'Annulé';
-                                break;
-                            case '3':
-                                $quoteStatus = 'Traitée';
-                                break;
+                        // switch ($quoteStatus) {
+                        //     case '0':
+                        //         $quoteStatus = 'En attente';
+                        //         break;
+                        //     case '2':
+                        //         $quoteStatus = 'Annulé';
+                        //         break;
+                        //     case '3':
+                        //         $quoteStatus = 'Traitée';
+                        //         break;
+                        // }
+
+                        if($quoteStatus){
+                            if($quoteStatus == 0) {
+                                return $status = 'En attente';
+                            } 
+                            if($quoteStatus == 2) {
+                                return $status = 'Annule';
+                            }
+                            if($quoteStatus == 3){
+                                return $status = 'Traitee';
+                            } 
                         }
         
                         $html .= "
@@ -108,7 +129,7 @@
                                 <td class='customer-name'>$quoteClient $quoteremitenteid</td>
                                 <td>$quoteTotal</td>
                                 <td>$quoteDate</td>
-                                <td>$quoteStatus</td>
+                                <td>$status</td>
                                 <td>$quoteClientEmail</td>
                                 <td>
                                     <center>
