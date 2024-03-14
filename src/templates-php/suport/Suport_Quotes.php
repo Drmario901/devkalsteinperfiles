@@ -25,6 +25,8 @@
             $procesado = $translations[$lang]['processed'];
             $cambiarEstado = $translations[$lang]['client:cambiarEstatus'];
             $seleccionarOpcion = $translations[$lang]['client:eligeOpcion'];
+            $next = $translations[$lang]['client:next'];
+            $prev = $translations[$lang]['prev'];
             
            
 
@@ -33,9 +35,9 @@
         
 
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="">Toutes les commandes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders"  data-i18n="">Traitement des commandes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders"  data-i18n="">Commandes annulées</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/support/quotes/" data-i18n="support:allOrders">Toutes les commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/processed-orders"  data-i18n="support:ordersProcesadas">Traitement des commandes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/support/services/cancelled-orders"  data-i18n="support:cancelOrders">Commandes annulées</a>
         </nav>
         
         <br>
@@ -157,11 +159,11 @@
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px'>
                             <input type='hidden' name='i' value=".($prevPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Précédent'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='$prev'>
                         </form>
                         <form action='' method='get'>
                             <input type='hidden' name='i' value=".($nextPage).">
-                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Suivant &raquo;'>
+                            <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='$next'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>
