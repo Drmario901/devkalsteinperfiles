@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 
 use GeoIp2\Database\Reader;
 
-$databasePath = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/geoDB/GeoLite2-City.mmdb';
+$databasePath = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/GeoDB/GeoLite2-City.mmdb';
 
 try {
 
