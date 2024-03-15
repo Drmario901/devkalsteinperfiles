@@ -2,7 +2,9 @@
 
     <?php
 
-    
+        ini_set( 'display_errors', 1 );
+        ini_set('error_reporting', E_ALL);
+        error_reporting( E_ALL | E_STRICT );
 
         include 'navdar.php';
 
@@ -87,7 +89,7 @@
 
                 <option value='0' selected data-i18n='support:seleccionarEstatus'>Sélectionner un statut</option>
 
-                <option value="activado" data-i18n='support:activated'>Activé</option>
+                <option value="Activated" data-i18n='support:activated'>Activé</option>
 
                 <option value="desactivado" data-i18n='support:desactivated'>Handicapés</option>
 
