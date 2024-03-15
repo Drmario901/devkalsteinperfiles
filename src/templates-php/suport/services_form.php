@@ -170,7 +170,7 @@
                 type="text"
                 name="service_agente"
                 class="form-control validate"
-                value="<?php echo $acc_name; echo $acc_lname ?>"
+                value="<?php echo $acc_name; echo $acc_lname;  ?> asda"
                 data-placeholder="support:nombreApellido"
                 placeholder="nombre y apellido"
             />
@@ -182,7 +182,7 @@
                 id="SE<?php echo$a?>telefono"
                 type="number"
                 class="form-control validate"
-                value="<?php ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL); echo $acc_correo; ?>"
+                value="<?php echo $acc_correo; ?>"
                 data-placeholder="client:numeroTlf"
                 placeholder=""
                 name="service_telefono"
