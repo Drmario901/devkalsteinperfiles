@@ -143,7 +143,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <label data-i18n="support:labelServiceTitle">Titulo de Servicio</label>
             <input
-                id="SE<?php echo$a?>nombre"
+                id="SEnombre"
                 name="service"
                 type="text"
                 class="form-control validate"
@@ -154,7 +154,7 @@
             <!-- <label data-i18n="support:labelCompany">Compañia</label> -->
             <label >aaaaaaa</label>
             <input
-                id="SE<?php echo$a?>company"
+                id="SEcompany"
                 type="text"
                 name="service_company"
                 class="form-control validate"
@@ -166,7 +166,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <label data-i18n="support:agente">Agente</label>
             <input
-                id="SE<?php echo$a?>agente"
+                id="SEagente"
                 type="text"
                 name="service_agente"
                 class="form-control validate"
@@ -179,7 +179,7 @@
             <!-- HACER QUE SE REGISTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
             <label for="Email" data-i18n="support:telefono">Telefono</label>
             <input
-                id="SE<?php echo$a?>telefono"
+                id="SEtelefono"
                 type="number"
                 class="form-control validate"
                 value="<?php echo $acc_correo; ?>"
@@ -191,7 +191,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <label for="Email" data-i18n="support:labelCorreo">Correo</label>
             <input
-                id="SE<?php echo$a?>correo"
+                id="SEcorreo"
                 type="text"
                 class="form-control validate"
                 value="<?php echo $acc_correo; ?>"
@@ -207,14 +207,14 @@
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
             <label for="Level" data-i18n="support:pais">Pais</label>
-            <select id="SE<?php echo$a?>pais" class="tm-select-accounts" name="category">
+            <select id="SEpais" class="tm-select-accounts" name="category">
                 <option selected value='0' data-i18n="support:selectOption">Elige una Opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <label data-i18n="support:labelDireccion">Dirección</label>
             <input
-                id="SE<?php echo$a?>direccion"
+                id="SEdireccion"
                 type="text"
                 name="service_direccion"
                 class="form-control validate"
@@ -225,7 +225,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <label data-i18n="support:labelEstadoOpcional">Estado (opcional?)</label>
             <input
-                id="SE<?php echo$a?>estadoLugar"
+                id="SEestadoLugar"
                 type="text"
                 name="service_estadolugar"
                 class="form-control validate"
@@ -236,7 +236,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <label for="name" data-i18n="support:labelCiudadOpcional">Ciudad (opcional?)</label>
             <input
-                id="SE<?php echo$a?>ciudad"
+                id="SEciudad"
                 type="text"
                 name="service_ciudad"
                 class="form-control validate"
@@ -246,7 +246,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <label for="name" data-i18n="support:labelProvinciaOpcional">Provincia (opcional?)</label>
             <input
-                id="SE<?php echo$a?>provincia"
+                id="SEprovincia"
                 type="text"
                 name="service_provincia"
                 class="form-control validate"
@@ -260,13 +260,13 @@
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
             <label for="Level" data-i18n="support:productCategory">Categoria de Producto</label>
-            <select id="SE<?php echo$a?>category" name="service_category" class="custom-select tm-select-accounts">
+            <select id="SEcategory" name="service_category" class="custom-select tm-select-accounts">
                 <option selected value='0' data-i18n="support:selectOption" >Elige una opción</option>
             </select>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
         <label for="Level" data-i18n="support:labelEstado">Status</label>
-            <select id="SE<?php echo$a?>estado" class="custom-select tm-select-accounts" name="service_estado">
+            <select id="SEestado" class="custom-select tm-select-accounts" name="service_estado">
                 <option value='0' selected data-i18n="support:selectOption">Elige una opción</option>
                 <option value="Activated">Activado</option>
                 <option value="Disabled">Desactivado</option>
@@ -275,7 +275,7 @@
         <div class="col-12 col-md-12 col-lg-4">
             <label for="name" data-i18n="support:estimatedTime">Tiempo Estimado</label>
             <input
-                id="SE<?php echo$a?>tiempoEstimado"
+                id="SEtiempoEstimado"
                 type="text"
                 name="service_tiempo"
                 class="form-control validate"
@@ -285,7 +285,7 @@
         <div class="col-12">
             <label for="description" data-i18n="support:description" >Descripción</label>
             <textarea
-                id="SE<?php echo$a?>Descripción"                   
+                id="SEDescripción"                   
                 class="form-control validate"
                 rows="5"
                 placeholder="describe what you are offering"
