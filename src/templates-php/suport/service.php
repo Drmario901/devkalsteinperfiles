@@ -87,9 +87,9 @@
 
                 <option value='0' selected data-i18n='support:seleccionarEstatus'>Sélectionner un statut</option>
 
-                <option value="activé" data-i18n='support:activated'>Activé</option>
+                <option value="activado" data-i18n='support:activated'>Activé</option>
 
-                <option value="désactivé" data-i18n='support:desactivated'>Handicapés</option>
+                <option value="desactivado" data-i18n='support:desactivated'>Handicapés</option>
 
             </select>
 
