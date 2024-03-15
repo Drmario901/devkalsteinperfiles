@@ -3178,8 +3178,7 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on("click", "#btnChangeStatus", function () {
-    let valor = $(this).text();
-    console.log("valor", valor);
+    let valor = $(this).console.log("valor", valor);
 
     const id = $(this).val();
 

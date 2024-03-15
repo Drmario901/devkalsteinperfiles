@@ -12,28 +12,21 @@ if (isset($_SESSION["emailAccount"])) {
 }
 
 require __DIR__ . '/conexion.php';
-require __DIR__ . '/translations.php';
 
 // Debes asegurarte de que estás recibiendo los datos 'consulta' y 'consulta2' y validarlos.
 if (!isset($_POST['consulta'], $_POST['consulta2'])) {
     exit('Los datos necesarios no están presentes.');
 }
 
-// Tomar la cookie y establecer las variables para los estados de las cotizaciones en el idioma correspondiente
-$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
-$pending = $translations[$lang]['pendiente'];
-$process = $translations[$lang]['procesar'];
-$cancel = $translations[$lang]['cancelar'];
-
 $consulta = $_POST['consulta'];
 $id = $_POST['consulta2'];
 
 // Es mejor usar sentencias preparadas para evitar inyecciones SQL.
-if (!in_array($consulta, [$pending, $process, $cancel], true)) {
-    exit('Valor de consulta no válido.' .$consulta . 'id' .$id);
+if (!in_array($consulta, ['0', '1', '2'], true)) {
+    exit('Valor de consulta no válido.'.$consulta);
 }
 
-$statusMap = [$pending => '0', $process => '1', $cancel => '2'];
+$statusMap = ['Pending' => '0', 'Process' => '1', 'Cancel' => '2'];
 $consulta = $statusMap[$consulta];
 
 // Preparar la consulta para evitar inyecciones SQL
