@@ -62,7 +62,7 @@
         
                     <div class="col-12">
                         <center>
-                            <button type="button" id="Register_service" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="support:servicios" data-i18n="support:addService">AJOUTER UN SERVICE</button>
+                            <button type="button" id="Register_service" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none'  data-i18n="support:addService">AJOUTER UN SERVICE</button>
                         </center>
                     </div>
                     <form>
