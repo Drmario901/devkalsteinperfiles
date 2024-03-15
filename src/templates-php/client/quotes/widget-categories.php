@@ -30,7 +30,7 @@
                                     categorie_line_it = ?,
                                     categorie_description_it = ?, 
                                     categorie_sub_it = ?
-                                WHERE id = ?";
+                                WHERE categorie_id = ?";
             
                         // Prepare the statement
                         $stmt = $conexion->prepare($sql);
