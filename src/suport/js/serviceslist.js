@@ -283,6 +283,7 @@ jQuery(document).ready(function ($) {
       });
     } else {
       if (SE_servicio === "") {
+        console.log("entre al nameee");
         iziToast.error({
           title: "Erreur",
           message: "name empty",
