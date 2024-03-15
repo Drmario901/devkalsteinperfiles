@@ -58,6 +58,11 @@
                                 while ($value = $resultado->fetch_assoc()) {
                                     $id=$value['SE_id'];
                                     $name=$value['SE_servicio'];
+                                    
+                                    $_SESSION['se_agente_soporte'] = $value["SE_agente_soporte"];
+                                    $_SESSION['se_company'] = $value["SE_company"];
+                                    $_SESSION['se_correo'] = $value["SE_correo"];
+
                                     if (isset($_GET["edit"])) {
                                         $edit = $_GET["edit"];
                                         
