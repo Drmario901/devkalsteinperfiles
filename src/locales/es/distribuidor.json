@@ -57,7 +57,7 @@
     "btnChangeStatus": "Cambiar estatus",
     "parrafoDontHaveData": "No hay datos encontrados",
     "parrafoDontHaveDataTwo": "Datos no encontrados",
-    "spanPagina": "Página {{page}}",
+    "spanPagina": "Página",
     "parrafoDistribuidor": "Distribuidor",
     "labelUnidexis": "Unidades en existencias",
     "labelStatus": "Status",

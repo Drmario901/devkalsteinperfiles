@@ -57,7 +57,7 @@
   "btnChangeStatus": "Ändra status",
   "parrafoDontHaveData": "Inga data hittades",
   "parrafoDontHaveDataTwo": "Data ej hittad",
-  "spanPagina": "Sida {{page}}",
+  "spanPagina": "Sida",
   "parrafoDistribuidor": "Distributör",
   "labelUnidexis": "Enheter i lager",
   "labelStatus": "Status",
