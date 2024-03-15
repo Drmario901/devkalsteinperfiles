@@ -60,7 +60,8 @@
                 }
             }
 
-            $jsonString = file_get_contents(__DIR__ . '/categorie_it.json');
+            //Omitan
+            $jsonString = file_get_contents(__DIR__ . '/catego.json');
 
             if ($jsonString === false) {
                 die('Error al leer el archivo JSON');
