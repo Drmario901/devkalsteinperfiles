@@ -27,25 +27,10 @@
     ?>
 
    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let currentPathname = window.location.pathname;
-            const navLinks = [
-                { id: 'link-services', path: '/plataforma/index.php/support/services/' },
-                { id: 'link-addServices', path: '/plataforma/index.php/support/add' },
-                { id: 'link-modifyService', path: '/plataforma/index.php/support/services/edit' }
-            ];
+        let page = "services";
 
-            navLinks.forEach(linkInfo => {
-                const linkElement = document.querySelector('#' + linkInfo.id);
-                const isActive = currentPathname.includes(linkInfo.path); // Verificamos si el pathname actual incluye el path del enlace
-                linkElement.classList.toggle("active", isActive); // Aplicamos o quitamos la clase 'active' según corresponda
-
-                // Opcional: Remover el atributo style si el enlace está activo
-                if (isActive) {
-                    linkElement.removeAttribute("style");
-                }
-            });
-        });
+        document.querySelector('#' + page).classList.add("active");
+        document.querySelector('#' + page).removeAttribute("style");
     </script>
 
     
