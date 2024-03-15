@@ -1,0 +1,1316 @@
+{
+  "1": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "Hüübimisanalüsaator"
+      }
+    ]
+  },
+  "2": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "Elektrolüüsi analüsaator"
+      }
+    ]
+  },
+  "3": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "Hematoloogia analüsaator"
+      }
+    ]
+  },
+  "4": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "Uriini analüsaator"
+      }
+    ]
+  },
+  "5": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "Keemiline analüsaator"
+      }
+    ]
+  },
+  "6": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "Sperma analüsaator"
+      }
+    ]
+  },
+  "7": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Analüsaatorid",
+        "categorie_sub_ee": "HbA1c analüsaator"
+      }
+    ]
+  },
+  "8": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Autoklaavid",
+        "categorie_sub_ee": "Horisontaalne autoklaav"
+      }
+    ]
+  },
+  "9": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Autoklaavid",
+        "categorie_sub_ee": "Vertikaalne autoklaav"
+      }
+    ]
+  },
+  "10": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Mikrotomide seeria"
+      }
+    ]
+  },
+  "11": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Slaidide automaatvärvimine"
+      }
+    ]
+  },
+  "12": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Jahutusplaat"
+      }
+    ]
+  },
+  "13": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Parafiin"
+      }
+    ]
+  },
+  "14": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Kudede termiline plaadiseade"
+      }
+    ]
+  },
+  "15": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Kudede sisaldamise süsteem"
+      }
+    ]
+  },
+  "16": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Kudede protsessor"
+      }
+    ]
+  },
+  "17": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Veetöötlusvann koos kudedega"
+      }
+    ]
+  },
+  "18": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Patoloogia",
+        "categorie_sub_ee": "Kudede ujuvus"
+      }
+    ]
+  },
+  "19": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Sterilisaator Bacti-Cinerator",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "21": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lamineeritud vool ja kapid",
+        "categorie_sub_ee": "Horisontaalne puhas õhu voogu laud"
+      }
+    ]
+  },
+  "22": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lamineeritud vool ja kapid",
+        "categorie_sub_ee": "Vertikaalne puhas õhu voogu laud"
+      }
+    ]
+  },
+  "23": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lamineeritud vool ja kapid",
+        "categorie_sub_ee": "Minikapp"
+      }
+    ]
+  },
+  "28": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lamineeritud vool ja kapid",
+        "categorie_sub_ee": "Biokaitsekapott (II klass)"
+      }
+    ]
+  },
+  "29": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lamineeritud vool ja kapid",
+        "categorie_sub_ee": "Gaaside ekstraheerimise kapp"
+      }
+    ]
+  },
+  "30": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kaalu",
+        "categorie_sub_ee": "Poolmikrokaal"
+      }
+    ]
+  },
+  "31": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kaalu",
+        "categorie_sub_ee": "Analüütiline kaal"
+      }
+    ]
+  },
+  "32": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kaalu",
+        "categorie_sub_ee": "Täpsuskaal"
+      }
+    ]
+  },
+  "33": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kaalu",
+        "categorie_sub_ee": "Tööstuskaal"
+      }
+    ]
+  },
+  "34": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kaalu",
+        "categorie_sub_ee": "Veekindlad kaalud"
+      }
+    ]
+  },
+  "35": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Tavaline kliimakamber"
+      }
+    ]
+  },
+  "36": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Taimekasvu kliimakamber"
+      }
+    ]
+  },
+  "37": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Püsiva temperatuuri ja niiskuse kliimakamber"
+      }
+    ]
+  },
+  "38": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Kunstlik kliimakamber"
+      }
+    ]
+  },
+  "39": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Ravimite stabiilsuse testimise kliimakamber"
+      }
+    ]
+  },
+  "40": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Ravimite stabiilsuse testimise valgustusega kliimakamber"
+      }
+    ]
+  },
+  "41": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Ravimite stabiilsuse testimise kliimakamber"
+      }
+    ]
+  },
+  "42": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Kliimakambrid",
+        "categorie_sub_ee": "Püsiva temperatuuri ja niiskuse inkubaator"
+      }
+    ]
+  },
+  "43": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Colorimeter",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "44": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Colorimeter",
+        "categorie_sub_ee": "Spektrocolorimeter"
+      }
+    ]
+  },
+  "45": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Värvilise valguse kast",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "46": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Elektroforees",
+        "categorie_sub_ee": "Horisontaalne elektroforees"
+      }
+    ]
+  },
+  "47": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Elektroforees",
+        "categorie_sub_ee": "Vertikaalne elektroforees"
+      }
+    ]
+  },
+  "48": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Soojendusmatt",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "49": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Liofiilisaatorid",
+        "categorie_sub_ee": "Laua liofiilisaator"
+      }
+    ]
+  },
+  "50": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Liofiilisaatorid",
+        "categorie_sub_ee": "Vertikaalne laboratoorne liofiilisaator"
+      }
+    ]
+  },
+  "51": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Homogenisaator",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "52": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Homogenisaator",
+        "categorie_sub_ee": "Ultraheli homogenisaator"
+      }
+    ]
+  },
+  "53": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Soojendusplaadid",
+        "categorie_sub_ee": "Ülemise keraamilise segajaga analoog soojendusplaat"
+      }
+    ]
+  },
+  "54": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Soojendusplaadid",
+        "categorie_sub_ee": "Ülemise digitaalse nutikas ekraaniga keraamiline segajaga soojendusplaat"
+      }
+    ]
+  },
+  "55": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Soojendusplaadid",
+        "categorie_sub_ee": "Nutikas mitmepunktiline digitaalne ekraan soojustusplaadiga keraamilise segajaga"
+      }
+    ]
+  },
+  "56": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Soojendusplaadid",
+        "categorie_sub_ee": "Nutikas mitmeasendiline digitaalne ekraaniga keraamiline segajaga soojendusplaat"
+      }
+    ]
+  },
+  "57": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Jäätegija",
+        "categorie_sub_ee": "Jäämasin"
+      }
+    ]
+  },
+  "58": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Inkubaator",
+        "categorie_sub_ee": "BOD biokeemiline inkubaator"
+      }
+    ]
+  },
+  "60": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Inkubaator",
+        "categorie_sub_ee": "CO₂ inkubaator"
+      }
+    ]
+  },
+  "61": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Inkubaator",
+        "categorie_sub_ee": "Püsiva temperatuuriga inkubaator"
+      }
+    ]
+  },
+  "62": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Inkubaator",
+        "categorie_sub_ee": "Püsiva temperatuuri ja niiskuse inkubaator"
+      }
+    ]
+  },
+  "63": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Mikroskoop",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "64": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Mikrolaine seedijad",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "65": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Niiskusanalüsaator",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "66": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Segajad",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "67": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ohutuskapid",
+        "categorie_sub_ee": "Plahvatuskindel kapp"
+      }
+    ]
+  },
+  "68": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veevannid",
+        "categorie_sub_ee": "Veepaak"
+      }
+    ]
+  },
+  "69": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veevannid",
+        "categorie_sub_ee": "Läbipaistev veepaak"
+      }
+    ]
+  },
+  "70": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veevannid",
+        "categorie_sub_ee": "Õlipaak"
+      }
+    ]
+  },
+  "71": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veepaagid",
+        "categorie_sub_ee": "Ringlusega veepaak"
+      }
+    ]
+  },
+  "72": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Geeli dokumentatsioon",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "73": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Tagasipöördumise jahutaja",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "74": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Ühekiireline spektrofotomeeter"
+      }
+    ]
+  },
+  "75": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Kahekiireline spektrofotomeeter"
+      }
+    ]
+  },
+  "76": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Laua spektrofotomeeter"
+      }
+    ]
+  },
+  "77": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Laua kantav spektrofotomeeter"
+      }
+    ]
+  },
+  "78": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Käsitsi juhitav spektrofotomeeter"
+      }
+    ]
+  },
+  "79": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Kantav spektrofotomeeter"
+      }
+    ]
+  },
+  "80": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Spektrofotomeetrid",
+        "categorie_sub_ee": "Mitmekandiline spektrofotomeeter"
+      }
+    ]
+  },
+  "81": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ahjud",
+        "categorie_sub_ee": "Kuivatusahi"
+      }
+    ]
+  },
+  "82": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ahjud",
+        "categorie_sub_ee": "Tööstusahi"
+      }
+    ]
+  },
+  "83": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ahjud",
+        "categorie_sub_ee": "Vakuumahi"
+      }
+    ]
+  },
+  "84": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Fluorimeeter",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "85": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Toiteallikas",
+        "categorie_sub_ee": "Põhitoiteallikas"
+      }
+    ]
+  },
+  "86": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Toiteallikas",
+        "categorie_sub_ee": "Kõrgepinge toiteallikas"
+      }
+    ]
+  },
+  "87": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Toiteallikas",
+        "categorie_sub_ee": "Universaalne toiteallikas"
+      }
+    ]
+  },
+  "88": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Mikroplaadi pesur",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "89": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Mikroplaadi lugeja",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "90": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ultrahelipuhasti",
+        "categorie_sub_ee": "Laua ultrahelipuhasti"
+      }
+    ]
+  },
+  "91": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ultrahelipuhasti",
+        "categorie_sub_ee": "Digitaalse ekraaniga ultrahelipuhasti"
+      }
+    ]
+  },
+  "92": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ultrahelipuhasti",
+        "categorie_sub_ee": "Laua digitaalse ekraaniga ultrahelipuhasti"
+      }
+    ]
+  },
+  "93": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Ioone mõõtja",
+        "categorie_sub_ee": "Kantav ioonmõõtja"
+      }
+    ]
+  },
+  "94": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Hägususmõõtur",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "95": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Juhtivusmõõtur",
+        "categorie_sub_ee": "Juhtivuse kontroller"
+      }
+    ]
+  },
+  "96": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Juhtivusmõõtur",
+        "categorie_sub_ee": "Kantav juhtivuse mõõtur"
+      }
+    ]
+  },
+  "97": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Juhtivusmõõtur",
+        "categorie_sub_ee": "Laua juhtivuse kontroller"
+      }
+    ]
+  },
+  "98": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lahustunud hapniku mõõtja",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "99": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "PH mõõturid",
+        "categorie_sub_ee": "Laua pH-mõõturid"
+      }
+    ]
+  },
+  "100": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "PH mõõturid",
+        "categorie_sub_ee": "Kantavad pH-mõõturid"
+      }
+    ]
+  },
+  "101": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "PH mõõturid",
+        "categorie_sub_ee": "Tööstuslik pH kontroller"
+      }
+    ]
+  },
+  "102": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Muffelahi",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "103": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Pipetid",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "104": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Meditsiiniline külmik"
+      }
+    ]
+  },
+  "105": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Verepankade külmik"
+      }
+    ]
+  },
+  "106": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Püstine sügavkülmik"
+      }
+    ]
+  },
+  "107": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Madalatemperatuuriline sügavkülmik"
+      }
+    ]
+  },
+  "108": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Kirstsügavkülmik"
+      }
+    ]
+  },
+  "109": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Ülikülmik"
+      }
+    ]
+  },
+  "110": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "111": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Külmkapp ja sügavkülmik",
+        "categorie_sub_ee": "Kombineeritud sügavkülmik"
+      }
+    ]
+  },
+  "112": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Pöördevahapuhasti",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "113": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veepuhastussüsteem",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "114": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lämmastiku mahutid",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "115": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "PCR termotsüklid",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "135": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Lüofilisaatorid",
+        "categorie_sub_ee": "Toitude lüofilisaator"
+      }
+    ]
+  },
+  "145": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veepaagid",
+        "categorie_sub_ee": "Termoagitatsioonmagnetiga vann"
+      }
+    ]
+  },
+  "146": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Viskosimeeter",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "147": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Veepuhastusseade",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "150": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Transilluminator",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "151": {
+    "categorie_line_ee": "Laboratooriumi rida",
+    "categories": [
+      {
+        "categorie_description_ee": "Tsentrifugid",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "138": {
+    "categorie_line_ee": "Mööbliliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Roostevabast terasest tööpink",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "152": {
+    "categorie_line_ee": "Mööbliliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Tööpinkide tarvikud",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "153": {
+    "categorie_line_ee": "Mööbliliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Terastööpink",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "140": {
+    "categorie_line_ee": "Reaktiivide ja tarvikute liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Tarvikud",
+        "categorie_sub_ee": "Istopatoloogia tarvikud ja tarvikud"
+      }
+    ]
+  },
+  "141": {
+    "categorie_line_ee": "Reaktiivide ja tarvikute liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Tarvikud",
+        "categorie_sub_ee": "Istopatoloogia tarvikute ja tarvikute pakett"
+      }
+    ]
+  },
+  "142": {
+    "categorie_line_ee": "Reaktiivide ja tarvikute liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Reaktiiv",
+        "categorie_sub_ee": "Kliiniline keemiareaktiiv"
+      }
+    ]
+  },
+  "143": {
+    "categorie_line_ee": "Reaktiivide ja tarvikute liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Reaktiiv",
+        "categorie_sub_ee": "Hematoloogia reaktiiv"
+      }
+    ]
+  },
+  "144": {
+    "categorie_line_ee": "Reaktiivide ja tarvikute liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Reaktiiv",
+        "categorie_sub_ee": "Hematoloogiliste reaktiivide komplekt"
+      }
+    ]
+  },
+  "136": {
+    "categorie_line_ee": "Hambatehniline liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Hambakindad",
+        "categorie_sub_ee": "Tihendusmasin"
+      }
+    ]
+  },
+  "137": {
+    "categorie_line_ee": "Hambatehniline liin",
+    "categories": [
+      {
+        "categorie_description_ee": "Hambaseade",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "116": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Infusioonipump",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "117": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Neonataalne kiiritussoojendaja",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "118": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Digitaalne EKG-elektrokardiograaf",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "119": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ultraheliskanner",
+        "categorie_sub_ee": "Ultraheli diagnostikaseadmed"
+      }
+    ]
+  },
+  "120": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ultraheliskanner",
+        "categorie_sub_ee": "Värviline Doppleri ultraheli diagnostikasüsteem"
+      }
+    ]
+  },
+  "121": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Neonataalne fototeraapia inkubaator",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "122": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Operatsioonilamp",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "123": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Anesteesiamasin",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "124": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Operatsioonilaud",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "125": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Optiline kirurgiline navigatsioon",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "126": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Elektriline ratastool"
+      }
+    ]
+  },
+  "127": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Seisuratastool"
+      }
+    ]
+  },
+  "128": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Käsitsi veetav ratastool"
+      }
+    ]
+  },
+  "129": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Lastearstool"
+      }
+    ]
+  },
+  "130": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Sportlik ratastool"
+      }
+    ]
+  },
+  "131": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Ronimisratastool"
+      }
+    ]
+  },
+  "132": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Ratastool",
+        "categorie_sub_ee": "Trepiratastool"
+      }
+    ]
+  },
+  "133": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Neonataalse bilirubiini fototeraapia seade",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "134": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Elektrokirurgiaseade",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "148": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Patsiendi jälgimise monitor",
+        "categorie_sub_ee": ""
+      }
+    ]
+  },
+  "149": {
+    "categorie_line_ee": "Meditsiiniliin",
+    "categories": [
+      {
+        "categorie_description_ee": "Tööstuslik pesumasin",
+        "categorie_sub_ee": ""
+      }
+    ]
+  }
+}
