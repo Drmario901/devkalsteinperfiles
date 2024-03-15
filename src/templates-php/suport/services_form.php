@@ -151,7 +151,8 @@
             />
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <label data-i18n="support:labelCompany">Compañia</label>
+            <!-- <label data-i18n="support:labelCompany">Compañia</label> -->
+            <label >aaaaaaa</label>
             <input
                 id="SE<?php echo$a?>company"
                 type="text"
