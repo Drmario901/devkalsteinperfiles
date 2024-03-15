@@ -271,6 +271,7 @@ jQuery(document).ready(function ($) {
     let SE_estado = $("#SEestado").val();
     let SE_tiempo = $("#SEtiempoEstimado").val();
     let SE_descripcion = $("#SEdescription").val();
+    console.log("#dataEdit", actualizar_id);
 
     if (SE_servicio === "") {
       iziToast.error({
