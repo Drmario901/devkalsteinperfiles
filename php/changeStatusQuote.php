@@ -22,9 +22,8 @@ $consulta = $_POST['consulta'];
 $id = $_POST['consulta2'];
 
 // Es mejor usar sentencias preparadas para evitar inyecciones SQL.
-// También, asegúrate de que 'consulta' sea uno de los valores esperados.
-if (!in_array($consulta, ['Pending', 'Process', 'Cancel'], true)) {
-    exit('Valor de consulta no válido.');
+if (!in_array($consulta, ['0', '1', '2'], true)) {
+    exit('Valor de consulta no válido.'.$consulta);
 }
 
 $statusMap = ['Pending' => '0', 'Process' => '1', 'Cancel' => '2'];
