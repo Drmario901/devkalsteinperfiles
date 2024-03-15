@@ -273,7 +273,13 @@ jQuery(document).ready(function ($) {
     let SE_descripcion = $("#SEdescription").val();
     console.log("#dataEdit", actualizar_id);
 
-    if (actualizar_id !== 0) {
+    if (actualizar_id === 0) {
+      iziToast.error({
+        title: "Erreur",
+        message: "Debe seleccionar un servicio que editar",
+        position: "center",
+      });
+    } else {
       if (SE_servicio === "") {
         iziToast.error({
           title: "Erreur",
@@ -396,12 +402,6 @@ jQuery(document).ready(function ($) {
           }
         }
       }
-    } else {
-      iziToast.error({
-        title: "Erreur",
-        message: "debe seleccionar un servicio para editar",
-        position: "center",
-      });
     }
   });
 
