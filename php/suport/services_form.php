@@ -148,7 +148,7 @@ session_start(); $a = !$add ? 'A' : ''
 
     <div class="row mb-4 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <label data-i17n='client:tituloServicio'>Titulo de Servicio</label>
+            <label data-i17n='client:tituloServicio'>sdfsdfsdf</label>
             <input
                 id="SE<?php echo$a?>nombre"
                 name="service"

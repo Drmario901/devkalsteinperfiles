@@ -155,7 +155,7 @@
                 id="SEcompany"
                 type="text"
                 class="form-control validate"
-                value="zfsfsf"
+                value="<?php echo $acc_company ?>"
                 data-placeholder="support:nombreCompany"
             />
         </div>
