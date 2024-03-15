@@ -26,8 +26,8 @@ if (!in_array($consulta, ['0', '3', '2'], true)) {
     exit('Valor de consulta no válido.'.$consulta);
 }
 
-$statusMap = ['Pending' => '0', 'Process' => '3', 'Cancel' => '2'];
-$consulta = $statusMap[$consulta];
+/* $statusMap = ['Pending' => '0', 'Process' => '3', 'Cancel' => '2'];
+$consulta = $statusMap[$consulta]; */
 
 // Preparar la consulta para evitar inyecciones SQL
 $query = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ?");
