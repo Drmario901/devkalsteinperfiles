@@ -273,115 +273,117 @@ jQuery(document).ready(function ($) {
     let SE_descripcion = $("#SEdescription").val();
     console.log("#dataEdit", actualizar_id);
 
-    if (SE_servicio === "") {
-      iziToast.error({
-        title: "Erreur",
-        message: "name empty",
-        position: "center",
-      });
-    } else {
-      if (SE_category === "") {
+    if (actualizar_id !== 0) {
+      if (SE_servicio === "") {
         iziToast.error({
           title: "Erreur",
-          message: "category empty",
+          message: "name empty",
           position: "center",
         });
       } else {
-        if (SE_company === "") {
+        if (SE_category === "") {
           iziToast.error({
             title: "Erreur",
-            message: "company name empty",
+            message: "category empty",
             position: "center",
           });
         } else {
-          if (SE_pais === "0") {
+          if (SE_company === "") {
             iziToast.error({
               title: "Erreur",
-              message: "country name empty",
+              message: "company name empty",
               position: "center",
             });
           } else {
-            if (SE_direccion === "") {
+            if (SE_pais === "0") {
               iziToast.error({
                 title: "Erreur",
-                message: "address empty",
+                message: "country name empty",
                 position: "center",
               });
             } else {
-              if (SE_agente === "") {
+              if (SE_direccion === "") {
                 iziToast.error({
                   title: "Erreur",
-                  message: "service agent name empty",
+                  message: "address empty",
                   position: "center",
                 });
               } else {
-                if (SE_correo === "") {
+                if (SE_agente === "") {
                   iziToast.error({
                     title: "Erreur",
-                    message: "email empty",
+                    message: "service agent name empty",
                     position: "center",
                   });
                 } else {
-                  if (SE_descripcion === "") {
+                  if (SE_correo === "") {
                     iziToast.error({
                       title: "Erreur",
-                      message: "description empty",
+                      message: "email empty",
                       position: "center",
                     });
                   } else {
-                    if (SE_estado === "0") {
+                    if (SE_descripcion === "") {
                       iziToast.error({
                         title: "Erreur",
-                        message: "status empty",
+                        message: "description empty",
                         position: "center",
                       });
                     } else {
-                      if (SE_tiempo === "") {
+                      if (SE_estado === "0") {
                         iziToast.error({
                           title: "Erreur",
-                          message: "expected time empty",
+                          message: "status empty",
                           position: "center",
                         });
                       } else {
-                        if (SE_tiempo < 0) {
+                        if (SE_tiempo === "") {
                           iziToast.error({
                             title: "Erreur",
-                            message: "expected time can not be less than 0",
+                            message: "expected time empty",
                             position: "center",
                           });
                         } else {
-                          if (SE_telefono === "") {
+                          if (SE_tiempo < 0) {
                             iziToast.error({
                               title: "Erreur",
-                              message: "phone number empty",
+                              message: "expected time can not be less than 0",
                               position: "center",
                             });
-                            err_msg == "";
                           } else {
-                            if (SE_telefono <= 0) {
+                            if (SE_telefono === "") {
                               iziToast.error({
                                 title: "Erreur",
-                                message: "invalid phone number",
+                                message: "phone number empty",
                                 position: "center",
                               });
+                              err_msg == "";
                             } else {
-                              updateFormData(
-                                actualizar_id,
-                                SE_servicio,
-                                SE_company,
-                                SE_agente,
-                                SE_telefono,
-                                SE_correo,
-                                SE_pais,
-                                SE_direccion,
-                                SE_estadolugar,
-                                SE_ciudad,
-                                SE_provincia,
-                                SE_category,
-                                SE_descripcion,
-                                SE_tiempo,
-                                SE_estado
-                              );
+                              if (SE_telefono <= 0) {
+                                iziToast.error({
+                                  title: "Erreur",
+                                  message: "invalid phone number",
+                                  position: "center",
+                                });
+                              } else {
+                                updateFormData(
+                                  actualizar_id,
+                                  SE_servicio,
+                                  SE_company,
+                                  SE_agente,
+                                  SE_telefono,
+                                  SE_correo,
+                                  SE_pais,
+                                  SE_direccion,
+                                  SE_estadolugar,
+                                  SE_ciudad,
+                                  SE_provincia,
+                                  SE_category,
+                                  SE_descripcion,
+                                  SE_tiempo,
+                                  SE_estado
+                                );
+                              }
                             }
                           }
                         }
@@ -394,6 +396,12 @@ jQuery(document).ready(function ($) {
           }
         }
       }
+    } else {
+      iziToast.error({
+        title: "Erreur",
+        message: "debe seleccionar un servicio para editar",
+        position: "center",
+      });
     }
   });
 
