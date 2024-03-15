@@ -10,6 +10,7 @@
         "calcinai/php-imagick": "^0.1.2",
         "google/apiclient": "^2.0",
         "dansmaculotte/monetico-php": "^2.0",
-        "twilio/sdk": "^7.16"
+        "twilio/sdk": "^7.16",
+        "geoip2/geoip2": "~2.0"
     }
 }

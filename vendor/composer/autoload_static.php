@@ -36,6 +36,9 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MaxMind\\WebService\\' => 19,
+            'MaxMind\\Exception\\' => 18,
+            'MaxMind\\Db\\' => 11,
         ),
         'H' => 
         array (
@@ -49,6 +52,7 @@ class ComposerStaticInit46055df0df20630754371483895e8634
             'Google\\Service\\' => 15,
             'Google\\Auth\\' => 12,
             'Google\\' => 7,
+            'GeoIp2\\' => 7,
         ),
         'F' => 
         array (
@@ -57,6 +61,10 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         'D' => 
         array (
             'DansMaCulotte\\Monetico\\' => 23,
+        ),
+        'C' => 
+        array (
+            'Composer\\CaBundle\\' => 18,
         ),
     );
 
@@ -98,6 +106,18 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MaxMind\\WebService\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService',
+        ),
+        'MaxMind\\Exception\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception',
+        ),
+        'MaxMind\\Db\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
+        ),
         'He270716\\KalsteinPerfiles\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -126,6 +146,10 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         array (
             0 => __DIR__ . '/..' . '/google/apiclient/src',
         ),
+        'GeoIp2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
+        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
@@ -133,6 +157,10 @@ class ComposerStaticInit46055df0df20630754371483895e8634
         'DansMaCulotte\\Monetico\\' => 
         array (
             0 => __DIR__ . '/..' . '/dansmaculotte/monetico-php/src',
+        ),
+        'Composer\\CaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
     );
 

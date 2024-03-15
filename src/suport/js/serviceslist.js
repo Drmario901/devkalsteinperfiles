@@ -271,6 +271,17 @@ jQuery(document).ready(function ($) {
     let SE_estado = $("#SEestado").val();
     let SE_tiempo = $("#SEtiempoEstimado").val();
     let SE_descripcion = $("#SEdescription").val();
+    console.log("#dataEdit", actualizar_id);
+
+    if (actualizar_id == 0) {
+      console.log("entre al ifffff");
+
+      iziToast.error({
+        title: "Erreur",
+        message: "Debe seleccionar un servicio que editar",
+        position: "center",
+      });
+    }
 
     if (SE_servicio === "") {
       iziToast.error({
