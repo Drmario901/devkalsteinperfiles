@@ -133,7 +133,12 @@
     }
 </style>
 
-<?php session_start(); $a = !$add ? 'A' : '' ?>
+<?php session_start();
+$se_agente_soporte = $_SESSION['se_agente_soporte'];
+$se_company = $_SESSION['se_company'];
+$se_correo = $_SESSION['se_correo'];
+$a = !$add ? 'A' : '' 
+?>
 
 <div class="row tm-edit-product-form">
     <form id="addservices_form">
@@ -158,7 +163,7 @@
                 type="text"
                 name="service_company"
                 class="form-control validate"
-                value="<?php echo$acc_company?>"
+                value="<?php echo$se_company; ?>"
                 data-placeholder="support:nombreCompany"
                 placeholder="Nombre de Compañia"
             />
@@ -194,7 +199,7 @@
                 id="SEcorreo"
                 type="text"
                 class="form-control validate"
-                value="<?php echo $acc_correo; ?>"
+                value="<?php echo $se_correo; ?>"
                 data-placeholder="client:direccionCorreo"
                 placeholder="Correo de contacto"
                 name="service_correo"
