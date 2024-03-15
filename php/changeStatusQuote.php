@@ -22,11 +22,11 @@ $consulta = $_POST['consulta'];
 $id = $_POST['consulta2'];
 
 // Es mejor usar sentencias preparadas para evitar inyecciones SQL.
-if (!in_array($consulta, ['0', '1', '2'], true)) {
+if (!in_array($consulta, ['0', '3', '2'], true)) {
     exit('Valor de consulta no válido.'.$consulta);
 }
 
-$statusMap = ['Pending' => '0', 'Process' => '1', 'Cancel' => '2'];
+$statusMap = ['Pending' => '0', 'Process' => '3', 'Cancel' => '2'];
 $consulta = $statusMap[$consulta];
 
 // Preparar la consulta para evitar inyecciones SQL
