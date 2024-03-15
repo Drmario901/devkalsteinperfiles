@@ -79,7 +79,7 @@
         
                     <?php
                         $add = false;
-                        require 'services_form.php';
+                        // require 'services_form.php';
                         ?>
                         <input type="hidden" id='actualizar_id' value='' name="actualizar_id">
         
