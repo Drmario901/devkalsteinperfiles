@@ -29,9 +29,9 @@
                     foreach ($info['categories'] as $category) {
                         // Prepare the SQL statement with placeholders
                         $sql = "UPDATE wp_categories SET 
-                                    categorie_line_pt = ?,
-                                    categorie_description_pt = ?, 
-                                    categorie_sub_pt = ?
+                                    categorie_line_pl = ?,
+                                    categorie_description_pl = ?, 
+                                    categorie_sub_pl = ?
                                 WHERE categorie_id = ?";
             
                         // Prepare the statement
@@ -43,9 +43,9 @@
             
                         // Bind the values from your JSON to the placeholders
                         $stmt->bind_param('sssi', 
-                            $info['categorie_line_pt'],
-                            $category['categorie_description_pt'],
-                            $category['categorie_sub_pt'],
+                            $info['categorie_line_pl'],
+                            $category['categorie_description_pl'],
+                            $category['categorie_sub_pl'],
                             $id);
             
                         // Execute the statement
@@ -61,7 +61,7 @@
             }
 
             //Omitan
-            $jsonString = file_get_contents(__DIR__ . '/categorie_.json');
+            $jsonString = file_get_contents(__DIR__ . '/categorie_pl.json');
 
             if ($jsonString === false) {
                 die('Error al leer el archivo JSON');

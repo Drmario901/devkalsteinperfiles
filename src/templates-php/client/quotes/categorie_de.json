@@ -1,0 +1,1316 @@
+{
+  "1": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "Koagulationsanalysator"
+      }
+    ]
+  },
+  "2": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "Elektrolyt-Analysator"
+      }
+    ]
+  },
+  "3": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "Hämatologie-Analysator"
+      }
+    ]
+  },
+  "4": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "Harnanalysator"
+      }
+    ]
+  },
+  "5": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "Chemieanalysator"
+      }
+    ]
+  },
+  "6": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "Sperma-Analysator"
+      }
+    ]
+  },
+  "7": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Analysatoren",
+        "categorie_sub_de": "HbA1c-Analysator"
+      }
+    ]
+  },
+  "8": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Autoklav",
+        "categorie_sub_de": "Horizontaler Autoklav"
+      }
+    ]
+  },
+  "9": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Autoklav",
+        "categorie_sub_de": "Vertikaler Autoklav"
+      }
+    ]
+  },
+  "10": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Serie von Mikrotomen"
+      }
+    ]
+  },
+  "11": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Automatisches Färben von Folien"
+      }
+    ]
+  },
+  "12": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Kühlplatte"
+      }
+    ]
+  },
+  "13": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Paraffin"
+      }
+    ]
+  },
+  "14": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Wärmeplatte für Gewebe"
+      }
+    ]
+  },
+  "15": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Gewebeeinschluss-System"
+      }
+    ]
+  },
+  "16": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Gewebeprozessor"
+      }
+    ]
+  },
+  "17": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Gewebewasserbad"
+      }
+    ]
+  },
+  "18": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pathologische Anatomie",
+        "categorie_sub_de": "Gewebeflottation"
+      }
+    ]
+  },
+  "19": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Bacti-Cinerator-Sterilisator",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "21": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Laminar Flow & Cabinets",
+        "categorie_sub_de": "Horizontale Laminar Flow Clean Bench"
+      }
+    ]
+  },
+  "22": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Laminar Flow & Cabinets",
+        "categorie_sub_de": "Vertikale Laminar Flow Clean Bench"
+      }
+    ]
+  },
+  "23": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Laminar Flow & Cabinets",
+        "categorie_sub_de": "Minikabine"
+      }
+    ]
+  },
+  "28": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Laminar Flow & Cabinets",
+        "categorie_sub_de": "Biosafety Cabinet (Klasse II)"
+      }
+    ]
+  },
+  "29": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Laminar Flow & Cabinets",
+        "categorie_sub_de": "Gasabsaughaube"
+      }
+    ]
+  },
+  "30": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Waagen",
+        "categorie_sub_de": "Halbmikrowaage"
+      }
+    ]
+  },
+  "31": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Waagen",
+        "categorie_sub_de": "Analytische Waage"
+      }
+    ]
+  },
+  "32": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Waagen",
+        "categorie_sub_de": "Präzisionswaage"
+      }
+    ]
+  },
+  "33": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Waagen",
+        "categorie_sub_de": "Industriewaage"
+      }
+    ]
+  },
+  "34": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Waagen",
+        "categorie_sub_de": "Wasserdichte Waage"
+      }
+    ]
+  },
+  "35": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Umweltkammer"
+      }
+    ]
+  },
+  "36": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Pflanzenwachstumskammer"
+      }
+    ]
+  },
+  "37": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Kammer für konstante Temperatur und Feuchtigkeit"
+      }
+    ]
+  },
+  "38": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Künstliche Klimakammer"
+      }
+    ]
+  },
+  "39": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Arzneimittelstabilitätstestkammer"
+      }
+    ]
+  },
+  "40": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Beleuchtung Arzneimittelstabilitätstestkammer"
+      }
+    ]
+  },
+  "41": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Arzneimittelstabilitätstestkammer"
+      }
+    ]
+  },
+  "42": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Klimakammern",
+        "categorie_sub_de": "Inkubator für konstante Temperatur und Feuchtigkeit"
+      }
+    ]
+  },
+  "43": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Colorimeter",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "44": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Colorimeter",
+        "categorie_sub_de": "Spektralphotometer"
+      }
+    ]
+  },
+  "45": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Farbbox",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "46": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Elektrophorese",
+        "categorie_sub_de": "Horizontale Elektrophorese"
+      }
+    ]
+  },
+  "47": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Elektrophorese",
+        "categorie_sub_de": "Vertikale Elektrophorese"
+      }
+    ]
+  },
+  "48": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Heizmantel",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "49": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Lyophilisatoren",
+        "categorie_sub_de": "Tischlyophilisator"
+      }
+    ]
+  },
+  "50": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Lyophilisatoren",
+        "categorie_sub_de": "Vertikaler Laborlyophilisator"
+      }
+    ]
+  },
+  "51": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Homogenisator",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "52": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Homogenisator",
+        "categorie_sub_de": "Ultraschall-Homogenisator"
+      }
+    ]
+  },
+  "53": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Heizplatten",
+        "categorie_sub_de": "Analoge Heizplatte mit keramischem Oberagitator"
+      }
+    ]
+  },
+  "54": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Heizplatten",
+        "categorie_sub_de": "Obere keramische Heizplattenagitator mit intelligentem digitalem Bildschirm"
+      }
+    ]
+  },
+  "55": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Heizplatten",
+        "categorie_sub_de": "Intelligenter digitaler Mehrpunkt-Bildschirmheizplattenagitator mit Keramik"
+      }
+    ]
+  },
+  "56": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Heizplatten",
+        "categorie_sub_de": "Intelligente digitale Mehrpositions-Keramikheizplatte mit intelligentem digitalen Bildschirm"
+      }
+    ]
+  },
+  "57": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Eismaschine",
+        "categorie_sub_de": "Eismaschine"
+      }
+    ]
+  },
+  "58": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Inkubator",
+        "categorie_sub_de": "Biochemischer Inkubator für BSB"
+      }
+    ]
+  },
+  "60": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Inkubator",
+        "categorie_sub_de": "CO₂-Inkubator"
+      }
+    ]
+  },
+  "61": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Inkubator",
+        "categorie_sub_de": "Inkubator mit konstanter Temperatur"
+      }
+    ]
+  },
+  "62": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Inkubator",
+        "categorie_sub_de": "Inkubator mit konstanter Temperatur und Luftfeuchtigkeit"
+      }
+    ]
+  },
+  "63": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Mikroskop",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "64": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Mikrowellenverdauung",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "65": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Feuchtigkeitsanalysator",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "66": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rührgeräte",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "67": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Sicherheitsschränke",
+        "categorie_sub_de": "Explosionssicherer Schrank"
+      }
+    ]
+  },
+  "68": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Wasserbäder",
+        "categorie_sub_de": "Wasserbad"
+      }
+    ]
+  },
+  "69": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Wasserbäder",
+        "categorie_sub_de": "Transparentes Wasserbad"
+      }
+    ]
+  },
+  "70": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Wasserbäder",
+        "categorie_sub_de": "Ölbad"
+      }
+    ]
+  },
+  "71": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Wasserbäder",
+        "categorie_sub_de": "Umlaufbad"
+      }
+    ]
+  },
+  "72": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Geldokumentation",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "73": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Umwalzkühler",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "74": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Einfachstrahl-Spektrophotometer"
+      }
+    ]
+  },
+  "75": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Doppelstrahl-Spektrophotometer"
+      }
+    ]
+  },
+  "76": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Tisch-Spektrophotometer"
+      }
+    ]
+  },
+  "77": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Tragbares Tisch-Spektrophotometer"
+      }
+    ]
+  },
+  "78": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Manuelles Spektrophotometer"
+      }
+    ]
+  },
+  "79": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Tragbares Spektrophotometer"
+      }
+    ]
+  },
+  "80": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Spektrophotometer",
+        "categorie_sub_de": "Multiwinkel-Spektrophotometer"
+      }
+    ]
+  },
+  "81": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Öfen",
+        "categorie_sub_de": "Trocknungsofen"
+      }
+    ]
+  },
+  "82": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Öfen",
+        "categorie_sub_de": "Industrieofen"
+      }
+    ]
+  },
+  "83": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Öfen",
+        "categorie_sub_de": "Vakuumofen"
+      }
+    ]
+  },
+  "84": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Fluorimeter",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "85": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Netzgerät",
+        "categorie_sub_de": "Basisnetzgerät"
+      }
+    ]
+  },
+  "86": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Netzgerät",
+        "categorie_sub_de": "Hochspannungsnetzgerät"
+      }
+    ]
+  },
+  "87": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Netzgerät",
+        "categorie_sub_de": "Universelles Netzgerät"
+      }
+    ]
+  },
+  "88": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Mikroplattenwascher",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "89": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Mikroplattenleser",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "90": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Ultraschallreiniger",
+        "categorie_sub_de": "Tischultraschallreiniger"
+      }
+    ]
+  },
+  "91": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Ultraschallreiniger",
+        "categorie_sub_de": "Ultraschallreiniger mit digitalem Bildschirm"
+      }
+    ]
+  },
+  "92": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Ultraschallreiniger",
+        "categorie_sub_de": "Digitales Tischultraschallreiniger"
+      }
+    ]
+  },
+  "93": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Ionenzähler",
+        "categorie_sub_de": "Tragbarer Ionenzähler"
+      }
+    ]
+  },
+  "94": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Trübungsmesser",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "95": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Leitfähigkeitsmesser",
+        "categorie_sub_de": "Leitfähigkeitsprüfer"
+      }
+    ]
+  },
+  "96": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Leitfähigkeitsmesser",
+        "categorie_sub_de": "Tragbarer Leitfähigkeitsmesser"
+      }
+    ]
+  },
+  "97": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Leitfähigkeitsmesser",
+        "categorie_sub_de": "Tisch-Leitfähigkeitsprüfer"
+      }
+    ]
+  },
+  "98": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Dissolved Oxygen Meter",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "99": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "pH-Messgeräte",
+        "categorie_sub_de": "Tisch-pH-Messgeräte"
+      }
+    ]
+  },
+  "100": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "pH-Messgeräte",
+        "categorie_sub_de": "Tragbare pH-Messgeräte"
+      }
+    ]
+  },
+  "101": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "pH-Messgeräte",
+        "categorie_sub_de": "Industrieller pH-Controller"
+      }
+    ]
+  },
+  "102": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Muffelofen",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "103": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Pipetten",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "104": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Medizinischer Kühlschrank"
+      }
+    ]
+  },
+  "105": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Blutbank-Kühlschrank"
+      }
+    ]
+  },
+  "106": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Vertikaler Gefrierschrank"
+      }
+    ]
+  },
+  "107": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Niedrigtemperatur-Gefrierschrank"
+      }
+    ]
+  },
+  "108": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Truhe Gefrierschrank"
+      }
+    ]
+  },
+  "109": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Ultra-Tiefkühler"
+      }
+    ]
+  },
+  "110": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "111": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Kühlschrank und Gefrierschrank",
+        "categorie_sub_de": "Kombinierter Gefrierschrank"
+      }
+    ]
+  },
+  "112": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rotationsverdampfer",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "113": {
+    "categorie_line_de": "Laborlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Wassersystem",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "114": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Stickstofftanks",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "115": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "PCR-Thermocycler",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "135": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Gefriertrockner",
+        "categorie_sub_de": "Lebensmitteltrockner"
+      }
+    ]
+  },
+  "145": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Wasserbäder",
+        "categorie_sub_de": "Magnetthermostat-Wasserbad"
+      }
+    ]
+  },
+  "146": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Viskosimeter",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "147": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Wasserdestillator",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "150": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Transilluminator",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "151": {
+    "categorie_line_de": "Laboratory Linie",
+    "categories": [
+      {
+        "categorie_description_de": "Zentrifugen",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "138": {
+    "categorie_line_de": "Möbellinie",
+    "categories": [
+      {
+        "categorie_description_de": "Edelstahl-Arbeitstisch",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "152": {
+    "categorie_line_de": "Möbellinie",
+    "categories": [
+      {
+        "categorie_description_de": "Zubehör für Arbeitstische",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "153": {
+    "categorie_line_de": "Möbellinie",
+    "categories": [
+      {
+        "categorie_description_de": "Stahl-Arbeitstisch",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "140": {
+    "categorie_line_de": "Reagenzien- und Verbrauchsmateriallinie",
+    "categories": [
+      {
+        "categorie_description_de": "Verbrauchsmaterialien",
+        "categorie_sub_de": "Zubehör und Verbrauchsmaterialien für Histopathologie"
+      }
+    ]
+  },
+  "141": {
+    "categorie_line_de": "Reagenzien- und Verbrauchsmateriallinie",
+    "categories": [
+      {
+        "categorie_description_de": "Verbrauchsmaterialien",
+        "categorie_sub_de": "Zubehör und Verbrauchsmaterialienpakete für Histopathologie"
+      }
+    ]
+  },
+  "142": {
+    "categorie_line_de": "Reagenzien- und Verbrauchsmateriallinie",
+    "categories": [
+      {
+        "categorie_description_de": "Reagenz",
+        "categorie_sub_de": "Klinisches chemisches Reagenz"
+      }
+    ]
+  },
+  "143": {
+    "categorie_line_de": "Reagenzien- und Verbrauchsmateriallinie",
+    "categories": [
+      {
+        "categorie_description_de": "Reagenz",
+        "categorie_sub_de": "Hämatologisches Reagenz"
+      }
+    ]
+  },
+  "144": {
+    "categorie_line_de": "Reagenzien- und Verbrauchsmateriallinie",
+    "categories": [
+      {
+        "categorie_description_de": "Reagenz",
+        "categorie_sub_de": "Paket hämatologischer Reagenzien"
+      }
+    ]
+  },
+  "136": {
+    "categorie_line_de": "Zahnlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Zahnzubehör",
+        "categorie_sub_de": "Versiegelungsmaschine"
+      }
+    ]
+  },
+  "137": {
+    "categorie_line_de": "Zahnlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Zahnarzteineinheit",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "116": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Infusionspumpe",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "117": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Neugeborenen-Strahlungswärmer",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "118": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Digitales EKG-Elektrokardiograph",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "119": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Ultraschallscanner",
+        "categorie_sub_de": "Diagnostische Ultraschallgeräte"
+      }
+    ]
+  },
+  "120": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Ultraschallscanner",
+        "categorie_sub_de": "Farbdoppler-Ultraschall-Diagnosesystem"
+      }
+    ]
+  },
+  "121": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Neugeborenen-Phototherapie-Inkubator",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "122": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Operationstischlampe",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "123": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Anästhesiemaschine",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "124": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Operationstisch",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "125": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Optische chirurgische Navigation",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "126": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Elektrischer Rollstuhl"
+      }
+    ]
+  },
+  "127": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Stehrollstuhl"
+      }
+    ]
+  },
+  "128": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Manueller Rollstuhl"
+      }
+    ]
+  },
+  "129": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Kinderrollstühle"
+      }
+    ]
+  },
+  "130": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Sportrollstuhl"
+      }
+    ]
+  },
+  "131": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Kletterrollstuhl"
+      }
+    ]
+  },
+  "132": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Rollstuhl",
+        "categorie_sub_de": "Treppenrollstuhl"
+      }
+    ]
+  },
+  "133": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Neugeborenen-Bilirubin-Phototherapieeinheit",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "134": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Elektrochirurgieeinheit",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "148": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Patientenmonitor",
+        "categorie_sub_de": ""
+      }
+    ]
+  },
+  "149": {
+    "categorie_line_de": "Medizinlinie",
+    "categories": [
+      {
+        "categorie_description_de": "Industrielle Waschmaschinen",
+        "categorie_sub_de": ""
+      }
+    ]
+  }
+}
