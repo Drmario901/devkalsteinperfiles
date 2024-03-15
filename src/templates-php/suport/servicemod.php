@@ -81,7 +81,7 @@
                         $add = false;
                         require 'services_form.php';
                         ?>
-                        <input type="hidden" id='actualizar_id' vaue='' name="actualizar_id">
+                        <input type="hidden" id='actualizar_id' value='' name="actualizar_id">
         
                     <div class="col-12">
                         <center><button type="button" id="actualizar_btn" name="send" class="btn btn-primary btn-block text-uppercase" style='color: white; background-color: #de3a46 !important; border: none' data-i18n="support:updateService" >ACTUALIZAR SERVICIO</button></center>
