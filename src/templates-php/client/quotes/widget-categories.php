@@ -60,6 +60,10 @@
 
             $jsonString = file_get_contents('categorie_it.json');
 
+            if ($jsonString === false) {
+                die('Error al leer el archivo JSON');
+            }
+
             updateCategoriesFromJson($jsonString, $conexion);
 
             // get linesss
