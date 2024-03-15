@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/conexion.php';
+require __DIR__ . '/../conexion.php';
 
 $t = $_POST['id'];
 $pName = $_POST['name'];

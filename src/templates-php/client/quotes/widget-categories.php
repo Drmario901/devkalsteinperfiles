@@ -4,6 +4,8 @@
     </span>
     <ul class='cCategory'>
         <?php
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
             $html = '';
 
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
@@ -19,6 +21,53 @@
                 $descriptionField = "product_category";
                 $subField = "product_subcategory";
             }
+
+            function updateCategoriesFromJson($jsonString, $conexion) {
+                $data = json_decode($jsonString, true); // Decode the JSON string into an associative array
+            
+                foreach ($data as $id => $info) {
+                    foreach ($info['categories'] as $category) {
+                        // Prepare the SQL statement with placeholders
+                        $sql = "UPDATE wp_categories SET 
+                                    categorie_line_it = ?,
+                                    categorie_description_it = ?, 
+                                    categorie_sub_it = ?
+                                WHERE categorie_id = ?";
+            
+                        // Prepare the statement
+                        $stmt = $conexion->prepare($sql);
+            
+                        if (!$stmt) {
+                            die('Prepare failed: ' . $conexion->error);
+                        }
+            
+                        // Bind the values from your JSON to the placeholders
+                        $stmt->bind_param('sssi', 
+                            $info['categorie_line_it'],
+                            $category['categorie_description_it'],
+                            $category['categorie_sub_it'],
+                            $id);
+            
+                        // Execute the statement
+                        if (!$stmt->execute()) {
+                            die('Execute failed: ' . $stmt->error);
+                        }
+            
+                        // Close the statement
+                        $stmt->close();
+                        echo "Updated category with id: $id\n";
+                    }
+                }
+            }
+
+            //Omitan
+            $jsonString = file_get_contents(__DIR__ . '/catego.json');
+
+            if ($jsonString === false) {
+                die('Error al leer el archivo JSON');
+            }
+
+            updateCategoriesFromJson($jsonString, $conexion);
 
             // get linesss
 

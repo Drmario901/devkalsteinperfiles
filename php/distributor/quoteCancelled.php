@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "/conexion.php";
+require __DIR__ . '/../conexion.php';
 
 $perPage = 5;
 $page = isset($_POST['page']) ? $_POST['page'] : 1;
