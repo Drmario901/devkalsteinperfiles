@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);*/
 //////////////////////////
 session_start();
-require __DIR__ . '../db/conexion.php';
+require __DIR__ . '/conexion.php';
 
 $email = $_POST['consulta'];
 $userTag = $_POST['consulta1'];

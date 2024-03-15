@@ -5,7 +5,7 @@ if (isset($_SESSION['emailAccount'])){
     $email = $_SESSION['emailAccount'];
 }
 
-require __DIR__.'../../db/conexion.php';
+require __DIR__.'/../conexion.php';
 
 $response = array();
 

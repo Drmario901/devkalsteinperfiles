@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require __DIR__ . '../db/conexion.php';
+    require __DIR__ . '/conexion.php';
 
     $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
     $resultConsulta = $conexion->query($consulta);

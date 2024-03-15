@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '../../db/conexion.php';
+require __DIR__ . '/conexion.php';
 
 $dateFrom = $_POST['dateFrom'];
 $dateTo = $_POST['dateTo'];

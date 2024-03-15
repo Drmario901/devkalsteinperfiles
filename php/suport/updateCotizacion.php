@@ -10,7 +10,7 @@ header("Content-Type: application/json");
 
 
 
-require '../../db/conexion.php';;
+require "conexion.php";
 
 // Verificar si la sesión existe
 if (!isset($_SESSION["emailAccount"])) {

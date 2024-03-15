@@ -1,6 +1,6 @@
 <?php
 
-    require __DIR__ . '../../db/conexion.php';
+    require __DIR__ . '/../conexion.php';
     
     $id = /*$_SESSION['id']*/ 1;
     $c_id = $_POST["consulta"];

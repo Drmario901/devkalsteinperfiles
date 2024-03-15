@@ -3,7 +3,7 @@
     //TABLE
     session_start();
 
-    require __DIR__.'../../db/conexion.php';
+    require __DIR__.'/../conexion.php';
 
     $perPage = 10;
     $page = isset($_POST['u']) ? $_POST['u'] : 1;

@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '../../db/conexion.php';
+require __DIR__ . '/../conexion.php';
 
 if (isset($_POST['remitente_id'])) {
     $senderId = $_POST['remitente_id'];

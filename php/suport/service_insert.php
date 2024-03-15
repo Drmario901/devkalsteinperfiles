@@ -5,7 +5,7 @@
     session_start();
     $email = $_SESSION['emailAccount'];
 
-    require __DIR__.'../../db/conexion.php';
+    require __DIR__.'/../conexion.php';
     
     
     /* $conexion = new mysqli($hostdb, $userdb, $passdb, $namedb);

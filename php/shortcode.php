@@ -17,7 +17,7 @@
             else {
                 $email = $_SESSION["emailAccount"];
 
-                require __DIR__.'../db/conexion.php';
+                require __DIR__.'/conexion.php';
 
                 $query = "SELECT account_rol_aid, account_status FROM wp_account WHERE account_correo = '$email'";
                 $result = $conexion->query($query);
@@ -159,7 +159,7 @@
             }
 
             
-            require __DIR__ . '../db/conexion.php';
+            require __DIR__ . '/conexion.php';
         
             $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
             $resultConsulta = $conexion->query($consulta);
@@ -208,7 +208,7 @@
                 $pass = $_SESSION["consulta1"];
             } 
         
-            require __DIR__ . '../db/conexion.php';
+            require __DIR__ . '/conexion.php';
         
             $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
             $resultConsulta = $conexion->query($consulta);
