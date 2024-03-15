@@ -1,6 +1,6 @@
 <?php
 
-   require __DIR__.'/../conexion.php';
+   require __DIR__.'../../db/conexion.php';
     $idQuote = $_POST['cotizacion_id'];
     $status = $_POST['cotizacion_status'];
 
