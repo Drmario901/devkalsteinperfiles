@@ -3179,7 +3179,7 @@ jQuery(document).ready(function ($) {
 
   $(document).on("click", "#btnChangeStatus", function () {
     let valor = $(this).text();
-    console.log("valorr", valor);
+    console.log("valor", valor);
 
     const id = $(this).val();
 
@@ -3187,7 +3187,7 @@ jQuery(document).ready(function ($) {
       var options =
         "<option selected='' style='text-align: center;' value='0'>" +
         valor +
-        "</option><option value='1'>Process</option><option value='2'>Cancelar</option>";
+        "</option><option value='1'>Procesar</option><option value='2'>Cancelar</option>";
     } else {
       if (valor === alertsTranslations.procesar) {
         var options =
@@ -3326,6 +3326,7 @@ jQuery(document).ready(function ($) {
     })
 
       .done(function (respuesta) {
+        console.log(respuesta);
         let data = JSON.parse(respuesta);
 
         if (data.update === "correcto") {
