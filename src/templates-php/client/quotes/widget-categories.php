@@ -20,6 +20,48 @@
                 $subField = "product_subcategory";
             }
 
+            function updateCategoriesFromJson($jsonString, $conexion) {
+                $data = json_decode($jsonString, true); // Decode the JSON string into an associative array
+            
+                foreach ($data as $id => $info) {
+                    foreach ($info['categories'] as $category) {
+                        // Prepare the SQL statement with placeholders
+                        $sql = "UPDATE wp_categories SET 
+                                    categorie_line_it = ?,
+                                    categorie_description_it = ?, 
+                                    categorie_sub_it = ?
+                                WHERE id = ?";
+            
+                        // Prepare the statement
+                        $stmt = $conexion->prepare($sql);
+            
+                        if (!$stmt) {
+                            die('Prepare failed: ' . $conexion->error);
+                        }
+            
+                        // Bind the values from your JSON to the placeholders
+                        $stmt->bind_param('sssi', 
+                            $info['categorie_line_it'],
+                            $category['categorie_description_it'],
+                            $category['categorie_sub_it'],
+                            $id);
+            
+                        // Execute the statement
+                        if (!$stmt->execute()) {
+                            die('Execute failed: ' . $stmt->error);
+                        }
+            
+                        // Close the statement
+                        $stmt->close();
+                        echo "Updated category with id: $id\n";
+                    }
+                }
+            }
+
+            $jsonString = '{"11": {"categorie_line_it": "Linea di Laboratorio","categories": [{"categorie_description_it": "Anatomia patologica","categorie_sub_it": "Colorazione automatica dei vetrini"}]},"12": {"categorie_line_it": "Linea di Laboratorio","categories": [{"categorie_description_it": "Anatomia patologica","categorie_sub_it": "Piastra di raffreddamento"}]}}';
+
+            updateCategoriesFromJson($jsonString, $conexion);
+
             // get linesss
 
             $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
