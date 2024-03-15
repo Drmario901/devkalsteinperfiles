@@ -276,7 +276,7 @@ jQuery(document).ready(function ($) {
     if (actualizar_id === 0) {
       console.log("entre al ifaasdasd");
 
-      iziToast.error({
+      return iziToast.error({
         title: "Erreur",
         message: "Debe seleccionar un servicio que editar",
         position: "center",
