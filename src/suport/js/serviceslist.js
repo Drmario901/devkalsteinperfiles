@@ -274,6 +274,8 @@ jQuery(document).ready(function ($) {
     console.log("#dataEdit", actualizar_id);
 
     if (actualizar_id === 0) {
+      console.log("entre al ifaasdasd");
+
       iziToast.error({
         title: "Erreur",
         message: "Debe seleccionar un servicio que editar",
