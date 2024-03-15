@@ -4,6 +4,8 @@
     </span>
     <ul class='cCategory'>
         <?php
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
             $html = '';
 
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
