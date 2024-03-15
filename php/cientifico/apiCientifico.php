@@ -1,6 +1,6 @@
 <?php
 session_start();
-require __DIR__ . '../../db/conexion.php';
+require __DIR__ . '/conexion.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
