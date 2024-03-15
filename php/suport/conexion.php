@@ -1,7 +1,4 @@
 <?php
-
-    // require_once '../conexionbuena.php';
-
     $hostdb = "localhost";
     $userdb = "kalsteinplus";
     $passdb = "OqA;}vKA94PO";
