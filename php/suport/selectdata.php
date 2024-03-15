@@ -1,6 +1,6 @@
 <?php 
      
-	require __DIR__ . '/../conexion.php';
+	require __DIR__ . '../../db/conexion.php';
 	include 'translateText.php';
 	translateText();
 

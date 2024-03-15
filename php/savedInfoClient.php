@@ -11,7 +11,7 @@
     }
     $session_id = session_id();
 
-    require __DIR__ . '/conexion.php';
+    require __DIR__ . '../db/conexion.php';
 	require __DIR__ . '/../vendor/autoload.php';
 
     function slug_sanitize($title) {

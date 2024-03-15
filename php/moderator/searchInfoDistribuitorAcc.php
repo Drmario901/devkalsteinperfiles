@@ -1,5 +1,5 @@
 <?php
-    require __DIR__ . '/../conexion.php';
+    require __DIR__ . '../../db/conexion.php';
 
     $consulta2 = "SELECT * FROM wp_account WHERE account_rol_aid = '2' ORDER BY account_aid DESC";   
     $resultado2 = $conexion->query($consulta2);

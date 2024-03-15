@@ -7,7 +7,7 @@
         $emailEncrypt = md5($email);
     }
 
-    require __DIR__ .'/conexion.php';
+    require __DIR__ .'../db/conexion.php';
 
     $userEncryt = $_POST['userEncryt'];
     $address = $_POST['address'];

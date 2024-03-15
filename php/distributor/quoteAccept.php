@@ -1,5 +1,5 @@
 <?php
-        require __DIR__.'/conexion.php';
+        require __DIR__.'../../db/conexion.php';
 
         $perPage = 5;
         $page = isset($_GET['i']) ? $_GET['i'] : 1;

@@ -2,7 +2,7 @@
 
     //TABLE
     session_start();
-    require __DIR__.'/../conexion.php';
+    require __DIR__.'../../db/conexion.php';
 
 
     // POSTS

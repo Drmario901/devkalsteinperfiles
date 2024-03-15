@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/../conexion.php';
+require __DIR__.'../../db/conexion.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

@@ -1,5 +1,5 @@
 <?php 
-require __DIR__ . '/../conexion.php';
+require __DIR__ . '../../db/conexion.php';
 $id = $_POST['Actualizar_id'];
 $observacion=$_POST['observacion'];
 $precio=$_POST['price'];

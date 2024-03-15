@@ -1,5 +1,5 @@
 <?php
-      require __DIR__.'/../conexion.php';
+      require __DIR__.'../../db/conexion.php';
 
       $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_status = 'Processed'";
       $respuesta = $conexion->query($consulta);

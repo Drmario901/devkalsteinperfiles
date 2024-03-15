@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['emailAccount'])){
     $acc_id = $_SESSION['account_id'];
 }
-require __DIR__ . '/../conexion.php';
+require __DIR__ . '../../db/conexion.php';
 require __DIR__.'/validateProductData.php';
 
 if ($val){

@@ -1,5 +1,5 @@
 <?php
-    require __DIR__ . '/conexion.php';
+    require __DIR__ . '../db/conexion.php';
 
     $email = $_POST['consulta'];
     $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";

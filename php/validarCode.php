@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require __DIR__ . '/conexion.php';
+    require __DIR__ . '../db/conexion.php';
     $inactividad = 600;
     if(isset($_SESSION["codeVerification"])){
         $codeSession = $_SESSION["codeVerification"];

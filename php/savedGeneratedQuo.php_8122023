@@ -1,5 +1,5 @@
 <?php
-  require __DIR__ . '/conexion.php';
+  require __DIR__ . '../db/conexion.php';
 
   $description = $_POST['description'];
   $datas = $_POST['datas'];

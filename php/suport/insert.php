@@ -2,7 +2,7 @@
 <?php 
 
 
-require __DIR__ . '/../conexion.php';
+require __DIR__ . '../../db/conexion.php';
 
 $id_servicio=$_POST['Registrar_id_servicio'];
 

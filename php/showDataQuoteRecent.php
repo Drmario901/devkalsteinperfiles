@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require __DIR__ . '/conexion.php';
+    require __DIR__ . '../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' ORDER BY cotizacion_id DESC LIMIT 10";
     $resultado = $conexion->query($consulta);

@@ -1,5 +1,5 @@
 <?php
-    require __DIR__ . '/conexion.php';
+    require __DIR__ . '../db/conexion.php';
 
     session_start();
     $email = $_SESSION['emailAccount'];
