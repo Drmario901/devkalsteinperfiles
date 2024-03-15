@@ -58,7 +58,7 @@
                 }
             }
 
-            $jsonString = '{"11": {"categorie_line_it": "Linea di Laboratorio","categories": [{"categorie_description_it": "Anatomia patologica","categorie_sub_it": "Colorazione automatica dei vetrini"}]},"12": {"categorie_line_it": "Linea di Laboratorio","categories": [{"categorie_description_it": "Anatomia patologica","categorie_sub_it": "Piastra di raffreddamento"}]}}';
+            $jsonString = file_get_contents('categorie_it.json');
 
             updateCategoriesFromJson($jsonString, $conexion);
 
