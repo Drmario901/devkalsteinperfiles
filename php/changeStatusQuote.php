@@ -11,31 +11,28 @@ if (isset($_SESSION["emailAccount"])) {
     // exit('No se ha iniciado sesión.'); // Por ejemplo.
 }
 
+<<<<<<< HEAD
 require __DIR__ . '../db/conexion.php';
 require __DIR__ . '/translations.php';
+=======
+require __DIR__ . '/conexion.php';
+>>>>>>> d03330dc9257924955e26ceefec01c5da91e6e8d
 
 // Debes asegurarte de que estás recibiendo los datos 'consulta' y 'consulta2' y validarlos.
 if (!isset($_POST['consulta'], $_POST['consulta2'])) {
     exit('Los datos necesarios no están presentes.');
 }
 
-// Tomar la cookie y establecer las variables para los estados de las cotizaciones en el idioma correspondiente
-$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
-$pending = $translations[$lang]['pendiente'];
-$process = $translations[$lang]['procesar'];
-$cancel = $translations[$lang]['cancelar'];
-
 $consulta = $_POST['consulta'];
 $id = $_POST['consulta2'];
 
 // Es mejor usar sentencias preparadas para evitar inyecciones SQL.
-// También, asegúrate de que 'consulta' sea uno de los valores esperados.
-if (!in_array($consulta, [$pending, $process, $cancel], true)) {
-    exit('Valor de consulta no válido.');
+if (!in_array($consulta, ['0', '3', '2'], true)) {
+    exit('Valor de consulta no válido.'.$consulta);
 }
 
-$statusMap = [$pending => '0', $process => '1', $cancel => '2'];
-$consulta = $statusMap[$consulta];
+/* $statusMap = ['Pending' => '0', 'Process' => '3', 'Cancel' => '2'];
+$consulta = $statusMap[$consulta]; */
 
 // Preparar la consulta para evitar inyecciones SQL
 $query = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ?");
