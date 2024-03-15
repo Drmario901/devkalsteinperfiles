@@ -4,6 +4,8 @@
     </span>
     <ul class='cCategory'>
         <?php
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
             $html = '';
 
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
@@ -58,7 +60,12 @@
                 }
             }
 
-            $jsonString = file_get_contents('categorie_it.json');
+            //Omitan
+            $jsonString = file_get_contents(__DIR__ . '/catego.json');
+
+            if ($jsonString === false) {
+                die('Error al leer el archivo JSON');
+            }
 
             updateCategoriesFromJson($jsonString, $conexion);
 
