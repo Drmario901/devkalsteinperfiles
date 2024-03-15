@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
   let page = pagina.text();
   let status = $("#estatus").val();
   let category = $("#category").val();
+  console.log("#estatus", status);
 
   function tablaconsulta(status, category, page, error) {
     console.log("status ", status, "category", category);
