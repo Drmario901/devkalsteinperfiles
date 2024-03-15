@@ -19,6 +19,7 @@ if (!isset($_POST['consulta'], $_POST['consulta2'])) {
     exit('Los datos necesarios no están presentes.');
 }
 
+// Tomar la cookie y establecer las variables para los estados de las cotizaciones en el idioma correspondiente
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 $pending = $translations[$lang]['pendiente'];
 $process = $translations[$lang]['procesar'];
