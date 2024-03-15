@@ -104,7 +104,7 @@
         <div class='container' style='display: flex; justify-content: center; align-items: center; width: 100%; '>
             <div class='row contentNoDataQuote' style='text-align: center;'>
                 <span class='material-symbols-rounded icon'>sentiment_dissatisfied</span>
-                <p style='color: #000;'>$datosNoEncontrados</p>
+                <p style='color: #000;'>asdfsdfdfsdf</p>
             </div>
         </div>
     HTML;
