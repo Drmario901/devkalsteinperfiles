@@ -3213,8 +3213,10 @@ jQuery(document).ready(function ($) {
     }
 
     if (valor === alertsTranslations.cancelar) {
+      console.log('valorrr = cancelar', valor, alertsTranslations.cancelar);
     } else {
       if (valor === alertsTranslations.procesar) {
+        console.log('valorrr = procesar', valor, alertsTranslations.procesar);
       } else {
         $.jAlert({
           type: "confirm",
