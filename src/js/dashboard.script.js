@@ -3191,7 +3191,7 @@ jQuery(document).ready(function ($) {
       alertsTranslations.pendiente
     );
 
-    console.log('alerts', alertsTranslations.procesar, alertsTranslations.pendiente, alertsTranslations.cancelado);
+    console.log('alerts', alertsTranslations.procesar, alertsTranslations.pendiente, alertsTranslations.cancelar);
     
 
     if (valor === alertsTranslations.pendiente) {
@@ -3204,8 +3204,8 @@ jQuery(document).ready(function ($) {
         
         var options = `</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
         // var options = `<option selected='' style='text-align: center;' value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
-      } else if (valor === alertsTranslations.cancelado) {
-        console.log('valor = cancelar', valor, alertsTranslations.cancelado);
+      } else if (valor === alertsTranslations.cancelar) {
+        console.log('valor = cancelar', valor, alertsTranslations.cancelar);
         var options = `</option><option value="2">${alertsTranslations.cancelar}</option><option value="0">${alertsTranslations.pendiente}</option>`;
 
         // var options = `<option selected='' style='text-align: center;' value='2'>${alertsTranslations.cancelar}</option><option value='0'>${alertsTranslations.pendiente}</option>`;
