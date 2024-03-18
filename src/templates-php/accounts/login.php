@@ -88,24 +88,31 @@
 
 <script>
 jQuery(document).ready(function($) {
-    var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang'); 
+    if (!localStorage.getItem('reloadedAfterSettingCookies')) {
+        var urlParams = new URLSearchParams(window.location.search);
+        var lang = urlParams.get('lang'); 
 
-    $.ajax({
-        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
-        type: 'POST',
-        data: lang ? { 'lang': lang } : {},
-        success: function(response) {
-            console.log("Response: ", response);
-            console.log("Cookie set with language: ", lang || "Default");
-        },
-        error: function(xhr, status, error) {
-            console.log('Error al intentar establecer las cookies.');
-            console.log("Status: ", status);
-            console.log("Error: ", error);
-        }
-    });
+        $.ajax({
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
+            type: 'POST',
+            data: lang ? { 'lang': lang } : {}, 
+            success: function(response) {
+                console.log("Response: ", response);
+                console.log("Cookie set with language: ", lang || "GeoIP2");
+
+                localStorage.setItem('reloadedAfterSettingCookies', 'true');
+
+                window.location.reload();
+            },
+            error: function(xhr, status, error) {
+                console.log('Error al intentar establecer las cookies.');
+                console.log("Status: ", status);
+                console.log("Error: ", error);
+            }
+        });
+    } else {
+         localStorage.removeItem('reloadedAfterSettingCookies');
+    }
 });
-
 
 </script>
