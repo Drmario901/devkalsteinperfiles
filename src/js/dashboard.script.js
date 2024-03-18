@@ -3193,8 +3193,8 @@ jQuery(document).ready(function ($) {
 
     if (valor === alertsTranslations.pendiente) {
       console.log('valor = pendiente', valor, alertsTranslations.pendiente);
-      var options = "<option selected='' style='text-align: center;' value='0'>"+valor+`</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
-      // var options = `<option selected='' style='text-align: center;' value='0'>${valor}</option>${valor}<option value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
+      // var options = "<option selected='' style='text-align: center;' value='0'>"+valor+`</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
+      var options = `<option selected='' style='text-align: center;' value='0'>${valor}</option>${valor}<option value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
     } else {
       if (valor === alertsTranslations.procesar) {
         console.log('valor = procesar', valor, alertsTranslations.procesar);
