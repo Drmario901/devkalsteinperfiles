@@ -3212,9 +3212,9 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    if (valor === alertsTranslations.cancelado) {
+    if (valor === alertsTranslations.cancelar) {
     } else {
-      if (valor === alertsTranslations.processed) {
+      if (valor === alertsTranslations.procesar) {
       } else {
         $.jAlert({
           type: "confirm",
