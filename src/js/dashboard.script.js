@@ -3202,13 +3202,13 @@ jQuery(document).ready(function ($) {
       if (valor === alertsTranslations.procesar) {
         console.log('valor = procesar', valor, alertsTranslations.procesar);
         
-        // var options = `</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
-        var options = `<option selected='' style='text-align: center;' value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
+        var options = `</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
+        // var options = `<option selected='' style='text-align: center;' value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
       } else if (valor === alertsTranslations.cancelar) {
         console.log('valor = cancelar', valor, alertsTranslations.cancelar);
-        // var options = `</option><option value="2">${alertsTranslations.cancelar}</option><option value="0">${alertsTranslations.pendiente}</option>`;
+        var options = `</option><option value="2">${alertsTranslations.cancelar}</option><option value="0">${alertsTranslations.pendiente}</option>`;
 
-        var options = `<option selected='' style='text-align: center;' value='2'>${alertsTranslations.cancelar}</option><option value='0'>${alertsTranslations.pendiente}</option>`;
+        // var options = `<option selected='' style='text-align: center;' value='2'>${alertsTranslations.cancelar}</option><option value='0'>${alertsTranslations.pendiente}</option>`;
       }
     }
 
