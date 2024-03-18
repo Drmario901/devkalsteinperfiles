@@ -88,31 +88,20 @@
 
 <script>
 jQuery(document).ready(function($) {
-    var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang') || ''; 
-    var country = urlParams.get('country') || ''; 
-
-    if (lang || country) {
-        $.ajax({
-            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
-            type: 'POST',
-            data: {
-                'lang': lang,
-                'country': country
-            },
-            success: function(response) {
-                console.log("Response: ", response);
-            },
-            error: function(xhr, status, error) {
-                console.log('Error with cookies.');
-                console.log("Status: ", status);
-                console.log("Error: ", error);
-                console.log("XHR: ", xhr);
-            }
-        });
-    } else {
-        console.log("Lang or country parameters are not present in the URL.");
-    }
+    $.ajax({
+        url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
+        type: 'POST', 
+        success: function(response) {
+            console.log("Response: ", response); 
+            console.log("Cookie set");
+        },
+        error: function(xhr, status, error) {
+            console.log('Error al intentar establecer las cookies.');
+            console.log("Status: ", status);
+            console.log("Error: ", error);
+        }
+    });
 });
+
 
 </script>
