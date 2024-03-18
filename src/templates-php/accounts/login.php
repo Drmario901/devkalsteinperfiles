@@ -89,8 +89,8 @@
 <script>
 jQuery(document).ready(function($) {
     var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang');
-    var country = urlParams.get('country');
+    var lang = urlParams.get('lang') || ''; 
+    var country = urlParams.get('country') || ''; 
 
     if (lang || country) {
         $.ajax({
@@ -101,12 +101,18 @@ jQuery(document).ready(function($) {
                 'country': country
             },
             success: function(response) {
-                console.log(response); 
+                console.log("Response: ", response);
             },
-            error: function() {
+            error: function(xhr, status, error) {
                 console.log('Error with cookies.');
+                console.log("Status: ", status);
+                console.log("Error: ", error);
+                console.log("XHR: ", xhr);
             }
         });
+    } else {
+        console.log("Lang or country parameters are not present in the URL.");
     }
 });
+
 </script>
