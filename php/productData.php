@@ -1,6 +1,6 @@
 <?php
 
-    require __DIR__ . '/conexion.php';
+    require '../db/conexion.php';
 
     $t = $_POST["consulta"];
     $consulta = "SELECT * FROM wp_k_products_add WHERE p_aid = '$t'";

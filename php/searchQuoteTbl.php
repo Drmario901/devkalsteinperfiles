@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require __DIR__ . '/conexion.php';
+    require '../db/conexion.php';
 
     $dateFrom = $_POST['dateFrom'];
     $dateTo = $_POST['dateTo'];

@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require __DIR__ . '/conexion.php';
+    require '../db/conexion.php';
 
     $warehouse = $_POST['warehouse'];
     $currency = $_POST['currency'];
