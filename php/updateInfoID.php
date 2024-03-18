@@ -3,7 +3,7 @@
   if(isset($_SESSION["emailAccount"])){
       $email = $_SESSION["emailAccount"];
   }
-  require __DIR__ . '/conexion.php';
+  require '../db/conexion.php';
 
   $imageProfile = $_FILES['imageIDCard']['name'];
   $extension = pathinfo($imageProfile, PATHINFO_EXTENSION);
