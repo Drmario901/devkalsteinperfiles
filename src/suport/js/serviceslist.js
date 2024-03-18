@@ -479,6 +479,7 @@ jQuery(document).ready(function ($) {
     }).done(function (response) {
       // console.log(response)
       let res = JSON.parse(response);
+      console.log("reasaaa", res);
 
       res.forEach((elem) => {
         SE_descripcion = elem.SE_descripcion;
