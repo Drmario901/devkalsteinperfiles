@@ -3212,7 +3212,7 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    if (valor === alertsTranslations.cancelar) {
+    if (valor === alertsTranslations.cancelado) {
     } else {
       if (valor === alertsTranslations.processed) {
       } else {
