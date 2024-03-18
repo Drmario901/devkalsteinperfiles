@@ -1,5 +1,5 @@
 <?php
-    require_once '../db/conexion.php';
+    require_once '/conexion.php';
     $consulta = $_POST['consulta'];
     $q = $conexion->real_escape_string($_POST['consulta']);
 

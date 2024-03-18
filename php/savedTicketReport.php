@@ -6,7 +6,7 @@
         $email = $_SESSION['emailAccount'];
     }
 
-    require_once '../db/conexion.php';
+    require_once '/conexion.php';
 
     $idServices = $_POST['idServices'];
     $emailAgent = $_POST['emailAgent'];

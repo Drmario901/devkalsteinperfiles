@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once '../db/conexion.php';
+require_once '/conexion.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");

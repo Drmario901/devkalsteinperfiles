@@ -17,7 +17,7 @@
             else {
                 $email = $_SESSION["emailAccount"];
 
-                require_once '../db/conexion.php';
+                require_once '/conexion.php';
 
                 $query = "SELECT account_rol_aid, account_status FROM wp_account WHERE account_correo = '$email'";
                 $result = $conexion->query($query);

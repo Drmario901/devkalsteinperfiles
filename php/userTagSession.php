@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../db/conexion.php';
+require_once '/conexion.php';
 
 $response = ['status' => 'session_inactive'];
 

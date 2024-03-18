@@ -7,7 +7,7 @@
 		$email = '';
 	}
 
-	require_once '../db/conexion.php';
+	require_once '/conexion.php';
 
 	$consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email'";
 	$resultado = $conexion->query($consulta);

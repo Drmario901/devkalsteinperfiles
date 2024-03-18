@@ -9,7 +9,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require_once '../db/conexion.php';
+    require_once '/conexion.php';
 
     $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
     $resultConsulta = $conexion->query($consulta);
