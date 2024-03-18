@@ -1,5 +1,5 @@
 <?php
-  require '../db/conexion.php';
+  require_once '../db/conexion.php';
   include_once './translations.php';
   $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
   $id = $_POST['consulta'];

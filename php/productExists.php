@@ -2,7 +2,7 @@
     $response = array();
 
     if (isset($_POST['model'])){
-        require '../db/conexion.php';
+        require_once '../db/conexion.php';
 
         $model = $_POST['model'];
 

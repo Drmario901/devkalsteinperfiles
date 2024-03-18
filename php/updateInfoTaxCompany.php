@@ -3,7 +3,7 @@
   if(isset($_SESSION["emailAccount"])){
       $email = $_SESSION["emailAccount"];
   }
-  require __DIR__ . '/conexion.php';
+  require_once '../db/conexion.php';
 
   $imageProfile = $_FILES['imageTaxDocument']['name'];
   $extension = pathinfo($imageProfile, PATHINFO_EXTENSION);

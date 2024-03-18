@@ -1,6 +1,6 @@
 <?php
 
-  require __DIR__ . '/conexion.php';
+  require_once '../db/conexion.php';
 
   $id = $_POST['valorBoton'];
 

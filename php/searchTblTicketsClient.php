@@ -10,7 +10,7 @@
     $offset = ($page - 1) * $perPage;
     $limit = $perPage;
 
-    require '../db/conexion.php';
+    require_once '../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_reportes WHERE R_usuario = '$email' ORDER BY R_id DESC LIMIT $offset, $limit";
     $resultado = $conexion->query($consulta);

@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require '../db/conexion.php';
+    require_once '../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_config_quote WHERE id_account = '$email'";
     $resultado = $conexion->query($consulta);
