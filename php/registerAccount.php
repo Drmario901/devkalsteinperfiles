@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);*/
 //////////////////////////
 session_start();
-require '../db/conexion.php';
+require_once '../db/conexion.php';
 
 $email = $_POST['consulta'];
 $userTag = $_POST['consulta1'];

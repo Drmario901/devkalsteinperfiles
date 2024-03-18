@@ -6,7 +6,7 @@
 
 $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-require '../db/conexion.php';
+require_once '../db/conexion.php';
 
 require_once __DIR__.'/translations.php';
 //translateText();

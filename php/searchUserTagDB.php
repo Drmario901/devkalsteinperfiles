@@ -1,5 +1,5 @@
 <?php 
-    require '../db/conexion.php';
+    require_once '../db/conexion.php';
 
     function getProfileImage($conexion, $userTag)
     {

@@ -1,5 +1,5 @@
 <?php
-require '../db/conexion.php';
+require_once '../db/conexion.php';
 
 if(isset($_POST['valor'])) {
     $discountCode = $_POST['valor'];

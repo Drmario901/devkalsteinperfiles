@@ -3,7 +3,7 @@
     if(isset($_SESSION["emailAccount"])){
         $email = $_SESSION["emailAccount"];
     }
-    require '../db/conexion.php';
+    require_once '../db/conexion.php';
 
     $delete = "DELETE FROM wp_account WHERE account_correo = '$email'";
     if ($conexion->query($delete) === TRUE){

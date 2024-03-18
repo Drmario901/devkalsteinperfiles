@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require '../db/conexion.php';
+    require_once '../db/conexion.php';
 
     $id = $_POST['consulta'];
 

@@ -1,6 +1,6 @@
 <?php
 
-    require '../db/conexion.php';
+    require_once '../db/conexion.php';
 
     session_start();
 
