@@ -17,9 +17,11 @@ try {
     echo "Country: " . $country->country->name . "\n";
 
 } catch (\GeoIp2\Exception\AddressNotFoundException $e) {
-    echo "La dirección IP no fue encontrada en la base de datos.\n";
+    echo "The IP isn´t found in the database.\n";
 } catch (\Exception $e) {
     echo "Error: " . $e->getMessage() . "\n";
 }
 
 ?>
+
+
