@@ -290,7 +290,7 @@ $a = !$add ? 'A' : ''
         <div class="col-12">
             <label for="description" data-i18n="support:description" >Descripción</label>
             <textarea
-                id="SEDescripción"                   
+                id="SEdescription"                   
                 class="form-control validate"
                 rows="5"
                 placeholder="describe what you are offering"

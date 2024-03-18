@@ -470,6 +470,7 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   $(document).on("click", "#btn-service-details", function () {
     var service_id = $(this).val();
+    console.log("el idddd", service_id);
 
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/serviceinfo.php",
@@ -478,6 +479,7 @@ jQuery(document).ready(function ($) {
     }).done(function (response) {
       // console.log(response)
       let res = JSON.parse(response);
+      console.log("reasaaa", res);
 
       res.forEach((elem) => {
         SE_descripcion = elem.SE_descripcion;

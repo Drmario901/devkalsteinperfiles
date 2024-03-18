@@ -3182,16 +3182,33 @@ jQuery(document).ready(function ($) {
 
     const id = $(this).val();
 
+    console.log(
+      "valores:",
+      valor,
+      "id:",
+      id,
+      "translation:",
+      alertsTranslations.pendiente
+    );
+
+    console.log('alerts', alertsTranslations.procesar, alertsTranslations.pendiente, alertsTranslations.cancelar);
+    
+
     if (valor === alertsTranslations.pendiente) {
-      var options =
-        "<option selected='' style='text-align: center;' value='0'>" +
-        valor +
-        `</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
+      console.log('valor = pendiente', valor, alertsTranslations.pendiente);
+      // var options = "<option selected='' style='text-align: center;' value='0'>"+valor+`</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
+      var options = `<option selected='' style='text-align: center;' value='0'>${valor}</option>${valor}<option value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
     } else {
-      if (valor === alertsTranslations.procesar) {
+      if (valor === alertsTranslations.processed) {
+        console.log('valor = procesar', valor, alertsTranslations.procesar);
+        
         var options = `</option><option value="3">${alertsTranslations.procesar}</option><option value="2">${alertsTranslations.cancelar}</option>`;
-      } else if (valor === alertsTranslations.cancelado) {
+        // var options = `<option selected='' style='text-align: center;' value='1'>${alertsTranslations.procesar}</option><option value='2'>${alertsTranslations.cancelar}</option>`;
+      } else if (valor === alertsTranslations.cancelar) {
+        console.log('valor = cancelar', valor, alertsTranslations.cancelar);
         var options = `</option><option value="2">${alertsTranslations.cancelar}</option><option value="0">${alertsTranslations.pendiente}</option>`;
+
+        // var options = `<option selected='' style='text-align: center;' value='2'>${alertsTranslations.cancelar}</option><option value='0'>${alertsTranslations.pendiente}</option>`;
       }
     }
 
@@ -3314,6 +3331,8 @@ jQuery(document).ready(function ($) {
   }
 
   function updateStatusQuote(consulta, consulta2) {
+    console.log("cosnutlassss", consulta, consulta2);
+
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/changeStatusQuote.php",
 
@@ -3325,14 +3344,16 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log(respuesta);
         let data = JSON.parse(respuesta);
+        console.log('dataaaaa', data);
+        
 
         if (data.update === "correcto") {
           searchDataProductTbl();
         }
       })
 
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("errorrrrr", error);
       });
   }
 
