@@ -3214,7 +3214,7 @@ jQuery(document).ready(function ($) {
 
     if (valor === alertsTranslations.cancelado) {
     } else {
-      if (valor === alertsTranslations.procesar) {
+      if (valor === alertsTranslations.processed) {
       } else {
         $.jAlert({
           type: "confirm",
