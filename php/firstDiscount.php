@@ -5,7 +5,7 @@ session_start();
 if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];   
 }
-require_once '../db/conexion.php';
+require __DIR__ . '/conexion.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

@@ -1,7 +1,7 @@
 <?php
-/* ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
+error_reporting(E_ALL);
 
 session_start();
 if (isset($_SESSION["emailAccount"])) {
@@ -11,7 +11,7 @@ if (isset($_SESSION["emailAccount"])) {
     // exit('No se ha iniciado sesión.'); // Por ejemplo.
 }
 
-require_once '../db/conexion.php';
+require __DIR__ . '/conexion.php';
 
 // Debes asegurarte de que estás recibiendo los datos 'consulta' y 'consulta2' y validarlos.
 if (!isset($_POST['consulta'], $_POST['consulta2'])) {

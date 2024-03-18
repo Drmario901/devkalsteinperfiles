@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require_once '../db/conexion.php';
+    require __DIR__ . '/conexion.php';
     $perPage = 10;
     $page = isset($_GET['a']) ? intval($_GET['a']) : 1;
 
