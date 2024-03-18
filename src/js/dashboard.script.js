@@ -3344,6 +3344,8 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log(respuesta);
         let data = JSON.parse(respuesta);
+        console.log('dataaaaa', data);
+        
 
         if (data.update === "correcto") {
           searchDataProductTbl();
