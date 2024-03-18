@@ -3182,6 +3182,15 @@ jQuery(document).ready(function ($) {
 
     const id = $(this).val();
 
+    console.log(
+      "valores:",
+      valor,
+      "id:",
+      id,
+      "translation:",
+      alertsTranslations.pendiente
+    );
+
     if (valor === alertsTranslations.pendiente) {
       var options =
         "<option selected='' style='text-align: center;' value='0'>" +
