@@ -11,7 +11,7 @@ if (isset($_SESSION["emailAccount"])) {
     // exit('No se ha iniciado sesión.'); // Por ejemplo.
 }
 
-require_once '../db/conexion.php';
+require __DIR__ . '/conexion.php';
 
 // Debes asegurarte de que estás recibiendo los datos 'consulta' y 'consulta2' y validarlos.
 if (!isset($_POST['consulta'], $_POST['consulta2'])) {
