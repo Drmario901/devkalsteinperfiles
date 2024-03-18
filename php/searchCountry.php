@@ -1,5 +1,5 @@
 <?php 
-	require __DIR__ . '/conexion.php';
+	require '../db/conexion.php';
 
 	$salida = "<option selected value='0'>Choose an option</option>";
 

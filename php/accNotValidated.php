@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require __DIR__ . '/conexion.php';
+    require '../db/conexion.php';
     if(isset($_SESSION["emailAccountPending"])){
         $email = $_SESSION["emailAccountPending"];
     }else{

@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/conexion.php';
+require '../db/conexion.php';
 
 if(isset($_POST['valor'])) {
     $discountCode = $_POST['valor'];
