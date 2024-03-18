@@ -33,24 +33,20 @@ $countryToLanguageMap = [
     'EE' => 'ee',
 ];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    try {
-        $reader = new Reader($databasePath);
-        $record = $reader->country($_SERVER['REMOTE_ADDR']);
-        $country = $record->country->isoCode;
 
-        $language = $_POST['lang'] ?? ($countryToLanguageMap[$country] ?? 'en');
+try {
+    $reader = new Reader($databasePath);
+    $record = $reader->country($_SERVER['REMOTE_ADDR']);
+    $country = $record->country->isoCode;
 
-        setcookie('language', $language, time() + (86400 * 30), "/");
-        setcookie('country', $country, time() + (86400 * 30), "/");
+    $language = $countryToLanguageMap[$country] ?? 'en';
 
-        echo "Language set to: " . $language . "\n";
-        echo "Country set to: " . $country . "\n";
-    } catch (Exception $e) {
-        echo "Error determining location: " . $e->getMessage();
-    }
-} else {
-    echo "No POST data received. Ensure language is being sent correctly.\n";
+    setcookie('language', $language, time() + (86400 * 30), "/");
+    setcookie('country', $country, time() + (86400 * 30), "/");
+
+    echo "Language set to: " . $language . "\n";
+    echo "Country set to: " . $country . "\n";
+} catch (Exception $e) {
+    echo "Error determining location: " . $e->getMessage();
 }
-
 ?>
