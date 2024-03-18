@@ -39,7 +39,7 @@ try {
     $record = $reader->country($_SERVER['REMOTE_ADDR']);
     $country = $record->country->isoCode;
 
-    $language = $countryToLanguageMap[$country] ?? 'en';
+    $language = $_POST['lang'] ?? ($countryToLanguageMap[$country] ?? 'en');
 
     setcookie('language', $language, time() + (86400 * 30), "/");
     setcookie('country', $country, time() + (86400 * 30), "/");
