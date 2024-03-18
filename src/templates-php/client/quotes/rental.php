@@ -246,7 +246,7 @@
             <input type='submit' style='color: black !important; border: 1px solid #555 !important; padding: 3px 10px;' value='&laquo; Previous'>
         </form>
         <form id='quote-next-result' action='' method='get' style='display: inline-block;' $btn_next_visible>
-            <input id='next' class='next' type='hidden' name='b' value='$nextPage'>
+            <input id='next' class='next' type='hidden' name='b' value='Siguienteee'>
             <input type='submit' style='color: black !important; border: 1px solid #555 !important; padding: 3px 10px;' value='Next &raquo;'>
         </form>
     </div>
