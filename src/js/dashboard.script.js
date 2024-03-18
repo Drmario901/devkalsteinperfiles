@@ -3331,8 +3331,8 @@ jQuery(document).ready(function ($) {
         }
       })
 
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("errorrrrr", error);
       });
   }
 
