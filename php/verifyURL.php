@@ -5,7 +5,7 @@ error_reporting(E_ALL); */
 session_start();
 header('Content-Type: application/json');
 
-require_once '/conexion.php';
+require __DIR__ . '/conexion.php';
 
 $fullUrl = isset($_POST['fullUrl']) ? $_POST['fullUrl'] : '';
 

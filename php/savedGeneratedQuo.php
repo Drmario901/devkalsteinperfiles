@@ -1,5 +1,5 @@
 <?php
-  require_once '/conexion.php';
+  require __DIR__ . '/conexion.php';
 
   $description = $_POST['description'];
   $datas = $_POST['datas'];

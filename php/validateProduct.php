@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '/conexion.php';
+    require __DIR__ . '/conexion.php';
     require __DIR__.'/PHPMailer/src/Exception.php';
     require __DIR__.'/PHPMailer/src/PHPMailer.php';
     require __DIR__.'/PHPMailer/src/SMTP.php';

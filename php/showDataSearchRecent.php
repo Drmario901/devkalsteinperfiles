@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require_once '/conexion.php';
+    require __DIR__ . '/conexion.php';
 
     $consulta = "SELECT * FROM wp_register_searches WHERE account_id = '$email' ORDER BY aid_searches DESC LIMIT 10";
     $resultado = $conexion->query($consulta);

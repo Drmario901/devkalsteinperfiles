@@ -4,7 +4,7 @@
         $email = $_SESSION['emailPasswordChangeRequest'];
     }
 
-    require_once '/conexion.php';
+    require __DIR__ . '/conexion.php';
 
     $password = $_POST['password'];
     $passwordEncryptedScientist = password_hash($password, PASSWORD_DEFAULT); 

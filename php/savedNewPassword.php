@@ -3,7 +3,7 @@
     if(isset($_SESSION["emailAccount"])){
         $email = $_SESSION["emailAccount"];
     }
-    require_once '/conexion.php';
+    require __DIR__ . '/conexion.php';
 
     $currentPassword = $_POST['currentPassword'];
     $currentPasswordEncrypt = md5($currentPassword);

@@ -1,5 +1,5 @@
 <?php 
-    require_once '/conexion.php';
+    require __DIR__ . '/conexion.php';
 
     function getProfileImage($conexion, $userTag)
     {

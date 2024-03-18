@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '/conexion.php';
+    require __DIR__ . '/conexion.php';
 
     $email = $_POST['consulta'];
     $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";    

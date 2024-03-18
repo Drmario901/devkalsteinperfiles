@@ -1,6 +1,6 @@
 <?php
 
-require_once '/conexion.php';
+require __DIR__ . '/conexion.php';
 
 $pdf_folder_path = '/home/he290532/testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/';
 
