@@ -88,12 +88,16 @@
 
 <script>
 jQuery(document).ready(function($) {
+    var urlParams = new URLSearchParams(window.location.search);
+    var lang = urlParams.get('lang'); 
+
     $.ajax({
         url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
-        type: 'POST', 
+        type: 'POST',
+        data: lang ? { 'lang': lang } : {},
         success: function(response) {
-            console.log("Response: ", response); 
-            console.log("Cookie set");
+            console.log("Response: ", response);
+            console.log("Cookie set with language: ", lang || "Default");
         },
         error: function(xhr, status, error) {
             console.log('Error al intentar establecer las cookies.');
