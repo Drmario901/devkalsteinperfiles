@@ -232,8 +232,8 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         $("#reportes-completados").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error", error);
       });
   }
 });
