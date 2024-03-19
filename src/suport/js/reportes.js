@@ -222,20 +222,32 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   allPendingCirculatorCount();
+  console.log('entreees');
+
+
+
 
   function allPendingCirculatorCount(consulta) {
+    console.log('entreee');
+    
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
       type: "POST",
       data: { consulta },
     })
       .done(function (respuesta) {
+        console.log('respuesta', respuesta);
+        
         $("#reportes-completados").html(respuesta);
       })
       .fail(function (error) {
         console.log("error", error);
       });
   }
+
+  
+  $("#reportes-completados").on('click', allPendingCirculatorCount())
+  
 });
 
 jQuery(document).ready(function ($) {
