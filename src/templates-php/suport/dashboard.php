@@ -54,7 +54,7 @@
                 <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
                     <h6 data-i18n="support:recentReports" class="card-title"> Reportes Recientes</h6>
                     <?php
-                        require __DIR__.'/../../../php/conexion.php';
+                        require __DIR__.'/../../../db/conexion.php';
                         ini_set('display_errors', 1);
                         ini_set('display_startup_errors', 1);
                         error_reporting(E_ALL);
