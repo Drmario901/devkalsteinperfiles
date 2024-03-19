@@ -10,3 +10,7 @@
     if ($conexion -> connect_error) {
         die("La conexión falló: " .$conexion -> connect_error);
     }  
+
+    // ELIMINAR ESTE ARCHIVO UNA VEZ QUE ESTE
+    // VERIFICADA LA FUNCIONALIDAD DE LA NUEVA
+    // CONEXION A LA BASE DE DATOS XD
