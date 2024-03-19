@@ -1,6 +1,8 @@
 <?php
     session_start();
-    require __DIR__ . '/conexion.php';
+
+    require_once __DIR__ . '../db/conexion.php';
+
     if(isset($_SESSION["emailAccountPending"])){
         $email = $_SESSION["emailAccountPending"];
     }else{
@@ -13,3 +15,4 @@
 
     echo json_encode($datos, JSON_FORCE_OBJECT);
     $conexion->close();
+?>
