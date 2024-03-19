@@ -1,13 +1,9 @@
 <?php
+    session_start();
 
-session_start();
+    $acc_id = $_SESSION['emailAccount'];
 
-$acc_id = $_SESSION['emailAccount'];
-
-
-require __DIR__ . '/../conexion.php';
-
-
+    require_once '/../../db/conexion.php';
 
     $response = array();
 

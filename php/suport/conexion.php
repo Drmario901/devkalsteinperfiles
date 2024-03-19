@@ -14,4 +14,8 @@
     if ($conexion->connect_error) {
         die("<script>alert('Error de conexión: " . $conexion->connect_error . "');</script>");
     }
+
+    // ELIMINAR ESTE ARCHIVO UNA VEZ QUE ESTE
+    // VERIFICADA LA FUNCIONALIDAD DE LA NUEVA
+    // CONEXION A LA BASE DE DATOS XD
 ?>
