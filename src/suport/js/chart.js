@@ -184,6 +184,8 @@ jQuery(document).ready(function ($) {
         console.log('grow_2',grow_2);
         console.log('graph_2', graph_2[4]);
         console.log('prevMonths',prevMonths);
+        console.log('months',months);
+        
         
         
         
