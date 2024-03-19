@@ -5,7 +5,7 @@
         $email = $_SESSION['emailAccount'];
     }
 
-    require_once '../../db/conexion.php';
+    require_once '../conexion.php';
 
     $response = array();
 
