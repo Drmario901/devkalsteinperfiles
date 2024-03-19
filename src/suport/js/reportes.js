@@ -220,6 +220,24 @@ jQuery(document).ready(function ($) {
         console.log("error");
       });
   }
+
+  $('#reportes-pendientes').on('click', function(consulta){
+    console.log('activadoo');
+      $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
+      type: "POST",
+      data: { consulta },
+    })
+      .done(function (respuesta) {
+        console.log('respuesta', respuesta);
+        $("#reportes-completados").html(respuesta);
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
+    
+  })
+
 });
 
 jQuery(document).ready(function ($) {
@@ -242,22 +260,22 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  $('#reportes-completados').on('click', async function(consulta){
-    console.log('activadoo');
-   await $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
-      type: "POST",
-      data: { consulta },
-    })
-      .done(function (respuesta) {
-        console.log('respuesta', respuesta);
-        $("#reportes-completados").html(respuesta);
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
+  // $('#reportes-completados').on('click', async function(consulta){
+  //   console.log('activadoo');
+  //  await $.ajax({
+  //     url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
+  //     type: "POST",
+  //     data: { consulta },
+  //   })
+  //     .done(function (respuesta) {
+  //       console.log('respuesta', respuesta);
+  //       $("#reportes-completados").html(respuesta);
+  //     })
+  //     .fail(function (error) {
+  //       console.log("error", error);
+  //     });
     
-  })
+  // })
 
 });
 
