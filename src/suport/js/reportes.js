@@ -222,6 +222,10 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   allPendingCirculatorCount();
+  console.log('entreees');
+
+
+
 
   function allPendingCirculatorCount(consulta) {
     $.ajax({
@@ -236,6 +240,10 @@ jQuery(document).ready(function ($) {
         console.log("error", error);
       });
   }
+
+  
+  $("#reportes-completados").on('click', allPendingCirculatorCount())
+  
 });
 
 jQuery(document).ready(function ($) {
