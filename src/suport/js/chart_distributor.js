@@ -85,6 +85,8 @@ jQuery(document).ready(function ($) {
 
     var ctx = document.getElementById("sales");
     let graph_1 = JSON.parse(response).graph_1;
+    
+
 
     var sales = new Chart(ctx, {
       type: "bar",
@@ -184,10 +186,17 @@ jQuery(document).ready(function ($) {
         },
       },
     });
-    console.log('graph_2', graph_2);
+    
+  
     
     let grow_2 =
       graph_2[3] != 0 ? (100 * (graph_2[4] - graph_2[3])) / graph_2[3] : -100;
+
+      console.log();
+      $("#graph-2-prevMonth").on("click", function(){
+        console.log("grow_2", grow_2);
+        console.log('graph_2', graph_2);
+      })
 
 
     $("#graph-2-prevMonth").html(`
