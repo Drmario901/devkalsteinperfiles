@@ -1,8 +1,7 @@
-<?php
-    
+<?php    
     session_start();
 
-    require __DIR__.'../../conexion.php';
+    require_once '../../../db/conexion.php';
 
     $p_id = $_POST['product_aid'];
 
