@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
   //Funcion para mostrar la tabla de reportes
   let inputSearch = $("#searchreport").val();
   let dateFrom = $("#dateFrom").val();
-  let status = $("#estatus").val();
+  let status = $("#estatus-reportes").val();
   let dateTo = $("#dateTo").val();
 
   tablaconsulta(inputSearch, status, dateFrom, dateTo);

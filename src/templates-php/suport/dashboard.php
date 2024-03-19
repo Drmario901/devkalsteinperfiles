@@ -127,7 +127,9 @@
                     </div>
                     <div>
                         <div id="reportes-completados"></div>
-                        <center><p class="card-text" data-i18n="support:reportsComplete">Reportes completados</p></center>
+                        <center>
+                            <p class="card-text" data-i18n="support:reportsComplete">Reportes completados</p>
+                        </center>
                     </div>
     
                 </div>
@@ -138,7 +140,9 @@
                     </div>
                     <div>
                         <div id="reportes-pendientes"></div>
-                        <center><p class="card-text" data-i18n="support:reportsPending">Reportes Pendientes <!-- Pending reports --></p></center>
+                        <center>
+                            <p class="card-text" data-i18n="support:reportsPending">Reportes Pendientes <!-- Pending reports --></p>
+                    </center>
                     </div>
     
                 </div>
