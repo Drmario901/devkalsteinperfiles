@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'/../conexion.php';
+    require_once '../../db/conexion.php';
    
     if (isset($_POST['quote_id'])){
 
