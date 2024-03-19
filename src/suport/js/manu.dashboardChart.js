@@ -1,4 +1,8 @@
-const cookieLng = document.cookie
+
+
+jQuery(document).ready(function($) {
+
+    const cookieLng = document.cookie
 .split("; ")
 .find((row) => row.startsWith("language="))
 .split("=")[1];
@@ -19,7 +23,7 @@ const loadTranslations = (lng) => {
 loadTranslations(cookieLng);
 
 
-jQuery(document).ready(function($) {
+
     var ctx = document.getElementById('sales');
     var sales = new Chart(ctx, {
         type: 'bar',        
