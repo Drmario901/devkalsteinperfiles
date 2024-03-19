@@ -1,5 +1,5 @@
 <?php
-    require __DIR__ . '/../conexion.php';
+    require_once '../../db/conexion.php';
 
     $id = /*$_SESSION['id']*/ 1;
 
@@ -66,6 +66,4 @@
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
     }
-
-
 ?>

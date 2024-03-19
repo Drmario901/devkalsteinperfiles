@@ -1,6 +1,6 @@
 <?php
+    require_once '../../db/conexion.php';
 
-   require __DIR__.'/../conexion.php';
     $idQuote = $_POST['cotizacion_id'];
     $status = $_POST['cotizacion_status'];
 
@@ -16,3 +16,4 @@
     );
 
     echo json_encode($data);
+?>

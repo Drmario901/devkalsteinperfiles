@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require  __DIR__ . '/../conexion.php';
+    require_once '../../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email'";
     $resultado = $conexion->query($consulta);
@@ -26,3 +26,4 @@
 
     echo json_encode($quotes, JSON_FORCE_OBJECT);
     $conexion->close();
+?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require __DIR__ . '/../conexion.php';
+    require_once '../../db/conexion.php';
 
     require __DIR__.'/validateProductData.php';
 

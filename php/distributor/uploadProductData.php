@@ -1,10 +1,10 @@
 <?php
     session_start();
-    require __DIR__ . '/../conexion.php';
+
+    require_once '../../db/conexion.php';
     require __DIR__.'/validateProductData.php';
 
     if ($val){
-
         move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
 
         $acc_id = $_SESSION['emailAccount'];
@@ -212,3 +212,4 @@
 
     echo json_encode($datos, JSON_FORCE_OBJECT);
     $conexion->close();
+?>
