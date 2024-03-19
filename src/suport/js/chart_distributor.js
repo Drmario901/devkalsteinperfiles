@@ -198,6 +198,9 @@ jQuery(document).ready(function ($) {
         console.log('graph_2', graph_2);
       })
 
+       
+      $("#graph-2-prevMonth li").css('cursor', 'pointer');
+
 
     $("#graph-2-prevMonth").html(`
             <span class="material-symbols-rounded icon ${
