@@ -3,7 +3,8 @@
     ini_set('error_reporting', E_ALL);
     error_reporting( E_ALL | E_STRICT );
     session_start();
-    require __DIR__ . '/../conexion.php';
+
+    require_once __DIR__ . '/../../db/conexion.php';
     require_once __DIR__.'/../../php/translations.php';
 
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';

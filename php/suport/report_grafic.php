@@ -1,7 +1,5 @@
 <?php
-    
-
-    require  __DIR__ . '/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_report WHERE";
     $resultado = $conexion->query($consulta);

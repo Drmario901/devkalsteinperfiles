@@ -1,15 +1,16 @@
 <?php
-      ini_set('display_errors', 1);
-      ini_set('display_startup_errors', 1);
-      error_reporting(E_ALL);
-     require __DIR__ .'/../conexion.php';
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    require_once __DIR__ . '/../../db/conexion.php';
 
      session_start();
 
      require_once __DIR__ .'/../translateText.php';
      translateText();
 
-$acc_id = $_SESSION['emailAccount'];
+    $acc_id = $_SESSION['emailAccount'];
 
 
       $consulta = "SELECT * FROM wp_reportes WHERE R_usuario_agente='$acc_id' and R_estado  = 'Process'";
@@ -30,4 +31,4 @@ $acc_id = $_SESSION['emailAccount'];
 
       echo $salida; 
       $conexion->close();
-    ?>
+?>
