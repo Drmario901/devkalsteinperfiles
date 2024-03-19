@@ -3,7 +3,7 @@
 
     $acc_id = $_SESSION['emailAccount'];
 
-    require_once '/../../db/conexion.php';
+    require __DIR__ . '/../conexion.php';
 
     $response = array();
 
