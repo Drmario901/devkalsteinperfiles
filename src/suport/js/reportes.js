@@ -30,6 +30,9 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on("change", "#estatus-reportes", function () {
+
+    console.log('cambieeees');
+    
     let status = $(this).val();
     let dateFrom = $("#dateFrom").val();
     let dateTo = $("#dateTo").val();
