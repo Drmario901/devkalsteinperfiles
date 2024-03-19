@@ -7,7 +7,7 @@
 
     $acc_id = $_SESSION['emailAccount'];
 
-    require_once '/../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $response = array();
 
