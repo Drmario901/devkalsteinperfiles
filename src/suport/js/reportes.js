@@ -242,7 +242,7 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  $('#reportes-completados').on('click', async function(){
+  $('#reportes-completados').on('click', async function(consulta){
     console.log('activadoo');
    await $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
