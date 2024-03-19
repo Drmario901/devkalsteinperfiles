@@ -96,7 +96,7 @@ if ($resultado->num_rows > 0){
                 <td>$completeNameAgent</td>
                 <td>$nameService</td>
                 <td>$description</td>
-                <td>$estado</td>
+                <td>probando...</td>
                 <td><button class='btn btn-info' type='button' id='btn-report-details' value='$id' data-bs-toggle='modal' data-bs-target='#modalReportSupport' data-i17n='client:responder'>Responder</button>
                 </td>
             </tr>
