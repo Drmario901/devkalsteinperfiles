@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/data_productos.php';
+	require __DIR__ . '/data_productos.php';
 
 	$salida = "<option selected value='0'>Choose an option</option>";
 
@@ -15,7 +15,6 @@ require __DIR__ . '/data_productos.php';
 			}else{
 				array_push($categorys, $value['product_category']);
 			}
-			
 		}
 	} 
 	
