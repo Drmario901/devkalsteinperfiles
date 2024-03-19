@@ -1,5 +1,5 @@
 <?php 
-	require_once '/../../db/conexion.php';
+	require_once __DIR__ . '/../../db/conexion.php';
 
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $descriptionField = "product_category_" . $lang;
