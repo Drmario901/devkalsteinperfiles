@@ -23,6 +23,35 @@ jQuery(document).ready(function ($) {
 
   loadTranslations(cookieLng);
 
+  //! meses 
+
+  const meses = {
+    ee: [],
+    pl: [],
+    nl: [],
+    es: {
+      enero: "Enero",
+    febrero: "Febrero",
+    marzo: "Marzo",
+    abril: "Abril",
+    mayo: "Mayo",
+    junio: "Junio",
+    julio: "Julio",
+    agosto: "Agosto",
+    septiembre: "Septiembre",
+    octubre: "Octubre",
+    noviembre: "Noviembre",
+    diciembre: "Diciembre",
+    },
+    en: [],
+    it: [],
+    pt: [],
+    se: [],
+    fr: []
+  };
+
+  loadTranslations(cookieLng);
+
 
   let plugin_dir =
     "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/";
@@ -185,6 +214,8 @@ jQuery(document).ready(function ($) {
         console.log('graph_2', graph_2[4]);
         console.log('prevMonths',prevMonths);
         console.log('months',months);
+        console.log('meses', meses[cookieLng]);
+        
         
         
         
