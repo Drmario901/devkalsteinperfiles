@@ -182,7 +182,7 @@ jQuery(document).ready(function ($) {
 
       $("#graph-2-prevMonth").on('click', function(){
         console.log('grow_2',grow_2);
-        console.log('graph_2', graph_2);
+        console.log('graph_2', graph_2[4]);
         
         
       })
