@@ -29,11 +29,13 @@ jQuery(document).ready(function ($) {
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
 
-  $(document).on("change", "#estatus", function () {
+  $(document).on("change", "#estatus-reporte", function () {
+ 
     let status = $(this).val();
     let dateFrom = $("#dateFrom").val();
     let dateTo = $("#dateTo").val();
     let inputSearch = $("#searchreport").val();
+    console.log('cambios', 'status:',status, "dateFrom:", dateFrom, 'dateTo:', 'inputSearch:',inputSearch )
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
 
