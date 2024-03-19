@@ -8,9 +8,12 @@ session_start();
 
 $acc_id = $_SESSION['emailAccount'];
 
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
 require __DIR__ . '/../conexion.php';
 
 require_once __DIR__ .'/../translateText.php';
+require_once __DIR__ . '/../translations.php';
 translateText();
 
 $dateFrom = $_POST['dateFrom'];
@@ -89,6 +92,14 @@ if ($resultado->num_rows > 0){
         $resultado3 = $conexion->query($consulta3);
         $row3 = mysqli_fetch_array($resultado3);
         $nameService = $row3['SE_servicio'];
+
+
+        if($estado == 'Pendiente'){
+            $estado = $translations[$lang]['pendiente'];
+        } else {
+            $estado = $translations[$lang]['processed'];
+        };
+
         $html.= "                                    
             <tr>
                 <td>$i</td>
@@ -96,7 +107,7 @@ if ($resultado->num_rows > 0){
                 <td>$completeNameAgent</td>
                 <td>$nameService</td>
                 <td>$description</td>
-                <td>probando...</td>
+                <td>$estado</td>
                 <td><button class='btn btn-info' type='button' id='btn-report-details' value='$id' data-bs-toggle='modal' data-bs-target='#modalReportSupport' data-i17n='client:responder'>Responder</button>
                 </td>
             </tr>
