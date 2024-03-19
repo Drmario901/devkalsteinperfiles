@@ -1,6 +1,4 @@
 <?php
-
-    session_start();
     require __DIR__.'/../../../php/conexion.php';
                 
     $acc_id = $_SESSION['emailAccount'];
