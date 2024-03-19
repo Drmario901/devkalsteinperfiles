@@ -1,5 +1,5 @@
 <?php
-    require_once '../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $perPage = 5;
     $page = isset($_GET['i']) ? $_GET['i'] : 1;

@@ -1,5 +1,5 @@
 <?php
-    require_once '../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $t = $_POST["consulta"];
     $consulta = "SELECT * FROM wp_k_products WHERE product_aid = '$t'";
