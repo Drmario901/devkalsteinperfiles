@@ -121,7 +121,7 @@
                             } 
                   
 
-                        echo $status;
+                      
         
                         $html .= "
                             <tr>
