@@ -236,7 +236,7 @@ jQuery(document).ready(function ($) {
       data: { consulta },
     })
       .done(function (respuesta) {
-        console.log('respuesta', respuesta);
+        console.log('respuestaaaaaa', $("#reportes-completados").html(respuesta));
         
         $("#reportes-completados").html(respuesta);
       })
