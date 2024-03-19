@@ -1,5 +1,5 @@
 <?php
-    require_once '../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_status = '3'";
     $respuesta = $conexion->query($consulta);

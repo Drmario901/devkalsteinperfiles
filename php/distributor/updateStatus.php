@@ -1,5 +1,5 @@
 <?php
-    require_once '../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $idQuote = $_POST['cotizacion_id'];
     $status = $_POST['cotizacion_status'];

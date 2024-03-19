@@ -1,5 +1,4 @@
 <?php
-
 	require __DIR__.'/../../vendor/autoload.php';
 
 	use Spipu\Html2Pdf\Html2Pdf;

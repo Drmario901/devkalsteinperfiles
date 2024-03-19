@@ -1,3 +1,3 @@
 <?php 
-echo $newImage = __DIR__.'/../../../uploads/kalsteinQuote/'.$image;
+    echo $newImage = __DIR__.'/../../../uploads/kalsteinQuote/'.$image;
 ?>

@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-    require_once '../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email'";
     $resultado = $conexion->query($consulta);
