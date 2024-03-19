@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require __DIR__ . '/../conexion.php';
+    require_once '../../db/conexion.php';
 
     $email = $_POST['consulta'];
     $password = $_POST['consulta1'];
@@ -24,3 +24,4 @@
 
     echo json_encode($datos, JSON_FORCE_OBJECT);
     $conexion->close();
+?>
