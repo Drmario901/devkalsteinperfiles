@@ -228,9 +228,6 @@ jQuery(document).ready(function ($) {
   function allPendingCirculatorCount(consulta) {
     console.log('entree');
     console.log('consulta', consulta);
-    
-    
-    
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
       type: "POST",
@@ -245,8 +242,20 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  $('#reportes-completados').on('click', function(){
+  $('#reportes-completados').on('click', async function(){
     console.log('activadoo');
+   await $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
+      type: "POST",
+      data: { consulta },
+    })
+      .done(function (respuesta) {
+        console.log('respuesta', respuesta);
+        $("#reportes-completados").html(respuesta);
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
     
   })
 
