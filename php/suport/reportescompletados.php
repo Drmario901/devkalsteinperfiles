@@ -13,7 +13,7 @@
     $acc_id = $_SESSION['emailAccount'];
 
 
-      $consulta = "SELECT * FROM wp_reportes WHERE R_usuario_agente='$acc_id' and R_estado  = 'Process'";
+      $consulta = "SELECT * FROM wp_reportes WHERE R_usuario_agente='$acc_id' and R_estado  = 'Procesado'";
       $respuesta = $conexion->query($consulta);
 
       if ($respuesta->num_rows > 0) {
