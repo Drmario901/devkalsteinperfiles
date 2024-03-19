@@ -88,25 +88,31 @@
 
 <script>
 jQuery(document).ready(function($) {
-    var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang');
-    var country = urlParams.get('country');
+    if (!localStorage.getItem('reloadedAfterSettingCookies')) {
+        var urlParams = new URLSearchParams(window.location.search);
+        var lang = urlParams.get('lang'); 
 
-    if (lang || country) {
         $.ajax({
             url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
             type: 'POST',
-            data: {
-                'lang': lang,
-                'country': country
-            },
+            data: lang ? { 'lang': lang } : {}, 
             success: function(response) {
-                console.log(response); 
+                console.log("Response: ", response);
+                console.log("Cookie set with language: ", lang || "GeoIP2");
+
+                localStorage.setItem('reloadedAfterSettingCookies', 'true');
+
+                window.location.reload();
             },
-            error: function() {
-                console.log('Error with cookies.');
+            error: function(xhr, status, error) {
+                console.log('Error al intentar establecer las cookies.');
+                console.log("Status: ", status);
+                console.log("Error: ", error);
             }
         });
+    } else {
+         localStorage.removeItem('reloadedAfterSettingCookies');
     }
 });
+
 </script>
