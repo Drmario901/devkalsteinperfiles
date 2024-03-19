@@ -24,12 +24,12 @@ jQuery(document).ready(function ($) {
   $(document).on("keyup", "#searchreport", function () {
     let inputSearch = $(this).val();
     let dateFrom = $("#dateFrom").val();
-    let status = $("#estatus").val();
+    let status = $("#estatus-reportes").val();
     let dateTo = $("#dateTo").val();
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
 
-  $(document).on("change", "#estatus", function () {
+  $(document).on("change", "#estatus-reportes", function () {
     let status = $(this).val();
     let dateFrom = $("#dateFrom").val();
     let dateTo = $("#dateTo").val();
@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
   $(document).on("change", "#dateTo", function () {
     let dateTo = $(this).val();
     let dateFrom = $("#dateFrom").val();
-    let status = $("#estatus").val();
+    let status = $("#estatus-reportes").val();
     let inputSearch = $("#searchreport").val();
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
@@ -169,7 +169,7 @@ jQuery(document).ready(function ($) {
           );
           let inputSearch = $("#searchreport").val();
           let dateFrom = $("#dateFrom").val();
-          let status = $("#estatus").val();
+          let status = $("#estatus-reportes").val();
           let dateTo = $("#dateTo").val();
 
           tablaconsulta(inputSearch, status, dateFrom, dateTo);
