@@ -1,5 +1,5 @@
 <?php 
-	require_once '../../db/conexion.php';
+	require_once __DIR__ . '/../../db/conexion.php';
 
 	$salida = "<option selected value='0'>Choose an option</option>";
 
