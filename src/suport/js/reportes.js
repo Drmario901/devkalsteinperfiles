@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
   //Funcion para mostrar la tabla de reportes
   let inputSearch = $("#searchreport").val();
   let dateFrom = $("#dateFrom").val();
-  let status = $("#estatus-reportes").val();
+  let status = $("#estatus").val();
   let dateTo = $("#dateTo").val();
 
   tablaconsulta(inputSearch, status, dateFrom, dateTo);
@@ -24,15 +24,12 @@ jQuery(document).ready(function ($) {
   $(document).on("keyup", "#searchreport", function () {
     let inputSearch = $(this).val();
     let dateFrom = $("#dateFrom").val();
-    let status = $("#estatus-reportes").val();
+    let status = $("#estatus").val();
     let dateTo = $("#dateTo").val();
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
 
-  $(document).on("change", "#estatus-reportes", function () {
-
-    console.log('cambieeees');
-    
+  $(document).on("change", "#estatus", function () {
     let status = $(this).val();
     let dateFrom = $("#dateFrom").val();
     let dateTo = $("#dateTo").val();
@@ -43,7 +40,7 @@ jQuery(document).ready(function ($) {
   $(document).on("change", "#dateTo", function () {
     let dateTo = $(this).val();
     let dateFrom = $("#dateFrom").val();
-    let status = $("#estatus-reportes").val();
+    let status = $("#estatus").val();
     let inputSearch = $("#searchreport").val();
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
@@ -172,7 +169,7 @@ jQuery(document).ready(function ($) {
           );
           let inputSearch = $("#searchreport").val();
           let dateFrom = $("#dateFrom").val();
-          let status = $("#estatus-reportes").val();
+          let status = $("#estatus").val();
           let dateTo = $("#dateTo").val();
 
           tablaconsulta(inputSearch, status, dateFrom, dateTo);
@@ -225,32 +222,20 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   allPendingCirculatorCount();
-  console.log('entreees');
-
-
-
 
   function allPendingCirculatorCount(consulta) {
-    console.log('entreee');
-    
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
       type: "POST",
       data: { consulta },
     })
       .done(function (respuesta) {
-        console.log('respuestaaaaaa', $("#reportes-completados").html(respuesta));
-        
         $("#reportes-completados").html(respuesta);
       })
       .fail(function (error) {
         console.log("error", error);
       });
   }
-
-  
-  $("#reportes-completados").on('click', allPendingCirculatorCount())
-  
 });
 
 jQuery(document).ready(function ($) {
