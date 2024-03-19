@@ -184,9 +184,11 @@ jQuery(document).ready(function ($) {
         },
       },
     });
-
+    console.log('graph_2', graph_2);
+    
     let grow_2 =
       graph_2[3] != 0 ? (100 * (graph_2[4] - graph_2[3])) / graph_2[3] : -100;
+
 
     $("#graph-2-prevMonth").html(`
             <span class="material-symbols-rounded icon ${
