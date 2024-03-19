@@ -40,8 +40,8 @@
             <div class="col-2">
                 <select class="form-control" id="estatus-reporte">
                     <option value="0" style="text-align: center;" data-i18n="support:seleccionarEstatus" >-- Seleccionar Estatus --</option>
-                    <option value="Pending" data-i18n="support:selectPending">Pendiente</option>
-                    <option value="Process" data-i18n="support:procesado">Procesado</option>
+                    <option value="Pendiente" data-i18n="support:selectPending">Pendiente</option>
+                    <option value="Procesado" data-i18n="support:procesado">Procesado</option>
                 </select>
             </div>
         </div>
