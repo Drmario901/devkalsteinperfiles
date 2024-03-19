@@ -176,20 +176,35 @@ jQuery(document).ready(function ($) {
   let plugin_dir =
     "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/";
 
+  // let months = [
+  //   alertsTranslations.enero,
+  //   alertsTranslations.febrero,
+  //   alertsTranslations.marzo,
+  //   alertsTranslations.abril,
+  //   alertsTranslations.mayo,
+  //   alertsTranslations.junio,
+  //   alertsTranslations.julio,
+  //   alertsTranslations.agosto,
+  //   alertsTranslations.septiembre,
+  //   alertsTranslations.octubre,
+  //   alertsTranslations.noviembre,
+  //   alertsTranslations.diciembre,
+  // ];
+
   let months = [
-    alertsTranslations.enero,
-    alertsTranslations.febrero,
-    alertsTranslations.marzo,
-    alertsTranslations.abril,
-    alertsTranslations.mayo,
-    alertsTranslations.junio,
-    alertsTranslations.julio,
-    alertsTranslations.agosto,
-    alertsTranslations.septiembre,
-    alertsTranslations.octubre,
-    alertsTranslations.noviembre,
-    alertsTranslations.diciembre,
-  ];
+    meses[cookieLng].enero,
+    meses[cookieLng].febrero,
+    meses[cookieLng].marzo,
+    meses[cookieLng].abril,
+    meses[cookieLng].mayo,
+    meses[cookieLng].junio,
+    meses[cookieLng].julio,
+    meses[cookieLng].agosto,
+    meses[cookieLng].septiembre,
+    meses[cookieLng].octubre,
+    meses[cookieLng].noviembre,
+    meses[cookieLng].diciembre
+  ]
 
   function prevMonthList(month) {
     let res = [];
