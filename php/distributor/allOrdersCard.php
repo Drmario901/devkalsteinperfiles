@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/../conexion.php';
+require_once '../../db/conexion.php';
 
 session_start();
 if (isset($_SESSION['emailAccount'])){

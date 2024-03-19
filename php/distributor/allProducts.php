@@ -1,5 +1,5 @@
 <?php
-     require __DIR__ .'/../conexion.php';
+     require_once '../../db/conexion.php';
 
      $fechaInicio = date('Y-m-d H:i:s', strtotime('-6 months'));
      $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_status = 'Cancelled' AND cotizacion_create_at >= '$fechaInicio'";
