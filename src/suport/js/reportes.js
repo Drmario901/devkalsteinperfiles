@@ -245,7 +245,7 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  $('#reportes-completados').on('click', allPendingCirculatorCount())
+  $('#reportes-completados').on('click', () => allPendingCirculatorCount)
 
 });
 
