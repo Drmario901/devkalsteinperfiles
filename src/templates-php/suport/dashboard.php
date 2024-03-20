@@ -87,7 +87,7 @@
                             return $string ? implode(', ', $string) . ' Hace' : 'Justo Ahora';
                         }
     
-                        $consulta = "SELECT R_nombre, R_product, R_Description, R_fecha FROM wp_reportes WHERE R_usuario_agente='$acc_id' AND R_estado = 'pending' LIMIT 5";
+                        $consulta = "SELECT R_nombre, R_product, R_Description, R_fecha FROM wp_reportes WHERE R_usuario_agente='$acc_id' AND R_estado = 'Pendiente' LIMIT 5";
                         $resultado = $conexion->query($consulta);
     
                         if ($resultado->num_rows > 0){
