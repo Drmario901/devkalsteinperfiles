@@ -31,7 +31,7 @@ $html = ""; // Inicializar $html como una cadena vacía
             $newData = date_format($date, 'Y-m-d');
 
             $html.= "                                    
-                <tr style='height: 3.2rem;'>
+                <tr style='height: 3.2rem; display:flex; flex-direction:column; gap:1rem;'>
                     <td style='padding-top: 0.9rem;'>QUO$id</td>
                     <td style='padding-top: 0.9rem;'>$newData</td>
                 </tr>
