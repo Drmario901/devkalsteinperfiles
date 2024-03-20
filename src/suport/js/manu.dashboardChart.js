@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  var ctx = document.getElementById("#activity");
+  var ctx = document.getElementById("activity");
   var visitors = new Chart(ctx, {
     type: "line",
     data: {
