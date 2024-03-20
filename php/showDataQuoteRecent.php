@@ -10,22 +10,30 @@ if(isset($_SESSION["emailAccount"])){
 
 require __DIR__ . '/conexion.php';
 
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
 $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' ORDER BY cotizacion_id DESC LIMIT 10";
 $resultado = $conexion->query($consulta);
 
 require_once 'translateText.php';
+require_once 'translations.php';
+
 
 translateText();
 
-$html = ""; // Inicializar $html como una cadena vacía
+$quoteId = $translations[$lang]['client:quote'];
+$fecha = $translations[$lang]['client:fechaTable'];
+$dataNotFound = $translations[$lang]['client:dataNotFound'];
+
+$html = ""; // Inicializar $html como una cadenad vacía
 
 // Inicia la tabla antes del bucle
 $html .= "
 <table>
     <thead style='background-color: #808186; color: white;'>
         <tr>
-            <th>Quo ID</th>
-            <th>Fecha</th>
+            <th>$quoteId ID</th>
+            <th>$fecha</th>
         </tr>
     </thead>
     <tbody>
@@ -50,7 +58,7 @@ if ($resultado->num_rows > 0){
     // Mensaje si no hay datos
     $html .= "
         <tr>
-            <td colspan='2'>No se encontraron cotizaciones.</td>
+            <td colspan='2'>$dataNotFound</td>
         </tr>
     ";
 }
