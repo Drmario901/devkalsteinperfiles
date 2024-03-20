@@ -63,7 +63,7 @@
                             $ago = new DateTime($datetime);
                             $diff = $now->diff($ago);
                         
-                            $diff_w = floor($diff->d / 7);
+                            $diff_w = floor($diff->days / 7);
                             $diff->d -= $diff_w * 7;
                         
                             $string = array(
