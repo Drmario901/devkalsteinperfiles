@@ -1,4 +1,8 @@
 <?php
+
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     session_start();
     if(isset($_SESSION["emailAccount"])){
         $email = $_SESSION["emailAccount"];
@@ -11,7 +15,7 @@
 
     $i = 0;
     
-    include 'translateText.php';
+    require_once 'translateText.php';
 
     translateText();
 
