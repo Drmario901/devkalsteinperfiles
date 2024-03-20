@@ -1,23 +1,25 @@
 <?php
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-    session_start();
-    if(isset($_SESSION["emailAccount"])){
-        $email = $_SESSION["emailAccount"];
-    }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+session_start();
+if(isset($_SESSION["emailAccount"])){
+    $email = $_SESSION["emailAccount"];
+}
 
-    require __DIR__ . '/conexion.php';
+require __DIR__ . '/conexion.php';
 
-    $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' ORDER BY cotizacion_id DESC LIMIT 10";
-    $resultado = $conexion->query($consulta);
+$consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' ORDER BY cotizacion_id DESC LIMIT 10";
+$resultado = $conexion->query($consulta);
 
-    $i = 0;
-    
-    require_once 'translateText.php';
+$i = 0;
 
-    translateText();
+require_once 'translateText.php';
+
+translateText();
+
+$html = ""; // Inicializar $html como una cadena vacía
 
     if ($resultado->num_rows > 0){
         $i = 0;
