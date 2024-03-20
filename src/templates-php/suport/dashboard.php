@@ -51,14 +51,69 @@
         <section class="home">
             <div class="card revenue-card" style="min-height: 400px">
                 <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
-                    <h6 data-i18n="support:recentReports" class="card-title"> Reportes Recientes</h6>
+                    <h6 data-i18n="support:recentReports" class="card-title">Reportes Recientes</h6>
                     <?php
                         require __DIR__.'/../../../db/conexion.php';
                         ini_set('display_errors', 1);
                         ini_set('display_startup_errors', 1);
                         error_reporting(E_ALL);
+                        echo 'aqui va todo';
+                        function time_elapsed_string($datetime, $full = false) {
+                            $now = new DateTime;
+                            $ago = new DateTime($datetime);
+                            $diff = $now->diff($ago);
+                        
+                            $diff_w = floor($diff->d / 7);
+                            $diff->d -= $diff_w * 7;
+                        
+                            $string = array(
+                                'y' => 'year',
+                                'm' => 'month',
+                                'w' => 'week',
+                                'd' => 'day',
+                                'h' => 'hour',
+                                'i' => 'minute',
+                                's' => 'second',
+                            );
+                            foreach ($string as $k => &$v) {
+                                if ($diff->$k) {
+                                    $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                                } else {
+                                    unset($string[$k]);
+                                }
+                            }
+                        
+                            if (!$full) $string = array_slice($string, 0, 1);
+                            return $string ? implode(', ', $string) . ' Hace' : 'Justo Ahora';
+                        }
     
-                        echo 'Aqui va la vaina';
+                        $consulta = "SELECT R_nombre, R_product, R_Description, R_fecha FROM wp_reportes WHERE R_usuario_agente='$acc_id' AND R_estado = 'pending' LIMIT 5";
+                        $resultado = $conexion->query($consulta);
+    
+                        if ($resultado->num_rows > 0){
+                            while ($row = $resultado->fetch_assoc()) {
+    
+                                $client = $row['R_nombre'];
+                                $producto = $row['R_product'];
+                                $description= $row['R_Description'];
+                                $date = time_elapsed_string($row['R_fecha']);
+                                
+                                echo "
+                                    <div class='card mb-2'>
+                                        <div class='d-flex flex-row justify-content-between'>
+                                            <div data-i18n='support:from'> From </div> <b>$client</b>
+                                            <a href='localhost/wp-local/list-order'>
+                                                <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
+                                            </a>
+                                        </div>
+                                        <div class='d-flex flex-row justify-content-between'>
+                                            <div data-i18n='support:description' >descripcion: </div> <p>$description</p>
+                                            <div>$date</div>
+                                        </div>
+                                    </div>
+                                ";
+                            }
+                        }
                     ?>
                 </div>
             </div>
