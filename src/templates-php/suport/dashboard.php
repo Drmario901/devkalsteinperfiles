@@ -57,7 +57,7 @@
                         ini_set('display_errors', 1);
                         ini_set('display_startup_errors', 1);
                         error_reporting(E_ALL);
-                        echo 'aqui va todo';
+                     
                         function time_elapsed_string($datetime, $full = false) {
                             $now = new DateTime;
                             $ago = new DateTime($datetime);
@@ -116,7 +116,7 @@
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <div data-i18n='support:description' >descripcion: </div> <p>$description</p>
+                                            <div data-i18n='support:description' style='padding: right 0.5rem;'>descripcion:</div> <p>$description</p>
                                             <div>$date</div>
                                         </div>
                                     </div>
