@@ -22,9 +22,9 @@ $html = ""; // Inicializar $html como una cadena vacía
 // Inicia la tabla antes del bucle
 $html .= "
 <table>
-    <thead>
+    <thead style='background-color: #808186; color: white;'>
         <tr>
-            <th>Quo</th>
+            <th>Quo ID</th>
             <th>Fecha</th>
         </tr>
     </thead>
