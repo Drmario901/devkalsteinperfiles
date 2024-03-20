@@ -63,7 +63,7 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  $("#activity").on("click", function () {
+  $(document).on("click", "#activity", function () {
     console.log("me activee");
   });
 
