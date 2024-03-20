@@ -44,7 +44,7 @@
                                 ini_set('display_startup_errors', 1);
                                 error_reporting(E_ALL);
                             require __DIR__.'/../../../php/conexion.php';
-                            echo 'Aqui va el peo';
+                       
                             function time_elapsed_string($datetime, $full = false) {
                                 $now = new DateTime;
                                 $ago = new DateTime($datetime);
