@@ -102,7 +102,7 @@
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
                                             <div data-i18n='support:from'> From </div> <b>$client</b>
-                                            <a href='localhost/wp-local/list-order'>
+                                            <a href='https://dev.kalstein.plus/plataforma/support/reports/'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
                                         </div>
