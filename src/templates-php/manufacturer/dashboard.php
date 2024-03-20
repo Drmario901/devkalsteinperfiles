@@ -1,6 +1,10 @@
 <div class="container">
+    
     <header class="header" data-header>
         <?php
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
             session_start(); 
             if (isset($_SESSION['emailAccount'])){
                 $email = $_SESSION['emailAccount'];
@@ -36,8 +40,11 @@
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
                         <h6 class="card-title" data-i18n="manofacturer:cotizacionReciente">Cotizaciones recientes</h6>
                         <?php
+                                ini_set('display_errors', 1);
+                                ini_set('display_startup_errors', 1);
+                                error_reporting(E_ALL);
                             require __DIR__.'/../../../php/conexion.php';
-
+                            echo 'Aqui va el peo';
                             function time_elapsed_string($datetime, $full = false) {
                                 $now = new DateTime;
                                 $ago = new DateTime($datetime);
