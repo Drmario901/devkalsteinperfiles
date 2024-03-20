@@ -69,7 +69,7 @@
                             $string = array(
                                 'y' => 'year',
                                 'm' => 'month',
-                                'w' => 'week',
+                                'w' => $diff_w . ' week' . ($diff_w > 1 ? 's' : ''), // Manejo manual de semanas
                                 'd' => 'day',
                                 'h' => 'hour',
                                 'i' => 'minute',
