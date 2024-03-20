@@ -63,28 +63,37 @@
                             $ago = new DateTime($datetime);
                             $diff = $now->diff($ago);
                         
-                            $diff_w = floor($diff->days / 7);
+                            $diff_w = floor($diff->d / 7);
                             $diff->d -= $diff_w * 7;
                         
                             $string = array(
                                 'y' => 'year',
                                 'm' => 'month',
-                                'w' => $diff_w . ' week' . ($diff_w > 1 ? 's' : ''), // Manejo manual de semanas
                                 'd' => 'day',
                                 'h' => 'hour',
                                 'i' => 'minute',
                                 's' => 'second',
                             );
+                        
+                            // Añadiendo semanas manualmente al principio del arreglo si hay alguna semana
+                            if ($diff_w > 0) {
+                                $string = ['w' => 'week'] + $string;
+                            }
+                        
                             foreach ($string as $k => &$v) {
-                                if ($diff->$k) {
-                                    $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                                if ($k == 'w') {
+                                    $v = $diff_w . ' ' . $v . ($diff_w > 1 ? 's' : '');
                                 } else {
-                                    unset($string[$k]);
+                                    if ($diff->$k) {
+                                        $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                                    } else {
+                                        unset($string[$k]);
+                                    }
                                 }
                             }
                         
                             if (!$full) $string = array_slice($string, 0, 1);
-                            return $string ? implode(', ', $string) . ' Hace' : 'Justo Ahora';
+                            return $string ? implode(', ', $string) . ' ago' : 'just now';
                         }
     
                         $consulta = "SELECT R_nombre, R_product, R_Description, R_fecha FROM wp_reportes WHERE R_usuario_agente='$acc_id' AND R_estado = 'Pendiente' LIMIT 5";
