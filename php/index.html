@@ -9,6 +9,14 @@
     ></script>
 
     <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Fondo claro para contraste */
+      }
       model-viewer {
         display: flex;
         overflow: hidden;
@@ -29,13 +37,15 @@
     </style>
   </head>
   <body class="fondo-goku">
-    <h1>Hola</h1>
+    <h1>EasterEgg</h1>
     <model-viewer
       src="a.glb"
       alt="A 3D model of an object"
       exposure="1"
       camera-controls
       ar
+      camera-orbit="0deg 90deg 105%"
+      field-of-view="30deg"
     ></model-viewer>
   </body>
 </html>
