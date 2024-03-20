@@ -63,10 +63,6 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  $(document).on("click", "#activity", function () {
-    console.log("me activee");
-  });
-
   var ctx = document.getElementById("sales2");
   var visitors = new Chart(ctx, {
     type: "pie",
