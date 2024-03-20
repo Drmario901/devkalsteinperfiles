@@ -10,8 +10,7 @@ jQuery(document).ready(function ($) {
   } else {
     $("#btnGenQuote").click();
   }
-
-  $("#btnSearch").on("click", function () {
-    console.log("hice click");
+  $("#btnSearch").click(function () {
+    console.log("Elemento clickeado!");
   });
 });
