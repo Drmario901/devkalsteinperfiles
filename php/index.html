@@ -7,26 +7,35 @@
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
+
     <style>
       model-viewer {
-        height: 100vh; /* Ajustar si es necesario para manejar el tamaño */
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        user-select: none;
+        height: 90vh; /* Ajustar si es necesario para manejar el tamaño */
         width: 100%;
         --mv-environment-image: neutral; /* Establece una imagen de entorno neutral, ajustar según sea necesario */
         --mv-exposure: 1; /* Ajustar si es necesario para controlar la exposición */
+        background-image: url("https://4.bp.blogspot.com/-lAxvQb0Nbz8/V8ibXZBYuZI/AAAAAAAAAGg/FtNnZl8jiJ8MTnnLf0JcXm-oAb73mz0eQCK4B/s1600/logo_dragon_ball_gt_by_cdzdbzgoku-d5eh1mp.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .fondo-goku {
+        background-color: black;
       }
     </style>
   </head>
-  <body>
+  <body class="fondo-goku">
     <h1>Hola</h1>
     <model-viewer
-      src="tercero.glb"
+      src="a.glb"
       alt="A 3D model of an object"
       exposure="1"
       camera-controls
       ar
-      camera-orbit="0deg 90deg 105%"
-      field-of-view="45deg"
-      style="--poster-color: transparent"
     ></model-viewer>
   </body>
 </html>
