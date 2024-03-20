@@ -39,6 +39,7 @@
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
                         <h6 class="card-title" data-i18n="distribuidor:h6Cotizaciones">Cotizaciones recientes</h6>
                         <?php
+                        echo 'Aqui va el peo';
                             require __DIR__.'/../../../php/conexion.php';
                             ini_set('display_errors', 1);
                             ini_set('display_startup_errors', 1);
