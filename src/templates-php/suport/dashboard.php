@@ -116,7 +116,7 @@
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <div data-i18n='support:description' style='padding: right 0.5rem;'>descripcion:</div> <p>$description</p>
+                                            <div data-i18n='support:description' style='padding-right: 1rem;'>descripcion:</div> <p>$description</p>
                                             <div>$date</div>
                                         </div>
                                     </div>
