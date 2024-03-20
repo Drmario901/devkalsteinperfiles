@@ -110,9 +110,12 @@
                 </li>
                 
                 <li>
-                    <a id="link-shop" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/tienda/#generate-quote" class="navbar-link icon-box">
+                    <!-- <a id="link-shop" href="https://dev.kalstein.plus/plataforma/index.php/fabricante/tienda/#generate-quote" class="navbar-link icon-box">
                         <span data-i18n='manofacturer:tienda'>Tienda</span>
-                    </a>
+                    </a> -->
+                    <button id="btnSearch" class="navbar-link icon-box">
+                        <span data-i18n='manofacturer:tienda'>Tienda</span>
+                    </button>
                 </li>
     
                 <li>
