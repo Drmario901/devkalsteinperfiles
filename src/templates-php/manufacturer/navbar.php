@@ -40,7 +40,8 @@
             <ul class="navbar-list">
                 <div class="d-flex flex-row">
                     <li>
-                        
+
+                    
                         <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/inbox/' id='link-mail' class='navbar-link icon-box'>
                             <span class='material-symbols-rounded icon position-relative'>
                                 mail
