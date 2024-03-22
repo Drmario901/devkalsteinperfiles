@@ -100,9 +100,12 @@
                         </a>
                     </li>
                     <li>
-                        <a id="shop" href="https://dev.kalstein.plus/plataforma/index.php/support/shop" class="navbar-link icon-box">
+                        <!-- <a id="shop" href="https://dev.kalstein.plus/plataforma/index.php/support/shop" class="navbar-link icon-box">
                             <span data-i18n="support:store" >Tienda</span>
-                        </a>
+                        </a> -->
+                    <button id="btnSearch" class="navbar-link icon-box">
+                            <span data-i18n='manofacturer:tienda'>Tienda</span>
+                    </button>
                     </li>
                     <li class='generate-quote'> <!-- only style class-->
                         <a id='btnGenQuote' href="https://dev.kalstein.plus/plataforma/index.php/support/services/add" class='navbar-link icon-box text-white'>
