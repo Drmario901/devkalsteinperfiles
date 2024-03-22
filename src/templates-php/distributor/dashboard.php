@@ -35,7 +35,7 @@
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
                         <h6 class="card-title">Cotizaciones recientes</h6>
                         <?php
-                            require __DIR__.'/../../../php/conexion.php';
+                            require __DIR__.'../../../../db/conexion.php';
 
                             function time_elapsed_string($datetime, $full = false) {
                                 $now = new DateTime;
