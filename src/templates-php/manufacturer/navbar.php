@@ -23,7 +23,6 @@
 
 ?>
 <div class="container">
-
     <h1 class='mt-auto pb-3'>
         <a id='btn-logo' href='https://dev.kalstein.plus/plataforma/index.php/fabricante/dashboard'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png' alt='Kalstein' width='200' height='40'></a>
     </h1>
