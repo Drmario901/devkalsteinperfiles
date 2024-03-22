@@ -3,6 +3,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.js"></script>
         <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             session_start(); 
             if (isset($_SESSION['emailAccount'])){
                 $email = $_SESSION['emailAccount'];
@@ -35,6 +38,9 @@
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
                         <h6 class="card-title">Cotizaciones recientes</h6>
                         <?php
+                        ini_set('display_errors', 1);
+                        ini_set('display_startup_errors', 1);
+                        error_reporting(E_ALL);
                             require __DIR__.'../../../../db/conexion.php';
 
                             function time_elapsed_string($datetime, $full = false) {
