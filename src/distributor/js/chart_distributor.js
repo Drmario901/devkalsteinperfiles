@@ -9,7 +9,7 @@ function array_sum(array) {
 
 jQuery(document).ready(function ($) {
   let plugin_dir =
-    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+    "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/";
 
   let months = [
     "Enero",
