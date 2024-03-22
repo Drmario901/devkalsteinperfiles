@@ -9,7 +9,7 @@ function array_sum(array) {
 
 jQuery(document).ready(function ($) {
   let plugin_dir =
-    "https://plataforma.kalstein.cl/wp-content/plugins/kalsteinPerfiles/";
+    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
 
   let months = [
     "Enero",
@@ -45,8 +45,7 @@ jQuery(document).ready(function ($) {
     type: "POST",
     data: "",
     dataType: "json",
-  })
-  .done(function (response) {
+  }).done(function (response) {
     // La cuenta se reiniciará en...
 
     console.log(response);
