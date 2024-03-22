@@ -153,7 +153,6 @@
                             </center>
                         </div>
                     </div>
-    
                 </div>
     
                 <div class="card revenue-card">
