@@ -55,10 +55,10 @@
         <nav class="nav nav-borders">
             <div id="my-quotes-link-widget" class="nav-link" href="#" style='cursor: pointer' data-i18n="distribuidor:misCotizaciones">Mis cotizaciones</div>
             <div id="shipping-settings-link-widget" class="nav-link" href="#" style='cursor: pointer' data-i18n="distribuidor:configuracionCoti">Configuración de cotizaciones</div>
-            <div id="generate-quote-link-widget" class="nav-link active" href="#" style='cursor: pointer' data-i18n="distribuidor:linkProducts">Productos</div>
-            <!-- <button id="btnSearch" class="nav-link active" href="#" style='cursor: pointer' data-i18n="distribuidor:linkProducts">
+            <!-- <div id="generate-quote-link-widget" class="nav-link active" href="#" style='cursor: pointer' data-i18n="distribuidor:linkProducts">Productos</div> -->
+            <button id="btnSearch" class="nav-link active" href="#" style='cursor: pointer' data-i18n="distribuidor:linkProducts">
             Productos
-            </button> -->
+            </button>
         </nav>
 
         <button id="btnGenQuote" hidden></button>
