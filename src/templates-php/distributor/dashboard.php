@@ -42,9 +42,9 @@
                         ini_set('display_errors', 1);
                         ini_set('display_startup_errors', 1);
                         error_reporting(E_ALL);
-                        
+
                         echo 'Aqui va el peo';
-                            require_once '../../../db/conexion.php';
+                            require __DIR__ . '/../../../db/conexion.php';
                             
 
                             function time_elapsed_string($datetime, $full = false) {
