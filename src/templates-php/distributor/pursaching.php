@@ -11,7 +11,7 @@
             include 'navbar.php';
         ?>
         <script>
-            let page = "shop";
+            let page = "quotes";
             document.querySelector('#link-' + page).classList.add("active");
             document.querySelector('#link-' + page).removeAttribute("style");
         </script>
