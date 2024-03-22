@@ -1,11 +1,9 @@
 <div class="container">
     <header class="header" data-header>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.js"></script>
         <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
             session_start(); 
             if (isset($_SESSION['emailAccount'])){
                 $email = $_SESSION['emailAccount'];
@@ -24,7 +22,10 @@
         
         <?php
             $banner_img = 'Header-distribuidor-IMG.jpg';
-            $banner_text = "Bienvenido, $acc_name $acc_lname";
+            
+            require __DIR__. '/../../../php/translateTextBanner.php';
+            $banner = 'banner_text_welcome';
+            $banner_text = translateTextBanner($banner)  .', '. $acc_name .' '. $acc_lname;
             include __DIR__.'/../manufacturer/banner.php';
         ?>
 
@@ -36,12 +37,13 @@
     
                 <div class="card revenue-card" style="min-height: 400px">
                     <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
-                        <h6 class="card-title">Cotizaciones recientes</h6>
+                        <h6 class="card-title" data-i18n="distribuidor:h6Cotizaciones">Cotizaciones recientes</h6>
                         <?php
-                        ini_set('display_errors', 1);
-                        ini_set('display_startup_errors', 1);
-                        error_reporting(E_ALL);
-                            require __DIR__.'../../../../db/conexion.php';
+                        echo 'Aqui va el peo';
+                            require __DIR__.'/../../../php/conexion.php';
+                            ini_set('display_errors', 1);
+                            ini_set('display_startup_errors', 1);
+                            error_reporting(E_ALL);
 
                             function time_elapsed_string($datetime, $full = false) {
                                 $now = new DateTime;
@@ -86,12 +88,12 @@
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
                                             <div> De <b>$client</b></div>
-                                            <a href='https://plataforma.kalstein.cl/index.php/distribuidor/ordenes'>
+                                            <a href='https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes'>
                                                 <span class='fa-solid fa-eye btn-details ms-4' style='color: #444 !important; font-size: 16px;'></span>
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <span>Total: $total $</span>
+                                            <span data-i18n='distribuidor:spanTotal'>Total: $total $</span>
                                             <span>$date</span>
                                         </div>
                                     </div>
@@ -102,7 +104,7 @@
                                 echo "
                                     <br>
                                     <br>
-                                    <center><h6>Ninguna cotización</h6></center>
+                                    <center><h6 data-i18n='distribuidor:h6NaCotizacion'>Ninguna cotización</h6></center>
                                 ";
                             }
 
@@ -119,8 +121,8 @@
                         <div>
                             <center><data id="processed-orders" class="card-data"> -- </data></center>
                             <center style="display: flex; flex-direction: columns">
-                                <p class="card-text">Órdenes procesadas</p>
-                                <a href="https://plataforma.kalstein.cl/index.php/distribuidor/ordenes/procesadas">
+                                <p class="card-text" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</p>
+                                <a href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes/procesadas">
                                     &nbsp; <span class='fa-solid fa-eye btn-details'
                                         style='color: #444 !important; font-size: 16px;'></span></a>
                             </center>
@@ -134,10 +136,10 @@
                             </span>
                         </div>
                         <div>
-                            <center><data id="pending-orders" class="card-data">No hay datos</data>
+                            <center><data id="pending-orders" class="card-data" data-i18n="distribuidor:DontHaveData">No hay datos</data>
                                 <center style="display: flex; flex-direction: columns">
-                                    <p class="card-text">Órdenes pendientes</p>
-                                    <a href="https://plataforma.kalstein.cl/index.php/distribuidor/ordenes/"> &nbsp;
+                                    <p class="card-text" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</p>
+                                    <a href="https://dev.kalstein.plus/plataforma/index.php/fabricante/ordenes/"> &nbsp;
                                         <span class='fa-solid fa-eye btn-details'
                                             style='color: #444 !important; font-size: 16px;'>
                                         </span>
@@ -153,7 +155,7 @@
                 </div>
     
                 <div class="card revenue-card">
-                    <h6 class="card-title">Resúmen de clientes</h6>
+                    <h6 class="card-title" data-i18n="distribuidor:h6ResumenClient">Resúmen de clientes</h6>
                     <canvas id="activity"></canvas>
                     <div class="divider card-divider"></div>
     
