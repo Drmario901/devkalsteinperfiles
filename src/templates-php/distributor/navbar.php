@@ -116,7 +116,8 @@
                 </li>
 
                 <li>
-                    <a id="link-shop" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/tienda" class="navbar-link icon-box">
+                    <!-- <a id="link-shop" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/tienda" class="navbar-link icon-box"> -->
+                        <a id="btnSearch" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/tienda" class="navbar-link icon-box"></a>
                         <span data-i18n="distribuidor:linkShop">Tienda</span>
                     </a>
                 </li>
