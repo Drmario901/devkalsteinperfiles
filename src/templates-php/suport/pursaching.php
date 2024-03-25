@@ -55,7 +55,7 @@
         <div id="my-quotes-link-widget" class="nav-link" href="#" style='cursor: pointer' data-i18n="support:myQuote" >Mis Cotizaciones</div>
             <div id="shipping-settings-link-widget" class="nav-link" href="#" style='cursor: pointer' data-i18n="support:config" >Configuración de Cotizaciones</div>
             <!-- <div id="generate-quote-link-widget" class="nav-link active" href="#" style='cursor: pointer' data-i18n="support:products" >Productos</div> -->
-            <div id="btnSearch" class="nav-link active" href="#" style='cursor: pointer' data-i18n="support:products" >Productos</div>
+            <div id="btnSearch" class="nav-link active" href="#" style='cursor: pointer' data-i18n="support:product" >Productos</div>
         </nav>
 
         <button id="btnGenQuote" hidden></button>
