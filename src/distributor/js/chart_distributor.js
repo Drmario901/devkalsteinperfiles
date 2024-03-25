@@ -204,10 +204,12 @@ jQuery(document).ready(function ($) {
     //         </div>
     //     `);
 
-    $("#graph-2-prevMonth").html(`
+    $("#graph-2-prevMonth").on("click", function () {
+      $("#graph-2-prevMonth").html(`
     <div>
        <h1>Algo aqui</h1>
     </div>
 `);
+    });
   });
 });
