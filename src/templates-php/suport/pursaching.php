@@ -74,6 +74,11 @@
         ?>
     </article>
 
+    <script>
+    console.log('hola');
+     
+</script>
+
     <?php
         $footer_img = 'Footer-servicio-tecnico-IMG.jpg';
         include 'footer.php';
