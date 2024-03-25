@@ -83,7 +83,7 @@
           .catch((error) => console.log("error", error));
       };
 
-      const boton = document.querySelector("#pedir-data");
+      let boton = document.querySelector("#pedir-data");
       boton.addEventListener("click", function () {
         fetchData();
       });
