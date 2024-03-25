@@ -87,7 +87,7 @@
 </body>
 
 <script>
-jQuery(document).ready(function($) {
+/*jQuery(document).ready(function($) {
     if (!localStorage.getItem('reloadedAfterSettingCookies')) {
         var urlParams = new URLSearchParams(window.location.search);
         var lang = urlParams.get('lang'); 
@@ -113,6 +113,6 @@ jQuery(document).ready(function($) {
     } else {
          localStorage.removeItem('reloadedAfterSettingCookies');
     }
-});
+});*/
 
 </script>
