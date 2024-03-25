@@ -1,14 +1,13 @@
-function array_sum(array) {
-  let res = 0;
-
-  array.forEach((element) => {
-    res += element;
-  });
-
-  return res;
-}
-
 jQuery(document).ready(function ($) {
+  function array_sum(array) {
+    let res = 0;
+
+    array.forEach((element) => {
+      res += element;
+    });
+
+    return res;
+  }
   console.log("entreeee");
 
   const cookieLng = document.cookie
