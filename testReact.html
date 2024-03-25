@@ -33,9 +33,12 @@
     <script src="
     https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js
     "></script>
-    <link href="
+    <link
+      href="
     https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css
-    " rel="stylesheet">
+    "
+      rel="stylesheet"
+    />
     <!-- Tu aplicación React aquí -->
     <script>
       // Componente de React
@@ -79,7 +82,12 @@
           .then((response) => console.log("respuesta", response))
           .catch((error) => console.log("error", error));
       };
-      fetchData();
+
+      const boton = document.querySelector("#pedir-data");
+      boton.addEventListener("click", function () {
+        fetchData();
+      });
     </script>
+    <button id="pedir-data">Pedir Data</button>
   </body>
 </html>
