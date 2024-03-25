@@ -108,7 +108,6 @@
                         while ($value = $rs2->fetch_assoc()) {
                             
                             $subcategory = $value[$subField];
-                            echo $subcategory;
                             $html .= "<li class='list-subcategory-widget border-bottom'>$subcategory</li>";
                         }
         
