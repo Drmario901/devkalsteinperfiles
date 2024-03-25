@@ -103,13 +103,14 @@
                             </div>
                             <ul class='acordeon-subcategory-ul-$raw_category ms-3' hidden>
                         ";
-                        echo $subField;
+                        
         
-                        // while ($value = $rs2->fetch_assoc()) {
-                        //     $subcategory = $value[$subField];
+                        while ($value = $rs2->fetch_assoc()) {
+                            echo $value;
+                            $subcategory = $value[$subField];
                            
-                        //     $html .= "<li class='list-subcategory-widget border-bottom'>$subcategory</li>";
-                        // }
+                            $html .= "<li class='list-subcategory-widget border-bottom'>$subcategory</li>";
+                        }
         
                         $html.="</ul>";
                     }
