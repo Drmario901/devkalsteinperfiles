@@ -88,14 +88,9 @@
 
 <script>
 jQuery(document).ready(function($) {
-    var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang'); 
-
-    function updateContentToLanguage(lang) {
-        console.log("Updating content to language: ", lang);
-    }
-
     if (!localStorage.getItem('reloadedAfterSettingCookies')) {
+        var urlParams = new URLSearchParams(window.location.search);
+        var lang = urlParams.get('lang'); 
 
         $.ajax({
             url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php',
@@ -105,9 +100,9 @@ jQuery(document).ready(function($) {
                 console.log("Response: ", response);
                 console.log("Cookie set with language: ", lang || "Cloudflare");
 
-                updateContentToLanguage(lang || "Cloudflare");
-
                 localStorage.setItem('reloadedAfterSettingCookies', 'true');
+
+                window.location.reload();
             },
             error: function(xhr, status, error) {
                 console.log('Error al intentar establecer las cookies.');
@@ -119,4 +114,5 @@ jQuery(document).ready(function($) {
          localStorage.removeItem('reloadedAfterSettingCookies');
     }
 });
+
 </script>
