@@ -43,3 +43,10 @@ try {
     echo "Error determining location: " . $e->getMessage();
 }
 ?>
+
+<script> 
+var php = "<?php echo 'hola' ;?>"
+
+console.log(php)
+
+</script>
