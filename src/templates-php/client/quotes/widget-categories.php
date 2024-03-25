@@ -103,6 +103,7 @@
                             </div>
                             <ul class='acordeon-subcategory-ul-$raw_category ms-3' hidden>
                         ";
+                        echo $subField;
         
                         // while ($value = $rs2->fetch_assoc()) {
                         //     $subcategory = $value[$subField];
