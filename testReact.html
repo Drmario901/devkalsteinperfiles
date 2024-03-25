@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App React</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React y ReactDOM desde CDN -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Tu código de React aquí -->
+    <script>
+      // Definición del componente
+      const ComponenteDePrueba = () => {
+        return React.createElement('div', null, 
+          React.createElement('h1', null, 'Hola desde el Componente de Prueba'),
+          React.createElement('p', null, 'Este es un componente de prueba para demostrar cómo funciona.')
+        );
+      };
+
+      // Renderizar el componente en el DOM
+      ReactDOM.render(
+        React.createElement(ComponenteDePrueba, null, null),
+        document.getElementById('root')
+      );
+    </script>
+</body>
+</html>
