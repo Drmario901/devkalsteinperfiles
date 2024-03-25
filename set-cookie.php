@@ -7,7 +7,7 @@ $databasePath = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-
 
 $countryToLanguageMap = [
     // Español
-    'ES' => 'es', 'MX' => 'es', 'AR' => 'es', 'PE' => 'es', 'VE' => 'es',
+    'ES' => 'en', 'MX' => 'es', 'AR' => 'es', 'PE' => 'es', 'VE' => 'es',
     'CL' => 'es', 'EC' => 'es', 'GT' => 'es', 'CU' => 'es', 'BO' => 'es',
     'DO' => 'es', 'HN' => 'es', 'PY' => 'es', 'SV' => 'es', 'NI' => 'es',
     'CR' => 'es', 'UY' => 'es', 'PA' => 'es', 'PR' => 'es', 'CO' => 'es',
