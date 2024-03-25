@@ -9,6 +9,8 @@ function array_sum(array) {
 }
 
 jQuery(document).ready(function ($) {
+  console.log("entreeee");
+
   const cookieLng = document.cookie
     .split("; ")
     .find((row) => row.startsWith("language="))
@@ -185,33 +187,23 @@ jQuery(document).ready(function ($) {
     let grow_2 =
       graph_2[3] != 0 ? (100 * (graph_2[4] - graph_2[3])) / graph_2[3] : -100;
 
-    // $("#graph-2-prevMonth").html(`
-    //         <span class="material-symbols-rounded icon ${
-    //           grow_2 >= 0 ? "green" : "red"
-    //         }">trending_${grow_2 >= 0 ? "up" : "down"}</span>
-    //         <div>
-    //             <data class="revenue-item-data">${
-    //               parse_dec(grow_2) +
-    //               "% <br>(" +
-    //               parse_dec(graph_2[3]) +
-    //               ` ${alertsTranslations.ventasA} ` +
-    //               parse_dec(graph_2[4]) +
-    //               ` ${alertsTranslations.reportes}) `
-    //             }</data>
-    //             <p class="revenue-item-text">${
-    //               alertsTranslations.mesPrevio
-    //             } (${prevMonths[4]})</p>
-    //         </div>
-    //     `);
-
-    $("#graph-2-prevMonth").on("click", function () {
-      console.log(
-        $("#graph-2-prevMonth").html(`
-    <div>
-       <h1>Algo aqui</h1>
-    </div>
-`)
-      );
-    });
+    $("#graph-2-prevMonth").html(`
+            <span class="material-symbols-rounded icon ${
+              grow_2 >= 0 ? "green" : "red"
+            }">trending_${grow_2 >= 0 ? "up" : "down"}</span>
+            <div>
+                <data class="revenue-item-data">${
+                  parse_dec(grow_2) +
+                  "% <br>(" +
+                  parse_dec(graph_2[3]) +
+                  ` ${alertsTranslations.ventasA} ` +
+                  parse_dec(graph_2[4]) +
+                  ` ${alertsTranslations.reportes}) `
+                }</data>
+                <p class="revenue-item-text">${
+                  alertsTranslations.mesPrevio
+                } (${prevMonths[4]})</p>
+            </div>
+        `);
   });
 });
