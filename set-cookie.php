@@ -3,7 +3,7 @@
 require 'vendor/autoload.php';
 use GeoIp2\Database\Reader;
 
-$databasePath = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/GeoDB/GeoLite2-Country.mmdb';
+$databasePath = '/tu/ruta/a/GeoLite2-Country.mmdb';
 
 $countryToLanguageMap = [
     // Español
@@ -42,7 +42,7 @@ foreach ($ipKeys as $key) {
             $ip = trim($ip);
             if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {
                 $clientIP = $ip;
-                break 2
+                break 2; 
             }
         }
     }
@@ -55,6 +55,7 @@ try {
 
     $language = $_POST['lang'] ?? ($countryToLanguageMap[$country] ?? 'en');
 
+    // Establecer cookies para el idioma y el país
     setcookie('language', $language, time() + (86400 * 30), "/");
     setcookie('country', $country, time() + (86400 * 30), "/");
 
