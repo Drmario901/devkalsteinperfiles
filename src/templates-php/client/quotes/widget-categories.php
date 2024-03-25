@@ -11,20 +11,20 @@
             $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
             // Adjust these fields based on the language
-            $lineField = "product_line_" . $lang;
-            $descriptionField = "product_category_" . $lang;
-            $subField = "product_subcategory_" . $lang;
+            $lineField = "categorie_line_" . $lang;
+            $descriptionField = "categorie_description_" . $lang;
+            $subField = "categorie_sub_" . $lang;
 
             // if cookie = en then remove _en from the fields
             if ($lang == 'en') {
-                $lineField = "product_line";
-                $descriptionField = "product_category";
-                $subField = "product_subcategory";
+                $lineField = "categorie_line";
+                $descriptionField = "categorie_description";
+                $subField = "categorie_sub";
             }
 
             // get linesssss
 
-            $queryLines = "SELECT $lineField FROM wp_k_products ORDER BY $lineField ASC";	
+            $queryLines = "SELECT $lineField FROM wp_categories ORDER BY $lineField ASC";	
             $resultLines = $conexion->query($queryLines);
 
             $already_printed = [];
@@ -61,7 +61,7 @@
                     <ul class='acordeon-category-ul-$raw_line' hidden>
                 ";
 
-                $consulta = "SELECT $descriptionField FROM wp_k_products WHERE $lineField = '$line' ORDER BY $descriptionField ASC";	
+                $consulta = "SELECT $descriptionField FROM wp_categories WHERE $lineField = '$line' ORDER BY $descriptionField ASC";	
                 $resultado = $conexion->query($consulta);
 
                 $already_printed = [];
@@ -77,7 +77,7 @@
                 foreach ($already_printed as $i => $category) {
                     $raw_category = str_replace(' ', '-', $category);
                     
-                    $sql2 = "SELECT * FROM wp_k_products WHERE $descriptionField = '$category'";
+                    $sql2 = "SELECT * FROM wp_categories WHERE $descriptionField = '$category'";
                     $rs2 = $conexion->query($sql2);
 
                     if ($rs2 === false) {
