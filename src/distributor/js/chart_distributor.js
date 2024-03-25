@@ -205,11 +205,13 @@ jQuery(document).ready(function ($) {
     //     `);
 
     $("#graph-2-prevMonth").on("click", function () {
-      $("#graph-2-prevMonth").html(`
+      console.log(
+        $("#graph-2-prevMonth").html(`
     <div>
        <h1>Algo aqui</h1>
     </div>
-`);
+`)
+      );
     });
   });
 });
