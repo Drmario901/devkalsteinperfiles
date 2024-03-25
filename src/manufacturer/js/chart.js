@@ -1,17 +1,19 @@
-let plugin_dir =
-  "https://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
-
-function array_sum(array) {
-  let res = 0;
-
-  array.forEach((element) => {
-    res += element;
-  });
-
-  return res;
-}
+// let plugin_dir =
+//   "https://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
 
 jQuery(document).ready(function ($) {
+  console.log("entreee");
+
+  function array_sum(array) {
+    let res = 0;
+
+    array.forEach((element) => {
+      res += element;
+    });
+
+    return res;
+  }
+
   const cookieLng = document.cookie
     .split("; ")
     .find((row) => row.startsWith("language="))
