@@ -178,7 +178,7 @@ jQuery(document).ready(function ($) {
       },
     });
 
-    let grow_2;
+    let grow_2 = graph_2[3] != 0 ? (100 * (graph_2[4] - graph_2[3])) / graph_2[3] : 0;
 
    
 
