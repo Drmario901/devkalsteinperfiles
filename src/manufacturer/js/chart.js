@@ -52,6 +52,9 @@ jQuery(document).ready(function ($) {
     `${alertsTranslations.noviembre}`,
     `${alertsTranslations.diciembre}`,
   ];
+
+ console.log('meses', months);
+ 
   function prevMonthList(month) {
     let res = [];
 
