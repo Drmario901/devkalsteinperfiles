@@ -1,6 +1,8 @@
 
 
 jQuery(document).ready(function ($) {
+  console.log('entre');
+  
 
 
   const cookieLng = document.cookie
