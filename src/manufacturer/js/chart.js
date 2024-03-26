@@ -207,9 +207,9 @@ jQuery(document).ready(function ($) {
                   parse_dec(grow_2) +
                   "% <br>(" +
                   parse_dec(graph_2[3]) +
-                  " clientes de " +
+                  " clientes deee " +
                   parse_dec(graph_2[4]) +
-                  " clientes)"
+                  " clientessss)"
                 }</data>
 
                 <p class="revenue-item-text">${
@@ -221,11 +221,11 @@ jQuery(document).ready(function ($) {
         `);
   });
 
-  $("#graph-2-prevMonth").on('click', function(){
-    console.log('grow_2',grow_2);
-    console.log('graph_2', graph_2[4]);
-    console.log('prevMonths',prevMonths);
-    console.log('months',months);
-    console.log('meses', meses[cookieLng].enero);
-  })
+  // $("#graph-2-prevMonth").on('click', function(){
+  //   console.log('grow_2',grow_2);
+  //   console.log('graph_2', graph_2[4]);
+  //   console.log('prevMonths',prevMonths);
+  //   console.log('months',months);
+  //   console.log('meses', meses[cookieLng].enero);
+  // })
 });
