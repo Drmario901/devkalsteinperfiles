@@ -162,7 +162,7 @@
     
                     <ul class="list">
                         <center>
-                            <li id="graph-2-prevMonth" class="revenue-item icon-box">
+                            <li id="graph-2-prevMonthDis" class="revenue-item icon-box">
                             </li>
                         </center>
                     </ul>

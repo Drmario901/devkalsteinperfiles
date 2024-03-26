@@ -195,7 +195,7 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    $("#graph-2-prevMonth").html(`
+    $("#graph-2-prevMonthDis").html(`
 
             <span class="material-symbols-rounded icon ${
               grow_2 >= 0 ? "green" : "red"
