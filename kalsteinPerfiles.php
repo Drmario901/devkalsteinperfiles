@@ -1314,7 +1314,7 @@
             wp_enqueue_style( 'material', plugins_url('src/distributor/css/material.css', __FILE__));
             wp_enqueue_style( 'banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/distributor/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor.js',__FILE__),array('jquery')); //
+            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor2.js',__FILE__),array('jquery')); //
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__)); // 
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery')); 
             wp_enqueue_script('cotization-details-show', plugins_url('src/distributor/js/show.cotizacion.details.js',__FILE__),array('jquery')); //
@@ -1330,7 +1330,7 @@
             wp_enqueue_style( 'material', plugins_url('src/distributor/css/material.css', __FILE__));
             wp_enqueue_style( 'banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/distributor/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor.js',__FILE__),array('jquery')); // 
+            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor2.js',__FILE__),array('jquery')); // 
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery')); 
             wp_enqueue_script('cotization-details-show', plugins_url('src/distributor/js/show.cotizacion.details.js',__FILE__),array('jquery')); // 
@@ -1818,7 +1818,7 @@
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/distributor/css/material.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/distributor/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor.js',__FILE__),array('jquery'));
+            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor2.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery'));
         }
@@ -1831,7 +1831,7 @@
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/distributor/css/material.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/distributor/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor.js',__FILE__),array('jquery'));
+            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor2.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery'));
         }
@@ -1843,7 +1843,7 @@
             wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
             wp_enqueue_style( 'material', plugins_url('src/distributor/css/material.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/distributor/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor.js',__FILE__),array('jquery'));
+            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor2.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery'));
         }
@@ -1879,7 +1879,7 @@
             wp_enqueue_script('dashboard', plugins_url('src/distributor/js/dashboard.script.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'list-CSS', plugins_url('src/distributor/css/list.style.css', __FILE__));
             wp_enqueue_script('nav', plugins_url('src/distributor/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor.js',__FILE__),array('jquery'));
+            wp_enqueue_script('test-c', plugins_url('src/distributor/js/products.request.distributor2.js',__FILE__),array('jquery'));
             wp_enqueue_script('test-g', plugins_url('src/distributor/js/chart.js.sales.distributor.js',__FILE__),array('jquery'));
             wp_enqueue_script('test-d', plugins_url('src/distributor/js/chart_distributor.js',__FILE__),array('jquery'));
         }

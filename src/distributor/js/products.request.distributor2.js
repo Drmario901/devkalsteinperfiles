@@ -1,11 +1,8 @@
-let plugin_dir =
-"https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
-let domain = "https://dev.kalstein.plus/plataforma/index.php/";
+
 
 
 
 jQuery(document).ready(function ($) {
-
 
 
   const cookieLng = document.cookie
@@ -745,6 +742,9 @@ loadTranslations(cookieLng);
   });
 
   function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
+    let plugin_dir =
+    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+    let domain = "https://dev.kalstein.plus/plataforma/index.php/";
     $.ajax({
       url: plugin_dir + "php/distributor/updateStatus.php",
       method: "POST",
