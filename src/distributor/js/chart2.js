@@ -227,7 +227,7 @@ jQuery(document).ready(function ($) {
   let prevMonths = prevMonthList(date.getMonth());
 
   $.ajax({
-    url: plugin_dir + "suport/chartinfo.php",
+    url: plugin_dir + "distributor/getChartInfo.php",
     type: "POST",
     data: "",
     dataType: "html",
