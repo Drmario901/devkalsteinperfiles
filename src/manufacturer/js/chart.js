@@ -178,6 +178,15 @@ jQuery(document).ready(function ($) {
 
     let grow_2;
 
+    $("#graph-2-prevMonth").on('click', function(){
+        console.log('grow_2',grow_2);
+        console.log('graph_2', graph_2[4]);
+        console.log('prevMonths',prevMonths);
+        console.log('months',months);
+        console.log('meses', meses[cookieLng].enero);
+      })
+
+
     if (graph_2[4] != 0) {
       if (graph_2[3] != 0) {
         grow_2 = (100 * (graph_2[4] - graph_2[3])) / graph_2[3];
