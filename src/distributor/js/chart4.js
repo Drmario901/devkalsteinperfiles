@@ -47,7 +47,9 @@ jQuery(document).ready(function ($) {
       completoA: "täielikult",
       reportes: "aruanded",
       mesPrevio: "Eelmine kuu",
-      clienteMes: "Kuu kliendid"
+      clienteMes: "Kuu kliendid",
+      cuentaReinicio: "konto lähtestub",
+      days: "päeva"
     },
     pl: {
       enero: "Styczeń",
@@ -65,7 +67,9 @@ jQuery(document).ready(function ($) {
       completoA: "kompletny do",
       reportes: "raporty",
       mesPrevio: "Poprzedni miesiąc",
-      clienteMes: "Klienci miesiąca"
+      clienteMes: "Klienci miesiąca",
+      cuentaReinicio: "konto zostanie zresetowane za",
+      days: "dni"
     },
     nl: {
       enero: "Januari",
@@ -83,7 +87,9 @@ jQuery(document).ready(function ($) {
       completoA: "volledig aan",
       reportes: "rapporten",
       mesPrevio: "Vorige maand",
-      clienteMes: "Klanten van de maand"
+      clienteMes: "Klanten van de maand",
+      cuentaReinicio: "het account wordt opnieuw ingesteld in",
+      days: "dagen"
     },
     es: {
       enero: "Enero",
@@ -102,6 +108,8 @@ jQuery(document).ready(function ($) {
       reportes: "reportes",
       mesPrevio: "Mes previo",
       clienteMes: "Clientes del mes",
+      cuentaReinicio: "la cuenta se reiniciara en",
+      days: "dias", 
      
     },
     en: {
@@ -120,7 +128,9 @@ jQuery(document).ready(function ($) {
       completoA: "complete to",
       reportes: "reports",
       mesPrevio: "Previous month",
-      clienteMes: "Clients of the month"
+      clienteMes: "Clients of the month",
+      cuentaReinicio: "the account will reset in",
+      days: "days"
     },
     it: {
       enero: "Gennaio",
@@ -138,7 +148,9 @@ jQuery(document).ready(function ($) {
       completoA: "completare a",
       reportes: "report",
       mesPrevio: "Mese precedente",
-      clienteMes: "Clienti del mese"
+      clienteMes: "Clienti del mese",
+      cuentaReinicio: "l'account si riavvierà in",
+      days: "giorni"
     },
     pt: {
       enero: "Janeiro",
@@ -156,7 +168,9 @@ jQuery(document).ready(function ($) {
       completoA: "completo para",
       reportes: "relatórios",
       mesPrevio: "Mês anterior",
-      clienteMes: "Clientes do mês"
+      clienteMes: "Clientes do mês",
+      cuentaReinicio: "a conta será reiniciada em",
+      days: "dias"
     },
     se: {
       enero: "Januari",
@@ -174,7 +188,9 @@ jQuery(document).ready(function ($) {
       completoA: "komplett till",
       reportes: "rapporter",
       mesPrevio: "Föregående månad",
-      clienteMes: "Månadens kunder"
+      clienteMes: "Månadens kunder",
+      cuentaReinicio: "kontot återställs om",
+      days: "dagar"
     },
     fr: {
       enero: "Janvier",
@@ -192,7 +208,9 @@ jQuery(document).ready(function ($) {
       completoA: "complet à",
       reportes: "rapports",
       mesPrevio: "Mois précédent",
-      clienteMes: "Clients du mois"
+      clienteMes: "Clients du mois",
+      cuentaReinicio: "le compte sera réinitialisé dans",
+      days: "jours"
     },
     de: {
       enero: "Januar",
@@ -210,7 +228,9 @@ jQuery(document).ready(function ($) {
       completoA: "vollständig zu",
       reportes: "Berichte",
       mesPrevio: "Vorheriger Monat",
-      clienteMes: "Kunden des Monats"
+      clienteMes: "Kunden des Monats",
+      cuentaReinicio: "Das Konto wird in",
+      days: "Tagen zurückgesetzt"
     }
   };
 
@@ -286,8 +306,8 @@ jQuery(document).ready(function ($) {
 
     $("#will-restart").html(`
         ${
-          alertsTranslations.cuentaReinicio
-        } ${JSON.parse(response).will_restart} ${alertsTranslations.days}
+          cuentaReinicio
+        } ${JSON.parse(response).will_restart} ${days}
         `);
 
     // GRAFICO 1 VENTAS
