@@ -1,4 +1,7 @@
 jQuery(document).ready(function($) {
+
+    let plugin_dir =
+    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
     var alreadyRedirected = false;
 
     function paramExists(paramName) {
