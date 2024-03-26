@@ -4,8 +4,6 @@ jQuery(document).ready(function ($) {
   console.log('entre');
   
 
-<<<<<<< HEAD
-=======
   function array_sum(array) {
     let res = 0;
     array.forEach((element) => {
@@ -14,7 +12,7 @@ jQuery(document).ready(function ($) {
 
     return res;
   }
->>>>>>> 48c24b5e2 (Cambio)
+
 
   const cookieLng = document.cookie
   .split("; ")
