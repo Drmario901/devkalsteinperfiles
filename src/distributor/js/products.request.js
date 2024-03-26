@@ -1,25 +1,6 @@
 /*let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
 let domain = 'https://dev.kalstein.plus/plataforma/index.php/distributor/';*/
 
-const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
-
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
-
-loadTranslations(cookieLng);
 
 function validateProductData(
   name,
@@ -47,6 +28,28 @@ function validateProductData(
   discount_2_amount,
   dont_image = false
 ) {
+
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   err_msg = "";
 
   console.log(fileInput === undefined || fileInput === "" || fileInput == []);
@@ -333,6 +336,27 @@ function pdfVal(file) {
 
 jQuery(document).ready(function ($) {
   // SECCION: Envío de datos al servidor para añadir nuevo product
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
 
   $(document).on("change", "#file-input", () => {
     if (!imgVal($("#file-input")[0].files[0], "file-input")) {

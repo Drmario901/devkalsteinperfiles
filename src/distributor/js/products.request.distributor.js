@@ -1,10 +1,12 @@
 let plugin_dir =
-  "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+"https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
 let domain = "https://dev.kalstein.plus/plataforma/index.php/";
 
 
 
 jQuery(document).ready(function ($) {
+
+
 
   const cookieLng = document.cookie
   .split("; ")
@@ -67,6 +69,26 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   $(document).on("click", "#btnSendData", function (e) {
     var fileInput = $("#file-input")[0].files[0];
     var name = $("#nameProduct").val();
@@ -234,6 +256,25 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
   $(document).on("click", "#btnUpdateData", function (e) {
     var fileInput = $("#file-input")[0].files[0];
     var id = $("#dataEdit").val();
@@ -423,6 +464,26 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   productsTable();
 
   $(document).on("click", "#btnDeleteProduct", function () {
@@ -480,6 +541,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   imageView();
 
   $(document).on("click", "#btnView", function () {
@@ -520,6 +602,26 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   allProductsCount();
 
   function allProductsCount(consulta) {
@@ -538,6 +640,25 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
   allOrdersCount();
 
   function allOrdersCount(consulta) {
@@ -556,6 +677,25 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
   $(document).on("click", ".btn-update", function () {
     var id = $(this).val();
     var selectedStatus = $(this).siblings(".status-select").val();
@@ -661,6 +801,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   var page = 1;
 
   quoteProcessed();
@@ -694,6 +855,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   var page = 1;
 
   quoteCancelled();
@@ -727,6 +909,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   allOrdersCardCount();
 
   function allOrdersCardCount(consulta) {
@@ -746,6 +949,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   allPendingCardCount();
 
   function allPendingCardCount(consulta) {
@@ -764,6 +988,27 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
+loadTranslations(cookieLng);
+
   allPendingCirculatorCount();
 
   function allPendingCirculatorCount(consulta) {
