@@ -195,7 +195,7 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    $("#graph-2-prevMonthDis").html(`
+    $("#graph-2-prevMonth").html(`
 
             <span class="material-symbols-rounded icon ${
               grow_2 >= 0 ? "green" : "red"
@@ -209,7 +209,7 @@ jQuery(document).ready(function ($) {
                   parse_dec(graph_2[3]) +
                   " clientes deee " +
                   parse_dec(graph_2[4]) +
-                  " clientessss)"
+                  " clientes)"
                 }</data>
 
                 <p class="revenue-item-text">${
