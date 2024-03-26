@@ -22,7 +22,7 @@
     try {
         $mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
         $mail->isSMTP();
-        $mail->Host = 'mail.kalstein.plus';  // Host de conexión SMTP
+        $mail->Host = 'kalstein2025@yopmail.com';  // Host de conexión SMTP
         $mail->SMTPAuth = true;
         $mail->Username = 'no-reply@kalstein.plus';                 // Usuario SMTP
         $mail->Password = 'Kalstein1234';                           // Password SMTP
