@@ -238,6 +238,7 @@ jQuery(document).ready(function ($) {
   let completoA = meses[cookieLng].completoA
   let reportes = meses[cookieLng].reportes
   let mesPrevio = meses[cookieLng].mesPrevio
+  let cuentaReinicio = meses[cookieLng].cuentaReinicio
   
   
 

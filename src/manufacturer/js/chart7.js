@@ -4,15 +4,6 @@ jQuery(document).ready(function ($) {
   console.log('entre');
   
 
-  function array_sum(array) {
-    let res = 0;
-    array.forEach((element) => {
-      res += element;
-    });
-
-    return res;
-  }
-
 
   const cookieLng = document.cookie
   .split("; ")
@@ -247,6 +238,7 @@ jQuery(document).ready(function ($) {
   let completoA = meses[cookieLng].completoA
   let reportes = meses[cookieLng].reportes
   let mesPrevio = meses[cookieLng].mesPrevio
+  let cuentaReinicio = meses[cookieLng].cuentaReinicio
   
   
 

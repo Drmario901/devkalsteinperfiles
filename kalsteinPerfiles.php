@@ -894,7 +894,7 @@
             wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js',__FILE__),array('jquery'));
             wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js',__FILE__),array('jquery'));
             wp_enqueue_script('chart-umd-js', plugins_url('src/manufacturer/js/chart.umd.min.js',__FILE__), array('jquery')); 
-            wp_enqueue_script('chartjs-js', plugins_url('src/manufacturer/js/chart8.js',__FILE__), array('jquery')); //
+            wp_enqueue_script('chartjs-js', plugins_url('src/manufacturer/js/chart7.js',__FILE__), array('jquery')); //
 
             wp_enqueue_script('product-requests', plugins_url('src/manufacturer/js/products.request.js',__FILE__),array('jquery')); //
         }
