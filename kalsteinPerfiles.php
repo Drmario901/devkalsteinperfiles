@@ -937,6 +937,7 @@
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_MANUFACTURER_STOCK_ADD' ) ) {
             translations();
             global_url();
+            
             wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
             wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'material', plugins_url('src/manufacturer/css/material.css', __FILE__));
