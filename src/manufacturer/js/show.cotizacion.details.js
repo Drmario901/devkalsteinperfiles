@@ -1,4 +1,8 @@
-const cookieLng = document.cookie
+
+
+jQuery(document).ready(function($) {
+
+    const cookieLng = document.cookie
     .split("; ")
     .find((row) => row.startsWith("language="))
     .split("=")[1];
@@ -19,7 +23,12 @@ const cookieLng = document.cookie
 
     loadTranslations(cookieLng);
 
-jQuery(document).ready(function($) {
+
+    
+
+  let plugin_dir =
+  "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+
     $(document).on('click', '.btn-details', function() {
 
         var quote_id = $(this).val();
