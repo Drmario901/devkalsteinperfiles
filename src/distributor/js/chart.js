@@ -9,6 +9,9 @@ jQuery(document).ready(function ($) {
   .split("; ")
   .find((row) => row.startsWith("language="))
   .split("=")[1];
+
+  console.log('cookie', cookieLng);
+  
   let alertsTranslations = {};
 
   // cargar json de traducciones
