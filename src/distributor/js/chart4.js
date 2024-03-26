@@ -44,6 +44,10 @@ jQuery(document).ready(function ($) {
       octubre: "Oktoober",
       noviembre: "November",
       diciembre: "Detsember",
+      completoA: "täielikult",
+      reportes: "aruanded",
+      mesPrevio: "Eelmine kuu",
+      clienteMes: "Kuu kliendid"
     },
     pl: {
       enero: "Styczeń",
@@ -58,6 +62,10 @@ jQuery(document).ready(function ($) {
       octubre: "Październik",
       noviembre: "Listopad",
       diciembre: "Grudzień",
+      completoA: "kompletny do",
+      reportes: "raporty",
+      mesPrevio: "Poprzedni miesiąc",
+      clienteMes: "Klienci miesiąca"
     },
     nl: {
       enero: "Januari",
@@ -72,6 +80,10 @@ jQuery(document).ready(function ($) {
       octubre: "Oktober",
       noviembre: "November",
       diciembre: "December",
+      completoA: "volledig aan",
+      reportes: "rapporten",
+      mesPrevio: "Vorige maand",
+      clienteMes: "Klanten van de maand"
     },
     es: {
       enero: "Enero",
@@ -86,6 +98,11 @@ jQuery(document).ready(function ($) {
       octubre: "Octubre",
       noviembre: "Noviembre",
       diciembre: "Diciembre",
+      completoA: "completos de",
+      reportes: "reportes",
+      mesPrevio: "Mes previo",
+      clienteMes: "Clientes del mes",
+     
     },
     en: {
       enero: "January",
@@ -100,6 +117,10 @@ jQuery(document).ready(function ($) {
       octubre: "October",
       noviembre: "November",
       diciembre: "December",
+      completoA: "complete to",
+      reportes: "reports",
+      mesPrevio: "Previous month",
+      clienteMes: "Clients of the month"
     },
     it: {
       enero: "Gennaio",
@@ -114,6 +135,10 @@ jQuery(document).ready(function ($) {
       octubre: "Ottobre",
       noviembre: "Novembre",
       diciembre: "Dicembre",
+      completoA: "completare a",
+      reportes: "report",
+      mesPrevio: "Mese precedente",
+      clienteMes: "Clienti del mese"
     },
     pt: {
       enero: "Janeiro",
@@ -128,6 +153,10 @@ jQuery(document).ready(function ($) {
       octubre: "Outubro",
       noviembre: "Novembro",
       diciembre: "Dezembro",
+      completoA: "completo para",
+      reportes: "relatórios",
+      mesPrevio: "Mês anterior",
+      clienteMes: "Clientes do mês"
     },
     se: {
       enero: "Januari",
@@ -142,6 +171,10 @@ jQuery(document).ready(function ($) {
       octubre: "Oktober",
       noviembre: "November",
       diciembre: "December",
+      completoA: "komplett till",
+      reportes: "rapporter",
+      mesPrevio: "Föregående månad",
+      clienteMes: "Månadens kunder"
     },
     fr: {
       enero: "Janvier",
@@ -156,6 +189,10 @@ jQuery(document).ready(function ($) {
       octubre: "Octobre",
       noviembre: "Novembre",
       diciembre: "Décembre",
+      completoA: "complet à",
+      reportes: "rapports",
+      mesPrevio: "Mois précédent",
+      clienteMes: "Clients du mois"
     },
     de: {
       enero: "Januar",
@@ -170,8 +207,19 @@ jQuery(document).ready(function ($) {
       octubre: "Oktober",
       noviembre: "November",
       diciembre: "Dezember",
+      completoA: "vollständig zu",
+      reportes: "Berichte",
+      mesPrevio: "Vorheriger Monat",
+      clienteMes: "Kunden des Monats"
     }
   };
+
+  let clienteMes = meses[cookieLng].clienteMes
+  let completoA = meses[cookieLng].completoA
+  let reportes = meses[cookieLng].reportes
+  let mesPrevio = meses[cookieLng].mesPrevio
+  
+  
 
 
 
@@ -332,7 +380,7 @@ jQuery(document).ready(function ($) {
         labels: prevMonths,
         datasets: [
           {
-            label: alertsTranslations.clienteMes,
+            label: clienteMes,
             data: graph_2,
             backgroundColor: ["rgba(33, 35, 128, 0.2)"],
             borderColor: ["rgba(33, 35, 128, 1)"],
@@ -369,11 +417,11 @@ jQuery(document).ready(function ($) {
                   parse_dec(grow_2) +
                   "% <br>(" +
                   parse_dec(graph_2[3]) +
-                  ` ${alertsTranslations.completoA} ` +
+                  ` ${completoA} ` +
                   parse_dec(graph_2[4]) +
-                  ` ${alertsTranslations.reportes}) `
+                  ` ${reportes}) `
                 }</data>
-                <p class="revenue-item-text">${alertsTranslations.mesPrevio} (${prevMonths[4]})</p>
+                <p class="revenue-item-text">${mesPrevio} (${prevMonths[4]})</p>
             </div>
         `);
   });
