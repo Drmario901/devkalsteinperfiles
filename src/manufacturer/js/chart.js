@@ -159,7 +159,7 @@ jQuery(document).ready(function ($) {
 
         datasets: [
           {
-            label: "Clientes del messss",
+            label: alertsTranslations.clienteMes,
 
             data: graph_2,
 
