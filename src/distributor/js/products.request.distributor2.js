@@ -36,8 +36,8 @@ loadTranslations(cookieLng);
       .done(function (respuesta) {
         $("#dataProducts").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error", error);
       });
   }
 });
@@ -247,6 +247,8 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.log(xhr.responseText);
+        console.log('error', error, status);
+        
       },
     });
   }
@@ -455,6 +457,8 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.log(xhr.responseText);
+        console.log('error', status, error);
+        
       },
     });
   }
@@ -592,8 +596,8 @@ loadTranslations(cookieLng);
       .done(function (respuesta) {
         $("#product-data").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error",error);
       });
   }
 });
@@ -630,8 +634,8 @@ loadTranslations(cookieLng);
       .done(function (respuesta) {
         $("#productsCount").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error",error);
       });
   }
 });
@@ -667,8 +671,8 @@ loadTranslations(cookieLng);
       .done(function (respuesta) {
         $("#productsOrdersCount").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error",error);
       });
   }
 });
@@ -768,8 +772,8 @@ loadTranslations(cookieLng);
             domain + "list-order/?i=" + $("#hiddenPage").val();
         }
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error",error);
       });
   }
 
@@ -837,6 +841,8 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.error(error);
+        console.log('error', xhr, status, error);
+        
       },
     });
   }
@@ -891,6 +897,8 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.error(error);
+        console.log('error', xhr, status, error);
+        
       },
     });
   }
@@ -942,8 +950,8 @@ loadTranslations(cookieLng);
         $("#productsOrdersCardCount").html(respuesta);
         console.log(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error", error);
       });
   }
 });
@@ -981,8 +989,8 @@ loadTranslations(cookieLng);
       .done(function (respuesta) {
         $("#productsPendingCardCount").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error", error);
       });
   }
 });
@@ -1020,8 +1028,8 @@ loadTranslations(cookieLng);
       .done(function (respuesta) {
         $("#productsPendingCount").html(respuesta);
       })
-      .fail(function () {
-        console.log("error");
+      .fail(function (error) {
+        console.log("error", error);
       });
   }
 });
