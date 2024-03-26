@@ -154,7 +154,7 @@ jQuery(document).ready(function ($) {
 
         datasets: [
           {
-            label: "Clientes del mes",
+            label: "Clientes del messss",
 
             data: graph_2,
 
