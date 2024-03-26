@@ -3,6 +3,8 @@
 
 jQuery(document).ready(function ($) {
   console.log("entreee");
+  console.log('entre de nuevo');
+  
 
   function array_sum(array) {
     let res = 0;
