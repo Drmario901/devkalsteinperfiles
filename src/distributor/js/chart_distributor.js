@@ -166,8 +166,7 @@ jQuery(document).ready(function ($) {
         labels: prevMonths,
         datasets: [
           {
-            // label: alertsTranslations.clienteMes,
-            label: 'cliente del messss',
+            label: alertsTranslations.clienteMes,
             data: graph_2,
             backgroundColor: ["rgba(33, 35, 128, 0.2)"],
             borderColor: ["rgba(33, 35, 128, 1)"],
