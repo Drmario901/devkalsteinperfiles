@@ -1056,7 +1056,7 @@
             wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
             wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
             wp_enqueue_script('chart-umd-js', plugins_url('src/manufacturer/js/chart.umd.min.js',__FILE__), array('jquery'));
-            wp_enqueue_script('sales-chart-js', plugins_url('src/manufacturer/js/sales.chart2.js',__FILE__),array('jquery')); // 
+            wp_enqueue_script('sales-chart-js', plugins_url('src/manufacturer/js/sales.chart8.js',__FILE__),array('jquery')); // 
         }
         
         //GLOBAL URL APPLIED
