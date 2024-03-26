@@ -312,6 +312,9 @@ jQuery(document).ready(function ($) {
 
     $("#processed-orders").html(JSON.parse(response).processed_orders);
     $("#pending-orders").html(JSON.parse(response).pending_orders);
+    console.log('ordendes',  $("#processed-orders").html(JSON.parse(response).processed_orders));
+    console.log('pending',  $("#pending-orders").html(JSON.parse(response).pending_orders));
+    
 
     // GRAFICO 2 ORDENES REALIZADAS
 
