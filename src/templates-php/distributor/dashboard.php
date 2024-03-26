@@ -156,8 +156,7 @@
                 </div>
     
                 <div class="card revenue-card">
-                    <!-- <h6 class="card-title" data-i18n="distribuidor:h6ResumenClient">Resúmen de clientes</h6> -->
-                    <h6 class="card-title" >Resúmen de clientesssss</h6> 
+                    <h6 class="card-title" data-i18n="distribuidor:h6ResumenClient">Resúmen de clientes</h6>
                     <canvas id="activity"></canvas>
                     <div class="divider card-divider"></div>
     
