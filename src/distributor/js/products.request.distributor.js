@@ -2,7 +2,11 @@ let plugin_dir =
   "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
 let domain = "https://dev.kalstein.plus/plataforma/index.php/";
 
-const cookieLng = document.cookie
+
+
+jQuery(document).ready(function ($) {
+
+  const cookieLng = document.cookie
   .split("; ")
   .find((row) => row.startsWith("language="))
   .split("=")[1];
@@ -22,7 +26,6 @@ const loadTranslations = (lng) => {
 
 loadTranslations(cookieLng);
 
-jQuery(document).ready(function ($) {
   products();
 
   function products(consulta) {
