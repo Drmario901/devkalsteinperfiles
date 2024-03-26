@@ -1,5 +1,8 @@
 <div class="container">
     <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
         session_start(); 
         if (isset($_SESSION['emailAccount'])){
             $email = $_SESSION['emailAccount'];
@@ -19,6 +22,9 @@
     <article class="container article">
 
         <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
             $banner_img = 'Header-distribuidor-IMG.jpg';
             $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
@@ -43,6 +49,9 @@
         
         <div id="listOrderTable" class="table-responsive">
         <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
                 session_start();
                 require __DIR__.'/../../../php/conexion.php';
         
