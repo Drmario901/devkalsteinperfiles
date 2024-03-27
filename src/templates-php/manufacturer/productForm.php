@@ -479,7 +479,7 @@
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
             <label>Activar sistema Gibson</label>
             <input type="checkbox" id="specialPrice" class="form-check-input" style="margin-left: 15px;" />
-            <span id="gibsonStatus" style="display: none; opacity: 0; color: green; position: absolute;">Sistema Gibson activo</span>
+            <span id="gibsonStatus" style="display: none; opacity: 0; color: green; position: absolute; font-weight: 700;">Sistema Gibson activo</span>
         </div>
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
             <label data-i18n='manofacturer:moneda'>Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
