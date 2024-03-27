@@ -867,7 +867,9 @@ jQuery(document).ready(function($){
 
 
         if (jobRole == 0){
-
+            console.log('alerta');
+            window.alert('alertaa')
+            
             savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, profileRole, idDocument, imageDocument, taxDocument, imageTaxDocument)
 
         }else{
@@ -927,7 +929,8 @@ jQuery(document).ready(function($){
                                         $('#websiteBusinessManu').focus()
 
                                     }else{
-
+                                        console.log('alerta 2');
+                                        window.alert('alertaa 222')
                                         savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, profileRole, idDocument, imageDocument, taxDocument, imageTaxDocument)
 
                                     }
