@@ -1,5 +1,26 @@
 jQuery(document).ready(function($){
 
+  
+        const cookieLng = document.cookie
+          .split("; ")
+          .find((row) => row.startsWith("language="))
+          .split("=")[1];
+        let alertsTranslations = {};
+      
+        // cargar json de traducciones
+        const loadTranslations = (lng) => {
+          return fetch(
+            `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+          )
+            .then((response) => response.json())
+            .then((translation) => {
+              // save in a global variable
+              alertsTranslations = translation;
+            });
+        };
+      
+        loadTranslations(cookieLng);
+
     $(document).on('change', '#countryUser', function(){
 
         searchCountryPrefijo($(this).val())
@@ -390,10 +411,11 @@ jQuery(document).ready(function($){
             //     botonFinalizar.disabled = true;
             // })
 
-            $(this).prop('disabled', true);
+           
             // alert('activando');
             
             // Actualiza el botón para incluir el spinner y cambia el texto
+            $(this).prop('disabled', true);
             $(this).html('<div class="spinner"></div>');
             
             // Simula una operación asíncrona con setTimeout
@@ -475,8 +497,9 @@ jQuery(document).ready(function($){
                                                 $('#websiteBusiness').focus()
 
                                             }else{
-
-                                                // savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+                                                $(this).prop('disabled', true);
+                                                $(this).html('<div class="spinner"></div>');
+                                                savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
 
                                                 alert('holaaa');
                                                 console.log('holaaa');
@@ -867,9 +890,10 @@ jQuery(document).ready(function($){
 
 
         if (jobRole == 0){
-            console.log('alerta');
-            window.alert('alertaa')
-            
+            // console.log('alerta');
+            // window.alert('alertaa')
+            $(this).prop('disabled', true);
+            $(this).html('<div class="spinner"></div>');
             savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, profileRole, idDocument, imageDocument, taxDocument, imageTaxDocument)
 
         }else{
@@ -929,8 +953,10 @@ jQuery(document).ready(function($){
                                         $('#websiteBusinessManu').focus()
 
                                     }else{
-                                        console.log('alerta 2');
-                                        window.alert('alertaa 222')
+                                        // console.log('alerta 2');
+                                        // window.alert('alertaa 222')
+                                        $(this).prop('disabled', true);
+                                        $(this).html('<div class="spinner"></div>');
                                         savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, profileRole, idDocument, imageDocument, taxDocument, imageTaxDocument)
 
                                     }
@@ -1008,7 +1034,8 @@ jQuery(document).ready(function($){
 
 
         if (jobRole == 0){
-
+            $(this).prop('disabled', true);
+            $(this).html('<div class="spinner"></div>');
             savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, profileRole, idDocument, imageDocument, taxDocument, imageTaxDocument)
 
         }else{
@@ -1084,7 +1111,8 @@ jQuery(document).ready(function($){
                                                 $('#websiteBusiness-soporte').focus()
 
                                             }else{
-
+                                                $(this).prop('disabled', true);
+                                                $(this).html('<div class="spinner"></div>');
                                                 savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, profileRole, idDocument, imageDocument, taxDocument, imageTaxDocument)
 
                                             }
@@ -1598,22 +1626,27 @@ jQuery(document).ready(function($){
             console.log(respuesta)            
 
             let data = JSON.parse(respuesta)
-
-            if (data.update === 'correcto'){
-                sendCodeDiscount()
-                if($('#search-product').val() != ''){
-                    $(location).attr('href', domain + '/account_redirect/?search='+$('#search-product').val())
+                console.log('la data', data.profileRole);
+                
+            if(data.profileRole != 1){
+                console.log('redireccionando...');
+                
+                alert(alertsTranslations.verficacion48horas);
+                window.location.replace("hhttps://dev.kalstein.plus/plataforma/acceder/");
+                
+            } else {
+                if (data.update === 'correcto'){
+                    sendCodeDiscount()
+                    if($('#search-product').val() != ''){
+                        $(location).attr('href', domain + '/account_redirect/?search='+$('#search-product').val())
+                    }
+                    else {
+                        $(location).attr('href', domain + '/account_redirect/')
+                    }
+                }else{  
+                    console.log("error")
                 }
-                else {
-                    $(location).attr('href', domain + '/account_redirect/')
-                }
-
-            }else{  
-
-                console.log("error")
-
             }
-
         })
 
         .fail(function(error){
