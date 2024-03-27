@@ -452,6 +452,7 @@
     </div>
 
     <div class="row">
+    <input type="checkbox" id="specialPrice" class="form-check-input" style="margin-left: 15px;">
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
             <label data-i18n='manofacturer:precioUnitario'>Precio unitario</label>
             <input
