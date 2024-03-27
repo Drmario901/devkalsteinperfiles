@@ -391,7 +391,7 @@ jQuery(document).ready(function($){
             // })
 
             $(this).prop('disabled', true);
-            alert('activando');
+            // alert('activando');
             
             // Actualiza el botón para incluir el spinner y cambia el texto
             $(this).html('<div class="spinner"></div>');
