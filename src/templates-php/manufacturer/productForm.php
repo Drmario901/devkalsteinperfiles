@@ -495,8 +495,6 @@
             /> 
             <span data-i18n='manofacturer:unidades'>unidades</span> 
         </div>
-        <label>Activar sistema Gibson</label>
-            <input type="checkbox" id="specialPrice" class="form-check-input" style="margin-left: 15px;" />
         
         <h6 class="tm-block-title mb-0" data-i18n='manofacturer:descuentoMayor2'>Descuento al por mayor 2 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
@@ -520,6 +518,10 @@
             <span data-i18n='manofacturer:unidades'>unidades</span> 
         </div>
     </div>
+    <div class="form-group mb-3 col-sm-6 col-xsm-12">
+        <label>Activar sistema Gibson</label>
+            <input type="checkbox" id="specialPrice" class="form-check-input" style="margin-left: 15px;" />
+        </div>
     
     <!-- PRICING -->
 
