@@ -436,6 +436,7 @@ loadTranslations(cookieLng);
 
     var manual = $("#manualPDF")[0].files[0];
     var catalog = $("#catalogPDF")[0].files[0];
+    const gibsonPrice = $("#specialPrice").val();
 
     manual = manual == undefined ? "" : manual;
     catalog = catalog == undefined ? "" : catalog;
@@ -494,7 +495,8 @@ loadTranslations(cookieLng);
         manual,
         catalog,
         longDescription,
-        longDescriptionCSV
+        longDescriptionCSV,
+        gibsonPrice
       );
     }
   });
@@ -526,7 +528,8 @@ loadTranslations(cookieLng);
     manual,
     catalog,
     longDescription,
-    longDescriptionCSV
+    longDescriptionCSV,
+    gibsonPrice
   ) {
     var formData = new FormData();
 
@@ -556,6 +559,7 @@ loadTranslations(cookieLng);
     formData.append("pa_type", pa_type);
 
     formData.append("price", price);
+    formData.append("gibson", gibsonPrice);
     formData.append("currency", currency);
 
     formData.append("discount_1", discount_1);

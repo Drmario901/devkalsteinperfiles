@@ -1,29 +1,23 @@
-
-
-
-
 jQuery(document).ready(function ($) {
-
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   products();
 
@@ -67,24 +61,24 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   $(document).on("click", "#btnSendData", function (e) {
     var fileInput = $("#file-input")[0].files[0];
@@ -98,6 +92,7 @@ loadTranslations(cookieLng);
     var height = $("#heProduct").val();
     var status = $("#statusProduct").val();
     var price = $("#priceProduct").val();
+    var gibsonPrice = $("#specialPrice").val();
 
     if (fileInput === undefined) {
       iziToast.error({
@@ -194,7 +189,8 @@ loadTranslations(cookieLng);
           height,
           status,
           price,
-          fileInput
+          fileInput,
+          gibsonPrice
         );
       }
     }
@@ -211,7 +207,8 @@ loadTranslations(cookieLng);
     height,
     status,
     price,
-    image
+    image,
+    gibsonPrice
   ) {
     var formData = new FormData();
     formData.append("name", name);
@@ -225,6 +222,7 @@ loadTranslations(cookieLng);
     formData.append("status", status);
     formData.append("price", price);
     formData.append("fileName", image);
+    formData.append("gibsonPrice", gibsonPrice);
 
     $.ajax({
       contentType: "multipart/form-data",
@@ -247,8 +245,7 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.log(xhr.responseText);
-        console.log('error', error, status);
-        
+        console.log("error", error, status);
       },
     });
   }
@@ -256,24 +253,24 @@ loadTranslations(cookieLng);
 
 jQuery(document).ready(function ($) {
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
   $(document).on("click", "#btnUpdateData", function (e) {
     var fileInput = $("#file-input")[0].files[0];
     var id = $("#dataEdit").val();
@@ -457,8 +454,7 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.log(xhr.responseText);
-        console.log('error', status, error);
-        
+        console.log("error", status, error);
       },
     });
   }
@@ -466,24 +462,24 @@ loadTranslations(cookieLng);
 
 jQuery(document).ready(function ($) {
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   productsTable();
 
@@ -542,26 +538,25 @@ loadTranslations(cookieLng);
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   imageView();
 
@@ -597,31 +592,31 @@ loadTranslations(cookieLng);
         $("#product-data").html(respuesta);
       })
       .fail(function (error) {
-        console.log("error",error);
+        console.log("error", error);
       });
   }
 });
 
 jQuery(document).ready(function ($) {
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   allProductsCount();
 
@@ -635,31 +630,31 @@ loadTranslations(cookieLng);
         $("#productsCount").html(respuesta);
       })
       .fail(function (error) {
-        console.log("error",error);
+        console.log("error", error);
       });
   }
 });
 
 jQuery(document).ready(function ($) {
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
   allOrdersCount();
 
   function allOrdersCount(consulta) {
@@ -672,31 +667,31 @@ loadTranslations(cookieLng);
         $("#productsOrdersCount").html(respuesta);
       })
       .fail(function (error) {
-        console.log("error",error);
+        console.log("error", error);
       });
   }
 });
 
 jQuery(document).ready(function ($) {
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
   $(document).on("click", ".btn-update", function () {
     var id = $(this).val();
     var selectedStatus = $(this).siblings(".status-select").val();
@@ -710,8 +705,7 @@ loadTranslations(cookieLng);
         id: "question",
         zindex: 999,
         title: alertsTranslations.confirmation,
-        message:
-          `${alertsTranslations.youSureYouWantToChangeTheStatusFor} ${customerName} ?`,
+        message: `${alertsTranslations.youSureYouWantToChangeTheStatusFor} ${customerName} ?`,
         position: "center",
         buttons: [
           [
@@ -747,7 +741,7 @@ loadTranslations(cookieLng);
 
   function quoteUpdateStatus(cotizacion_id, cotizacion_status, customerName) {
     let plugin_dir =
-    "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
     let domain = "https://dev.kalstein.plus/plataforma/index.php/";
     $.ajax({
       url: plugin_dir + "php/distributor/updateStatus.php",
@@ -773,7 +767,7 @@ loadTranslations(cookieLng);
         }
       })
       .fail(function (error) {
-        console.log("error",error);
+        console.log("error", error);
       });
   }
 
@@ -805,26 +799,25 @@ loadTranslations(cookieLng);
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   var page = 1;
 
@@ -841,8 +834,7 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.error(error);
-        console.log('error', xhr, status, error);
-        
+        console.log("error", xhr, status, error);
       },
     });
   }
@@ -861,26 +853,25 @@ loadTranslations(cookieLng);
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   var page = 1;
 
@@ -897,8 +888,7 @@ loadTranslations(cookieLng);
       },
       error: function (xhr, status, error) {
         console.error(error);
-        console.log('error', xhr, status, error);
-        
+        console.log("error", xhr, status, error);
       },
     });
   }
@@ -917,26 +907,25 @@ loadTranslations(cookieLng);
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   allOrdersCardCount();
 
@@ -957,26 +946,25 @@ loadTranslations(cookieLng);
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   allPendingCardCount();
 
@@ -996,26 +984,25 @@ loadTranslations(cookieLng);
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   allPendingCirculatorCount();
 
