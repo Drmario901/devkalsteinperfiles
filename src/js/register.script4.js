@@ -384,10 +384,10 @@ jQuery(document).ready(function($){
 
             alert('primeroo');
             console.log('primerooo')
-            const botonFinalizar = document.getElementById('#btnEndingClient')
+            const botonFinalizar = document.getElementById('btnEndingClient')
             botonFinalizar.addEventListener('click', function(){
-                console.log('boton', botonFinalizar);
-                
+                alert('Cargando...')
+                botonFinalizar.disabled = true;
             })
 
         }else{
