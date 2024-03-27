@@ -1613,9 +1613,9 @@ jQuery(document).ready(function($){
 
         })
 
-        .fail(function(){
+        .fail(function(error){
 
-            console.log("error")
+            console.log("error", error)
 
         })
 
