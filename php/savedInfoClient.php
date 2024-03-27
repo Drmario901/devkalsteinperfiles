@@ -14,13 +14,13 @@
     require __DIR__ . '/conexion.php';
 	require __DIR__ . '/../vendor/autoload.php';
 
-    function slug_sanitize($title) {
+    /*function slug_sanitize($title) {
         $title = strtolower($title); 
         $title = preg_replace('/[^a-z0-9\s-]/', '', $title); 
         $title = preg_replace('/[\s-]+/', '-', $title); 
         $title = trim($title, '-'); 
         return $title;
-    }
+    }*/
     
 
     $imageDocument = $_FILES['imageDocument']['name'] ?? NULL;
@@ -104,7 +104,7 @@
             break;
     }
 
-    $data = array(
+    /*$data = array(
         $email, 
         $nameUser, 
         $lastnameUser, 
@@ -116,9 +116,9 @@
         'es', 
         'kalstein.co.ve'
     );				
-    array_push($datos, $data);
-
-    function insertDataIntoCsv($sheetId, $sheetName, $dataRows) {
+    array_push($datos, $data);*/
+    
+    /*function insertDataIntoCsv($sheetId, $sheetName, $dataRows) {
 		// Configurar la autenticación con la cuenta de servicio
 		$client = new Google_Client();
 		$client->setApplicationName('Google Sheets API PHP Integration');
@@ -144,10 +144,10 @@
 	
 		// Devolver el resultado
 		return $result;
-	}
+	}*/
 	
 	// Ejemplo de uso:
-	$sheetId = '1jRMFwWkqJ5X908HBNO-n-KHqjQRaNWM_vd8Kj6Dy0Ks'; // Reemplaza con el ID real de tu hoja de cálculo
+	/*$sheetId = '1jRMFwWkqJ5X908HBNO-n-KHqjQRaNWM_vd8Kj6Dy0Ks'; // Reemplaza con el ID real de tu hoja de cálculo
 	$sheetName = 'contactos-crm'; // Reemplaza con el nombre real de tu hoja
 	$dataRows = []; // Inicializa el arreglo de filas
 
@@ -160,7 +160,7 @@
 		$result = insertDataIntoCsv($sheetId, $sheetName, $dataRows);
 	} catch (Exception $e) {
 		echo 'Error al insertar datos: ',  $e->getMessage(), "\n";
-	}
+	}*/
 
     if ($jobRole == 0){
         $update = "UPDATE wp_account SET account_nombre = '$nameUser', account_apellido = '$lastnameUser', account_rol_aid = '$profileRole', account_direccion = '$addressUser', account_pais = '$countryUser', account_ciudad = '$stateUser', account_zipcode = '$zipcodeUser', account_telefono = '$phoneUser', account_document = '$idDocument', account_image_document = '$newName', account_status = '$accStatus' WHERE account_correo = '$email'";
@@ -175,7 +175,7 @@
         $update = "UPDATE wp_account SET account_nombre = '$nameUser', account_apellido = '$lastnameUser', account_rol_aid = '$profileRole', account_direccion = '$addressUser', account_pais = '$countryUser', account_ciudad = '$stateUser', account_zipcode = '$zipcodeUser', account_telefono = '$phoneUser', account_document = '$idDocument', account_image_document = '$newName', account_status = '$accStatus' WHERE account_correo = '$email'";
         if ($conexion->query($update) === TRUE){
             if ($profileRole == 2){
-                $insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','Distributor','R2', '$date')";
+                /*$insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','Distributor','R2', '$date')";
                 $conexion->query($insertCRM);
 
                 $slug1 = slug_sanitize($nameB);
@@ -216,12 +216,12 @@
                         $meta_value = $conexion->real_escape_string($meta_value);
                         $sql_meta = "INSERT INTO y0OXEwH_postmeta (post_id, meta_key, meta_value) 
                                     VALUES ('$post_id', '$meta_key', '$meta_value')";
-                        $conexion2->query($sql_meta);
+                        $conexion2->query($sql_meta);*/
                     }
                 }
             }
             if ($profileRole == 3){
-                $insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','Manufacturer','R2', '$date')";
+                /*insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','Manufacturer','R2', '$date')";
                 $conexion->query($insertCRM);
 
                 $slug = slug_sanitize($nameB);
@@ -262,8 +262,7 @@
                                     VALUES ('$post_id', '$meta_key', '$meta_value')";
                         $conexion2->query($sql_meta);
                     }
-                }
-
+                }*/
             }
             $register = "INSERT INTO wp_company(company_aid, company_account_correo, company_role, company_nombre, company_direccion, company_pais, company_ciudad, company_telefono, company_zipcode, company_website, company_rif, company_image_rif) VALUES ('', '$email', '$jobRole', '$nameB', '$addressB', '$countryB', '$stateB', '$phoneB', '$zipcodeB', '$websiteB', '$taxDocument', '$newNameTax')";
             if ($conexion->query($register) === TRUE){
@@ -271,10 +270,6 @@
             }else{
                 $update = "incorrecto";
             }
-        }else{
-            $update = "incorrecto";
-        }
-    }
 
 
     $datos = array(
