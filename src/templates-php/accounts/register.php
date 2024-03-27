@@ -186,7 +186,8 @@
                         <div class='col-sm-2'><button type='button' class='btn px-4' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnPreviusClient2' data-i18n="account:botonAnterior" >Anterior</button></div>
                         <div class='col-sm-2'>
                             <button type='button' class='btn px-4' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnNextClient2' data-i18n="account:botonSiguiente">Siguiente</button>
-                            <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnEndingClient' data-i18n="account:botonFinalizar" >Finalizar</button>
+                            <!-- <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnEndingClient' data-i18n="account:botonFinalizar" >Finalizar</button> -->
+                            <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;' id='btnEndingClient'  >Finalizarrrrr</button>
                         </div>
                     </div>
                 </div>
