@@ -1608,7 +1608,7 @@ jQuery(document).ready(function($){
                     $(location).attr('href', domain + '/account_redirect/')
                 }
 
-            }else{
+            }else{  
 
                 console.log("error")
 
