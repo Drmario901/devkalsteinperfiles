@@ -442,7 +442,7 @@ jQuery(document).ready(function ($) {
 
     var price = $("#priceProduct").val();
     //get the value of the gibsonPrice checkbox
-    var gibsonPrice = $("#gibsonPrice").is(":checked");
+    var gibsonPrice = $("#gibsonPrice").val();
     var currency = $("#currency").val();
 
     var discount_1 = $("#discount1").val();
