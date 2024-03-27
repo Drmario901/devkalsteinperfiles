@@ -1632,7 +1632,7 @@ jQuery(document).ready(function($){
                 console.log('redireccionando...');
                 
                 alert(alertsTranslations.verficacion48horas);
-                window.location.replace("https://dev.kalstein.plus/plataforma/acceder/");
+                window.location.href("https://dev.kalstein.plus/plataforma/acceder/");
                 
             } else {
                 if (data.update === 'correcto'){
