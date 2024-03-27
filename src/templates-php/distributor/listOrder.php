@@ -1,6 +1,9 @@
 <div class="container">
     <header class="header" data-header>
         <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
             
             include 'navbar.php';
 
@@ -40,6 +43,9 @@
         
         <div id="listOrderTable" class="table-responsive">
             <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
                 session_start();
                 require __DIR__.'/../../../php/conexion.php';
         

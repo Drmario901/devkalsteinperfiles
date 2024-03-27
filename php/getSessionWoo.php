@@ -2,9 +2,9 @@
 session_start();
 
 $hostdb = "localhost";
-$userdb = "he270716";
-$passdb = ".Kx7*WTp@{,g";
-$namedb = "he270716_wp_es";
+$userdb = "kalsteinplus";
+$passdb = "OqA;}vKA94PO";
+$namedb = "kalsteinplus_he270716_wp_es";
 
 $conexion = new mysqli($hostdb, $userdb, $passdb, $namedb);
 

@@ -76,3 +76,5 @@ Stack trace:
 [28-Feb-2024 16:38:21 UTC] PHP Warning:  Undefined array key "language" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/twilioTest.php on line 11
 =======
 >>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
+[25-Mar-2024 12:47:43 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 46
+[25-Mar-2024 12:47:52 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 46

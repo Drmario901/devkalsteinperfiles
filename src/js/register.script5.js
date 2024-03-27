@@ -380,7 +380,19 @@ jQuery(document).ready(function($){
 
         if (jobRole == 0){
 
-            savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+            // savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+
+            // alert('primeroo');
+            // console.log('primerooo')
+            // const botonFinalizar = document.getElementById('btnEndingClient')
+            // botonFinalizar.addEventListener('click', function(){
+            //     alert('Cargando...')
+            //     botonFinalizar.disabled = true;
+            // })
+
+            alert('primeroo');
+            console.log('primerooo')
+            $(this).prop('disabled', true).text('Cargando...'); 
 
         }else{
 
@@ -456,7 +468,11 @@ jQuery(document).ready(function($){
 
                                             }else{
 
-                                                savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+                                                // savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+
+                                                alert('holaaa');
+                                                console.log('holaaa');
+                                                
 
                                             }
 
