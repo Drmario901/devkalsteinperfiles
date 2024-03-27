@@ -167,8 +167,8 @@
                     <div class='d-flex flex-column flex-md-row justify-content-between'>
                         <div><button type='button' class='btn px-4' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnPreviusClient1' data-i18n="account:botonAnterior">Anterior</button></div>
                         <div>
-                            <!-- <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnEndingClient' data-i18n="account:botonFinalizar">Finalizar</button> -->
-                            <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnEndingClient'>finalizarrr</button>
+                            <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnEndingClient' data-i18n="account:botonFinalizar">Finalizar</button>
+                            <!-- <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnEndingClient'>finalizarrr</button> -->
                         </div>
                     </div>
                 </div>

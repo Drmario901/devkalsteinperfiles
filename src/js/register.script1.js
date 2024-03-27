@@ -380,7 +380,7 @@ jQuery(document).ready(function($){
 
         if (jobRole == 0){
 
-            // savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+            savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
 
             // alert('primeroo');
             // console.log('primerooo')
@@ -397,10 +397,10 @@ jQuery(document).ready(function($){
             $(this).html('<div class="spinner"></div>');
             
             // Simula una operación asíncrona con setTimeout
-            setTimeout(() => {
-                $(this).html('Finalizar'); // Restablece el texto original del botón
-                $(this).prop('disabled', false); // Reactiva el botón
-            }, 3000);
+            // setTimeout(() => {
+            //     $(this).html('Finalizar'); // Restablece el texto original del botón
+            //     $(this).prop('disabled', false); // Reactiva el botón
+            // }, 3000);
 
         }else{
 
