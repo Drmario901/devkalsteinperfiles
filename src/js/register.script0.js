@@ -1626,7 +1626,8 @@ jQuery(document).ready(function($){
             console.log(respuesta)            
 
             let data = JSON.parse(respuesta)
-
+                console.log('la data', data.profileRole);
+                
             if(data.profileRole != 1){
                 console.log('redireccionando...');
                 
