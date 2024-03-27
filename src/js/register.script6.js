@@ -390,9 +390,17 @@ jQuery(document).ready(function($){
             //     botonFinalizar.disabled = true;
             // })
 
-            alert('primeroo');
-            console.log('primerooo')
-            $(this).prop('disabled', true).text('Cargando...'); 
+            $(this).prop('disabled', true);
+            alert('activando');
+            
+            // Actualiza el botón para incluir el spinner y cambia el texto
+            $(this).html('<div class="spinner"></div>');
+            
+            // Simula una operación asíncrona con setTimeout
+            setTimeout(() => {
+                $(this).html('Finalizar'); // Restablece el texto original del botón
+                $(this).prop('disabled', false); // Reactiva el botón
+            }, 3000);
 
         }else{
 

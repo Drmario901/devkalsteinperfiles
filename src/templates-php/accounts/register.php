@@ -26,6 +26,32 @@
     console.log(php); 
 </script>
 <script src='https://kit.fontawesome.com/3cff919dc3.js' crossorigin='anonymous'></script>
+
+<style>
+
+.spinner {
+    border: 4px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    width: 24px;
+    height: 24px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+
+
 <div class='d-flex align-items-center' style='min-height: 100vh'>
     <div class='container' style='margin-top: -35px'>
         <div class='card w-75 mb-3' style='margin: 0 auto; margin-top: 2rem; -webkit-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); box-shadow: 0px 7px 34px -10px rgba(0,0,0,0.75); padding: 1rem;'>
@@ -143,20 +169,6 @@
                         <div>
                             <!-- <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnEndingClient' data-i18n="account:botonFinalizar">Finalizar</button> -->
                             <button type='button' class='btn px-4 btnEndingClient' style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;' id='btnEndingClient'>finalizarrr</button>
-                            <div class="spinner center" >
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                                <div class="spinner-blade"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
