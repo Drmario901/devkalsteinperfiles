@@ -436,7 +436,8 @@ loadTranslations(cookieLng);
 
     var manual = $("#manualPDF")[0].files[0];
     var catalog = $("#catalogPDF")[0].files[0];
-    const gibsonPrice = $("#specialPrice").val();
+    //get the value of the gibsonPrice checkbox
+    var gibsonPrice = $("#gibsonPrice").is(":checked");
 
     manual = manual == undefined ? "" : manual;
     catalog = catalog == undefined ? "" : catalog;
