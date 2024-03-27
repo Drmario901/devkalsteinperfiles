@@ -560,6 +560,7 @@ loadTranslations(cookieLng);
 
     formData.append("price", price);
     formData.append("gibson", gibsonPrice);
+    console.log(gibsonPrice);
     formData.append("currency", currency);
 
     formData.append("discount_1", discount_1);
