@@ -384,6 +384,11 @@ jQuery(document).ready(function($){
 
             alert('primeroo');
             console.log('primerooo')
+            const botonFinalizar = document.getElementById('#btnEndingClient')
+            botonFinalizar.addEventListener('click', function(){
+                console.log('boton', botonFinalizar);
+                
+            })
 
         }else{
 
