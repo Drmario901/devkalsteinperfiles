@@ -404,8 +404,9 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(document).on("click", "#gibsonPrice", function (e) {
-    console.log($("#gibsonPrice").prop("checked"));
+  $(document).on("click", "#specialPrice", function (e) {
+    var estaMarcado = $(this).is(":checked"); // Retorna true si está marcado, false si no lo está
+    console.log(estaMarcado);
   });
 
   $(document).on("click", "#btnSendData", function (e) {
@@ -446,7 +447,7 @@ jQuery(document).ready(function ($) {
 
     var price = $("#priceProduct").val();
     //get the value of the gibsonPrice checkbox
-    var gibsonPrice = $("#gibsonPrice").prop("checked");
+    var gibsonPrice = $("#specialPrice").is(":checked");
     var currency = $("#currency").val();
 
     var discount_1 = $("#discount1").val();
