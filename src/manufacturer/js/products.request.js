@@ -404,6 +404,10 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(document).on("click", "#gibsonPrice", function (e) {
+    console.log($("#gibsonPrice").prop("checked"));
+  });
+
   $(document).on("click", "#btnSendData", function (e) {
     var name = $("#nameProduct").val().replace(/'/g, "\\'");
     var model = $("#modelProduct").val().replace(/'/g, "\\'");
@@ -442,7 +446,7 @@ jQuery(document).ready(function ($) {
 
     var price = $("#priceProduct").val();
     //get the value of the gibsonPrice checkbox
-    var gibsonPrice = $("#gibsonPrice").val();
+    var gibsonPrice = $("#gibsonPrice").prop("checked");
     var currency = $("#currency").val();
 
     var discount_1 = $("#discount1").val();
