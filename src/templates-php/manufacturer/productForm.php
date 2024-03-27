@@ -467,8 +467,9 @@
         </div>
 
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
-        <label>Activar sistema Gibson</label>
+            <label>Activar sistema Gibson</label>
             <input type="checkbox" id="specialPrice" class="form-check-input" style="margin-left: 15px;" />
+            <span id="gibsonStatus" style="display: none;">Sistema Gibson activo</span>
         </div>
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
             <label data-i18n='manofacturer:moneda'>Moneda <i class="far fa-money-bill-1 h5"></i></i></label>
@@ -586,3 +587,14 @@
         </div>
     </div>
 </form>
+
+<script>
+document.getElementById('specialPrice').addEventListener('change', function() {
+    var gibsonStatus = document.getElementById('gibsonStatus');
+    if (this.checked) {
+        gibsonStatus.style.display = 'inline';
+    } else {
+        gibsonStatus.style.display = 'none';
+    }
+});
+</script>
