@@ -133,8 +133,8 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on("click", "#btnContinueSignUp4", function () {
+    $("#c-password").css({ display: "none" });
     $(".c-codeRequest").css({ display: "block" });
-    $(".c-password").css({ display: "none" });
   });
 
   $(document).on("click", "#btnContinueSignUp2", function () {
