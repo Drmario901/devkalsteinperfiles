@@ -65,7 +65,7 @@ if (isset($_GET['search'])) {
                                     <p class='p04' data-i18n="account:passwordO4">• Numeros (0-9)</p>
                                     <p class='p05' data-i18n="account:passwordO5">• Caracteres especiales (!@#$%^&*)</p>
                                 </div>
-                            </div>1289
+                            </div>
                             <div>
                                 <input type="tel" id="telefono" placeholder="+584243460227" name="telefono">
                                 <label for="telefono" name="telefono">Telefono</label>
@@ -75,15 +75,13 @@ if (isset($_GET['search'])) {
                             <p style='font-size: 1.3em; text-align: justify;'>
                                 Como desea que enviemos el código de verificación?</p>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
-                                <input type='checkbox' class='form-control' id='telefonoCheck' name="telefonoCheck"
-                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
-                                <label for='telefonoCheck'>Telefono</label>
-                                <input type='checkbox' class='form-control' id='emailCheck' name="emailCheck"
-                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
-                                <label for='emailCheck'>Correo</label>
+                                <input type="radio" id="tel" name="codeSelect" value="telefonoCheck">
+                                <label for="tel">Telefono</label><br>
+                                <input type="radio" id="correo" name="codeSelect" value="emailCheck">
+                                <label for="correo">Correo</label><br>
                             </div>
                         </div>
-                        <div class='c-codeVerification' style='display: none;'>
+                        <div class=' c-codeVerification' style='display: none;'>
                             <p data-i18n="account:verificationEmail" style='font-size: 1.3em; text-align: justify;'>
                                 Hemos enviado un correo electrónico a <span class='spanEmail'
                                     style='font-weight: bold;'></span> con el código de verificación.</p>
