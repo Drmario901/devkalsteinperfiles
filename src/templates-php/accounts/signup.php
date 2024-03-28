@@ -48,11 +48,14 @@ if (isset($_GET['search'])) {
                                     style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em;' readonly>
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
-                            <div class='form-floating' style='margin-top: 1.3rem;'>
-                                <input class="form-control"
-                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'
-                                    type="tel" id="telefono" placeholder="+584243460227" name="telefono">
-                                <label for="telefono" name="telefono">Telefono</label>
+                            <div class='form-floating input-wrapper' style='margin-top: 1.3rem;'>
+                                <i class='paisesPrefijos' id='paisesPrefijos'></i>
+                                <input type='number' class='form-control' id='telefono' name="telefono"
+                                    placeholder='+000000000000'
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-left: 3rem;'
+                                    autofocus>
+                                <label for='telefono' style="margin-left: 2.5rem;"
+                                    data-i18n="account:labelNumero">Teléfono</label>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
@@ -89,8 +92,7 @@ if (isset($_GET['search'])) {
                         </div>
                         <div class=' c-codeVerification' style='display: none;'>
                             <p data-i18n="account:verificationEmail" style='font-size: 1.3em; text-align: justify;'>
-                                Hemos enviado un correo electrónico a <span class='spanEmail'
-                                    style='font-weight: bold;'></span> con el código de verificación.</p>
+                                Hemos enviado el codigo de verificación a su metodo seleccionado.</p>
                             <hr>
                             <div class='form-floating'>
                                 <input type='text' class='form-control' id='txtCodeVerification'
