@@ -99,6 +99,9 @@ if (isset($_GET['search'])) {
                         <button type='button' class='btn'
                             style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;'
                             id='btnContinueSignUp' data-i18n="account:tittleButton">Continuar</button>
+                            <button type='button' class='btn'
+                            style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;'
+                            id='btnContinueSignUp1/2' data-i18n="account:tittleButton">Continuar</button>
                         <button type='button' class='btn'
                             style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem; display: none;'
                             id='btnContinueSignUp2' data-i18n="account:tittleButton">Continuar</button>
