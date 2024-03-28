@@ -74,11 +74,15 @@ if (isset($_GET['search'])) {
                         <div class="container c-codeRequest" style='display: none;'>
                             <p style='font-size: 1.3em; text-align: justify;'>
                                 Como desea que enviemos el código de verificación?</p>
-                            <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
-                                <input type="radio" id="tel" name="codeSelect" value="telefonoCheck">
-                                <label for="tel">Telefono</label><br>
-                                <input type="radio" id="correo" name="codeSelect" value="emailCheck">
-                                <label for="correo">Correo</label><br>
+                            <div style='margin-top: 1rem;'>
+                                <input type="radio" id="tel" name="codeSelect" value="telefonoCheck"
+                                    style="display: inline-block; vertical-align: middle; margin-right: 5px;">
+                                <label for="tel"
+                                    style="display: inline-block; vertical-align: middle; padding-right: 20px;">Telefono</label><br>
+                                <input type="radio" id="correo" name="codeSelect" value="emailCheck"
+                                    style="display: inline-block; vertical-align: middle; margin-right: 5px;">
+                                <label for="correo"
+                                    style="display: inline-block; vertical-align: middle; padding-right: 20px;">Correo</label><br>
                             </div>
                         </div>
                         <div class=' c-codeVerification' style='display: none;'>
