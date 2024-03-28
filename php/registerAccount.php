@@ -43,6 +43,7 @@ $numRandom = mt_rand(000000, 999999);
 $_SESSION["codeVerification"] = $numRandom;
 $_SESSION["emailAccount"] = $email;
 $_SESSION["codeTimeOut"] = time();
+$_SESSION["telefono"] = $telefono;
 
 $datos = array(
     'registro' => $registro

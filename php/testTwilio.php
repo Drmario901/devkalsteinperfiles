@@ -7,6 +7,9 @@ if (session_status() == PHP_SESSION_NONE) {
 if (isset($_SESSION["codeVerification"])) {
   $code = $_SESSION["codeVerification"];
 }
+if (isset($_SESSION["telefono"])) {
+  $to = $_SESSION["telefono"];
+}
 
 echo $code;
 
