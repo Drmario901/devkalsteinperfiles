@@ -48,6 +48,12 @@ if (isset($_GET['search'])) {
                                     style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em;' readonly>
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
+                            <div class='form-floating' style='margin-top: 1.3rem;'>
+                                <input class="form-control"
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'
+                                    type="tel" id="telefono" placeholder="+584243460227" name="telefono">
+                                <label for="telefono" name="telefono">Telefono</label>
+                            </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
                                     placeholder='name@example.com'
@@ -65,12 +71,6 @@ if (isset($_GET['search'])) {
                                     <p class='p04' data-i18n="account:passwordO4">• Numeros (0-9)</p>
                                     <p class='p05' data-i18n="account:passwordO5">• Caracteres especiales (!@#$%^&*)</p>
                                 </div>
-                            </div>
-                            <div class='form-floating' style='margin-top: 1.3rem;'>
-                                <input class="form-control"
-                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'
-                                    type="tel" id="telefono" placeholder="+584243460227" name="telefono">
-                                <label for="telefono" name="telefono">Telefono</label>
                             </div>
                         </div>
                         <div class="container c-codeRequest" style='display: none;'>
