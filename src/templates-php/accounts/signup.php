@@ -66,8 +66,10 @@ if (isset($_GET['search'])) {
                                     <p class='p05' data-i18n="account:passwordO5">• Caracteres especiales (!@#$%^&*)</p>
                                 </div>
                             </div>
-                            <div>
-                                <input type="tel" id="telefono" placeholder="+584243460227" name="telefono">
+                            <div class='form-floating' style='margin-top: 1.3rem;'>
+                                <input class="form-control"
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'
+                                    type="tel" id="telefono" placeholder="+584243460227" name="telefono">
                                 <label for="telefono" name="telefono">Telefono</label>
                             </div>
                         </div>
