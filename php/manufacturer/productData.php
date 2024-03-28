@@ -1,6 +1,9 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    require __DIR__ . '/../../db/conexion.php';
+    require_once __DIR__ . '/../../db/conexion.php';
 
     $t = $_POST["consulta"];
     $consulta = "SELECT * FROM wp_k_products WHERE product_aid = '$t'";
