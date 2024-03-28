@@ -11,6 +11,9 @@ if (isset($_GET['search'])) {
     session_write_close();
 }
 
+$query = "SELECT nombre_pais, prefijo FROM wp_paises_prefijo ORDER BY nombre_pais ASC";
+$resultado = $conexion->query($query);
+
 ?>
 
 <input type="hidden" id="search-product" value="<?php echo $search ?>">
@@ -49,10 +52,21 @@ if (isset($_GET['search'])) {
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class='form-floating input-wrapper' style='margin-top: 1.3rem;'>
-                                <i class='paisesPrefijos' id='paisesPrefijos'></i>
+                                <select class='form-control paisesPrefijos' id='paisesPrefijos'
+                                    style='position: absolute; height: 3rem; font-size: 1.4em; z-index: 10; border: none; background: transparent; outline: none;'>
+                                    <?php
+                                    if ($resultado->num_rows > 0) {
+                                        while ($fila = $resultado->fetch_assoc()) {
+                                            echo "<option value='" . $fila['prefijo'] . "'>" . $fila['nombre_pais'] . " (" . $fila['prefijo'] . ")</option>";
+                                        }
+                                    } else {
+                                        echo "<option>No hay países disponibles</option>";
+                                    }
+                                    ?>
+                                </select>
                                 <input type='number' class='form-control' id='telefono' name="telefono"
                                     placeholder='+000000000000'
-                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-left: 3rem;'
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-left: 50px;'
                                     autofocus>
                                 <label for='telefono' style="margin-left: 2.5rem;"
                                     data-i18n="account:labelNumero">Teléfono</label>
