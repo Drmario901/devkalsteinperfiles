@@ -412,12 +412,12 @@ jQuery(document).ready(function($){
            
             console.log('country',countryUser);
             if(countryUser == 0) {
-                console.log('error en country:', countryUser);
+                console.log('error:', countryUser);
                 return
             } else {
-                // savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
-                console.log('data envianda...');
-                // $(this).prop('disabled', true);
+                savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+                // console.log('send...');
+                $(this).prop('disabled', true);
                 $(this).html('<div class="spinner"></div>');
             }
             
