@@ -728,7 +728,7 @@ jQuery(document).ready(function ($) {
 
           $("#btnContinueSignUp").css({ display: "none" });
 
-          $("#btnContinueSignUp1/2").css({ display: "block" });
+          $("#btnContinueSignUp4").css({ display: "block" });
 
           // bueno mi pana bloqueate
           //$("#btnContinueSignUp2").css({ display: "block" });
