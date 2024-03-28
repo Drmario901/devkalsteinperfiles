@@ -60,7 +60,7 @@ $resultado = $conexion->query($query);
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option value='" . $fila['prefijo'] . "'>" . $fila['nombre_pais'] . " (" . $fila['prefijo'] . ")</option>";
+                                            echo "<option value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " (" . $fila['prefijo_internacional'] . ")</option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
