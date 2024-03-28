@@ -992,6 +992,14 @@ jQuery(document).ready(function ($) {
       });
   }
 
+  function setPhonePrefix() {
+    var prefix = document.getElementById("countryPrefix").value;
+    var phoneInput = document.getElementById("phoneNumber");
+    phoneInput.value = prefix;
+    phoneInput.focus();
+    phoneInput.setSelectionRange(prefix.length, prefix.length);
+  }
+
   function enviarCodigoTelefono(consulta) {
     $.ajax({
       url: plugin_dir + "/php/testTwilio.php",

@@ -99,13 +99,17 @@ $resultado = $conexion->query($query);
                             </div>
                             <div class="phone-container">
                                 <select id="countryPrefix" onchange="setPhonePrefix()">
-                                    <option value="">Prefijo</option>
-                                    <option value="+1">+1</option>
-                                    <option value="+34">+34</option>
-                                    <option value="+52">+52</option>
-                                    <!-- Más prefijos aquí -->
+                                    <?php
+                                    if ($resultado->num_rows > 0) {
+                                        while ($fila = $resultado->fetch_assoc()) {
+                                            echo "<option value='" . $fila['prefijo_internacional'] . "'>" . $fila['prefijo_internacional'] . "</option>";
+                                        }
+                                    } else {
+                                        echo "<option>No hay países disponibles</option>";
+                                    }
+                                    ?>
                                 </select>
-                                <input type="text" id="phoneNumber" placeholder="Tu número de teléfono aquí">
+                                <input type="text" id='telefono' name="telefono" placeholder="123456789">
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
@@ -192,3 +196,12 @@ $resultado = $conexion->query($query);
         </div>
     </div>
 </div>
+<script>
+    function setPhonePrefix() {
+        var prefix = document.getElementById("countryPrefix").value;
+        var phoneInput = document.getElementById("telefono");
+        phoneInput.value = prefix;
+        phoneInput.focus();
+        phoneInput.setSelectionRange(prefix.length, prefix.length);
+    }
+</script>
