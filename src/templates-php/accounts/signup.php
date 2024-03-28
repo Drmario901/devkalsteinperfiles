@@ -80,23 +80,6 @@ $resultado = $conexion->query($query);
                                     style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em;' readonly>
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
-                            <div class='form-floating input-wrapper' style='margin-top: 1.3rem; position: relative;'>
-                                <select class='paisesPrefijos' id='paisesPrefijos' <?php
-                                if ($resultado->num_rows > 0) {
-                                    while ($fila = $resultado->fetch_assoc()) {
-                                        echo "<option value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " (" . $fila['prefijo_internacional'] . ")</option>";
-                                    }
-                                } else {
-                                    echo "<option>No hay países disponibles</option>";
-                                }
-                                ?> </select>
-                                    <input type='number' class='form-control' id='telefono' name="telefono"
-                                        placeholder='Número de teléfono'
-                                        style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-left: calc(100px + 2em); margin-left: 100px;'
-                                        autofocus>
-                                    <label for='telefono' style="margin-left: calc(100px + 2.5rem);"
-                                        data-i18n="account:labelNumero">Teléfono</label>
-                            </div>
                             <div class="phone-container">
                                 <select id="countryPrefix" onchange="setPhonePrefix()">
                                     <?php
