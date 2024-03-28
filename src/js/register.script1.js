@@ -517,16 +517,17 @@ jQuery(document).ready(function($){
                                                 $('#websiteBusiness').focus()
 
                                             }else{
-                                                $(this).prop('disabled', true);
-                                                $(this).html('<div class="spinner"></div>');
-                                                savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
-
-                                                alert('holaaa');
-                                                console.log('holaaa');
-                                                
-
+                                                console.log('country',countryUser);
+                                                if(countryUser == 0) {
+                                                    console.log('error:', countryUser);
+                                                    return
+                                                } else {
+                                                    savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+                                                    // console.log('send...');
+                                                    $(this).prop('disabled', true);
+                                                    $(this).html('<div class="spinner"></div>');
+                                                }
                                             }
-
                                         }
 
                                     }
