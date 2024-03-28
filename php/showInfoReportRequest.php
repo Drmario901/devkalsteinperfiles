@@ -1,5 +1,5 @@
 <?php
-  require __DIR__ . '/conexion.php';
+  require_once __DIR__ . '/../db/conexion.php';
   $id = $_POST['consulta'];
   $sql = "SELECT * FROM wp_reportes WHERE R_id = '$id'";
   $result = $conexion->query($sql);
