@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
+require __DIR__ . '/../../../php/conexion.php';
 if (isset($_GET['search'])) {
     $search = $_GET ? $_GET['search'] : '';
 } else {
