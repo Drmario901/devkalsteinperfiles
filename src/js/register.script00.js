@@ -21,34 +21,42 @@ jQuery(document).ready(function($){
       
         loadTranslations(cookieLng);
 
+        const alerts = {
+            de:[],
+            ee:[],
+            en:[],
+            es:[],
+            fr:[],
+            it:[],
+            nl:[],
+            pl:[],
+            pt:[],
+            se:[],
+       }
+            
+
+        
+
     $(document).on('change', '#countryUser', function(){
-
         searchCountryPrefijo($(this).val())
-
     })
 
 
 
     $(document).on('change', '#countryUserManu', function(){
-
         searchCountryPrefijo3($(this).val())
-
     })
 
 
 
     $(document).on('change', '#countryUser-soporte', function(){
-
         searchCountryPrefijo5($(this).val())
-
     })
 
 
 
     $(document).on('change', '#countryBusiness', function(){
-
         searchCountryPrefijo2($(this).val())
-
     })
 
 
@@ -401,7 +409,10 @@ jQuery(document).ready(function($){
 
         if (jobRole == 0){
 
-            savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
+           
+            console.log('country',countryUser);
+            
+            // savedInformationClientN(nameB, countryB, stateB, addressB, zipcodeB, numberBussines, websiteB, nameUser, lastnameUser, countryUser, stateUser, addressUser, zipcodeUser, numberPhoneUser, jobRole, '1', idDocument, imageDocument, taxDocument, imageTaxDocument)
 
             // alert('primeroo');
             // console.log('primerooo')
@@ -412,11 +423,11 @@ jQuery(document).ready(function($){
             // })
 
            
-            // alert('activando');
+            alert('activando');
             
             // Actualiza el botón para incluir el spinner y cambia el texto
-            $(this).prop('disabled', true);
-            $(this).html('<div class="spinner"></div>');
+            // $(this).prop('disabled', true);
+            // $(this).html('<div class="spinner"></div>');
             
             // Simula una operación asíncrona con setTimeout
             // setTimeout(() => {
