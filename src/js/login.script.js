@@ -146,7 +146,7 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
-    let telefono = $("#countryPrefix").val() + $("#phoneNumber").val();
+    let telefono = $("#countryPrefix").val() + $("#telefono").val();
 
     if (password == "") {
       alert("Password is required");
