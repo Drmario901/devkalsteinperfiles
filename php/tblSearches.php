@@ -10,7 +10,7 @@ $page = isset($_GET['o']) ? intval($_GET['o']) : 1;
 $offset = ($page - 1) * $perPage;
 $limit = $perPage;
 
-require __DIR__ . '/conexion.php';
+require_once __DIR__ . '/../db/conexion.php';
 
 $consulta = "SELECT * FROM wp_register_searches WHERE account_id = '$email' ORDER BY aid_searches DESC LIMIT $offset, $limit";
 $resultado = $conexion->query($consulta);
