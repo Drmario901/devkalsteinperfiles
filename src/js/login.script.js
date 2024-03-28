@@ -876,7 +876,7 @@ jQuery(document).ready(function ($) {
 
       type: "POST",
 
-      data: { consulta, consulta1, consulta2 },
+      data: { consulta, consulta1, consulta2, consulta3 },
     })
 
       .done(function (respuesta) {
