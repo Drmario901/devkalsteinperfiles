@@ -21,15 +21,19 @@ $resultado = $conexion->query($query);
 <style>
     .phone-container {
         display: inline-flex;
-        border: 1px solid #ccc;
+        border: 1px solid #213280;
         border-radius: 5px;
         overflow: hidden;
+        padding: 6px;
+        width: 100%;
+        margin-top: 1rem;
         /* Oculta cualquier elemento hijo que se salga de los bordes */
     }
 
     #countryPrefix {
         border: none;
         background: #f9f9f9;
+        width: 30%;
         /* Color de fondo ligeramente diferente para distinguir */
         padding: 5px 10px;
         margin-right: -1px;
@@ -179,12 +183,3 @@ $resultado = $conexion->query($query);
         </div>
     </div>
 </div>
-<script>
-    function setPhonePrefix() {
-        var prefix = document.getElementById("countryPrefix").value;
-        var phoneInput = document.getElementById("telefono");
-        phoneInput.value = prefix;
-        phoneInput.focus();
-        phoneInput.setSelectionRange(prefix.length, prefix.length);
-    }
-</script>

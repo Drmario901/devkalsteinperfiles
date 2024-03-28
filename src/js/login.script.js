@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
-    let telefono = $("#telefono").val();
+    let telefono = $("#countryPrefix").val() + $("#phoneNumber").val();
 
     if (user == "") {
       alert("Mail is required");
@@ -146,7 +146,7 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
-    let telefono = $("#telefono").val();
+    let telefono = $("#countryPrefix").val() + $("#phoneNumber").val();
 
     if (password == "") {
       alert("Password is required");
