@@ -107,6 +107,8 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
+    let telefono = $("#telefono").val();
+
     if (user == "") {
       alert("Mail is required");
     } else {
@@ -137,6 +139,8 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
+    let telefono = $("#telefono").val();
+
     if (password == "") {
       alert("Password is required");
     } else {
@@ -147,7 +151,7 @@ jQuery(document).ready(function ($) {
         $(".p04").hasClass("aprobado") &&
         $(".p05").hasClass("aprobado")
       ) {
-        registrarCuenta(user, userTag, password);
+        registrarCuenta(user, userTag, password, telefono);
       } else {
         $("#passwordGrid").focus();
 
@@ -866,7 +870,7 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  function registrarCuenta(consulta, consulta1, consulta2) {
+  function registrarCuenta(consulta, consulta1, consulta2, consulta3) {
     $.ajax({
       url: plugin_dir + "/php/registerAccount.php",
 
@@ -926,7 +930,7 @@ jQuery(document).ready(function ($) {
 
   function enviarCorreo(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/testmail.php",
+      url: plugin_dir + "/php/testTwilio.php",
 
       type: "POST",
 
