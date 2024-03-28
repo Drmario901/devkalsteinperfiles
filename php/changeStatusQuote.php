@@ -4,7 +4,7 @@
         $email = $_SESSION["emailAccount"];
     }
 
-require __DIR__ . '/conexion.php';
+    require_once __DIR__ . '/../db/conexion.php';
 
 // Debes asegurarte de que estás recibiendo los datos 'consulta' y 'consulta2' y validarlos.
 if (!isset($_POST['consulta'], $_POST['consulta2'])) {
