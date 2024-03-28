@@ -132,6 +132,10 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(document).on("click", "#btnContinueSignUp4", function () {
+    $(".c-codeRequest").css({ display: "block" });
+  });
+
   $(document).on("click", "#btnContinueSignUp2", function () {
     let user = $("#emailUser").val();
 
