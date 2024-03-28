@@ -67,7 +67,9 @@ if (isset($_GET['search'])) {
                                 </div>
                             </div>
                             <div class='form-floating'>
-                                <input class="form-control" type="tel" id="telefono" placeholder="+584243460227" name="telefono">
+                                <input class="form-control"
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'
+                                    type="tel" id="telefono" placeholder="+584243460227" name="telefono">
                                 <label for="telefono" name="telefono">Telefono</label>
                             </div>
                         </div>
