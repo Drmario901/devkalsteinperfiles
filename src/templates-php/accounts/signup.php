@@ -65,7 +65,7 @@ if (isset($_GET['search'])) {
                                     <p class='p04' data-i18n="account:passwordO4">• Numeros (0-9)</p>
                                     <p class='p05' data-i18n="account:passwordO5">• Caracteres especiales (!@#$%^&*)</p>
                                 </div>
-                            </div>
+                            </div>1289
                             <div>
                                 <input type="tel" id="telefono" placeholder="+584243460227" name="telefono">
                                 <label for="telefono" name="telefono">Telefono</label>

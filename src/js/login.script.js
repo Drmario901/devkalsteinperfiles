@@ -730,7 +730,7 @@ jQuery(document).ready(function ($) {
 
           $("#btnContinueSignUp1/2").css({ display: "block" });
 
-          $("#btnContinueSignUp2").css({ display: "block" });
+          //$("#btnContinueSignUp2").css({ display: "block" });
         } else {
           $(".mailExists").css({ display: "block" });
         }
