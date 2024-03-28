@@ -20,28 +20,28 @@ $resultado = $conexion->query($query);
 ?>
 <style>
     .phone-container {
-        position: relative;
-        display: inline-block;
+        display: inline-flex;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        /* Oculta cualquier elemento hijo que se salga de los bordes */
     }
 
     #countryPrefix {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: 1px solid #ccc;
-        border-right: none;
-        /* Remueve el borde derecho para fusionarlo con el input */
-        height: 38px;
-        /* Ajusta a la altura de tu input */
+        border: none;
+        background: #f9f9f9;
+        /* Color de fondo ligeramente diferente para distinguir */
+        padding: 5px 10px;
+        margin-right: -1px;
+        /* Compensa el borde derecho del input */
         z-index: 10;
     }
 
     #phoneNumber {
-        padding-left: 80px;
-        /* Ajusta este valor según el ancho de tu select */
-        border: 1px solid #ccc;
-        height: 36px;
-        /* Ajusta la altura como necesites */
+        border: none;
+        padding: 5px;
+        flex-grow: 1;
+        /* Asegura que el input ocupe el espacio restante */
     }
 </style>
 
@@ -97,19 +97,15 @@ $resultado = $conexion->query($query);
                                     <label for='telefono' style="margin-left: calc(100px + 2.5rem);"
                                         data-i18n="account:labelNumero">Teléfono</label>
                             </div>
-                            <div>
-                                <div class="phone-container">
-                                    <select id="countryPrefix" onchange="setPhonePrefix()"
-                                        style="border-radius: 5px 0 0 5px; /* Redondea solo las esquinas izquierdas */">
-                                        <option value="">Prefijo</option>
-                                        <option value="+1">+1</option>
-                                        <option value="+34">+34</option>
-                                        <option value="+52">+52</option>
-                                        <!-- Más prefijos aquí -->
-                                    </select>
-                                    <input type="text" id="phoneNumber" placeholder="Tu número de teléfono aquí"
-                                        style="border-radius: 0 5px 5px 0; /* Redondea solo las esquinas derechas */">
-                                </div>
+                            <div class="phone-container">
+                                <select id="countryPrefix" onchange="setPhonePrefix()">
+                                    <option value="">Prefijo</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+34">+34</option>
+                                    <option value="+52">+52</option>
+                                    <!-- Más prefijos aquí -->
+                                </select>
+                                <input type="text" id="phoneNumber" placeholder="Tu número de teléfono aquí">
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
