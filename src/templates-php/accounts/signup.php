@@ -54,9 +54,9 @@ $resultado = $conexion->query($query);
                                     style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em;' readonly>
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
-                            <div class='form-floating input-wrapper' style='margin-top: 1.3rem;'>
+                            <div class='form-floating input-wrapper' style='margin-top: 1.3rem; position: relative;'>
                                 <select class='form-control paisesPrefijos' id='paisesPrefijos'
-                                    style='position: absolute; height: 3rem; font-size: 1.4em; z-index: 10; border: none; background: transparent; outline: none;'>
+                                    style='position: absolute; height: 3rem; font-size: 1.4em; z-index: 10; border: none; background: transparent; outline: none; width: auto; top: 0; left: 0;'>
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
@@ -68,10 +68,10 @@ $resultado = $conexion->query($query);
                                     ?>
                                 </select>
                                 <input type='number' class='form-control' id='telefono' name="telefono"
-                                    placeholder='+000000000000'
-                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-left: 50px;'
+                                    placeholder='Número de teléfono'
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-left: calc(100px + 2em); margin-left: 100px;'
                                     autofocus>
-                                <label for='telefono' style="margin-left: 2.5rem;"
+                                <label for='telefono' style="margin-left: calc(100px + 2.5rem);"
                                     data-i18n="account:labelNumero">Teléfono</label>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
