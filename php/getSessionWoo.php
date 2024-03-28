@@ -1,12 +1,12 @@
 <?php
 session_start();
+require_once __DIR__ . '/../db/conexion.php';
+// $hostdb = "localhost";
+// $userdb = "kalsteinplus";
+// $passdb = "OqA;}vKA94PO";
+// $namedb = "kalsteinplus_he270716_wp_es";
 
-$hostdb = "localhost";
-$userdb = "kalsteinplus";
-$passdb = "OqA;}vKA94PO";
-$namedb = "kalsteinplus_he270716_wp_es";
-
-$conexion = new mysqli($hostdb, $userdb, $passdb, $namedb);
+// $conexion = new mysqli($hostdb, $userdb, $passdb, $namedb);
 
 if ($conexion->connect_error) {
     die("Error: " . $conexion->connect_error);
