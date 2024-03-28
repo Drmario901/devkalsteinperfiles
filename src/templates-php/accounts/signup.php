@@ -71,6 +71,18 @@ if (isset($_GET['search'])) {
                                 <label for="telefono" name="telefono">Telefono</label>
                             </div>
                         </div>
+                        <div class="container c-codeRequest" style='display: none;'>
+                            <p style='font-size: 1.3em; text-align: justify;'>
+                                Como desea que enviemos el código de verificación?</p>
+                            <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
+                                <input type='checkbox' class='form-control' id='telefonoCheck' name="telefonoCheck"
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <label for='telefonoCheck'>Telefono</label>
+                                <input type='checkbox' class='form-control' id='emailCheck' name="emailCheck"
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
+                                <label for='emailCheck'>Correo</label>
+                            </div>
+                        </div>
                         <div class='c-codeVerification' style='display: none;'>
                             <p data-i18n="account:verificationEmail" style='font-size: 1.3em; text-align: justify;'>
                                 Hemos enviado un correo electrónico a <span class='spanEmail'

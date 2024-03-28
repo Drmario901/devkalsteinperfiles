@@ -728,6 +728,8 @@ jQuery(document).ready(function ($) {
 
           $("#btnContinueSignUp").css({ display: "none" });
 
+          $("#btnContinueSignUp1/2").css({ display: "block" });
+
           $("#btnContinueSignUp2").css({ display: "block" });
         } else {
           $(".mailExists").css({ display: "block" });
@@ -885,7 +887,7 @@ jQuery(document).ready(function ($) {
         let data = JSON.parse(respuesta);
 
         if (data.registro === "correcto") {
-          enviarCorreo();
+          $(".c-codeRequest").css({ display: "block" });
         } else {
           console.log("error");
         }
