@@ -18,6 +18,32 @@ $query = "SELECT nombre, prefijo_internacional FROM wp_paises_prefijos ORDER BY 
 $resultado = $conexion->query($query);
 
 ?>
+<style>
+    .phone-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    #countryPrefix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #ccc;
+        border-right: none;
+        /* Remueve el borde derecho para fusionarlo con el input */
+        height: 38px;
+        /* Ajusta a la altura de tu input */
+        z-index: 10;
+    }
+
+    #phoneNumber {
+        padding-left: 80px;
+        /* Ajusta este valor según el ancho de tu select */
+        border: 1px solid #ccc;
+        height: 36px;
+        /* Ajusta la altura como necesites */
+    }
+</style>
 
 <input type="hidden" id="search-product" value="<?php echo $search ?>">
 <script src='https://kit.fontawesome.com/3cff919dc3.js' crossorigin='anonymous'></script>
@@ -72,17 +98,18 @@ $resultado = $conexion->query($query);
                                         data-i18n="account:labelNumero">Teléfono</label>
                             </div>
                             <div>
-                                <label for="countryPrefix">Prefijo del país:</label>
-                                <select id="countryPrefix" onchange="setPhonePrefix()">
-                                    <option value="">Selecciona un prefijo</option>
-                                    <option value="+1">Estados Unidos (+1)</option>
-                                    <option value="+34">España (+34)</option>
-                                    <option value="+52">México (+52)</option>
-                                    <!-- Agrega más países y sus prefijos aquí -->
-                                </select>
-
-                                <label for="phoneNumber">Teléfono:</label>
-                                <input type="text" id="phoneNumber" placeholder="Tu número de teléfono aquí">
+                                <div class="phone-container">
+                                    <select id="countryPrefix" onchange="setPhonePrefix()"
+                                        style="border-radius: 5px 0 0 5px; /* Redondea solo las esquinas izquierdas */">
+                                        <option value="">Prefijo</option>
+                                        <option value="+1">+1</option>
+                                        <option value="+34">+34</option>
+                                        <option value="+52">+52</option>
+                                        <!-- Más prefijos aquí -->
+                                    </select>
+                                    <input type="text" id="phoneNumber" placeholder="Tu número de teléfono aquí"
+                                        style="border-radius: 0 5px 5px 0; /* Redondea solo las esquinas derechas */">
+                                </div>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
