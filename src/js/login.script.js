@@ -107,6 +107,8 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
+    let telefono = $("#telefono").val();
+
     if (user == "") {
       alert("Mail is required");
     } else {
@@ -130,12 +132,19 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(document).on("click", "#btnContinueSignUp4", function () {
+    $("#c-password").css({ display: "none" });
+    $(".c-codeRequest").css({ display: "block" });
+  });
+
   $(document).on("click", "#btnContinueSignUp2", function () {
     let user = $("#emailUser").val();
 
     let userTag = $("#userTag").val();
 
     let password = $("#passwordGrid").val();
+
+    let telefono = $("#telefono").val();
 
     if (password == "") {
       alert("Password is required");
@@ -147,7 +156,7 @@ jQuery(document).ready(function ($) {
         $(".p04").hasClass("aprobado") &&
         $(".p05").hasClass("aprobado")
       ) {
-        registrarCuenta(user, userTag, password);
+        registrarCuenta(user, userTag, password, telefono);
       } else {
         $("#passwordGrid").focus();
 
@@ -724,7 +733,10 @@ jQuery(document).ready(function ($) {
 
           $("#btnContinueSignUp").css({ display: "none" });
 
-          $("#btnContinueSignUp2").css({ display: "block" });
+          $("#btnContinueSignUp4").css({ display: "block" });
+
+          // bueno mi pana bloqueate
+          //$("#btnContinueSignUp2").css({ display: "block" });
         } else {
           $(".mailExists").css({ display: "block" });
         }
@@ -866,13 +878,13 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  function registrarCuenta(consulta, consulta1, consulta2) {
+  function registrarCuenta(consulta, consulta1, consulta2, consulta3) {
     $.ajax({
       url: plugin_dir + "/php/registerAccount.php",
 
       type: "POST",
 
-      data: { consulta, consulta1, consulta2 },
+      data: { consulta, consulta1, consulta2, consulta3 },
     })
 
       .done(function (respuesta) {
@@ -881,7 +893,7 @@ jQuery(document).ready(function ($) {
         let data = JSON.parse(respuesta);
 
         if (data.registro === "correcto") {
-          enviarCorreo();
+          $(".c-codeRequest").css({ display: "block" });
         } else {
           console.log("error");
         }
@@ -926,7 +938,7 @@ jQuery(document).ready(function ($) {
 
   function enviarCorreo(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/testmail.php",
+      url: plugin_dir + "/php/testTwilio.php",
 
       type: "POST",
 

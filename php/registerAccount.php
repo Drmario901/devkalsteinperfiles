@@ -10,6 +10,7 @@ require __DIR__ . '/conexion.php';
 $email = $_POST['consulta'];
 $userTag = $_POST['consulta1'];
 $password = $_POST['consulta2'];
+$telefono = $_POST['consulta3'];
 
 $email = $conexion->real_escape_string($email);
 $userTag = $conexion->real_escape_string($userTag);
@@ -21,8 +22,8 @@ if ($result !== FALSE) {
     $emailExists = $result->num_rows > 0;
 
     if (!$emailExists) {
-        $register ="INSERT INTO wp_account (account_aid, account_rol_aid, account_correo, account_contraseña, account_status, account_created_at, user_tag)
-        VALUES (NULL,  0,'$email', '$passwordEncrypted', 'pending', CURRENT_TIMESTAMP, '$userTag');";
+        $register = "INSERT INTO wp_account (account_aid, account_rol_aid, account_correo, account_contraseña, account_status, account_created_at, user_tag, account_telefono)
+        VALUES (NULL,  0,'$email', '$passwordEncrypted', 'pending', CURRENT_TIMESTAMP, '$userTag', $telefono);";
 
         if ($conexion->query($register) === TRUE) {
             $registro = "correcto";
@@ -31,17 +32,18 @@ if ($result !== FALSE) {
             echo "Error in INSERT query: " . $conexion->error;
         }
     } else {
-        $registro = "correcto"; 
+        $registro = "correcto";
     }
 } else {
     echo "Error in SELECT query: " . $conexion->error;
-    exit; 
+    exit;
 }
 
 $numRandom = mt_rand(000000, 999999);
 $_SESSION["codeVerification"] = $numRandom;
 $_SESSION["emailAccount"] = $email;
 $_SESSION["codeTimeOut"] = time();
+$_SESSION["telefono"] = $telefono;
 
 $datos = array(
     'registro' => $registro
