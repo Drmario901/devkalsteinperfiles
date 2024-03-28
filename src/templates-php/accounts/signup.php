@@ -14,7 +14,7 @@ if (isset($_GET['search'])) {
     session_write_close();
 }
 
-$query = "SELECT nombre, prefijo_internacional FROM wp_paises_prefijo ORDER BY nombre ASC";
+$query = "SELECT nombre, prefijo_internacional FROM wp_paises_prefijos ORDER BY nombre ASC";
 $resultado = $conexion->query($query);
 
 ?>
