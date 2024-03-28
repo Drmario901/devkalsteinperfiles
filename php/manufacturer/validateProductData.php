@@ -3,7 +3,7 @@
     $weight, $length, $width, $height,
     $weight_pa, $length_pa, $width_pa, $height_pa, $pa_type,
     $price, $currency,
-    $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage){
+    $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage, $gibson){
 
         $err_msg = "";
 
@@ -195,6 +195,8 @@
     $discount_2        = $_POST['discount_2'];
     $discount_2_amount = $_POST['discount_2_amount'];
 
+    $gibson = $_POST['gibson'];
+
 
 
     $accessoryData  = $_POST['accessoryData'];
@@ -236,5 +238,5 @@
             $pWe, $pLe, $pWi, $pHe,
             $pWePa, $pLePa, $pWiPa, $pHePa, $pPType,
             $pPrice, $pCurrency,
-            $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage);
+            $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage, $gibson);
 ?>
