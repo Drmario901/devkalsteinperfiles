@@ -71,6 +71,19 @@ $resultado = $conexion->query($query);
                                     <label for='telefono' style="margin-left: calc(100px + 2.5rem);"
                                         data-i18n="account:labelNumero">Teléfono</label>
                             </div>
+                            <div>
+                                <label for="countryPrefix">Prefijo del país:</label>
+                                <select id="countryPrefix" onchange="setPhonePrefix()">
+                                    <option value="">Selecciona un prefijo</option>
+                                    <option value="+1">Estados Unidos (+1)</option>
+                                    <option value="+34">España (+34)</option>
+                                    <option value="+52">México (+52)</option>
+                                    <!-- Agrega más países y sus prefijos aquí -->
+                                </select>
+
+                                <label for="phoneNumber">Teléfono:</label>
+                                <input type="text" id="phoneNumber" placeholder="Tu número de teléfono aquí">
+                            </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
                                     placeholder='name@example.com'
