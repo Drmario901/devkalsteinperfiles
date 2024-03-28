@@ -2,7 +2,7 @@
     $response = array();
 
     if (isset($_POST['model'])){
-        require __DIR__ . '/conexion.php';
+        require_once __DIR__ . '/../db/conexion.php';
 
         $model = $_POST['model'];
 
