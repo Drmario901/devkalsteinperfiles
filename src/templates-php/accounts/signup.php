@@ -85,7 +85,7 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container">
-                                <select id="countryPrefix" onchange="setPhonePrefix()">
+                                <select id="countryPrefix">
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
