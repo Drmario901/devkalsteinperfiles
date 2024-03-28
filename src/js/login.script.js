@@ -136,6 +136,7 @@ jQuery(document).ready(function ($) {
     $("#c-password").css({ display: "none" });
     $(".c-codeRequest").css({ display: "block" });
     $("#btnContinueSignUp2").css({ display: "block" });
+    $("#btnContinueSignUp4").css({ display: "none" });
   });
 
   $(document).on("click", "#btnContinueSignUp2", function () {
@@ -894,7 +895,16 @@ jQuery(document).ready(function ($) {
         let data = JSON.parse(respuesta);
 
         if (data.registro === "correcto") {
-          $(".c-codeRequest").css({ display: "block" });
+          // Verifica si el botón de radio de teléfono está seleccionado
+          if ($('input[name="codeSelect"]:checked').val() === "telefonoCheck") {
+            enviarCodigoTelefono();
+          }
+          // Verifica si el botón de radio de correo está seleccionado
+          else if (
+            $('input[name="codeSelect"]:checked').val() === "emailCheck"
+          ) {
+            enviarCorreo();
+          }
         } else {
           console.log("error");
         }
@@ -938,6 +948,51 @@ jQuery(document).ready(function ($) {
   }
 
   function enviarCorreo(consulta) {
+    $.ajax({
+      url: plugin_dir + "/php/testmail.php",
+
+      type: "POST",
+
+      data: { consulta },
+    })
+
+      .done(function (respuesta) {
+        var path = $(location).attr("pathname");
+
+        if (path == "/registrarse/") {
+          $(".card-title").text("Available mail");
+        } else {
+        }
+
+        $(".redirectLogin").css({ display: "none" });
+
+        $(".c-email").css({ display: "none" });
+
+        $("#c-password").css({ display: "none" });
+
+        $(".emailError").css({ display: "none" });
+
+        $(".availableMail").css({ display: "none" });
+
+        $("#btnContinueSignUp").css({ display: "none" });
+
+        $("#btnContinueSignUp2").css({ display: "none" });
+
+        $("#btnContinueSignUp3").css({ display: "block" });
+
+        $(".c-codeVerification").css({ display: "block" });
+
+        $(".spanEmail").text($("#emailUser").val());
+
+        $("#txtCodeVerification").focus();
+      })
+
+      .fail(function () {
+        console.log("error");
+      });
+  }
+
+  function enviarCodigoTelefono(consulta) {
     $.ajax({
       url: plugin_dir + "/php/testTwilio.php",
 
