@@ -37,13 +37,6 @@
 
                     <div class="d-flex flex-row">
                         <li>
-                            <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
-                            <span class="material-symbols-rounded">
-                                monetization_on
-                                </span>
-                            </a>
-                        </li>
-                        <li>
                             <a href='https://dev.kalstein.plus/plataforma/index.php/support/inbox/' class='navbar-link icon-box'>
                                 <span class='material-symbols-rounded icon position-relative'>
                                     mail
