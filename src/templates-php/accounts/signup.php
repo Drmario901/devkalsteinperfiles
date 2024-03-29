@@ -161,6 +161,10 @@ $resultado = $conexion->query($query);
                             </p>
                             <p id="timer" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>10 segundos
                                 restantes</p>
+
+                            <p id="nuevoMetodo"
+                                style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em; font-weight: 900; display: none;'>
+                                Sigues sin recibir el codigo? Prueba con otro método</p>
                         </div>
 
                         <!-- Codigo para email  !-->
@@ -193,8 +197,8 @@ $resultado = $conexion->query($query);
                             <p id="timerAlt" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>60 segundos
                                 restantes</p>
                             <p id="nuevoMetodo"
-                                style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em; font-weight: 900; display: none;'>Sigues
-                                sin recibir el codigo? Prueba con otro método</p>
+                                style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em; font-weight: 900; display: none;'>
+                                Sigues sin recibir el codigo? Prueba con otro método</p>
 
                         </div>
                         <button type='button' class='btn'
