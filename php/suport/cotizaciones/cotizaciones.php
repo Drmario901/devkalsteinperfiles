@@ -21,8 +21,10 @@ $resultado = $conexion->query($consulta);
 if ($resultado->num_rows > 0) {
     // Iterar a través de los resultados
     while ($fila = $resultado->fetch_assoc()) {
-        echo $fila['cotizacion_total'] . "<br>";
-        echo $fila['cotizacion_divisa'] . "<br>";
+       $cotizacionTotal = $fila['cotizacion_total'] . "<br>";
+       echo $cotizacionTotal;
+       $cotizacionDivisa = $fila['cotizacion_divisa'] . "<br>";
+       echo $cotizacionDivisa;
     }
 } else {
     echo "No se encontraron resultados.";

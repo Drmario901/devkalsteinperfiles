@@ -19,6 +19,8 @@
         $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
     }
 
+    include __DIR__. '/../../../php/suport/cotizaciones/cotizaciones.php';
+
 ?>
 <header class="header" data-header>
     <div class="container">
@@ -41,7 +43,7 @@
                             <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column; text-align: center;">
                                 monetization_on
                                 <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
-                                    Por cobrar <strong style="color: red;">$0.00</strong>
+                                    Por cobrar <strong style="color: red;">$<?php echo $cotizacionTotal;?></strong>
                                 </p>
                                 <p style="font-size: 0.5rem; text-align: center; width: 100%;">
                                     Cobrado <strong style="color: green;">$0.00</strong>
