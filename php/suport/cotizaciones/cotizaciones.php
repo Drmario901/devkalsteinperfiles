@@ -14,7 +14,7 @@ echo $acc_id . 'la cuenta';
  
 $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_user = '" . $acc_id . "' AND cotizacion_id_remitente != 'KALSTEIN-INTERNAL'";
 
-echo 'hola';
+echo 'holaaaaas';
 $resultado = $conexion->query($consulta);
 
 // Verificar si la consulta devolvió filas
