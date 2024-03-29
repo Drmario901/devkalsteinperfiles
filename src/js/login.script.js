@@ -700,15 +700,14 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(document).on("click", "#newCodeTelefono", function () {
-    reenviarCodigoTelefono();
-
-    $(".codeExpired").css({ display: "none" });
-  });
-
   $(document).on("click", ".newCode", function () {
-    reenviarCorreo();
-
+    if ($('input[name="codeSelect"]:checked').val() === "telefonoCheck") {
+      reenviarCodigoTelefono();
+    }
+    // Verifica si el botón de radio de correo está seleccionado
+    else if ($('input[name="codeSelect"]:checked').val() === "emailCheck") {
+      reenviarCorreo();
+    }
     $(".codeExpired").css({ display: "none" });
   });
 
