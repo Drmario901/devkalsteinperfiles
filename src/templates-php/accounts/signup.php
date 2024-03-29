@@ -85,11 +85,11 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container">
-                                <select id="countryPrefix">
+                                <select id="countryPrefix" onclick="showAllOptions()">
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option value='" . $fila['prefijo_internacional'] . "' data-nombre='" . $fila['nombre'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
+                                            echo "<option value='" . htmlspecialchars($fila['prefijo_internacional'], ENT_QUOTES) . "' data-nombre='" . htmlspecialchars($fila['nombre'], ENT_QUOTES) . "'>" . htmlspecialchars($fila['nombre'], ENT_QUOTES) . " " . htmlspecialchars($fila['prefijo_internacional'], ENT_QUOTES) . "</option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
@@ -186,16 +186,32 @@ $resultado = $conexion->query($query);
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var select = document.getElementById('countryPrefix');
+    var initialOptions = []; // Para almacenar las opciones originales
+    var select = document.getElementById('countryPrefix');
 
-        select.addEventListener('change', function () {
-            var selectedOption = this.options[this.selectedIndex];
-            var prefijo = selectedOption.value;
-            // Limpiar el select
-            this.innerHTML = '';
-            // Añadir la opción seleccionada con solo el prefijo
-            this.innerHTML = '<option value="' + prefijo + '">' + prefijo + '</option>';
-        });
+    // Guardar las opciones originales
+    for (var i = 0; i < select.options.length; i++) {
+        initialOptions.push(select.options[i].cloneNode(true));
+    }
+
+    select.addEventListener('change', function () {
+        var selectedValue = this.value;
+        var selectedText = this.options[this.selectedIndex].getAttribute('data-nombre') + " " + selectedValue;
+        this.innerHTML = ''; // Limpiar el select
+        var newOption = document.createElement('option');
+        newOption.value = selectedValue;
+        newOption.text = selectedValue;
+        newOption.selected = true;
+        this.appendChild(newOption); // Añadir la opción seleccionada con solo el prefijo
     });
+
+    function showAllOptions() {
+        // Restaurar las opciones originales si solo hay una opción (el prefijo seleccionado)
+        if (select.options.length <= 1) {
+            select.innerHTML = ''; // Limpiar el select
+            for (var option of initialOptions) {
+                select.appendChild(option.cloneNode(true));
+            }
+        }
+    }
 </script>
