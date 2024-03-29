@@ -11,8 +11,8 @@ require_once __DIR__ . '/../../../db/conexion.php';
 $acc_id = $_SESSION['emailAccount'];
 
 echo $acc_id . 'la cuenta';
-
-$consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '" . $acc_id . "'";
+ 
+$consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_user = '" . $acc_id . "' AND cotizacion_id_remitente != 'KALSTEIN-INTERNAL'";
 
 echo 'hola';
 $resultado = $conexion->query($consulta);
