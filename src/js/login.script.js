@@ -1012,8 +1012,6 @@ jQuery(document).ready(function ($) {
       url: plugin_dir + "/php/newCodeValidation.php",
 
       type: "POST",
-
-      data: { consulta },
     })
 
       .done(function (respuesta) {
@@ -1120,8 +1118,6 @@ jQuery(document).ready(function ($) {
       url: plugin_dir + "/php/newCodeValidation.php",
 
       type: "POST",
-
-      data: { consulta },
     })
 
       .done(function (respuesta) {
