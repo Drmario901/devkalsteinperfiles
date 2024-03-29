@@ -1095,7 +1095,11 @@ jQuery(document).ready(function ($) {
 
     $("#btnContinueSignUp2").css({ display: "block" });
 
+    $("#btnContinueSignUp3").css({ display: "none" });
+
     $("#btnContinueSignUp4").css({ display: "none" });
+
+    $("#nuevoMetodo").css({ display: "none" });
 
     fromNewMethod = true;
   });
