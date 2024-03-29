@@ -1009,7 +1009,7 @@ jQuery(document).ready(function ($) {
 
   function reenviarCodigoTelefono() {
     $.ajax({
-      url: plugin_dir + "/php/testTwilio.php",
+      url: plugin_dir + "/php/newCodeValidation.php",
 
       type: "POST",
 
@@ -1017,15 +1017,7 @@ jQuery(document).ready(function ($) {
     })
 
       .done(function (respuesta) {
-        iziToast.success({
-          title: "Éxito",
-
-          message: "Codigo reenviado",
-
-          position: "topRight",
-        });
-
-        timer();
+        enviarCodigoTelefono();
       })
 
       .fail(function () {
@@ -1074,6 +1066,14 @@ jQuery(document).ready(function ($) {
         $(".spanEmail").text($("#emailUser").val());
 
         $("#txtCodeVerification").focus();
+
+        iziToast.success({
+          title: "Éxito",
+
+          message: alertsTranslations.newCodeSent,
+
+          position: "center",
+        });
       })
 
       .fail(function () {
