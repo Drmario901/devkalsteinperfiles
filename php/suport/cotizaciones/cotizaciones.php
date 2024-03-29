@@ -13,7 +13,7 @@ require_once __DIR__ . '/../../../db/conexion.php';
 $acc_id = $_SESSION['emailAccount'];
 
 
-$consulta = "SELECT cotizacion_total FROM wp_cotizaciones WHERE cotizacion_id_remitente = '$acc_id'";
+$consulta = "SELECT cotizacion_total FROM wp_cotizaciones WHERE cotizacion_id_remitente = '" . $acc_id . "'";
 
 echo 'hola';
 $resultado = $conexion->query($consulta);
