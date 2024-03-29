@@ -68,7 +68,7 @@
                         </li>
                         <li>
                             <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
-                                <span class='material-symbols-rounded  icon'>settings</span>
+                                <span class='material-symbols-rounded icon'>settings</span>
                             </a>
                         </li>
                         <li>
