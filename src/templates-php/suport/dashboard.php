@@ -6,7 +6,7 @@
         
         include 'navdar.php';
         
-        require __DIR__.'/../../../db/conexion.php';
+        require_once __DIR__.'/../../../db/conexion.php';
                     
         $acc_id = $_SESSION['emailAccount'];
         $row = $conexion->query("SELECT account_nombre, account_apellido, account_url_image_perfil FROM wp_account WHERE account_correo = '$acc_id'")->fetch_assoc();
