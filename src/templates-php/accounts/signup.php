@@ -183,9 +183,14 @@ $resultado = $conexion->query($query);
                                 <p data-i18n="account:codigoNoValido" style='color: #de3a46; font-weight: bold;'>El
                                     código de validación no es válido.</p>
                             </div>
-                            <p data-i18n="account:nuevoCodigo" class='newCode'
-                                style='cursor: pointer; margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'>
-                                Solicite aquí un nuevo código de validación</p>
+                            <p style='font-size: 1em; text-align: justify;'>¿Aun no ha recibido el código de
+                                verificación?</p>
+                            <p id="newCode" data-i18n="account:nuevoCodigo" class='newCode'
+                                style='cursor: not-allowed; margin-top: 0.5rem; font-size: 1em;'>
+                                Puede solicitar un nuevo código al finalizar el temporizador</p>
+                            </p>
+                            <p id="timer" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>10 segundos
+                                restantes</p>
                         </div>
                         <button type='button' class='btn'
                             style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;'

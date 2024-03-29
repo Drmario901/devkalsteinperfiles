@@ -988,6 +988,7 @@ jQuery(document).ready(function ($) {
         $("#btnContinueSignUp3").css({ display: "block" });
 
         $(".c-codeVerification").css({ display: "block" });
+        timer();
 
         $(".spanEmail").text($("#emailUser").val());
 
@@ -1068,7 +1069,7 @@ jQuery(document).ready(function ($) {
         iziToast.success({
           title: "Éxito",
 
-          message: alertsTranslations.newCodeSent,
+          message: "Codigo enviado correctamente",
 
           position: "center",
         });
