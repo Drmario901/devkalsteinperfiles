@@ -40,7 +40,7 @@
                             <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
                             <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column;">
                                 monetization_on
-                                <p style="font-size: 1rem;">
+                                <p style="font-size: 0.7rem; text-align: center;">
                                     0.00
                                 </p>
                             </span>
