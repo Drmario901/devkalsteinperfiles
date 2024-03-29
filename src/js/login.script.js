@@ -1033,7 +1033,8 @@ jQuery(document).ready(function ($) {
 
         $("#btnContinueSignUp3").css({ display: "block" });
 
-        $(".c-codeVerification").css({ display: "block" });
+        $(".c-codeVerificationTelefono").css({ display: "block" });
+        timer();
 
         $(".spanEmail").text($("#emailUser").val());
 
@@ -1043,6 +1044,40 @@ jQuery(document).ready(function ($) {
       .fail(function () {
         console.log("error");
       });
+  }
+
+  function timer() {
+    var $countdown = $("#timer");
+    var $newCode = $(".newCode");
+    var countdown = 60; // Tiempo inicial en segundos
+
+    // Desactivar temporalmente la opción de solicitar un nuevo código
+    $newCode.css({
+      "pointer-events": "none",
+      cursor: "not-allowed",
+    });
+
+    var intervalId = setInterval(function () {
+      countdown--;
+      $countdown.text(countdown + " segundos restantes");
+      if (countdown <= 0) {
+        clearInterval(intervalId);
+        $countdown.text(""); // Limpiar el contador cuando llegue a 0
+        // Permitir al usuario solicitar un nuevo código
+        $newCode.css({
+          "pointer-events": "auto",
+          cursor: "pointer",
+        });
+      }
+    }, 1000);
+
+    $newCode.click(function () {
+      if ($(this).css("pointer-events") === "auto") {
+        // Aquí puedes colocar la lógica para manejar la solicitud de un nuevo código.
+        console.log("Solicitando un nuevo código...");
+        // Reiniciar el contador si es necesario
+      }
+    });
   }
 
   function reenviarCorreo(consulta) {
