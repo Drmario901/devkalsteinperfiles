@@ -37,8 +37,8 @@
             <div class="container">
                 <ul class="navbar-list">
 
-                    <div class="d-flex flex-row" style="display: flex; flex-direction: column; text-align: center;">
-                    <li>
+                    <div class="d-flex flex-row" >
+                    <li style="display: flex; flex-direction: column; text-align: center;">
                         <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
                         <span class="material-symbols-rounded icon" >
                             monetization_on
