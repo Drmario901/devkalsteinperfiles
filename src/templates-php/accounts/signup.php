@@ -131,6 +131,36 @@ $resultado = $conexion->query($query);
                                     style="display: inline-block; vertical-align: middle; padding-right: 20px;">Correo</label><br>
                             </div>
                         </div>
+                        <!-- Codigo para telefono  !-->
+                        <div class='c-codeVerificationTelefono' style='display: none;'>
+                            <p data-i18n="account:verificationEmail" style='font-size: 1.3em; text-align: justify;'>
+                                Hemos enviado el codigo de verificación a su numero de teléfono.</p>
+                            <hr>
+                            <div class='form-floating'>
+                                <input type='text' class='form-control' id='txtCodeVerification'
+                                    placeholder='name@example.com'
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'
+                                    autofocus>
+                                <label for='txtCodeVerification' data-i18n="account:labelCodigo">Verificación de
+                                    códigos</label>
+                            </div>
+                            <div class='codeExpired' style='display: none;'>
+                                <p style='color: #de3a46; font-weight: bold;' data-i18n="account:codigoCaducado">El
+                                    código de validación ha caducado, solicite un nuevo código.</p>
+                            </div>
+                            <div class='codeError' style='display: none;'>
+                                <p data-i18n="account:codigoNoValido" style='color: #de3a46; font-weight: bold;'>El
+                                    código de validación no es válido.</p>
+                            </div>
+                            <p data-i18n="account:nuevoCodigo" class='newCode'
+                                style='cursor: not-allowed; margin-top: 0.5rem; margin-left: 10px; font-size: 1.2em;'>
+                                Solicite aquí un nuevo código de validación
+                            </p>
+                            <p id="timer" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>60 segundos
+                                restantes</p>
+                        </div>
+
+                        <!-- Codigo para email  !-->
                         <div class=' c-codeVerification' style='display: none;'>
                             <p data-i18n="account:verificationEmail" style='font-size: 1.3em; text-align: justify;'>
                                 Hemos enviado el codigo de verificación a su metodo seleccionado.</p>
