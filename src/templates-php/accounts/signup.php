@@ -134,7 +134,8 @@ $resultado = $conexion->query($query);
                         <!-- Codigo para telefono  !-->
                         <div class='c-codeVerificationTelefono' style='display: none;'>
                             <p data-i18n="" style='font-size: 1.3em; text-align: justify;'>
-                                Hemos enviado el codigo de verificación a su numero de teléfono.</p>
+                                Hemos enviado el codigo de verificación a su numero de teléfono <span
+                                    id="nroTel"></span></p>
                             <hr>
                             <div class='form-floating'>
                                 <input type='text' class='form-control' id='txtCodeVerification'
