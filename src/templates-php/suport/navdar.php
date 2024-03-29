@@ -38,12 +38,13 @@
                 <ul class="navbar-list">
 
                     <div class="d-flex flex-row" >
-                    <li style="display: flex; flex-direction: column; text-align: center;">
+                    <li >
                         <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
                         <span class="material-symbols-rounded icon" >
                             monetization_on
                         </span>
-                            <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
+                        <div style="display: flex; flex-direction: column; text-align: center;">
+                        <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
                                 Pendienteee <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente;?></strong>
                             </p>
                             <p style="font-size: 0.5rem; text-align: center; width: 100%;">
@@ -52,7 +53,7 @@
                             <p style="font-size: 0.5rem; text-align: center; width: 100%;">
                                 Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalUSDProcesado;?></strong>
                             </p>
-                       
+                        </div>
                         </a>
                     </li>
                         <li>
