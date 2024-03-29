@@ -75,7 +75,7 @@
     "correoDisponible": "Correo disponible",
     "correoRegistrado": "Este correo electrónico ya está registrado, intente iniciar sesión.",
     "labelUsuario": "Etiqueta de usuario",
-    "verificationEmail": "Hemos enviado un correo electrónico a",
+    "verificationEmail": "Hemos enviado el código a su correo electrónico",
     "botonGuardar": "Guardar",
     "Hemos enviado un correo electrónico a con el código de verificación.": "Hemos enviado un correo electrónico a con el código de verificación.",
     "labelCodigo": "Verificación de códigos",

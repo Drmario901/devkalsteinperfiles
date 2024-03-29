@@ -75,7 +75,7 @@
     "correoDisponible": "E-mail disponible",
     "correoRegistrado": "Cet e-mail est déjà enregistré, essayez de vous connecter.",
     "labelUsuario": "Tag de l'utilisateur",
-    "verificationEmail": "Nous avons envoyé un e-mail à",
+    "verificationEmail": "Nous avons envoyé le code à votre adresse e-mail.",
     "botonGuardar": "Enregistrer",
     "Hemos enviado un correo electrónico a con el código de verificación.": "Nous avons envoyé un e-mail à avec le code de vérification.",
     "labelCodigo": "Code de vérification",

@@ -1118,7 +1118,7 @@ jQuery(document).ready(function ($) {
 
   function timerAlt() {
     var $countdown = $("#timerAlt");
-    var $newCode = $(".newCodeAlt");
+    var $newCode = $(".newCode");
     var countdown = 60; // Tiempo inicial en segundos
 
     // Desactivar temporalmente la opción de solicitar un nuevo código
