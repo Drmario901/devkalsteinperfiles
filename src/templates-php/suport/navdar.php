@@ -38,12 +38,12 @@
                     <div class="d-flex flex-row">
                     <li>
                             <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
-                            <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column;">
+                            <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column; text-align: center;">
                                 monetization_on
-                                <p style="font-size: 0.7rem; text-align: center; width: 100%;">
+                                <p style="font-size: 0.5rem; text-align: center; width: 100%;">
                                     Por cobrar $0.00
                                 </p>
-                                <p style="font-size: 0.7rem; text-align: center; width: 100%;">
+                                <p style="font-size: 0.5rem; text-align: center; width: 100%;">
                                     Cobrado $0.00
                                 </p>
                             </span>
