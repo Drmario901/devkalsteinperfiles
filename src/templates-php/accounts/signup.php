@@ -192,6 +192,10 @@ $resultado = $conexion->query($query);
                             </p>
                             <p id="timerAlt" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>60 segundos
                                 restantes</p>
+                            <p id="nuevoMetodo"
+                                style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em; font-weight: 900;'>Sigues
+                                sin recibir el codigo? Prueba con otro método</p>
+
                         </div>
                         <button type='button' class='btn'
                             style='background-color: #213280; color: #fff; margin-top:1rem; width: 100%; height: 3rem;'
