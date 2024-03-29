@@ -44,7 +44,7 @@
                             monetization_on
                         </span>
                             <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
-                                Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente;?></strong>
+                                Pendienteee <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente;?></strong>
                             </p>
                             <p style="font-size: 0.5rem; text-align: center; width: 100%;">
                                 Procesar <strong style="color: #0000ff;">$<?php echo $sumaTotalUSDProcesar;?></strong>
