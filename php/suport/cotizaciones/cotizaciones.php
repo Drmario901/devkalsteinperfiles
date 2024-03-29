@@ -12,7 +12,7 @@ $acc_id = $_SESSION['emailAccount'];
 
 echo $acc_id . 'la cuenta';
 
-$consulta = "SELECT cotizacion_total FROM wp_cotizacion WHERE cotizacion_id_remitente = '" . $acc_id . "'";
+$consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '" . $acc_id . "'";
 
 echo 'hola';
 $resultado = $conexion->query($consulta);
@@ -22,6 +22,7 @@ if ($resultado->num_rows > 0) {
     // Iterar a través de los resultados
     while ($fila = $resultado->fetch_assoc()) {
         echo $fila['cotizacion_total'] . "<br>";
+        echo $fila['cotizacion_divisa'] . "<br>";
     }
 } else {
     echo "No se encontraron resultados.";
