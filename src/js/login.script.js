@@ -1088,6 +1088,7 @@ jQuery(document).ready(function ($) {
     var $countdown = $("#timer");
     var $newCode = $(".newCode");
     var countdown = 60; // Tiempo inicial en segundos
+    var newMethod = $("#nuevoMetodo");
 
     // Desactivar temporalmente la opción de solicitar un nuevo código
     $newCode.css({
@@ -1103,6 +1104,11 @@ jQuery(document).ready(function ($) {
         $countdown.text(""); // Limpiar el contador cuando llegue a 0
         // Permitir al usuario solicitar un nuevo código
         $newCode.css({
+          "pointer-events": "auto",
+          cursor: "pointer",
+        });
+        newMethod.css({
+          display: "block",
           "pointer-events": "auto",
           cursor: "pointer",
         });
@@ -1122,6 +1128,7 @@ jQuery(document).ready(function ($) {
     var $countdown = $("#timerAlt");
     var $newCode = $(".newCode");
     var countdown = 60; // Tiempo inicial en segundos
+    var newMethod = $("#nuevoMetodo");
 
     // Desactivar temporalmente la opción de solicitar un nuevo código
     $newCode.css({
@@ -1137,6 +1144,11 @@ jQuery(document).ready(function ($) {
         $countdown.text(""); // Limpiar el contador cuando llegue a 0
         // Permitir al usuario solicitar un nuevo código
         $newCode.css({
+          "pointer-events": "auto",
+          cursor: "pointer",
+        });
+        newMethod.css({
+          display: "block",
           "pointer-events": "auto",
           cursor: "pointer",
         });
