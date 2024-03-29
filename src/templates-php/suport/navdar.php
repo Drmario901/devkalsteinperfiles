@@ -39,19 +39,21 @@
 
                     <div class="d-flex flex-row">
                     <li>
-                            <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
-                            <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column; text-align: center;">
-                                monetization_on
-                                <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
-                                    Por cobrar <strong style="color: red;">$<?php echo $sumaTotalUSD;?></strong>
-                                </p>
-                                <p style="font-size: 0.5rem; text-align: center; width: 100%;">
-                                    Cobrado <strong style="color: green;">$0.00</strong>
-                                </p>
-                            </span>
-
-                            </a>
-                        </li>
+                        <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
+                        <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column; text-align: center;">
+                            monetization_on
+                            <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
+                                Pendiente <strong style="color: red;">$<?php echo $sumaTotalUSDPendiente;?></strong>
+                            </p>
+                            <p style="font-size: 0.5rem; text-align: center; width: 100%;">
+                                Procesar <strong style="color: green;">$<?php echo $sumaTotalUSDProcesar;?></strong>
+                            </p>
+                            <p style="font-size: 0.5rem; text-align: center; width: 100%;">
+                                Cobrado <strong style="color: green;">$<?php echo $sumaTotalUSDProcesado;?></strong>
+                            </p>
+                        </span>
+                        </a>
+                    </li>
                         <li>
                             <a href='https://dev.kalstein.plus/plataforma/index.php/support/inbox/' class='navbar-link icon-box'>
                                 <span class='material-symbols-rounded icon position-relative'>
