@@ -38,7 +38,7 @@
                     <div class="d-flex flex-row">
                     <li>
                             <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
-                            <span class="material-symbols-rounded icon position-relative" style="display: flex;">
+                            <span class="material-symbols-rounded icon" style="display: flex;">
                                 monetization_on
                                 <span>
                                     0.00
