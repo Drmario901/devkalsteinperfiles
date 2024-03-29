@@ -1117,7 +1117,7 @@ jQuery(document).ready(function ($) {
   }
 
   function timerAlt() {
-    var $countdown = $("#timer");
+    var $countdown = $("#timerAlt");
     var $newCode = $(".newCodeAlt");
     var countdown = 60; // Tiempo inicial en segundos
 
