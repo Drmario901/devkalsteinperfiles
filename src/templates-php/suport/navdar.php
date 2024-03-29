@@ -43,7 +43,7 @@
                             <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column; text-align: center;">
                                 monetization_on
                                 <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
-                                    Por cobrar <strong style="color: red;">$<?php echo $cotizacionTotal;?></strong>
+                                    Por cobrar <strong style="color: red;">$<?php echo $sumaTotalUSD;?></strong>
                                 </p>
                                 <p style="font-size: 0.5rem; text-align: center; width: 100%;">
                                     Cobrado <strong style="color: green;">$0.00</strong>
