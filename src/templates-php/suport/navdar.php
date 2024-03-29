@@ -41,10 +41,10 @@
                             <span class="material-symbols-rounded icon" style="display: flex; flex-direction: column; text-align: center;">
                                 monetization_on
                                 <p style="font-size: 0.5rem; text-align: center; width: 100%; margin-top: 2px;">
-                                    Por cobrar $0.00
+                                    Por cobrar <strong style="color: red;">$0.00</strong>
                                 </p>
                                 <p style="font-size: 0.5rem; text-align: center; width: 100%;">
-                                    Cobrado $0.00
+                                    Cobrado <strong style="color: green;">$0.00</strong>
                                 </p>
                             </span>
 
