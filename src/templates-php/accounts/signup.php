@@ -89,7 +89,7 @@ $resultado = $conexion->query($query);
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
+                                            echo "<option value='" . $fila['prefijo_internacional'] . "' data-nombre='" . $fila['nombre'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
@@ -98,6 +98,7 @@ $resultado = $conexion->query($query);
                                 </select>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789">
                             </div>
+
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
                                     placeholder='name@example.com'
@@ -183,3 +184,18 @@ $resultado = $conexion->query($query);
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var select = document.getElementById('countryPrefix');
+
+        select.addEventListener('change', function () {
+            var selectedOption = this.options[this.selectedIndex];
+            var prefijo = selectedOption.value;
+            // Limpiar el select
+            this.innerHTML = '';
+            // Añadir la opción seleccionada con solo el prefijo
+            this.innerHTML = '<option value="' + prefijo + '">' + prefijo + '</option>';
+        });
+    });
+</script>
