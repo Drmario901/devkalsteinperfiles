@@ -1084,6 +1084,26 @@ jQuery(document).ready(function ($) {
       });
   }
 
+  let fromNewMethod = false;
+
+  $(document).on("click", "#nuevoMetodo", function () {
+    $(".c-codeVerification").css({ display: "none" });
+
+    $(".c-codeVerificationTelefono").css({ display: "none" });
+
+    $(".c-codeRequest").css({ display: "block" });
+
+    $("#btnContinueSignUp2").css({ display: "block" });
+
+    $("#btnContinueSignUp3").css({ display: "none" });
+
+    $("#btnContinueSignUp4").css({ display: "none" });
+
+    $("#nuevoMetodo").css({ display: "none" });
+
+    fromNewMethod = true;
+  });
+
   function timer() {
     var $countdown = $("#timer");
     var $newCode = $(".newCode");
