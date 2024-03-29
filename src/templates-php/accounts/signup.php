@@ -154,11 +154,11 @@ $resultado = $conexion->query($query);
                             </div>
                             <p style='font-size: 1em; text-align: justify;'>¿Aun no ha recibido el código de
                                 verificación?</p>
-                            <p data-i18n="account:nuevoCodigo" class='newCode'
+                            <p id="newCodeTelefono" data-i18n="account:nuevoCodigo" class='newCodeTelefono'
                                 style='cursor: not-allowed; margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>
                                 Puede solicitar un nuevo código al finalizar el temporizador</p>
                             </p>
-                            <p id="timer" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>60 segundos
+                            <p id="timer" style='margin-top: 0.5rem; margin-left: 10px; font-size: 1em;'>10 segundos
                                 restantes</p>
                         </div>
 

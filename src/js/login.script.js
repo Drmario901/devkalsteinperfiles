@@ -700,6 +700,12 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(document).on("click", "#newCodeTelefono", function () {
+    reenviarCodigoTelefono();
+
+    $(".codeExpired").css({ display: "none" });
+  });
+
   $(document).on("click", ".newCode", function () {
     reenviarCorreo();
 
@@ -1002,6 +1008,32 @@ jQuery(document).ready(function ($) {
     phoneInput.setSelectionRange(prefix.length, prefix.length);
   }
 
+  function reenviarCodigoTelefono() {
+    $.ajax({
+      url: plugin_dir + "/php/testTwilio.php",
+
+      type: "POST",
+
+      data: { consulta },
+    })
+
+      .done(function (respuesta) {
+        iziToast.success({
+          title: "Éxito",
+
+          message: "Codigo reenviado",
+
+          position: "topRight",
+        });
+
+        timer();
+      })
+
+      .fail(function () {
+        console.log("error");
+      });
+  }
+
   function enviarCodigoTelefono(consulta) {
     $.ajax({
       url: plugin_dir + "/php/testTwilio.php",
@@ -1053,7 +1085,7 @@ jQuery(document).ready(function ($) {
   function timer() {
     var $countdown = $("#timer");
     var $newCode = $(".newCode");
-    var countdown = 60; // Tiempo inicial en segundos
+    var countdown = 10; // Tiempo inicial en segundos
 
     // Desactivar temporalmente la opción de solicitar un nuevo código
     $newCode.css({
