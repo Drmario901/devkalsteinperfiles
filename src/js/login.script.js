@@ -1043,6 +1043,8 @@ jQuery(document).ready(function ($) {
         } else {
         }
 
+        $("#nroTel").text($("#countryPrefix").val() + $("#telefono").val());
+
         $(".redirectLogin").css({ display: "none" });
 
         $(".c-email").css({ display: "none" });
