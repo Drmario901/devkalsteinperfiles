@@ -700,15 +700,14 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(document).on("click", "#newCodeTelefono", function () {
-    reenviarCodigoTelefono();
-
-    $(".codeExpired").css({ display: "none" });
-  });
-
   $(document).on("click", ".newCode", function () {
-    reenviarCorreo();
-
+    if ($('input[name="codeSelect"]:checked').val() === "telefonoCheck") {
+      reenviarCodigoTelefono();
+    }
+    // Verifica si el botón de radio de correo está seleccionado
+    else if ($('input[name="codeSelect"]:checked').val() === "emailCheck") {
+      reenviarCorreo();
+    }
     $(".codeExpired").css({ display: "none" });
   });
 
@@ -986,9 +985,12 @@ jQuery(document).ready(function ($) {
 
         $("#btnContinueSignUp2").css({ display: "none" });
 
+        $(".c-codeRequest").css({ display: "none" });
+
         $("#btnContinueSignUp3").css({ display: "block" });
 
         $(".c-codeVerification").css({ display: "block" });
+        timerAlt();
 
         $(".spanEmail").text($("#emailUser").val());
 
@@ -1010,23 +1012,13 @@ jQuery(document).ready(function ($) {
 
   function reenviarCodigoTelefono() {
     $.ajax({
-      url: plugin_dir + "/php/testTwilio.php",
+      url: plugin_dir + "/php/newCodeValidation.php",
 
       type: "POST",
-
-      data: { consulta },
     })
 
       .done(function (respuesta) {
-        iziToast.success({
-          title: "Éxito",
-
-          message: "Codigo reenviado",
-
-          position: "topRight",
-        });
-
-        timer();
+        enviarCodigoTelefono();
       })
 
       .fail(function () {
@@ -1075,6 +1067,14 @@ jQuery(document).ready(function ($) {
         $(".spanEmail").text($("#emailUser").val());
 
         $("#txtCodeVerification").focus();
+
+        iziToast.success({
+          title: "Éxito",
+
+          message: "Codigo enviado correctamente",
+
+          position: "center",
+        });
       })
 
       .fail(function () {
@@ -1085,7 +1085,41 @@ jQuery(document).ready(function ($) {
   function timer() {
     var $countdown = $("#timer");
     var $newCode = $(".newCode");
-    var countdown = 10; // Tiempo inicial en segundos
+    var countdown = 60; // Tiempo inicial en segundos
+
+    // Desactivar temporalmente la opción de solicitar un nuevo código
+    $newCode.css({
+      "pointer-events": "none",
+      cursor: "not-allowed",
+    });
+
+    var intervalId = setInterval(function () {
+      countdown--;
+      $countdown.text(countdown + " segundos restantes");
+      if (countdown <= 0) {
+        clearInterval(intervalId);
+        $countdown.text(""); // Limpiar el contador cuando llegue a 0
+        // Permitir al usuario solicitar un nuevo código
+        $newCode.css({
+          "pointer-events": "auto",
+          cursor: "pointer",
+        });
+      }
+    }, 1000);
+
+    $newCode.click(function () {
+      if ($(this).css("pointer-events") === "auto") {
+        // Aquí puedes colocar la lógica para manejar la solicitud de un nuevo código.
+        console.log("Solicitando un nuevo código...");
+        // Reiniciar el contador si es necesario
+      }
+    });
+  }
+
+  function timerAlt() {
+    var $countdown = $("#timerAlt");
+    var $newCode = $(".newCode");
+    var countdown = 60; // Tiempo inicial en segundos
 
     // Desactivar temporalmente la opción de solicitar un nuevo código
     $newCode.css({
@@ -1121,8 +1155,6 @@ jQuery(document).ready(function ($) {
       url: plugin_dir + "/php/newCodeValidation.php",
 
       type: "POST",
-
-      data: { consulta },
     })
 
       .done(function (respuesta) {
