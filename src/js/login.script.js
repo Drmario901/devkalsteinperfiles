@@ -134,6 +134,7 @@ jQuery(document).ready(function ($) {
 
   $(document).on("click", "#btnContinueSignUp4", function () {
     $("#c-password").css({ display: "none" });
+    $(".c-email").css({ display: "none" });
     $(".c-codeRequest").css({ display: "block" });
     $("#btnContinueSignUp2").css({ display: "block" });
     $("#btnContinueSignUp4").css({ display: "none" });
@@ -1030,6 +1031,8 @@ jQuery(document).ready(function ($) {
         $("#btnContinueSignUp").css({ display: "none" });
 
         $("#btnContinueSignUp2").css({ display: "none" });
+
+        $(".c-codeRequest").css({ display: "none" });
 
         $("#btnContinueSignUp3").css({ display: "block" });
 

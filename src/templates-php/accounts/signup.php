@@ -133,7 +133,7 @@ $resultado = $conexion->query($query);
                         </div>
                         <!-- Codigo para telefono  !-->
                         <div class='c-codeVerificationTelefono' style='display: none;'>
-                            <p data-i18n="account:verificationEmail" style='font-size: 1.3em; text-align: justify;'>
+                            <p data-i18n="" style='font-size: 1.3em; text-align: justify;'>
                                 Hemos enviado el codigo de verificación a su numero de teléfono.</p>
                             <hr>
                             <div class='form-floating'>
