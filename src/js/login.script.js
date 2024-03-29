@@ -1085,7 +1085,7 @@ jQuery(document).ready(function ($) {
   function timer() {
     var $countdown = $("#timer");
     var $newCode = $(".newCode");
-    var countdown = 10; // Tiempo inicial en segundos
+    var countdown = 60; // Tiempo inicial en segundos
 
     // Desactivar temporalmente la opción de solicitar un nuevo código
     $newCode.css({
