@@ -6,7 +6,7 @@
         
         include 'navdar.php';
         
-        require __DIR__.'/../../../php/conexion.php';
+        require __DIR__.'/../../../db/conexion.php';
                     
         $acc_id = $_SESSION['emailAccount'];
         $row = $conexion->query("SELECT account_nombre, account_apellido, account_url_image_perfil FROM wp_account WHERE account_correo = '$acc_id'")->fetch_assoc();
@@ -53,10 +53,11 @@
                 <div style="position: absolute; width: 90%; height: 90%; overflow-y: auto; padding-right: 10px">
                     <h6 data-i18n="support:recentReports" class="card-title">Reportes Recientes</h6>
                     <?php
-                        require __DIR__.'/../../../db/conexion.php';
-                        ini_set('display_errors', 1);
-                        ini_set('display_startup_errors', 1);
-                        error_reporting(E_ALL);
+                    ini_set('display_errors', 1);
+                    ini_set('display_startup_errors', 1);
+                    error_reporting(E_ALL);
+                        // require __DIR__.'/../../../db/conexion.php';
+                        
                      
                         function time_elapsed_string($datetime, $full = false) {
                             $now = new DateTime;
