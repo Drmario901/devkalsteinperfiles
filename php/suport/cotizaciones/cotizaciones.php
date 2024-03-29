@@ -41,7 +41,7 @@ if ($resultado->num_rows > 0) {
         $sumaTotalUSD += $cotizacionTotalUSD;
     }
     
-    // echo "Suma total en USD: " . $sumaTotalUSD;
+    echo "Suma total en USD: " . $sumaTotalUSD;
 } else {
     echo "No se encontraron resultados.";
 }
