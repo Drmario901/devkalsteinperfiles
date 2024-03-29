@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
-    let telefono = $("#telefono").val();
+    let telefono = $("#countryPrefix").val() + $("#phoneNumber").val();
 
     if (user == "") {
       alert("Mail is required");
@@ -146,7 +146,7 @@ jQuery(document).ready(function ($) {
 
     let password = $("#passwordGrid").val();
 
-    let telefono = $("#telefono").val();
+    let telefono = $("#countryPrefix").val() + $("#telefono").val();
 
     if (password == "") {
       alert("Password is required");
@@ -990,6 +990,14 @@ jQuery(document).ready(function ($) {
       .fail(function () {
         console.log("error");
       });
+  }
+
+  function setPhonePrefix() {
+    var prefix = document.getElementById("countryPrefix").value;
+    var phoneInput = document.getElementById("phoneNumber");
+    phoneInput.value = prefix;
+    phoneInput.focus();
+    phoneInput.setSelectionRange(prefix.length, prefix.length);
   }
 
   function enviarCodigoTelefono(consulta) {
