@@ -16,9 +16,9 @@ $acc_id = $_SESSION['emailAccount'];
 $consulta = "SELECT cotizacion_total FROM wp_cotizaciones WHERE cotizacion_id_remitente = $acc_id'";
 
 echo 'hola';
-// $resultado = $conexion->query($consulta);
+$resultado = $conexion->query($consulta);
 
-// echo $resultado;
+echo $resultado;
 
 // if ($resultado->num_rows > 0){
 //     while ($value = $resultado->fetch_assoc()) {
