@@ -985,6 +985,8 @@ jQuery(document).ready(function ($) {
 
         $("#btnContinueSignUp2").css({ display: "none" });
 
+        $(".c-codeRequest").css({ display: "none" });
+
         $("#btnContinueSignUp3").css({ display: "block" });
 
         $(".c-codeVerification").css({ display: "block" });
