@@ -111,6 +111,7 @@
                 $pPType = $row["wp_product_package_type"];
                 $currency = $row["wp_product_currency"];
                 $price = $currency == 'USD' ? $row["product_priceUSD"] : $row["product_priceEUR"];
+                $priceGilson = $row["product_price_gibson"] === null ? 0 : $row["product_price_gibson"];
                 $discount_1 = $row["wp_product_discount_1"];
                 $discount_1_amount = $row["wp_product_discount_1_amount"];
                 $discount_2 = $row["wp_product_discount_2"];
@@ -338,6 +339,13 @@
                             <label for='' style='margin-top: 12px;'>Descuento Gilson</label>
                             <input class='d-inline' type='number' id='discountGilson'>
                             <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
+
+                            <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important'>
+                                
+                                <h2 class='text-white mb-0 pb-0'>$priceGilson $currency</h2>
+                                <p>Price plataforma</p>
+
+                            </div>
 
                         </div>
                         <div class='col-sm-6'>
