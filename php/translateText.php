@@ -7,6 +7,10 @@ function translateText($translationsFile = 'translations.php') {
     // Get the language from the cookie, default to 'en' if not set
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
+    $country = $_COOKIE['country'];
+
+    echo $country, 'la country';
+
     // Check if the translations for the selected language exist
     if (!isset($translations[$lang])) {
         // If translations do not exist for the selected language, stop the function
