@@ -31,7 +31,9 @@ if ($result->num_rows > 0) {
     echo "0 resultados";
 }
 
-echo 'el arreglo', $idsCotizacion;
+echo '<pre>'; // Esto es para formatear la salida, haciéndola más legible.
+print_r($idsCotizacion);
+echo '</pre>';
 
 function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD, $idsCotizacion) {
     $sumaTotalUSD = 0;
