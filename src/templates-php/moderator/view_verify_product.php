@@ -339,8 +339,8 @@
                             </div>
 
                             <label for='' style='margin-top: 12px;'>Descuento Gilson</label>
-                            <input class='d-inline' type='number' id='discountGilson'>
-                            <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson' value='$discountGilson'>Apply discount</button>
+                            <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
+                            <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
 
                             <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important; margin-top: 12px;'>
                                 
