@@ -116,15 +116,13 @@ jQuery(document).ready(function ($) {
       data: { discount, id },
     })
       .done(function (response) {
-        console.log(response);
+        priceGilsonEl.text(Number(response.precioGilson).toFixed(2));
         if (response.status == "correcto") {
           iziToast.success({
-            overlay: true,
             title: alertsTranslations.exito,
             message: alertsTranslations.discountAppliedSuccessfully,
             position: "center",
           });
-          priceGilsonEl.text(response.priceGilson);
         } else {
           iziToast.error({
             overlay: true,
