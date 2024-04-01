@@ -26,7 +26,7 @@ if(isset($_POST['discount']) && isset($_POST['id'])) {
         $queryUpdatePrice = "UPDATE wp_k_products SET product_price_gibson = '$finalPrice', descuento_gibson = '$discount' WHERE product_aid = '$id'";
 
         if($conexion->query($queryUpdatePrice) === TRUE) {
-            $response = ['status' => 'correcto', 'message' => 'Descuento aplicado y precio actualizado con éxito.'];
+            $response = ['status' => 'correcto', 'message' => 'Descuento aplicado y precio actualizado con éxito.', 'precioGilson' => $finalPrice];
         } else {
             $response = ['status' => 'error', 'message' => 'Error al actualizar el precio.'];
         }
