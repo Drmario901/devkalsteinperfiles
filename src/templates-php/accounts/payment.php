@@ -19,7 +19,7 @@ $enText = '<h2>Redirecting to Payment Gateway</h2>';
 //PAYMENT GATEWAY URL (MONETICO).
 
 function encryptURL() {
-    $gateway = base64_encode('https://p.monetico-services.com/paiement.cgi');
+    $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
     return $gateway; 
 }
 

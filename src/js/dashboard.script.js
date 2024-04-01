@@ -3177,7 +3177,7 @@ jQuery(document).ready(function ($) {
     searchInfoReportSelect(valor);
   });
 
-  $(document).on("click", "#btnChangeStatus", function () {
+  /* $(document).on("click", "#btnChangeStatus", function () {
     let valor = $(this).text();
 
     const id = $(this).val();
@@ -3240,7 +3240,52 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+ */
 
+  $(document).on("click", "#btnChangeStatus", function () {
+    let valor = $(this).text();
+
+    const id = $(this).val();
+
+    if (valor === "Pendiente") {
+      var options =
+        "<option selected='' style='text-align: center;' value='0'>" +
+        valor +
+        "</option><option value='1'>Procesar</option>";
+    } else {
+      if (valor === "Cancelar") {
+        var options =
+          "<option selected='' style='text-align: center;' value='0'>" +
+          valor +
+          "</option><option value='1'>Procesar</option>";
+      }
+    }
+
+    if (valor === "Procesado") {
+    } else {
+      $.jAlert({
+        type: "confirm",
+        confirmQuestion:
+          "<h6>Cambiar estátus de cotización</h6><select class='form-select' aria-label='Default select example' id='cmbChangeStatus' style='height: 3.2em; outline: 1px solid #213280; font-size: 0.9em;'>" +
+          options +
+          "</select>",
+        confirmBtnText: "Aceptar",
+        denyBtnText: "Cancelar",
+        onConfirm: function (e, btn) {
+          e.preventDefault();
+          let valor2 = $("#cmbChangeStatus").val();
+          consultDataClientSaved(id);
+          btn.parents(".jAlert").closeAlert();
+          return false;
+        },
+        onDeny: function (e, btn) {
+          e.preventDefault();
+          btn.parents(".jAlert").closeAlert();
+          return false;
+        },
+      });
+    }
+  });
   $(document).on("click", "#btnDeleteQuote", function () {
     let valor = $(this).val();
 
@@ -3344,8 +3389,7 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log(respuesta);
         let data = JSON.parse(respuesta);
-        console.log('dataaaaa', data);
-        
+        console.log("dataaaaa", data);
 
         if (data.update === "correcto") {
           searchDataProductTbl();
@@ -4349,4 +4393,37 @@ jQuery(document).ready(function ($) {
   });
 
   setInterval(keepSessionAlive, 300000);
+
+  function consultDataClientSaved(consulta) {
+    $.ajax({
+      url: plugin_dir + "/php/consultDataClientSaved.php",
+      type: "POST",
+    })
+
+      .done(function (respuesta) {
+        let data = JSON.parse(respuesta);
+        if (
+          data.direccion == "" ||
+          data.ciudad == "" ||
+          data.pais == "" ||
+          data.zipcode == ""
+        ) {
+          iziToast.info({
+            title: "Información",
+            message:
+              "Es necesario que complete su perfil para poder realizar transacciones bancarias!",
+            position: "center",
+          });
+          setInterval(function () {
+            location.href = domain + "/dashboard#settings";
+          }, 4000);
+        } else {
+          location.href = domain + "/pasarela?idCotizacion=" + consulta;
+        }
+      })
+
+      .fail(function () {
+        console.log("error");
+      });
+  }
 });
