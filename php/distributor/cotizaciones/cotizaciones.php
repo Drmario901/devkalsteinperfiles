@@ -12,38 +12,64 @@ $acc_id = $_SESSION['emailAccount'];
 
 echo 'el iddd', $acc_id;
 
-function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
-    $sumaTotalUSD = 0;
-    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '". $acc_id ."' AND cotizacion_status IN ($estado)";
-    $resultado = $conexion->query($consulta);
+$estado = "'Procesado', '3'";
 
-    if ($resultado->num_rows > 0) {
-        while ($fila = $resultado->fetch_assoc()) {
-            echo $cotizacionTotal = $fila['cotizacion_total'];
-            echo $cotizacionDivisa = $fila['cotizacion_divisa'];
-            
-            // Convertir a USD si la divisa es EUR, de lo contrario asumir que ya está en USD
-            if ($cotizacionDivisa == 'EUR') {
-                $cotizacionTotalUSD = $cotizacionTotal * $tasaConversionEURUSD;
-            } else {
-                $cotizacionTotalUSD = $cotizacionTotal;
-            }
-            
-            // Sumar al total
-            $sumaTotalUSD += $cotizacionTotalUSD;
-        }
+$consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '". $acc_id ."' AND cotizacion_status IN ($estado)";
+
+$stmt = $conexion->prepare($consulta);
+$stmt->bind_param("s", $acc_id);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+if($resultado->num_rows > 0) {
+    // Si hay resultados, los iteramos aquí
+    echo '<pre>';
+    while($fila = $resultado->fetch_assoc()) {
+        print_r($fila);
     }
-    return $sumaTotalUSD;
+    echo '</pre>';
+} else {
+    echo "No se encontraron resultados.";
 }
+
+$stmt->close();
+
+
+
+// function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
+//     $sumaTotalUSD = 0;
+//     $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '". $acc_id ."' AND cotizacion_status IN ($estado)";
+//     $resultado = $conexion->query($consulta);
+
+//     if ($resultado->num_rows > 0) {
+//         while ($fila = $resultado->fetch_assoc()) {
+//             echo $cotizacionTotal = $fila['cotizacion_total'];
+//             echo $cotizacionDivisa = $fila['cotizacion_divisa'];
+            
+//             // Convertir a USD si la divisa es EUR, de lo contrario asumir que ya está en USD
+//             if ($cotizacionDivisa == 'EUR') {
+//                 $cotizacionTotalUSD = $cotizacionTotal * $tasaConversionEURUSD;
+//             } else {
+//                 $cotizacionTotalUSD = $cotizacionTotal;
+//             }
+            
+//             // Sumar al total
+//             $sumaTotalUSD += $cotizacionTotalUSD;
+//         }
+//     }
+//     return $sumaTotalUSD;
+// }
+
+
 
 // Asegúrate de que $idsCotizacion no esté vacío antes de llamar a la función
-if (!empty($idsCotizacion)) {
-    $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD) ;
-   $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD);
-    $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD);
-} else {
-    echo "No hay cotizaciones para calcular.";
-}
+// if (!empty($idsCotizacion)) {
+//     $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD) ;
+//    $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD);
+//     $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD);
+// } else {
+//     echo "No hay cotizaciones para calcular.";
+// }
 
 
 
