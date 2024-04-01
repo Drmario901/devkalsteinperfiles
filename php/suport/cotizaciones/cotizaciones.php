@@ -15,14 +15,14 @@ echo 'el id es este ' . $acc_id;
 // Tasa de conversión de EUR a USD
 $tasaConversionEURUSD = 1.1;
 
-$sql = "SELECT R_id_cotizacion, R_nombre, R_usuario FROM wp_reportes WHERE R_estado = 'Procesado' AND R_usuario_agente = '". $acc_id ."'";
+$sql = "SELECT R_id_cotizacion FROM wp_reportes WHERE R_estado = 'Procesado' AND R_usuario_agente = '". $acc_id ."'";
 $result = $conexion->query($sql);
 
 // Verificar si se encontraron filas
 if ($result->num_rows > 0) {
     // Salida de datos de cada fila
     while($row = $result->fetch_assoc()) {
-      echo "ID Cotización: " . $row["R_id_cotizacion"]. " - Nombre: " . $row["R_nombre"]. " - Usuario: " . $row["R_usuario"]. "<br>";
+      echo "ID Cotización: " . $row["R_id_cotizacion"] . "<br>";
     }
   } else {
     echo "0 resultados";
