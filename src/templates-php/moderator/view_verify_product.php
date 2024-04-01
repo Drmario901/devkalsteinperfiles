@@ -340,7 +340,7 @@
                             <input class='d-inline' type='number' id='discountGilson'>
                             <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
 
-                            <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important; margin-top= 12px;'>
+                            <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important; margin-top: 12px;'>
                                 
                                 <h2 class='text-white mb-0 pb-0'>$priceGilson $currency</h2>
                                 <p>Price Gilson</p>
