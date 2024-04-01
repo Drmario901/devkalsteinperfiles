@@ -116,14 +116,13 @@ jQuery(document).ready(function ($) {
       data: { discount, id },
     })
       .done(function (response) {
-        console.log(response);
+        priceGilsonEl.text(response.priceGilson);
         if (response.status == "correcto") {
           iziToast.success({
             title: alertsTranslations.exito,
             message: alertsTranslations.discountAppliedSuccessfully,
             position: "center",
           });
-          priceGilsonEl.text(response.priceGilson);
         } else {
           iziToast.error({
             overlay: true,
