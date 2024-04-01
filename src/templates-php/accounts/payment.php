@@ -1,8 +1,8 @@
 <?php
 //ERROR DETECTION LINES.
-ini_set('display_errors', 1);
+/*ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL);*/
 
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 //session_start();
@@ -34,7 +34,6 @@ $idCotizacionEncrypted = base64_encode($idCotizacion);
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' AND cotizacion_id LIKE '%$idCotizacion%'";
 $row = $conexion->query($consulta)->fetch_assoc();
-echo 'Error:' .$row;
 $precioTotal = $row['cotizacion_total'] - $row['cotizacion_total_with_discount'];
 
 $consulta2 = "SELECT * FROM wp_account WHERE account_correo = '$email'";
@@ -88,7 +87,7 @@ function sanitizeAndLimit($input, $maxLength)
     return $limited;
 }
 
-echo $addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
+$addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
 
 $purchase = new PurchaseRequest([
     'reference' => 'QUO' .$idCotizacion,
@@ -102,7 +101,7 @@ $purchase = new PurchaseRequest([
     'errorUrl' => 'https://dev.kalstein.plus/plataforma/pago-rechazado?pay='.$getDeclined.'&idCotizacion='.$idCotizacionEncrypted.'',
 ]);
 
-echo $billingAddress = new BillingAddressResource([
+$billingAddress = new BillingAddressResource([
     'name' => $row2['account_nombre'],
     'addressLine1' => $addressLine1,
     'city' => $row2['account_ciudad'],
@@ -110,8 +109,8 @@ echo $billingAddress = new BillingAddressResource([
     'country' => $row2['account_pais'],
 ]);
 
-echo $purchase->setBillingAddress($billingAddress);
-echo $shippingAddress = new ShippingAddressResource([
+$purchase->setBillingAddress($billingAddress);
+$shippingAddress = new ShippingAddressResource([
     'name' => $row['cotizacion_atencion'],
     'addressLine1' => $addressLine1,
     'city' => $row2['account_ciudad'],
@@ -119,7 +118,7 @@ echo $shippingAddress = new ShippingAddressResource([
     'country' => empty($row['cotizacion_destino']) ? 'FR' : $row['cotizacion_destino'],
 ]);
 
-echo $purchase->setShippingAddress($shippingAddress);
+$purchase->setShippingAddress($shippingAddress);
 
 
 $client = new ClientResource([
@@ -134,7 +133,7 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<!--body onload="document.forms['payment_form'].submit();"-->
+<body onload="document.forms['payment_form'].submit();">
 <style>
     .custom-loader {
         width: 50px;
