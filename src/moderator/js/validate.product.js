@@ -116,7 +116,7 @@ jQuery(document).ready(function ($) {
       data: { discount, id },
     })
       .done(function (response) {
-        priceGilsonEl.text(response.priceGilson);
+        priceGilsonEl.text(response.priceGilson.toFixed(2));
         if (response.status == "correcto") {
           iziToast.success({
             title: alertsTranslations.exito,
