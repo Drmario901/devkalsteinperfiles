@@ -266,6 +266,20 @@
         
         //FIN DE ACCOUNT REDIRECT 
 
+        // FUNCIONES DE PAGO 
+
+        function paymentGateway(){
+            return render_php_file("accounts/payment.php");
+        }
+
+        function error404(){
+            return render_php_file("client/404_plataforma/404.php");
+        }
+
+        function success_page(){
+            return render_php_file("client/success_plataforma/pago_aprobado.php");
+        }
+
 
         // XXX Client XXX
 

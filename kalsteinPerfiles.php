@@ -26,6 +26,41 @@
 
     }
 
+    
+    // XXX PÁGINAS DE ERROR XX
+
+    function errorPage(){
+        $_short = new shortcodePerfiles;
+
+        $html = $_short->error404();
+        return $html;
+    }
+
+    //PÁGINA PASARELA DE PAGO (MONETICO).
+    function payment(){
+        $_short = new shortcodePerfiles;
+
+        $html = $_short->paymentGateway();
+        return $html;
+    }
+
+    //PÁGINA DE RESPUESTA DE SERVIDOR (MONETICO)
+    function paymentResponse(){
+        $_short = new shortcodePerfiles;
+
+        $html = $_short->payment_response();
+        return $html;
+    }
+
+    //PÁGINA DE PAGO SATISFACTORIO. 
+    function successPage(){
+        $_short = new shortcodePerfiles;
+
+        $html = $_short->success_page();
+        return $html;
+    }
+
+
 
     register_activation_hook(__FILE__, 'perfilesActivated');
 
@@ -598,6 +633,18 @@
         $html = $_short->customize_template();
         return $html;
     }
+
+     //PAGINA DE PAGO RECHAZADO.
+     add_shortcode("ERROR_404_KALSTEIN", "errorPage");
+    
+     //PAGINA PAGO APROBADO.
+     add_shortcode("SUCCESS_PAYMENT", "successPage");
+ 
+     //PAYMENT GATEWAY
+     add_shortcode("MONETICO_PAYMENT", "payment");
+ 
+     //PAYMENT RESPONSE
+     add_shortcode("MONETICO_PAYMENT_RESPONSE", "paymentResponse");
 
     add_shortcode("PERFILES_DATA_RECOVER", "data_recoverP");
 

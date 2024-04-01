@@ -234,7 +234,7 @@
 				<div class="error_details">
 					<h1>Pago <strong>rechazado</strong> o <strong>cancelado</strong>.</h1>
 					<span class="roboto-black">Lo sentimos, ha ocurrido un problema con su pago.</span>
-					<a href="https://plataforma.kalstein.net/account_redirect?pay=<?php echo $pay?>&idCotizacion=<?php echo $idCotizacion ?>" title="Back to Homepage" class="roboto-black">
+					<a href="https://dev.kalstein.plus/plataforma/account_redirect?pay=<?php echo $pay?>&idCotizacion=<?php echo $idCotizacion ?>" title="Back to Homepage" class="roboto-black">
 						Volver a la Plataforma
 					</a>
 				</div>

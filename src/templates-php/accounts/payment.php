@@ -4,7 +4,7 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);*/
 
-require '/home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
+require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 //session_start();
 
 //EMAIL ACCOUNT SESSION.
@@ -97,8 +97,8 @@ $purchase = new PurchaseRequest([
     'amount' => $precioTotal, 
     'currency' => $row['cotizacion_divisa'],
     'dateTime' => new DateTime(),
-    'successUrl' => 'https://plataforma.kalstein.net/pago-aprobado?pay='.$getSuccess.'&idCotizacion='.$idCotizacionEncrypted.'', 
-    'errorUrl' => 'https://plataforma.kalstein.net/pago-rechazado?pay='.$getDeclined.'&idCotizacion='.$idCotizacionEncrypted.'',
+    'successUrl' => 'https://dev.kalstein.plus/plataforma/pago-aprobado?pay='.$getSuccess.'&idCotizacion='.$idCotizacionEncrypted.'', 
+    'errorUrl' => 'https://dev.kalstein.plus/plataforma/pago-rechazado?pay='.$getDeclined.'&idCotizacion='.$idCotizacionEncrypted.'',
 ]);
 
 $billingAddress = new BillingAddressResource([

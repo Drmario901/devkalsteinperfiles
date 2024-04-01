@@ -332,7 +332,7 @@
 				<div class="aprob_details">
 					<h1>¡Pago <strong>Aprobado</strong>!</h1>
 					<span class="roboto-black">Su Pago ha sido Aprobado exitosamente.</span>
-					<a href="https://plataforma.kalstein.net/account_redirect?pay=<?php echo $pay?>&idCotizacion=<?php echo $idCotizacion ?>" title="Back to Homepage" class="roboto-black">
+					<a href="https://dev.kalstein.plus/plataforma/account_redirect?pay=<?php echo $pay?>&idCotizacion=<?php echo $idCotizacion ?>" title="Back to Homepage" class="roboto-black">
 						Volver a la Plataforma
 					</a>
 				</div>
