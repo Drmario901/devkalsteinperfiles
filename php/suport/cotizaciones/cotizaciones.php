@@ -10,7 +10,7 @@ require_once __DIR__ . '/../../../db/conexion.php';
 
 $acc_id = $_SESSION['emailAccount'];
 
-echo 'el id es este ' . $acc_id;
+// echo 'el id es este ' . $acc_id;
 
 // Tasa de conversión de EUR a USD
 $tasaConversionEURUSD = 1.1;
@@ -31,9 +31,9 @@ if ($result->num_rows > 0) {
     echo "0 resultados";
 }
 
-echo '<pre>'; // Esto es para formatear la salida, haciéndola más legible.
-print_r($idsCotizacion);
-echo '</pre>';
+// echo '<pre>'; // Esto es para formatear la salida, haciéndola más legible.
+// print_r($idsCotizacion);
+// echo '</pre>';
 
 function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD, $idsCotizacion) {
     $sumaTotalUSD = 0;
@@ -62,9 +62,9 @@ function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD,
 
 // Asegúrate de que $idsCotizacion no esté vacío antes de llamar a la función
 if (!empty($idsCotizacion)) {
-   echo $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD, $idsCotizacion) ;
-   echo $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD, $idsCotizacion);
-   echo $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD, $idsCotizacion);
+    $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD, $idsCotizacion) ;
+   $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD, $idsCotizacion);
+    $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD, $idsCotizacion);
 } else {
     echo "No hay cotizaciones para calcular.";
 }
