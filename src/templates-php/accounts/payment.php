@@ -1,11 +1,11 @@
 <?php
 //ERROR DETECTION LINES.
-/*ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);*/
+error_reporting(E_ALL);
 
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
-session_start();
+//session_start();
 
 //EMAIL ACCOUNT SESSION.
 if(isset($_SESSION["emailAccount"])){
@@ -42,7 +42,6 @@ $row2 = $conexion->query($consulta2)->fetch_assoc();
 $consulta3 = "SELECT * FROM wp_cotizacion_detalle WHERE cotizacion_detalle_id = '$idCotizacion'";
 $productList = array();
 $resultado = $conexion->query($consulta3);
-echo $resultado;
 
 if ($resultado) {
     while($row3 = $resultado->fetch_assoc()) {
@@ -134,7 +133,7 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<!--body onload="document.forms['payment_form'].submit();"-->
+<body onload="document.forms['payment_form'].submit();">
 <style>
     .custom-loader {
         width: 50px;
