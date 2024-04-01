@@ -44,7 +44,7 @@
                         error_reporting(E_ALL);
 
                         // echo 'Aqui va el peo';
-                            require __DIR__ . '/../../../db/conexion.php';
+                            require_once __DIR__ . '/../../../db/conexion.php';
                             
 
                             function time_elapsed_string($datetime, $full = false) {
