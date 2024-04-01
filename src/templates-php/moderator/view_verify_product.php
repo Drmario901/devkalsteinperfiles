@@ -93,6 +93,7 @@
             $count = mysqli_num_rows($resultado);
 
             if ($count > 0){
+                $id = $row["product_aid"];
                 $name = $row["product_name_es"];
                 $model = $row["product_model"];
                 $brand = $row["product_brand"];
@@ -342,7 +343,7 @@
 
                             <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important; margin-top: 12px;'>
                                 
-                                <h2 class='text-white mb-0 pb-0'>$priceGilson $currency</h2>
+                                <h2 class='text-white mb-0 pb-0' id='priceGilson'>$priceGilson $currency</h2>
                                 <p>Price Gilson</p>
 
                             </div>
