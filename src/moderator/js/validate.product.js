@@ -116,6 +116,8 @@ jQuery(document).ready(function ($) {
       data: { discount, id },
     })
       .done(function (response) {
+        console.log(response);
+        console.log(JSON.parse(response));
         if (JSON.parse(response).status == "correcto") {
           iziToast.success({
             overlay: true,
