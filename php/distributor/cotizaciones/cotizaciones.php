@@ -14,7 +14,7 @@ echo 'el iddd', $acc_id;
 
 function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
     $sumaTotalUSD = 0;
-    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente === '". $acc_id ."' AND cotizacion_status IN ($estado)";
+    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '". $acc_id ."' AND cotizacion_status IN ($estado)";
     $resultado = $conexion->query($consulta);
 
     if ($resultado->num_rows > 0) {
