@@ -117,15 +117,14 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         console.log(response);
-        console.log(JSON.parse(response));
-        if (JSON.parse(response).status == "correcto") {
+        if (response.status == "correcto") {
           iziToast.success({
             overlay: true,
             title: alertsTranslations.exito,
             message: alertsTranslations.discountAppliedSuccessfully,
             position: "center",
           });
-          priceGilsonEl.text(priceGilson);
+          priceGilsonEl.text(response.priceGilson);
         } else {
           iziToast.error({
             overlay: true,
