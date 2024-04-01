@@ -133,7 +133,7 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<body onload="document.forms['payment_form'].submit();">
+<!--body onload="document.forms['payment_form'].submit();"-->
 <style>
     .custom-loader {
         width: 50px;
