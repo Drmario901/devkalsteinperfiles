@@ -18,19 +18,23 @@ $tasaConversionEURUSD = 1.1;
 $sql = "SELECT R_id_cotizacion FROM wp_reportes WHERE R_estado = 'Procesado' AND R_usuario_agente = '". $acc_id ."'";
 $result = $conexion->query($sql);
 
+$idsCotizacion = []; // Array para almacenar los IDs de cotización
+
 // Verificar si se encontraron filas
 if ($result->num_rows > 0) {
     // Salida de datos de cada fila
     while($row = $result->fetch_assoc()) {
       echo "ID Cotización: " . $row["R_id_cotizacion"] . "<br>";
+      $idsCotizacion[] = $row["R_id_cotizacion"]; // Almacenar el ID de cotización en el arreglo
     }
-  } else {
+} else {
     echo "0 resultados";
-  }
+}
 
-function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
+function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD, $idsCotizacion) {
     $sumaTotalUSD = 0;
-    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_user = '" . $acc_id . "' AND cotizacion_id_remitente != 'KALSTEIN-INTERNAL' AND cotizacion_status IN ($estado)";
+    $idsCotizacionStr = "'" . implode("', '", $idsCotizacion) . "'"; // Convertir el arreglo a una cadena para la consulta SQL
+    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_user = '" . $acc_id . "' AND cotizacion_id_remitente != 'KALSTEIN-INTERNAL' AND cotizacion_status IN ($estado) AND cotizacion_id IN ($idsCotizacionStr)";
     $resultado = $conexion->query($consulta);
 
     if ($resultado->num_rows > 0) {
@@ -52,9 +56,13 @@ function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD)
     return $sumaTotalUSD;
 }
 
-// Llamadas a la función
-$sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD);
-$sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD);
-$sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD);
+// Asegúrate de que $idsCotizacion no esté vacío antes de llamar a la función
+if (!empty($idsCotizacion)) {
+    $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD, $idsCotizacion);
+    $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD, $idsCotizacion);
+    $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD, $idsCotizacion);
+} else {
+    echo "No hay cotizaciones para calcular.";
+}
 
 ?>
