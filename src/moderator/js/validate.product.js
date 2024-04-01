@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
             message: alertsTranslations.discountAppliedSuccessfully,
             position: "center",
           });
-          priceGilsonEl.text(priceGilson);
+          priceGilsonEl.text(JSON.parse(response).priceGilson);
         } else {
           iziToast.error({
             overlay: true,
