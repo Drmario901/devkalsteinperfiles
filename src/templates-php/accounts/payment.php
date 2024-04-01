@@ -34,6 +34,7 @@ $idCotizacionEncrypted = base64_encode($idCotizacion);
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' AND cotizacion_id LIKE '%$idCotizacion%'";
 $row = $conexion->query($consulta)->fetch_assoc();
+echo 'Error:' .$row;
 $precioTotal = $row['cotizacion_total'] - $row['cotizacion_total_with_discount'];
 
 $consulta2 = "SELECT * FROM wp_account WHERE account_correo = '$email'";
@@ -87,7 +88,7 @@ function sanitizeAndLimit($input, $maxLength)
     return $limited;
 }
 
-$addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
+echo $addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
 
 $purchase = new PurchaseRequest([
     'reference' => 'QUO' .$idCotizacion,
@@ -101,7 +102,7 @@ $purchase = new PurchaseRequest([
     'errorUrl' => 'https://dev.kalstein.plus/plataforma/pago-rechazado?pay='.$getDeclined.'&idCotizacion='.$idCotizacionEncrypted.'',
 ]);
 
-$billingAddress = new BillingAddressResource([
+echo $billingAddress = new BillingAddressResource([
     'name' => $row2['account_nombre'],
     'addressLine1' => $addressLine1,
     'city' => $row2['account_ciudad'],
@@ -109,8 +110,8 @@ $billingAddress = new BillingAddressResource([
     'country' => $row2['account_pais'],
 ]);
 
-$purchase->setBillingAddress($billingAddress);
-$shippingAddress = new ShippingAddressResource([
+echo $purchase->setBillingAddress($billingAddress);
+echo $shippingAddress = new ShippingAddressResource([
     'name' => $row['cotizacion_atencion'],
     'addressLine1' => $addressLine1,
     'city' => $row2['account_ciudad'],
@@ -118,7 +119,7 @@ $shippingAddress = new ShippingAddressResource([
     'country' => empty($row['cotizacion_destino']) ? 'FR' : $row['cotizacion_destino'],
 ]);
 
-$purchase->setShippingAddress($shippingAddress);
+echo $purchase->setShippingAddress($shippingAddress);
 
 
 $client = new ClientResource([
@@ -133,7 +134,7 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<body onload="document.forms['payment_form'].submit();">
+<!--body onload="document.forms['payment_form'].submit();"-->
 <style>
     .custom-loader {
         width: 50px;
