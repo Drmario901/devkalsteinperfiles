@@ -335,6 +335,9 @@
 
                             </div>
 
+                            <input class='d-inline' type='number' id='discountGilson'>
+                            <button class='btn btn-primary' id='btnDiscountGilson'>Apply discount</button>
+
                         </div>
                         <div class='col-sm-6'>
                             <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
