@@ -24,7 +24,7 @@ $idsCotizacion = []; // Array para almacenar los IDs de cotización
 if ($result->num_rows > 0) {
     // Salida de datos de cada fila
     while($row = $result->fetch_assoc()) {
-      echo "ID Cotización: " . $row["R_id_cotizacion"] . "<br>";
+    //   echo "ID Cotización: " . $row["R_id_cotizacion"] . "<br>";
       $idsCotizacion[] = $row["R_id_cotizacion"]; // Almacenar el ID de cotización en el arreglo
     }
 } else {
