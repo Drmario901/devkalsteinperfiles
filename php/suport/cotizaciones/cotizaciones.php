@@ -15,7 +15,7 @@ echo 'el id es este ' . $acc_id;
 // Tasa de conversión de EUR a USD
 $tasaConversionEURUSD = 1.1;
 
-$sql = "SELECT R_id_cotizacion, R_nombre, R_usuario FROM wp_reportes WHERE R_estado = 'Procesado'";
+$sql = "SELECT R_id_cotizacion, R_nombre, R_usuario FROM wp_reportes WHERE R_estado = 'Procesado' AND cotizacion_usuario_agente = '". $acc_id ."'";
 $result = $conexion->query($sql);
 
 // Verificar si se encontraron filas
