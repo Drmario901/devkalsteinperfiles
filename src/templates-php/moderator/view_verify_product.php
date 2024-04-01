@@ -93,6 +93,7 @@
             $count = mysqli_num_rows($resultado);
 
             if ($count > 0){
+                $id = $row["product_aid"];
                 $name = $row["product_name_es"];
                 $model = $row["product_model"];
                 $brand = $row["product_brand"];
@@ -112,6 +113,7 @@
                 $currency = $row["wp_product_currency"];
                 $price = $currency == 'USD' ? $row["product_priceUSD"] : $row["product_priceEUR"];
                 $priceGilson = $row["product_price_gibson"] === null ? 0 : $row["product_price_gibson"];
+                $discountGilson = $row["descuento_gibson"] === null ? 0: $row["descuento_gibson"];
                 $discount_1 = $row["wp_product_discount_1"];
                 $discount_1_amount = $row["wp_product_discount_1_amount"];
                 $discount_2 = $row["wp_product_discount_2"];
@@ -338,11 +340,11 @@
 
                             <label for='' style='margin-top: 12px;'>Descuento Gilson</label>
                             <input class='d-inline' type='number' id='discountGilson'>
-                            <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
+                            <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson' value='$discountGilson'>Apply discount</button>
 
                             <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important; margin-top: 12px;'>
                                 
-                                <h2 class='text-white mb-0 pb-0'>$priceGilson $currency</h2>
+                                <h2 class='text-white mb-0 pb-0' id='priceGilson'>$priceGilson $currency</h2>
                                 <p>Price Gilson</p>
 
                             </div>
