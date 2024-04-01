@@ -9,7 +9,7 @@ function translateText($translationsFile = 'translations.php') {
 
     $country = $_COOKIE['country'];
 
-    echo $country, 'la country';
+    // echo $country, 'la country';
 
     // Check if the translations for the selected language exist
     if (!isset($translations[$lang])) {
