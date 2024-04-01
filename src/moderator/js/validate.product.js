@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
     let discount = $("#discountGilson").val();
     let id = $("#p-id").val();
     let price = $("#price").val();
-    let priceGilsonEl = document.querySelector("#priceGilson");
+    let priceGilsonEl = $("#priceGilson");
 
     let priceGilson = price - (price * discount) / 100;
 
@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
             message: alertsTranslations.discountAppliedSuccessfully,
             position: "center",
           });
-          priceGilsonEl.innerHTML = priceGilson;
+          priceGilsonEl.text(priceGilson);
         } else {
           iziToast.error({
             overlay: true,
