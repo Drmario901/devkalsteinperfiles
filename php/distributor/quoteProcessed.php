@@ -11,7 +11,7 @@
 
     $offset = ($page - 1) * $perPage;
     $limit = $perPage;
-    require_once __DIR__ . '/../translations.php';
+    require_once __DIR__ . '/../translateText.php';
     // include 'translateText.php';
     translateText();
 
