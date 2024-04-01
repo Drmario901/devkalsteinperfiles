@@ -119,7 +119,6 @@ jQuery(document).ready(function ($) {
         console.log(response);
         if (response.status == "correcto") {
           iziToast.success({
-            overlay: true,
             title: alertsTranslations.exito,
             message: alertsTranslations.discountAppliedSuccessfully,
             position: "center",
