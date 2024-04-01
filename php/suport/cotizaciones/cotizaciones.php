@@ -10,8 +10,23 @@ require_once __DIR__ . '/../../../db/conexion.php';
 
 $acc_id = $_SESSION['emailAccount'];
 
+echo 'el id es este ' . $acc_id;
+
 // Tasa de conversión de EUR a USD
 $tasaConversionEURUSD = 1.1;
+
+$sql = "SELECT R_id_cotizacion, R_nombre, R_usuario FROM wp_reportes WHERE R_estado = 'Procesado'";
+$result = $conn->query($sql);
+
+// Verificar si se encontraron filas
+if ($result->num_rows > 0) {
+    // Salida de datos de cada fila
+    while($row = $result->fetch_assoc()) {
+      echo "ID Cotización: " . $row["R_id_cotizacion"]. " - Nombre: " . $row["R_nombre"]. " - Usuario: " . $row["R_usuario"]. "<br>";
+    }
+  } else {
+    echo "0 resultados";
+  }
 
 function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
     $sumaTotalUSD = 0;
