@@ -12,7 +12,7 @@ $acc_id = $_SESSION['emailAccount'];
 
 function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
     $sumaTotalUSD = 0;
-    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente != 'KALSTEIN-INTERNAL' AND cotizacion_status IN ($estado) AND cotizacion_id_remitente === '". $acc_id ."'";
+    $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente === '". $acc_id ."' AND cotizacion_status IN ($estado)";
     $resultado = $conexion->query($consulta);
 
     if ($resultado->num_rows > 0) {
