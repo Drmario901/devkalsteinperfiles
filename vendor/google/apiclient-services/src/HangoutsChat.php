@@ -23,8 +23,8 @@ use Google\Client;
  * Service definition for HangoutsChat (v1).
  *
  * <p>
- * Enables apps to fetch information and perform actions in Google Chat.
- * Authentication is a prerequisite for using the Google Chat REST API.</p>
+ * The Google Chat API lets you build Chat apps to integrate your services with
+ * Google Chat and manage Chat resources such as spaces, members, and messages.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -87,6 +87,7 @@ class HangoutsChat extends \Google\Service
   public $spaces_messages;
   public $spaces_messages_attachments;
   public $spaces_messages_reactions;
+  public $spaces_spaceEvents;
 
   /**
    * Constructs the internal representation of the HangoutsChat service.
@@ -471,6 +472,48 @@ class HangoutsChat extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/reactions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->spaces_spaceEvents = new HangoutsChat\Resource\SpacesSpaceEvents(
+        $this,
+        $this->serviceName,
+        'spaceEvents',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/spaceEvents',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [

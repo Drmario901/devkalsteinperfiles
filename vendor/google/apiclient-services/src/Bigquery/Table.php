@@ -52,6 +52,8 @@ class Table extends \Google\Collection
    * @var string
    */
   public $expirationTime;
+  protected $externalCatalogTableOptionsType = ExternalCatalogTableOptions::class;
+  protected $externalCatalogTableOptionsDataType = '';
   protected $externalDataConfigurationType = ExternalDataConfiguration::class;
   protected $externalDataConfigurationDataType = '';
   /**
@@ -136,6 +138,8 @@ class Table extends \Google\Collection
    * @var string
    */
   public $numTotalPhysicalBytes;
+  protected $partitionDefinitionType = PartitioningDefinition::class;
+  protected $partitionDefinitionDataType = '';
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
   protected $replicasType = TableReference::class;
@@ -312,6 +316,20 @@ class Table extends \Google\Collection
   public function getExpirationTime()
   {
     return $this->expirationTime;
+  }
+  /**
+   * @param ExternalCatalogTableOptions
+   */
+  public function setExternalCatalogTableOptions(ExternalCatalogTableOptions $externalCatalogTableOptions)
+  {
+    $this->externalCatalogTableOptions = $externalCatalogTableOptions;
+  }
+  /**
+   * @return ExternalCatalogTableOptions
+   */
+  public function getExternalCatalogTableOptions()
+  {
+    return $this->externalCatalogTableOptions;
   }
   /**
    * @param ExternalDataConfiguration
@@ -634,6 +652,20 @@ class Table extends \Google\Collection
   public function getNumTotalPhysicalBytes()
   {
     return $this->numTotalPhysicalBytes;
+  }
+  /**
+   * @param PartitioningDefinition
+   */
+  public function setPartitionDefinition(PartitioningDefinition $partitionDefinition)
+  {
+    $this->partitionDefinition = $partitionDefinition;
+  }
+  /**
+   * @return PartitioningDefinition
+   */
+  public function getPartitionDefinition()
+  {
+    return $this->partitionDefinition;
   }
   /**
    * @param RangePartitioning

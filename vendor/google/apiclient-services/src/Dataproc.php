@@ -171,7 +171,17 @@ class Dataproc extends \Google\Service
         'batches',
         [
           'methods' => [
-            'create' => [
+            'analyze' => [
+              'path' => 'v1/{+name}:analyze',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/batches',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -990,6 +1000,16 @@ class Dataproc extends \Google\Service
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'repair' => [
+              'path' => 'v1/{+name}:repair',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
                   'location' => 'path',

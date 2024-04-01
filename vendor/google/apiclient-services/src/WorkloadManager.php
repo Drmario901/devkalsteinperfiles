@@ -48,7 +48,6 @@ class WorkloadManager extends \Google\Service
   public $projects_locations_insights;
   public $projects_locations_operations;
   public $projects_locations_rules;
-  public $projects_locations_workloadProfiles;
 
   /**
    * Constructs the internal representation of the WorkloadManager service.
@@ -140,6 +139,10 @@ class WorkloadManager extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'force' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'requestId' => [
                   'location' => 'query',
@@ -428,48 +431,6 @@ class WorkloadManager extends \Google\Service
                 'customRulesBucket' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_workloadProfiles = new WorkloadManager\Resource\ProjectsLocationsWorkloadProfiles(
-        $this,
-        $this->serviceName,
-        'workloadProfiles',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/workloadProfiles',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
                 'filter' => [
                   'location' => 'query',

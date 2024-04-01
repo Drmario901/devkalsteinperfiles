@@ -54,6 +54,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $etag;
+  protected $externalCatalogDatasetOptionsType = ExternalCatalogDatasetOptions::class;
+  protected $externalCatalogDatasetOptionsDataType = '';
   protected $externalDatasetReferenceType = ExternalDatasetReference::class;
   protected $externalDatasetReferenceDataType = '';
   /**
@@ -80,6 +82,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $lastModifiedTime;
+  protected $linkedDatasetMetadataType = LinkedDatasetMetadata::class;
+  protected $linkedDatasetMetadataDataType = '';
   protected $linkedDatasetSourceType = LinkedDatasetSource::class;
   protected $linkedDatasetSourceDataType = '';
   /**
@@ -254,6 +258,20 @@ class Dataset extends \Google\Collection
     return $this->etag;
   }
   /**
+   * @param ExternalCatalogDatasetOptions
+   */
+  public function setExternalCatalogDatasetOptions(ExternalCatalogDatasetOptions $externalCatalogDatasetOptions)
+  {
+    $this->externalCatalogDatasetOptions = $externalCatalogDatasetOptions;
+  }
+  /**
+   * @return ExternalCatalogDatasetOptions
+   */
+  public function getExternalCatalogDatasetOptions()
+  {
+    return $this->externalCatalogDatasetOptions;
+  }
+  /**
    * @param ExternalDatasetReference
    */
   public function setExternalDatasetReference(ExternalDatasetReference $externalDatasetReference)
@@ -350,6 +368,20 @@ class Dataset extends \Google\Collection
   public function getLastModifiedTime()
   {
     return $this->lastModifiedTime;
+  }
+  /**
+   * @param LinkedDatasetMetadata
+   */
+  public function setLinkedDatasetMetadata(LinkedDatasetMetadata $linkedDatasetMetadata)
+  {
+    $this->linkedDatasetMetadata = $linkedDatasetMetadata;
+  }
+  /**
+   * @return LinkedDatasetMetadata
+   */
+  public function getLinkedDatasetMetadata()
+  {
+    return $this->linkedDatasetMetadata;
   }
   /**
    * @param LinkedDatasetSource

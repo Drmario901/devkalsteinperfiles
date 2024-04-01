@@ -57,7 +57,6 @@ class Walletobjects extends \Google\Service
   public $smarttap;
   public $transitclass;
   public $transitobject;
-  public $walletobjects_v1_privateContent;
 
   /**
    * Constructs the internal representation of the Walletobjects service.
@@ -375,7 +374,17 @@ class Walletobjects extends \Google\Service
         'genericclass',
         [
           'methods' => [
-            'get' => [
+            'addmessage' => [
+              'path' => 'walletobjects/v1/genericClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resourceId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'walletobjects/v1/genericClass/{resourceId}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -436,7 +445,17 @@ class Walletobjects extends \Google\Service
         'genericobject',
         [
           'methods' => [
-            'get' => [
+            'addmessage' => [
+              'path' => 'walletobjects/v1/genericObject/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resourceId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'walletobjects/v1/genericObject/{resourceId}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1201,20 +1220,6 @@ class Walletobjects extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->walletobjects_v1_privateContent = new Walletobjects\Resource\WalletobjectsV1PrivateContent(
-        $this,
-        $this->serviceName,
-        'privateContent',
-        [
-          'methods' => [
-            'uploadPrivateData' => [
-              'path' => 'walletobjects/v1/privateContent/uploadPrivateData',
-              'httpMethod' => 'POST',
-              'parameters' => [],
             ],
           ]
         ]

@@ -852,6 +852,10 @@ class Storage extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'allowNonEmpty' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'ifMetagenerationMatch' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1645,14 +1649,14 @@ class Storage extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'copySourceAcl' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'generation' => [
                   'location' => 'query',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'copySourceAcl' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'ifGenerationMatch' => [
                   'location' => 'query',

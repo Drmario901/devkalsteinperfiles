@@ -171,9 +171,9 @@ class SpacesMessages extends \Google\Service\Resource
    * ASC`.
    * @opt_param int pageSize The maximum number of messages returned. The service
    * might return fewer messages than this value. If unspecified, at most 25 are
-   * returned. The maximum value is 1,000. If you use a value more than 1,000,
-   * it's automatically changed to 1,000. Negative values return an
-   * `INVALID_ARGUMENT` error.
+   * returned. The maximum value is 1000. If you use a value more than 1000, it's
+   * automatically changed to 1000. Negative values return an `INVALID_ARGUMENT`
+   * error.
    * @opt_param string pageToken Optional, if resuming from a previous query. A
    * page token received from a previous list messages call. Provide this
    * parameter to retrieve the subsequent page. When paginating, all other
@@ -229,7 +229,7 @@ class SpacesMessages extends \Google\Service\Resource
    * supported field paths: - `text` - `attachment` - `cards` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
    * (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-   * Developer Preview: `accessory_widgets` (Requires [app
+   * `accessory_widgets` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    * @throws \Google\Service\Exception
@@ -277,7 +277,7 @@ class SpacesMessages extends \Google\Service\Resource
    * supported field paths: - `text` - `attachment` - `cards` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
    * (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-   * Developer Preview: `accessory_widgets` (Requires [app
+   * `accessory_widgets` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    * @throws \Google\Service\Exception
