@@ -36,9 +36,9 @@ function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD)
 
 // Asegúrate de que $idsCotizacion no esté vacío antes de llamar a la función
 if (!empty($idsCotizacion)) {
-    $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD, $idsCotizacion) ;
-   $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD, $idsCotizacion);
-    $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD, $idsCotizacion);
+    $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '0'", $tasaConversionEURUSD) ;
+   $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD);
+    $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD);
 } else {
     echo "No hay cotizaciones para calcular.";
 }
