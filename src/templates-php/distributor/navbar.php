@@ -4,6 +4,7 @@
     error_reporting(E_ALL);
     session_start();
     require __DIR__.'/../../../php/conexion.php';
+    require __DIR__.'/../../../php/distributor/cotizaciones/cotizaciones.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
@@ -41,6 +42,26 @@
             <!-- enlaces de opciones de cuenta -->
             <ul class="navbar-list">
                 <div class="d-flex flex-row">
+
+                <li >
+                        <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
+                        <span class="material-symbols-rounded icon" >
+                            monetization_on
+                        </span>
+                        <div style="display: flex; flex-direction: column; text-align: center;">
+                        <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
+                                Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente;?></strong>
+                            </p>
+                            <p style="font-size: 1rem; text-align: center; width: 100%;">
+                                Procesar <strong style="color: #0000ff;">$<?php echo $sumaTotalUSDProcesar;?></strong>
+                            </p>
+                            <p style="font-size: 1rem; text-align: center; width: 100%;">
+                                Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalUSDProcesado;?></strong>
+                            </p>
+                        </div>
+                        </a>
+                    </li>
+
                     <li title="Abrir editor de la Tienda Virtual">
                         <a href="https://dev.kalstein.plus/plataforma/template-editor/dashboard.php" class='navbar-link icon-box'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 640 512" class="icon_editor_tienda">
