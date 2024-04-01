@@ -441,8 +441,6 @@ jQuery(document).ready(function ($) {
     var pa_type = $("#packageType").val();
 
     var price = $("#priceProduct").val();
-    //get the value of the gibsonPrice checkbox
-    var gibsonPrice = $("#gibsonPrice").is(":checked");
     var currency = $("#currency").val();
 
     var discount_1 = $("#discount1").val();
@@ -509,7 +507,6 @@ jQuery(document).ready(function ($) {
         catalog,
         longDescription,
         longDescriptionCSV,
-        gibsonPrice
       );
     }
   });
@@ -541,7 +538,6 @@ jQuery(document).ready(function ($) {
     catalog,
     longDescription,
     longDescriptionCSV,
-    gibsonPrice
   ) {
     var formData = new FormData();
 
@@ -568,8 +564,6 @@ jQuery(document).ready(function ($) {
     formData.append("pa_type", pa_type);
 
     formData.append("price", price);
-    formData.append("gibson", gibsonPrice);
-    console.log(gibsonPrice);
     formData.append("currency", currency);
 
     formData.append("discount_1", discount_1);

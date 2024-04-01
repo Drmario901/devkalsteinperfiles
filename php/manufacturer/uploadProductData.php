@@ -37,34 +37,8 @@
 
 
         
-         //revisar si gibson = true
-         if ($gibson == 'true'){
-            //Si gibson es true entonces el precio es 25% menos
-            $gibsonPrice = $pPriceUSD * 0.75;
-
-            $query = "INSERT INTO wp_k_products
-
-        (product_maker, product_brand, product_name_es, product_model, product_description_es, product_category_es, product_image,
-        product_stock_units, product_stock_status,
-        product_peso_neto, product_ancho, product_alto, product_largo,
-        product_peso_bruto, product_ancho_paquete, product_alto_paquete, product_largo_paquete, wp_product_package_type,
-        product_priceUSD, product_price_gibson, product_priceEUR, wp_product_currency,
-        wp_product_discount_1, wp_product_discount_1_amount, wp_product_discount_2, wp_product_discount_2_amount,
-        product_manual, product_catalog, product_catalog_name,
-        product_technical_description_es, product_technical_description_csv, product_type)
-        VALUES
-        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$uploadName',
-        '$pStock', '$pStatus',
-        '$pWe', '$pWi','$pHe', '$pLe',
-        '$pWePa', '$pWiPa','$pHePa', '$pLePa', '$pPType',
-        '$pPriceUSD', $gibsonPrice, '$pPriceEUR', '$pCurrency',
-        '$discount_1', '$discount_1_amount','$discount_2', '$discount_2_amount',
-        '$newManualName', '$newCatalogName', '$wp_catalog_name',
-        '$plDescription', '$plDescriptionCSV', 'sell');";
-        } else {
-            $query = "INSERT INTO wp_k_products
-
-        (product_maker, product_brand, product_name_es, product_model, product_description_es, product_category_es, product_image,
+             
+        $query = "INSERT INTO wp_k_products (product_maker, product_brand, product_name_es, product_model, product_description_es, product_category_es, product_image,
         product_stock_units, product_stock_status,
         product_peso_neto, product_ancho, product_alto, product_largo,
         product_peso_bruto, product_ancho_paquete, product_alto_paquete, product_largo_paquete, wp_product_package_type,
@@ -81,7 +55,7 @@
         '$discount_1', '$discount_1_amount','$discount_2', '$discount_2_amount',
         '$newManualName', '$newCatalogName', '$wp_catalog_name',
         '$plDescription', '$plDescriptionCSV', 'sell');";
-        }
+        
 
         $result = $conexion->query($query);
 
