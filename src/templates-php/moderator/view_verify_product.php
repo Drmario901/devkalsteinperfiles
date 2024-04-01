@@ -335,6 +335,7 @@
 
                             </div>
 
+                            <label for='' style='margin-top: 12px;'>Price</label>
                             <input class='d-inline' type='number' id='discountGilson'>
                             <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
 
