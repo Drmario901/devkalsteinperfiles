@@ -10,7 +10,7 @@ if(isset($_POST['discount']) && isset($_POST['id'])) {
     $id = $_POST['id'];
 
     // OBTENER EL PRECIO DEL PRODUCTO
-    $query = "SELECT product_priceUSD FROM wp_k_products WHERE id = '$id'";
+    $query = "SELECT product_priceUSD FROM wp_k_products WHERE product_aid = '$id'";
     $result = $conexion->query($query);
 
     $finalPrice = 0; // Inicializar el precio final.
@@ -23,7 +23,7 @@ if(isset($_POST['discount']) && isset($_POST['id'])) {
         }
 
         // Actualizar el precio con el descuento
-        $queryUpdatePrice = "UPDATE wp_k_products SET product_price_gibson = '$finalPrice', descuento_gibson = '$discount' WHERE id = '$id'";
+        $queryUpdatePrice = "UPDATE wp_k_products SET product_price_gibson = '$finalPrice', descuento_gibson = '$discount' WHERE product_aid = '$id'";
 
         if($conexion->query($queryUpdatePrice) === TRUE) {
             $response = ['status' => 'correcto', 'message' => 'Descuento aplicado y precio actualizado con éxito.'];
