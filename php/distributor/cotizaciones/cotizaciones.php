@@ -10,14 +10,16 @@ require_once __DIR__ . '/../../../db/conexion.php';
 
 $acc_id = $_SESSION['emailAccount'];
 
-echo 'el iddd', $acc_id;
+echo 'el iddd: ', $acc_id;
 
-$estado = "'Procesado', '3'";
+$estado = "'Procesado', '3'"; // Asegúrate de que este valor es seguro y controlado
 
-$consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = '". $acc_id ."' AND cotizacion_status IN ($estado)";
+// NOTA: Ya que $estado es seguro y controlado, lo insertamos directamente. Para $acc_id usamos parámetros.
+$consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = ? AND cotizacion_status IN ($estado)";
 
 $stmt = $conexion->prepare($consulta);
-$stmt->bind_param("s", $acc_id);
+// Ahora vinculamos $acc_id como parámetro
+$stmt->bind_param("s", $acc_id); // Asegurarse de que $acc_id es el único parámetro
 $stmt->execute();
 $resultado = $stmt->get_result();
 
@@ -33,7 +35,6 @@ if($resultado->num_rows > 0) {
 }
 
 $stmt->close();
-
 
 
 // function obtenerSumaTotalUSD($conexion, $acc_id, $estado, $tasaConversionEURUSD) {
