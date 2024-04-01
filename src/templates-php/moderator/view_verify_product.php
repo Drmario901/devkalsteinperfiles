@@ -336,7 +336,7 @@
                             </div>
 
                             <input class='d-inline' type='number' id='discountGilson'>
-                            <button class='btn btn-primary' id='btnDiscountGilson'>Apply discount</button>
+                            <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
 
                         </div>
                         <div class='col-sm-6'>
