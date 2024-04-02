@@ -11,7 +11,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
 require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/txt/txt.php';
 
-$archivoLog ='/monetico_log.txt'; 
+$archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log.txt"; 
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
