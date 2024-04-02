@@ -78,3 +78,10 @@ Stack trace:
 >>>>>>> ee8a70bc9f6c76cca5cb408064a39c117cb4e340
 [25-Mar-2024 12:47:43 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 46
 [25-Mar-2024 12:47:52 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/set-cookie.php on line 46
+[02-Apr-2024 14:08:22 UTC] PHP Deprecated:  http_build_query(): Passing null to parameter #2 ($numeric_prefix) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Responses/PurchaseResponse.php on line 391
+[02-Apr-2024 14:12:42 UTC] PHP Deprecated:  http_build_query(): Passing null to parameter #2 ($numeric_prefix) of type string is deprecated in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/dansmaculotte/monetico-php/src/Responses/PurchaseResponse.php on line 391
+[02-Apr-2024 15:03:19 UTC] PHP Warning:  require_once(/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/../devkalsteinperfiles/db/conexion.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testResponse.php on line 11
+[02-Apr-2024 15:03:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/../devkalsteinperfiles/db/conexion.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testResponse.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testResponse.php on line 11
