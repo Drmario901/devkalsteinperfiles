@@ -9,3 +9,11 @@
 2024-04-02 13:38:54 - ERROR: No se recibieron datos.
 2024-04-02 13:38:55 - ERROR: No se recibieron datos.
 2024-04-02 13:42:16 - ERROR: No se recibieron datos.
+2024-04-02 13:55:08 - Datos recibidos: []
+2024-04-02 13:55:08 - ERROR: No se recibieron datos por POST.
+2024-04-02 14:02:03 - Datos recibidos: []
+2024-04-02 14:02:03 - ERROR: No se recibieron datos por POST.
+2024-04-02 14:02:03 - Datos recibidos: []
+2024-04-02 14:02:03 - ERROR: No se recibieron datos por POST.
+2024-04-02 14:08:22 - Datos recibidos: {"TPE":"7590531","date":"02\/04\/2024_a_16:08:18","montant":"173.61USD","reference":"QUO396","texte-libre":"Portaobjetos de vidrio YRA37","code-retour":"payetest","cvx":"oui","vld":"1226","brand":"MC","numauto":"000000","usage":"inconnu","typecompte":"inconnu","ecard":"non","originecb":"FRA","bincb":"00000300","hpancb":"DD4C3268D5352A85E4E47D0AC5CCDFC71406EC25","ipclient":"185.28.22.84","originetr":"USA","cbmasquee":"00000300******21","modepaiement":"CB","authentification":"ewogICAiZGV0YWlscyIgOiB7CiAgICAgICJsaWFiaWxpdHlTaGlmdCIgOiAiTiIsCiAgICAgICJtZXJjaGFudFByZWZlcmVuY2UiIDogIm5vX3ByZWZlcmVuY2UiCiAgIH0sCiAgICJwcm90b2NvbCIgOiAiM0RTZWN1cmUiLAogICAic3RhdHVzIiA6ICJub3RfZW5yb2xsZWQiLAogICAidmVyc2lvbiIgOiAiMi4yLjAiCn0K","MAC":"A9CD8584B0A6F17D9321E5DA41CF01594A0A97A3"}
+2024-04-02 14:12:42 - Datos recibidos: {"TPE":"7590531","date":"02\/04\/2024_a_16:12:41","montant":"739.38USD","reference":"QUO397","texte-libre":"Bandera","code-retour":"Annulation","cvx":"oui","vld":"1226","brand":"MC","motifrefus":"Refus","motifrefusautorisation":"Refus banque","usage":"inconnu","typecompte":"inconnu","ecard":"non","originecb":"FRA","bincb":"00000300","hpancb":"FB536FF79A8FA03E858EB17ADE6A5291470BBE22","ipclient":"185.28.22.84","originetr":"USA","cbmasquee":"00000300******22","modepaiement":"CB","authentification":"ewogICAiZGV0YWlscyIgOiB7CiAgICAgICJsaWFiaWxpdHlTaGlmdCIgOiAiTkEiLAogICAgICAibWVyY2hhbnRQcmVmZXJlbmNlIiA6ICJub19wcmVmZXJlbmNlIgogICB9LAogICAicHJvdG9jb2wiIDogIjNEU2VjdXJlIiwKICAgInN0YXR1cyIgOiAibm90X2Vucm9sbGVkIiwKICAgInZlcnNpb24iIDogIjIuMi4wIgp9Cg==","MAC":"F4B7116A6F0D1DFEFA8804B4AE643CE2D28042BB"}
