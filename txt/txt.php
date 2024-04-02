@@ -25,7 +25,7 @@
             if ($jsonData !== null && json_last_error() === JSON_ERROR_NONE) {
                 // Obtener el campo 'reference'
                 $reference = $jsonData->reference ?? 'No encontrado';
-                $code_retour = $jsonData->reference ?? "No encontrado";
+                $codeRetour = $jsonData->{'code-retour'} ?? 'No encontrado';
                 echo "Reference: " . $reference . "\n";
                 echo "code-retour: " . $code_retour . "\n";
                 
