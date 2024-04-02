@@ -2,12 +2,12 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-	session_start();
+	//session_start();
 	if(isset($_SESSION["emailAccount"])){
 		$email = $_SESSION["emailAccount"];
 	}
 
-	require '/home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
+	//require '/home/he270716/public_html/plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 
 	if (isset($_GET['pay'])) {
 		$idCotizacion = $_GET['idCotizacion'];
