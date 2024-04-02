@@ -3,7 +3,7 @@
 
 
 
-$archivo = __DIR__ . '/prueba.txt';
+$archivo = __DIR__ . '/txt/prueba.txt';
 
 // Leer el contenido del archivo
 $contenidoJson = file_get_contents($archivo);
