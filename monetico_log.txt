@@ -1,0 +1,11 @@
+2024-04-02 13:23:25 - ERROR: No se recibieron datos.
+2024-04-02 13:26:41 - ERROR: No se recibieron datos.
+2024-04-02 13:30:55 - ERROR: No se recibieron datos.
+2024-04-02 13:30:58 - ERROR: No se recibieron datos.
+2024-04-02 13:30:59 - ERROR: No se recibieron datos.
+2024-04-02 13:30:59 - ERROR: No se recibieron datos.
+2024-04-02 13:38:51 - ERROR: No se recibieron datos.
+2024-04-02 13:38:51 - ERROR: No se recibieron datos.
+2024-04-02 13:38:54 - ERROR: No se recibieron datos.
+2024-04-02 13:38:55 - ERROR: No se recibieron datos.
+2024-04-02 13:42:16 - ERROR: No se recibieron datos.

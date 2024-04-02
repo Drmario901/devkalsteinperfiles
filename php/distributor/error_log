@@ -517,3 +517,111 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14
+[02-Apr-2024 12:22:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php(8): mysqli->query('SELECT * FROM `...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php on line 8
+[02-Apr-2024 12:22:11 UTC] PHP Warning:  Undefined variable $value in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:22:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:22:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php:32
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php(32): mysqli->query('SELECT * FROM w...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php on line 32
+[02-Apr-2024 12:22:11 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:22:11 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:22:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14
+[02-Apr-2024 12:23:38 UTC] PHP Warning:  Undefined variable $value in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:23:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:23:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php(8): mysqli->query('SELECT * FROM `...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php on line 8
+[02-Apr-2024 12:23:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php:32
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php(32): mysqli->query('SELECT * FROM w...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php on line 32
+[02-Apr-2024 12:23:38 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:23:38 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:23:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14
+[02-Apr-2024 12:23:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php(8): mysqli->query('SELECT * FROM `...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php on line 8
+[02-Apr-2024 12:23:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php:32
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php(32): mysqli->query('SELECT * FROM w...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php on line 32
+[02-Apr-2024 12:23:53 UTC] PHP Warning:  Undefined variable $value in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:23:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:23:53 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:23:53 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:23:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14
+[02-Apr-2024 12:31:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php(8): mysqli->query('SELECT * FROM `...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php on line 8
+[02-Apr-2024 12:31:23 UTC] PHP Warning:  Undefined variable $value in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:31:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:31:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php:32
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php(32): mysqli->query('SELECT * FROM w...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php on line 32
+[02-Apr-2024 12:31:23 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:31:23 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:31:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14
+[02-Apr-2024 12:59:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php(8): mysqli->query('SELECT * FROM `...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php on line 8
+[02-Apr-2024 12:59:12 UTC] PHP Warning:  Undefined variable $value in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 12:59:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php:32
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php(32): mysqli->query('SELECT * FROM w...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php on line 32
+[02-Apr-2024 12:59:12 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:59:12 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 12:59:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14
+[02-Apr-2024 13:13:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php:8
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php(8): mysqli->query('SELECT * FROM `...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/getProducts.php on line 8
+[02-Apr-2024 13:13:23 UTC] PHP Warning:  Undefined variable $value in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 13:13:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/categoryProducts.php on line 9
+[02-Apr-2024 13:13:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'kalsteinplus_he270716_wp_es.wp_k_products_add' doesn't exist in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php:32
+Stack trace:
+#0 /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php(32): mysqli->query('SELECT * FROM w...')
+#1 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/productTable.php on line 32
+[02-Apr-2024 13:13:24 UTC] PHP Warning:  include(translateText.php): Failed to open stream: No such file or directory in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 13:13:24 UTC] PHP Warning:  include(): Failed opening 'translateText.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 13
+[02-Apr-2024 13:13:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function translateText() in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/distributor/quoteCancelled.php on line 14

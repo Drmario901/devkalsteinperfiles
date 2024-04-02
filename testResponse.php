@@ -4,7 +4,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'vendor/autoload.php';
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Headers: Content-Type');
+
+require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
@@ -23,13 +27,10 @@ if (!empty($data)) {
     $response = new PurchaseResponse($data);
     $result = $monetico->validate($response);
 
-    // Verifica si la validación fue exitosa
     if ($result) {
-        // Enviar respuesta de confirmación "OK" a Monetico en el formato especificado
         echo "version=2\n";
         echo "cdr=0\n";
     } else {
-        // Enviar respuesta de error en el formato especificado
         echo "version=2\n";
         echo "cdr=1\n";
     }
