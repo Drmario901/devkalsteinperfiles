@@ -42,23 +42,6 @@
             <!-- enlaces de opciones de cuenta -->
             <ul class="navbar-list">
                 <div class="d-flex flex-row">
-
-                <li >
-                        <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
-                        <span class="material-symbols-rounded icon" >
-                            monetization_on
-                        </span>
-                        </a>
-                        <div style="display: flex; flex-direction: column; text-align: start;">
-                            <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
-                                Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalPendientes;?></strong>
-                            </p>
-                            <p style="font-size: 1rem; text-align: start; width: 100%;">
-                                Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalPagadas;?></strong>
-                            </p>
-                        </div>
-                    </li>
-
                     <li title="Abrir editor de la Tienda Virtual">
                         <a href="https://dev.kalstein.plus/plataforma/template-editor/dashboard.php" class='navbar-link icon-box'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 640 512" class="icon_editor_tienda">
@@ -106,6 +89,23 @@
         
                     </a>
                 </li>
+
+                <li >
+                        <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box" style="text-align: end;">
+                        <span class="material-symbols-rounded icon" >
+                            monetization_on
+                        </span>
+                        </a>
+                        <div style="display: flex; flex-direction: column; text-align: start;">
+                            <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
+                                Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalPendientes;?></strong>
+                            </p>
+                            <p style="font-size: 1rem; text-align: start; width: 100%;">
+                                Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalPagadas;?></strong>
+                            </p>
+                        </div>
+                    </li>
+
             </ul>
 
             <!-- enlaces de las secciones -->
