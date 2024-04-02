@@ -23,6 +23,9 @@
 
             // Incluir el archivo de traducciones
             require __DIR__. '/../../../php/translations.php';
+            $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+
+            $pendiente = $translations[$lang]['pendiente'];
 
             // Determinar el texto del banner según el idioma
             $banner_text_translation = isset($translations[$language]['banner_text_pending_orders']) ? $translations[$language]['banner_text_pending_orders'] : $translations['en']['banner_text_pending_orders'];
@@ -83,7 +86,7 @@
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoEstatus'>Estatus</th>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoDetalles'>Detalles</th>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoVer'>Ver</th>
-                            <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoAcciones'>Acciones</th>
+                          <-!--  <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoAcciones'>Acciones</th> ->
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -102,6 +105,10 @@
                         $quoteStatus = $row['cotizacion_status'];
                         $quoteStatus = str_replace('1', 'Para procesar', $quoteStatus);
                         $quoteClientEmail = $row['cotizacion_id_user'];
+
+                        if($quoteStatus == 0){
+                            $quoteStatus = $pendiente;
+                        }
         
                         $html .= "
                             <tr>
