@@ -9,6 +9,9 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
+require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/txt/txt.php';
+
+$archivoLog ='/monetico_log.txt'; 
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
@@ -43,5 +46,7 @@ if ($result) {
     echo "version=2\n";
     echo "cdr=1\n";
 }
+
+procesarArchivoMonetico($archivoLog, $conexion);
 
 ?>
