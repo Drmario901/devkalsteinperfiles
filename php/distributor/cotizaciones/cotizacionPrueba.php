@@ -29,8 +29,6 @@ if ($stmt = $conexion->prepare($consulta)) {
     $stmt->close();
 }
 
-print_r( $arrayCotizaciones);
-
 // Verificar si hay cotizaciones para buscar
 if (!empty($arrayCotizaciones)) {
     // Convertir el array en una lista separada por comas para la consulta SQL
