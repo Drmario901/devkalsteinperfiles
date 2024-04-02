@@ -77,6 +77,7 @@
                                 
                                 if (!$full) $string = array_slice($string, 0, 1);
                                 return $string ? 'Hace ' . implode(', ', $string) : 'Justo ahora';
+                            }
 
                             $consulta = "SELECT cotizacion_atencion, cotizacion_create_at, cotizacion_total FROM wp_cotizacion WHERE (cotizacion_status = 'Process' OR cotizacion_status = '1') AND cotizacion_id_remitente = '$acc_id' ORDER BY cotizacion_create_at DESC LIMIT 5";
                             $resultado = $conexion->query($consulta);
