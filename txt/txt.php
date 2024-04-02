@@ -1,7 +1,9 @@
 <?php
 
 
-$archivo = 'txt/prueba.txt';
+
+
+$archivo = __DIR__ . '/prueba.txt';
 
 // Leer el contenido del archivo
 $contenidoJson = file_get_contents($archivo);
