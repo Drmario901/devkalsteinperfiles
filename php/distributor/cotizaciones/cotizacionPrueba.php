@@ -33,7 +33,7 @@ echo 'el iddd: ', $acc_id;
             while ($fila = $resultado->fetch_assoc()) {
                 $cotizacionID = $fila['cotizacion_id'];
             // Sumar al total
-            echo 'QUO'.$cotizacionID. '\n';
+            echo 'QUO'.$cotizacionID. '<br/>';
             }
         }
         $stmt->close(); // No olvidar cerrar el statement
