@@ -11,6 +11,7 @@
 // Asegúrate de que el archivo existe y se puede leer.
 if (!is_readable($archivo)) {
     die("El archivo no existe o no se puede leer.");
+    
 }
 
 $lines = file($archivo); // Lee el archivo en un array de líneas
