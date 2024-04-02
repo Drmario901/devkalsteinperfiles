@@ -1,5 +1,5 @@
 <?php
-    require __DIR__ . '/../../../php/quote/templates-php/translateText.php';
+    require __DIR__ . '/../../../../php/quote/templates-php/translateText.php';
     translateText();
     $html = "
         <script src='https://kit.fontawesome.com/3cff919dc3.js' crossorigin='anonymous'></script>
