@@ -6,6 +6,7 @@
     error_reporting(E_ALL);
 
     $archivo = __DIR__ . '/prueba.txt';
+    $archivo = __DIR__ . '/../monetico_log.txt';
 
 // Asegúrate de que el archivo existe y se puede leer.
 if (!is_readable($archivo)) {
