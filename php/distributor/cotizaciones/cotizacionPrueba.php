@@ -31,19 +31,26 @@ if ($stmt = $conexion->prepare($consulta)) {
 $sumaTotalPendientes = 0;
 $sumaTotalPagadas = 0;
 
+// Tasa de conversión de EUR a USD
+$tasaConversionEURUSD = 1.1;
+
 if (!empty($arrayCotizaciones)) {
     $cotizacionesEnFormatoSQL = "'" . implode("', '", $arrayCotizaciones) . "'";
-    $consultaMonetico = "SELECT id_cotizacion, monto_total, status_payment FROM wp_monetico WHERE id_cotizacion IN ($cotizacionesEnFormatoSQL)";
+    $consultaMonetico = "SELECT id_cotizacion, monto_total, status_payment, cotizacion_divisa FROM wp_monetico WHERE id_cotizacion IN ($cotizacionesEnFormatoSQL)";
     
     if ($stmt = $conexion->prepare($consultaMonetico)) {
         $stmt->execute();
         $resultadoMonetico = $stmt->get_result();
         
         while ($filaMonetico = $resultadoMonetico->fetch_assoc()) {
+            // Determinar la tasa de conversión basada en la divisa
+            $tasaConversion = ($filaMonetico['cotizacion_divisa'] == 'EUR') ? $tasaConversionEURUSD : 1;
+            $montoConvertido = $filaMonetico['monto_total'] * $tasaConversion;
+
             if ($filaMonetico['status_payment'] == 0) {
-                $sumaTotalPendientes += $filaMonetico['monto_total'];
+                $sumaTotalPendientes += $montoConvertido;
             } elseif ($filaMonetico['status_payment'] == 1) {
-                $sumaTotalPagadas += $filaMonetico['monto_total'];
+                $sumaTotalPagadas += $montoConvertido;
             }
         }
         $stmt->close();
