@@ -56,7 +56,7 @@
         
                
 
-                $queryTotal = "SELECT COUNT(*) FROM wp_cotizacion WHERE (cotizacion_status = 'Process' OR cotizacion_status = '1') AND cotizacion_id_remitente = '$acc_id'";
+                $queryTotal = "SELECT COUNT(*) FROM wp_cotizacion WHERE (cotizacion_status = 'Pendiente' OR cotizacion_status = '0') AND cotizacion_id_remitente = '$acc_id'";
                 $All = $conexion->query($queryTotal)->fetch_array()[0];
 
                 if ($All <= ($page - 1) * $perPage){
@@ -68,7 +68,7 @@
                 $offset = ($page - 1) * $perPage;
                 $limit = $perPage;
 
-                $consulta = "SELECT * FROM wp_cotizacion WHERE (cotizacion_status = 'Process' OR cotizacion_status = '1') AND cotizacion_id_remitente = '$acc_id' ORDER BY cotizacion_create_at DESC LIMIT $offset, $limit";
+                $consulta = "SELECT * FROM wp_cotizacion WHERE (cotizacion_status = 'Pendiente' OR cotizacion_status = '0') AND cotizacion_id_remitente = '$acc_id' ORDER BY cotizacion_create_at DESC LIMIT $offset, $limit";
                 $resultado = $conexion->query($consulta);
         
                 $html = "
