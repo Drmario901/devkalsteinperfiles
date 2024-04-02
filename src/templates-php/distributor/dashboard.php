@@ -88,7 +88,7 @@
                                     $client = $row['cotizacion_atencion'];
                                     $total = $row['cotizacion_total'];
                                     $date = time_elapsed_string($row['cotizacion_create_at']);
-
+                                    echo 'holaa',$date;
                                     echo "
                                     <div class='card mb-2'>
                                         <div class='d-flex flex-row justify-content-between'>
