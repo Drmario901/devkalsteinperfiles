@@ -1,28 +1,43 @@
-<?php
+    <?php
 
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
-$archivo = __DIR__ . '/prueba.txt';
+    $archivo = __DIR__ . '/prueba.txt';
+    
+    // Asegúrate de que el archivo existe y se puede leer.
+    if (!is_readable($archivo)) {
+        die("El archivo no existe o no se puede leer.");
+    }
+    
+    $lines = file($archivo); // Lee el archivo en un array de líneas
+    
+    foreach ($lines as $line) {
+        // Verificar si la línea contiene "Datos recibidos"
+        if (strpos($line, 'Datos recibidos:') !== false) {
+            // Extraer el JSON de la línea
+            $jsonString = substr($line, strpos($line, '{'));
+            $jsonData = json_decode($jsonString);
+    
+            // Comprobar si el JSON se decodificó correctamente
+            if ($jsonData !== null && json_last_error() === JSON_ERROR_NONE) {
+                // Obtener el campo 'reference'
+                $reference = $jsonData->reference ?? 'No encontrado';
+                echo "Reference: " . $reference . "\n";
+                
+                // Aquí puedes agregar el código para insertar en la base de datos
+                // Por ejemplo: insertReferenceToDatabase($reference);
+            } else {
+                echo "Error al decodificar JSON: " . json_last_error_msg() . "\n";
+            }
+        }
+    }
 
-print_r($archivo);
-
-// Leer el contenido del archivo
-$contenidoJson = file_get_contents($archivo);
-
-
-// Decodificar el JSON a un objeto PHP
-$objeto = json_decode($contenidoJson);
-
-// Acceder a los valores de montant y reference
-$montant = $objeto->montant;
-$reference = $objeto->reference;
-
-// Imprimir los valores
-echo "Montant: " . $montant . "\n";
-echo "Reference: " . $reference . "\n";
+    // Imprimir los valores
+    // echo "Montant: " . $montant . "\n";
+    // echo "Reference: " . $reference . "\n";
 
 
-?>
+    ?>
