@@ -5,7 +5,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$archivo = __DIR__ . '/txt/prueba.txt';
+$archivo = __DIR__ . '/prueba.txt';
+
+print_r($archivo);
 
 // Leer el contenido del archivo
 $contenidoJson = file_get_contents($archivo);
