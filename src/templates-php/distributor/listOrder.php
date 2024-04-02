@@ -86,7 +86,7 @@
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoEstatus'>Estatus</th>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoDetalles'>Detalles</th>
                             <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoVer'>Ver</th>
-                            <!--  <th class='fw-bold' style='background-color: #213280; color: white; width: 120px;' data-i18n='distribuidor:elementoAcciones'>Acciones</th> ->
+                        
                         </tr>
                     </thead>
                     <tbody class='bodyTableForQuote'>
@@ -126,14 +126,7 @@
                                 <td>
                                     <a href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
                                 </td>
-                                <!-- <td>
-                                    <select name='cotizacion_status' style='color: #000 !important; border: 1px solid #aaa !important; border-radius: 4px' class='status-select''>
-                                        <option value=''></option>
-                                        <option value='3' data-i18n='distribuidor:elementoProcesado'>Procesado</option>
-                                        <option value='4' data-i18n='distribuidor:elementoCancelado'>Cancelado</option>
-                                    </select>
-                                    <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 mt-2 mx-auto' value='$quoteId' data-i18n='distribuidor:btnChangeStatus'>Cambiar estatus</button>
-                                </td>  -->
+                              
                             </tr>
                         ";
                     }
