@@ -29,7 +29,7 @@
         <tbody class='bodyTableForQuote'>
     ";
 
-    $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_status = 'Process' LIMIT $offset, $limit";
+    $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_status = '0' LIMIT $offset, $limit";
 
     $resultado = $conexion->query($consulta);
 
