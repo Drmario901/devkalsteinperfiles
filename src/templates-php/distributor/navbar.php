@@ -91,20 +91,15 @@
                 </li>
 
                 <li >
-                        <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box" style="text-align: end;">
-                        <span class="material-symbols-rounded icon" >
-                            monetization_on
-                        </span>
-                        </a>
-                        <div style="display: flex; flex-direction: column; text-align: start;">
-                            <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
-                                Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalPendientes;?></strong>
-                            </p>
-                            <p style="font-size: 1rem; text-align: start; width: 100%;">
-                                Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalPagadas;?></strong>
-                            </p>
-                        </div>
-                    </li>
+                    <div style="display: flex; flex-direction: column; text-align: start;">
+                        <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
+                            Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalPendientes;?></strong>
+                        </p>
+                        <p style="font-size: 1rem; text-align: start; width: 100%;">
+                            Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalPagadas;?></strong>
+                        </p>
+                    </div>
+                </li>
 
             </ul>
 
