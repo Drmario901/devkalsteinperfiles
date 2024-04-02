@@ -60,9 +60,9 @@ $sumaTotalUSDPendiente = obtenerSumaTotalUSD($conexion, $acc_id, "'Pendiente', '
 $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD);
 $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD);
 
-echo "Suma total USD Pendiente: $sumaTotalUSDPendiente<br>";
-echo "Suma total USD Procesar: $sumaTotalUSDProcesar<br>";
-echo "Suma total USD Procesado: $sumaTotalUSDProcesado<br>";
+// echo "Suma total USD Pendiente: $sumaTotalUSDPendiente<br>";
+// echo "Suma total USD Procesar: $sumaTotalUSDProcesar<br>";
+// echo "Suma total USD Procesado: $sumaTotalUSDProcesado<br>";
 
 
 
