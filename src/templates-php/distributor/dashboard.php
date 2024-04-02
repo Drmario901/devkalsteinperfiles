@@ -98,7 +98,7 @@
                                             </a>
                                         </div>
                                         <div class='d-flex flex-row justify-content-between'>
-                                            <span data-i18n='distribuidor:spanTotal'>Total: $total $</span>
+                                            <span data-i18n='distribuidor:spanTotal'>Total:<strong?>$total</strong>$</span>
                                             <span>$date</span>
                                         </div>
                                     </div>
