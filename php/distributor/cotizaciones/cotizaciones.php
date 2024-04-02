@@ -9,7 +9,7 @@ require_once __DIR__ . '/../../../db/conexion.php';
 
 $acc_id = $_SESSION['emailAccount'];
 
-echo 'el iddd: ', $acc_id;
+// echo 'el iddd: ', $acc_id;
 
 $arrayCotizaciones = [];
 
@@ -60,9 +60,10 @@ if (!empty($arrayCotizaciones)) {
     $_SESSION['sumaTotalPendientes'] = $sumaTotalPendientes;
     $_SESSION['sumaTotalPagadas'] = $sumaTotalPagadas;
 
-    echo "Suma total pendiente: $sumaTotalPendientes <br/>";
-    echo "Suma total pagada: $sumaTotalPagadas <br/>";
-} else {
-    echo 'No hay cotizaciones para buscar.';
-}
+    // echo "Suma total pendiente: $sumaTotalPendientes <br/>";
+    // echo "Suma total pagada: $sumaTotalPagadas <br/>";
+} 
+// else {
+//     echo 'No hay cotizaciones para buscar.';
+// }
 ?>
