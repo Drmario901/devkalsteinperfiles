@@ -21,6 +21,8 @@ function obtenerSumaTotalUSD($conexion, $acc_id, $estados, $tasaConversionEURUSD
     
     // La consulta se prepara asumiendo que $estados ya está correctamente formateada y sanitizada
     $consulta = "SELECT cotizacion_total, cotizacion_divisa FROM wp_cotizacion WHERE cotizacion_id_remitente = ? AND cotizacion_status IN ($estados)";
+
+    // $consulta = "SELECT cotizacion_id FROM wp_cotizacion";
     
     if ($stmt = $conexion->prepare($consulta)) {
         $stmt->bind_param("s", $acc_id); // Vincular el 'acc_id' como parámetro

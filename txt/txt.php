@@ -14,9 +14,14 @@ function procesarArchivoMonetico($archivo, $conexion) {
             if ($jsonData !== null && json_last_error() === JSON_ERROR_NONE) {
                 $reference = $jsonData->reference ?? 'No encontrado';
                 $codeRetour = $jsonData->{'code-retour'} ?? 'No encontrado';
+                $montoTotalConMoneda = $jsonData->montant ?? '0';
+
+                // Extraer solo el monto numérico del string
+                preg_match('/\d+(\.\d+)?/', $montoTotalConMoneda, $matches);
+                $montoTotal = $matches[0] ?? 0;
 
                 if ($codeRetour == 'payetest' || $codeRetour == 'paiement') {
-                    insertDataToDatabase($conexion, $reference);
+                    insertDataToDatabase($conexion, $reference, $montoTotal);
                 }
             } else {
                 echo "Error al decodificar JSON: " . json_last_error_msg() . "\n";
@@ -25,7 +30,7 @@ function procesarArchivoMonetico($archivo, $conexion) {
     }
 }
 
-function insertDataToDatabase($conexion, $reference) {
+function insertDataToDatabase($conexion, $reference, $montoTotal) {
     $query = "SELECT id_cotizacion FROM wp_monetico WHERE id_cotizacion = ?";
     $stmt = $conexion->prepare($query);
     $stmt->bind_param("s", $reference);
@@ -33,9 +38,11 @@ function insertDataToDatabase($conexion, $reference) {
     $result = $stmt->get_result();
     
     if ($result->num_rows === 0) {
-        $insertQuery = "INSERT INTO wp_monetico (id_cotizacion) VALUES (?)";
+        // Modificar para incluir monto_total en la inserción
+        $insertQuery = "INSERT INTO wp_monetico (id_cotizacion, monto_total) VALUES (?, ?)";
         $insertStmt = $conexion->prepare($insertQuery);
-        $insertStmt->bind_param("s", $reference);
+        // Asegúrate de que el tipo de dato corresponda con tu esquema de base de datos
+        $insertStmt->bind_param("sd", $reference, $montoTotal);
         if ($insertStmt->execute()) {
             echo "Inserción correcta, ID: " . $insertStmt->insert_id . "\n";
         } else {
