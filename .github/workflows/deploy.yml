@@ -17,6 +17,3 @@ jobs:
           script: |
             cd /home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles
             git pull https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
-            git add . 
-            git commit -m 'Test 01'
-            git push origin main https://${{ secrets.GIT_PAT }}:x-oauth-basic@github.com/KalsteinFrance/devkalsteinperfiles.git main
