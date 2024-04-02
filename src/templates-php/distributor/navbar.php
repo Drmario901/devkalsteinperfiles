@@ -48,6 +48,7 @@
                         <span class="material-symbols-rounded icon" >
                             monetization_on
                         </span>
+                        </a>
                         <div style="display: flex; flex-direction: column; text-align: start;">
                             <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
                                 Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalPendientes;?></strong>
@@ -56,7 +57,6 @@
                                 Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalPagadas;?></strong>
                             </p>
                         </div>
-                        </a>
                     </li>
 
                     <li title="Abrir editor de la Tienda Virtual">
