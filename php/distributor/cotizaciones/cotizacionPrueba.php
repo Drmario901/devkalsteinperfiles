@@ -20,7 +20,7 @@ echo 'el iddd: ', $acc_id;
 //     $sumaTotalUSD = 0;
     
     // La consulta se prepara asumiendo que $estados ya está correctamente formateada y sanitizada
-    $consulta = "SELECT id_cotizacion FROM wp_cotizacion WHERE cotizacion_id_remitente = ? ";
+    $consulta = "SELECT cotizacion_id FROM wp_cotizacion WHERE cotizacion_id_remitente = ? ";
 
     // $consulta = "SELECT cotizacion_id FROM wp_cotizacion";
     
