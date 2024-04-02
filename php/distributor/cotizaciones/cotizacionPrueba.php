@@ -22,36 +22,39 @@ if ($stmt = $conexion->prepare($consulta)) {
 
     if ($resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
-            // Asumiendo que 'cotizacion_id' es un número y los IDs en 'wp_monetico' tienen un prefijo 'QUO'
             $arrayCotizaciones[] = 'QUO' . $fila['cotizacion_id'];
         }
     }
     $stmt->close();
 }
 
-// Verificar si hay cotizaciones para buscar
+$sumaTotalPendientes = 0;
+$sumaTotalPagadas = 0;
+
 if (!empty($arrayCotizaciones)) {
-    // Convertir el array en una lista separada por comas para la consulta SQL
     $cotizacionesEnFormatoSQL = "'" . implode("', '", $arrayCotizaciones) . "'";
-    
-    // Preparar la consulta para buscar estas cotizaciones en wp_monetico
-    $consultaMonetico = "SELECT id, id_cotizacion, monto_total, status_payment FROM wp_monetico WHERE id_cotizacion IN ($cotizacionesEnFormatoSQL)";
+    $consultaMonetico = "SELECT id_cotizacion, monto_total, status_payment FROM wp_monetico WHERE id_cotizacion IN ($cotizacionesEnFormatoSQL)";
     
     if ($stmt = $conexion->prepare($consultaMonetico)) {
-        // No es necesario bind_param debido a que ya sanitizamos la entrada al construir la cadena de consulta
         $stmt->execute();
         $resultadoMonetico = $stmt->get_result();
         
-        if ($resultadoMonetico->num_rows > 0) {
-            while ($filaMonetico = $resultadoMonetico->fetch_assoc()) {
-                // Procesar los resultados, por ejemplo, imprimiéndolos
-                echo 'ID: ' . $filaMonetico['id'] . ', ID Cotización: ' . $filaMonetico['id_cotizacion'] . ', Monto Total: ' . $filaMonetico['monto_total'] . ', Status: ' . $filaMonetico['status_payment'] . '<br/>';
+        while ($filaMonetico = $resultadoMonetico->fetch_assoc()) {
+            if ($filaMonetico['status_payment'] == 0) {
+                $sumaTotalPendientes += $filaMonetico['monto_total'];
+            } elseif ($filaMonetico['status_payment'] == 1) {
+                $sumaTotalPagadas += $filaMonetico['monto_total'];
             }
-        } else {
-            echo 'No se encontraron coincidencias en wp_monetico.';
         }
         $stmt->close();
     }
+    
+    // Exportar los totales a variables de sesión
+    $_SESSION['sumaTotalPendientes'] = $sumaTotalPendientes;
+    $_SESSION['sumaTotalPagadas'] = $sumaTotalPagadas;
+
+    echo "Suma total pendiente: $sumaTotalPendientes <br/>";
+    echo "Suma total pagada: $sumaTotalPagadas <br/>";
 } else {
     echo 'No hay cotizaciones para buscar.';
 }
