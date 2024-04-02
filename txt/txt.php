@@ -25,7 +25,9 @@
             if ($jsonData !== null && json_last_error() === JSON_ERROR_NONE) {
                 // Obtener el campo 'reference'
                 $reference = $jsonData->reference ?? 'No encontrado';
+                $code_retour = $jsonData->reference ?? "No encontrado";
                 echo "Reference: " . $reference . "\n";
+                echo "code-retour: " . $code_retour . "\n";
                 
                 // Aquí puedes agregar el código para insertar en la base de datos
                 // Por ejemplo: insertReferenceToDatabase($reference);
