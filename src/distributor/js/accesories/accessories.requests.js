@@ -243,7 +243,7 @@ function imgVal(file, id) {
             }
         }
     } */
-  document.querySelector("#" + id).value = "";
+  //document.querySelector("#" + id).value = "";
 
   image.src = objectUrl;
   document.body.appendChild(image);
