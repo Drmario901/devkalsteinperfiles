@@ -1260,7 +1260,7 @@
             wp_enqueue_script('filedrop-js', plugins_url('src/manufacturer/js/filedrop.js',__FILE__),array('jquery'));
             wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js',__FILE__),array('jquery'));
             wp_enqueue_script('image-select-preview', plugins_url('src/manufacturer/js/image.preview.js',__FILE__),array('jquery'));
-            wp_enqueue_script('product-requests', plugins_url('src/manufacturer/js/product.request.js',__FILE__),array('jquery')); // 
+            wp_enqueue_script('product-requests', plugins_url('src/manufacturer/js/productRequest.js',__FILE__),array('jquery')); // 
             wp_enqueue_script('accessory-requests', plugins_url('src/distributor/js/accesories/accessories.requests.js',__FILE__),array('jquery')); // 
             wp_enqueue_script('clamp-form-fields', plugins_url('src/manufacturer/js/form.format.control.js',__FILE__),array('jquery'));
             wp_enqueue_script('csv-to-json-lib', plugins_url('src/manufacturer/js/csv2json.js',__FILE__),array('jquery'));
