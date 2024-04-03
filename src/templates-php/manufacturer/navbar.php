@@ -1,7 +1,14 @@
 <?php
-
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  if (session_status() == PHP_SESSION_NONE) {
     session_start();
+    }
     require __DIR__.'/../../../php/conexion.php';
+    // require_once '';
+    // require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
+    require __DIR__.'/../../../php/distributor/cotizaciones/cotizaciones.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
@@ -81,6 +88,18 @@
         
                     </a>
                 </li>
+
+
+                <li >
+                    <div style="display: flex; flex-direction: column; text-align: start; padding-right:2rem">
+                        <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px; font-weight: 500;">
+                            Pendiente: <strong style="color: #e38512;">$<?php echo $sumaTotalPendientes;?></strong>
+                        </p>
+                        <p style="font-size: 1rem; text-align: start; width: 100%; font-weight: 500;">
+                            Cobrado: <strong style="color: #0eab13;">$<?php echo $sumaTotalPagadas;?></strong>
+                        </p>
+                    </div>
+                </li>
             </ul>
 
             <!-- enlaces de las secciones -->
@@ -152,6 +171,6 @@
         }
     </style>
     <?php
-        include __DIR__ . '/../quotes/navbar.php';
+        echo navbar();
     ?>
 </div>

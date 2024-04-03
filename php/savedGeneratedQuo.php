@@ -10,8 +10,8 @@ require_once __DIR__ . '/../db/conexion.php';
   $result = $conexion->query($sql);
   $row = mysqli_fetch_array($result);
   $idServices = $row['R_id_servicio'];
-  $email = $row['R_usuario'];
-  $emailAgent = $row['R_usuario_agente'];
+  $email = $row['R_usuario_agente'];
+  $emailAgent = $row['R_usuario'];
   $description2 = $row['R_Description'];
   $categorie = $row['R_category'];
   $model = $row['R_product'];
@@ -38,7 +38,7 @@ require_once __DIR__ . '/../db/conexion.php';
     $total = $total + $subtotal;
   }
 
-  $register = "INSERT INTO wp_cotizacion(cotizacion_id, cotizacion_id_user, cotizacion_sres, cotizacion_atencion, cotizacion_create_at, cotizacion_divisa, cotizacion_total, cotizacion_status, cotizacion_id_remitente) VALUES ('', '$emailAgent', '$nameUser', '$nameUser', CURRENT_TIMESTAMP, '$precioMoneda', '$total', 'Pendiente', '$email')";
+  $register = "INSERT INTO wp_cotizacion(cotizacion_id, cotizacion_id_user, cotizacion_sres, cotizacion_atencion, cotizacion_create_at, cotizacion_divisa, cotizacion_total, cotizacion_status, cotizacion_id_remitente) VALUES ('', '$emailAgent', '$nameUser', '$nameUser', CURRENT_TIMESTAMP, '$precioMoneda', '$total', '0', '$email')";
   if ($conexion->query($register) === TRUE) {   
     $query = "SELECT * FROM wp_cotizacion ORDER BY cotizacion_id DESC";
     $result = $conexion->query($query);

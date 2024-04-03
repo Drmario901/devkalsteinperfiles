@@ -3,7 +3,7 @@
         'name' => 'he270716/kalstein-perfiles',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2d3dd726e23b8d3164dfa219c62d734535e756ad',
+        'reference' => '4b1e44865b18db814550f15d5fff7a2a89d26d69',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -112,7 +112,7 @@
         'he270716/kalstein-perfiles' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2d3dd726e23b8d3164dfa219c62d734535e756ad',
+            'reference' => '4b1e44865b18db814550f15d5fff7a2a89d26d69',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

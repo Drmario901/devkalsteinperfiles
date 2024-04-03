@@ -66,13 +66,13 @@ function validateProductData(
   } else if (description === "") {
     err_msg = alertsTranslations.pesoVacio;
     scroll("#descriptionProduct");
-  } else if (
+  } /* else if (
     (fileInput === undefined || fileInput === "" || fileInput == []) &&
     !dont_image
   ) {
     err_msg = alertsTranslations.agregarImg;
     scroll("#file-input");
-  } else if (category === "") {
+  }  */ else if (category === "") {
     err_msg = alertsTranslations.categoriaVacio;
     scroll("#dataCategory");
   } else if (stock === "") {
@@ -316,7 +316,7 @@ function imgVal(file, id) {
 
   image.setAttribute("hidden", "");
 
-  if (err_msg == "") {
+  /* if (err_msg == "") {
     image.onload = function () {
       if (image.width < 900 || image.height < 900) {
         iziToast.error({
@@ -328,7 +328,7 @@ function imgVal(file, id) {
         document.querySelector("#" + id).value = "";
       }
     };
-  }
+  } */
 
   image.src = objectUrl;
   document.body.appendChild(image);

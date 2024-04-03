@@ -1,7 +1,6 @@
 /*let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/';
 let domain = 'https://dev.kalstein.plus/plataforma/index.php/distributor/';*/
 
-
 function validateProductData(
   name,
   brand,
@@ -28,12 +27,10 @@ function validateProductData(
   discount_2_amount,
   dont_image = false
 ) {
-
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -258,11 +255,10 @@ function validateProductData(
 }
 
 function imgVal(file, id) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -278,7 +274,6 @@ function imgVal(file, id) {
   };
 
   loadTranslations(cookieLng);
-
 
   err_msg = "";
 
@@ -330,11 +325,10 @@ function imgVal(file, id) {
 }
 
 function pdfVal(file) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -350,7 +344,6 @@ function pdfVal(file) {
   };
 
   loadTranslations(cookieLng);
-
 
   if (file != undefined) {
     err_msg = "";
@@ -382,9 +375,9 @@ jQuery(document).ready(function ($) {
   // SECCION: Envío de datos al servidor para añadir nuevo product
 
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -400,8 +393,6 @@ jQuery(document).ready(function ($) {
   };
 
   loadTranslations(cookieLng);
-
-
 
   $(document).on("change", "#file-input", () => {
     if (!imgVal($("#file-input")[0].files[0], "file-input")) {
@@ -671,9 +662,9 @@ jQuery(document).ready(function ($) {
   //SECCION: Subir datos para actualizar un producto existente
 
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -689,7 +680,6 @@ jQuery(document).ready(function ($) {
   };
 
   loadTranslations(cookieLng);
-
 
   $(document).on("click", "#btnUpdateData", function (e) {
     var id = $("#dataEdit").val();
@@ -965,11 +955,10 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -985,7 +974,6 @@ jQuery(document).ready(function ($) {
   };
 
   loadTranslations(cookieLng);
-
 
   // SECCION: Eliminar producto desde el boton de la página
 
@@ -1089,9 +1077,9 @@ jQuery(document).ready(function ($) {
     $("body").append(form);
     form.submit();
   });
-  });
+});
 
-  jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) {
   // SECCIÓN: Preisualizar imagen del producto desde la tabla de stock
 
   $(document).on("click", "#btnView", function () {
@@ -1117,9 +1105,9 @@ jQuery(document).ready(function ($) {
   // SECCIÓN: cambiar el estatus de un pedido\
 
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -1135,7 +1123,6 @@ jQuery(document).ready(function ($) {
   };
 
   loadTranslations(cookieLng);
-
 
   $(document).on("click", "#btnUpdate", function () {
     var id = $(this).val();
@@ -1210,12 +1197,10 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -1231,8 +1216,6 @@ jQuery(document).ready(function ($) {
   };
 
   loadTranslations(cookieLng);
-
-
 
   $(".circulatorDiv").hover(
     function () {
@@ -1248,12 +1231,10 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
   let alertsTranslations = {};
 
   // cargar json de traducciones
@@ -1269,7 +1250,6 @@ jQuery(document).ready(function ($) {
   };
 
   loadTranslations(cookieLng);
-
 
   $(document).on("click", "#btnSendDataShipping", function () {
     let country = $("#country-select").val();

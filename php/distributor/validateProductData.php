@@ -5,6 +5,8 @@
     $price, $currency,
     $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage, $gibson){
 
+        require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
+
         $err_msg = "";
 
         // void verifications
@@ -153,13 +155,30 @@
     if (isset($_FILES['fileName'])){
         $file = $_FILES['fileName'];
 
-        $fileName = $_FILES['fileName']['name'];
+        // Crear un objeto Imagick con el archivo temporal cargado
+        $image = new Imagick($file['tmp_name']);
+
+        // Reescalar la imagen a 900x900 píxeles, manteniendo la relación de aspecto y sin distorsión
+        $image->resizeImage(900, 900, Imagick::FILTER_LANCZOS, 1, true);
+
+        // Obtener el nombre del archivo y la extensión para generar el nuevo nombre
+        $fileName = $file['name'];
         $extension = pathinfo($fileName, PATHINFO_EXTENSION);
         $newName = uniqid() . "." . $extension;
-        $path = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/';         // home4545/testing.kalstei ...
-        $uploadFile   = $path . basename($newName);
 
-        $uploadName = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/'.$newName; // https://testing.kalstei ... images/upload/64asd55645.png
+        // Definir la ruta de guardado del archivo
+        $path = '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/';
+        $uploadFile = $path . basename($newName);
+
+        // Guardar la imagen reescalada en la ubicación final
+        $image->writeImage($uploadFile);
+
+        // Generar la URL pública de la imagen para acceso posterior
+        $uploadName = 'https://dev.kalstein.plus/plataforma/wp-content/uploads/kalsteinQuote/' . $newName;
+
+        // Limpiar recursos
+        $image->clear();
+        $image->destroy();
     }
     else $file = '';
 

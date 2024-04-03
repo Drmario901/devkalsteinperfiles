@@ -96,7 +96,11 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#btn-savedGeneratedQuo", function () {
     let description = $("#txtObservation").val();
     let count = $("#ih-cant").val();
+    console.log('count', count);
+    
     let nItem = parseInt(count) + parseInt(1);
+    console.log('nItem', nItem);
+    
     let id = $("#idReport").val();
     let cant2 = $("#cant-1").val();
     let description2 = $("#description-1");
@@ -104,10 +108,16 @@ jQuery(document).ready(function ($) {
     let precioMoneda = $("#precio_uno").val();
     let datas = [];
 
+    let zipCode = $("#zipCode-1").val();
+    console.log('price', price2);
+    console.log('zipCode', zipCode);
+    
+
     for (let i = 1; i < nItem; i++) {
       let cant = $("#cant-" + i + "").val();
       let description = $("#description-" + i + "").val();
       let price = $("#price-" + i + "").val();
+      
 
       datas.push({
         cant: cant,
@@ -140,46 +150,54 @@ jQuery(document).ready(function ($) {
   loadTranslations(cookieLng);
 
   function savedGeneratedQuo(id, description, datas, precioMoneda) {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
-      type: "POST",
-      data: { id, description, datas, precioMoneda },
-    })
-      .done(function (respuesta) {
-        let data = JSON.parse(respuesta);
-        if (data.registro === "correcto") {
-          iziToast.success({
-            title: "Exito",
-            message: alertsTranslations.quoteGenerated,
-            position: "topRight",
-          });
-          createdSessionCotizacion(data.id);
-          $("#btnClosedModalReportSupport").click();
-          $("#txtObservation").val();
-          $("#cant-1").val("");
-          $("#description-1").val("");
-          $("#price-1").val("");
-          let cant = $("#ih-cant").val();
-          for (let i = 1; i < cant; i++) {
-            $("#row-" + i).remove();
-          }
-          cant = 1;
-          $("#ih-cant").val(cant);
-          window.open(
-            "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php",
-            "_blank"
-          );
-          let inputSearch = $("#searchreport").val();
-          let dateFrom = $("#dateFrom").val();
-          let status = $("#estatus").val();
-          let dateTo = $("#dateTo").val();
+    console.log('id', id);
+    console.log('description', description);
+    console.log('datas', datas);
+    console.log('precioMoneda',precioMoneda);
+    
+    
+    
+    
+    // $.ajax({
+    //   url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
+    //   type: "POST",
+    //   data: { id, description, datas, precioMoneda },
+    // })
+    //   .done(function (respuesta) {
+    //     let data = JSON.parse(respuesta);
+    //     if (data.registro === "correcto") {
+    //       iziToast.success({
+    //         title: "Exito",
+    //         message: alertsTranslations.quoteGenerated,
+    //         position: "topRight",
+    //       });
+    //       createdSessionCotizacion(data.id);
+    //       $("#btnClosedModalReportSupport").click();
+    //       $("#txtObservation").val();
+    //       $("#cant-1").val("");
+    //       $("#description-1").val("");
+    //       $("#price-1").val("");
+    //       let cant = $("#ih-cant").val();
+    //       for (let i = 1; i < cant; i++) {
+    //         $("#row-" + i).remove();
+    //       }
+    //       cant = 1;
+    //       $("#ih-cant").val(cant);
+    //       window.open(
+    //         "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php",
+    //         "_blank"
+    //       );
+    //       let inputSearch = $("#searchreport").val();
+    //       let dateFrom = $("#dateFrom").val();
+    //       let status = $("#estatus").val();
+    //       let dateTo = $("#dateTo").val();
 
-          tablaconsulta(inputSearch, status, dateFrom, dateTo);
-        }
-      })
-      .fail(function () {
-        console.log("error");
-      });
+    //       tablaconsulta(inputSearch, status, dateFrom, dateTo);
+    //     }
+    //   })
+    //   .fail(function () {
+    //     console.log("error");
+    //   });
   }
 
   function createdSessionCotizacion(consulta) {

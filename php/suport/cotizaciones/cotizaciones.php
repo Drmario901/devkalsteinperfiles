@@ -4,7 +4,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+    }
 
 require_once __DIR__ . '/../../../db/conexion.php';
 
@@ -28,7 +30,7 @@ if ($result->num_rows > 0) {
       $idsCotizacion[] = $row["R_id_cotizacion"]; // Almacenar el ID de cotización en el arreglo
     }
 } else {
-    echo "0 resultados";
+    // echo "0 resultados";
 }
 
 // echo '<pre>'; // Esto es para formatear la salida, haciéndola más legible.
@@ -66,7 +68,9 @@ if (!empty($idsCotizacion)) {
    $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD, $idsCotizacion);
     $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD, $idsCotizacion);
 } else {
-    echo "No hay cotizaciones para calcular.";
+    $sumaTotalUSDPendiente = 0;
+    $sumaTotalUSDProcesar = 0;
+    $sumaTotalUSDProcesado = 0;
 }
 
 ?>
