@@ -153,7 +153,7 @@
             }
         </style>
         <?php
-            echo navbar();
+            include __DIR__ . '/../quotes/navbar.php';
         ?>
     </div>
 </header>
