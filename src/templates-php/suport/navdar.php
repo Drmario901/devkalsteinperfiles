@@ -77,13 +77,13 @@
 
                     <li >
                     <div style="display: flex; flex-direction: column; text-align: start; padding-right:2rem">
-                            <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px; font-weight: 500;">
+                            <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
                                 Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente;?></strong>
                             </p>
-                            <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px; font-weight: 500;">
+                            <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
                                 Procesar <strong style="color: #0000ff;">$<?php echo $sumaTotalUSDProcesar;?></strong>
                             </p>
-                            <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px; font-weight: 500;">
+                            <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
                                 Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalUSDProcesado;?></strong>
                             </p>
                     </div>
