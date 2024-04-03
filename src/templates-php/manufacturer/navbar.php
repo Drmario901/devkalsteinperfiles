@@ -158,6 +158,6 @@
         }
     </style>
     <?php
-        include __DIR__ . '/../quotes/navbar.php';
+        echo navbar();
     ?>
 </div>
