@@ -204,7 +204,7 @@ function validateProductData(
 
     let con2 = name
       .toLowerCase()
-      .includes(document.querySelector("#productBrand").value.toLowerCase());
+      .includes(document.querySelector("#brandProduct").value.toLowerCase());
 
     if (con2) {
       err_msg = alertsTranslations.evitarMarca;
