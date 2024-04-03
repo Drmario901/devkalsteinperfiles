@@ -108,11 +108,16 @@ jQuery(document).ready(function ($) {
     let precioMoneda = $("#precio_uno").val();
     let datas = [];
 
+    let zipCode = $("#zipCode-1").val();
+    console.log('price', price2);
+    console.log('zipCode', zipCode);
+    
+
     for (let i = 1; i < nItem; i++) {
       let cant = $("#cant-" + i + "").val();
       let description = $("#description-" + i + "").val();
       let price = $("#price-" + i + "").val();
-      let zipCode = $("").val();
+      
 
       datas.push({
         cant: cant,
