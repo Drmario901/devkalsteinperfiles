@@ -4396,7 +4396,7 @@ jQuery(document).ready(function ($) {
 
   function consultDataClientSaved(consulta) {
     $.ajax({
-      url: plugin_dir + "/php/consultDataClientSaved.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/consultDataClientSaved.php",
       type: "POST",
     })
 
