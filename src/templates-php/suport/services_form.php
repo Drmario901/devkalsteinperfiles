@@ -134,6 +134,7 @@
 </style>
 
 <?php session_start();
+$acc_id = $_SESSION['emailAccount'];
 $se_agente_soporte = $_SESSION['se_agente_soporte'];
 $se_company = $_SESSION['se_company'];
 $se_correo = $_SESSION['se_correo'];
@@ -175,7 +176,7 @@ $a = !$add ? 'A' : ''
                 type="text"
                 name="service_agente"
                 class="form-control validate"
-                value="<?php echo $acc_name;?>"
+                value="<?php echo $acc_name; ?>"
                 data-placeholder="support:nombreApellido"
                 placeholder="nombre y apellido"
             />
@@ -199,7 +200,7 @@ $a = !$add ? 'A' : ''
                 id="SEcorreo"
                 type="text"
                 class="form-control validate"
-                value="<?php echo $se_correo; ?>"
+                value="<?php echo $acc_id; ?>"
                 data-placeholder="client:direccionCorreo"
                 placeholder="Correo de contacto"
                 name="service_correo"
