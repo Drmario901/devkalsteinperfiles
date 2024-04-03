@@ -4,7 +4,7 @@
   error_reporting(E_ALL);
     session_start();
     // require __DIR__.'/../../../php/conexion.php';
-    require __DIR__ . '/../../../db/conexion.php';
+    require_once '../../../db/conexion.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
