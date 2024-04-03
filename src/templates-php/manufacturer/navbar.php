@@ -2,7 +2,9 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
+  if (session_status() == PHP_SESSION_NONE) {
     session_start();
+}
     require __DIR__.'/../../../php/conexion.php';
     // require_once '';
     // require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
