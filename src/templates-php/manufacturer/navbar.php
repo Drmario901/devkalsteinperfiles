@@ -8,6 +8,7 @@
     require __DIR__.'/../../../php/conexion.php';
     // require_once '';
     // require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
+    require __DIR__.'/../../../php/distributor/cotizaciones/cotizaciones.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
