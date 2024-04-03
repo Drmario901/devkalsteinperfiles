@@ -151,6 +151,8 @@
         }
         else return true;
     }
+ 
+    use Imagick;
 
     if (isset($_FILES['fileName'])){
         $file = $_FILES['fileName'];
