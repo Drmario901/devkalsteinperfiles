@@ -68,7 +68,9 @@ if (!empty($idsCotizacion)) {
    $sumaTotalUSDProcesar = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesar', '1'", $tasaConversionEURUSD, $idsCotizacion);
     $sumaTotalUSDProcesado = obtenerSumaTotalUSD($conexion, $acc_id, "'Procesado', '3'", $tasaConversionEURUSD, $idsCotizacion);
 } else {
-    echo "No hay cotizaciones para calcular.";
+    $sumaTotalUSDPendiente = 0;
+    $sumaTotalUSDProcesar = 0;
+    $sumaTotalUSDProcesado = 0;
 }
 
 ?>
