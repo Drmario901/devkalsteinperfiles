@@ -84,7 +84,7 @@ $resultado = $conexion->query($query);
                                     style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em;' readonly>
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
-                            <div class="phone-container form-floating input-wrapper-p">
+                            <div class="phone-container">
                                 <select id="countryPrefix">
                                     <?php
                                     if ($resultado->num_rows > 0) {
