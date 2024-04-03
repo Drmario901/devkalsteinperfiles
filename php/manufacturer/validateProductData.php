@@ -1,5 +1,5 @@
 <?php
-require '../../vendor/autoload.php';
+//require '../../vendor/autoload.php';
     function validate($name, $model, $brand, $description, $category, $fileInput, $stock, $status,
     $weight, $length, $width, $height,
     $weight_pa, $length_pa, $width_pa, $height_pa, $pa_type,
