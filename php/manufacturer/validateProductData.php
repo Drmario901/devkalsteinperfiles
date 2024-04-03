@@ -1,11 +1,12 @@
 <?php
+require '../../vendor/autoload.php';
     function validate($name, $model, $brand, $description, $category, $fileInput, $stock, $status,
     $weight, $length, $width, $height,
     $weight_pa, $length_pa, $width_pa, $height_pa, $pa_type,
     $price, $currency,
     $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage, $gibson){
 
-        require '../../vendor/autoload.php';
+        //require '../../vendor/autoload.php';
 
         $err_msg = "";
 
