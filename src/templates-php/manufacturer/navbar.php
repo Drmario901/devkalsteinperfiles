@@ -1,7 +1,8 @@
 <?php
 
     session_start();
-    require __DIR__.'/../../../php/conexion.php';
+    // require __DIR__.'/../../../php/conexion.php';
+    require_once __DIR__ . '/../../../db/conexion.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
