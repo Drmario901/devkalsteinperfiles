@@ -38,6 +38,24 @@
                 <ul class="navbar-list">
 
                     <div class="d-flex flex-row" >
+                    <li >
+                        <a href="https://dev.kalstein.plus/plataforma/index.php/support/edit-profile/" class="navbar-link icon-box">
+                        <span class="material-symbols-rounded icon" >
+                            monetization_on
+                        </span>
+                        <div style="display: flex; flex-direction: column; text-align: center;">
+                        <p style="font-size: 1rem; text-align: center; width: 100%; margin-top: 2px;">
+                                Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente ? $sumaTotalUSDPendiente : 0;?></strong>
+                            </p>
+                            <p style="font-size: 1rem; text-align: center; width: 100%;">
+                                Procesar <strong style="color: #0000ff;">$<?php echo $sumaTotalUSDProcesar;?></strong>
+                            </p>
+                            <p style="font-size: 1rem; text-align: center; width: 100%;">
+                                Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalUSDProcesado;?></strong>
+                            </p>
+                        </div>
+                        </a>
+                    </li>
                         <li>
                             <a href='https://dev.kalstein.plus/plataforma/index.php/support/inbox/' class='navbar-link icon-box'>
                                 <span class='material-symbols-rounded icon position-relative'>
