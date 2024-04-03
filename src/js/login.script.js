@@ -102,6 +102,12 @@ jQuery(document).ready(function ($) {
     });
   });
 
+  $(document).on('keyup', '#emailUser', function(e){
+    if (e.which == 13){
+      $('#btnContinueLogIn').click()
+    }
+  })
+
   $(document).on("click", "#btnContinueSignUp", function () {
     let user = $("#emailUser").val();
 
