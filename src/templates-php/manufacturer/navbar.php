@@ -3,9 +3,9 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
     session_start();
-    // require __DIR__.'/../../../php/conexion.php';
+    require __DIR__.'/../../../php/conexion.php';
     // require_once '';
-    require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
+    // require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
