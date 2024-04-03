@@ -202,9 +202,15 @@ function validateProductData(
 
     // marca y modelo en el nombre
 
-    let con2 = name
-      .toLowerCase()
-      .includes(document.querySelector("brandProduct").value.toLowerCase());
+    let brandProductElement = document.querySelector("#brandProduct");
+    if (brandProductElement) {
+      let con2 = name
+        .toLowerCase()
+        .includes(brandProductElement.value.toLowerCase());
+      // Resto de tu lógica aquí
+    } else {
+      console.log("#brandProduct no encontrado");
+    }
 
     if (con2) {
       err_msg = alertsTranslations.evitarMarca;
