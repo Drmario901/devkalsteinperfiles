@@ -96,7 +96,11 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#btn-savedGeneratedQuo", function () {
     let description = $("#txtObservation").val();
     let count = $("#ih-cant").val();
+    console.log('count', count);
+    
     let nItem = parseInt(count) + parseInt(1);
+    console.log('nItem', nItem);
+    
     let id = $("#idReport").val();
     let cant2 = $("#cant-1").val();
     let description2 = $("#description-1");
@@ -108,6 +112,7 @@ jQuery(document).ready(function ($) {
       let cant = $("#cant-" + i + "").val();
       let description = $("#description-" + i + "").val();
       let price = $("#price-" + i + "").val();
+      let zipCode = $("").val();
 
       datas.push({
         cant: cant,
