@@ -140,46 +140,54 @@ jQuery(document).ready(function ($) {
   loadTranslations(cookieLng);
 
   function savedGeneratedQuo(id, description, datas, precioMoneda) {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
-      type: "POST",
-      data: { id, description, datas, precioMoneda },
-    })
-      .done(function (respuesta) {
-        let data = JSON.parse(respuesta);
-        if (data.registro === "correcto") {
-          iziToast.success({
-            title: "Exito",
-            message: alertsTranslations.quoteGenerated,
-            position: "topRight",
-          });
-          createdSessionCotizacion(data.id);
-          $("#btnClosedModalReportSupport").click();
-          $("#txtObservation").val();
-          $("#cant-1").val("");
-          $("#description-1").val("");
-          $("#price-1").val("");
-          let cant = $("#ih-cant").val();
-          for (let i = 1; i < cant; i++) {
-            $("#row-" + i).remove();
-          }
-          cant = 1;
-          $("#ih-cant").val(cant);
-          window.open(
-            "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php",
-            "_blank"
-          );
-          let inputSearch = $("#searchreport").val();
-          let dateFrom = $("#dateFrom").val();
-          let status = $("#estatus").val();
-          let dateTo = $("#dateTo").val();
+    console.log('id', id);
+    console.log('description', description);
+    console.log('datas', datas);
+    console.log('precioMoneda',precioMoneda);
+    
+    
+    
+    
+    // $.ajax({
+    //   url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
+    //   type: "POST",
+    //   data: { id, description, datas, precioMoneda },
+    // })
+    //   .done(function (respuesta) {
+    //     let data = JSON.parse(respuesta);
+    //     if (data.registro === "correcto") {
+    //       iziToast.success({
+    //         title: "Exito",
+    //         message: alertsTranslations.quoteGenerated,
+    //         position: "topRight",
+    //       });
+    //       createdSessionCotizacion(data.id);
+    //       $("#btnClosedModalReportSupport").click();
+    //       $("#txtObservation").val();
+    //       $("#cant-1").val("");
+    //       $("#description-1").val("");
+    //       $("#price-1").val("");
+    //       let cant = $("#ih-cant").val();
+    //       for (let i = 1; i < cant; i++) {
+    //         $("#row-" + i).remove();
+    //       }
+    //       cant = 1;
+    //       $("#ih-cant").val(cant);
+    //       window.open(
+    //         "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php",
+    //         "_blank"
+    //       );
+    //       let inputSearch = $("#searchreport").val();
+    //       let dateFrom = $("#dateFrom").val();
+    //       let status = $("#estatus").val();
+    //       let dateTo = $("#dateTo").val();
 
-          tablaconsulta(inputSearch, status, dateFrom, dateTo);
-        }
-      })
-      .fail(function () {
-        console.log("error");
-      });
+    //       tablaconsulta(inputSearch, status, dateFrom, dateTo);
+    //     }
+    //   })
+    //   .fail(function () {
+    //     console.log("error");
+    //   });
   }
 
   function createdSessionCotizacion(consulta) {
