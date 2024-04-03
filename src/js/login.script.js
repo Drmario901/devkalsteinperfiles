@@ -112,6 +112,7 @@ jQuery(document).ready(function ($) {
   $(document).on('keyup', '#passwordGrid', function(e){
     if (e.which == 13){
       $('#btnContinueLogIn2').click()
+      $('#btnContinueSignUp4').click()
     }
   })
 
