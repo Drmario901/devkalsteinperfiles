@@ -74,6 +74,8 @@
         </div>
         <div class='col-3'>        
           <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
+          <label>Zip-Code</label>
+          <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'>
           <select name ='precio' id='precio'>
           <option value='0'>Elegir Tipo de Moneda</option>
           <option value='USD'>USD</option>
