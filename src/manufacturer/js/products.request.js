@@ -66,13 +66,13 @@ function validateProductData(
   } else if (description === "") {
     err_msg = alertsTranslations.pesoVacio;
     scroll("#descriptionProduct");
-  } else if (
+  } /* else if (
     (fileInput === undefined || fileInput === "" || fileInput == []) &&
     !dont_image
   ) {
     err_msg = alertsTranslations.agregarImg;
     scroll("#file-input");
-  } else if (category === "") {
+  }  */ else if (category === "") {
     err_msg = alertsTranslations.categoriaVacio;
     scroll("#dataCategory");
   } else if (stock === "") {
@@ -325,10 +325,10 @@ function imgVal(file, id) {
           position: "center",
         });
 
+        document.querySelector("#" + id).value = "";
       }
     };
   } */
-  document.querySelector("#" + id).value = "";
 
   image.src = objectUrl;
   document.body.appendChild(image);

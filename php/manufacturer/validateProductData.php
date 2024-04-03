@@ -1,11 +1,12 @@
 <?php
+//require '../../vendor/autoload.php';
     function validate($name, $model, $brand, $description, $category, $fileInput, $stock, $status,
     $weight, $length, $width, $height,
     $weight_pa, $length_pa, $width_pa, $height_pa, $pa_type,
     $price, $currency,
     $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage, $gibson){
 
-        require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
+        //require '../../vendor/autoload.php';
 
         $err_msg = "";
 
@@ -151,8 +152,13 @@
         }
         else return true;
     }
+ 
+    
 
     if (isset($_FILES['fileName'])){
+
+        // No changes needed for this code block.
+
         $file = $_FILES['fileName'];
 
         // Crear un objeto Imagick con el archivo temporal cargado
