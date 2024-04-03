@@ -202,15 +202,9 @@ function validateProductData(
 
     // marca y modelo en el nombre
 
-    let brandProductElement = document.querySelector("#brandProduct");
-    if (brandProductElement) {
-      let con2 = name
-        .toLowerCase()
-        .includes(brandProductElement.value.toLowerCase());
-      // Resto de tu lógica aquí
-    } else {
-      console.log("#brandProduct no encontrado");
-    }
+    let con2 = name
+      .toLowerCase()
+      .includes(document.querySelector("#productBrand").value.toLowerCase());
 
     if (con2) {
       err_msg = alertsTranslations.evitarMarca;
@@ -322,7 +316,7 @@ function imgVal(file, id) {
 
   image.setAttribute("hidden", "");
 
-  /*   if (err_msg == "") {
+  if (err_msg == "") {
     image.onload = function () {
       if (image.width < 900 || image.height < 900) {
         iziToast.error({
@@ -334,7 +328,7 @@ function imgVal(file, id) {
         document.querySelector("#" + id).value = "";
       }
     };
-  } */
+  }
 
   image.src = objectUrl;
   document.body.appendChild(image);
@@ -512,7 +506,7 @@ jQuery(document).ready(function ($) {
         manual,
         catalog,
         longDescription,
-        longDescriptionCSV
+        longDescriptionCSV,
       );
     }
   });
@@ -543,7 +537,7 @@ jQuery(document).ready(function ($) {
     manual,
     catalog,
     longDescription,
-    longDescriptionCSV
+    longDescriptionCSV,
   ) {
     var formData = new FormData();
 
