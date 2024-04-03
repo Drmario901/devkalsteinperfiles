@@ -105,6 +105,19 @@ jQuery(document).ready(function ($) {
   $(document).on('keyup', '#emailUser', function(e){
     if (e.which == 13){
       $('#btnContinueLogIn').click()
+      $('#btnContinueSignUp').click()
+    }
+  })
+
+  $(document).on('keyup', '#passwordGrid', function(e){
+    if (e.which == 13){
+      $('#btnContinueLogIn2').click()
+    }
+  })
+
+  $(document).on('keyup', '#emailUserConfirm', function(e){
+    if (e.which == 13){
+      $('#btnValidatedEmail').click()
     }
   })
 
