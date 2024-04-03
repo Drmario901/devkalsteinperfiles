@@ -5,7 +5,7 @@
     $price, $currency,
     $discount_1, $discount_1_amount, $discount_2, $discount_2_amount, $dontimage, $gibson){
 
-        require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
+        require '../vendor/autoload.php';
 
         $err_msg = "";
 
