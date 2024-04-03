@@ -175,7 +175,7 @@ $a = !$add ? 'A' : ''
                 type="text"
                 name="service_agente"
                 class="form-control validate"
-                value="<?php echo $acc_name; echo $acc_lname;  ?>"
+                value="<?php echo $acc_name;?>"
                 data-placeholder="support:nombreApellido"
                 placeholder="nombre y apellido"
             />
