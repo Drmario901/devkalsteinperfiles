@@ -19,7 +19,8 @@
         $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/'.$acc_img;
     }
 
-    include __DIR__. '/../../../php/suport/cotizaciones/cotizaciones.php';
+    // include __DIR__. '/../../../php/suport/cotizaciones/cotizaciones.php';
+    require __DIR__.'/../../../php/distributor/cotizaciones/cotizaciones.php';
 
 ?>
 <header class="header" data-header>
@@ -80,9 +81,9 @@
                             <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
                                 Pendiente <strong style="color: #e38512;">$<?php echo $sumaTotalUSDPendiente;?></strong>
                             </p>
-                            <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
+                            <!-- <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
                                 Procesar <strong style="color: #0000ff;">$<?php echo $sumaTotalUSDProcesar;?></strong>
-                            </p>
+                            </p> -->
                             <p style="font-size: 1rem; text-align: start; width: 100%; margin-top: 2px; font-weight: 500;">
                                 Cobrado <strong style="color: #0eab13;">$<?php echo $sumaTotalUSDProcesado;?></strong>
                             </p>
