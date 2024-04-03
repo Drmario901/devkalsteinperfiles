@@ -10,9 +10,7 @@
 
     if ($val){
 
-        
-
-        move_uploaded_file($file['tmp_name'], $uploadFile);
+        move_uploaded_file($image, $uploadFile);
 
         $acc_id = $_SESSION['emailAccount'];
 
