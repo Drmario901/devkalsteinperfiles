@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
       $idsCotizacion[] = $row["R_id_cotizacion"]; // Almacenar el ID de cotización en el arreglo
     }
 } else {
-    echo "0 resultados";
+    // echo "0 resultados";
 }
 
 // echo '<pre>'; // Esto es para formatear la salida, haciéndola más legible.
