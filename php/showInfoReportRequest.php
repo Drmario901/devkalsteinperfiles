@@ -76,15 +76,19 @@
           <input type='hidden' name='precio_uno' id='precio_uno' value='' >
           <input type='number' id='cant-1' class='form-control' placeholder='Cantidad' aria-label='Username' style='margin-top: 0.6rem;'> 
         </div>
+
         
         <div class='col-6'>   
           <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'> 
           <input type='text' id='description-1' class='form-control' placeholder='Descripción' aria-label='Username'>
+
+          <div class='col-3'>        
+            <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
+          </div>
+        
         </div>
 
-        <div class='col-3'>        
-          <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
-        </div>
+       
       </div>
     </div>
     <div class='row'>
