@@ -47,6 +47,19 @@
     font-size: 1.2em;
 }
 
+.fa-phone{
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+    right: 12px;
+    font-size: 1.2em;
+}
+
 .required-info{
     border: 1px solid #213280;
     border-radius: 5px;
