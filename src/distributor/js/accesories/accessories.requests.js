@@ -1,5 +1,24 @@
 var currentFileAccessories = {};
 
+const cookieLng = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("language="))
+  .split("=")[1];
+
+let alertsTranslations = {};
+
+// cargar json de traducciones
+const loadTranslations = (lng) => {
+  return fetch(
+    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+  )
+    .then((response) => response.json())
+    .then((translation) => {
+      // save in a global variable
+      alertsTranslations = translation;
+    });
+};
+
 function validateProductDataAcc(
   name,
   model,
@@ -230,19 +249,17 @@ function imgVal(file, id) {
 
   image.setAttribute("hidden", "");
 
-  if(err_msg == ""){
-        image.onload = function() {
-            if (image.width < 250 || image.height < 250) {
-    
-                iziToast.error({
-                    title: 'Error',
-                    message: 'The image must be at least 900x900px in size.',
-                    position: 'center'
-                });
-    
-            }
-        }
-    }
+  if (err_msg == "") {
+    image.onload = function () {
+      if (image.width < 250 || image.height < 250) {
+        iziToast.error({
+          title: "Error",
+          message: alertsTranslations.img900,
+          position: "center",
+        });
+      }
+    };
+  }
   //document.querySelector("#" + id).value = "";
 
   image.src = objectUrl;
