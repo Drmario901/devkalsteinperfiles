@@ -77,7 +77,7 @@
         // Si la configuracion es 'plus'
         if ($idioma == 'plus') {
             return $configuraciones['plus'];
-        } elseif (array_key_exists($idioma, $configuraciones)) {
+        } elseif ($idioma !== '') {
             // Si el idioma esta definido
             return $configuraciones[$idioma];
         } else {
@@ -85,36 +85,22 @@
             return $configuraciones['en'];
         }
     }
-
-    // Ejecutar la funcion para obtener la configuracion de conexion
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
-
-    // Establecer la conexion
-    $conexion = new mysqli(
-        $configuracionUsuario['host'],
-        $configuracionUsuario['username'],
-        $configuracionUsuario['password'],
-        $configuracionUsuario['database']
-    );
-
-    // Establecer codificacion a UTF-8
-    $acentos = $conexion->query("SET NAMES 'utf8'");
-
+    
     // Función para obtener el idioma principal del país
     function obtenerIdiomaPrincipal($country) {
         // Asocia cada idioma con los países que lo comparten
         $idiomasPrincipales = [
-            'en' => ['US', 'AU', 'NZ'],
-            'es' => ['ES', 'VE', 'CO', 'PE'],
-            'de' => ['DE'],
-            'nl' => ['NL'],
+            'en' => ['US', 'GB', 'CA', 'AU', 'NZ', 'IE', 'ZA', 'JM', 'BB', 'TT'],
+            'es' => ['ES', 'MX', 'AR', 'PE', 'VE', 'CL', 'EC', 'GT', 'CU', 'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'UY', 'PA', 'PR', 'CO'],
+            'fr' => ['FR', 'BE', 'CH', 'LU', 'MC', 'DZ', 'MA', 'SN', 'HT'],
+            'se' => ['SE', 'FI'],
+            'it' => ['IT', 'CH', 'SM'],
+            'pt' => ['PT', 'BR', 'MZ', 'AO'],
             'pl' => ['PL'],
-            'pt' => ['PT'],
-            'se' => ['SE'],
-            'fr' => ['FR'],
-            'ee' => ['EE'],
-            'it' => ['IT']
-        ];
+            'nl' => ['NL', 'BE', 'SR', 'AW', 'CW'],
+            'de' => ['DE', 'AT', 'CH', 'LU', 'LI'],
+            'ee' => ['EE']
+        ];        
 
         // Busca el idioma principal del país en el arreglo de idiomas principales
         foreach ($idiomasPrincipales as $idioma => $paises) {
@@ -126,7 +112,22 @@
         }
 
         $langToUse = obtenerIdiomaPrincipal($country);
-        echo "<script>console.log('LANG: " . $langToUse . "');</script>";
+        // echo "<script>console.log('LANG: " . $langToUse . "');</script>";
+
+        // Ejecutar la funcion para obtener la configuracion de conexion
+        $configuracionUsuario = obtenerConfiguracion($country, $configuraciones);
+
+
+    // Establecer la conexion
+    $conexion = new mysqli(
+        $configuracionUsuario['host'],
+        $configuracionUsuario['username'],
+        $configuracionUsuario['password'],
+        $configuracionUsuario['database']
+    );
+
+    // Establecer codificacion a UTF-8
+    $acentos = $conexion->query("SET NAMES 'utf8'");
 
     // Verificar la conexion
     if ($conexion->connect_error) {
