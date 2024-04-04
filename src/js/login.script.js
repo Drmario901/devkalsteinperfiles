@@ -731,6 +731,9 @@ jQuery(document).ready(function ($) {
     $(".codeExpired").css({ display: "none" });
   });
 
+  let  prefix = $('#countryPrefix').find(':selected').data('iso')
+  alert(prefix)
+
   $(document).on('change', '#countryPrefix', function(){
     let  prefix = $(this).find(':selected').data('iso')
     alert(prefix)
