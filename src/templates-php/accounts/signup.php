@@ -96,7 +96,8 @@ $resultado = $conexion->query($query);
                                     }
                                     ?>
                                 </select>
-                                <input type="text" id='telefono' name="telefono" placeholder="123456789">
+                                <input type="text" id='telefono' name="telefono" placeholder="123456789" 
+                                    style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
