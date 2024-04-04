@@ -106,7 +106,7 @@ $resultado = $conexion->query($query);
                                     }
                                     ?>
                                 </select>
-                                <img id='imgCountry' style='width: 60px; height: 50px;'>
+                                <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                 <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
