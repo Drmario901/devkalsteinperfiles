@@ -38,8 +38,8 @@
         ],
         'es' => [
             'host' => '185.28.22.128', 
-            'username' => 'root', 
-            'password' => 'Yuleana24.', 
+            'username' => 'he270716', 
+            'password' => 'RP\$c_myoUeMK', 
             'database' => 'he270716_wp_es'
         ],
         'fr' => [
