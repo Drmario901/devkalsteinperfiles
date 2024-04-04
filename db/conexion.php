@@ -111,7 +111,7 @@
         // echo "<script>console.log('LANG: " . $langToUse . "');</script>";
 
         // Ejecutar la funcion para obtener la configuracion de conexion
-        $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+        $configuracionUsuario = obtenerConfiguracion('it', $configuraciones);
 
 
     // Establecer la conexion
