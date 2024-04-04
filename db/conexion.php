@@ -23,20 +23,20 @@
         'en' => [
             'host' => 'localhost', 
             'username' => 'user_en', 
-            'password' => 'pass_en', 
-            'database' => 'db_en'
+            'password' => 'RP\$c_myoUeMK', 
+            'database' => 'he270716_wp_en'
         ],
         'es' => [
             'host' => 'localhost', 
-            'username' => 'user_es', 
-            'password' => 'pass_es', 
-            'database' => 'db_es'
+            'username' => 'he270716', 
+            'password' => 'RP\$c_myoUeMK', 
+            'database' => 'he270716_wp_es'
         ],
         'fr' => [
             'host' => 'localhost', 
-            'username' => 'user_fr', 
-            'password' => 'pass_fr', 
-            'database' => 'db_fr'
+            'username' => 'he270716', 
+            'password' => 'RP\$c_myoUeMK', 
+            'database' => 'he270716_wp_fr'
         ],
         'it' => [
             'host' => 'localhost', 
@@ -52,9 +52,9 @@
         ],
         'pl' => [
             'host' => 'localhost', 
-            'username' => 'user_pl', 
-            'password' => 'pass_pl', 
-            'database' => 'db_pl'
+            'username' => 'kalsteinpl', 
+            'password' => 'ayW&x1q!K%Vw', 
+            'database' => 'db_pkalsteinpl_he270711_pl_1'
         ],
         'pt' => [
             'host' => 'localhost', 
