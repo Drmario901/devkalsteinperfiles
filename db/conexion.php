@@ -126,6 +126,7 @@
         }
 
         $langToUse = obtenerIdiomaPrincipal($country);
+        echo "<script>console.log('LANG: " . $langToUse . "');</script>";
 
     // Verificar la conexion
     if ($conexion->connect_error) {
