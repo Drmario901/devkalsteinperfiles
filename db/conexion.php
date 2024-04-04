@@ -86,6 +86,35 @@
 
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'US';
 
+    // Función para obtener el idioma principal del país
+    function obtenerIdiomaPrincipal($country) {
+        // Asocia cada idioma con los países que lo comparten
+        $idiomasPrincipales = [
+            'en' => ['US', 'AU', 'NZ'],
+            'es' => ['ES', 'VE', 'CO', 'PE'],
+            'de' => ['DE'],
+            'nl' => ['NL'],
+            'pl' => ['PL'],
+            'pt' => ['PT'],
+            'se' => ['SE'],
+            'fr' => ['FR'],
+            'ee' => ['EE'],
+            'it' => ['IT'],
+        ];
+
+        // Busca el idioma principal del país en el arreglo de idiomas principales
+        foreach ($idiomasPrincipales as $idioma => $paises) {
+            if (in_array($pais, $paises))
+                return $idioma;
+            }
+        }
+
+        return 'en'; // Por defecto, inglés
+    }
+
+    $langToUse = obtenerIdiomaPrincipal($country);
+    echo '<script>console.log('.$country.');</script>';
+
     // Ejecutar la funcion para obtener la configuracion de conexion
     $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
 
