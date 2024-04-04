@@ -135,6 +135,6 @@
         echo "Error de conexión: " . $conexion->connect_error;
     } else {
         // Si la conexión se realiza con éxito, mostrar un mensaje de éxito en la consola
-        echo "Conexión establecida correctamente";
+        echo 'conexión  ', $lang, '<br/>';
     }
 ?>
