@@ -74,7 +74,7 @@
           <option value='EUR'>EUR</option>
           </select>
           <input type='hidden' name='precio_uno' id='precio_uno' value='' >
-          <input type='number' id='cant-1' class='form-control' placeholder='Cantidad' aria-label='Username' style='padding: top 1rem;'> 
+          <input type='number' id='cant-1' class='form-control' placeholder='Cantidad' aria-label='Username' style='padding-top: 1rem;'> 
         </div>
         
         <div class='col-6'>   
