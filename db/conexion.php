@@ -84,11 +84,8 @@
         }
     }
 
-    // Deteccion del Idioma con la Cookie de idiomas
-    $idiomaUsuario =  'plus';
-
     // Ejecutar la funcion para obtener la configuracion de conexion
-    $configuracionUsuario = obtenerConfiguracion($idiomaUsuario, $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion($lang, $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
