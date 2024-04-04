@@ -125,6 +125,10 @@
             return 'en'; // Por defecto, inglés
         }
 
+        $langToUse = obtenerIdiomaPrincipal($country);
+
+        echo "<script>alert('País: " . $langToUse . "');</script>";
+
     // Verificar la conexion
     if ($conexion->connect_error) {
         die("<script>alert('Error de conexión: " . $conexion->connect_error . "');</script>");
