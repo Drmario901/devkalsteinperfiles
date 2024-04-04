@@ -85,7 +85,7 @@
     }
 
     // Ejecutar la funcion para obtener la configuracion de conexion
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('es', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
