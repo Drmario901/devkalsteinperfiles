@@ -72,17 +72,13 @@
         ]
     ];
 
-    // Funcion para obtener la configuracion de conexion basada en el idioma
     function obtenerConfiguracion($idioma, $configuraciones) {
-        // Si la configuracion es 'plus'
         if ($idioma == 'plus') {
             return $configuraciones['plus'];
-        } elseif ($idioma !== '') {
-            // Si el idioma esta definido
+        } elseif (array_key_exists($idioma, $configuraciones)) {
             return $configuraciones[$idioma];
         } else {
-            // Si el idioma no está definido
-            return $configuraciones['en'];
+            return $configuraciones['en']; // Por defecto, inglés
         }
     }
     
@@ -115,7 +111,7 @@
         // echo "<script>console.log('LANG: " . $langToUse . "');</script>";
 
         // Ejecutar la funcion para obtener la configuracion de conexion
-        $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+        $configuracionUsuario = obtenerConfiguracion('fr', $configuraciones);
 
 
     // Establecer la conexion
