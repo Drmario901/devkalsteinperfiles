@@ -76,11 +76,9 @@
           <label style='text-aling:center; width:100%;'>Zip-Code</label>
           <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'>
         </div>
-        
-        <div class='col-3'>
 
-          <label style='text-aling:center; width:100%;'>Zip-Code</label>
-          <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'>
+        <div class='col-3'>
+        
           <select name ='precio' id='precio'>
           <option value='0'>Elegir Tipo de Moneda</option>
           <option value='USD'>USD</option>
