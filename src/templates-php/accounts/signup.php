@@ -97,7 +97,7 @@ $resultado = $conexion->query($query);
                                     ?>
                                 </select>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789">
-                                <i class='fa-sharp fa-solid eye-03 fa-eye'></i>
+                                <i class='fa-solid fa-phone'></i>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'
