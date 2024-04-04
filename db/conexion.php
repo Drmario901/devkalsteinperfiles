@@ -28,7 +28,7 @@
             'password' => 'RP\$c_myoUeMK', 
             'database' => 'he270716_wp_en'
         ],
-        'VE' => [
+        'es' => [
             'host' => '185.28.22.128', 
             'username' => 'he270716', 
             'password' => 'RP\$c_myoUeMK', 
@@ -125,8 +125,12 @@
     // Establecer codificacion a UTF-8
     $acentos = $conexion->query("SET NAMES 'utf8'");
 
-    // Verificar la conexion
+    // Verificar la conexión
     if ($conexion->connect_error) {
-        die("<script>alert('Error de conexión: " . $conexion->connect_error . "');</script>");
+        // Si hay un error de conexión, mostrar un mensaje de error en la consola
+        echo "Error de conexión: " . $conexion->connect_error;
+    } else {
+        // Si la conexión se realiza con éxito, mostrar un mensaje de éxito en la consola
+        echo "Conexión establecida correctamente";
     }
 ?>
