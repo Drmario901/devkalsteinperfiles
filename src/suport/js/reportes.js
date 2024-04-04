@@ -109,7 +109,7 @@ jQuery(document).ready(function ($) {
     let datas = [];
 
     let zipCode = $("#zipCode-1").val();
-    console.log('price', price2);
+    // console.log('price', price2);
     console.log('zipCode', zipCode);
     
 
@@ -117,18 +117,17 @@ jQuery(document).ready(function ($) {
       let cant = $("#cant-" + i + "").val();
       let description = $("#description-" + i + "").val();
       let price = $("#price-" + i + "").val();
-      let zipCode = $("#zipCode-" + i + "").val();
+    
       
 
       datas.push({
         cant: cant,
         description: description,
         price: price,
-        zipCode: zipCode
       });
     }
 
-    savedGeneratedQuo(id, description, datas, precioMoneda);
+    savedGeneratedQuo(id, description, datas, precioMoneda, zipCode);
   });
 
   const cookieLng = document.cookie
