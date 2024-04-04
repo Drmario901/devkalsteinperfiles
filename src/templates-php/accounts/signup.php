@@ -39,6 +39,16 @@ $resultado = $conexion->query($query);
         margin-right: -1px;
         /* Compensa el borde derecho del input */
         z-index: 10;
+        display: none;
+    }
+
+    #imgCountry{
+        width: 30%;
+        /* Color de fondo ligeramente diferente para distinguir */
+        padding: 5px 10px;
+        margin-right: -1px;
+        /* Compensa el borde derecho del input */
+        z-index: 10;
     }
 
     #phoneNumber {
@@ -89,13 +99,14 @@ $resultado = $conexion->query($query);
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
+                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><img /> " . $fila['prefijo_internacional'] . "</option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
                                     }
                                     ?>
                                 </select>
+                                <img id='imgCountry'>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
                             </div>
