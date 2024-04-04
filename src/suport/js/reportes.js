@@ -134,10 +134,12 @@ jQuery(document).ready(function ($) {
         message : 'Error porfavor ingresar codigo zip o moneda',
         position: 'center'
       });
-    } 
+    } else {
+      savedGeneratedQuo(id, description, datas, precioMoneda, zipCode);
+    }
     
 
-    savedGeneratedQuo(id, description, datas, precioMoneda, zipCode);
+    
   });
 
   const cookieLng = document.cookie
