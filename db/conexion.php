@@ -7,9 +7,6 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'US';
 
-    echo 'idioma  ', $lang, '<br/>';
-    echo 'country  ', $country, '<br/>';
-
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
         'plus' => [
