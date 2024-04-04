@@ -819,6 +819,7 @@
             wp_enqueue_style( 'CSS', plugins_url('src/css/login.style.css', __FILE__));
             wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('JS', plugins_url('src/js/login.script.js',__FILE__),array('jquery'));
+            wp_enqueue_script('diego', plugins_url('src/js/diego.js',__FILE__),array('jquery'));
             wp_enqueue_script('jQuery-3.4.0', plugins_url('src/js/jquery-migrate-3.4.0.min.js',__FILE__),array('jquery'));
             wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
             wp_enqueue_script('izitoast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
