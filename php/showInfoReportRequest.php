@@ -72,6 +72,11 @@
         <div class='col-6'>    
           <input type='text' id='description-1' class='form-control' placeholder='Descripción' aria-label='Username'>
         </div>
+        <div class='col-6'>
+          <label style='text-aling:center; width:100%;'>Zip-Code</label>
+          <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'>
+        </div>
+        
         <div class='col-3'>
 
           <label style='text-aling:center; width:100%;'>Zip-Code</label>
