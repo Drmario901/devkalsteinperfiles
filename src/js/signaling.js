@@ -27,26 +27,26 @@ jQuery(document).ready(function($){
 		$('.product-search-bar .container ul form .nav-item').css({'animation': 'none'})
 	})
 
-	function consultQuoteQuantity(){
+	// function consultQuoteQuantity(){
 
-		$.ajax({
-            url: plugin_dir + '/php/consultQuoteQuantity.php',
-            type: 'POST',
-        })
-        .done(function(respuesta){
-            let data = JSON.parse(respuesta)
-			if (data.quoteMax === 'maximo'){
-				$('.btnQuo').css({'animation' : 'none'})
-				$('.cCategory').css({'animation' : 'none'})
-				$('.generate-quote').css({'animation' : 'none'})
-				$('.product-search-bar .container ul form .nav-item').css({'animation' : 'none'})
-				$('.btn-generate').removeClass('btn-generate-animado')
-			}
-        })
-        .fail(function(){
-            console.log("error");
-        })
-	}
+	// 	$.ajax({
+    //         url: plugin_dir + '/php/consultQuoteQuantity.php',
+    //         type: 'POST',
+    //     })
+    //     .done(function(respuesta){
+    //         let data = JSON.parse(respuesta)
+	// 		if (data.quoteMax === 'maximo'){
+	// 			$('.btnQuo').css({'animation' : 'none'})
+	// 			$('.cCategory').css({'animation' : 'none'})
+	// 			$('.generate-quote').css({'animation' : 'none'})
+	// 			$('.product-search-bar .container ul form .nav-item').css({'animation' : 'none'})
+	// 			$('.btn-generate').removeClass('btn-generate-animado')
+	// 		}
+    //     })
+    //     .fail(function(){
+    //         console.log("error");
+    //     })
+	// }
 
 	setInterval(consultQuoteQuantity, 1000);
 })
