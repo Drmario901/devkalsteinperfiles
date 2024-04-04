@@ -11,12 +11,8 @@ jQuery(document).ready(function($){
 
     const elboton = document.querySelector('#hola');
     console.log('elboton', elboton);
-    
-
     let algo = () => {
         console.log('algo');
     }
-
     algo();
-
 });
