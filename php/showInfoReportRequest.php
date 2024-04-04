@@ -72,8 +72,8 @@
         <div class='col-6'>    
           <input type='text' id='description-1' class='form-control' placeholder='Descripción' aria-label='Username'>
         </div>
-        <div class='col-3'>        
-          <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
+        <div class='col-3'>
+
           <label style='text-aling:center; width:100%;'>Zip-Code</label>
           <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'>
           <select name ='precio' id='precio'>
@@ -81,6 +81,9 @@
           <option value='USD'>USD</option>
           <option value='EUR'>EUR</option>
           </select>
+                  
+          <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
+          
           <input type='hidden' name='precio_uno' id='precio_uno' value=''>
         </div>
       </div>
