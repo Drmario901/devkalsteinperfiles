@@ -758,7 +758,11 @@ jQuery(document).ready(function ($) {
 
           $("#c-password").css({ display: "block" });
 
-          $("#passwordGrid").focus();
+          if ($('#telefono').length) {
+            $("#telefono").focus();
+          }else{            
+            $("#passwordGrid").focus();
+          }        
 
           $("#btnContinueSignUp").css({ display: "none" });
 
