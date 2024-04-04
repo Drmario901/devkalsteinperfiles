@@ -732,21 +732,7 @@ jQuery(document).ready(function ($) {
   });
 
   let  prefix = $('#countryPrefix').find(':selected').data('iso')
-  let prefix2 = prefix.toLowerCase()
-  $.ajax({
-    url: 'https://restcountries.com/v3.1/alpha/'+prefix2, // Ejemplo con Estados Unidos (US)
-    type: 'GET',
-    success: function(result) {
-      console.log(result); // La respuesta del servidor
-      // Para obtener la URL de la bandera
-      var flagUrl = result[0].flags.svg;
-      // Puedes hacer algo como agregar la bandera a una imagen en tu HTML
-      $('#imgCountry').attr('src', flagUrl);
-    },
-    error: function(err) {
-      console.log(err); // Si hay algún error
-    }
-  });
+  $('#imgCountry').attr('src', plugin_dir+'/src/images/flag-icon/'+prefix+'.png');
 
   $(document).on('change', '#countryPrefix', function(){
     let  prefix = $(this).find(':selected').data('iso')
