@@ -19,64 +19,64 @@
             'database' => 'kalsteinplus_he270716_wp_es'
         ],
         'de' => [
-            'host' => 'localhost', 
-            'username' => 'user_de', 
-            'password' => 'pass_de', 
-            'database' => 'db_de'
+            'host' => '185.28.22.154', 
+            'username' => 'kalsteinde', 
+            'password' => 'yzL6Djp1O@_I', 
+            'database' => 'kalsteinde_he272456_de'
         ],
         'ee' => [
-            'host' => 'localhost', 
-            'username' => 'user_ee', 
-            'password' => 'pass_ee', 
-            'database' => 'db_ee'
+            'host' => '185.28.22.154', 
+            'username' => 'kalsteinee', 
+            'password' => ')Qgsq7.K{DFX', 
+            'database' => 'kalsteinee_u673369396_U38Rq'
         ],
         'en' => [
-            'host' => 'localhost', 
+            'host' => '185.28.22.128', 
             'username' => 'user_en', 
             'password' => 'RP\$c_myoUeMK', 
             'database' => 'he270716_wp_en'
         ],
         'es' => [
             'host' => '185.28.22.128', 
-            'username' => 'he270716', 
-            'password' => 'RP\$c_myoUeMK', 
+            'username' => 'root', 
+            'password' => 'Yuleana24.', 
             'database' => 'he270716_wp_es'
         ],
         'fr' => [
-            'host' => 'localhost', 
+            'host' => '185.28.22.128', 
             'username' => 'he270716', 
             'password' => 'RP\$c_myoUeMK', 
             'database' => 'he270716_wp_fr'
         ],
         'it' => [
-            'host' => 'localhost', 
-            'username' => 'user_it', 
-            'password' => 'pass_it', 
-            'database' => 'db_it'
+            'host' => '185.28.22.154', 
+            'username' => 'kalsteinit', 
+            'password' => 'ITDEPARTMENT1234*', 
+            'database' => 'kalsteinit_he272456_it'
         ],
         'nl' => [
-            'host' => 'localhost', 
-            'username' => 'user_nl', 
-            'password' => 'pass_nl', 
-            'database' => 'db_nl'
+            'host' => '185.28.22.154', 
+            'username' => 'kalsteinnl', 
+            'password' => 'raP^6uFD*1Dg', 
+            'database' => 'kalsteinnl_he272456_nl'
         ],
         'pl' => [
-            'host' => 'localhost', 
+            'host' => '185.28.22.128', 
             'username' => 'kalsteinpl', 
             'password' => 'ayW&x1q!K%Vw', 
             'database' => 'db_pkalsteinpl_he270711_pl_1'
         ],
         'pt' => [
-            'host' => 'localhost', 
-            'username' => 'user_pt', 
-            'password' => 'pass_pt', 
-            'database' => 'db_pt'
+            'host' => '185.28.22.154', 
+            'username' => 'kalsteinpt', 
+            'password' => '61DS^z12R=rb', 
+            'database' => 'kalsteinpt_he272456_pt'
         ],
         'se' => [
-            'host' => 'localhost', 
-            'username' => 'user_se', 
-            'password' => 'pass_se', 
-            'database' => 'db_se'
+            'host' => '185.28.22.154', 
+            'username' => 'kalsteinse', 
+            'password' => 'KwX9zQgl1w8', 
+            'database' => 'kalsteinse_he272456_se'
         ]
     ];
 
