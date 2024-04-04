@@ -732,7 +732,7 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on('change', '#countryPrefix', function(){
-    let  prefix = $(this).attr('data-iso')
+    let  prefix = $(this).find(':selected').data('iso')
     alert(prefix)
     $.ajax({
       url: 'https://restcountries.com/v3.1/alpha/'+prefix, // Ejemplo con Estados Unidos (US)
