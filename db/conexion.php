@@ -84,6 +84,20 @@
         }
     }
 
+    // Ejecutar la funcion para obtener la configuracion de conexion
+    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+
+    // Establecer la conexion
+    $conexion = new mysqli(
+        $configuracionUsuario['host'],
+        $configuracionUsuario['username'],
+        $configuracionUsuario['password'],
+        $configuracionUsuario['database']
+    );
+
+    // Establecer codificacion a UTF-8
+    $acentos = $conexion->query("SET NAMES 'utf8'");
+
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'US';
 
     // Función para obtener el idioma principal del país
@@ -104,30 +118,13 @@
 
         // Busca el idioma principal del país en el arreglo de idiomas principales
         foreach ($idiomasPrincipales as $idioma => $paises) {
-            if (in_array($pais, $paises))
+            if (in_array($country, $paises))
                 return $idioma;
             }
         }
 
         return 'en'; // Por defecto, inglés
     }
-
-    $langToUse = obtenerIdiomaPrincipal($country);
-    echo '<script>console.log('.$country.');</script>';
-
-    // Ejecutar la funcion para obtener la configuracion de conexion
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
-
-    // Establecer la conexion
-    $conexion = new mysqli(
-        $configuracionUsuario['host'],
-        $configuracionUsuario['username'],
-        $configuracionUsuario['password'],
-        $configuracionUsuario['database']
-    );
-
-    // Establecer codificacion a UTF-8
-    $acentos = $conexion->query("SET NAMES 'utf8'");
 
     // Verificar la conexion
     if ($conexion->connect_error) {
