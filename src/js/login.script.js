@@ -733,7 +733,6 @@ jQuery(document).ready(function ($) {
 
   let  prefix = $('#countryPrefix').find(':selected').data('iso')
   let prefix2 = prefix.toLowerCase()
-  alert(prefix2)
   $.ajax({
     url: 'https://restcountries.com/v3.1/alpha/'+prefix2, // Ejemplo con Estados Unidos (US)
     type: 'GET',
@@ -751,9 +750,9 @@ jQuery(document).ready(function ($) {
 
   $(document).on('change', '#countryPrefix', function(){
     let  prefix = $(this).find(':selected').data('iso')
-    alert(prefix)
+    let prefix2 = prefix.toLowerCase()
     $.ajax({
-      url: 'https://restcountries.com/v3.1/alpha/'+prefix, // Ejemplo con Estados Unidos (US)
+      url: 'https://restcountries.com/v3.1/alpha/'+prefix2, // Ejemplo con Estados Unidos (US)
       type: 'GET',
       success: function(result) {
         console.log(result); // La respuesta del servidor
