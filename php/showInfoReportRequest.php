@@ -73,7 +73,7 @@
           <option value='USD'>USD</option>
           <option value='EUR'>EUR</option>
           </select>
-          <input type='hidden' name='precio_uno' id='precio_uno' value=''>
+          <input type='hidden' name='precio_uno' id='precio_uno' value='' style='padding: top 1rem;'>
           <input type='number' id='cant-1' class='form-control' placeholder='Cantidad' aria-label='Username'> 
         </div>
         
