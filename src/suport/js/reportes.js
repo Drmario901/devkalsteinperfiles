@@ -112,6 +112,7 @@ jQuery(document).ready(function ($) {
     // console.log('price', price2);
     console.log('zipCode', zipCode);
     
+    
 
     for (let i = 1; i < nItem; i++) {
       let cant = $("#cant-" + i + "").val();
@@ -125,7 +126,16 @@ jQuery(document).ready(function ($) {
         description: description,
         price: price,
       });
-    }
+    } 
+
+    if(!zipCode || !precioMoneda) {
+      iziToast.error({
+        title : 'Error',
+        message : 'Error porfavor ingresar codigo zip o moneda',
+        position: 'center'
+      });
+    } 
+    
 
     savedGeneratedQuo(id, description, datas, precioMoneda, zipCode);
   });
@@ -150,11 +160,13 @@ jQuery(document).ready(function ($) {
 
   loadTranslations(cookieLng);
 
-  function savedGeneratedQuo(id, description, datas, precioMoneda) {
+  function savedGeneratedQuo(id, description, datas, precioMoneda, zipCode) {
     console.log('id', id);
     console.log('description', description);
     console.log('datas', datas);
     console.log('precioMoneda',precioMoneda);
+    console.log('zipCode', zipCode);
+    
     
     
     
