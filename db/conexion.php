@@ -112,8 +112,8 @@
         return 'en'; // Por defecto, inglés
     }
 
-    $langToUse = obtenerIdiomaPrincipal(country);
-    echo $langToUse;
+    $langToUse = obtenerIdiomaPrincipal($country);
+    echo '<script>console.log('.$country.');</script>';
 
     // Ejecutar la funcion para obtener la configuracion de conexion
     $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
