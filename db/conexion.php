@@ -1,5 +1,7 @@
 <?php
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+    $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'US';
+
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
         'plus' => [
@@ -98,8 +100,6 @@
     // Establecer codificacion a UTF-8
     $acentos = $conexion->query("SET NAMES 'utf8'");
 
-    $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'US';
-
     // Función para obtener el idioma principal del país
     function obtenerIdiomaPrincipal($country) {
         // Asocia cada idioma con los países que lo comparten
@@ -121,10 +121,9 @@
             if (in_array($country, $paises))
                 return $idioma;
             }
-        }
 
-        return 'en'; // Por defecto, inglés
-    }
+            return 'en'; // Por defecto, inglés
+        }
 
     // Verificar la conexion
     if ($conexion->connect_error) {
