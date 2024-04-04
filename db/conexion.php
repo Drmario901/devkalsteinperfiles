@@ -99,7 +99,7 @@
             'se' => ['SE'],
             'fr' => ['FR'],
             'ee' => ['EE'],
-            'it' => ['IT'],
+            'it' => ['IT']
         ];
 
         // Busca el idioma principal del país en el arreglo de idiomas principales
