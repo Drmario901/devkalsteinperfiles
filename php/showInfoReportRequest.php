@@ -82,7 +82,7 @@
           <input type='text' id='description-1' class='form-control' placeholder='Descripción' aria-label='Username'>
         </div>
 
-        <div class='col-3'>        
+        <div class='col-3' style='display:flex; flex-direction:column-reverse;'>        
           <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
         </div>
 
