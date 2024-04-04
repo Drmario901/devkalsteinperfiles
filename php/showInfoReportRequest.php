@@ -69,7 +69,7 @@
         <div class='col-3'>   
         
         <select name ='precio' id='precio'>
-          <option value='0'>Elegir Tipo de Moneda</option>
+          <option value='0'>Moneda</option>
           <option value='USD'>USD</option>
           <option value='EUR'>EUR</option>
           </select>
