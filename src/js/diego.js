@@ -13,4 +13,10 @@ jQuery(document).ready(function($){
     console.log('elboton', elboton);
     
 
+    let algo = () => {
+        console.log('algo');
+    }
+
+    algo();
+
 });
