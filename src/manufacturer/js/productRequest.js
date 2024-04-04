@@ -318,7 +318,7 @@ function imgVal(file, id) {
 
   if (err_msg == "") {
     image.onload = function () {
-      if (image.width < 900 || image.height < 900) {
+      if (image.width < 250 || image.height < 250) {
         iziToast.error({
           title: alertsTranslations.error,
           message: alertsTranslations.img900,
