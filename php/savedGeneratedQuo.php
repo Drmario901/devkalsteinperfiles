@@ -5,6 +5,7 @@ require_once __DIR__ . '/../db/conexion.php';
   $datas = $_POST['datas'];
   $id = $_POST['id'];
   $precioMoneda = $_POST["precioMoneda"];
+  $zipCode = $_POST["zipCode"];
   
   $sql = "SELECT * FROM wp_reportes WHERE R_id = '$id'";
   $result = $conexion->query($sql);
@@ -38,7 +39,7 @@ require_once __DIR__ . '/../db/conexion.php';
     $total = $total + $subtotal;
   }
 
-  $register = "INSERT INTO wp_cotizacion(cotizacion_id, cotizacion_id_user, cotizacion_sres, cotizacion_atencion, cotizacion_create_at, cotizacion_divisa, cotizacion_total, cotizacion_status, cotizacion_id_remitente) VALUES ('', '$emailAgent', '$nameUser', '$nameUser', CURRENT_TIMESTAMP, '$precioMoneda', '$total', '0', '$email')";
+  $register = "INSERT INTO wp_cotizacion(cotizacion_id, cotizacion_id_user, cotizacion_sres, cotizacion_atencion, cotizacion_create_at,cotizacion_zipcode, cotizacion_divisa, cotizacion_total, cotizacion_status, cotizacion_id_remitente) VALUES ('', '$emailAgent', '$nameUser', '$nameUser', CURRENT_TIMESTAMP,'$zipCode', '$precioMoneda', '$total', '0', '$email')";
   if ($conexion->query($register) === TRUE) {   
     $query = "SELECT * FROM wp_cotizacion ORDER BY cotizacion_id DESC";
     $result = $conexion->query($query);
