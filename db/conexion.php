@@ -32,7 +32,7 @@
         ],
         'en' => [
             'host' => '185.28.22.128', 
-            'username' => 'user_en', 
+            'username' => 'he270716', 
             'password' => 'RP\$c_myoUeMK', 
             'database' => 'he270716_wp_en'
         ],
@@ -119,7 +119,7 @@
         // echo "<script>console.log('LANG: " . $langToUse . "');</script>";
 
         // Ejecutar la funcion para obtener la configuracion de conexion
-        $configuracionUsuario = obtenerConfiguracion('es', $configuraciones);
+        $configuracionUsuario = obtenerConfiguracion($langToUse, $configuraciones);
 
 
     // Establecer la conexion
