@@ -83,7 +83,7 @@
           <input type='text' id='description-1' class='form-control' placeholder='Descripción' aria-label='Username'>
 
           <div class='col-3'>        
-            s<input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
+            <input type='number' id='price-1' class='form-control' placeholder='Precio $' aria-label='Username'>
           </div>
         
         </div>
