@@ -9,4 +9,8 @@ jQuery(document).ready(function($){
           });
     });
 
+    const elboton = document.querySelector('#hola');
+    console.log('elboton', elboton);
+    
+
 });
