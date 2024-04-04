@@ -99,7 +99,7 @@
             'se' => ['SE'],
             'fr' => ['FR'],
             'ee' => ['EE'],
-            'it' => ['IT'],
+            'it' => ['IT']
         ];
 
         // Busca el idioma principal del país en el arreglo de idiomas principales
@@ -111,9 +111,6 @@
 
         return 'en'; // Por defecto, inglés
     }
-
-    $langToUse = obtenerIdiomaPrincipal($country);
-    echo '<script>console.log('.$country.');</script>';
 
     // Ejecutar la funcion para obtener la configuracion de conexion
     $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
