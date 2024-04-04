@@ -14,7 +14,7 @@ if (isset($_GET['search'])) {
     session_write_close();
 }
 
-$query = "SELECT nombre, prefijo_internacional FROM wp_paises_prefijos ORDER BY nombre ASC";
+$query = "SELECT * FROM wp_paises_prefijos ORDER BY nombre ASC";
 $resultado = $conexion->query($query);
 
 ?>
@@ -33,6 +33,16 @@ $resultado = $conexion->query($query);
     #countryPrefix {
         border: none;
         background: #f9f9f9;
+        width: 30%;
+        /* Color de fondo ligeramente diferente para distinguir */
+        padding: 5px 10px;
+        margin-right: -1px;
+        /* Compensa el borde derecho del input */
+        z-index: 10;
+        display: none;
+    }
+
+    #imgCountry{
         width: 30%;
         /* Color de fondo ligeramente diferente para distinguir */
         padding: 5px 10px;
@@ -84,19 +94,21 @@ $resultado = $conexion->query($query);
                                     style='height: 3rem; outline: 1px solid #213280; font-size: 1.4em;' readonly>
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
-                            <div class="phone-container">
+                            <div class="phone-container input-wrapper-p">
                                 <select id="countryPrefix">
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
+                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'></option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
                                     }
                                     ?>
                                 </select>
-                                <input type="text" id='telefono' name="telefono" placeholder="123456789">
+                                <img id='imgCountry'>
+                                <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
+                                <i class='fa-solid fa-phone'></i>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
                                 <input type='password' class='form-control' id='passwordGrid'

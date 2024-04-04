@@ -316,18 +316,17 @@ function imgVal(file, id) {
 
   image.setAttribute("hidden", "");
 
-  /* if (err_msg == "") {
+  if (err_msg == "") {
     image.onload = function () {
-      if (image.width < 900 || image.height < 900) {
+      if (image.width < 250 || image.height < 250) {
         iziToast.error({
           title: alertsTranslations.error,
           message: alertsTranslations.img900,
           position: "center",
         });
-
       }
     };
-  } */
+  }
   document.querySelector("#" + id).value = "";
 
   image.src = objectUrl;

@@ -113,7 +113,7 @@
   "evitarExpresiones": "Vermijd alstublieft het gebruik van uitdrukkingen zoals '&lt;xxx&gt;', '&lt;xxx/&gt;'.",
   "noMayor10mb": "Het bestand is groter dan 10 MB",
   "archivosAdmitidos": "Alleen JPG, PNG en JPEG-bestanden zijn toegestaan.",
-  "img900": "De afbeelding moet een minimale grootte hebben van 900x900px.",
+  "img900": "De afbeelding moet een minimale grootte hebben van 250x250px.",
   "exito": "Succes",
   "dataGuardada": "De gegevens zijn succesvol opgeslagen",
   "passwordAct": "Het wachtwoord is succesvol bijgewerkt",
@@ -236,7 +236,7 @@
   "surpassAllExpectations": "Overtref alle verwachtingen",
   "detectedInaproppiateWordInDescription": "Een ongepaste woord in de beschrijving werd gedetecteerd",
   "detectedInaproppiateWordInName": "Een ongepast woord werd gedetecteerd in de naam",
-  "imageMinSize": "De minimale grootte van de afbeelding moet groter zijn dan 900x900",
+  "imageMinSize": "De minimale grootte van de afbeelding moet groter zijn dan 250x250",
   "fileSurpassLimitTwentyMb": "Het bestand overschrijdt het limiet van 20 MB",
   "onlyPdfFilesAllowed": "Alleen PDF-bestanden zijn toegestaan",
   "fileWillBeDescarted": "Het bestand wordt verworpen",
@@ -340,5 +340,4 @@
   "aceptar": "Accepteren",
   "cancelar": "Annuleren",
   "verficacion48horas": "Uw account wordt geverifieerd binnen 24 tot 48 uur."
-
 }
