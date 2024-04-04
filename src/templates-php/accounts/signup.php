@@ -14,7 +14,7 @@ if (isset($_GET['search'])) {
     session_write_close();
 }
 
-$query = "SELECT nombre, prefijo_internacional FROM wp_paises_prefijos ORDER BY nombre ASC";
+$query = "SELECT * FROM wp_paises_prefijos ORDER BY nombre ASC";
 $resultado = $conexion->query($query);
 
 ?>
@@ -89,7 +89,7 @@ $resultado = $conexion->query($query);
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
+                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'>" . $fila['nombre'] . " " . $fila['prefijo_internacional'] . "</option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";

@@ -731,6 +731,25 @@ jQuery(document).ready(function ($) {
     $(".codeExpired").css({ display: "none" });
   });
 
+  $(document).on('change', '#countryPrefix', function(){
+    let  prefix = $(this).attr('data-iso')
+    alert(prefix)
+    $.ajax({
+      url: 'https://restcountries.com/v3.1/alpha/'+prefix, // Ejemplo con Estados Unidos (US)
+      type: 'GET',
+      success: function(result) {
+        console.log(result); // La respuesta del servidor
+        // Para obtener la URL de la bandera
+        var flagUrl = result[0].flags.svg;
+        // Puedes hacer algo como agregar la bandera a una imagen en tu HTML
+        $('#flag-container').attr('src', flagUrl);
+      },
+      error: function(err) {
+        console.log(err); // Si hay algún error
+      }
+    });
+  })
+
   function validarCorreo(consulta) {
     $.ajax({
       url: plugin_dir + "/php/searchAccount.php",
