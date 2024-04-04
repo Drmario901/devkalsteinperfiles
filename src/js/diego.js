@@ -15,4 +15,6 @@ jQuery(document).ready(function($){
         console.log('algo');
     }
     algo();
+
+    
 });
