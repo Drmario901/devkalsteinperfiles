@@ -117,12 +117,14 @@ jQuery(document).ready(function ($) {
       let cant = $("#cant-" + i + "").val();
       let description = $("#description-" + i + "").val();
       let price = $("#price-" + i + "").val();
+      let zipCode = $("#zipCode-" + i + "").val();
       
 
       datas.push({
         cant: cant,
         description: description,
         price: price,
+        zipCode: zipCode
       });
     }
 
