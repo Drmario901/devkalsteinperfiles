@@ -157,8 +157,6 @@
 
     if (isset($_FILES['fileName'])){
 
-        // No changes needed for this code block.
-
         $file = $_FILES['fileName'];
 
         // Crear un objeto Imagick con el archivo temporal cargado

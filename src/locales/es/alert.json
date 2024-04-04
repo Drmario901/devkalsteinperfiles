@@ -113,7 +113,7 @@
   "evitarExpresiones": "Por favor, evite usar expresiones como '&lt;xxx&gt;', '&lt;xxx/&gt;'.",
   "noMayor10mb": "El archivo excede los 10 MB",
   "archivosAdmitidos": "Solo se permiten archivos JPG, PNG y JPEG.",
-  "img900": "La imagen debe tener un tamaño mínimo de 900x900px.",
+  "img900": "La imagen debe tener un tamaño mínimo de 250x250px.",
   "exito": "Éxito",
   "dataGuardada": "Los datos se han guardado correctamente",
   "passwordAct": "La contraseña se ha actualizado correctamente",
@@ -236,7 +236,7 @@
   "surpassAllExpectations": "Supera todas las expectativas",
   "detectedInaproppiateWordInDescription": "Se detectó una palabra inapropiada en la descripción",
   "detectedInaproppiateWordInName": "Se detectó una palabra inapropiada en el nombre",
-  "imageMinSize": "El tamaño mínimo de la imagen debe ser mayor que 900x900",
+  "imageMinSize": "El tamaño mínimo de la imagen debe ser mayor que 250x250",
   "fileSurpassLimitTwentyMb": "El archivo supera el límite de 20 MB",
   "onlyPdfFilesAllowed": "Solo se permiten archivos PDF",
   "fileWillBeDescarted": "El archivo será descartado",
@@ -341,5 +341,5 @@
   "aceptar": "Aceptar",
   "cancelar": "Cancelar",
 
-  "verficacion48horas":"Su cuenta se verificará de 24 a 48 horas."
+  "verficacion48horas": "Su cuenta se verificará de 24 a 48 horas."
 }
