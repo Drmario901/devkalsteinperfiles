@@ -66,20 +66,20 @@
     <input type='hidden' id='ih-cant' value='1'>
     <div id='c-descriptionQuote'>
       <div class='row'>
-        <div class='col-3'>      
-          <input type='number' id='cant-1' class='form-control' placeholder='Cantidad' aria-label='Username'> 
-          
-          <select name ='precio' id='precio'>
+        <div class='col-3'>   
+        
+        <select name ='precio' id='precio'>
           <option value='0'>Elegir Tipo de Moneda</option>
           <option value='USD'>USD</option>
           <option value='EUR'>EUR</option>
           </select>
           <input type='hidden' name='precio_uno' id='precio_uno' value=''>
-
+          <input type='number' id='cant-1' class='form-control' placeholder='Cantidad' aria-label='Username'> 
         </div>
-        <div class='col-6'>    
+        
+        <div class='col-6'>   
+          <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'> 
           <input type='text' id='description-1' class='form-control' placeholder='Descripción' aria-label='Username'>
-          <input type='number' id='zipCode-1' class='form-control' placeholder='zip-code' aria-label='Username'>
         </div>
 
         <div class='col-3'>        
