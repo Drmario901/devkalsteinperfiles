@@ -99,7 +99,7 @@ $resultado = $conexion->query($query);
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><img /> " . $fila['prefijo_internacional'] . "</option>";
+                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'></option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
