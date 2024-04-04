@@ -60,6 +60,14 @@
         return $html;
     }
 
+    //Short Code pagina diego 404 
+    function diego(){
+        $_short = new shortcodePerfiles;
+
+        $html = $_short->diego_shortcode();
+        return $html;
+    }
+
 
 
     register_activation_hook(__FILE__, 'perfilesActivated');
@@ -648,6 +656,9 @@
 
     add_shortcode("PERFILES_DATA_RECOVER", "data_recoverP");
 
+    //Shortcode de diego 404 
+    add_shortcode("DIEGO_SHORTCODE", "diego");
+
     // XXX CUENTAS Y CLIENTE XXXX
 
     add_shortcode("PERFILES_LOGIN", "loginPerfiles");
@@ -785,6 +796,23 @@
 
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_LOGIN' ) ) {
+            global_url();
+            translations();
+            wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+            wp_enqueue_style( 'CSS', plugins_url('src/css/login.style.css', __FILE__));
+            wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('JS', plugins_url('src/js/login.script.js',__FILE__),array('jquery'));
+            wp_enqueue_script('jQuery-3.4.0', plugins_url('src/js/jquery-migrate-3.4.0.min.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+            wp_enqueue_script('izitoast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+            wp_enqueue_script('i18n', plugins_url('src/js/i18n.js',__FILE__),array('jquery'));
+            /*wp_enqueue_script('session-script', plugins_url('src/js/session.script.js',__FILE__),array('jquery'));*/
+            general_client_styles();    
+        }
+
+        //DIEGO_SHORTCODE
+
+        if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'DIEGO_SHORTCODE' ) ) {
             global_url();
             translations();
             wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
