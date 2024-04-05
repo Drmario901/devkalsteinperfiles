@@ -20,7 +20,7 @@
     }
 
     // include __DIR__. '/../../../php/suport/cotizaciones/cotizaciones.php';
-    require __DIR__.'/../../../php/distributor/cotizaciones/cotizaciones.php';
+    require __DIR__.'/../../../php/cotizaciones/cotizaciones.php';
 
 ?>
 <header class="header" data-header>
