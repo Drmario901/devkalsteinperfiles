@@ -2,7 +2,7 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
 
-    // Configuraciones de conexion para cada idioma
+    // Lista de bases de datos por país
     $configuraciones = [
         'plus' => [
             'host' => 'localhost', 
@@ -160,14 +160,13 @@
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
-            echo $country;
             return $configuraciones[$country];
         } else {
             return $configuraciones['plus']; // Por defecto, NET en inglés
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('PA', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('US', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
