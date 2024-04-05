@@ -198,12 +198,11 @@
         } elseif (array_key_exists($country, $configuraciones)) {
             return $configuraciones[$country];
         } else {
-            echo "no, mi rey";
             return $configuraciones['NET_EN']; // Por defecto, NET en inglés
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('PT', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion($country, $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
