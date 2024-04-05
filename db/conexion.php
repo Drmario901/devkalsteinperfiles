@@ -189,12 +189,6 @@
             'username' => 'plus', 
             'password' => 'Yuleana24.', 
             'database' => 'kalsteinpt_he272456_pt'
-        ],
-        'SE' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinse_he272456_se'
         ]
     ];
 
