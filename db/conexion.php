@@ -176,7 +176,7 @@
             'host' => '185.28.22.128', 
             'username' => 'plus', 
             'password' => 'Yuleana24.', 
-            'database' => 'db_pkalsteinpl_he270711_pl_1'
+            'database' => 'kalsteinpl_he270711_pl_1'
         ],
         'PK' => [
             'host' => '185.28.22.154', 
