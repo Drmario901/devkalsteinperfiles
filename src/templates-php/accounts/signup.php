@@ -102,7 +102,7 @@ $resultado = $conexion->query($query);
                                         <?php
                                             if ($resultado->num_rows > 0) {
                                                 while ($fila = $resultado->fetch_assoc()) {
-                                                    echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/flag-icon/'".$fila['codigo_iso']."'.png' style='width: 60px; height: 40px; margin-top: 5px;'></div></li>";
+                                                    echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div'><img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/flag-icon/".$fila['codigo_iso'].".png' style='width: 60px; height: 40px; margin-top: 5px;'></div></li>";
                                                 }
                                             } else {
                                                 echo "<li>No hay países disponibles</li>";
