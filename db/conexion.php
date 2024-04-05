@@ -2,10 +2,6 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
         'plus' => [
@@ -157,12 +153,6 @@
             'username' => 'plus', 
             'password' => 'Yuleana24.', 
             'database' => 'he270716_wp_en'
-        ],
-        'IT' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinit_he272456_it'
         ],
         'PL' => [
             'host' => '185.28.22.128', 
