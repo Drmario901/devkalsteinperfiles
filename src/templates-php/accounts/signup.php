@@ -98,7 +98,7 @@ $resultado = $conexion->query($query);
                                 <div id="countryPrefix" style='position: relative; display: flex; justify-content: center;'>
                                     <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                     <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
-                                    <ul style='position: absolute; z-index: 100; witdh: 5rem; height: 600px; background-color: #000;'>
+                                    <ul style='position: absolute; z-index: 100; witdh: 100%; height: 600px; background-color: #000;'>
                                         
                                     </ul>
                                 </div>
