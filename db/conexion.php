@@ -14,133 +14,133 @@
         'plus' => [
             'host' => 'localhost', 
             'username' => 'kalsteinplus', 
-            'password' => 'OqA;}vKA94PO', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinplus_he270716_wp_es'
         ],
         'EU' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteineu', 
-            'password' => 'fnrKdL2&RN.s', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteineu_he270711_wp1'
         ],
         'US' => [
             'host' => '185.28.22.84', 
-            'username' => 'he269186', 
-            'password' => '{m_a,([19n*L', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'he269186_he270716_wp_en'
         ],
         'FR' => [
             'host' => '185.28.22.128', 
-            'username' => 'kalsteinfr', 
-            'password' => 'T%AY_[oJYz;3', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinfr_he270711_kalsteinfr'
         ],
         'PE' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteincompe', 
-            'password' => 'tf@u[l~]c^Py', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteincompe_he270711_kalsteincompe'
         ],
         'EC' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteinec', 
-            'password' => '4#hxT=]DGiKG', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinec_he270711_kalsteinec'
         ],
         'PA' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteinpa', 
-            'password' => 'jdxOYxU1CFPQ', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinpa_he270711_kalsteincompa'
         ],
         'BO' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteinbo', 
-            'password' => '5=w;Tl*I]Z6A', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinbo_he270711_combo'
         ],
         'VE' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteinco', 
-            'password' => 'ku,oMnVdIWt]', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinco_he270711_kalsteincove'
         ],
         'ES' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteines', 
-            'password' => 'Lu%2WGm6=JES', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteines_he270711_kalsteines'
         ],
         'MX' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinmx', 
-            'password' => ']FttT%lFO5V(', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinmx_he270711_kalsteincommx'
         ],
         'CO' => [
             'host' => '185.28.22.84', 
-            'username' => 'kalsteincolombia', 
-            'password' => 'Kalstein1234', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteincolombia_kalsteincol_he270711_kalsteinco'
         ],
         'DE' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinde', 
-            'password' => 'yzL6Djp1O@_I', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinde_he272456_de'
         ],
         'EE' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinee', 
-            'password' => ')Qgsq7.K{DFX', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinee_u673369396_U38Rq'
         ],
         'IN' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinhindi', 
-            'password' => 'fpo5{y,f5]]1', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinhindi_u305949244_migration1'
         ],
         'UK' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinuk', 
-            'password' => '-cvMgWZ~0Xi2', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinuk_he272456_wp2'
         ],
         'NZ' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinnz', 
-            'password' => 'Ph5d;^[x7qvX', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinnz_he272456_conz'
         ],
         'CR' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteincocr', 
-            'password' => ']okgqH&=9=df', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteincocr_he272456_cocr'
         ],
         'CL' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteincl', 
-            'password' => 'MN~Zau6O0N+l', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteincl_he270711_kalsteincl'
         ],
         'BE' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinbe', 
-            'password' => 'KUS4(K3q)S9*', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinbe_he272456_be'
         ],
         'AFRICA_IN' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinafrica', 
-            'password' => '&vvm1VnXreh?', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinafrica_he272456_africa_wp1'
         ],
         'AFRICA_FR' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinafrica', 
-            'password' => '&vvm1VnXreh?', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinafrica_he272456_africa_wp2'
         ],
         'NET_ES' => [
@@ -151,50 +151,50 @@
         ],
         'NET_FR' => [
             'host' => '185.28.22.128', 
-            'username' => 'he270716', 
-            'password' => 'RP\$c_myoUeMK', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'he270716_wp_fr'
         ],
         'NET_EN' => [
             'host' => '185.28.22.128', 
-            'username' => 'he270716', 
-            'password' => 'RP\$c_myoUeMK', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'he270716_wp_en'
         ],
         'IT' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinit', 
-            'password' => 'ITDEPARTMENT1234*', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinit_he272456_it'
         ],
         'NL' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinnl', 
-            'password' => 'raP^6uFD*1Dg', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinnl_he272456_nl'
         ],
         'PL' => [
             'host' => '185.28.22.128', 
-            'username' => 'kalsteinpl', 
-            'password' => 'ayW&x1q!K%Vw', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'db_pkalsteinpl_he270711_pl_1'
         ],
         'PK' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinpk', 
-            'password' => 'H5HSkELr!!%B', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinpk_he272456_pk'
         ],
         'PT' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinpt', 
-            'password' => '61DS^z12R=rb', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinpt_he272456_pt'
         ],
         'SE' => [
             'host' => '185.28.22.154', 
-            'username' => 'kalsteinse', 
-            'password' => 'KwX9zQgl1w8', 
+            'username' => 'plus', 
+            'password' => 'Yuleana24.', 
             'database' => 'kalsteinse_he272456_se'
         ]
     ];
