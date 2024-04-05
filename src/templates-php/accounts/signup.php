@@ -39,7 +39,7 @@ $resultado = $conexion->query($query);
         margin-right: -1px;
         /* Compensa el borde derecho del input */
         z-index: 10;
-        display: none;
+        color: #000;
     }
 
     #imgCountry{
@@ -95,19 +95,22 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container input-wrapper-p">
-                                <select id="countryPrefix">
-                                    <?php
-                                    if ($resultado->num_rows > 0) {
-                                        while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'></option>";
-                                        }
-                                    } else {
-                                        echo "<option>No hay países disponibles</option>";
-                                    }
-                                    ?>
-                                </select>
-                                <img id='imgCountry' style='width: 60px; height: 40px;'>
-                                <span id='span-prefix'></span>
+                                <div id="countryPrefix" style='position: relative; display: flex; justify-content: center;'>
+                                    <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
+                                    <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
+                                    <ul style='position: absolute; z-index: 100; witdh: 5rem; height: 600px;'>
+                                        <?php
+                                            if ($resultado->num_rows > 0) {
+                                                while ($fila = $resultado->fetch_assoc()) {
+                                                    echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div'><img id='' src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/flag-icon/".$fila['codigo_iso'].".png' style='width: 60px; height: 40px; margin-top: 5px;'>
+                                                    <span id='' style='width: 70px; padding-top: 10px;'>".$fila['codigo_iso']."</span></div></li>";
+                                                }
+                                            } else {
+                                                echo "<li>No hay países disponibles</li>";
+                                            }
+                                        ?>
+                                    </ul>
+                                </div>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
                             </div>
