@@ -24,12 +24,12 @@ function encryptURL() {
 }
 
 //ENCRYPT GET
-$getSuccess = base64_encode('success');
-$getDeclined = base64_encode('declined');
+// $getSuccess = base64_encode('success');
+// $getDeclined = base64_encode('declined');
 
 //GET VARIABLE.
-$idCotizacion = $_GET["idCotizacion"];
-$idCotizacionEncrypted = base64_encode($idCotizacion);
+// $idCotizacion = $_GET["idCotizacion"];
+// $idCotizacionEncrypted = base64_encode($idCotizacion);
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' AND cotizacion_id LIKE '%$idCotizacion%'";
