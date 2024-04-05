@@ -18,9 +18,13 @@ use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
 $data = $_POST;
 
+print_r($data);
+
 file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
 $dataFormat = json_encode($data);
+
+print_r($dataFormat);
 
 
 if (!isset($_POST) || empty($_POST)) {
