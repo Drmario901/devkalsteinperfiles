@@ -185,9 +185,9 @@
 
     function obtenerConfiguracion($country, $configuraciones) {
         if ($country == 'plus') {
-            echo 'sí, mi rey, ', $country;
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
+            echo 'sí, mi rey, ', $country;
             return $configuraciones[$country];
         } else {
             echo 'no, mi rey';
