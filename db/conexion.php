@@ -178,7 +178,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('NET_EN', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
