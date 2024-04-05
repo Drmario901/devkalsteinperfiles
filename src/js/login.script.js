@@ -744,7 +744,7 @@ jQuery(document).ready(function ($) {
   })
 
   $(document).on('click', '#imgCountry', function(){
-    $('#countryPrefix').click();
+    $('#countryPrefix').click()
   })
 
   function validarCorreo(consulta) {
