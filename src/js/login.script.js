@@ -732,7 +732,7 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on('click', '#countryPrefix', function(){
-    $(this+'ul').toggle()
+    $('#countryPrefix ul').toggle()
   })
 
   let  prefix = $('#countryPrefix ul li').first().data('iso')
