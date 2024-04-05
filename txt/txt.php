@@ -5,6 +5,7 @@ function procesarArchivoMonetico($archivo, $conexion) {
     }
 
     $lines = file($archivo);
+    print_r($lines);
 
     foreach ($lines as $line) {
         if (strpos($line, 'Datos recibidos:') !== false) {
