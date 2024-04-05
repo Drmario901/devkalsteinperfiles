@@ -24,7 +24,7 @@ if(isset($data['reference'])) {
     $referenceSinPrefijo = preg_replace("/^QUO/", "", $reference);
     
     // Aquí se actualiza el estado de la cotización en la base de datos
-    $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 3 WHERE reference = ?");
+    $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 3 WHERE cotizacion_id = ?");
     $stmt->bind_param("s", $referenceSinPrefijo);
     if ($stmt->execute()) {
         echo "Cotización actualizada con éxito.\n";
