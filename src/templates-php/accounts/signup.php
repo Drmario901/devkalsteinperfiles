@@ -99,16 +99,10 @@ $resultado = $conexion->query($query);
                                     <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                     <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
                                     <ul style='position: absolute; z-index: 100; witdh: 10rem; height: 600px; background-color: #000;'>
-                                        <?php
-                                            if ($resultado->num_rows > 0) {
-                                                while ($fila = $resultado->fetch_assoc()) {
-                                                    echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div'><img id='' src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/flag-icon/".$fila['codigo_iso'].".png' style='width: 60px; height: 40px; margin-top: 5px;'>
-                                                    <span id='' style='width: 70px; padding-top: 10px;'>".$fila['codigo_iso']."</span></div></li>";
-                                                }
-                                            } else {
-                                                echo "<li>No hay países disponibles</li>";
-                                            }
-                                        ?>
+                                        <li>a</li>
+                                        <li>s</li>
+                                        <li>w</li>
+                                        <li>d</li>
                                     </ul>
                                 </div>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
