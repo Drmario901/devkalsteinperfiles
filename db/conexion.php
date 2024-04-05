@@ -179,7 +179,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('NET_FR', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('NET_ES', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
