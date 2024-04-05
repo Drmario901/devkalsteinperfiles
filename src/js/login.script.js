@@ -731,6 +731,10 @@ jQuery(document).ready(function ($) {
     $(".codeExpired").css({ display: "none" });
   });
 
+  $(document).on('click', '#countryPrefix', function(){
+    $(this+'ul').toggle()
+  })
+
   let  prefix = $('#countryPrefix ul li').first().data('iso')
   let prefix2 = $('#countryPrefix ul li').first().val()
   $('#imgCountry').attr('src', plugin_dir+'/src/images/flag-icon/'+prefix+'.png');
