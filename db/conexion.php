@@ -2,7 +2,6 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
 
-
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
         'plus' => [
@@ -155,18 +154,6 @@
             'password' => 'Yuleana24.', 
             'database' => 'he270716_wp_en'
         ],
-        'IT' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinit_he272456_it'
-        ],
-        'NL' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinnl_he272456_nl'
-        ],
         'PL' => [
             'host' => '185.28.22.128', 
             'username' => 'plus', 
@@ -185,13 +172,14 @@
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
+            echo "sisa, mi rey: ", $country;
             return $configuraciones[$country];
         } else {
             return $configuraciones['plus']; // Por defecto, NET en inglés
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('AFRICA_FR', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
