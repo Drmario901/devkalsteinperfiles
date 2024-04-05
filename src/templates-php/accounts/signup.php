@@ -96,19 +96,21 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container input-wrapper-p">
-                                <ul id="countryPrefix">
-                                    <?php
-                                    if ($resultado->num_rows > 0) {
-                                        while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div style='background-color: #000;'>a</div></li>";
-                                        }
-                                    } else {
-                                        echo "<li>No hay países disponibles</li>";
-                                    }
-                                    ?>
-                                </ul>
-                                <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
-                                <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
+                                <div id="countryPrefix">
+                                    <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
+                                    <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
+                                    <ul>
+                                        <?php
+                                            if ($redivtado->num_rows > 0) {
+                                                while ($fila = $resultado->fetch_assoc()) {
+                                                    echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div style='background-color: #000;'>a</div></li>";
+                                                }
+                                            } else {
+                                                echo "<li>No hay países disponibles</li>";
+                                            }
+                                        ?>
+                                    </ul>
+                                </div>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
                             </div>

@@ -731,8 +731,8 @@ jQuery(document).ready(function ($) {
     $(".codeExpired").css({ display: "none" });
   });
 
-  let  prefix = $('#countryPrefix').find(':selected').data('iso')
-  let prefix2 = $('#countryPrefix').val()
+  let  prefix = $('#countryPrefix ul li').first().data('iso')
+  let prefix2 = $('#countryPrefix ul li').first().val()
   $('#imgCountry').attr('src', plugin_dir+'/src/images/flag-icon/'+prefix+'.png');
   $('#span-prefix').text(prefix2)
 
