@@ -179,7 +179,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('AFRICA_FR', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('BE', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
