@@ -1,7 +1,7 @@
 <?php
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
-    
+
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
         'plus' => [
@@ -166,7 +166,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('ES', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('BO', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
