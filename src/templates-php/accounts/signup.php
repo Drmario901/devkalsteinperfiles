@@ -96,17 +96,17 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container input-wrapper-p">
-                                <select id="countryPrefix">
+                                <ul id="countryPrefix">
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div style='background-color: #000;'>a</div></option>";
+                                            echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div style='background-color: #000;'>a</div></li>";
                                         }
                                     } else {
-                                        echo "<option>No hay países disponibles</option>";
+                                        echo "<li>No hay países disponibles</li>";
                                     }
                                     ?>
-                                </select>
+                                </ul>
                                 <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                 <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
