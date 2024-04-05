@@ -206,27 +206,27 @@
                 $payDecrypted = base64_decode($pay);
                 $email = $_SESSION['emailAccount'];
 
-            //     $updateCotizacion = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ? AND cotizacion_id_user = ?");
+                // $updateCotizacion = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ? AND cotizacion_id_user = ?");
                 
-            //     $status = 3;
-            //     $statusN = 2;
+                // $status = 3;
+                // $statusN = 2;
 
-            //     if ($payDecrypted === 'success'){                        
-            //         $updateCotizacion->bind_param('sis', $status, $idCotizacionDecrypted, $email);
-            //     }else{
-            //         $updateCotizacion->bind_param('sis', $statusN, $idCotizacionDecrypted, $email);
-            //     }
+                // if ($payDecrypted === 'success'){                        
+                //     $updateCotizacion->bind_param('sis', $status, $idCotizacionDecrypted, $email);
+                // }else{
+                //     $updateCotizacion->bind_param('sis', $statusN, $idCotizacionDecrypted, $email);
+                // }
                 
-            //     // Ejecutar la sentencia preparada
-            //     if ($updateCotizacion->execute()) {
-            //         echo "Cotización actualizada correctamente.";
-            //     } else {
-            //         echo "Error al actualizar la cotización: " . $conexion->error;
-            //     }
+                // // Ejecutar la sentencia preparada
+                // if ($updateCotizacion->execute()) {
+                //     echo "Cotización actualizada correctamente.";
+                // } else {
+                //     echo "Error al actualizar la cotización: " . $conexion->error;
+                // }
                 
-            //     // Cerrar la sentencia preparada
-            //     $updateCotizacion->close();
-            // }
+                // // Cerrar la sentencia preparada
+                // $updateCotizacion->close();
+            }
             if(isset($_SESSION["emailAccount"])){
                 $email = $_SESSION["emailAccount"];
             }else{
