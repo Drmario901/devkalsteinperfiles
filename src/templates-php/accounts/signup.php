@@ -40,6 +40,7 @@ $resultado = $conexion->query($query);
         /* Compensa el borde derecho del input */
         z-index: 10;
         display: none;
+        color: #000;
     }
 
     #imgCountry{
@@ -99,7 +100,7 @@ $resultado = $conexion->query($query);
                                     <?php
                                     if ($resultado->num_rows > 0) {
                                         while ($fila = $resultado->fetch_assoc()) {
-                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'></option>";
+                                            echo "<option data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'></option>";
                                         }
                                     } else {
                                         echo "<option>No hay países disponibles</option>";
