@@ -18,36 +18,36 @@ use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
 $data = $_POST;
 
-if(isset($data['reference'])) {
+if (isset($data['reference']) && isset($data['code-retour'])) {
     $reference = $data['reference'];
     // Eliminación del prefijo "QUO" de la referencia, si está presente
     $referenceSinPrefijo = preg_replace("/^QUO/", "", $reference);
     $codeRetour = $data['code-retour'];
-    // Verificamos si el pago fue correcto
-    if($codeRetour == 'payetest' || $codeRetour == 'paiement'){
-          // Aquí se actualiza el estado de la cotización en la base de datos
-    $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 3 WHERE cotizacion_id = ?");
-    $stmt->bind_param("s", $referenceSinPrefijo);
-    if ($stmt->execute()) {
-        echo "Cotización actualizada con éxito.\n";
+    
+    // Preparar y ejecutar la actualización basada en el estado del pago
+    if ($codeRetour == 'payetest' || $codeRetour == 'paiement') {
+        $newStatus = 3; // Estado de éxito
     } else {
-        echo "Error al actualizar cotización.\n";
+        $newStatus = 2; // Cualquier otro caso se considera no exitoso
+    }
+    // Consulta para actualizar el estado de la cotización
+    $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ?");
+    if (!$stmt) {
+        echo "Error al preparar la consulta: " . $conexion->error;
+        exit();
+    }
+
+    $stmt->bind_param("is", $newStatus, $referenceSinPrefijo);
+    if ($stmt->execute()) {
+        echo "Cotización actualizada con éxito. Nuevo estado: $newStatus\n";
+    } else {
+        echo "Error al actualizar cotización: " . $stmt->error . "\n";
     }
     $stmt->close();
-    } else {
-        // Si el pago esta cancelado...
-        $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 2 WHERE cotizacion_id = ?");
-        $stmt->bind_param("s", $referenceSinPrefijo);
-        if ($stmt->execute()) {
-            echo "Cotización denegada con éxito.\n";
-        } else {
-            echo "Error al actualizar cotización.\n";
-        }
-        $stmt->close();
-    }
 } else {
-    echo "La clave 'reference' no está presente en los datos recibidos.";
+    echo "La clave 'reference' o 'code-retour' no está presente en los datos recibidos.";
 }
+
 
 print_r($data);
 
