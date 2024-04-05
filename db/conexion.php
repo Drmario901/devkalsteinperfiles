@@ -24,7 +24,7 @@
             'database' => 'kalsteineu_he270711_wp1'
         ],
         'US' => [
-            'host' => '185.28.22.84', 
+            'host' => '185.28.22.128', 
             'username' => 'plus', 
             'password' => 'Yuleana24.', 
             'database' => 'he269186_he270716_wp_en'
