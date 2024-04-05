@@ -12,7 +12,7 @@
         'plus' => [
             'host' => 'localhost', 
             'username' => 'kalsteinplus', 
-            'password' => 'Yuleana24.', 
+            'password' => 'OqA;}vKA94PO', 
             'database' => 'kalsteinplus_he270716_wp_es'
         ],
         'EU' => [
