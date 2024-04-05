@@ -1,6 +1,6 @@
 <?php
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
-    $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
+    $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'en';
 
     // Lista de bases de datos por país
     $configuraciones = [
@@ -9,12 +9,6 @@
             'username' => 'kalsteinplus', 
             'password' => 'OqA;}vKA94PO', 
             'database' => 'kalsteinplus_he270716_wp_es'
-        ],
-        'EU' => [
-            'host' => '185.28.22.84', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteineu_he270711_wp1'
         ],
         'US' => [
             'host' => '185.28.22.128', 
@@ -156,18 +150,21 @@
         ]
     ];
 
-    function obtenerConfiguracion($country, $configuraciones) {
+    function obtenerConfiguracion($country, $configuraciones, $lang) {
+        $default_language = ($lang == 'en' || $lang == 'es' || $lang == 'fr') ? 'NET_' . strtoupper($lang) : 'plus';
+    
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
             echo $country;
             return $configuraciones[$country];
-        } else {
-            return $configuraciones['plus']; // Por defecto, NET en inglés
+        } else {  
+            return $configuraciones[$default_language];
         }
     }
+    
 
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones, $lang);
 
     // Establecer la conexion
     $conexion = new mysqli(
