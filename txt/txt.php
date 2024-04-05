@@ -8,8 +8,13 @@ function procesarArchivoMonetico($archivo, $conexion) {
         die("El archivo no existe o no se puede leer.");
     }
 
-    $lines = file($archivo);
+    $archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log.txt"; 
+
+    $lines = file($archivoLog);
     print_r($lines);
+    echo $lines, 'archivo';
+
+    
 
 
 
