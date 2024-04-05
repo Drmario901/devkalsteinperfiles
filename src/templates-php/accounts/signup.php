@@ -95,10 +95,10 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container input-wrapper-p">
-                                <div id="countryPrefix" style='display: flex; justify-content: center;'>
+                                <div id="countryPrefix" style='position: relative; display: flex; justify-content: center;'>
                                     <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                     <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
-                                    <ul>
+                                    <ul style='position: absolute; z-index: 100;'>
                                         <?php
                                             if ($resultado->num_rows > 0) {
                                                 while ($fila = $resultado->fetch_assoc()) {
