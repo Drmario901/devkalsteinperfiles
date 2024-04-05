@@ -2,6 +2,10 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
         'plus' => [
@@ -179,7 +183,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('AFRICA_FR', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('BE', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
