@@ -13,6 +13,7 @@ function procesarArchivoMonetico($archivo, $conexion) {
     $lines = file($archivoLog);
     print_r($lines);
     echo $lines, 'archivo';
+    echo 'holaaaa';
 
     
 
