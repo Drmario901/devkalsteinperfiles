@@ -6,7 +6,7 @@
         session_start();
     }
     require __DIR__.'/../../../php/conexion.php';
-    require __DIR__.'/../../../php/distributor/cotizaciones/cotizaciones.php';
+    require __DIR__.'/../../../php/cotizaciones/cotizaciones.php';
                 
     $acc_id = $_SESSION['emailAccount'];
 
