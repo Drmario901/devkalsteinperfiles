@@ -172,14 +172,14 @@
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
-            echo "sisa, mi rey";
+            echo "sisa, mi rey: ", $country;
             return $configuraciones[$country];
         } else {
             return $configuraciones['plus']; // Por defecto, NET en inglés
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('NET_EN', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('NET_FR', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
