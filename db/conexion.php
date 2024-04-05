@@ -172,6 +172,7 @@
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
+            echo "sisa, mi rey"
             return $configuraciones[$country];
         } else {
             return $configuraciones['plus']; // Por defecto, NET en inglés
