@@ -18,6 +18,24 @@ use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
 $data = $_POST;
 
+if(isset($data['reference'])) {
+    $reference = $data['reference'];
+    // Eliminación del prefijo "QUO" de la referencia, si está presente
+    $referenceSinPrefijo = preg_replace("/^QUO/", "", $reference);
+    
+    // Aquí se actualiza el estado de la cotización en la base de datos
+    $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 3 WHERE reference = ?");
+    $stmt->bind_param("s", $referenceSinPrefijo);
+    if ($stmt->execute()) {
+        echo "Cotización actualizada con éxito.\n";
+    } else {
+        echo "Error al actualizar cotización.\n";
+    }
+    $stmt->close();
+} else {
+    echo "La clave 'reference' no está presente en los datos recibidos.";
+}
+
 print_r($data);
 
 file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
