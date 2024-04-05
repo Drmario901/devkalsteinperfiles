@@ -189,6 +189,7 @@
         } elseif (array_key_exists($country, $configuraciones)) {
             return $configuraciones[$country];
         } else {
+            echo 'no, mi rey';
             return $configuraciones['plus']; // Por defecto, NET en inglés
         }
     }
