@@ -167,7 +167,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('FR', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('US', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
