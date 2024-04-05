@@ -197,101 +197,101 @@
         //ACCOUNT REDIRECT NUEVO CON SWTICH CASE 06/11/2023
 
         function account_redirect(){
-            require __DIR__ . '/conexion.php';
+            // require __DIR__ . '/conexion.php';
             
-            if (isset($_GET['pay'])) {
-                $idCotizacion = $_GET['idCotizacion'];
-                $idCotizacionDecrypted = base64_decode($idCotizacion);
-                $pay = $_GET['pay'];
-                $payDecrypted = base64_decode($pay);
-                $email = $_SESSION['emailAccount'];
+            // if (isset($_GET['pay'])) {
+            //     $idCotizacion = $_GET['idCotizacion'];
+            //     $idCotizacionDecrypted = base64_decode($idCotizacion);
+            //     $pay = $_GET['pay'];
+            //     $payDecrypted = base64_decode($pay);
+            //     $email = $_SESSION['emailAccount'];
 
-                $updateCotizacion = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ? AND cotizacion_id_user = ?");
+            //     $updateCotizacion = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = ? WHERE cotizacion_id = ? AND cotizacion_id_user = ?");
                 
-                $status = 3;
-                $statusN = 2;
+            //     $status = 3;
+            //     $statusN = 2;
 
-                if ($payDecrypted === 'success'){                        
-                    $updateCotizacion->bind_param('sis', $status, $idCotizacionDecrypted, $email);
-                }else{
-                    $updateCotizacion->bind_param('sis', $statusN, $idCotizacionDecrypted, $email);
-                }
+            //     if ($payDecrypted === 'success'){                        
+            //         $updateCotizacion->bind_param('sis', $status, $idCotizacionDecrypted, $email);
+            //     }else{
+            //         $updateCotizacion->bind_param('sis', $statusN, $idCotizacionDecrypted, $email);
+            //     }
                 
-                // Ejecutar la sentencia preparada
-                if ($updateCotizacion->execute()) {
-                    echo "Cotización actualizada correctamente.";
-                } else {
-                    echo "Error al actualizar la cotización: " . $conexion->error;
-                }
+            //     // Ejecutar la sentencia preparada
+            //     if ($updateCotizacion->execute()) {
+            //         echo "Cotización actualizada correctamente.";
+            //     } else {
+            //         echo "Error al actualizar la cotización: " . $conexion->error;
+            //     }
                 
-                // Cerrar la sentencia preparada
-                $updateCotizacion->close();
-            }
-            if(isset($_SESSION["emailAccount"])){
-                $email = $_SESSION["emailAccount"];
-            }else{
-                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/');</script>";
-                return '';
-            }
+            //     // Cerrar la sentencia preparada
+            //     $updateCotizacion->close();
+            // }
+            // if(isset($_SESSION["emailAccount"])){
+            //     $email = $_SESSION["emailAccount"];
+            // }else{
+            //     echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/');</script>";
+            //     return '';
+            // }
 
-            if(isset($_SESSION["consulta1"])){
-                $pass = $_SESSION["consulta1"];
-            } 
+            // if(isset($_SESSION["consulta1"])){
+            //     $pass = $_SESSION["consulta1"];
+            // } 
         
-            require_once __DIR__ . '/../db/conexion.php';
+            // require_once __DIR__ . '/../db/conexion.php';
         
-            $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
-            $resultConsulta = $conexion->query($consulta);
+            // $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
+            // $resultConsulta = $conexion->query($consulta);
         
-            if(!$resultConsulta || $resultConsulta->num_rows == 0){
-                echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>";
-                return '';
-            }
+            // if(!$resultConsulta || $resultConsulta->num_rows == 0){
+            //     echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>";
+            //     return '';
+            // }
 
-            //$scientistMail = isset($_SESSION["emailAccount"]) ? urlencode($_SESSION["emailAccount"]) : 'mailFail';
-            $pass = isset($_SESSION['consulta1']) ? ($_SESSION['consulta1']) : 'passFail';
+            // //$scientistMail = isset($_SESSION["emailAccount"]) ? urlencode($_SESSION["emailAccount"]) : 'mailFail';
+            // $pass = isset($_SESSION['consulta1']) ? ($_SESSION['consulta1']) : 'passFail';
         
-            $row = mysqli_fetch_assoc($resultConsulta);
-            $rolAccount = $row['account_rol_aid'];
+            // $row = mysqli_fetch_assoc($resultConsulta);
+            // $rolAccount = $row['account_rol_aid'];
         
-            $search = isset($_GET['search']) ? urlencode($_GET['search']) : '';
-            $searchQuery = $search ? '?search='.$search : '';
-            /*$scientist = isset($_GET['accountUser']) ? urldecode($_GET['accountUser']) : '';
-            $scientistQuery = $scientist ? '&accountUser='.$scientist : '';*/
+            // $search = isset($_GET['search']) ? urlencode($_GET['search']) : '';
+            // $searchQuery = $search ? '?search='.$search : '';
+            // /*$scientist = isset($_GET['accountUser']) ? urldecode($_GET['accountUser']) : '';
+            // $scientistQuery = $scientist ? '&accountUser='.$scientist : '';*/
             
             
 
 
-            $baseURL = 'https://dev.kalstein.plus/plataforma/index.php/';
-            $scientistURL = 'https://biblioteca.kalstein.net/';
+            // $baseURL = 'https://dev.kalstein.plus/plataforma/index.php/';
+            // $scientistURL = 'https://biblioteca.kalstein.net/';
             
-            switch($rolAccount){
-                case 1: 
-                    $redirectUrl = $search ? $baseURL . "dashboard/$searchQuery" : $baseURL . "dashboard/";
-                    break;
-                case 2: 
-                    $redirectUrl = $search ? $baseURL . "distribuidor/tienda/$searchQuery" : $baseURL . "distribuidor/dashboard/";
-                    break;
-                case 3: 
-                    $redirectUrl = $search ? $baseURL . "fabricante/tienda/$searchQuery" : $baseURL . "manufacturer/dashboard/";
-                    break;
-                case 4: 
-                    $redirectUrl = $baseURL . "support/dashboard/";
-                    break;
-                /*case 5: 
-                    $redirectUrl = $baseURL . "rentalsale/dashboard/";
-                    break;*/
-                case 6: 
-                    /* sleep(15); */
-                    $redirectUrl = $scientistURL . "setSession.php";
-                    break;
-                default: 
-                    echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>"; 
-                    return '';
-            }
+            // switch($rolAccount){
+            //     case 1: 
+            //         $redirectUrl = $search ? $baseURL . "dashboard/$searchQuery" : $baseURL . "dashboard/";
+            //         break;
+            //     case 2: 
+            //         $redirectUrl = $search ? $baseURL . "distribuidor/tienda/$searchQuery" : $baseURL . "distribuidor/dashboard/";
+            //         break;
+            //     case 3: 
+            //         $redirectUrl = $search ? $baseURL . "fabricante/tienda/$searchQuery" : $baseURL . "manufacturer/dashboard/";
+            //         break;
+            //     case 4: 
+            //         $redirectUrl = $baseURL . "support/dashboard/";
+            //         break;
+            //     /*case 5: 
+            //         $redirectUrl = $baseURL . "rentalsale/dashboard/";
+            //         break;*/
+            //     case 6: 
+            //         /* sleep(15); */
+            //         $redirectUrl = $scientistURL . "setSession.php";
+            //         break;
+            //     default: 
+            //         echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder/');</script>"; 
+            //         return '';
+            // }
 
-            echo "<script>window.location.replace('$redirectUrl');</script>"; 
-            return '';
+            // echo "<script>window.location.replace('$redirectUrl');</script>"; 
+            // return '';
         }
         
         //FIN DE ACCOUNT REDIRECT 
