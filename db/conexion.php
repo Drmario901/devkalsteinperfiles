@@ -2,7 +2,7 @@
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
 
-    // Configuraciones de conexion para cada idioma
+    // Lista de bases de datos por país
     $configuraciones = [
         'plus' => [
             'host' => 'localhost', 
@@ -166,7 +166,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('PE', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
