@@ -22,8 +22,10 @@ if(isset($data['reference'])) {
     $reference = $data['reference'];
     // Eliminación del prefijo "QUO" de la referencia, si está presente
     $referenceSinPrefijo = preg_replace("/^QUO/", "", $reference);
-    
-    // Aquí se actualiza el estado de la cotización en la base de datos
+    $codeRetour = $data['code-retour'];
+    // Verificamos si el pago fue correcto
+    if($codeRetour == 'payetest' || $codeRetour == 'paiement'){
+          // Aquí se actualiza el estado de la cotización en la base de datos
     $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 3 WHERE cotizacion_id = ?");
     $stmt->bind_param("s", $referenceSinPrefijo);
     if ($stmt->execute()) {
@@ -32,6 +34,17 @@ if(isset($data['reference'])) {
         echo "Error al actualizar cotización.\n";
     }
     $stmt->close();
+    } else {
+        // Si el pago esta cancelado...
+        $stmt = $conexion->prepare("UPDATE wp_cotizacion SET cotizacion_status = 2 WHERE cotizacion_id = ?");
+        $stmt->bind_param("s", $referenceSinPrefijo);
+        if ($stmt->execute()) {
+            echo "Cotización denegada con éxito.\n";
+        } else {
+            echo "Error al actualizar cotización.\n";
+        }
+        $stmt->close();
+    }
 } else {
     echo "La clave 'reference' no está presente en los datos recibidos.";
 }
