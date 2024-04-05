@@ -179,7 +179,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('CL', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
