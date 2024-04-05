@@ -1,7 +1,12 @@
 <?php
 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
     $country = isset($_COOKIE['country']) ? $_COOKIE['country'] : 'NET_EN';
+
 
     // Configuraciones de conexion para cada idioma
     $configuraciones = [
@@ -185,10 +190,8 @@
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
-            echo 'sí, mi rey, ', $country;
             return $configuraciones[$country];
         } else {
-            echo 'no, mi rey';
             return $configuraciones['plus']; // Por defecto, NET en inglés
         }
     }
