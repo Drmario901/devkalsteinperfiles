@@ -161,12 +161,6 @@
             'password' => 'Yuleana24.', 
             'database' => 'kalsteinit_he272456_it'
         ],
-        'NL' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinnl_he272456_nl'
-        ],
         'PL' => [
             'host' => '185.28.22.128', 
             'username' => 'plus', 
@@ -191,7 +185,7 @@
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion('plus', $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('it', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
