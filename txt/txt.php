@@ -1,32 +1,10 @@
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-    
-$archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log.txt"; 
-
-$lines = file($archivoLog);
-print_r($lines);
-echo $lines, 'archivo';
-echo 'holaaaa';
-
 function procesarArchivoMonetico($archivo, $conexion) {
     if (!is_readable($archivo)) {
         die("El archivo no existe o no se puede leer.");
     }
 
-    $archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log.txt"; 
-
-    $lines = file($archivoLog);
-    print_r($lines);
-    echo $lines, 'archivo';
-    echo 'holaaaa';
-
-    
-
-
+    $lines = file($archivo);
 
     foreach ($lines as $line) {
         if (strpos($line, 'Datos recibidos:') !== false) {
