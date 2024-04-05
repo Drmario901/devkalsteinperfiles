@@ -183,12 +183,6 @@
             'username' => 'plus', 
             'password' => 'Yuleana24.', 
             'database' => 'kalsteinpk_he272456_pk'
-        ],
-        'PT' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinpt_he272456_pt'
         ]
     ];
 
@@ -198,11 +192,11 @@
         } elseif (array_key_exists($country, $configuraciones)) {
             return $configuraciones[$country];
         } else {
-            return $configuraciones['NET_EN']; // Por defecto, NET en inglés
+            return $configuraciones['plus']; // Por defecto, NET en inglés
         }
     }
 
-    $configuracionUsuario = obtenerConfiguracion($country, $configuraciones);
+    $configuracionUsuario = obtenerConfiguracion('PK', $configuraciones);
 
     // Establecer la conexion
     $conexion = new mysqli(
