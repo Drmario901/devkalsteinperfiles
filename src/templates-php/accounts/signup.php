@@ -39,7 +39,6 @@ $resultado = $conexion->query($query);
         margin-right: -1px;
         /* Compensa el borde derecho del input */
         z-index: 10;
-        display: none;
         color: #000;
     }
 
@@ -101,7 +100,7 @@ $resultado = $conexion->query($query);
                                     <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
                                     <ul>
                                         <?php
-                                            if ($redivtado->num_rows > 0) {
+                                            if ($resultado->num_rows > 0) {
                                                 while ($fila = $resultado->fetch_assoc()) {
                                                     echo "<li data-iso='".$fila['codigo_iso']."' value='" . $fila['prefijo_internacional'] . "'><div style='background-color: #000;'>a</div></li>";
                                                 }
