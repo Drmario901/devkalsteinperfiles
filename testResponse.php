@@ -24,6 +24,8 @@ file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - Datos recibidos:
 
 $dataFormat = json_encode($data);
 
+print_r($dataFormat);
+
 
 if (!isset($_POST) || empty($_POST)) {
     file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos por POST.\n", FILE_APPEND);
