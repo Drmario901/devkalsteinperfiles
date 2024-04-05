@@ -76,18 +76,6 @@
             'password' => 'Yuleana24.', 
             'database' => 'kalsteincolombia_kalsteincol_he270711_kalsteinco'
         ],
-        'DE' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinde_he272456_de'
-        ],
-        'EE' => [
-            'host' => '185.28.22.154', 
-            'username' => 'plus', 
-            'password' => 'Yuleana24.', 
-            'database' => 'kalsteinee_u673369396_U38Rq'
-        ],
         'IN' => [
             'host' => '185.28.22.154', 
             'username' => 'plus', 
@@ -172,7 +160,7 @@
         if ($country == 'plus') {
             return $configuraciones['plus'];
         } elseif (array_key_exists($country, $configuraciones)) {
-            echo "sisa, mi rey: ", $country;
+            echo $country;
             return $configuraciones[$country];
         } else {
             return $configuraciones['plus']; // Por defecto, NET en inglés
