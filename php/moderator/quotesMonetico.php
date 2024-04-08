@@ -1,6 +1,6 @@
 <?php 
 
-require_once __DIR__ . '/../../../db/conexion.php';
+require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
 
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
