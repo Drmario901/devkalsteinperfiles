@@ -6,6 +6,8 @@
 
     $acc_id = $_SESSION['emailAccount'];
 
+    $acc_discount = $conexion->query("SELECT descuento_gibson FROM wp_account WHERE account_correo = '$acc_id'")->fetch_array()[0];
+
     if ($val){
         $t = $_POST['id'];
 
@@ -34,6 +36,13 @@
             $pPriceEUR = $pPrice/1.18;
             $pPriceUSD = $pPrice;
         }
+
+        // if acc_discount is not empty, apply discount to pPriceUSD and pPriceEUR
+        if ($acc_discount != 0){
+            $pPriceUSD = $pPriceUSD - ($pPriceUSD * $acc_discount / 100);
+            $pPriceEUR = $pPriceEUR - ($pPriceEUR * $acc_discount / 100);
+        }
+        
 
         if ($discount_1_amount == '' || $discount_1_amount == 0){
             $discount_1_amount = '';
