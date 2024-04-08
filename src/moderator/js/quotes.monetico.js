@@ -1,4 +1,4 @@
-$(document).ready(function() {
+Query(document).ready(function() {
     cargarDatos();
 
     function cargarDatos(pagina = 1) {
