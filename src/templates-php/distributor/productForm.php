@@ -603,7 +603,7 @@
             $selected_category = $_POST['category'];
 
             // Preparar la consulta SQL
-            $consulta = "SELECT subcategory_description_es FROM wp_subcategories WHERE category = '$selected_category'";
+            $consulta = "SELECT subcategory_description_es FROM categorie_description_es WHERE category = '$selected_category'";
 
             // Ejecutar la consulta SQL
             $resultado = $conexion->query($consulta);
