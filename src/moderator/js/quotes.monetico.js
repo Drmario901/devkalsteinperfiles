@@ -16,6 +16,8 @@ jQuery(document).ready(function() {
             }
         });
     }
+    console.log('datossss', datos);
+    
 
     function generarTabla(datos) {
         let tablaHtml = '<table class="table"><thead><tr><th>ID</th><th>ID Cotización</th><th>Monto Total</th><th>Divisa</th><th>ID Remitente</th><th>Estado del Pago</th></tr></thead><tbody>';
