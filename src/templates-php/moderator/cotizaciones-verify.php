@@ -1,16 +1,17 @@
 <?php
-require __DIR__ . '/../../../db/conexion.php';
+//require __DIR__ . '/../../../db/conexion.php';
 /* ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); */
 
 ?>
 
-<header class="header" data-header>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--header class="header" data-header>
+  <script-- src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script-->
 
   <?php
-  include 'navbar.php';
+  //include 'navbar.php';
+  echo 'Jorgito';
   ?>
   <script>
     let page = "render";
@@ -18,5 +19,5 @@ error_reporting(E_ALL); */
     document.querySelector('#link-' + page).classList.add("active");
     document.querySelector('#link-' + page).removeAttribute("style");
   </script>
-</header>
+</!--header>
 
