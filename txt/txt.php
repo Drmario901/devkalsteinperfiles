@@ -16,7 +16,7 @@ function procesarArchivoMonetico($archivo, $conexion) {
 
                 $referenceRaw = $jsonData->reference ?? 'No encontrado';
                 preg_match('/\d{3}/', $referenceRaw, $matches);
-                $reference = $matches[0] ?? 'No encontrado'; // 3 dígitos numéricos de la referencia
+                $reference = intval($matches[0]);
 
                 $codeRetour = $jsonData->{'code-retour'} ?? 'No encontrado';
                 $montoTotalConMoneda = $jsonData->montant ?? '0';
