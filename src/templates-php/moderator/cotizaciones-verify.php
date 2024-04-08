@@ -51,7 +51,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
 
-<script>
+<!-- <script>
 function cargarDatos(pagina = 1) {
     $.ajax({
         url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php',
@@ -86,7 +86,7 @@ function generarPaginacion(paginaActual, totalPaginas) {
 
 // Cargar los datos inicialmente
 cargarDatos();
-</script>
+</script> -->
 
 </body>
 
