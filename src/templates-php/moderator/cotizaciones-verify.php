@@ -34,6 +34,8 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 </header>
 
 <body>
+    <h1>Cotizaciones</h1>
+    <button id="boton-verify">Click Aqui</button>
 <div class="container mt-5">
     <div id="datos-tabla">
         <!-- La tabla se llenará dinámicamente con AJAX -->

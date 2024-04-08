@@ -34,4 +34,8 @@ $(document).ready(function() {
         paginacionHtml += '</ul></nav>';
         return paginacionHtml;
     }
+
+    $('#boton-verify').click(function() {
+        alert('¡Botón clickeado!');
+    });
 });
