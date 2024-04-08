@@ -586,33 +586,82 @@
     </div>
 </form>
 
+<?php
+// Verificar si se recibió una solicitud POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verificar si se recibió el parámetro 'category'
+    if (isset($_POST["category"])) {
+        // Obtener la categoría seleccionada
+        $selected_category = $_POST["category"];
+
+        // Establecer la conexión a la base de datos
+        require __DIR__.'/../../../php/conexion.php';
+
+        // Preparar la consulta SQL para obtener las subcategorías correspondientes a la categoría seleccionada
+        $consulta = "SELECT subcategory_description_es FROM wp_categories WHERE categoria_description_es = '$selected_category'";
+
+        // Ejecutar la consulta SQL
+        $resultado = $conexion->query($consulta);
+
+        // Verificar si se obtuvieron resultados
+        if ($resultado->num_rows > 0) {
+            // Crear un array para almacenar las subcategorías
+            $subcategories = array();
+
+            // Iterar sobre los resultados y agregar las subcategorías al array
+            while ($fila = $resultado->fetch_assoc()) {
+                $subcategories[] = $fila['subcategory_description_es'];
+            }
+
+            // Devolver las subcategorías como respuesta en formato JSON
+            echo json_encode($subcategories);
+        } else {
+            // No se encontraron subcategorías para la categoría seleccionada
+            echo json_encode(array());
+        }
+    } else {
+        // El parámetro 'category' no está presente en la solicitud POST
+        echo json_encode(array());
+    }
+} else {
+    // La solicitud no es de tipo POST
+    echo json_encode(array());
+}
+?>
+
 <script>
+    // Función para cargar las subcategorías cuando se selecciona una categoría
     function loadSubcategories() {
         // Obtener el valor seleccionado de la categoría
         var category = document.getElementById("dataCategory").value;
-        // Obtener el elemento select de subcategorías
-        var subcategorySelect = document.getElementById("dataSubcategory");
 
-        // Limpiar opciones anteriores en el select de subcategorías
-        subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
-
+        // Realizar la solicitud AJAX para enviar la categoría seleccionada al servidor
         $.ajax({
-            url: 'php/actualizarSubcategoria.php', // Ruta al archivo PHP que procesará la solicitud
+            url: '<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>', // Ruta al mismo archivo PHP
             method: 'POST',
             data: { category: category }, // Datos a enviar al servidor (categoría seleccionada)
             dataType: 'json', // Tipo de datos esperados en la respuesta
             success: function(response) {
                 // Éxito: procesar las subcategorías recibidas
                 console.log('Subcategorías obtenidas:', response);
-                // Aquí puedes actualizar el select de subcategorías con las opciones recibidas
+
+                // Limpiar opciones anteriores del select de subcategorías
+                var subcategorySelect = document.getElementById("dataSubcategory");
+                subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
+
+                // Agregar las nuevas opciones al select de subcategorías
+                response.forEach(function(subcategory) {
+                    var option = document.createElement("option");
+                    option.value = subcategory;
+                    option.textContent = subcategory;
+                    subcategorySelect.appendChild(option);
+                });
             },
             error: function(xhr, status, error) {
                 // Error: manejar el error de la solicitud AJAX
                 console.error('Error en la solicitud AJAX:', status, error);
             }
         });
-
-        console.log("Categoría seleccionada: " + category);
     }
 
     // Agregar un evento de cambio al elemento select de categoría para llamar a la función loadSubcategories
