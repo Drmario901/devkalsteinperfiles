@@ -6,6 +6,7 @@ require_once __DIR__ . '/../db/conexion.php';
 
     $validate_aid = $_POST['acc_id'];
     $email = $_POST['email'];
+    $gilson = $_POST['discountGilson'];
     
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -17,7 +18,7 @@ require_once __DIR__ . '/../db/conexion.php';
 
     if ($resultAction->num_rows > 0){
 
-        $query = "UPDATE wp_account SET account_status = 'validated' WHERE account_aid = '$validate_aid'";
+        $query = "UPDATE wp_account SET account_status = 'validated', SET descuento_gibson = $gilson WHERE account_aid = '$validate_aid'";
         $result = $conexion->query($query);
     
         $response = array();
