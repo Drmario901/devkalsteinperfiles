@@ -4,12 +4,12 @@ require __DIR__ . '/../../../db/conexion.php';
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); */
 
-if (isset($_SESSION['privateEmailAccount'])){
-    $acc_id = $_SESSION['privateEmailAccount'];
-}
-else{
-    echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder');</script>";
-}
+ if (isset($_SESSION['privateEmailAccount'])){
+        $acc_id = $_SESSION['privateEmailAccount'];
+    }
+    else{
+        echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/acceder');</script>";
+    }
 
 ?>
 
