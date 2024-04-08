@@ -596,28 +596,19 @@
         <?php
             require __DIR__.'/../../../php/conexion.php';
 
-            // Verificar si se ha seleccionado una categoría
-            if (isset($_POST['category']) && !empty($_POST['category'])) {
-                $category = $_POST['category'];
+            // Consulta SQL para seleccionar las subcategorías según la categoría seleccionada
+            $consulta = "SELECT categorie_sub_es FROM wp_categories WHERE categorie_description_es = '$category' ORDER BY categorie_sub_es ASC";
+            $resultado = $conexion->query($consulta);
 
-                // Consulta SQL para seleccionar las subcategorías según la categoría seleccionada
-                $consulta = "SELECT categorie_sub_es FROM wp_categories WHERE categorie_description_es = '$category' ORDER BY categorie_sub_es ASC";
-
-                $resultado = $conexion->query($consulta);
-
-                // Verificar si se encontraron resultados
-                if ($resultado->num_rows > 0) {
-                    while ($value = $resultado->fetch_assoc()) {
-                        // Imprimir las opciones de subcategorías
-                        echo "<option value='" . $value['categorie_sub_es'] . "'>" . $value['categorie_sub_es'] . "</option>";
-                    }
-                } else {
-                    // Si no se encontraron subcategorías, imprimir un mensaje indicando que no hay opciones disponibles
-                    echo "<option value='' data-i18n='distribuidor:optionElige'>-- No hay subcategorías disponibles --</option>";
+            // Verificar si se encontraron resultados
+            if ($resultado->num_rows > 0) {
+                while ($value = $resultado->fetch_assoc()) {
+                    // Imprimir las opciones de subcategorías
+                    echo "subcategorySelect.innerHTML += '<option value=\"" . $value['categorie_sub_es'] . "\">" . $value['categorie_sub_es'] . "</option>';";
                 }
             } else {
-                // Si no se ha seleccionado ninguna categoría, imprimir un mensaje indicando que se debe seleccionar una categoría primero
-                echo "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una categoría primero --</option>";
+                // Si no se encontraron subcategorías, imprimir un mensaje indicando que no hay opciones disponibles
+                echo "subcategorySelect.innerHTML += '<option value=\"\" data-i18n=\"distribuidor:optionElige\">-- No hay subcategorías disponibles --</option>';";
             }
         ?>
     }
