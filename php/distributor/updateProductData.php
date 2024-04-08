@@ -43,7 +43,6 @@
             $pPriceEUR = $pPriceEUR - ($pPriceEUR * $acc_discount / 100);
         }
         
-
         if ($discount_1_amount == '' || $discount_1_amount == 0){
             $discount_1_amount = '';
             $discount_1 = '';
