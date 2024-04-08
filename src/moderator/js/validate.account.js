@@ -116,7 +116,7 @@ jQuery(document).ready(function ($) {
               let discountGilson = $("#discountGilson").val();
               console.log(discountGilson);
               $.ajax({
-                url: plugin_dir + "php/validateAcc.php",
+                url: plugin_dir + "/php/validateAcc.php",
                 type: "POST",
                 data: { acc_id, email, discountGilson },
               })
