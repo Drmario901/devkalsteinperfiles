@@ -21,7 +21,7 @@ require_once __DIR__ . '/../db/conexion.php';
 
     if ($resultAction->num_rows > 0){
 
-        $query = "UPDATE wp_account SET account_status = 'validated', SET descuento_gibson = $gilson WHERE account_aid = '$validate_aid'";
+        $query = "UPDATE wp_account SET account_status = 'validated', descuento_gibson = $gilson WHERE account_aid = '$validate_aid'";
         $result = $conexion->query($query);
     
         $response = array();
