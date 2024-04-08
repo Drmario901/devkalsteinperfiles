@@ -627,7 +627,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // La solicitud no es de tipo POST
     echo json_encode(array());
 }
-?>
+
+include __DIR__.'/productForm.php';
 
 <script>
     // Función para cargar las subcategorías cuando se selecciona una categoría
@@ -637,7 +638,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Realizar la solicitud AJAX para enviar la categoría seleccionada al servidor
         $.ajax({
-            url: '<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>', // Ruta al mismo archivo PHP
+            url: '<?php __DIR__."/php/actualizarSubcategoria.php"; ?>', // Ruta al mismo archivo PHP
             method: 'POST',
             data: { category: category }, // Datos a enviar al servidor (categoría seleccionada)
             dataType: 'json', // Tipo de datos esperados en la respuesta
