@@ -1,4 +1,8 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 function procesarArchivoMonetico($archivo, $conexion) {
     if (!is_readable($archivo)) {
         die("El archivo no existe o no se puede leer.");
