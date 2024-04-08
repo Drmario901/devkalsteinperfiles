@@ -348,7 +348,7 @@
             </select>
         </div>
         <div class="col-12 col-sm-6 form-group mb-3">
-            <label data-i18n="distribuidor:labelCategoria">Subcategoría</label>
+            <label>Subcategoría</label>
             <select id="dataSubcategory" class="custom-select tm-select-accounts">
                 <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
                 <?php
