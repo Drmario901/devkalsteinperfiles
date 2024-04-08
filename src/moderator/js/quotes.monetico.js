@@ -39,3 +39,9 @@ $(document).ready(function() {
         alert('¡Botón clickeado!');
     });
 });
+
+$(document).ready(function() {
+    $(document).on('click', '#boton-verify', function() {
+        alert('¡Botón clickeado!');
+    });
+});
