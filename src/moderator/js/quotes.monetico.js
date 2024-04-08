@@ -7,10 +7,12 @@ jQuery(document).ready(function() {
             type: 'GET',
             data: { pagina: pagina },
             success: function(response) {
+
+                let respuesta = JSON.parse(response)
                 console.log('respuestaaa', JSON.parse(response));
                 
-                $('#datos-tabla').html(generarTabla(response.datos));
-                $('#paginacion').html(generarPaginacion(response.paginaActual, response.totalPaginas));
+                $('#datos-tabla').html(generarTabla(respuesta.datos));
+                $('#paginacion').html(generarPaginacion(respuesta.paginaActual, respuesta.totalPaginas));
             },
             error: function() {
                 $('#datos-tabla').html('<p>Hubo un error al cargar los datos.</p>');
