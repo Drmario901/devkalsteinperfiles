@@ -160,7 +160,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/products-render/' id='link-render'
+                        <a href='https://dev.kalstein.plus/plataforma/moderator/quote-verify/' id='link-render'
                             class='navbar-link icon-box'>
                             <span>Cotizaciones</span>
                         </a>
