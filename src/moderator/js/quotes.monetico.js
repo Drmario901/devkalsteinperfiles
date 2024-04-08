@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     function cargarDatos(pagina = 1) {
         $.ajax({
-            url: 'quotesMonetico.php', // Asegúrate de que la ruta es correcta
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php', // Asegúrate de que la ruta es correcta
             type: 'GET',
             data: { pagina: pagina },
             success: function(response) {
