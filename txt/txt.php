@@ -82,7 +82,7 @@ function insertDataToDatabase($conexion, $reference, $montoTotal, $divisa) {
     
     if ($result->num_rows === 0) {
         // Ahora, buscar cotizacion_id_remitente en wp_cotizaciones
-        $queryCotizacion = "SELECT cotizacion_id_remitente FROM wp_cotizaciones WHERE cotizacion_id = ?";
+        $queryCotizacion = "SELECT cotizacion_id_remitente FROM wp_cotizacion WHERE cotizacion_id = ?";
         $stmtCotizacion = $conexion->prepare($queryCotizacion);
         $stmtCotizacion->bind_param("i", $reference);
         $stmtCotizacion->execute();
