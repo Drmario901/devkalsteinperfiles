@@ -93,7 +93,6 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  let discountGilson = $("#discountGilson").val();
   $(document).on("click", "#btnValidate", function () {
     if (verify) {
       iziToast.question({
@@ -114,7 +113,8 @@ jQuery(document).ready(function ($) {
 
               let acc_id = $("#acc_id").val();
               let email = $("#e-mail").val();
-
+              let discountGilson = $("#discountGilson").val();
+              console.log(discountGilson);
               $.ajax({
                 url: plugin_dir + "php/validateAcc.php",
                 type: "POST",
