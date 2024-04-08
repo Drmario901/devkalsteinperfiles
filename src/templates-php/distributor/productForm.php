@@ -371,10 +371,11 @@
                 ?>
             </select>
         </div>
-    </div>
-
-    <div class="col-12>
-        <?php echo $stock_inputs?>
+        <div class="col-12 col-sm-6">
+            <div class="row">
+                <?php echo $stock_inputs?>
+            </div>
+        </div>
     </div>
 
     <div class="row mb-3">
