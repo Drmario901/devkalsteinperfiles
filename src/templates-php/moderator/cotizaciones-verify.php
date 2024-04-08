@@ -4,9 +4,9 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); 
 
-require __DIR__ . '/../../../db/conexion.php';
+// require __DIR__ . '/../../../db/conexion.php';
 
-require __DIR__ . '/../../../php/moderator/quotesMonetico.php'
+require_once __DIR__ . '/../../../php/moderator/quotesMonetico.php'
 
 
 //  if(isset($_SESSION['privateEmailAccount'])){
