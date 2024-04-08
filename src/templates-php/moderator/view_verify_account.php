@@ -106,6 +106,14 @@
                 $websiteCompany = $row2[9];
                 $rifCompany = $row2[10];
                 $imgrifCompany = $row2[11];
+                
+                //Verificar si descuento gilson tiene un valor, si no, se le asigna 0
+                if ($row2['descuento_gibson'] === NULL){
+                    $discountGilson = 0;
+                }else{
+                    $discountGilson = $row2['descuento_gibson'];
+                }
+                
 
                 $countryAcc = getCountry($countryAcc, $conexion);
                 $countryCompany = getCountry($countryCompany, $conexion);
@@ -178,6 +186,24 @@
                                     <img style='border: 1px solid #999' width=200px src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
                                 </a>
                             
+                            </div>
+                            <div class='row'>
+                                <h5>Pricing</h5>
+                                <div class='col-sm-6'>
+                                    <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important'>
+                                        
+                                        <h2 class='text-white mb-0 pb-0'>$price $currency</h2>
+                                        <p>Price per unit</p>
+
+                                    </div>
+
+                                    <label for='' style='margin-top: 12px;'>Descuento Gilson</label>
+                                    <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
+
+                                </div>
+                                <div class='col-sm-6'>
+                                    <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
+                                </div>
                             </div>
         
                         </div>
