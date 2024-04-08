@@ -7,6 +7,8 @@ jQuery(document).ready(function() {
             type: 'GET',
             data: { pagina: pagina },
             success: function(response) {
+                console.log('respuestaaa', response);
+                
                 $('#datos-tabla').html(generarTabla(response.datos));
                 $('#paginacion').html(generarPaginacion(response.paginaActual, response.totalPaginas));
             },
