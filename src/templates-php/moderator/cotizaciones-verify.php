@@ -49,6 +49,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+
 <script>
 function cargarDatos(pagina = 1) {
     $.ajax({
