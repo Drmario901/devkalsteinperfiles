@@ -22,7 +22,7 @@ if ($stmt = $conexion->prepare($consulta)) {
 
     if ($resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
-            $arrayCotizaciones[] = 'QUO' . $fila['cotizacion_id'];
+            $arrayCotizaciones[] = $fila['cotizacion_id'];
         }
     }
     $stmt->close();
