@@ -664,11 +664,12 @@
         function moderator_view_account(){
             return render_php_file('moderator/view_verify_account.php');
         }
-
         function data_recover(){
             return render_php_file('retrieve-description.php');
         }
-
+        function moderator_cotizaciones(){
+            return render_php_file('moderator/cotizaciones-verify.php');
+        }
         // diego 404
         function diego_shortcode(){
             return render_php_file('diego-index.php');

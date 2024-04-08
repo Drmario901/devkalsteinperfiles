@@ -642,6 +642,14 @@
         return $html;
     }
 
+    function moderator_cotizacionesP(){
+
+        $_short = new shortcodePerfiles;
+
+        $html = $_short->moderator_cotizaciones();
+        return $html;
+    }
+
      //PAGINA DE PAGO RECHAZADO.
      add_shortcode("ERROR_404_KALSTEIN", "errorPage");
     
@@ -759,6 +767,7 @@
     add_shortcode("MODERATOR_VIEW_PRODUCT", "PerfilesModeratorViewProduct");
     add_shortcode("MODERATOR_VIEW_ACCOUNT", "PerfilesModeratorViewAccount");
     add_shortcode("MODERATOR_BITACORAS", "PerfilesModeratorBitacoras");
+    add_shortcode("MODERATOR_COTIZACIONES", "moderator_cotizacionesP");
 
     //Shortcode Styles
 
@@ -827,6 +836,65 @@
             /*wp_enqueue_script('session-script', plugins_url('src/js/session.script.js',__FILE__),array('jquery'));*/
             general_client_styles();    
         }
+
+        // MODERATOR COTIZACIONES 
+        if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_COTIZACIONES' ) ) {
+            translations();
+            global_url();
+            wp_enqueue_style( 'boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+            wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+            wp_enqueue_style( 'CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
+            wp_enqueue_style( 'AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css',__FILE__));  
+            wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js',__FILE__),array('jquery'));  
+            wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('ListJS', plugins_url('src/js/list.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('ChartJS', plugins_url('src/js/chart.umd.min.js',__FILE__),array('jquery'));            
+            wp_enqueue_script('woo-model-table-lib', plugins_url('src/js/product.ref.to.table.js',__FILE__),array('jquery')); //
+            wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js',__FILE__),array('jquery')); //
+            wp_enqueue_script('jQuery-1.4.1', plugins_url('src/js/jquery-migrate-1.4.1.min.js',__FILE__),array('jquery')); 
+            //navbar script
+            wp_enqueue_script('nav', plugins_url('src/js/nav.js',__FILE__),array('jquery'));
+            wp_enqueue_style( 'izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
+            
+            wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js',__FILE__),array('jquery'));
+            //INBOX
+            wp_enqueue_style( 'email-style', plugins_url('src/distributor/css/email.style.css', __FILE__));
+
+            //CATALOGS 
+            wp_enqueue_style( 'dflip.css', plugins_url('src/suport/css/dflip.min.css', __FILE__));
+            wp_enqueue_style( 'themify-icons.min.css', plugins_url('src/suport/css/themify-icons.min.css', __FILE__));
+            wp_enqueue_script('list-js', plugins_url('src/suport/js/list.min.js',__FILE__),array('jquery'));
+            wp_enqueue_script('catalogo', plugins_url('src/js/catalog.js',__FILE__),array('jquery')); //
+            wp_enqueue_script('input-control', plugins_url('src/js/input.control.js',__FILE__),array('jquery')); // 
+            wp_enqueue_script('dflip.js', plugins_url('src/suport/js/dflip.min.js',__FILE__),array('jquery')); 
+            //QUOTE 
+            wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js',__FILE__),array('jquery'));  //
+            general_client_styles();
+            
+            //COTIZACION_KALSTEIN 
+            wp_enqueue_script('quote-script-js', ''.$plugin_quote.'/assets/js/script.cot2.js', array('jquery'), true); //
+            wp_enqueue_style( 'quote-css', ''.$plugin_quote.'/assets/css/styles.cot.css', true); // 
+            
+            //inbox JS
+            wp_enqueue_script('inbox-pages-js', ''.$plugin_dir.'/src/js/inbox.pages.js', array('jquery'), true); // 
+
+            //Banner and footer
+            wp_enqueue_style( 'banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__)); // 
+            
+            //File Drop
+            
+            wp_enqueue_style( 'filedrop-css', plugins_url('src/manufacturer/css/filedrop.css', __FILE__));
+            wp_enqueue_script('filedrop-js', plugins_url('src/manufacturer/js/filedrop.js',__FILE__),array('jquery'));
+
+            wp_enqueue_script('anchors-js', plugins_url('src/js/anchors.script.js',__FILE__),array('jquery'));
+
+            //DIAGNOSIS APP JS 
+
+            wp_enqueue_script('diag-pages', plugins_url('src/js/diag.pages.js',__FILE__),array('jquery'));
+
+        }
+        
         
         //GLOBAL URL APPLIED
         if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'PERFILES_SIGNUP' ) ) {
