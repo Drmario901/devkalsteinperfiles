@@ -587,33 +587,34 @@
 </form>
 
 <script>
-    // Definir la función fuera del evento DOMContentLoaded
-    function mostrarSubcategorias() {
+    function loadSubcategories() {
         var category = document.getElementById("dataCategory").value;
         var subcategorySelect = document.getElementById("dataSubcategory");
-        subcategorySelect.innerHTML = '<option value="" data-i18n="distribuidor:optionElige">-- Elige una opción --</option>'; // Reiniciar el select
 
+        // Limpiar opciones anteriores
+        subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
+
+        // Realizar la consulta SQL para obtener las subcategorías correspondientes a la categoría seleccionada
         <?php
+            // Establecer la conexión a la base de datos
             require __DIR__.'/../../../php/conexion.php';
 
-            // Consulta SQL para seleccionar las subcategorías según la categoría seleccionada
-            $consulta = "SELECT categorie_sub_es FROM wp_categories WHERE categorie_description_es = '$category' ORDER BY categorie_sub_es ASC";
+            // Obtener la categoría seleccionada
+            $selected_category = $_POST['category'];
+
+            // Preparar la consulta SQL
+            $consulta = "SELECT subcategory_description_es FROM wp_subcategories WHERE category = '$selected_category'";
+
+            // Ejecutar la consulta SQL
             $resultado = $conexion->query($consulta);
 
-            // Verificar si se encontraron resultados
+            // Verificar si se obtuvieron resultados
             if ($resultado->num_rows > 0) {
-                while ($value = $resultado->fetch_assoc()) {
-                    // Imprimir las opciones de subcategorías
-                    echo "subcategorySelect.innerHTML += '<option value=\"" . $value['categorie_sub_es'] . "\">" . $value['categorie_sub_es'] . "</option>';";
+                // Iterar sobre los resultados y agregar las subcategorías como opciones al select
+                while ($fila = $resultado->fetch_assoc()) {
+                    echo "subcategorySelect.innerHTML += '<option value=\"" . $fila['subcategory_description_es'] . "\">" . $fila['subcategory_description_es'] . "</option>';";
                 }
-            } else {
-                // Si no se encontraron subcategorías, imprimir un mensaje indicando que no hay opciones disponibles
-                echo "subcategorySelect.innerHTML += '<option value=\"\" data-i18n=\"distribuidor:optionElige\">-- No hay subcategorías disponibles --</option>';";
             }
         ?>
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("dataCategory").addEventListener("change", mostrarSubcategorias);
-    });
 </script>
