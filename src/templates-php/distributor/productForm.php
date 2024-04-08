@@ -325,7 +325,7 @@
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
             <label data-i18n="distribuidor:labelCategoria">Categoría</label>
-            <select id="dataCategory" class="custom-select tm-select-accounts">
+            <select id="dataCategory" class="custom-select tm-select-accounts" onchange="showSubcategories()">
                 <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
                 <?php
                     require __DIR__.'/../../../php/conexion.php';
@@ -606,7 +606,7 @@
                 
             if ($resultado->num_rows > 0) {
                 while ($value = $resultado->fetch_assoc()) {
-                    echo "if ('" . $value['categorie_description_es'] . "' === category) {";
+                    echo "if ('" . $value['categorie_description_es'] . "' == category) {";
                     echo "    var option = document.createElement('option');";
                     echo "    option.value = '" . $value['categorie_sub_es'] . "';";
                     echo "    option.text = '" . $value['categorie_sub_es'] . "';";
