@@ -323,40 +323,40 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-sm-6 form-group mb-3">
-            <label data-i18n="distribuidor:labelCategoria">Categoría</label>
-            <select id="dataCategory" class="custom-select tm-select-accounts">
-                <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
-                <?php
-                    require __DIR__.'/../../../php/conexion.php';
-                
-                    $consulta = "SELECT categorie_description_es FROM wp_categories ORDER BY categorie_description_es ASC";		
-                        
-                    $resultado = $conexion->query($consulta);
+    <div class="col-12 col-sm-6 form-group mb-3">
+        <label data-i18n="distribuidor:labelCategoria">Categoría</label>
+        <select id="dataCategory" class="custom-select tm-select-accounts">
+            <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
+            <?php
+                require __DIR__.'/../../../php/conexion.php';
+            
+                $consulta = "SELECT categorie_description_es FROM wp_categories ORDER BY categorie_description_es ASC";		
+                    
+                $resultado = $conexion->query($consulta);
 
-                    $already_printed = [];
-                        
-                    if ($resultado->num_rows > 0) {
-                        while ($value = $resultado->fetch_assoc()) {
-                            if (!in_array($value['categorie_description_es'], $already_printed)){
-                                array_push($already_printed, $value['categorie_description_es']);
-                                echo "<option value='".$value['categorie_description_es']."'>".$value['categorie_description_es']."</option>";
-                            }
+                $already_printed = [];
+                    
+                if ($resultado->num_rows > 0) {
+                    while ($value = $resultado->fetch_assoc()) {
+                        if (!in_array($value['categorie_description_es'], $already_printed)){
+                            array_push($already_printed, $value['categorie_description_es']);
+                            echo "<option value='".$value['categorie_description_es']."'>".$value['categorie_description_es']."</option>";
                         }
                     }
-                ?>
-            </select>
-        </div>
-        <div class="col-12 col-sm-6 form-group mb-3">
-            <label>Subcategoría</label>
-            <select id="dataSubcategory" class="custom-select tm-select-accounts">
-                <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
-            </select>
-        </div>
-        <div class="col-12 col-sm-6">
-            <?php echo $stock_inputs?>
-        </div>
+                }
+            ?>
+        </select>
     </div>
+    <div class="col-12 col-sm-6 form-group mb-3">
+        <label>Subcategoría</label>
+        <select id="dataSubcategory" class="custom-select tm-select-accounts">
+            <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
+        </select>
+    </div>
+    <div class="col-12 col-sm-6">
+        <?php echo $stock_inputs?>
+    </div>
+</div>
 
     <div class="row mb-3">
         <!-- GROSS -->
@@ -587,34 +587,34 @@
 </form>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("dataCategory").addEventListener("change", mostrarSubcategorias);
+    function loadSubcategories() {
+        var category = document.getElementById("dataCategory").value;
+        var subcategorySelect = document.getElementById("dataSubcategory");
 
-        function mostrarSubcategorias() {
-            var category = document.getElementById("dataCategory").value;
-            var subcategorySelect = document.getElementById("dataSubcategory");
-            subcategorySelect.innerHTML = '<option value="" data-i18n="distribuidor:optionElige">-- Elige una opción --</option>'; // Reiniciar el select
+        // Limpiar opciones anteriores
+        subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
 
-            <?php
-                require __DIR__.'/../../../php/conexion.php';
-            
-                $consulta = "SELECT categorie_sub_es FROM wp_categories ORDER BY categorie_sub_es ASC";		
-                    
-                $resultado = $conexion->query($consulta);
+        // Realizar la consulta SQL para obtener las subcategorías correspondientes a la categoría seleccionada
+        <?php
+            // Establecer la conexión a la base de datos
+            require __DIR__.'/../../../php/conexion.php';
 
-                $already_printed = [];
-                    
-                if ($resultado->num_rows > 0) {
-                    while ($value = $resultado->fetch_assoc()) {
-                        echo "if ('" . $value['categorie_description_es'] . "' == category) {";
-                        echo "    var option = document.createElement('option');";
-                        echo "    option.value = '" . $value['categorie_sub_es'] . "';";
-                        echo "    option.text = '" . $value['categorie_sub_es'] . "';";
-                        echo "    subcategorySelect.appendChild(option);";
-                        echo "}";
-                    }
+            // Obtener la categoría seleccionada
+            $selected_category = $_POST['category'];
+
+            // Preparar la consulta SQL
+            $consulta = "SELECT subcategory_description_es FROM categorie_description_es WHERE subcategory_description_es = '$selected_category'";
+
+            // Ejecutar la consulta SQL
+            $resultado = $conexion->query($consulta);
+
+            // Verificar si se obtuvieron resultados
+            if ($resultado->num_rows > 0) {
+                // Iterar sobre los resultados y agregar las subcategorías como opciones al select
+                while ($fila = $resultado->fetch_assoc()) {
+                    echo "subcategorySelect.innerHTML += '<option value=\"" . $fila['subcategory_description_es'] . "\">" . $fila['subcategory_description_es'] . "</option>';";
                 }
-            ?>
-        }
-    });
+            }
+        ?>
+    }
 </script>
