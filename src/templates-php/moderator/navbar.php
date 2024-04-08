@@ -160,8 +160,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/bitacoras' id='link-bitacora' class='navbar-link icon-box'>           
-                            <span data-i18n="moderator:bitacora">Cotizaciones</span>
+                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/products-render/' id='link-render'
+                            class='navbar-link icon-box'>
+                            <span>Render productos</span>
                         </a>
                     </li>
                     <!--li>
