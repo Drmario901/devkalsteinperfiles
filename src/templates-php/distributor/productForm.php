@@ -325,7 +325,7 @@
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
             <label data-i18n="distribuidor:labelCategoria">Categoría</label>
-            <select id="dataCategory" class="custom-select tm-select-accounts" onchange=mostrarSubcategorias()>
+            <select id="dataCategory" class="custom-select tm-select-accounts">
                 <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
                 <?php
                     require __DIR__.'/../../../php/conexion.php';
@@ -351,9 +351,6 @@
             <label>Subcategoría</label>
             <select id="dataSubcategory" class="custom-select tm-select-accounts">
                 <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
-                <?php
-                    
-                ?>
             </select>
         </div>
         <div class="col-12 col-sm-6">
@@ -590,30 +587,34 @@
 </form>
 
 <script>
-    function mostrarSubcategorias() {
-        var category = document.getElementById("dataCategory").value;
-        var subcategorySelect = document.getElementById("dataSubcategory");
-        subcategorySelect.innerHTML = '<option value="" data-i18n="distribuidor:optionElige">-- Elige una opción --</option>'; // Reiniciar el select
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("dataCategory").addEventListener("change", mostrarSubcategorias);
 
-        <?php
-            require __DIR__.'/../../../php/conexion.php';
-        
-            $consulta = "SELECT categorie_sub_es FROM wp_categories ORDER BY categorie_sub_es ASC";		
-                
-            $resultado = $conexion->query($consulta);
+        function mostrarSubcategorias() {
+            var category = document.getElementById("dataCategory").value;
+            var subcategorySelect = document.getElementById("dataSubcategory");
+            subcategorySelect.innerHTML = '<option value="" data-i18n="distribuidor:optionElige">-- Elige una opción --</option>'; // Reiniciar el select
 
-            $already_printed = [];
-                
-            if ($resultado->num_rows > 0) {
-                while ($value = $resultado->fetch_assoc()) {
-                    echo "if ('" . $value['categorie_description_es'] . "' == category) {";
-                    echo "    var option = document.createElement('option');";
-                    echo "    option.value = '" . $value['categorie_sub_es'] . "';";
-                    echo "    option.text = '" . $value['categorie_sub_es'] . "';";
-                    echo "    subcategorySelect.appendChild(option);";
-                    echo "}";
+            <?php
+                require __DIR__.'/../../../php/conexion.php';
+            
+                $consulta = "SELECT categorie_sub_es FROM wp_categories ORDER BY categorie_sub_es ASC";		
+                    
+                $resultado = $conexion->query($consulta);
+
+                $already_printed = [];
+                    
+                if ($resultado->num_rows > 0) {
+                    while ($value = $resultado->fetch_assoc()) {
+                        echo "if ('" . $value['categorie_description_es'] . "' == category) {";
+                        echo "    var option = document.createElement('option');";
+                        echo "    option.value = '" . $value['categorie_sub_es'] . "';";
+                        echo "    option.text = '" . $value['categorie_sub_es'] . "';";
+                        echo "    subcategorySelect.appendChild(option);";
+                        echo "}";
+                    }
                 }
-            }
-        ?>
-    }
+            ?>
+        }
+    });
 </script>
