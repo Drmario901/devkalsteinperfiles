@@ -596,10 +596,22 @@
         // Limpiar opciones anteriores en el select de subcategorías
         subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
 
-        // Realizar la consulta SQL para obtener las subcategorías correspondientes a la categoría seleccionada
-        // Aquí debes hacer la solicitud al servidor para procesar la categoría y obtener las subcategorías
-        // Puedes utilizar AJAX o Fetch API para realizar esta solicitud al servidor
-        // En este ejemplo, simplemente mostraremos un mensaje en la consola
+        $.ajax({
+            url: 'actualizarSubcategoria.php', // Ruta al archivo PHP que procesará la solicitud
+            method: 'POST',
+            data: { category: category }, // Datos a enviar al servidor (categoría seleccionada)
+            dataType: 'json', // Tipo de datos esperados en la respuesta
+            success: function(response) {
+                // Éxito: procesar las subcategorías recibidas
+                console.log('Subcategorías obtenidas:', response);
+                // Aquí puedes actualizar el select de subcategorías con las opciones recibidas
+            },
+            error: function(xhr, status, error) {
+                // Error: manejar el error de la solicitud AJAX
+                console.error('Error en la solicitud AJAX:', status, error);
+            }
+        });
+
         console.log("Categoría seleccionada: " + category);
     }
 
