@@ -628,7 +628,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode(array());
 }
 
-include __DIR__.'/productForm.php';
+?>
 
 <script>
     // Función para cargar las subcategorías cuando se selecciona una categoría
