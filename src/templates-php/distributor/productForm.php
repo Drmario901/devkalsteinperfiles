@@ -600,7 +600,7 @@
             require __DIR__.'/../../../php/conexion.php';
 
             // Obtener la categoría seleccionada
-            $selected_category = $_POST['subcategory_description_es'];
+            $selected_category = $_POST['dataCategory'];
 
             // Preparar la consulta SQL
             $consulta = "SELECT subcategory_description_es FROM categorie_description_es WHERE subcategory_description_es = '$selected_category'";
