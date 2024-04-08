@@ -159,6 +159,11 @@
                             <span data-i18n="moderator:bitacora">Bitacora</span>
                         </a>
                     </li>
+                    <li>
+                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/bitacoras' id='link-bitacora' class='navbar-link icon-box'>           
+                            <span data-i18n="moderator:bitacora">Cotizaciones</span>
+                        </a>
+                    </li>
                     <!--li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/shipping' id='link-shipping' class='navbar-link icon-box'>
                             <span>Envíos</span>
