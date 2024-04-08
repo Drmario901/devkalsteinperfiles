@@ -61,12 +61,12 @@
     }
 
     //Short Code pagina diego 404 
-    function diego(){
+    /*function diego(){
         $_short = new shortcodePerfiles;
 
         $html = $_short->diego_shortcode();
         return $html;
-    }
+    }*/
 
 
 
