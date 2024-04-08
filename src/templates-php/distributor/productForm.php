@@ -588,33 +588,33 @@
 
 <script>
     function loadSubcategories() {
-        var category = document.getElementById("dataCategory").value;
-        var subcategorySelect = document.getElementById("dataSubcategory");
+    var category = document.getElementById("dataCategory").value;
+    var subcategorySelect = document.getElementById("dataSubcategory");
 
-        // Limpiar opciones anteriores
-        subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
+    // Limpiar opciones anteriores
+    subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
 
-        // Realizar la consulta SQL para obtener las subcategorías correspondientes a la categoría seleccionada
-        <?php
-            // Establecer la conexión a la base de datos
-            require __DIR__.'/../../../php/conexion.php';
+    // Realizar la consulta SQL para obtener las subcategorías correspondientes a la categoría seleccionada
+    <?php
+        // Establecer la conexión a la base de datos
+        require __DIR__.'/../../../php/conexion.php';
 
-            // Obtener la categoría seleccionada
-            $selected_category = $_POST['category'];
+        // Obtener la categoría seleccionada
+        $selected_category = $_POST['dataCategory'];
 
-            // Preparar la consulta SQL
-            $consulta = "SELECT subcategory_description_es FROM categorie_description_es WHERE subcategory_description_es = '$selected_category'";
+        // Preparar la consulta SQL
+        $consulta = "SELECT subcategory_description_es FROM wp_categories WHERE categoria_description_es = '$selected_category'";
 
-            // Ejecutar la consulta SQL
-            $resultado = $conexion->query($consulta);
+        // Ejecutar la consulta SQL
+        $resultado = $conexion->query($consulta);
 
-            // Verificar si se obtuvieron resultados
-            if ($resultado->num_rows > 0) {
-                // Iterar sobre los resultados y agregar las subcategorías como opciones al select
-                while ($fila = $resultado->fetch_assoc()) {
-                    echo "subcategorySelect.innerHTML += '<option value=\"" . $fila['subcategory_description_es'] . "\">" . $fila['subcategory_description_es'] . "</option>';";
-                }
+        // Verificar si se obtuvieron resultados
+        if ($resultado->num_rows > 0) {
+            // Iterar sobre los resultados y agregar las subcategorías como opciones al select
+            while ($fila = $resultado->fetch_assoc()) {
+                echo "subcategorySelect.innerHTML += '<option value=\"" . $fila['subcategory_description_es'] . "\">" . $fila['subcategory_description_es'] . "</option>';";
             }
-        ?>
-    }
+        }
+    ?>
+}
 </script>
