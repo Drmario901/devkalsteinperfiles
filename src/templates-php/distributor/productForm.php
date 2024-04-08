@@ -597,7 +597,7 @@
         subcategorySelect.innerHTML = "<option value='' data-i18n='distribuidor:optionElige'>-- Elige una opción --</option>";
 
         $.ajax({
-            url: 'actualizarSubcategoria.php', // Ruta al archivo PHP que procesará la solicitud
+            url: 'php/actualizarSubcategoria.php', // Ruta al archivo PHP que procesará la solicitud
             method: 'POST',
             data: { category: category }, // Datos a enviar al servidor (categoría seleccionada)
             dataType: 'json', // Tipo de datos esperados en la respuesta
