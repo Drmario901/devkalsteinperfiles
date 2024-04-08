@@ -2110,7 +2110,7 @@
             wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
             wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js',__FILE__),array('jquery'));
             wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js',__FILE__),array('jquery'));
-            wp_enqueue_script('quotes-monetico-js', plugins_url('src/moderator/js/quotes.monetico.js',__FILE__),array('jquery'));
+            wp_enqueue_script('quotes-monetico', plugins_url('src/moderator/js/quotes.monetico.js',__FILE__),array('jquery'));
         }
         //quotes.monetico.js
         
