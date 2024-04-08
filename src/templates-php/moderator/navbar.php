@@ -162,7 +162,7 @@
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/products-render/' id='link-render'
                             class='navbar-link icon-box'>
-                            <span>Render productos</span>
+                            <span>Cotizaciones</span>
                         </a>
                     </li>
                     <!--li>
