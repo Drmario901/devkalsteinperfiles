@@ -670,10 +670,11 @@
         function moderator_cotizaciones(){
             return render_php_file('moderator/cotizaciones-verify.php');
         }
+
         // diego 404
-        function diego_shortcode(){
+        /*function diego_shortcode(){
             return render_php_file('diego-index.php');
-        }
+        }*/
     }
 
 ?>

@@ -861,37 +861,37 @@
             //INBOX
             wp_enqueue_style( 'email-style', plugins_url('src/distributor/css/email.style.css', __FILE__));
 
-            //CATALOGS 
-            wp_enqueue_style( 'dflip.css', plugins_url('src/suport/css/dflip.min.css', __FILE__));
-            wp_enqueue_style( 'themify-icons.min.css', plugins_url('src/suport/css/themify-icons.min.css', __FILE__));
-            wp_enqueue_script('list-js', plugins_url('src/suport/js/list.min.js',__FILE__),array('jquery'));
-            wp_enqueue_script('catalogo', plugins_url('src/js/catalog.js',__FILE__),array('jquery')); //
-            wp_enqueue_script('input-control', plugins_url('src/js/input.control.js',__FILE__),array('jquery')); // 
-            wp_enqueue_script('dflip.js', plugins_url('src/suport/js/dflip.min.js',__FILE__),array('jquery')); 
-            //QUOTE 
-            wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js',__FILE__),array('jquery'));  //
-            general_client_styles();
+            // //CATALOGS 
+            // wp_enqueue_style( 'dflip.css', plugins_url('src/suport/css/dflip.min.css', __FILE__));
+            // wp_enqueue_style( 'themify-icons.min.css', plugins_url('src/suport/css/themify-icons.min.css', __FILE__));
+            // wp_enqueue_script('list-js', plugins_url('src/suport/js/list.min.js',__FILE__),array('jquery'));
+            // wp_enqueue_script('catalogo', plugins_url('src/js/catalog.js',__FILE__),array('jquery')); //
+            // wp_enqueue_script('input-control', plugins_url('src/js/input.control.js',__FILE__),array('jquery')); // 
+            // wp_enqueue_script('dflip.js', plugins_url('src/suport/js/dflip.min.js',__FILE__),array('jquery')); 
+            // //QUOTE 
+            // wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js',__FILE__),array('jquery'));  //
+            // general_client_styles();
             
-            //COTIZACION_KALSTEIN 
-            wp_enqueue_script('quote-script-js', ''.$plugin_quote.'/assets/js/script.cot2.js', array('jquery'), true); //
-            wp_enqueue_style( 'quote-css', ''.$plugin_quote.'/assets/css/styles.cot.css', true); // 
+            // //COTIZACION_KALSTEIN 
+            // wp_enqueue_script('quote-script-js', ''.$plugin_quote.'/assets/js/script.cot2.js', array('jquery'), true); //
+            // wp_enqueue_style( 'quote-css', ''.$plugin_quote.'/assets/css/styles.cot.css', true); // 
             
-            //inbox JS
-            wp_enqueue_script('inbox-pages-js', ''.$plugin_dir.'/src/js/inbox.pages.js', array('jquery'), true); // 
+            // //inbox JS
+            // wp_enqueue_script('inbox-pages-js', ''.$plugin_dir.'/src/js/inbox.pages.js', array('jquery'), true); // 
 
-            //Banner and footer
-            wp_enqueue_style( 'banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__)); // 
+            // //Banner and footer
+            // wp_enqueue_style( 'banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__)); // 
             
-            //File Drop
+            // //File Drop
             
-            wp_enqueue_style( 'filedrop-css', plugins_url('src/manufacturer/css/filedrop.css', __FILE__));
-            wp_enqueue_script('filedrop-js', plugins_url('src/manufacturer/js/filedrop.js',__FILE__),array('jquery'));
+            // wp_enqueue_style( 'filedrop-css', plugins_url('src/manufacturer/css/filedrop.css', __FILE__));
+            // wp_enqueue_script('filedrop-js', plugins_url('src/manufacturer/js/filedrop.js',__FILE__),array('jquery'));
 
-            wp_enqueue_script('anchors-js', plugins_url('src/js/anchors.script.js',__FILE__),array('jquery'));
+            // wp_enqueue_script('anchors-js', plugins_url('src/js/anchors.script.js',__FILE__),array('jquery'));
 
-            //DIAGNOSIS APP JS 
+            // //DIAGNOSIS APP JS 
 
-            wp_enqueue_script('diag-pages', plugins_url('src/js/diag.pages.js',__FILE__),array('jquery'));
+            // wp_enqueue_script('diag-pages', plugins_url('src/js/diag.pages.js',__FILE__),array('jquery'));
 
         }
         
