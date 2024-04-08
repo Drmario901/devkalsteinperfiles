@@ -325,7 +325,7 @@
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
             <label data-i18n="distribuidor:labelCategoria">Categoría</label>
-            <select id="dataCategory" class="custom-select tm-select-accounts" onchange="showSubcategories()">
+            <select id="dataCategory" class="custom-select tm-select-accounts" onchange="mostrarSubcategorias()">
                 <option value='' data-i18n="distribuidor:optionElige">-- Elige una opción --</option>
                 <?php
                     require __DIR__.'/../../../php/conexion.php';
@@ -590,7 +590,7 @@
 </form>
 
 <script>
-    function mostrarSubcategorías() {
+    function mostrarSubcategorias() {
         var category = document.getElementById("dataCategory").value;
         var subcategorySelect = document.getElementById("dataSubcategory");
         subcategorySelect.innerHTML = '<option value="" data-i18n="distribuidor:optionElige">-- Elige una opción --</option>'; // Reiniciar el select
