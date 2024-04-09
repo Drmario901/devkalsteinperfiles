@@ -1,0 +1,6 @@
+{
+    "require": {
+        "spipu/html2pdf": "^5.2",
+        "deeplcom/deepl-php": "^1.3"
+    }
+}
