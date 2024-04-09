@@ -34,14 +34,14 @@ if ($resultado->num_rows > 0) {
 
 $conexion->close();
 
-header('Content-Type: application/json');
-echo json_encode($datos);
+// header('Content-Type: application/json');
+// echo json_encode($datos);
 
-// echo json_encode([
-//     'datos' => $datos,
-//     'totalPaginas' => $totalPaginas,
-//     'paginaActual' => $pagina
-// ]);
+echo json_encode([
+    'datos' => $datos,
+    'totalPaginas' => $totalPaginas,
+    'paginaActual' => $pagina
+]);
 ?>
 
 
