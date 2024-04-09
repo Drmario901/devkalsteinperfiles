@@ -41,9 +41,9 @@ error_reporting(E_ALL);
         <!-- La tabla se llenará dinámicamente con AJAX -->
     </div>
 
-    <div id="paginacion">
-        <!-- Los controles de paginación se generarán dinámicamente -->
-    </div>
+    <button id="boton-prev" class="btn btn-primary mr-2">Anterior</button>
+      <span id="numeracion"></span> <!-- Contenedor para la numeración -->
+    <button id="boton-next" class="btn btn-primary ml-2">Siguiente</button>
     <button id="boton-prev" >Prev</button> <button id="boton-next">Next</button>
 </div>
 
