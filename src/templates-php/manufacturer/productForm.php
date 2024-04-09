@@ -366,12 +366,6 @@
                 ?>
             </select>
         </div>
-        <div class="col-12 col-sm-6 form-group mb-3">
-            <label>Subcategoría</label>
-            <select id="subCategorySelect" name="subCategory" disabled>
-                <option value="">Seleccione una categoría...</option>
-            </select>
-        </div>
         <div class="col-12 col-sm-6">
             <div class="row">
                 <?php echo $stock_inputs?>
@@ -605,26 +599,6 @@
 </form>
 
 <script>
-    let plugin_dir = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles;
-
-$('#categorySelect').change(function() {
-    var categoryId = $(this).val();
-    if(categoryId) {
-        $.ajax({
-            url: plugin_dir + "/php/distributor/updateSubcategory.php",
-            type: 'POST',
-            data: {category_id: categoryId},
-            success: function(data){
-                $('#subCategorySelect').html(data);
-                $('#subCategorySelect').prop('disabled', false);
-            }
-        });
-    } else {
-        $('#subCategorySelect').html('<option value="">Primero seleccione una categoría...</option>');
-        $('#subCategorySelect').prop('disabled', true);
-    }
-});
-
 document.getElementById('specialPrice').addEventListener('change', function() {
     var gibsonStatus = document.getElementById('gibsonStatus');
     if (this.checked) {
@@ -639,31 +613,3 @@ document.getElementById('specialPrice').addEventListener('change', function() {
     }
 });
 </script>
-<script>
-    let plugin_dir = "http://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
-
-        $('#dataCategory').change(function() {
-            var category = $(this).val();
-
-            $.ajax({
-                url: plugin_dir + "php/manufacturer/updateSubcategory.php",
-                method: 'POST',
-                data: { category: category },
-                dataType: 'html',
-                success: function(response) {
-                    if (response.trim() === '') {
-                        $('#subCategorySelect').html('<option value="">' + category + '</option>');
-                        $('#subCategorySelect').prop('disabled', true);
-                    } else {
-                        $('#subCategorySelect').html(response);
-                        $('#subCategorySelect').prop('disabled', false);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error en la solicitud AJAX:', status, error);
-                }
-            });
-        });
-    </script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

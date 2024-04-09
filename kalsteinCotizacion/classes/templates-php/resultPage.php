@@ -1,130 +1,130 @@
 <?php
-    session_start();
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    require __DIR__ . '/../conexion.php';
-    require __DIR__ . '/translateText.php';
-    require __DIR__ . '/translations.php';
-    translateText();
+require __DIR__ . '/../conexion.php';
+require __DIR__ . '/translateText.php';
+require __DIR__ . '/translations.php';
+translateText();
 
-    // get cookie language if its set if not set default to english
-    $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+// get cookie language if its set if not set default to english
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-    //formatear valores de la consulta para que sea dinamico con la cookie
-    //si el valor de la cookie es 'en' se elimina el sufijo '_en' de las columnas
+//formatear valores de la consulta para que sea dinamico con la cookie
+//si el valor de la cookie es 'en' se elimina el sufijo '_en' de las columnas
 
-    $productName = $lang == 'en' ? 'product_name' : 'product_name_' . $lang;
-    $productCategory = $lang == 'en' ? 'product_category' : 'product_category_' . $lang;
-    $productSubcategory = $lang == 'en' ? 'product_subcategory' : 'product_subcategory_' . $lang;
-    $productTag = $lang == 'en' ? 'product_tags' : 'product_tags_' . $lang;
-    $all = $translations[$lang]['all'];
-    $allCategories = $translations[$lang]['allCategories'];
+$productName = $lang == 'en' ? 'product_name_en' : 'product_name_' . $lang;
+$productCategory = $lang == 'en' ? 'product_category' : 'product_category_' . $lang;
+$productSubcategory = $lang == 'en' ? 'product_subcategory' : 'product_subcategory_' . $lang;
+$productTag = $lang == 'en' ? 'product_tags' : 'product_tags_' . $lang;
+$all = $translations[$lang]['all'];
+$allCategories = $translations[$lang]['allCategories'];
 
-    $perPage = 12;
-    $page = isset($_POST['nextPage']) ? intval($_POST['nextPage']) : 1;
+$perPage = 12;
+$page = isset($_POST['nextPage']) ? intval($_POST['nextPage']) : 1;
 
-    $offset = ($page - 1) * $perPage;
-    $limit = $perPage;
+$offset = ($page - 1) * $perPage;
+$limit = $perPage;
 
-    $minCount = $offset + 1;
+$minCount = $offset + 1;
 
-    if (isset($_SESSION['searchTags'])) {
-        $searchTags = $_SESSION['searchTags'];
-    } else {
-        $searchTags = "";
-    }
+if (isset($_SESSION['searchTags'])) {
+    $searchTags = $_SESSION['searchTags'];
+} else {
+    $searchTags = "";
+}
 
-    if (isset($_SESSION['searchCategorie'])) {
-        $searchCategorie = $_SESSION['searchCategorie'];
-    } else {
-        $searchCategorie = 'Todas';
-    }
+if (isset($_SESSION['searchCategorie'])) {
+    $searchCategorie = $_SESSION['searchCategorie'];
+} else {
+    $searchCategorie = 'Todas';
+}
 
-    if ($searchTags == 'NULL' && $searchCategorie == 'NULL') {
-        $sql = "SELECT * FROM wp_k_products WHERE product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC";
+if ($searchTags == 'NULL' && $searchCategorie == 'NULL') {
+    $sql = "SELECT * FROM wp_k_products WHERE product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC";
+    $rs = $conexion->query($sql);
+    $count = mysqli_num_rows($rs);
+} else {
+    if ($searchCategorie == $all || $searchCategorie == $allCategories) {
+        $sql = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC LIMIT $offset, $limit";
         $rs = $conexion->query($sql);
         $count = mysqli_num_rows($rs);
-    } else {
-        if ($searchCategorie == $all || $searchCategorie == $allCategories) {
-            $sql = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC LIMIT $offset, $limit";
-            $rs = $conexion->query($sql);
-            $count = mysqli_num_rows($rs);
 
-            $sqlAll = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0'";
-            $rsAll = $conexion->query($sqlAll);
-            $countAll = mysqli_num_rows($rsAll);
+        $sqlAll = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0'";
+        $rsAll = $conexion->query($sqlAll);
+        $countAll = mysqli_num_rows($rsAll);
 
-            if ($countAll > 12) {
-                $maxCount = 12;
-            } else {
-                $maxCount = $countAll;
-            }
-
-            $sql1 = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0'";
-
-            $rs1 = $conexion->query($sql1);
-            $row = mysqli_fetch_array($rs1);
-            $category = $row[$productCategory];
+        if ($countAll > 12) {
+            $maxCount = 12;
         } else {
-            $sql = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%' OR $productCategory = '" . $searchCategorie . "') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC LIMIT $offset, $limit";
-            $rs = $conexion->query($sql);
-            $count = mysqli_num_rows($rs);
-
-            $sqlAll = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND $productCategory = '" . $searchCategorie . "' AND $productCategory = '" . $searchTags . "' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC";
-            $rsAll = $conexion->query($sqlAll);
-            $countAll = mysqli_num_rows($rsAll);
-
-            if ($countAll > 12) {
-                $maxCount = 12;
-            } else {
-                $maxCount = $countAll;
-            }
-
-            $sql1 = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND $productCategory = ' . $searchCategorie . ' OR product_model LIKE '%" . $searchTags . "%' AND $productCategory = '" . $searchCategorie . "' AND product_type IN ('sell')";
-            $rs1 = $conexion->query($sql1);
-            $row = mysqli_fetch_array($rs1);
-            $category = $row[$productCategory];
-
-            $sqlTotal = "SELECT * FROM wp_k_products WHERE product_type = 'used'";
-            $rsTotal = $conexion->query($sqlTotal);
-            $countTotal = mysqli_num_rows($rsTotal);
+            $maxCount = $countAll;
         }
-    }
 
-    if ($searchTags == "") {
-        $html = "
+        $sql1 = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0'";
+
+        $rs1 = $conexion->query($sql1);
+        $row = mysqli_fetch_array($rs1);
+        $category = $row[$productCategory];
+    } else {
+        $sql = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%' OR $productCategory = '" . $searchCategorie . "') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC LIMIT $offset, $limit";
+        $rs = $conexion->query($sql);
+        $count = mysqli_num_rows($rs);
+
+        $sqlAll = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%' OR product_model LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND $productCategory = '" . $searchCategorie . "' AND $productCategory = '" . $searchTags . "' AND product_type IN ('sell') AND product_group = '0' ORDER BY product_priceUSD ASC";
+        $rsAll = $conexion->query($sqlAll);
+        $countAll = mysqli_num_rows($rsAll);
+
+        if ($countAll > 12) {
+            $maxCount = 12;
+        } else {
+            $maxCount = $countAll;
+        }
+
+        $sql1 = "SELECT * FROM wp_k_products WHERE ($productTag LIKE '%" . $searchTags . "%' OR $productCategory LIKE '%" . $searchTags . "%' OR $productSubcategory LIKE '%" . $searchTags . "%') AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND $productCategory = ' . $searchCategorie . ' OR product_model LIKE '%" . $searchTags . "%' AND $productCategory = '" . $searchCategorie . "' AND product_type IN ('sell')";
+        $rs1 = $conexion->query($sql1);
+        $row = mysqli_fetch_array($rs1);
+        $category = $row[$productCategory];
+
+        $sqlTotal = "SELECT * FROM wp_k_products WHERE product_type = 'used'";
+        $rsTotal = $conexion->query($sqlTotal);
+        $countTotal = mysqli_num_rows($rsTotal);
+    }
+}
+
+if ($searchTags == "") {
+    $html = "
                     <div class='mainResultSearch'>
                         <div class='RS mb-3'>
                             <span style='float: left;' data-i17n='resultados'>Mostrando resultados</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='minCount'>" . min(1, $maxCount) . "</button><span style='float: left;' data-i17n='hasta'>hasta</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='maxCount'>$maxCount</button><span style='float: left;'> - </span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='totalCount'>$countAll</button><span style='float: left;' data-i17n='results'>resultados</span>
                         </div>";
 
-        // depliegue de productos
+    // depliegue de productos
 
-        if ($rs->num_rows > 0) {
+    if ($rs->num_rows > 0) {
 
-            $html .= "
+        $html .= "
                                     <div id='mainResultSearchDiv' class='d-flex flex-row'>
                                         <div id='productContainer' class='row' style='width: 100%'>
                 ";
 
-            while ($value = $rs->fetch_assoc()) {
-                $p_aid = $value['product_aid'];
-                $name = $value[$productName];
-                $model = $value['product_model'];
-                $image = $value['product_image'];
-                $priceUSD = $value['product_priceUSD'];
-                $multi = $priceUSD * 0.18;
-                $disc = number_format($priceUSD - $multi, 2);
-                $type = $value['product_type'];
-                $condition = $value['product_condition'];
+        while ($value = $rs->fetch_assoc()) {
+            $p_aid = $value['product_aid'];
+            $name = $value[$productName];
+            $model = $value['product_model'];
+            $image = $value['product_image'];
+            $priceUSD = $value['product_priceUSD'];
+            $multi = $priceUSD * 0.18;
+            $disc = number_format($priceUSD - $multi, 2);
+            $type = $value['product_type'];
+            $condition = $value['product_condition'];
 
-                $priceUSD = number_format($priceUSD, 2);
+            $priceUSD = number_format($priceUSD, 2);
 
-                $used = $type == 'used' ? "<p class='card-title product-title-card'><b>$condition</b></p>" : '';
+            $used = $type == 'used' ? "<p class='card-title product-title-card'><b>$condition</b></p>" : '';
 
-                $html .= "
+            $html .= "
                                         <div class='col-sm-6 col-md-4 col-lg-3'>
                                             <div class='d-flex flex-column' style='height: 100%; padding-bottom: 20px'>
                                                 <div data-preview='$p_aid' id='productPreview' class='img-preview-quote mb-2' style=\"background-image: url('$image'); cursor: pointer\" value='$p_aid'>
@@ -147,53 +147,53 @@
                                             </div>
                                         </div>
                 ";
-            }
+        }
 
-            $html .= "
+        $html .= "
                                         </div>
                                     </div>
                                 </div>
                             </div>";
 
 
-        } else {
-            $html .= "
+    } else {
+        $html .= "
                         <div class='row'>
                             <div class='showResults col-12 col-md-9 order-last order-md-first'>
                                 <div class='nodatos' data-i17n='noDataFound'><h5>Datos no encontrados en tu búsqueda</h5></div>
                             </div>";
-        }
-    } else {
-        $html = "
+    }
+} else {
+    $html = "
                     <div class='mainResultSearch'>
                         <div class='RS mb-3'>
                         <span style='float: left;' data-i17n='resultados'>Mostrando resultados</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='minCount'>" . min(1, $maxCount) . "</button><span style='float: left;' data-i17n='hasta'>hasta</span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='maxCount'>$maxCount</button><span style='float: left;'> - </span><button style='float: left; min-width: 1rem; width: auto; outline: none; border: none; background: none; padding: 0; margin: 0; margin-left: 0.20rem; margin-right: 0.20rem; font-weight: bold; text-align: center;' id='totalCount'>$countAll</button><span style='float: left;' data-i17n='results'>resultados</span>
                     </div>";
 
-        // depliegue de productos
+    // depliegue de productos
 
-        if ($rs->num_rows > 0) {
+    if ($rs->num_rows > 0) {
 
-            $html .= "
+        $html .= "
                                     <div id='mainResultSearchDiv' class='d-flex flex-row'>
                                         <div id='productContainer' class='row' style='width: 100%'>
                 ";
 
-            while ($value = $rs->fetch_assoc()) {
-                $p_aid = $value['product_aid'];
-                $name = $value[$productName];
-                $model = $value['product_model'];
-                $image = $value['product_image'];
-                $priceUSD = $value['product_priceUSD'];
-                $multi = $priceUSD * 0.18;
-                $disc = number_format($priceUSD - $multi, 2);
-                $status = $value['product_status'];
+        while ($value = $rs->fetch_assoc()) {
+            $p_aid = $value['product_aid'];
+            $name = $value[$productName];
+            $model = $value['product_model'];
+            $image = $value['product_image'];
+            $priceUSD = $value['product_priceUSD'];
+            $multi = $priceUSD * 0.18;
+            $disc = number_format($priceUSD - $multi, 2);
+            $status = $value['product_status'];
 
-                $priceUSD = number_format($priceUSD, 2);
+            $priceUSD = number_format($priceUSD, 2);
 
-                //prueba
+            //prueba
 
-                $html .= "
+            $html .= "
                                             <div class='col-sm-6 col-md-4 col-lg-3'>
                                                 <div class='d-flex flex-column' style='height: 100%; padding-bottom: 20px'>
                                                     <div data-preview='$p_aid' id='productPreview' class='img-preview-quote mb-2 mb' style=\"background-image: url('$image'); cursor: pointer\" value='$p_aid'>
@@ -216,30 +216,30 @@
                                                 </div>
                                             </div>
                     ";
-            }
+        }
 
-            $html .= "
+        $html .= "
                                         </div>
                                     </div>
                                 </div>
                             </div>";
 
 
-        } else {
-            $html .= "
+    } else {
+        $html .= "
                         <div class='row'>
                             <div class='showResults col-12 col-md-9 order-last order-md-first'>
                                 <div class='nodatos' data-i17n='noDataFound'><h5>Datos no encontrados en tu búsqueda</h5></div>
                             </div>";
-        }
     }
+}
 
-    $btn_next_visible = $countAll <= 12 ? 'hidden' : '';
+$btn_next_visible = $countAll <= 12 ? 'hidden' : '';
 
-    $prevPage = max(1, $page - 1);
-    $nextPage = $page + 1;
+$prevPage = max(1, $page - 1);
+$nextPage = $page + 1;
 
-    $html .= "
+$html .= "
         <div class='pagination' style='text-align: right; margin-top: 10px;'>
             <div id='currentPageIndicatorResult' style='display: inline-block; margin-right: 10px;'>Pagina: $page</div>
             <form id='quote-previous-result' action='' method='get' style='display: inline-block;' hidden>
@@ -252,8 +252,8 @@
             </form>
         </div>
         <input id='hiddenPage' type='hidden' value='$page'>";
-    $html .= "   </div>";
+$html .= "   </div>";
 
 
-    echo $html;
+echo $html;
 ?>
