@@ -27,23 +27,6 @@ jQuery(document).ready(function() {
                 $('#paginacion').html('');
             }
         });
-        // $.ajax({
-        //     url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php', // Asegúrate de que la ruta es correcta
-        //     type: 'GET',
-        //     // data: { pagina: pagina },
-        //     success: function(response) {
-
-        //         let respuesta = JSON.parse(response)
-        //         console.log('respuestaaa', JSON.parse(response));
-                
-        //         $('#datos-tabla').html(generarTabla(respuesta.datos));
-        //         // $('#paginacion').html(generarPaginacion(respuesta.paginaActual, respuesta.totalPaginas));
-        //     },
-        //     error: function() {
-        //         $('#datos-tabla').html('<p>Hubo un error al cargar los datos.</p>');
-        //         $('#paginacion').html('');
-        //     }
-        // });
     }
 
 
@@ -68,18 +51,9 @@ jQuery(document).ready(function() {
         currentItems.forEach((fila) =>  {
             tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td><td>${fila.status_payment}</td></tr>`;
         });
-        tablaHtml += '</tbody></table>';
+        tablaHtml += '</tbody></table> <button>Prev</button> <button>Next</button>';
         return tablaHtml;
     }
-
-    // function generarPaginacion(paginaActual, totalPaginas) {
-    //     let paginacionHtml = '<nav><ul class="pagination">';
-    //     for(let i = 1; i <= totalPaginas; i++) {
-    //         paginacionHtml += `<li class="page-item ${paginaActual === i ? 'active' : ''}"><a class="page-link" href="#" onclick="cargarDatos(${i});return false;">${i}</a></li>`;
-    //     }
-    //     paginacionHtml += '</ul></nav>';
-    //     return paginacionHtml;
-    // }
 
     $('#boton-verify').click(function() {
         alert('¡Botón clickeado!');
