@@ -13,13 +13,13 @@ jQuery(document).ready(function() {
 
                 let respuesta = JSON.parse(response)
                 console.log('respuestaaa', JSON.parse(response));
-                todos = response;
+                todos = response.datos;
 
                 console.log('datoss', todos);
                 
                 
                 $('#datos-tabla').html(generarTabla(respuesta.datos));
-                $('#paginacion').html(generarPaginacion(respuesta.paginaActual, respuesta.totalPaginas));
+                // $('#paginacion').html(generarPaginacion(respuesta.paginaActual, respuesta.totalPaginas));
             },
             error: function() {
                 $('#datos-tabla').html('<p>Hubo un error al cargar los datos.</p>');
@@ -60,14 +60,14 @@ jQuery(document).ready(function() {
         return tablaHtml;
     }
 
-    function generarPaginacion(paginaActual, totalPaginas) {
-        let paginacionHtml = '<nav><ul class="pagination">';
-        for(let i = 1; i <= totalPaginas; i++) {
-            paginacionHtml += `<li class="page-item ${paginaActual === i ? 'active' : ''}"><a class="page-link" href="#" onclick="cargarDatos(${i});return false;">${i}</a></li>`;
-        }
-        paginacionHtml += '</ul></nav>';
-        return paginacionHtml;
-    }
+    // function generarPaginacion(paginaActual, totalPaginas) {
+    //     let paginacionHtml = '<nav><ul class="pagination">';
+    //     for(let i = 1; i <= totalPaginas; i++) {
+    //         paginacionHtml += `<li class="page-item ${paginaActual === i ? 'active' : ''}"><a class="page-link" href="#" onclick="cargarDatos(${i});return false;">${i}</a></li>`;
+    //     }
+    //     paginacionHtml += '</ul></nav>';
+    //     return paginacionHtml;
+    // }
 
     $('#boton-verify').click(function() {
         alert('¡Botón clickeado!');
