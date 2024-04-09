@@ -3,6 +3,7 @@ jQuery(document).ready(function() {
 
     let todos = [];
 
+
     
     function cargarDatos(pagina = 1) {
         $.ajax({
@@ -51,6 +52,17 @@ jQuery(document).ready(function() {
 
     function generarTabla(datos) {
         console.log('datosss', datos);
+
+        let currentPage = 1; 
+        let itemPerPage = 10; 
+        const indexOfLastItems = currentPage * itemPerPage;
+        const indexOfFirtsItems = indexOfLastItems - itemPerPage;
+        const currentItems = datos.slice(indexOfFirtsItems, indexOfLastItems);
+        const indexMax = Math.ceil(datos.length / itemPerPage);
+        console.log('itemsCurrent', currentItems);
+        console.log('indexItems', indexMax);
+        
+        
         
         let tablaHtml = '<table class="table"><thead><tr><th>ID</th><th>ID Cotización</th><th>Monto Total</th><th>Divisa</th><th>ID Remitente</th><th>Estado del Pago</th></tr></thead><tbody>';
         datos.forEach((fila) =>  {
