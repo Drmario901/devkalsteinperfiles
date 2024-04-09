@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 
   function consultRolAccount() {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/consultTypeAccount.php", // URL correcta
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/consultTypeAccount.php", // URL correcta
       type: "POST", // Método HTTP adecuado
       dataType: "json",
     })
@@ -230,7 +230,7 @@ jQuery(document).ready(function ($) {
     var modelo = $(this).val();
     console.log(modelo);
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/verificadorUsuario.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/verificadorUsuario.php",
       type: "POST",
       dataType: "json",
       data: { modelo },
@@ -858,7 +858,7 @@ jQuery(document).ready(function ($) {
     discount
   ) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchProductsSC.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchProductsSC.php",
       type: "POST",
       data: {
         model,
@@ -1418,7 +1418,7 @@ jQuery(document).ready(function ($) {
     discount
   ) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchProductsSC.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchProductsSC.php",
       type: "POST",
       data: {
         model,
@@ -1965,7 +1965,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountry(consulta, val = "") {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchCountry.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchCountry.php",
       type: "POST",
       data: { consulta },
     })
@@ -1984,7 +1984,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountryEU(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchCountryEU.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchCountryEU.php",
       type: "POST",
       data: { consulta },
     })
@@ -2021,7 +2021,7 @@ jQuery(document).ready(function ($) {
     console.log(incoterm);
     console.log(divisa);
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/registerCotizacion.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/registerCotizacion.php",
       type: "POST",
       data: {
         sres,
@@ -2053,7 +2053,7 @@ jQuery(document).ready(function ($) {
           var id = data.id;
           iziToast.success({
             title: "Éxito",
-            message: `<a class='btnViewPDFiziToast' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=${id}' target='_blank' style?>👀</a>`,
+            message: `<a class='btnViewPDFiziToast' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/createPDF.php?idCotizacion=${id}' target='_blank' style?>👀</a>`,
             position: "topCenter",
             timeout: 4500,
             onClosing: function () {
@@ -2092,7 +2092,7 @@ jQuery(document).ready(function ($) {
 
   function removeProducto(chWeight, destination, mEnvio, m3, warehouse) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/shippingRecalcule.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/shippingRecalcule.php",
       type: "POST",
       data: { chWeight, destination, mEnvio, m3, warehouse },
     })
@@ -2149,7 +2149,7 @@ jQuery(document).ready(function ($) {
 
   function removeArrayProduct(numItem) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/removeArraySession.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/removeArraySession.php",
       type: "POST",
       data: { numItem },
     })
@@ -2171,7 +2171,7 @@ jQuery(document).ready(function ($) {
     m3
   ) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/changeShipping.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/changeShipping.php",
       type: "POST",
       data: { chWeight, destination, mEnvio, incoterm, datas, coin, m3 },
     })
@@ -2248,7 +2248,7 @@ jQuery(document).ready(function ($) {
 
   function sessionProducts(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/issetSessionProducts.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/issetSessionProducts.php",
       type: "POST",
       data: { consulta },
     })
@@ -2699,7 +2699,7 @@ jQuery(document).ready(function ($) {
 
   function sessionUnset(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/deleteCotizacionSession.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/deleteCotizacionSession.php",
       type: "POST",
       data: { consulta },
     })
@@ -2768,7 +2768,7 @@ jQuery(document).ready(function ($) {
 
   function searchProducts(consulta, consulta1) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb.php",
       type: "POST",
       dataType: "html",
       data: { consulta, consulta1 },
@@ -2783,7 +2783,7 @@ jQuery(document).ready(function ($) {
 
   function showProductSearched(changePage) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/templates-php/resultPage.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/templates-php/resultPage.php",
       type: "POST",
       data: {},
     })
@@ -2814,7 +2814,7 @@ jQuery(document).ready(function ($) {
 
   function contentResultPage(nextPage) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/templates-php/resultPage.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/templates-php/resultPage.php",
       type: "POST",
       data: { nextPage },
       success: function (data) {
@@ -2985,7 +2985,7 @@ jQuery(document).ready(function ($) {
 
   function createdSession(consulta, consulta1) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/createdSession.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/createdSession.php",
       type: "POST",
       data: { consulta, consulta1 },
     })
@@ -2999,7 +2999,7 @@ jQuery(document).ready(function ($) {
 
   function viewSearchRecent(consulta, consulta1) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/viewSearchRecent.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/viewSearchRecent.php",
       type: "POST",
       data: { consulta, consulta1 },
     })
@@ -3013,7 +3013,7 @@ jQuery(document).ready(function ($) {
 
   function searchDepartment(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchDepartment.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchDepartment.php",
       type: "POST",
       dataType: "html",
       data: { consulta },
@@ -3218,7 +3218,7 @@ jQuery(document).ready(function ($) {
 
 function verificarUsuaurio(modelo) {
   $.ajax({
-    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/verificadorUsuario.php",
+    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/verificadorUsuario.php",
     method: "POST",
     data: { product_model: modelo },
   })

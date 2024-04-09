@@ -3164,7 +3164,7 @@ jQuery(document).ready(function ($) {
     let valor = $(this).val();
 
     window.open(
-      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=" +
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/createPDF.php?idCotizacion=" +
         valor +
         "",
       "_blank"
@@ -4210,7 +4210,7 @@ jQuery(document).ready(function ($) {
     let id = $(this).val();
 
     window.open(
-      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php?idCotizacion=" +
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/reportQUO.php?idCotizacion=" +
         id,
       "_blank"
     );
@@ -4230,7 +4230,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountrySettings(consulta, val = "") {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchCountry.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchCountry.php",
 
       type: "POST",
 
@@ -4254,7 +4254,7 @@ jQuery(document).ready(function ($) {
 
   function searchCountrySettingsEU(consulta) {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/searchCountryEUsettings.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchCountryEUsettings.php",
       type: "POST",
       data: { consulta },
     })
