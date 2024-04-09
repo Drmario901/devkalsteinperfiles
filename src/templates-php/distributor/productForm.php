@@ -594,7 +594,7 @@
             var category = $(this).val();
 
             $.ajax({
-                url: plugin_dir + "php/manufacturer/updateSubcategory.php",
+                url: plugin_dir + "/php/manufacturer/updateSubcategory.php",
                 method: 'POST',
                 data: { category: category },
                 dataType: 'html',
