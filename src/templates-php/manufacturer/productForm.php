@@ -640,11 +640,13 @@ document.getElementById('specialPrice').addEventListener('change', function() {
 });
 </script>
 <script>
+    let plugin_dir = "http://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
+
         $('#dataCategory').change(function() {
             var category = $(this).val();
 
             $.ajax({
-                url: 'php.php',
+                url: plugin_dir + "php/manufacturer/updateSubcategory.php",
                 method: 'POST',
                 data: { category: category },
                 dataType: 'html',
