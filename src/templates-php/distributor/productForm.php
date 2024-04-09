@@ -347,6 +347,12 @@
                 ?>
             </select>
         </div>
+        <div class="col-12 col-sm-6 form-group mb-3">
+            <label>Subcategoría</label>
+            <select class="custom-select tm-select-accounts" id="subCategorySelect" name="subCategory" disabled>
+                <option value="">Seleccione una categoría...</option>
+            </select>
+        </div>
         <div class="col-12 col-sm-6">
             <div class="row">
                 <?php echo $stock_inputs?>
@@ -581,3 +587,32 @@
         </div>
     </div>
 </form>
+
+<script>
+    let plugin_dir = "http://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
+
+        $('#dataCategory').change(function() {
+            var category = $(this).val();
+
+            $.ajax({
+                url: plugin_dir + "php/manufacturer/updateSubcategory.php",
+                method: 'POST',
+                data: { category: category },
+                dataType: 'html',
+                success: function(response) {
+                    if (response.trim() === '') {
+                        $('#subCategorySelect').html('<option value="">' + category + '</option>');
+                        $('#subCategorySelect').prop('disabled', true);
+                    } else {
+                        $('#subCategorySelect').html(response);
+                        $('#subCategorySelect').prop('disabled', false);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error en la solicitud AJAX:', status, error);
+                }
+            });
+        });
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
