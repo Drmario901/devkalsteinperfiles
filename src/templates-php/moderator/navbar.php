@@ -1,6 +1,6 @@
 <?php
 
-    session_start();
+    // session_start();
     require __DIR__.'/../../../php/conexion.php';
     
     if (isset($_SESSION['privateEmailAccount'])){
