@@ -10,9 +10,9 @@ if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
 
-$filasPorPagina = 10;
-$pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$offset = ($pagina - 1) * $filasPorPagina;
+// $filasPorPagina = 10;
+// $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+// $offset = ($pagina - 1) * $filasPorPagina;
 
 // $sql = "SELECT id, id_cotizacion, monto_total, cotizacion_divisa, cotizacion_id_remitente, status_payment FROM wp_monetico LIMIT $offset, $filasPorPagina";
 $sql = "SELECT id, id_cotizacion, monto_total, cotizacion_divisa, cotizacion_id_remitente, status_payment FROM wp_monetico WHERE cotizacion_id_remitente <> 'KALSTEIN-INTERNAL';";
@@ -26,19 +26,22 @@ if ($resultado->num_rows > 0) {
     }
 }
 
-$sqlTotal = "SELECT COUNT(id) AS total FROM wp_monetico";
-$resultadoTotal = $conexion->query($sqlTotal);
-$filaTotal = $resultadoTotal->fetch_assoc();
-$totalFilas = $filaTotal['total'];
-$totalPaginas = ceil($totalFilas / $filasPorPagina);
+// $sqlTotal = "SELECT COUNT(id) AS total FROM wp_monetico";
+// $resultadoTotal = $conexion->query($sqlTotal);
+// $filaTotal = $resultadoTotal->fetch_assoc();
+// $totalFilas = $filaTotal['total'];
+// $totalPaginas = ceil($totalFilas / $filasPorPagina);
 
 $conexion->close();
 
-echo json_encode([
-    'datos' => $datos,
-    'totalPaginas' => $totalPaginas,
-    'paginaActual' => $pagina
-]);
+header('Content-Type: application/json');
+echo json_encode($datos);
+
+// echo json_encode([
+//     'datos' => $datos,
+//     'totalPaginas' => $totalPaginas,
+//     'paginaActual' => $pagina
+// ]);
 ?>
 
 

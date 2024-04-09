@@ -2,10 +2,27 @@ jQuery(document).ready(function() {
     cargarDatos();
 
     function cargarDatos(pagina = 1) {
+        // $.ajax({
+        //     url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php', // Asegúrate de que la ruta es correcta
+        //     type: 'GET',
+        //     data: { pagina: pagina },
+        //     success: function(response) {
+
+        //         let respuesta = JSON.parse(response)
+        //         console.log('respuestaaa', JSON.parse(response));
+                
+        //         $('#datos-tabla').html(generarTabla(respuesta.datos));
+        //         $('#paginacion').html(generarPaginacion(respuesta.paginaActual, respuesta.totalPaginas));
+        //     },
+        //     error: function() {
+        //         $('#datos-tabla').html('<p>Hubo un error al cargar los datos.</p>');
+        //         $('#paginacion').html('');
+        //     }
+        // });
         $.ajax({
             url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php', // Asegúrate de que la ruta es correcta
             type: 'GET',
-            data: { pagina: pagina },
+            // data: { pagina: pagina },
             success: function(response) {
 
                 let respuesta = JSON.parse(response)
