@@ -169,7 +169,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -184,7 +184,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_es(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_es.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_es.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -199,7 +199,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_fr(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_fr.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_fr.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -214,7 +214,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_de(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_de.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_de.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -229,7 +229,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_ee(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_ee.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_ee.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -244,7 +244,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_it(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_it.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_it.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -259,7 +259,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_nl(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_nl.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_nl.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -274,7 +274,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_pl(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_pl.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_pl.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -289,7 +289,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_pt(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_pt.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_pt.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -304,7 +304,7 @@ jQuery(document).ready(function ($) {
 
     function searchProducts_se(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchbardb_se.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchbardb_se.php",
         type: "POST",
         dataType: "html",
         data: { consulta, consulta1 },
@@ -371,7 +371,7 @@ jQuery(document).ready(function ($) {
 
     function viewSearchRecent(consulta, consulta1) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/viewSearchRecent.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/viewSearchRecent.php",
         type: "POST",
         data: { consulta, consulta1 },
       })
@@ -385,7 +385,7 @@ jQuery(document).ready(function ($) {
 
     function searchDepartment(consulta) {
       $.ajax({
-        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/php/searchDepartment.php",
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/php/searchDepartment.php",
         type: "POST",
         dataType: "html",
         data: { consulta },

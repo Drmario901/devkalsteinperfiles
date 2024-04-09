@@ -159,7 +159,7 @@ document
     img.style.height = "73.28px";
     cont.style.top = "16mm";
     img.src =
-      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png";
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/LogoActualizado2.png";
     checkbox.checked = true;
   });
 
@@ -204,7 +204,7 @@ document
     let checkbox = document.getElementById("p2Img02Display");
     img.style.display = "block";
     img.src =
-      "https://dev.kalstein.plus/wp-content/plugins/kalsteinCotizacion/assets/images/img-ce.jpg";
+      "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/img-ce.jpg";
     checkbox.checked = true;
   });
 
@@ -249,7 +249,7 @@ document
     let checkbox = document.getElementById("p2Img03Display");
     img.style.display = "block";
     img.src =
-      "https://platform.kalstein.us/wp-content/plugins/kalsteinCotizacion/assets/images/icono3.png";
+      "https://platform.kalstein.us/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/icono3.png";
     checkbox.checked = true;
   });
 
@@ -267,7 +267,7 @@ document
     img.style.height = "73.28px";
     cont.style.top = "16mm";
     img.src =
-      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/LogoActualizado2.png";
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/LogoActualizado2.png";
     checkbox.checked = true;
 
     //IMG02
@@ -275,7 +275,7 @@ document
     let checkbox2 = document.getElementById("p2Img02Display");
     img2.style.display = "block";
     img2.src =
-      "https://platform.kalstein.us/wp-content/plugins/kalsteinCotizacion/assets/images/img-ce.jpg";
+      "https://platform.kalstein.us/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/img-ce.jpg";
     checkbox2.checked = true;
 
     // IMG03
@@ -283,7 +283,7 @@ document
     let checkbox3 = document.getElementById("p2Img03Display");
     img3.style.display = "block";
     img3.src =
-      "https://platform.kalstein.us/wp-content/plugins/kalsteinCotizacion/assets/images/icono3.png";
+      "https://platform.kalstein.us/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/icono3.png";
     checkbox3.checked = true;
   });
 

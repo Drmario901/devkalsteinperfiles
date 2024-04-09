@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   $.ajax({
-    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/templateLetter.php",
+    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/templateLetter.php",
     type: "GET",
     success: function (response) {
       // Insertar el contenido del PDF en el elemento 'pdfContainer'
