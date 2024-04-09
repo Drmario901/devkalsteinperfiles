@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
         console.log('datosss', datos);
         
         let tablaHtml = '<table class="table"><thead><tr><th>ID</th><th>ID Cotización</th><th>Monto Total</th><th>Divisa</th><th>ID Remitente</th><th>Estado del Pago</th></tr></thead><tbody>';
-        datos.forEach(function(fila) {
+        datos.forEach((fila) =>  {
             tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td><td>${fila.status_payment}</td></tr>`;
         });
         tablaHtml += '</tbody></table>';

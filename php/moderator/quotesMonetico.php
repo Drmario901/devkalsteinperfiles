@@ -14,7 +14,9 @@ $filasPorPagina = 10;
 $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 $offset = ($pagina - 1) * $filasPorPagina;
 
-$sql = "SELECT id, id_cotizacion, monto_total, cotizacion_divisa, cotizacion_id_remitente, status_payment FROM wp_monetico LIMIT $offset, $filasPorPagina";
+// $sql = "SELECT id, id_cotizacion, monto_total, cotizacion_divisa, cotizacion_id_remitente, status_payment FROM wp_monetico LIMIT $offset, $filasPorPagina";
+$sql = "SELECT id, id_cotizacion, monto_total, cotizacion_divisa, cotizacion_id_remitente, status_payment FROM wp_monetico WHERE cotizacion_id_remitente <> 'KALSTEIN-INTERNAL';";
+
 $resultado = $conexion->query($sql);
 
 $datos = [];
@@ -38,4 +40,5 @@ echo json_encode([
     'paginaActual' => $pagina
 ]);
 ?>
+
 
