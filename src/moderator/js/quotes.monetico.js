@@ -114,6 +114,8 @@ jQuery(document).ready(function() {
     }
 
     function paginar(items, paginaActual, itemsPorPagina) {
+        console.log('pagina actual', paginaActual);
+        
         let inicio = (paginaActual - 1) * itemsPorPagina;
         let fin = inicio + itemsPorPagina;
         return items.slice(inicio, fin);
