@@ -1,0 +1,1836 @@
+.PDFcp01{
+    float: left;
+    height: 103.5%;
+    margin-top: -7mm;
+    margin-left: -10mm;
+    margin-bottom: -10mm;
+}
+
+.PDFcp02{
+    float: left;
+    width: 106.5%;
+    height: 103.5%;
+    margin-top: -7mm;
+    margin-left: -10mm;
+    margin-bottom: -10mm;
+}
+
+.PDFh-01{
+    float: left;
+    width: 107%;
+    height: 30%;
+}
+
+.PDFf-01{
+    float: left;
+    width: 100%;
+    height: 20%;
+    margin-top: 36%;
+}
+
+.PDFb-01{
+    top: 55mm;
+    width: 100%;
+    height: 68.9%;
+    margin-top: 7mm;
+    margin-bottom: -7mm;
+}
+
+.PDFbackground-img {
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 109%;
+    height: 331%;
+    top: 97mm;
+    background-size: 92%;
+    display: block;
+}
+
+.PDFid{
+    float: left;
+    width: 100%;
+    height: 40%;
+}
+
+.PDFqr{
+    position: absolute;
+    top: 260mm;
+    right: 10mm;
+    width: 10%;
+    height: 30%;
+    visibility: hidden;
+}
+
+.PDFlogo{
+    float: left;
+    width: 49.9%;
+    height: 100%;
+}
+
+.PDFhr{
+    position: absolute;
+    top: 140mm;
+    left: 50%;
+    width: 0.1%;
+    height: 35%;
+    margin-top: 5%;
+    background-color: rgb(190, 236, 236);
+}
+
+.PDFn-id{
+    position: absolute;
+    top: 148mm;
+    left: 52%;
+    width: 43%;
+    height: 30%;
+    
+}
+.PDFn-id {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Opcional: ajusta la altura si es necesario */
+}
+
+.PDFco{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+.PDFid-title{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: #213280;
+}
+
+.PDFid-n{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 45px;
+    color: #213280;
+}
+
+#PDFf-01-img{
+    width: 100%;
+}
+
+.PDFmsj{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.PDFf-text{
+    position: absolute;
+    top: 262mm;
+    right: 33mm;
+    width: 27%;
+    color: white;
+}
+
+.PDFl-1{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.PDFl-2{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-top: 0.8mm;
+}
+
+.PDFl-3{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-top: 0.8mm;
+}
+
+.PDFl-4{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-top: 0.8mm;
+}
+
+.PDFl-5{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-top: 0.8mm;
+}
+
+.PDFhr-2{
+    position: absolute;
+    top: 260mm;
+    right: 95mm;
+    width: 0.1%;
+    height: 55%;
+    margin-top: 2%;
+    background-color: rgb(190, 236, 236);
+}
+
+
+
+/* Página 2*/
+.PDFstyle-01{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 20mm;
+    background-color: #213280;
+}
+
+.PDFstyle-02{
+    position: absolute;
+    top: 0;
+    right: 65mm;
+    width: 15%;
+    height: 20mm;
+    background-color: #2a7ec4;
+}
+
+.PDFstyle-03{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 20mm;
+    background-color: #213280;
+}
+
+.PDFstyle-04{
+    position: absolute;
+    bottom: 0;
+    right: 65mm;
+    width: 15%;
+    height: 20mm;
+    background-color: #2a7ec4;
+}
+
+.PDFf2-text{
+    position: absolute;
+    bottom: 0;
+    left: 5mm;
+    width: 50%;
+    height: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.PDFt-1{
+    font-size: 12px;
+    margin: 0;
+    margin-left: 15mm;
+    margin-top: 3mm;
+    padding: 0;
+}
+
+.PDFh-02{
+    width: 100%;
+    height: 15%;
+    margin-top: 15mm;
+}
+
+.PDFlogo-02{
+    width: 80mm;
+    height: 100%;
+}
+
+.PDFhr-02{
+    position: absolute;
+    top: 28mm;
+    left: 81mm;
+    width: 0.1mm;
+    height: 50%;
+    background-color: #000;
+}
+
+.PDFh-text-02{
+    position: absolute;
+    top: 31mm;
+    left: 84mm;
+    width: 130mm;
+    height: 50%;
+}
+
+.PDFlt-01{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+}
+
+.PDFlt-02{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #213280;
+    margin-top: 1mm;
+}
+
+.PDFlt-03{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 1mm;
+    font-size: 11px;
+}
+
+.PDFp2img-01{
+    position: absolute;
+    top: 70mm;
+    right: 0;
+    width: 75mm;
+    height: 60mm;
+}
+
+/* .p2img-02{
+    position: absolute;
+    top: 135mm;
+    right: 0;
+    width: 75mm;
+    height: 60mm;
+} */
+
+.PDFp2img-02{
+    position: absolute;
+    top: 94.9mm;
+    right: -2.8mm;
+    width: 77mm;
+    height: 60mm;
+}
+
+/* .p2img-03{
+    position: absolute;
+    top: 200mm;
+    right: 0;
+    width: 75mm;
+    height: 60mm;
+} */
+
+.PDFp2img-03{
+    position: absolute;
+    bottom: 65mm;
+    right: -2.8mm;
+    width: 77mm;
+    height: 60mm;
+}
+
+.PDFcmsj-01{
+    position: absolute;
+    top: 77mm;
+    left: 15mm;
+    width: 60mm;
+    height: 50mm;
+}
+
+.PDFcmsj-02{
+    position: absolute;
+    top: 77mm;
+    left: 80mm;
+    width: 60mm;
+    height: 50mm;
+}
+
+.PDFcmsj-03{
+    position: absolute;
+    top: 140mm;
+    left: 15mm;
+    width: 60mm;
+    height: 50mm;
+}
+
+.PDFcmsj-04{
+    position: absolute;
+    top: 140mm;
+    left: 80mm;
+    width: 60mm;
+    height: 50mm;
+}
+
+.PDFcmsj-05{
+    position: absolute;
+    top: 207mm;
+    left: 15mm;
+    width: 60mm;
+    height: 50mm;
+}
+
+.PDFcmsj-06{
+    position: absolute;
+    top: 207mm;
+    left: 80mm;
+    width: 60mm;
+    height: 50mm;
+}
+
+.PDFi{
+    width: 30%;
+    height: 100%;
+}
+
+.PDFhr-03{
+    width: 0.2mm;
+    height: 25mm;
+    background-color: #000;
+    position: absolute;
+    top: 20mm;
+    left: 19mm;
+}
+
+.PDFi-text{
+    position: absolute;
+    top: 0;
+    left: 20mm;
+    width: 40mm;
+    height: 100%;
+}
+
+.PDFi-title{
+    color: #213280;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    margin-top: 23mm;
+    margin-left: 2mm;
+}
+
+.PDFi-title1{
+    color: #213280;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    margin-top: 21mm;
+    margin-left: 2mm;
+}
+
+.PDFi-title2{
+    color: #213280;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    margin-top: 26mm;
+    margin-left: 2mm;
+}
+
+.PDFi-title3{
+    color: #213280;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    margin-top: 24mm;
+    margin-left: 2mm;
+}
+
+.PDFi-p{
+    font-size: 9px;
+    margin: 0;
+    padding: 0;
+    margin-left: 2mm;
+    margin-top: 1mm;
+}
+
+/* Páginas de productos */
+.PDFht{
+    width: 107%;
+    height: 15%;
+    margin-top: -7mm;
+    margin-left: -10mm;
+}
+
+.PDFlogo-03{
+    width: 40%;
+    height: 100%;
+}
+
+.PDFtp-01{
+    position: absolute;
+    top: 27mm;
+    left: 60mm;
+    font-size: 9px;
+}
+
+.PDFtp-02{
+    position: absolute;
+    top: 20mm;
+    right: 30mm;
+    font-size: 12px;
+}
+
+.PDFhr-04{
+    position: absolute;
+    top: 30mm;
+    left: 10mm;
+    width: 90%;
+    height: 0.1mm;
+    background-color: #000;
+}
+
+.PDFcliente{
+    position: absolute;
+    top: 31mm;  
+    left: 10mm;  
+    width: 90%;
+    height: 5%;
+}
+
+.PDFsres{
+    position: absolute;
+}
+
+.PDFatc{
+    position: absolute;
+    left: 90mm;
+}
+
+.PDFft{
+    width: 100%;
+    height: 15%;
+}
+
+.PDFft-01{
+    width: 100%;
+    height: 40.25%;
+}
+
+.PDFhr-05{
+    width: 90%;
+    margin-left: 10mm;
+    height: 0.5%;
+    margin-top: 0.5%;
+    background-color: #000;
+}
+
+.PDFft-02{
+    width: 100%;
+    height: 40.25%;
+}
+
+.PDFimg-ce{
+    width: 15mm;
+    height: 20mm;
+    margin-left: 8mm;
+}
+
+.PDFtext-ce{
+    position: absolute;
+    top: 257mm;
+    left: 25mm;
+    width: 72mm;
+    height: 20mm;
+
+}
+
+.PDFimg-cora{
+    position: absolute;
+    top: 249mm;
+    left: 106mm;
+    width: 15mm;
+    height: 20mm;
+    margin-left: mm;
+}
+
+.PDFtext-cora{
+    position: absolute;
+    top: 256mm;
+    left: 123mm;
+    width: 72mm;
+    height: 20mm;
+}
+
+.PDFft-02-text{
+    position: absolute;
+    top: 272mm;
+    left: 75mm;
+    width: 60mm;
+    height: 20mm;
+    text-align: center;
+}
+
+.PDFftn-3{
+    position: absolute;
+    top: 272mm;
+    right: 10mm;
+    width: 30mm;
+    height: 20mm;
+}
+
+.PDFc-table{
+    width: 90%;
+    height: 8mm;
+    margin-left: 10mm;
+    margin-top: 10mm;
+}
+
+.PDFtd-i{
+    position: absolute;
+    width: 9mm;
+    height: 1mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-i{
+    width: 10mm;
+    height: 36.66mm;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5mm;
+}
+
+.PDFtdb-i2{
+    width: 10mm;
+    height: 5mm;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5mm;
+}
+
+.PDFtd-m{
+    position: absolute;
+    width: 16mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-m{
+    width: 18mm;
+    height: 36.66mm;
+    text-align: center;
+    font-size: 11px;
+}
+
+.PDFstdb{
+    width: 100%;
+    height: 100%;
+}
+
+.PDFtd-im{
+    position: absolute;
+    width: 32mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-img{
+    width: 34mm;
+    height: 36.66mm;
+}
+
+.PDFtd-d{
+    position: absolute;
+    width: 38mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtd-d2{
+    position: absolute;
+    width: 110mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-d{
+    width: 38mm;
+    height: auto;
+    min-height: 36.66mm;
+}
+
+.PDFtdb-d2{
+    width: 110mm;
+    height: 5mm;
+}
+
+.PDFtd-c{
+    position: absolute;
+    width: 9mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-c{
+    width: 9mm;
+    height: 36.66mm;
+    font-size: 11px;
+    text-align: center;
+}
+
+.PDFtdb-c2{
+    width: 9mm;
+    height: 5mm;
+    font-size: 11px;
+    text-align: center;
+}
+
+.PDFtd-u{
+    position: absolute;
+    width: 13mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-u{
+    width: 14mm;
+    height: 36.66mm;
+    font-size: 11px;
+    text-align: center;
+}
+
+.PDFtd-v{
+    position: absolute;
+    width: 22mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-v{
+    width: 23mm;
+    height: 36.66mm;
+    font-size: 12px;
+    text-align: right;
+}
+
+.PDFtdb-v2{
+    width: 23mm;
+    height: 5mm;
+    font-size: 12px;
+    text-align: right;
+}
+
+.PDFtd-vt{
+    position: absolute;
+    width: 22mm;
+    height: 2mm;
+    background-color: #213280;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 3mm;
+    border: inherit 1px solid #fff;
+}
+
+.PDFtdb-vt{
+    width: 23mm;
+    height: 36.66mm;
+    font-size: 12px;
+    text-align: right;
+}
+
+.PDFtdb-vt2{
+    width: 23mm;
+    height: 5mm;
+    font-size: 12px;
+    text-align: right;
+}
+
+.PDFbt{
+    width: 90%;
+    height: auto;
+    margin-left: 10mm;
+}
+
+.PDFbt-02{
+    margin-top: 1mm;
+    width: 90%;
+    height: 80mm;
+    margin-left: 10mm;
+}
+
+.PDFsbt-02{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.PDFob{
+    position: absolute;
+    width: 70%;
+    height: 100%;
+}
+
+.PDFsob{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.PDFob-title{
+    position: absolute;
+    width: 36%;
+    height: 100%;
+}
+
+.PDFob-p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64%;
+    height: 100%;
+}
+
+.PDFtotales{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 29%;
+    height: 100%;
+}
+
+.PDFsubtotales{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.PDFtotales-t{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+}
+
+.PDFtotales-n{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+}
+
+
+/* Página 4 (Después de cargar los datos de la cotización)*/
+
+.PDFcp-04{
+    width: 100%;
+    height: 100%;
+    background-color: #213280;
+}
+
+.PDFstyle-05{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -7mm;
+    margin-right: -3mm;
+    width: 120%;
+    height: 25mm;
+    background-color: #213280;
+}
+
+.PDFstyle-07{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120%;
+    height: 25mm;
+    margin-bottom: -7mm;
+    margin-right: -3mm;
+    background-color: #213280;
+}
+
+
+.PDFt-1{
+    font-size: 12px;
+    margin: 0;
+    margin-left: 15mm;
+    margin-top: 3mm;
+    padding: 0;
+}
+
+.PDFh4-02{
+    width: 100%;
+    height: 15%;
+    margin-top: 15mm;
+}
+
+.PDFlogo4-02{
+    width: 80mm;
+    height: 100%;
+}
+
+.PDFhr4-02{
+    position: absolute;
+    top: 28mm;
+    left: 81mm;
+    width: 0.1mm;
+    height: 50%;
+    background-color: #000;
+}
+
+.PDFh4-text-02{
+    position: absolute;
+    top: 31mm;
+    left: 84mm;
+    width: 130mm;
+    height: 50%;
+}
+
+.PDFlt4-01{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 6mm;
+    font-size: 20px;
+    font-weight: bold;
+    color: #213280;
+}
+
+.PDFmain-text{
+    position: relative;
+    top: 10mm;
+    left: 10mm;
+    width: 105mm;
+    height: 200mm;
+}
+
+.PDFi-list{
+    position: relative;
+    width: 10%;
+}
+
+.PDFi-txt{
+    position: absolute;
+    top: 3.5mm;
+    right: 0;
+    width: 90%;
+}
+
+.PDFi-txt2{
+    position: absolute;
+    top: 44mm;
+    right: 0;
+    width: 90%;
+}
+
+.PDFi-txt3{
+    position: absolute;
+    top: 66.5mm;
+    right: 0;
+    width: 90%;
+}
+
+.PDFi-txt4{
+    position: absolute;
+    top: 103mm;
+    right: 0;
+    width: 90%;
+}
+
+.PDFi-txt5{
+    position: absolute;
+    top: 119mm;
+    right: 0;
+    width: 90%;
+}
+
+.PDFlogo-05{
+    position: absolute;
+    top: 25mm;
+    width: 80mm;
+    height: 50mm;
+}
+
+.PDFimg-loc{
+    position: absolute;
+    top: 25mm;
+    right: 0;
+    width: 70mm;
+    height: 70mm;
+    margin-right: -3mm;
+}
+
+.PDFinf-cont{
+    position: absolute;
+    top: 25mm;
+    right: 65mm;
+    width: 55mm;
+    height: 53mm;
+}
+
+.PDFf-last{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -7mm;
+    width: 109mm;
+    height: 20mm;
+}
+
+.PDFimg-cont{
+    position: absolute;
+    width: 100%;
+    height: 180mm;
+    left: 0;
+    top: 85mm;
+}
+
+#PDFp1Img01 {
+    float: right; width: 140.031px; margin-top: 25mm; margin-right: 45mm;
+}
+
+#PDFLogoP1 {
+    float: right; width: 287.859px; margin-top: 54mm; margin-right: 2%;
+}
+
+#PDFLogo2P1{
+    width: 136.125px;
+    height: 76.56px;
+}
+
+.PDFimg-logo2{
+    position: absolute;
+    top: 256mm;
+    right: 100mm;
+}
+
+#PDFlogoP2 {
+    float: right; width: 249px; margin-top: 13mm; margin-right: 2mm;
+}
+
+#PDFtp-02-p1{
+    font-weight: bold; margin: 0; padding: 0;
+}
+
+#PDFtp-02-p2 {
+    margin: 0; padding: 0; margin-top: 1mm;
+}
+
+#PDFsres-p1{
+    margin: 0; padding: 0; font-weight: bold; margin-top: 2mm;
+}
+
+#PDFsres-p2 {
+    margin: 0; padding: 0; margin-top: 1mm;
+}
+
+#PDFatc-p1{
+    margin: 0; padding: 0; font-weight: bold; margin-top: 2mm;
+}
+
+#PDFatc-p2{
+    margin: 0; padding: 0; margin-top: 1mm;
+}
+
+#PDFimg-ce-img{
+    float: right; width: 100%; margin-top: 5mm;
+}
+
+#PDFtext-ce-p1{
+    margin: 0; padding: 0; font-weight: bold; font-size: 12px;
+}
+
+#PDFtext-ce-p2{
+    margin: 0; padding: 0; font-size: 10px; margin-top: 1mm;
+}
+
+#PDFimg-cora-img {
+    float: right; width: 90%; margin-top: 7mm;
+}
+
+#PDFtext-cora-p1{
+    margin: 0; padding: 0; font-weight: bold; font-size: 12px;
+}
+
+#PDFtext-cora-p2{
+    margin: 0; padding: 0; font-size: 10px; margin-top: 1mm;
+}
+
+#PDFft-02-text-p1{
+    margin: 0; padding: 0; font-size: 9px; margin-top: 5mm;
+}
+
+#PDFft-02-text-p2{
+    margin: 0; padding: 0; font-size: 9px; margin-top: 1mm;
+}
+
+#PDFft-02-text-p3{
+    margin: 0; padding: 0; font-size: 8px; margin-top: 1mm;
+}
+
+#PDFftn-3-p1{
+    text-align: right; font-size: 9px; margin-top: 6.5mm; font-weight: bold;
+}
+
+#PDFob-p-p1{
+    font-size: 12px; margin: 0; padding: 0; text-align: left; margin-top: 7.5mm; margin-left: 3mm;
+}
+
+#PDFob-p-p2{
+    font-size: 12px; margin: 0; padding: 0; text-align: left; margin-top: 1.5mm; margin-left: 3mm;
+}
+
+#PDFob-p-p3{
+    font-size: 12px; margin: 0; padding: 0; text-align: left; margin-top: 1mm; margin-left: 3mm;
+}
+
+#PDFob-p-p4{
+    font-size: 12px; margin: 0; padding: 0; text-align: left; margin-top: 1.5mm; margin-left: 3mm;
+}
+
+#PDFob-p-p5{
+    font-size: 12px; margin: 0; padding: 0; text-align: left; margin-top: 1mm; margin-left: 3mm;
+}
+
+#PDFtotales-t-p1 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right;
+}
+
+#PDFtotales-t-p2 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm;
+}
+
+#PDFtotales-t-p3 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm;
+}
+
+#PDFtotales-n-p1 {
+    font-size: 12px; margin: 0; padding: 0; text-align: right; margin-left: 3mm;
+}
+
+#PDFtotales-n-p2 {
+    font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm; margin-left: 3mm;
+}
+
+#PDFtotales-n-p3 {
+    font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm; margin-left: 3mm;
+}
+
+#PDFlogo4-02-img {
+    float: right; width: 241.88px; margin-top: 12mm; margin-right: 2mm;
+}
+
+#PDFp2img-02-img {
+    float: right; height: 242px; width: 276px; 
+}
+
+#PDFp2img-03-img {
+    float: right; height: 242px; width: 276px; 
+}
+
+#PDFi-list-p1 {
+    text-align: center; margin: 0; padding: 0; margin-top: 3mm;
+}
+
+#PDFi-list-p2 {
+    text-align: center; margin: 0; padding: 0; margin-top: 7mm;
+}
+
+#PDFi-list-p3 {
+    text-align: center; margin: 0; padding: 0; margin-top: 6mm;
+}
+
+#PDFi-txt-p1 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 3mm;
+}
+
+#PDFi-txt-p2 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm;
+}
+
+#PDFi-txt-p3 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm; margin-left: 0.2mm;
+}
+
+#PDFi-list-p4 {
+    text-align: center; margin: 0; padding: 0; margin-top: 3mm;
+}
+
+#PDFi-list-p5 {
+    text-align: center; margin: 0; padding: 0; margin-top: 4mm; margin-bottom: 2mm;
+}
+
+#PDFi-txt2-p1 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 3mm;
+}
+
+#PDFi-txt2-p2 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm;
+}
+
+#p3Sub1 {
+    margin: 0; padding: 0; color: #213280; font-weight: bold; font-size: 12px;
+}
+
+#p3Sub2 {
+    margin: 0; padding: 0; color: #213280; font-weight: bold; font-size: 12px; margin-top: 10mm;
+}
+
+#p3Sub3 {
+    margin: 0; padding: 0; color: #213280; font-weight: bold; font-size: 12px; margin-top: 4mm;
+}
+
+#p3Sub4 {
+    margin: 0; padding: 0; color: #213280; font-weight: bold; font-size: 12px; margin-top: 6mm;
+}
+
+#p3Sub5 {
+    margin: 0; padding: 0; color: #213280; font-weight: bold; font-size: 12px; margin-top: 5mm;
+}
+
+#p3Sub6 {
+    margin: 0; padding: 0; color: #213280; font-weight: bold; font-size: 12px; margin-top: 22mm;
+}
+
+#p3Sub7 {
+    margin: 0; padding: 0; font-size: 11px; margin-top: 1mm;
+}
+
+#PDFi-list-p6{
+    text-align: center; margin: 0; padding: 0; margin-top: 4.5mm;
+}
+
+#PDFi-list-p7{
+    text-align: center; margin: 0; padding: 0; margin-top: 4.5mm;
+}
+
+#PDFi-txt3-p1 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 3mm;
+}
+
+#PDFi-txt3-p2 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm;
+}
+
+#PDFi-txt3-p3 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm;
+}
+
+#PDFi-list-p8 {
+    text-align: center; margin: 0; padding: 0; margin-top: 5mm;
+}
+
+#PDFi-text4-p1 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 3mm;
+}
+
+#PDFi-list-p9 {
+    text-align: center; margin: 0; padding: 0; margin-top: 3mm;
+}
+
+#PDFi-list-p10 {
+    text-align: center; margin: 0; padding: 0; margin-top: 3.5mm;
+}
+
+#PDFi-list-p11 {
+    text-align: center; margin: 0; padding: 0; margin-top: 9.5mm;
+}
+
+#PDFi-text5-p1 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 3mm;
+}
+
+#PDFi-text5-p2 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm;
+}
+
+#PDFi-text5-p3 {
+    margin: 0; padding: 0; font-size: 11px; text-align: justify; margin-top: 1mm;
+}
+
+#PDFstyle-07-p1 {
+    text-align: right; color: #fff; font-size: 9px; margin-right: 12mm; margin-top: 6.5mm; font-weight: bold;
+}
+
+#autoGen1 {
+    font-weight: bold; font-size: 18px; margin: 0; padding: 0; padding-left: 5mm;
+}
+
+#autoGen2 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm;
+}
+
+#autoGen3 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 1.5mm;
+}
+
+#autoGen4 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 6.3mm;
+}
+
+#autoGen5 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2.3mm;
+}
+
+#autoGen6 {
+    font-weight: bold; font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm;
+}
+
+#autoGen7 {
+    font-size: 12px; margin: 0; padding: 0; text-align: right; margin-top: 2mm; margin-left: 3mm;
+}
+
+#autoGen8 {
+    font-size: 12px; margin: 0; padding: 0; text-align: left; margin-top: 0.8mm; margin-left: 3mm;
+}
+
+#autoGen9 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen10 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen11 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen12 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen13 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen14 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2mm;
+}
+
+#autoGen15 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen16 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 6.5mm;
+}
+
+#autoGen17 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 5.5mm;
+}
+
+#autoGen18 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2mm;
+}
+
+#autoGen19 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2.1mm;
+    margin-left: 3mm;
+}
+
+#autoGen20 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2mm;
+}
+
+#autoGen21 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2mm;
+    margin-left: 3mm;
+}
+
+#autoGen22 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2mm;
+}
+
+#autoGen23 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 2mm;
+    margin-left: 3mm;
+}
+
+#autoGen24 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen25 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen26 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen27 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen28 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen29 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen30 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.3mm;
+    margin-left: 3mm;
+}
+
+#autoGen31 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen32 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen33 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.4mm;
+    margin-left: 3mm;
+}
+
+#autoGen34 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen35 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 4.9mm;
+}
+
+#autoGen36 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 5.5mm;
+}
+
+#autoGen37 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen38 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen39 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen40 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.3mm;
+    margin-left: 3mm;
+}
+
+#autoGen41 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen42 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen43 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen44 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen45 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 5mm;
+}
+
+#autoGen46 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 5.3mm;
+}
+
+#autoGen47 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.6mm;
+}
+
+#autoGen48 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen49 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen50 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 3mm;
+    margin-left: 3.4mm;
+}
+
+#autoGen51 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen52 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 0.8mm;
+    margin-left: 3mm;
+}
+
+#autoGen53 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 3mm;
+    margin-left: 3mm;
+}
+
+#autoGen54 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen55 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen56 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 1.5mm;
+    margin-left: 3mm;
+}
+
+#autoGen57 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 5.2mm;
+}
+
+#autoGen58 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 3mm;
+}
+
+#autoGen59 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.6mm;
+}
+
+#autoGen60 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen61 {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-top: 1.5mm;
+}
+
+#autoGen62 {
+    font-weight: bold; font-size: 18px; margin: 0; padding: 0; padding-left: 5mm;
+}
+
+#autoGen63 {
+    margin: 0; padding: 0; font-size: 11px;
+}
+
+#autoGen64 {
+    margin: 0; padding: 0; font-size: 11px;
+}
+
+#autoGen65 {
+    margin: 0; padding: 0; font-size: 10px; margin-left: 1rem;
+}
+
+#autoGen66 {
+    width: 100%;
+}
+
+#autoGen67 {
+    margin: 0; padding: 0; font-size: 11px;
+}
+
+#autoGen68 {
+    margin: 0; padding: 0; font-size: 11px;
+}
