@@ -26,12 +26,12 @@
     <link rel="stylesheet" type="text/css" href="pdf.css">
 <div class='cp01'>
     <div class='h-01'>
-        <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/francia-pais.jpg" style='float: right; width: 18%; margin-top: 25mm; margin-right: 45mm;'>
+        <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/francia-pais.jpg" style='float: right; width: 18%; margin-top: 25mm; margin-right: 45mm;'>
     </div>
-    <div class='b-01' style='background-image: url(https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/fondo.png)'>
+    <div class='b-01' style='background-image: url(https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/fondo.png)'>
         <div class='id'>
             <div class='logo'>
-                <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/logo.png" style='float: right; width: 70%; margin-top: 55mm; margin-right: 2%;'>
+                <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/logo.png" style='float: right; width: 70%; margin-top: 55mm; margin-right: 2%;'>
             </div>
             <div class='hr'></div>
             <div class='n-id'>
@@ -42,7 +42,7 @@
         </div> 
         <div class='f-01'>
             <div class='qr'>
-                <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/qr.jpg" style='width: 100%;'>
+                <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/qr.jpg" style='width: 100%;'>
             </div>
             <div class='f-text'>
                 <p class='l-1'>All rights reserved ® KALSTEIN France S. A. S.,</p>
@@ -53,7 +53,7 @@
             </div>
             <div class='hr-2'></div>
             <div class='img-logo2'>
-            <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/logo-blanco.png" style='width: 50%; float: right;'>
+            <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/logo-blanco.png" style='width: 50%; float: right;'>
             </div>
         </div>       
     </div>    
@@ -62,7 +62,7 @@
     <page_header> 
         <div class='ht'>
             <div class='logo-03'>
-                <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/logo.png" style='float: right; width: 70%; margin-top: 15mm; margin-right: 2mm;'>
+                <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/logo.png" style='float: right; width: 70%; margin-top: 15mm; margin-right: 2mm;'>
             </div>
             <div class='tp-01'>
                 <p>KALSTEIN FRANCE SIREN: 819 970 815</p>
@@ -99,14 +99,14 @@
         <div class='ft'>
             <div class='ft-01'>
                 <div class='img-ce'>
-                    <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/img-ce.jpg" style='float: right; width: 100%; margin-top: 5mm;'>
+                    <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/img-ce.jpg" style='float: right; width: 100%; margin-top: 5mm;'>
                 </div>
                 <div class='text-ce'>
                     <p style='margin: 0; padding: 0; font-weight: bold; font-size: 12px;'>CE marking: to buy with peace of mind</p>
                     <p style='margin: 0; padding: 0; font-size: 10px; margin-top: 1mm;'>All Kalstein equipment complies with the requirements of the EU, in accordance with the relevant regulations.</p>
                 </div>
                 <div class='img-cora'>
-                    <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/assets/images/icono3.png" style='float: right; width: 90%; margin-top: 7mm;'>
+                    <img src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/images/icono3.png" style='float: right; width: 90%; margin-top: 7mm;'>
                 </div>
                 <div class='text-cora'>
                     <p style='margin: 0; padding: 0; font-weight: bold; font-size: 12px;'>With the acquisition of a Kalstein equipment</p>

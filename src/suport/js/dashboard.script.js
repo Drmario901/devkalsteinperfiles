@@ -1,26 +1,23 @@
-
-
 jQuery(document).ready(function ($) {
-
   const cookieLng = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("language="))
-  .split("=")[1];
-let alertsTranslations = {};
+    .split("; ")
+    .find((row) => row.startsWith("language="))
+    .split("=")[1];
+  let alertsTranslations = {};
 
-// cargar json de traducciones
-const loadTranslations = (lng) => {
-  return fetch(
-    `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
-  )
-    .then((response) => response.json())
-    .then((translation) => {
-      // save in a global variable
-      alertsTranslations = translation;
-    });
-};
+  // cargar json de traducciones
+  const loadTranslations = (lng) => {
+    return fetch(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/locales/${lng}/alert.json`
+    )
+      .then((response) => response.json())
+      .then((translation) => {
+        // save in a global variable
+        alertsTranslations = translation;
+      });
+  };
 
-loadTranslations(cookieLng);
+  loadTranslations(cookieLng);
 
   searchDataUserDashboard();
   $(".vce-row-content").attr("id", "vce-row-content");
@@ -121,7 +118,7 @@ loadTranslations(cookieLng);
 
   function showTblQuoteUsers(email) {
     $.ajax({
-      url: "https://dev.kalstein.plus/wp-content/plataforma/plugins/kalsteinCotizacion/classes/searchTblQuoteUsers.php",
+      url: "https://dev.kalstein.plus/wp-content/plataforma/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/searchTblQuoteUsers.php",
       type: "POST",
       data: { email },
     })

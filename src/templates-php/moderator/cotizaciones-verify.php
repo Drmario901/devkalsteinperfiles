@@ -44,6 +44,7 @@ error_reporting(E_ALL);
     <div id="paginacion">
         <!-- Los controles de paginación se generarán dinámicamente -->
     </div>
+    <button id="boton-prev" >Prev</button> <button id="boton-next">Next</button>
 </div>
 
 

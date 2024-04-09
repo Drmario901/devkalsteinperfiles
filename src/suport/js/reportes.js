@@ -30,12 +30,20 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on("change", "#estatus-reporte", function () {
- 
     let status = $(this).val();
     let dateFrom = $("#dateFrom").val();
     let dateTo = $("#dateTo").val();
     let inputSearch = $("#searchreport").val();
-    console.log('cambios', 'status:',status, "dateFrom:", dateFrom, 'dateTo:', 'inputSearch:',inputSearch )
+    console.log(
+      "cambios",
+      "status:",
+      status,
+      "dateFrom:",
+      dateFrom,
+      "dateTo:",
+      "inputSearch:",
+      inputSearch
+    );
     tablaconsulta(inputSearch, status, dateFrom, dateTo);
   });
 
@@ -96,11 +104,11 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#btn-savedGeneratedQuo", function () {
     let description = $("#txtObservation").val();
     let count = $("#ih-cant").val();
-    console.log('count', count);
-    
+    console.log("count", count);
+
     let nItem = parseInt(count) + parseInt(1);
-    console.log('nItem', nItem);
-    
+    console.log("nItem", nItem);
+
     let id = $("#idReport").val();
     let cant2 = $("#cant-1").val();
     let description2 = $("#description-1");
@@ -110,36 +118,29 @@ jQuery(document).ready(function ($) {
 
     let zipCode = $("#zipCode-1").val();
     // console.log('price', price2);
-    console.log('zipCode', zipCode);
-    
-    
+    console.log("zipCode", zipCode);
 
     for (let i = 1; i < nItem; i++) {
       let cant = $("#cant-" + i + "").val();
       let description = $("#description-" + i + "").val();
       let price = $("#price-" + i + "").val();
-    
-      
 
       datas.push({
         cant: cant,
         description: description,
         price: price,
       });
-    } 
+    }
 
-    if(!zipCode || !precioMoneda) {
+    if (!zipCode || !precioMoneda) {
       iziToast.error({
-        title : 'Error',
-        message : 'Error porfavor ingresar codigo zip o moneda',
-        position: 'center'
+        title: "Error",
+        message: "Error porfavor ingresar codigo zip o moneda",
+        position: "center",
       });
     } else {
       savedGeneratedQuo(id, description, datas, precioMoneda, zipCode);
     }
-    
-
-    
   });
 
   const cookieLng = document.cookie
@@ -163,12 +164,12 @@ jQuery(document).ready(function ($) {
   loadTranslations(cookieLng);
 
   function savedGeneratedQuo(id, description, datas, precioMoneda, zipCode) {
-    console.log('id', id);
-    console.log('description', description);
-    console.log('datas', datas);
-    console.log('precioMoneda',precioMoneda);
-    console.log('zipCode', zipCode);
-     $.ajax({
+    console.log("id", id);
+    console.log("description", description);
+    console.log("datas", datas);
+    console.log("precioMoneda", precioMoneda);
+    console.log("zipCode", zipCode);
+    $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/savedGeneratedQuo.php",
       type: "POST",
       data: { id, description, datas, precioMoneda, zipCode },
@@ -194,7 +195,7 @@ jQuery(document).ready(function ($) {
           cant = 1;
           $("#ih-cant").val(cant);
           window.open(
-            "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php",
+            "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/reportQUO.php",
             "_blank"
           );
           let inputSearch = $("#searchreport").val();
@@ -225,7 +226,7 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#btnViewQuoteSupport", function () {
     let id = $(this).val();
     window.open(
-      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/reportQUO.php?idCotizacion=" +
+      "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/reportQUO.php?idCotizacion=" +
         id,
       "_blank"
     );
@@ -249,38 +250,36 @@ jQuery(document).ready(function ($) {
       });
   }
 
-  $('#reportes-pendientes').on('click', function(consulta){
-    console.log('activadoo');
-      $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
-      type: "POST",
-      data: { consulta },
-    })
-      .done(function (respuesta) {
-        console.log('respuesta', respuesta);
-        $("#reportes-completados").html(respuesta);
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
-    
-  })
-
-});
-
-jQuery(document).ready(function ($) {
-  allPendingCirculatorCount();
-
-  function allPendingCirculatorCount(consulta) {
-    console.log('entree');
-    console.log('consulta', consulta);
+  $("#reportes-pendientes").on("click", function (consulta) {
+    console.log("activadoo");
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
       type: "POST",
       data: { consulta },
     })
       .done(function (respuesta) {
-        console.log('respuesta', respuesta);
+        console.log("respuesta", respuesta);
+        $("#reportes-completados").html(respuesta);
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
+  });
+});
+
+jQuery(document).ready(function ($) {
+  allPendingCirculatorCount();
+
+  function allPendingCirculatorCount(consulta) {
+    console.log("entree");
+    console.log("consulta", consulta);
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/suport/reportescompletados.php",
+      type: "POST",
+      data: { consulta },
+    })
+      .done(function (respuesta) {
+        console.log("respuesta", respuesta);
         $("#reportes-completados").html(respuesta);
       })
       .fail(function (error) {
@@ -302,9 +301,8 @@ jQuery(document).ready(function ($) {
   //     .fail(function (error) {
   //       console.log("error", error);
   //     });
-    
-  // })
 
+  // })
 });
 
 jQuery(document).ready(function ($) {

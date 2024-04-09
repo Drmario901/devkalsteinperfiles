@@ -1,6 +1,6 @@
 <?php
 
-require_once('/home/he290532/testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/catalogs/mpdf/mpdf.php');
+require_once ('/home/he290532/testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/src/catalogs/mpdf/mpdf.php');
 use Mpdf\Mpdf;
 
 // Configuración de mPDF
@@ -10,13 +10,13 @@ $mpdf = new Mpdf([
 ]);
 
 ob_start();
-include '/home/he290532/testing.kalstein.digital/wp-content/plugins/kalsteinCotizacion/classes/template.php'; 
+include '/home/he290532/testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/template.php';
 $html = ob_get_clean();
 
 $html = '
 <html>
 <head>
-<link rel="stylesheet" href="https://testing.kalstein.digital/wp-content/plugins/kalsteinCotizacion/classes/pdf.css">
+<link rel="stylesheet" href="https://testing.kalstein.digital/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/pdf.css">
 </head>
 <body>
 ' . $html . '

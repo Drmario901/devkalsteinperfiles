@@ -29,10 +29,6 @@ jQuery(document).ready(function() {
         });
     }
 
-
-  
-    
-
     function generarTabla(datos) {
         console.log('datosss', datos);
 
@@ -44,6 +40,18 @@ jQuery(document).ready(function() {
         const indexMax = Math.ceil(datos.length / itemPerPage);
         console.log('itemsCurrent', currentItems);
         console.log('indexItems', indexMax);
+
+        $(document).on("click", "#boton-prev", function(){
+            if(currentPage > indexMax) {
+                currentPage - 1;
+            }
+        });
+
+        $(document).on("click", "#boton-next", function(){
+            if(currentPage < indexMax) {
+                currentPage + 1;
+            }
+        });
         
         
         
@@ -51,7 +59,7 @@ jQuery(document).ready(function() {
         currentItems.forEach((fila) =>  {
             tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td><td>${fila.status_payment}</td></tr>`;
         });
-        tablaHtml += '</tbody></table> <button>Prev</button> <button>Next</button>';
+        tablaHtml += '</tbody></table> ';
         return tablaHtml;
     }
 

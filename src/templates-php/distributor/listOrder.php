@@ -4,8 +4,8 @@
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
-            
-            include 'navbar.php';
+
+        include 'navbar.php';
 
         ?>
         <script>
@@ -18,63 +18,67 @@
 
     <article class="container article">
         <?php
-            $banner_img = 'Header-distribuidor-IMG.jpg';
-            $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+        $banner_img = 'Header-distribuidor-IMG.jpg';
+        $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-            // Incluir el archivo de traducciones
-            require __DIR__. '/../../../php/translations.php';
-            $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
+        // Incluir el archivo de traducciones
+        require __DIR__ . '/../../../php/translations.php';
+        $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 
-            $pendiente = $translations[$lang]['pendiente'];
+        $pendiente = $translations[$lang]['pendiente'];
 
-            // Determinar el texto del banner según el idioma
-            $banner_text_translation = isset($translations[$language]['banner_text_pending_orders']) ? $translations[$language]['banner_text_pending_orders'] : $translations['en']['banner_text_pending_orders'];
-            
-            // Incluir el banner.php pasando el texto traducido y el nombre del usuario
-            $banner_text = $banner_text_translation;
-            include __DIR__.'/../manufacturer/banner.php';
+        // Determinar el texto del banner según el idioma
+        $banner_text_translation = isset($translations[$language]['banner_text_pending_orders']) ? $translations[$language]['banner_text_pending_orders'] : $translations['en']['banner_text_pending_orders'];
+
+        // Incluir el banner.php pasando el texto traducido y el nombre del usuario
+        $banner_text = $banner_text_translation;
+        include __DIR__ . '/../manufacturer/banner.php';
         ?>
-        
+
         <nav class="nav nav-borders">
-            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes" data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/procesadas" data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</a>
-            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/canceladas" data-i18n="distribuidor:parrafoOrdenesCancel">Órdenes canceladas</a>
-            <a class="nav-link" href="https:/dev.kalstein.plus/plataforma/index.php/editor-de-plantillas" data-i18n="distribuidor:linkEditarPlantilla">Editar plantilla</a>
+            <a class="nav-link active" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes"
+                data-i18n="distribuidor:parrafoOrdenesPend">Órdenes pendientes</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/procesadas"
+                data-i18n="distribuidor:parrafoOrdenesProcess">Órdenes procesadas</a>
+            <a class="nav-link" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ordenes/canceladas"
+                data-i18n="distribuidor:parrafoOrdenesCancel">Órdenes canceladas</a>
+            <a class="nav-link" href="https:/dev.kalstein.plus/plataforma/index.php/editor-de-plantillas"
+                data-i18n="distribuidor:linkEditarPlantilla">Editar plantilla</a>
         </nav>
-        
+
         <br>
-        
+
         <div id="listOrderTable" class="table-responsive">
             <?php
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
-                session_start();
-                require __DIR__.'/../../../php/conexion.php';
-        
-                $acc_id = $_SESSION['emailAccount'];
-        
-                $perPage = 5;
-                $page = isset($_GET['i']) ? $_GET['i'] : 1;
-        
-               
+            session_start();
+            require __DIR__ . '/../../../php/conexion.php';
 
-                $queryTotal = "SELECT COUNT(*) FROM wp_cotizacion WHERE (cotizacion_status = 'Pendiente' OR cotizacion_status = '0') AND cotizacion_id_remitente = '$acc_id'";
-                $All = $conexion->query($queryTotal)->fetch_array()[0];
+            $acc_id = $_SESSION['emailAccount'];
 
-                if ($All <= ($page - 1) * $perPage){
-                    $page = intdiv($All, $perPage) + ($All % $perPage > 0 ? 1 : 0);
-                }
+            $perPage = 5;
+            $page = isset($_GET['i']) ? $_GET['i'] : 1;
 
-                $page = max(intval($page), 1);
-        
-                $offset = ($page - 1) * $perPage;
-                $limit = $perPage;
 
-                $consulta = "SELECT * FROM wp_cotizacion WHERE (cotizacion_status = 'Pendiente' OR cotizacion_status = '0') AND cotizacion_id_remitente = '$acc_id' ORDER BY cotizacion_create_at DESC LIMIT $offset, $limit";
-                $resultado = $conexion->query($consulta);
-        
-                $html = "
+
+            $queryTotal = "SELECT COUNT(*) FROM wp_cotizacion WHERE (cotizacion_status = 'Pendiente' OR cotizacion_status = '0') AND cotizacion_id_remitente = '$acc_id'";
+            $All = $conexion->query($queryTotal)->fetch_array()[0];
+
+            if ($All <= ($page - 1) * $perPage) {
+                $page = intdiv($All, $perPage) + ($All % $perPage > 0 ? 1 : 0);
+            }
+
+            $page = max(intval($page), 1);
+
+            $offset = ($page - 1) * $perPage;
+            $limit = $perPage;
+
+            $consulta = "SELECT * FROM wp_cotizacion WHERE (cotizacion_status = 'Pendiente' OR cotizacion_status = '0') AND cotizacion_id_remitente = '$acc_id' ORDER BY cotizacion_create_at DESC LIMIT $offset, $limit";
+            $resultado = $conexion->query($consulta);
+
+            $html = "
                 <table class='table custom-table'>
                     <thead class='headTableForQuote'>
                         <tr>
@@ -91,26 +95,26 @@
                     </thead>
                     <tbody class='bodyTableForQuote'>
                 ";
-        
-                if ($resultado->num_rows > 0) {
-        
-                    while ($row = $resultado->fetch_assoc()) {
-                        $quoteId = $row['cotizacion_id'];
-                        $quoteClient = $row['cotizacion_atencion'];
-                        $quoteEnvio = $row['cotizacion_metodo_envio'];
-                        $quoteEnvio = str_replace('Aerial', 'Aereo', $quoteEnvio);
-                        $quoteEnvio = str_replace('Maritime', 'Maritimo', $quoteEnvio);
-                        $quoteTotal = $row['cotizacion_total'];
-                        $quoteDate = $row['cotizacion_create_at'];
-                        $quoteStatus = $row['cotizacion_status'];
-                        $quoteStatus = str_replace('1', 'Para procesar', $quoteStatus);
-                        $quoteClientEmail = $row['cotizacion_id_user'];
 
-                        if($quoteStatus == 0){
-                            $quoteStatus = $pendiente;
-                        }
-        
-                        $html .= "
+            if ($resultado->num_rows > 0) {
+
+                while ($row = $resultado->fetch_assoc()) {
+                    $quoteId = $row['cotizacion_id'];
+                    $quoteClient = $row['cotizacion_atencion'];
+                    $quoteEnvio = $row['cotizacion_metodo_envio'];
+                    $quoteEnvio = str_replace('Aerial', 'Aereo', $quoteEnvio);
+                    $quoteEnvio = str_replace('Maritime', 'Maritimo', $quoteEnvio);
+                    $quoteTotal = $row['cotizacion_total'];
+                    $quoteDate = $row['cotizacion_create_at'];
+                    $quoteStatus = $row['cotizacion_status'];
+                    $quoteStatus = str_replace('1', 'Para procesar', $quoteStatus);
+                    $quoteClientEmail = $row['cotizacion_id_user'];
+
+                    if ($quoteStatus == 0) {
+                        $quoteStatus = $pendiente;
+                    }
+
+                    $html .= "
                             <tr>
                                 <td>$quoteId</td>
                                 <td class='customer-name'>$quoteClient <br> $quoteClientEmail</td>
@@ -124,16 +128,16 @@
                                     </center>
                                 </td>
                                 <td>
-                                    <a href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
+                                    <a href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/classes/createPDF.php?idCotizacion=$quoteId' id='btnViewQuote' style='margin: 0 auto; color: green;'><i class='fa-solid fa-up-right-from-square'></i></a>
                                 </td>
                               
                             </tr>
                         ";
-                    }
-        
-                    $msjNoData = "";
-                } else {
-                    $msjNoData = "
+                }
+
+                $msjNoData = "";
+            } else {
+                $msjNoData = "
                         <tr>
                             <td colspan='9'>
                                 <div class='contentNoDataQuote'>
@@ -143,42 +147,42 @@
                             </td>
                         </tr>
                     ";
-                }
-        
-                $html .= "
+            }
+
+            $html .= "
                     </tbody>
                 </table>
                 $msjNoData
                 ";
-        
-                $prevPage = $page > 1? $page - 1 : 1;
-                $nextPage = $page + 1;
 
-                $hiddenPrev = $page == 1 ? 'hidden' : '';
-                $hiddenNext = $page * $perPage >= $All ? 'hidden' : '';
+            $prevPage = $page > 1 ? $page - 1 : 1;
+            $nextPage = $page + 1;
 
-                $html .= "
+            $hiddenPrev = $page == 1 ? 'hidden' : '';
+            $hiddenNext = $page * $perPage >= $All ? 'hidden' : '';
+
+            $html .= "
                     <span data-i18n='distribuidor:spanPagina'> Página $page </span>
                     <div class='pagination'>
                         <form action='' method='get' style='margin-right: 8px' $hiddenPrev>
-                            <input type='hidden' name='i' value=".($prevPage).">
+                            <input type='hidden' name='i' value=" . ($prevPage) . ">
                             <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='&laquo; Previo'>
                         </form>
                         <form action='' method='get' $hiddenNext>
-                            <input type='hidden' name='i' value=".($nextPage).">
+                            <input type='hidden' name='i' value=" . ($nextPage) . ">
                             <input type='submit' style='color: black !important; border: 1px solid #555 !important' value='Próximo &raquo;'>
                         </form>
                     </div>
                     <input id='hiddenPage' type='hidden' value='$page'>
                 ";
-                    
-                echo $html;
+
+            echo $html;
             ?>
         </div>
     </article>
 
     <?php
-        $footer_img = 'Footer-distribuidor-IMG.png';
-        include 'footer.php';
-    ?> 
+    $footer_img = 'Footer-distribuidor-IMG.png';
+    include 'footer.php';
+    ?>
 </div>
