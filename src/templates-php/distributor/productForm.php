@@ -200,6 +200,7 @@
         cursor: pointer;
     }
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <form method="post" class="tm-edit-product-form">
     <div class="row">
 
@@ -612,5 +613,3 @@
             });
         });
     </script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
