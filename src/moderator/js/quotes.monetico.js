@@ -1,6 +1,9 @@
 jQuery(document).ready(function() {
     cargarDatos();
 
+    let todos = [];
+
+    
     function cargarDatos(pagina = 1) {
         $.ajax({
             url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php', // Asegúrate de que la ruta es correcta
@@ -10,6 +13,10 @@ jQuery(document).ready(function() {
 
                 let respuesta = JSON.parse(response)
                 console.log('respuestaaa', JSON.parse(response));
+                todos = response;
+
+                console.log('datoss', todos);
+                
                 
                 $('#datos-tabla').html(generarTabla(respuesta.datos));
                 $('#paginacion').html(generarPaginacion(respuesta.paginaActual, respuesta.totalPaginas));
@@ -37,6 +44,8 @@ jQuery(document).ready(function() {
         //     }
         // });
     }
+
+
   
     
 
