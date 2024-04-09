@@ -34,7 +34,7 @@ $totalPaginas = ceil($totalFilas / $filasPorPagina);
 
 $conexion->close();
 
-echo json_encode([
+json_encode([
     'datos' => $datos,
     'totalPaginas' => $totalPaginas,
     'paginaActual' => $pagina
