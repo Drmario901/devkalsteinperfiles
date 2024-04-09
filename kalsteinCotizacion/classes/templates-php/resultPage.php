@@ -15,7 +15,7 @@ $lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
 //formatear valores de la consulta para que sea dinamico con la cookie
 //si el valor de la cookie es 'en' se elimina el sufijo '_en' de las columnas
 
-$productName = $lang == 'en' ? 'product_name_en' : 'product_name_' . $lang;
+$productName = 'product_name_' . $lang;
 $productCategory = $lang == 'en' ? 'product_category' : 'product_category_' . $lang;
 $productSubcategory = $lang == 'en' ? 'product_subcategory' : 'product_subcategory_' . $lang;
 $productTag = $lang == 'en' ? 'product_tags' : 'product_tags_' . $lang;
