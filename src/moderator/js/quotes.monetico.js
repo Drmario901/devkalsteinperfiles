@@ -51,14 +51,14 @@ jQuery(document).ready(function() {
         return tablaHtml;
     }
 
-    // function generarPaginacion(paginaActual, totalPaginas) {
-    //     let paginacionHtml = '<nav><ul class="pagination">';
-    //     for(let i = 1; i <= totalPaginas; i++) {
-    //         paginacionHtml += `<li class="page-item ${paginaActual === i ? 'active' : ''}"><a class="page-link" href="#" onclick="cargarDatos(${i});return false;">${i}</a></li>`;
-    //     }
-    //     paginacionHtml += '</ul></nav>';
-    //     return paginacionHtml;
-    // }
+    function generarPaginacion(paginaActual, totalPaginas) {
+        let paginacionHtml = '<nav><ul class="pagination">';
+        for(let i = 1; i <= totalPaginas; i++) {
+            paginacionHtml += `<li class="page-item ${paginaActual === i ? 'active' : ''}"><a class="page-link" href="#" onclick="cargarDatos(${i});return false;">${i}</a></li>`;
+        }
+        paginacionHtml += '</ul></nav>';
+        return paginacionHtml;
+    }
 
     $('#boton-verify').click(function() {
         alert('¡Botón clickeado!');
