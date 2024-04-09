@@ -69,55 +69,95 @@
 // });
 
 
-function actualizarVista() {
-    let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
-    $('#datos-tabla').html(generarTabla(datosPagina));
-    actualizarPaginacion();
-}
+jQuery(document).ready(function() {
+    let todos = [];
+    let paginaActual = 1;
+    let itemsPorPagina = 10; // Define cuántos items quieres por página
 
-function actualizarPaginacion() {
-    let totalPaginas = Math.ceil(todos.length / itemsPorPagina);
-    let paginacionHtml = '<nav aria-label="Page navigation example"><ul class="pagination">';
+    // Simulamos la carga inicial de datos
+    cargarDatos();
 
-    // Botón "Anterior"
-    if (paginaActual > 1) {
-        paginacionHtml += `<li class="page-item"><a class="page-link" href="#" id="page-prev">Anterior</a></li>`;
-    } else {
-        paginacionHtml += `<li class="page-item disabled"><span class="page-link">Anterior</span></li>`;
-    }
-
-    // Números de página
-    for (let i = 1; i <= totalPaginas; i++) {
-        if (i === paginaActual) {
-            paginacionHtml += `<li class="page-item active"><span class="page-link">${i}</span></li>`;
-        } else {
-            paginacionHtml += `<li class="page-item"><a class="page-link" href="#" id="page-${i}">${i}</a></li>`;
+    // Ajusta la paginación cada vez que se hace clic en los botones
+    $(document).on("click", "#boton-prev", function() {
+        if (paginaActual > 1) {
+            paginaActual--;
+            actualizarVista();
         }
-    }
-
-    // Botón "Siguiente"
-    if (paginaActual < totalPaginas) {
-        paginacionHtml += `<li class="page-item"><a class="page-link" href="#" id="page-next">Siguiente</a></li>`;
-    } else {
-        paginacionHtml += `<li class="page-item disabled"><span class="page-link">Siguiente</span></li>`;
-    }
-
-    paginacionHtml += '</ul></nav>';
-    $('#paginacion').html(paginacionHtml);
-
-    // Agregar evento a los números de página
-    $('.page-link').click(function(e) {
-        e.preventDefault(); // Prevenir el comportamiento por defecto de los enlaces
-        let id = $(this).attr('id');
-        
-        if (id === "page-prev") {
-            paginaActual = Math.max(1, paginaActual - 1);
-        } else if (id === "page-next") {
-            paginaActual = Math.min(totalPaginas, paginaActual + 1);
-        } else {
-            paginaActual = parseInt(id.replace("page-", ""));
-        }
-        
-        actualizarVista();
     });
-}
+
+    $(document).on("click", "#boton-next", function() {
+        let totalPaginas = Math.ceil(todos.length / itemsPorPagina);
+        if (paginaActual < totalPaginas) {
+            paginaActual++;
+            actualizarVista();
+        }
+    });
+
+    function cargarDatos() {
+        // Asumiendo que todos se llena aquí con datos iniciales
+        $.ajax({
+            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php',
+            success: function(response) {
+                // Simulamos una respuesta con datos
+                todos = JSON.parse(response).datos; // Asegúrate de que esto coincida con el formato de tu respuesta
+                actualizarVista();
+            },
+            error: function() {
+                console.error('Error al cargar los datos');
+            }
+        });
+    }
+
+    function actualizarVista() {
+        let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
+        $('#datos-tabla').html(generarTabla(datosPagina));
+        actualizarPaginacion();
+    }
+    
+    function actualizarPaginacion() {
+        let totalPaginas = Math.ceil(todos.length / itemsPorPagina);
+        let paginacionHtml = '<nav aria-label="Page navigation example"><ul class="pagination">';
+    
+        // Botón "Anterior"
+        if (paginaActual > 1) {
+            paginacionHtml += `<li class="page-item"><a class="page-link" href="#" id="page-prev">Anterior</a></li>`;
+        } else {
+            paginacionHtml += `<li class="page-item disabled"><span class="page-link">Anterior</span></li>`;
+        }
+    
+        // Números de página
+        for (let i = 1; i <= totalPaginas; i++) {
+            if (i === paginaActual) {
+                paginacionHtml += `<li class="page-item active"><span class="page-link">${i}</span></li>`;
+            } else {
+                paginacionHtml += `<li class="page-item"><a class="page-link" href="#" id="page-${i}">${i}</a></li>`;
+            }
+        }
+    
+        // Botón "Siguiente"
+        if (paginaActual < totalPaginas) {
+            paginacionHtml += `<li class="page-item"><a class="page-link" href="#" id="page-next">Siguiente</a></li>`;
+        } else {
+            paginacionHtml += `<li class="page-item disabled"><span class="page-link">Siguiente</span></li>`;
+        }
+    
+        paginacionHtml += '</ul></nav>';
+        $('#paginacion').html(paginacionHtml);
+    
+        // Agregar evento a los números de página
+        $('.page-link').click(function(e) {
+            e.preventDefault(); // Prevenir el comportamiento por defecto de los enlaces
+            let id = $(this).attr('id');
+            
+            if (id === "page-prev") {
+                paginaActual = Math.max(1, paginaActual - 1);
+            } else if (id === "page-next") {
+                paginaActual = Math.min(totalPaginas, paginaActual + 1);
+            } else {
+                paginaActual = parseInt(id.replace("page-", ""));
+            }
+            
+            actualizarVista();
+        });
+    }
+});
