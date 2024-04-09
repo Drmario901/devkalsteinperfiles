@@ -589,8 +589,6 @@
 </form>
 
 <script>
-    let plugin_dir = "http://dev.kalstein.plus/plataforma/wp-local/wp-content/plugins/kalsteinPerfiles/";
-
         $('#dataCategory').change(function() {
             var category = $(this).val();
 
