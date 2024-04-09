@@ -29,10 +29,6 @@ jQuery(document).ready(function() {
         });
     }
 
-
-  
-    
-
     function generarTabla(datos) {
         console.log('datosss', datos);
 
@@ -63,7 +59,7 @@ jQuery(document).ready(function() {
         currentItems.forEach((fila) =>  {
             tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td><td>${fila.status_payment}</td></tr>`;
         });
-        tablaHtml += '</tbody></table> <button id="boton-prev" >Prev</button> <button id="boton-next">Next</button>';
+        tablaHtml += '</tbody></table> ';
         return tablaHtml;
     }
 
