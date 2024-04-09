@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 // require __DIR__ . '/../../../db/conexion.php';
 
 // require_once __DIR__ . '/../../../php/moderator/quotesMonetico.php'
-require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php';
+// require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/quotesMonetico.php';
 
 
 //  if(isset($_SESSION['privateEmailAccount'])){
