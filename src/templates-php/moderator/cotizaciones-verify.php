@@ -22,7 +22,7 @@ error_reporting(E_ALL);
 <style>
   .buttonPaginate {
  appearance: button;
- background-color: #1899D6;
+ background-color: hsl(229.26deg 59.01% 31.57%);
  border: solid transparent;
  border-radius: 16px;
  border-width: 0 0 4px;
@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 
 .buttonPaginate:after {
  background-clip: padding-box;
- background-color: #1CB0F6;
+ background-color: hsl(229.26deg 59.01% 31.57%);
  border: solid transparent;
  border-radius: 16px;
  border-width: 0 0 4px;
