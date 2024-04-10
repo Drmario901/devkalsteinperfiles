@@ -598,9 +598,9 @@ jQuery(document).ready(function ($) {
     for (let key of Object.keys(currentFileAccessories)) {
       formData.append("accessoryFiles-" + key, currentFileAccessories[key]);
     }
-
-    console.log(all_accessories);
-    */
+*/
+    console.log(fileName);
+    
 
     $("#btnSendData").attr("disabled", "");
 
