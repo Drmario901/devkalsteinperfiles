@@ -411,7 +411,7 @@ jQuery(document).ready(function ($) {
     var description = $("#descriptionProduct").val().replace(/'/g, "\\'");
     var category = $("#dataCategory").val();
     var subcategory = $("#subCategorySelect").val();
-    var fileName = $("#file-input")[0].files[0];
+    var fileName = $("#file-input").files[0];
     var stock = $("#stockProduct").val();
     var status = $("#statusProduct").val();
 
