@@ -315,7 +315,7 @@
                 </div>
                 <div class='card-body row'>
                     <div class='col-md-6 mb-2'>
-                        <h5><i class='fas fa-microscope'>Measures</i> <input class='d-inline' type='checkbox' id='measures'></h5>
+                        <h5><i class='fas fa-microscope'></i>Measures <input class='d-inline' type='checkbox' id='measures'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
                             <li><b>weigth</b>: $we kg</li>
@@ -325,7 +325,7 @@
                         </ul>
                     </div>
                     <div class='col-md-6'>
-                        <h5><i class='fas fa-box'>Measures Packaged <input class='d-inline' type='checkbox' id='measures-p'></i></h5>
+                        <h5><i class='fas fa-box'></i>Measures Packaged <input class='d-inline' type='checkbox' id='measures-p'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
                             <li><b>weigth</b>: $wePa kg</li> 
