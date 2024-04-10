@@ -16,7 +16,7 @@
 // prueba
 
 
-require_once dirname(__FILE__) . '/kalsteinCotizacion/kalsteinCotizacion/classes/shortcode.php';
+require_once dirname(__FILE__) . 'kalsteinCotizacion/classes/shortcode.php';
 
 function activated()
 {
