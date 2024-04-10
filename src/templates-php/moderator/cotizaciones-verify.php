@@ -55,7 +55,8 @@ error_reporting(E_ALL);
     </div> -->
     <div style="display: flex; justify-content: space-between">
         <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous" >
-          Prev
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
         </button>
 
       <ul id="paginado" class="pagination" >
@@ -63,7 +64,8 @@ error_reporting(E_ALL);
       </ul>
   
         <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next" >
-          Next
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
         </button>
     </div>
     
