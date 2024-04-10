@@ -112,7 +112,7 @@ error_reporting(E_ALL);
     </div> -->
     <div style="display: flex;">
     <li class="page-item">
-        <button id="boton-prev" class="page-link btn btn-outline-primary" aria-label="Previous" >
+        <button id="boton-prev" class="btn btn-outline-primary" aria-label="Previous" >
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">Previous</span>
         </button>
@@ -121,7 +121,7 @@ error_reporting(E_ALL);
   
       </ul>
       <li class="page-item">
-        <button id="boton-next" class="page-link btn btn-outline-primary" aria-label="Next">
+        <button id="boton-next" class="btn btn-outline-primary" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Next</span>
         </button>
