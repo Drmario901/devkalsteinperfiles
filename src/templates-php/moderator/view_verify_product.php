@@ -356,18 +356,17 @@
                             <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
                         </div>
                     </div>
-                    <hr class='mt-3'>
                     <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
                 </div>
-
+                <hr class='mt-3'>
                 <textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
-                <div class='d-flex justify-content-start' id='strikeContainer'>
+                <p class='d-flex justify-content-start' id='strikeContainer'>
                     <label>Strike</label>
                     <input class='d-inline' type='checkbox' id='strike'>
-                </div>
+                </p>
 
                 <div id='btnValidate' class='mx-auto'>
                     <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
