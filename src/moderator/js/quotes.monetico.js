@@ -135,7 +135,7 @@ jQuery(document).ready(function() {
         let tablaHtml = '<table class="table"><thead><tr><th>ID</th><th>ID Cotización</th><th>Monto Total</th><th>Divisa</th><th>ID Remitente</th><th>Estado del Pago</th></tr></thead><tbody>';
         datos.forEach(fila => {
             let status = '';
-            if(fila.status_payment === 0) {
+            if(fila.status_payment == 0) {
                 status = "<td class='pay-pendiente'>Pendiente</td>";
             } else {
                 status = "<td class='pay-pagado'>Pagado</td>";
