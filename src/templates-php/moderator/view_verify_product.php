@@ -20,7 +20,7 @@
         border-radius: 12px;
         margin: 0;
     }
-    h5, p, label {
+    h5, p {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -275,14 +275,14 @@
                         </a>
                         
                         <!-- Enlaces o promociones -->
-                        <label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-i'><br>
+                        <p><label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-i'></p><br>
 
-                        <label for=''>Image quality</label>
-                        <input class='d-inline' type='checkbox' id='quality-i'><br>
+                        <p><label for=''>Image quality</label>
+                        <input class='d-inline' type='checkbox' id='quality-i'></p><br>
 
-                        <label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-i'><br><br>
+                        <p><label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-i'></p>
                         
                         <p class='mb-0'>
                             <b>Category: </b>$category
@@ -299,11 +299,14 @@
                         <p style='text-align: justify;'>$description</p>
                         <table class='table table-responsive'>$table</table>
                         </div>
+                        <p>
                         <label for=''>Links or self-promotion</label>
                         <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                        
+                        </p>
+                        <p>
                         <label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        </p>
 
                         $div_acc
                     </div>
