@@ -134,10 +134,12 @@ jQuery(document).ready(function() {
             ],
             onClosing: function(instance, toast, closedBy) {
                 console.log('Closing...');
-                searchDataProductTbl();
+                console.log('actualizado', id);
+                // searchDataProductTbl();
             },
             onClosed: function(instance, toast, closedBy) {
                 console.log('Closed...');
+                console.log('Cancelado');
             }
         });
     });
