@@ -1,6 +1,6 @@
 <?php
 //require '../../vendor/autoload.php';
-    function validate($name, $model, $brand, $description, $category, $fileName, $stock, $status,
+    function validate($name, $model, $brand, $description, $category, $fileInput, $stock, $status,
     $weight, $length, $width, $height,
     $weight_pa, $length_pa, $width_pa, $height_pa, $pa_type,
     $price, $currency,
@@ -11,7 +11,7 @@
         $err_msg = "";
 
         // void verifications
-        if ($fileName == '') {
+        if ($fileInput == '') {
             $err_msg = 'Agrega una imágen para guardar el producto';
         }
         else if ($name == '') {
@@ -136,9 +136,9 @@
         else {
             if (!$dontimage){
                     $maxSize = 10 * 1024 * 1024; // 10 MB
-                $ft = pathinfo($fileName['name'], PATHINFO_EXTENSION);
+                $ft = pathinfo($fileInput['name'], PATHINFO_EXTENSION);
 
-                if ($fileName['size'] > $maxSize) {
+                if ($fileInput['size'] > $maxSize) {
                     $err_msg = 'El archivo excede el límite de 10 MB.';
                 }
                 else if ($ft != 'JPEG' && $ft != 'JPG' && $ft != 'PNG' && $ft != 'jpeg' && $ft != 'jpg' && $ft != 'png') {
