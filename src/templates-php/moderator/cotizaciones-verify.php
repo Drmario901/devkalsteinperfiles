@@ -110,7 +110,7 @@ error_reporting(E_ALL);
   <!--  <div id="paginacion">
          Los controles de paginación se generarán dinámicamente 
     </div> -->
-    <div>
+    <div style="display: flex;">
     <li class="page-item">
         <button id="boton-prev" class="page-link" aria-label="Previous" >
           <span aria-hidden="true">&laquo;</span>
