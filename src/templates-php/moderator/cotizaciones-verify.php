@@ -32,15 +32,7 @@ error_reporting(E_ALL);
   color: white;
 }
 
-.pay-pendiente {
-  background-color: orange;
-  color: white;
-}
-.pay-pagado {
-  background-color: green;
-  color: white;
-  text-align: center;
-}
+
 </style>
 
 <header class="header" data-header>
