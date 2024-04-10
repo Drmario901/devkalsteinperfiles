@@ -104,10 +104,46 @@ jQuery(document).ready(function() {
         let id = $(this).data('id'); // Obtiene el data-id del botón clickeado
         console.log("Botón con data-id " + id + " clickeado");
 
-        // Aquí puedes añadir tu lógica para manejar el clic del botón
-        // Por ejemplo, podrías hacer una solicitud AJAX para confirmar el pago
-        // y luego actualizar la interfaz de usuario acordemente
+            // Aquí puedes añadir tu lógica para manejar el clic del botón
+            // Por ejemplo, podrías hacer una solicitud AJAX para confirmar el pago
+            // y luego actualizar la interfaz de usuario acordemente
+
+        iziToast.question({
+            timeout: false,
+            close: false,
+            overlay: true,
+            displayMode: 'once',
+            id: 'question',
+            zindex: 999,
+            title: 'Confirmar',
+            message: `estas seguro de confirmar la cotizacion: ${id} ?`,
+            position: 'center',
+            buttons: [
+                [`<button><b>Si</b></button>`, function(instance, toast) {
+                    instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                    console.log('actualizado', id);
+                    
+                },
+                true
+                ],
+                [`<button>No</button>`, function(instance, toast) {
+                    instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                    console.log('Cancelado');
+                    
+                }]
+            ],
+            onClosing: function(instance, toast, closedBy) {
+                console.log('Closing...');
+                searchDataProductTbl();
+            },
+            onClosed: function(instance, toast, closedBy) {
+                console.log('Closed...');
+            }
+        });
     });
+
+    
+  
 
 
 
