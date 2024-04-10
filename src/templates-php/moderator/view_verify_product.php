@@ -20,10 +20,11 @@
         border-radius: 12px;
         margin: 0;
     }
-    h6 {
+    h5 {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-align: start;
     }
     .card-header {
         background-color: white;
