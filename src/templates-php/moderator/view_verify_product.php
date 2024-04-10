@@ -20,7 +20,7 @@
         border-radius: 12px;
         margin: 0;
     }
-    p {
+    h6 {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -256,10 +256,11 @@
             <div class='card'>
                 <div class='card-header row'>
                     <div class='col-md-4 text-sm-start text-md-center'>
-                        <p>
-                            <span><b>Product Name:</b><input class='d-inline' type='checkbox' id='name'></span>
-                            $name
-                        </p>
+                        <h6>
+                            Product Name
+                            <input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p>$name</p>
                         <p>
                             <b>Model</b>: $model
                             <input class='d-inline' type='checkbox' id='model'>
