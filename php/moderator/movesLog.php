@@ -56,7 +56,7 @@ error_reporting(E_ALL);
     }
     
     $query .= "ORDER BY date DESC LIMIT $offset, $limit";
-
+echo $query;
     // $response['query'] = $query;
     $result = $conexion->query($query);
 
