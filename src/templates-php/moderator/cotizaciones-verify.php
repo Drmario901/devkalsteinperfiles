@@ -21,7 +21,7 @@ error_reporting(E_ALL);  */
 
 <style>
 .buton-paginate {
-  color: black;
+  color: #0d6efd;
 }
  .boton-paginate:hover {
   color: white;
