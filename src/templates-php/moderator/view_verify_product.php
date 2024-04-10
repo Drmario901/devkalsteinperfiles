@@ -20,7 +20,7 @@
         border-radius: 12px;
         margin: 0;
     }
-    h5, p {
+    h5, p, label {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -275,19 +275,20 @@
                         </a>
                         
                         <!-- Enlaces o promociones -->
-                        <label for=''>links or self-promotion</label>
+                        <label for=''>Links or self-promotion</label>
                         <input class='d-inline' type='checkbox' id='promotions-i'><br>
 
-                        <label for=''>image quality</label>
+                        <label for=''>Image quality</label>
                         <input class='d-inline' type='checkbox' id='quality-i'><br>
 
-                        <label for=''>professionalism</label>
+                        <label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-i'><br><br>
                         
                         <p class='mb-0'>
-                            <b>Category</b>: <input class='d-inline' type='checkbox' id='category'>
+                            <b>Category: </b>$category
+                            <input class='d-inline' type='checkbox' id='category'>
                         </p>
-                        <p>$category</p>
+        
                         <p>
                             <b>Manufacturer</b>: $brand <input class='d-inline' type='checkbox' id='brand'>
                         </p>
