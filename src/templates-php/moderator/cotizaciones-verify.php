@@ -31,6 +31,16 @@ error_reporting(E_ALL);
   background-color: hsl(229.26deg 59.01% 31.57%);
   color: white;
 }
+
+.pay-pendiente {
+  background-color: orange;
+  color: white;
+}
+.pay-pagado {
+  background-color: green;
+  color: white;
+  text-align: center;
+}
 </style>
 
 <header class="header" data-header>
