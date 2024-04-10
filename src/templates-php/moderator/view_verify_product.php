@@ -13,16 +13,20 @@
     </script>
 </header>
 
-<br>
-<br>
-<br>
-<br>
-
 <style>
     input[type="checkbox"] {
         width: 20px;
         height: 20px;
         border-radius: 12px;
+        margin: 0;
+    }
+    p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    .card-header {
+        background-color: white;
     }
 </style>
 
@@ -252,10 +256,10 @@
             <div class='card'>
                 <div class='card-header row'>
                     <div class='col-md-4 text-sm-start text-md-center'>
-                        <h4>
+                        <p>
+                            <span><b>Product Name:</b><input class='d-inline' type='checkbox' id='name'></span>
                             $name
-                            <input class='d-inline' type='checkbox' id='name'>
-                        </h4>
+                        </p>
                         <p>
                             <b>Model</b>: $model
                             <input class='d-inline' type='checkbox' id='model'>
