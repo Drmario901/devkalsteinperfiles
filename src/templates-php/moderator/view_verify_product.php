@@ -292,7 +292,7 @@
                     </div>
                     <div class='col-md-8'>
                         <h5>Description</h5>
-                        <div style='background-color: white;'>
+                        <div style='border: solid 1px #c9c9c9; borde-radius: 5px'>
                         <p style='text-align: justify;'>$description</p>
                         <table class='table table-responsive'>$table</table>
                         </div>
