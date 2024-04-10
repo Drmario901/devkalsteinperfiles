@@ -108,40 +108,49 @@ jQuery(document).ready(function() {
             // Por ejemplo, podrías hacer una solicitud AJAX para confirmar el pago
             // y luego actualizar la interfaz de usuario acordemente
 
-        iziToast.question({
-            timeout: false,
-            close: false,
-            overlay: true,
-            displayMode: 'once',
-            id: 'question',
-            zindex: 999,
-            title: 'Confirmar',
-            message: `estas seguro de confirmar la cotizacion: ${id} ?`,
-            position: 'center',
-            buttons: [
-                [`<button><b>Si</b></button>`, function(instance, toast) {
-                    instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
-                    console.log('actualizado', id);
-                    
-                },
-                true
+            iziToast.question({
+                timeout: false,
+                close: false,
+                overlay: true,
+                displayMode: 'once',
+                id: 'question',
+                zindex: 999,
+                title: 'Confirmar',
+                message: `¿Estás seguro de confirmar la cotización: ${id}?`,
+                position: 'center',
+                buttons: [
+                    [`<button><b>Si</b></button>`, function(instance, toast) {
+                        instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+            
+                        // Aquí colocas tu lógica AJAX/Fetch para actualizar la cotización
+                        $.ajax({
+                            url: 'ruta/a/tu/servidor', // URL al servidor que maneja la actualización
+                            type: 'POST', // Método HTTP, puede ser 'POST', 'PUT', dependiendo de tu API
+                            data: { id: id }, // Datos que envías al servidor, en este caso el ID de la cotización
+                            success: function(response) {
+                                // Acciones a realizar después de una respuesta exitosa del servidor
+                                console.log('Cotización confirmada con éxito.', response);
+                                // Aquí podrías, por ejemplo, recargar la tabla de cotizaciones o mostrar un mensaje de éxito
+                            },
+                            error: function(xhr, status, error) {
+                                // Manejo de errores
+                                console.error('Error al confirmar la cotización:', error);
+                            }
+                        });
+                        
+                    }, true],
+                    [`<button>No</button>`, function(instance, toast) {
+                        instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                        console.log('Cancelado');
+                    }]
                 ],
-                [`<button>No</button>`, function(instance, toast) {
-                    instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
-                    console.log('Cancelado');
-                    
-                }]
-            ],
-            onClosing: function(instance, toast, closedBy) {
-                console.log('Closing...');
-                console.log('actualizado', id);
-                // searchDataProductTbl();
-            },
-            onClosed: function(instance, toast, closedBy) {
-                console.log('Closed...');
-                console.log('Cancelado');
-            }
-        });
+                onClosing: function(instance, toast, closedBy) {
+                    console.log('Closing...');
+                },
+                onClosed: function(instance, toast, closedBy) {
+                    console.log('Closed...');
+                }
+            });
     });
 
     
