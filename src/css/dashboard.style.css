@@ -1987,3 +1987,8 @@ input:focus {
 .productContainer h6.card-title {
   word-break: break-all;
 }
+
+#btnGenerateCSV:hover{
+  color: #213280 !important;
+  border-bottom: 2px solid #213280 !important;
+} 

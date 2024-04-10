@@ -65,7 +65,7 @@
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
-                    <td data-i17n='client:itemTabla'>item</td>
+                    <td data-i17n='client:itemTabla'>Item</td>
                     <td data-i17n='client:cliente'>Log ID</td>
                     <td data-i17n='client:moderador'>Moderator</td>
                     <td data-i17n='client:account'>Account</td>

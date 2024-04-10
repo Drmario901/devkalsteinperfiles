@@ -16,7 +16,7 @@
     <article class="container article">
 
         <div class="row">
-        <h4>Productos pendientes por verificar</h4>
+        <h4 class='mt-2'>Productos pendientes por verificar</h4>
 
             <!-- PRODUCTOS -->
 
