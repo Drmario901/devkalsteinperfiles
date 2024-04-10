@@ -158,6 +158,8 @@ jQuery(document).ready(function() {
         // Nota: eliminé el manejador de eventos individual dentro de esta función
         // y utilizo el atributo data-pagina para identificar el número de página
         let claseActiva = pagina === paginaActual ? 'active' : '';
+        console.log('activo', claseActiva);
+        
         return `<li class="page-item ${claseActiva}"><button class="page-link" data-pagina="${pagina}">${pagina}</button></li>`;
     }
 });
