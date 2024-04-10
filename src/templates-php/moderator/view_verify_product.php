@@ -26,6 +26,9 @@
     gap: 10px;
     text-align: start;
     }
+    h5 {
+        font-weight: 700;
+    }
     .card-header {
         background-color: white;
     }
@@ -289,15 +292,15 @@
                     </div>
                     <div class='col-md-8'>
                         <h5>Description</h5>
-                        <p style='text-align: justify; background-color: white;'>$description</p>
+                        <div style='background-color: white;'>
+                        <p style='text-align: justify;'>$description</p>
                         <table class='table table-responsive'>$table</table>
-                        <br>
-                        
+                        </div>
                         <label for=''>links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        <input class='d-inline' type='checkbox' id='promotions-d'>
                         
                         <label for=''>professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-d'><br><br>
+                        <input class='d-inline' type='checkbox' id='professionalism-d'>
 
                         $div_acc
                     </div>
