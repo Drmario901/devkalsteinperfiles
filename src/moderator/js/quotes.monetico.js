@@ -136,7 +136,7 @@ jQuery(document).ready(function() {
         datos.forEach(fila => {
             let status = '';
             if(fila.status_payment == 0) {
-                status = "<td class='pay-pendiente'>Pendiente</td>";
+                status = "<td class='pay-pendiente'>Pendiente</td><button>Confirmar</button>";
             } else {
                 status = "<td class='pay-pagado'>Pagado</td>";
             }
