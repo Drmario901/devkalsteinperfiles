@@ -14,10 +14,6 @@
 </header>
 <main>   
     <article class="container article">
-        <br>
-        <br>
-        <br>
-        <br>
 
         <div class="row">
 
@@ -87,7 +83,7 @@
                             $mod = $resultAction->fetch_array()[1];
 
                             $verifying_by = "
-                                <div class='col-12 card p-1 mt-2' style='background-color: #74d7e0;'>Verifying by: $mod</div>
+                                <b class='mt-2'>Verifying by: $mod</b>
                             ";
                         }
                         else {
@@ -96,21 +92,27 @@
 
                         echo "
                         <div class='col-lg-6'>
+                        <h4>Productos pendientes por verificar</h4>
                             <div class='card row m-2'>
                                 <div class='col-12'>
                                     <div class='d-flex justify-content-between'>
                                         <h6>Product Verification:</h6>
-                                        <div>$maker</div>
                                     </div>
                                 </div>
                                 <div class='col-12 my-2'>
-                                    <div class='d-flex justify-content-between'>
+                                    <div class='d-flex justify-content-between align-items-center'>
                                         <img class='mx-1' src='$image' width=150>
+                                        <div>
+                                        <b>Solicitado por:</b>
+                                        <div>$maker</div>
+                                        <b>Producto solicitado:</b>
                                         <div> $name | $brand | $model</div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class='col-12'>
-                                    <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-product?pid=$id'>
+                                    <a href='https://plataforma.kalstein.net/index.php/moderator/view-product?pid=$id'>
                                         <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                                     </a>
                                 </div>

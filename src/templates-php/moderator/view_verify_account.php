@@ -13,16 +13,20 @@
     </script>
 </header>
 
-<br>
-<br>
-<br>
-<br>
-
 <style>
     input[type="checkbox"] {
         width: 20px;
         height: 20px;
         border-radius: 12px;
+        margin: 0;
+    }
+    h6 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    .card-header {
+        background-color: white;
     }
 </style>
 
@@ -55,7 +59,7 @@
                     echo "
                     <script>
                         alert('another user is in this taks');
-                        window.location.href = 'https://dev.kalstein.plus/plataforma/index.php/moderator/accounts';
+                        window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/accounts';
                     </script>
                     ";
                 }
@@ -106,14 +110,6 @@
                 $websiteCompany = $row2[9];
                 $rifCompany = $row2[10];
                 $imgrifCompany = $row2[11];
-                
-                //Verificar si descuento gilson tiene un valor, si no, se le asigna 0
-                if ($row2['descuento_gibson'] === NULL){
-                    $discountGilson = 0;
-                }else{
-                    $discountGilson = $row2['descuento_gibson'];
-                }
-                
 
                 $countryAcc = getCountry($countryAcc, $conexion);
                 $countryCompany = getCountry($countryCompany, $conexion);
@@ -126,6 +122,7 @@
                         <h4>
                             User legal data
                         </h4>
+                        <p>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
         
                         <div class='row'>
                             <div class='col-xsm-12 col-sm-6'>
@@ -136,11 +133,11 @@
                             </div>
                             <div class='col-xsm-12 col-sm-6'>
         
-                                <h6>Conuntry and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
+                                <h6>Country and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
                                 $countryAcc<br>
                                 Register: $document
-                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
-                                    <img style='border: 1px solid #999' width=200px src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
+                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
+                                    <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
                                 </a>
                                 <br>
                             
@@ -152,8 +149,9 @@
                         <h4>
                             User Company data
                         </h4>
+                        <p>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
         
-                        <div class='row mb-3'>
+                        <div class='row mb-3' style='border-bottom: 1px solid rgba(33, 40, 50, 0.125);'>
         
                             <div class='col-xsm-12 col-sm-6'>
             
@@ -164,9 +162,15 @@
                                 <br>
                                 
                                 <h6>Location</h6>
-                                <b>Country:</b> $countryCompany <input class='d-inline' type='checkbox' id='country-b'> <br>
-                                <b>Zip Code:</b> $zipcodeCompany <input class='d-inline' type='checkbox' id='zipcode-b'> <br>
-                                <b>Address:</b> $adressCompany <input class='d-inline' type='checkbox' id='adress-b'> <br>
+                                <span style='display: flex;
+                                align-items: center;
+                                gap: 10px;'><b>Country:</b> $countryCompany <input class='d-inline' type='checkbox' id='country-b'><br></span> 
+                                <span style='display: flex;
+                                align-items: center;
+                                gap: 10px;'><b>Zip Code:</b> $zipcodeCompany <input class='d-inline' type='checkbox' id='zipcode-b'> <br></span>
+                                <span style='display: flex;
+                                align-items: center;
+                                gap: 10px;'><b>Address:</b> $adressCompany <input class='d-inline' type='checkbox' id='adress-b'> <br></span>
                             
                             </div>
                             <div class='col-xsm-12 col-sm-6'>
@@ -182,27 +186,16 @@
 
                                 <h6>RIF <input class='d-inline' type='checkbox' id='rif-b'></h6>
                                 Register: $rifCompany
-                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
-                                    <img style='border: 1px solid #999' width=200px src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
+                                <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
+                                    <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
                                 </a>
-                            
-                            </div>
-                            <div class='row'>
-                                <h5>Pricing</h5>
-                                <div class='col-sm-6'>
-
-                                    <label for='' style='margin-top: 20px; font-weight: 900;'>Descuento Gilson</label>
-                                    <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
-
-                                </div>
-                                <div class='col-sm-6'>
-                                    <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
-                                </div>
+                            <br>
+                            <br>
                             </div>
         
                         </div>
         
-                        <textarea class='mx-auto mb-2' style='width: 300px; height: 150px' placeholder='Specify' id='message'></textarea>
+                        <textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
                         <div id='btnValidate' class='mx-auto'>
                             <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
                                 <h4 class='text-white pb-0'>Denegate</h4>
