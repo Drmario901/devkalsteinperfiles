@@ -26,6 +26,10 @@ error_reporting(E_ALL);
  .boton-paginate:hover {
   color: white;
  }
+
+.table > thead {
+  background-color: hsl(229.26deg 59.01% 31.57%);
+}
 </style>
 
 <header class="header" data-header>
