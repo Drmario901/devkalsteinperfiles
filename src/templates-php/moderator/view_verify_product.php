@@ -276,10 +276,10 @@
                         
                         <!-- Enlaces o promociones -->
                         <p><label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-i'></p><br>
+                        <input class='d-inline' type='checkbox' id='promotions-i'></p>
 
                         <p><label for=''>Image quality</label>
-                        <input class='d-inline' type='checkbox' id='quality-i'></p><br>
+                        <input class='d-inline' type='checkbox' id='quality-i'></p><
 
                         <p><label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-i'></p>
@@ -315,7 +315,7 @@
                 </div>
                 <div class='card-body row'>
                     <div class='col-md-6 mb-2'>
-                        <h5>Measures <i class='fas fa-microscope'></i></h5>
+                        <h5><i class='fas fa-microscope'>Measures</i> <input class='d-inline' type='checkbox' id='measures'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
                             <li><b>weigth</b>: $we kg</li>
@@ -323,10 +323,9 @@
                             <li><b>height</b>: $he cm</li> 
                             <li><b>length</b>: $le cm</li>
                         </ul>
-                        <input class='d-inline' type='checkbox' id='measures'>
                     </div>
                     <div class='col-md-6'>
-                        <h5>Measures Packaged <i class='fas fa-box'></i></h5>
+                        <h5><i class='fas fa-box'>Measures Packaged <input class='d-inline' type='checkbox' id='measures-p'></i></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
                             <li><b>weigth</b>: $wePa kg</li> 
@@ -334,7 +333,6 @@
                             <li><b>height</b>: $hePa cm</li> 
                             <li><b>length</b>: $lePa cm</li>
                         </ul>
-                        <input class='d-inline' type='checkbox' id='measures-p'>
                     </div>
                     <hr class='mt-3'>
                     <h5>Files</h5>
