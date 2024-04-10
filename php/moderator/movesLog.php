@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 
     $response = array();
 
-    $page = isset($_POST['page']) ? $_POST['page'] : 1;
+    $page = isset($_POST['page']) ? $_POST['page'] : 2;
     $page = intval($page);
     $perPage = $_POST['per_page'];
     $type = $_POST['type'];
