@@ -192,6 +192,19 @@
                             <br>
                             <br>
                             </div>
+
+                            <div class='row'>
+                            <h5>Pricing</h5>
+                            <div class='col-sm-6'>
+
+                                <label for='' style='margin-top: 20px; font-weight: 900;'>Descuento Gilson</label>
+                                <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
+
+                            </div>
+                            <div class='col-sm-6'>
+                                <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
+                            </div>
+                        </div>
         
                         </div>
         
