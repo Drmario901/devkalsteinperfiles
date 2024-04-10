@@ -47,7 +47,7 @@
         product_manual, product_catalog, product_catalog_name,
         product_technical_description_es, product_technical_description_csv, product_type)
         VALUES
-        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$pSubcategory', '$uploadName',
+        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$pSubcategory', '$fileInput',
         '$pStock', '$pStatus',
         '$pWe', '$pWi','$pHe', '$pLe',
         '$pWePa', '$pWiPa','$pHePa', '$pLePa', '$pPType',
