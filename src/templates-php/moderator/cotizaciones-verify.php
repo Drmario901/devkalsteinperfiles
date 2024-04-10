@@ -63,8 +63,8 @@ error_reporting(E_ALL);  */
 </header>
 
 <body>
-    <h1>Cotizaciones</h1>
-    <button id="boton-verify">Click Aqui</button>
+    <h1 style="text-align: center;">Cotizaciones</h1>
+    
 <div class="container mt-5">
     <div id="datos-tabla">
         <!-- La tabla se llenará dinámicamente con AJAX -->
