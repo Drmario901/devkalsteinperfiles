@@ -94,10 +94,20 @@ jQuery(document).ready(function() {
         }
     });
 
-    $(document).on("click", "select-page", function() {
+    $(document).on("click", "#paginado .page-link", function() {
+        let paginaSeleccionada = parseInt($(this).attr('data-pagina')); // Asegúrate de convertir a número
+        paginaActual = paginaSeleccionada;
+        actualizarVista(); // Esto regenerará los botones y aplicará correctamente la clase `active`
+    });
 
-    })
+    $('#datos-tabla').on('click', 'button[data-id]', function() {
+        var id = $(this).data('id'); // Obtiene el data-id del botón clickeado
+        console.log("Botón con data-id " + id + " clickeado");
 
+        // Aquí puedes añadir tu lógica para manejar el clic del botón
+        // Por ejemplo, podrías hacer una solicitud AJAX para confirmar el pago
+        // y luego actualizar la interfaz de usuario acordemente
+    });
     function cargarDatos() {
         // Asumiendo que todos se llena aquí con datos iniciales
         $.ajax({
@@ -136,13 +146,14 @@ jQuery(document).ready(function() {
         datos.forEach(fila => {
             let status = '';
             if(fila.status_payment == 0) {
-                status = `<td class='pay-pendiente'> <span>Pendiente</span> <button class='btn btn-success' id=${fila.id}>Confirmar</button></td>`;
+                status = `<td class='pay-pendiente'> <span>Pendiente</span> <button class='btn btn-success' data-id="${fila.id}">Confirmar</button></td>`;
             } else {
                 status = "<td class='pay-pagado'>Pagado</td>";
             }
             tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td>${status}</tr>`;
         });
         tablaHtml += '</tbody></table>';
+        
         return tablaHtml;
     }
 
@@ -155,12 +166,6 @@ jQuery(document).ready(function() {
         $("#paginado").html(botonesPagina);
     }
 
-    $(document).on("click", "#paginado .page-link", function() {
-        let paginaSeleccionada = parseInt($(this).attr('data-pagina')); // Asegúrate de convertir a número
-        paginaActual = paginaSeleccionada;
-        actualizarVista(); // Esto regenerará los botones y aplicará correctamente la clase `active`
-    });
-    
     function generarBoton(pagina) {
         // Nota: eliminé el manejador de eventos individual dentro de esta función
         // y utilizo el atributo data-pagina para identificar el número de página
@@ -169,4 +174,6 @@ jQuery(document).ready(function() {
         
         return `<li class="page-item ${claseActiva}"><button class="page-link" data-pagina="${pagina}">${pagina}</button></li>`;
     }
+
+
 });
