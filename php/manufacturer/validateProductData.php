@@ -156,7 +156,6 @@
     
 
     if (isset($_FILES['fileName'])){
-
         $file = $_FILES['fileName'];
 
         // Crear un objeto Imagick con el archivo temporal cargado
@@ -271,7 +270,7 @@
     }
     
 
-    $val = validate($pName, $pModel, $pBrand, $pDescription, $pCategory, $file, $pStock, $pStatus,
+    $val = validate($pName, $pModel, $pBrand, $pDescription, $pCategory, $uploadName, $pStock, $pStatus,
             $pWe, $pLe, $pWi, $pHe,
             $pWePa, $pLePa, $pWiPa, $pHePa, $pPType,
             $pPrice, $pCurrency,
