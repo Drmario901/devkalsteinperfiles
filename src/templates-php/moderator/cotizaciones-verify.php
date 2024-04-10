@@ -112,8 +112,7 @@ error_reporting(E_ALL);
     </div> -->
     <div style="display: flex;">
         <button id="boton-prev" class="btn btn-outline-primary" aria-label="Previous" >
-          <span>&laquo;</span>
-          <span class="sr-only">Previous</span>
+          Prev
         </button>
 
       <ul id="paginado" class="pagination" >
@@ -121,8 +120,7 @@ error_reporting(E_ALL);
       </ul>
   
         <button id="boton-next" class="btn btn-outline-primary" aria-label="Next">
-          <span>&raquo;</span>
-          <span class="sr-only">Next</span>
+          Next
         </button>
     </div>
     
