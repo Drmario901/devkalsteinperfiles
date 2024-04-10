@@ -265,7 +265,7 @@
                             Product Name
                             <input class='d-inline' type='checkbox' id='name'>
                         </h5>
-                        <h6 class='text-align-start'>$name</h6>
+                        <h6 class='text-start'>$name</h6>
                         <p>
                             <b>Model:</b> $model
                             <input class='d-inline' type='checkbox' id='model'>
@@ -284,7 +284,7 @@
                         <p><label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-i'></p>
                         
-                        <p class='mb-0 d-flex align-items-start'>
+                        <p class='mb-0 d-flex align-items-start pt-3' style=''>
                             <b>Category: </b>$category
                             <input class='d-inline' type='checkbox' id='category'>
                         </p>
@@ -318,20 +318,20 @@
                         <h5><i class='fas fa-microscope'></i>Measures <input class='d-inline' type='checkbox' id='measures'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
-                            <li><b>weigth</b>: $we kg</li>
-                            <li><b>width</b>: $wi cm</li> 
-                            <li><b>height</b>: $he cm</li> 
-                            <li><b>length</b>: $le cm</li>
+                            <li><b>Weigth</b>: $we kg</li>
+                            <li><b>Width</b>: $wi cm</li> 
+                            <li><b>Height</b>: $he cm</li> 
+                            <li><b>Length</b>: $le cm</li>
                         </ul>
                     </div>
                     <div class='col-md-6'>
                         <h5><i class='fas fa-box'></i>Measures Packaged <input class='d-inline' type='checkbox' id='measures-p'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
-                            <li><b>weigth</b>: $wePa kg</li> 
-                            <li><b>width</b>: $wiPa cm</li> 
-                            <li><b>height</b>: $hePa cm</li> 
-                            <li><b>length</b>: $lePa cm</li>
+                            <li><b>Weigth</b>: $wePa kg</li> 
+                            <li><b>Width</b>: $wiPa cm</li> 
+                            <li><b>Height</b>: $hePa cm</li> 
+                            <li><b>Length</b>: $lePa cm</li>
                         </ul>
                     </div>
                     <hr class='mt-3'>
@@ -357,14 +357,14 @@
                         </div>
                     </div>
                     <hr class='mt-3'>
-                    <h5>wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
+                    <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
                 </div>
 
-                <textarea class='mx-auto mb-2' style='width: 300px; height: 150px' placeholder='Specify' id='message'></textarea>
-                <div class='mx-auto' id='strikeContainer'>
+                <textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
+                <div class='d-flex justify-content-start' id='strikeContainer'>
                     <label>Strike</label>
                     <input class='d-inline' type='checkbox' id='strike'>
                 </div>
