@@ -1,8 +1,8 @@
 <?php
     session_start();
-    /* ini_set('display_errors', 1);
+    ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL); */
+    error_reporting(E_ALL); 
     require_once __DIR__ . '/../../db/conexion.php';
     require __DIR__.'/validateProductData.php';
 
@@ -47,7 +47,7 @@
         product_manual, product_catalog, product_catalog_name,
         product_technical_description_es, product_technical_description_csv, product_type)
         VALUES
-        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$pSubcategory', '$fileInput',
+        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$pSubcategory', '$uploadName',
         '$pStock', '$pStatus',
         '$pWe', '$pWi','$pHe', '$pLe',
         '$pWePa', '$pWiPa','$pHePa', '$pLePa', '$pPType',

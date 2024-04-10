@@ -610,8 +610,6 @@ jQuery(document).ready(function ($) {
       type: "POST",
       data: formData,
       dataType: "text",
-      processData: false,
-      contentType: false,
       cache: false,
     })
       .done(function (response) {
