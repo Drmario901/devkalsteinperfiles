@@ -64,8 +64,8 @@ error_reporting(E_ALL);
       </ul>
   
         <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next" >
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
         </button>
     </div>
     
