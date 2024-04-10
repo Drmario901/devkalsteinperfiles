@@ -53,7 +53,7 @@ error_reporting(E_ALL);
   <!--  <div id="paginacion">
          Los controles de paginación se generarán dinámicamente 
     </div> -->
-    <div style="display: flex;">
+    <div style="display: flex; justify-content: space-between">
         <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous" >
           Prev
         </button>
