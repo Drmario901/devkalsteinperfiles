@@ -284,7 +284,7 @@
                         <p><label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-i'></p>
                         
-                        <p class='mb-0 d-flex align-items-start pt-3' style=''>
+                        <p class='mb-0 d-flex align-items-start pt-3' style='border-top: solid 1px #c9c9c9'>
                             <b>Category: </b>$category
                             <input class='d-inline' type='checkbox' id='category'>
                         </p>
