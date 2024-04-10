@@ -82,7 +82,6 @@
         background-color: #333;
         color: #fff;
     }
-
     .p-prev-table {
         width: 100%;
     }
@@ -101,7 +100,6 @@
     .p-prev-table tr td:first-child {
         font-weight: bold;
     }
-
     .btn-clipboard{
         background-color: #213280;
         color: white;
@@ -110,7 +108,6 @@
         width: 200px;
         cursor: pointer;
     }
-
     #stock-table-keys {
         padding: 0;
     }
@@ -136,7 +133,6 @@
         padding: auto;
         border: none
     }
-
     .stock-table-buttons {
         display: row;
         font-weight: 12px;
@@ -171,14 +167,12 @@
         outline: 1px solid yellow;
         border-color: #000;
     }
-
     .triplette {
         display: flex;
         flex-direction: row;
         border: 1px solid #999;
         border-radius: 0.35rem;
     }
-
     .triplette input {
         border: none;
         margin: 0;
@@ -191,7 +185,6 @@
     .accordion-button:focus {
         z-index: 0;
     }
-
     .accessoryTarget {
         transition: background-color .2s;
     }
@@ -200,17 +193,13 @@
         cursor: pointer;
     }
 </style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <form method="post" class="tm-edit-product-form">
     <div class="row">
-
         <?php echo $add ? '<div class="col-12"><div class="stock-title">Agregar un nuevo producto</div></div>' : '<div class="col-12"><div class="stock-title">Editar producto</div></div>'?>
         <!-- BASIC DATA -->
         <div class="col-12 col-md-6">
-
             <label data-i18n="distribuidor:labelNombre">Nombre</label>
             <input id="nameProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelNombre" placeholder="Nombre"/>
-
             
             <!-- no fake brand input -->
                 <label data-i18n="distribuidor:labelMarca">Marca</label>
@@ -220,9 +209,7 @@
             <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelModelo" placeholder="Modelo"/>
             
         </div>
-
         <img id='imgLoad' hidden/><!-- trash??? -->
-
         <!-- PRODUCT IMAGE -->
         <div class="col-12 col-md-6 mb-4">
             <label data-i18n="distribuidor:labelImagenProduct">Imágen de producto</label>
@@ -235,16 +222,13 @@
                 <input type="file" id="file-input">
             </div>
         </div>
-
         <div class="col-12 mb-4">
             <label data-i18n="distribuidor:labelDescripcion">Descripción</label>
             <textarea style="height: 200px" id="descriptionProduct" class="form-control validate tm-small" data-placeholder="distribuidor:placeholderDescripcion" placeholder="Describe tu producto en menos de 5000 carácteres
             "></textarea>
         </div>
     </div>
-
     <!-- TABLA TECNICA -->
-
     <div class="row">
         <label data-i18n="distribuidor:labelHojaEspecific">Hoja de especificaciones</label>
         <div class="col-12">
@@ -265,7 +249,6 @@
             <div id="stock-basic-table" class="mb-4" hidden>
                 
                 <div>
-
                     <div class='stock-table-buttons mb-3'>
                         <button id="stock-table-button-plus">+</button>
                         <button id="stock-table-button-minus">-</button>
@@ -281,24 +264,18 @@
                             <div><input id="table-values-2" type="text" value="ejemplo"></div>
                         </div>
                     </div>
-
                 </div>
                 
             </div>
-
             <!-- EXCEL -->
             <div id="stock-excel-table" class="mb-4" hidden data-i18n="distribuidor:archivoExcelCSV">
-
                 Incluye un archivo Microsoft Excel o un .csv
                 
                 <div id="paste-excel-clipboard" class="btn-clipboard mb-3" data-i18n="distribuidor:textPortapapeles">
                     Pegar del portapapeles <i class="fa-regular fa-clipboard"></i>
                 </div>
-
                 <textarea id="csv" hidden data-i18n="distribuidor:textEjemplo">ejemplo</textarea>
-
                 <span data-i18n="distribuidor:textHaveHeader">Tiene cabecera<input type="checkbox" id="has_headers" style="border-radius: 0" class="d-inline"></span>
-
                 <label data-i18n="distribuidor:textPrevista">Prevista</label>
                 <table id="resultTable" class='table p-prev-table'>
                     <thead>
@@ -312,17 +289,14 @@
                         </tr>
                     </tbody>
                 </table>
-
             </div>
         </div>
     <div>
         
     <!-- PRODUCT DATA -->
-
     <div class="col-12">
         <div class="stock-title" data-i18n="distribuidor:textDatosProduct">Datos del producto</div>
     </div>
-
     <div class="row">
         <div class="col-12 col-sm-6 form-group mb-3">
             <label data-i18n="distribuidor:labelCategoria">Categoría</label>
@@ -334,7 +308,6 @@
                     $consulta = "SELECT categorie_description_es FROM wp_categories ORDER BY categorie_description_es ASC";		
                         
                     $resultado = $conexion->query($consulta);
-
                     $already_printed = [];
                         
                     if ($resultado->num_rows > 0) {
@@ -348,19 +321,12 @@
                 ?>
             </select>
         </div>
-        <div class="col-12 col-sm-6 form-group mb-3">
-            <label>Subcategoría</label>
-            <select class="custom-select tm-select-accounts" id="subCategorySelect" name="subCategory" disabled>
-                <option value="">Seleccione una categoría...</option>
-            </select>
-        </div>
-        <div class="col-12 col-sm-6">
-            <div class="row">
-                <?php echo $stock_inputs?>
-            </div>
-        </div>
+</div>
     </div>
 
+    <div class="col-12>
+        <?php echo $stock_inputs?>
+    </div>
     <div class="row mb-3">
         <!-- GROSS -->
         <div class="col-sm-6 col-xsm-12">
@@ -375,7 +341,6 @@
                 data-large-mode="true"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelAncho">Ancho (cm)</label>
             <input
                 id="wiProduct"
@@ -384,7 +349,6 @@
                 class="form-control validate mb-1"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelAlto">Alto (cm)</label>
             <input
                 id="heProduct"
@@ -393,7 +357,6 @@
                 class="form-control validate mb-1"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelLargo">Largo (cm)</label>
             <input
                 id="leProduct"
@@ -416,7 +379,6 @@
                 data-large-mode="true"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelAncho">Ancho (cm)</label>
             <input
                 id="wiProductPa"
@@ -425,7 +387,6 @@
                 class="form-control validate mb-1"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelAlto">Alto (cm)</label>
             <input
                 id="heProductPa"
@@ -434,7 +395,6 @@
                 class="form-control validate mb-1"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelLargo">Largo (cm)</label>
             <input
                 id="leProductPa"
@@ -443,7 +403,6 @@
                 class="form-control validate mb-1"
                 min="0"
             />
-
             <label data-i18n="distribuidor:labelTipoEmpaque">Tipo de empaque</label>
             <select id="packageType">
                 <option class="text-dark" value="" data-i18n="distribuidor:optionSelecciona">-- Selecciona --</option>
@@ -452,13 +411,10 @@
             </select>
         </div>
     </div>
-
     <!-- PRICING -->
-
     <div class="col-12">
         <div class="stock-title" data-i18n="distribuidor:subtitlePrecios">Precios</div>
     </div>
-
     <div class="row">
         <input type="checkbox" id="specialPrice" class="form-check-input" style="margin-left: 15px;">
         <div class="form-group mb-3 col-sm-6 col-xsm-12">
@@ -480,7 +436,6 @@
                 <option class="text-dark" value="EUR">EUR</option>
             </select>
         </div>
-
         <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleDescuentoUno">Descuento mayorista 1 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
             <span data-i18n="distribuidor:spanAplica">Aplica </span> 
@@ -502,7 +457,6 @@
             /> 
             <span data-i18n="distribuidor:spanUnidades">unidades</span> 
         </div>
-
         <h6 class="tm-block-title mb-0" data-i18n="distribuidor:subtitleDescuentoDos">Descuento mayorista 2 (opcional)</h6>
         <div class='form-group col-12 mb-3 ms-3'>
             <span data-i18n="distribuidor:spanAplica">Aplica </span> 
@@ -525,28 +479,22 @@
             <span data-i18n="distribuidor:spanUnidades">unidades</span> 
         </div>
     </div>
-
  <!--acessories -->
     <div class="col-12">
         <div class="stock-title" data-i18n="distribuidor:subtitleAccesorios">Accesorios</div>
     </div>
     <div class="row mb-3 d-flex justify-content-center">
         <div class="accordion col-12 col-md-8" id="accordionExample">
-
             <!-- ACORDEON ACCESSORY -->
-
             <div class="accordion-item">
                 <h2 class="accordion-header pb-0" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <b data-i18n="distribuidor:subtitleAggNewAcces">Agregar un nuevo accesorio</b>
                     </button>
                 </h2>
-
-
                 <div id="collapseOne" class="accordion-collapse show mx-3" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <?php
-
                             include 'productFormAccessory.php';
                         
                         ?>
@@ -554,19 +502,14 @@
                 </div>
             </div>
         </div>
-
         <div id='uploadAccesoryList' class='mt-4 col-12 col-md-4'>
         </div>
     </div>
-
                     
-
     <!-- FILES -->
-
     <div class="col-12">
         <div class="stock-title" data-i18n="distribuidor:suplements">Suplementos</div>
     </div>
-
     <div class="row">
         <div class="col-12 col-md-6 mb-3 p-4">
             <label data-i18n="distribuidor:catalogOpcional" >Catálogo informativo (opcional)</label>
@@ -588,28 +531,3 @@
         </div>
     </div>
 </form>
-
-<script>
-        $('#dataCategory').change(function() {
-            var category = $(this).val();
-
-            $.ajax({
-                url: plugin_dir + "/php/manufacturer/updateSubcategory.php",
-                method: 'POST',
-                data: { category: category },
-                dataType: 'html',
-                success: function(response) {
-                    if (response.trim() === '') {
-                        $('#subCategorySelect').html('<option value="">' + category + '</option>');
-                        $('#subCategorySelect').prop('disabled', true);
-                    } else {
-                        $('#subCategorySelect').html(response);
-                        $('#subCategorySelect').prop('disabled', false);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error en la solicitud AJAX:', status, error);
-                }
-            });
-        });
-    </script>
