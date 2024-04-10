@@ -120,6 +120,7 @@ jQuery(document).ready(function() {
     function actualizarVista() {
         let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
         $('#datos-tabla').html(generarTabla(datosPagina));
+        generarPaginado(paginas);
     }
 
     function paginar(items, paginaActual, itemsPorPagina) {
@@ -139,19 +140,19 @@ jQuery(document).ready(function() {
         return tablaHtml;
     }
 
-    function generarPaginado(paginas){
-        let botonesPagina = ''; // Inicializamos la cadena para acumular los botones
+    function generarPaginado(paginas) {
+        let botonesPagina = '';
         for (let i = 1; i <= paginas; i++) {
-            console.log('paginas impresas', i);
-            botonesPagina += generarBoton(i); // Acumulamos cada botón generado
+            let claseActiva = i === paginaActual ? 'active' : '';
+            botonesPagina += `<li class="page-item ${claseActiva}"><button class="page-link" data-pagina="${i}">${i}</button></li>`;
         }
-        $("#paginado").html(botonesPagina); // Insertamos todos los botones generados de una vez
+        $("#paginado").html(botonesPagina);
     }
 
     $(document).on("click", "#paginado .page-link", function() {
-        let seleccionadaPagina = $(this).data("pagina"); // Usa un atributo data-pagina para identificar la página
-        paginaActual = seleccionadaPagina;
-        actualizarVista();
+        let paginaSeleccionada = parseInt($(this).attr('data-pagina')); // Asegúrate de convertir a número
+        paginaActual = paginaSeleccionada;
+        actualizarVista(); // Esto regenerará los botones y aplicará correctamente la clase `active`
     });
     
     function generarBoton(pagina) {
