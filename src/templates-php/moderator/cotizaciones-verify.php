@@ -38,6 +38,7 @@ error_reporting(E_ALL);
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 .pay-pagado {
   background-color: green !important;
