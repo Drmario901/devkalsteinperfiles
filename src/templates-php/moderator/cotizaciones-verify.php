@@ -63,7 +63,7 @@ error_reporting(E_ALL);  */
 </header>
 
 <body>
-    <h1 style="text-align: center;">Cotizaciones</h1>
+    <h1 style="text-align: center; margin-top: 2rem;">Cotizaciones de Monetico</h1>
     
 <div class="container mt-5">
     <div id="datos-tabla">
