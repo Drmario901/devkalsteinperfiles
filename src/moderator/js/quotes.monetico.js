@@ -141,6 +141,8 @@ jQuery(document).ready(function() {
 
     function generarPaginado(paginas){
         for (let i = 1; i <= paginas; i++) {
+            console.log('paginas impresas', i);
+            
             $("#paginado").html(generarBoton(i))
         }
     }
