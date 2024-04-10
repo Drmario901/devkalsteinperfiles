@@ -124,7 +124,7 @@ jQuery(document).ready(function() {
             
                         // Aquí colocas tu lógica AJAX/Fetch para actualizar la cotización
                         $.ajax({
-                            url: 'ruta/a/tu/servidor', // URL al servidor que maneja la actualización
+                            url: 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/updateMonetico.php', // URL al servidor que maneja la actualización
                             type: 'POST', // Método HTTP, puede ser 'POST', 'PUT', dependiendo de tu API
                             data: { id: id }, // Datos que envías al servidor, en este caso el ID de la cotización
                             success: function(response) {
