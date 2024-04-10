@@ -249,8 +249,9 @@
                     $div_acc = "
                         <div class='mt-3'>
                             Accessories not found
+                            <input class='d-inline' type='checkbox' id='accessories' checked hidden>
                         </div>
-                        <input class='d-inline' type='checkbox' id='accessories' checked hidden>
+                        
                     ";
                 }
             }
@@ -284,22 +285,23 @@
                         <input class='d-inline' type='checkbox' id='professionalism-i'><br><br>
                         
                         <p class='mb-0'>
-                            <b>Category</b>: $category <input class='d-inline' type='checkbox' id='category'>
+                            <b>Category</b>: <input class='d-inline' type='checkbox' id='category'>
                         </p>
+                        <p>$category</p>
                         <p>
                             <b>Manufacturer</b>: $brand <input class='d-inline' type='checkbox' id='brand'>
                         </p>
                     </div>
                     <div class='col-md-8'>
                         <h5>Description</h5>
-                        <div style='border: solid 1px #c9c9c9; borde-radius: 5px'>
+                        <div class='my-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>$description</p>
                         <table class='table table-responsive'>$table</table>
                         </div>
-                        <label for=''>links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'>
+                        <label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
                         
-                        <label for=''>professionalism</label>
+                        <label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-d'>
 
                         $div_acc
