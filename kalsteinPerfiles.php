@@ -877,8 +877,8 @@ function perfiles_styles()
 {
 
     //MAIN URLS
-    $plugin_dir = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles';
-    $plugin_quote = 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion';
+    $plugin_dir = 'https://verify.kalstein.plus/wp-content/plugins/kalsteinPerfiles';
+    $plugin_quote = 'https://verify.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion';
 
     function general_client_styles()
     {
@@ -1807,7 +1807,7 @@ function perfiles_styles()
         wp_enqueue_style('email-style', plugins_url('src/suport/css/email.style.css', __FILE__));
         wp_enqueue_script('nav', plugins_url('src/suport/js/nav.js', __FILE__), array('jquery'));
         wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js', __FILE__), array('jquery'));
-        wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
+        wp_enqueue_script('inbox-pages-js', 'https://verify.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
         wp_enqueue_style('izitoast.css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
         wp_enqueue_script('iziToast.js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
         wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
@@ -1881,8 +1881,8 @@ function perfiles_styles()
         wp_enqueue_style('banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
         wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
         wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
-        wp_enqueue_script('quote-script-js', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/js/script.cot2.js', array('jquery'), true);
-        wp_enqueue_style('quote-css', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/css/styles.cot.css', true);
+        wp_enqueue_script('quote-script-js', 'https://verify.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/js/script.cot2.js', array('jquery'), true);
+        wp_enqueue_style('quote-css', 'https://verify.kalstein.plus/wp-content/plugins/kalsteinPerfiles/kalsteinCotizacion/assets/css/styles.cot.css', true);
         wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js', __FILE__), array('jquery'));
         wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js', __FILE__), array('jquery'));
         wp_enqueue_script('pursaching-script', plugins_url('src/distributor/js/pursaching.js', __FILE__), array('jquery'));
@@ -2070,7 +2070,7 @@ function perfiles_styles()
         wp_enqueue_script('dashboard', plugins_url('src/manufacturer/js/dashboard.script.js', __FILE__), array('jquery'));
         wp_enqueue_style('email-style', plugins_url('src/manufacturer/css/email.style.css', __FILE__));
         wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
-        wp_enqueue_script('inbox-pages-js', 'https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
+        wp_enqueue_script('inbox-pages-js', 'https://verify.kalstein.plus/wp-content/plugins/kalsteinPerfiles/src/js/inbox.pages.js', array('jquery'), true);
         wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
         wp_enqueue_script('izitoast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
     }
