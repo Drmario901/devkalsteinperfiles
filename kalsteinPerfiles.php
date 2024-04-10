@@ -2209,4 +2209,4 @@ function perfiles_styles()
 }
 add_action('wp_enqueue_scripts', 'perfiles_styles');
 
-require_once dirname(__FILE__) . '/kalsteinCotizacion/classes/shortcode.php';
+// require_once dirname(__FILE__) . '/kalsteinCotizacion/classes/shortcode.php';
