@@ -107,6 +107,7 @@ jQuery(document).ready(function() {
                 todos = JSON.parse(response).datos; // Asegúrate de que esto coincida con el formato de tu respuesta
                 paginas = Math.ceil(todos.length / itemsPorPagina);
                 actualizarVista();
+                generarPaginado(paginas);
                 console.log('paginasss', paginas);
                 
             },
@@ -136,5 +137,16 @@ jQuery(document).ready(function() {
         });
         tablaHtml += '</tbody></table>';
         return tablaHtml;
+    }
+
+    function generarPaginado(paginas){
+        for (let i = 1; i <= paginas; i++) {
+            $("#paginado").html(generarBoton(i))
+        }
+    }
+
+    function generarBoton(pagina) {
+       let btnPagina = `<button>${pagina}}</button>`
+       return btnPagina
     }
 });
