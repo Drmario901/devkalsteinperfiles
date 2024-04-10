@@ -110,13 +110,21 @@ error_reporting(E_ALL);
   <!--  <div id="paginacion">
          Los controles de paginación se generarán dinámicamente 
     </div> -->
-    <div style="display: flex; justify-content: space-between;">
-      <button id="boton-prev" class="buttonPaginate" >Prev</button>
-        <div id="paginado">
-
-        </div> 
-      <button id="boton-next" class="buttonPaginate">Next</button>
-    </div>
+    <ul id="paginado" class="pagination" >
+      <li>
+        <a id="boton-prev" class="page-link" aria-label="Previous" >
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+    
+      <li>
+        <a id="boton-next" class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
     
 </div>
 
