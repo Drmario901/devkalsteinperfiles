@@ -51,7 +51,7 @@
         $query .= "AND (moder LIKE '%$search_term%' OR receptor LIKE '%$search_term%' OR meta LIKE '%$search_term%' OR extra LIKE '%$search_term%')";
     }
     
-    $query .= "ORDER BY date DESC LIMIT $offset, $limit";
+    $query .= "ORDER BY date DESC";
     // $response['query'] = $query;
     $result = $conexion->query($query);
 
