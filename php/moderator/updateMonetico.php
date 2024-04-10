@@ -11,7 +11,7 @@ $moneticoID = $_POST['id'];
 
 if (isset($moneticoID)) {
     // La variable está definida y no es null
-    echo json_encode(['success' => true, 'message' => 'Cotización confirmada con éxito.']);
+    echo json_encode(['success' => true, 'message' => 'Cotizacion confirmada con exito del id:  '. $moneticoID . '']);
 } else {
-    echo json_encode(['success' => false, 'message' => 'Error al confirmar la cotización.']);
+    echo json_encode(['success' => false, 'message' => 'Error al confirmar la cotizacion.']);
 }
