@@ -112,7 +112,7 @@ error_reporting(E_ALL);
     </div> -->
     <div style="display: flex;">
         <button id="boton-prev" class="btn btn-outline-primary" aria-label="Previous" >
-          <span aria-hidden="false">&laquo;</span>
+          <!-- <span aria-hidden="false">&laquo;</span> -->
           <span class="sr-only">Previous</span>
         </button>
 
@@ -121,7 +121,7 @@ error_reporting(E_ALL);
       </ul>
   
         <button id="boton-next" class="btn btn-outline-primary" aria-label="Next">
-          <span aria-hidden="false">&raquo;</span>
+          <!-- <span aria-hidden="false">&raquo;</span> -->
           <span class="sr-only">Next</span>
         </button>
     </div>
