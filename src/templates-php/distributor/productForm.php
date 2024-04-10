@@ -214,7 +214,7 @@
             
             <!-- no fake brand input -->
                 <label data-i18n="distribuidor:labelMarca">Marca</label>
-                <input style="color: #000 !important;"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="distribuidor:labelMarca" placeholder="Marca"/>
+                <input style="color: #000 !important;" name="brandProduct"  id="brandProduct" type="text"  class="form-control validate" data-placeholder="distribuidor:labelMarca" placeholder="Marca"/>
             
             <label data-i18n="distribuidor:labelModelo">Modelo</label>
             <input id="modelProduct" type="text" class="form-control validate mb-3" data-placeholder="distribuidor:labelModelo" placeholder="Modelo"/>

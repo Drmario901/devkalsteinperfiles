@@ -589,7 +589,7 @@ jQuery(document).ready(function ($) {
     }
 
     console.log(all_accessories);
-     */
+    */
 
     $("#btnSendData").attr("disabled", "");
 
