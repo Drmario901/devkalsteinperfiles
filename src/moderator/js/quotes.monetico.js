@@ -101,13 +101,16 @@ jQuery(document).ready(function() {
     });
 
     $('#datos-tabla').on('click', 'button[data-id]', function() {
-        var id = $(this).data('id'); // Obtiene el data-id del botón clickeado
+        let id = $(this).data('id'); // Obtiene el data-id del botón clickeado
         console.log("Botón con data-id " + id + " clickeado");
 
         // Aquí puedes añadir tu lógica para manejar el clic del botón
         // Por ejemplo, podrías hacer una solicitud AJAX para confirmar el pago
         // y luego actualizar la interfaz de usuario acordemente
     });
+
+
+
     function cargarDatos() {
         // Asumiendo que todos se llena aquí con datos iniciales
         $.ajax({
