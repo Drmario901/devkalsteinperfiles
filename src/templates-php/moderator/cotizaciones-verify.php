@@ -34,11 +34,11 @@ error_reporting(E_ALL);
 
 .pay-pendiente {
   background-color: orange !important;
-  color: orange;
+  color: white;
 }
 .pay-pagado {
   background-color: green !important;
-  color: green;
+  color: white;
   text-align: center;
 }
 </style>
