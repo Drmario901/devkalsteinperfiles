@@ -35,6 +35,9 @@ error_reporting(E_ALL);
 .pay-pendiente {
   background-color: orange !important;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pay-pagado {
   background-color: green !important;
