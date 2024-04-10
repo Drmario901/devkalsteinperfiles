@@ -73,6 +73,7 @@ jQuery(document).ready(function() {
     let todos = [];
     let paginaActual = 1;
     let itemsPorPagina = 10; // Define cuántos items quieres por página
+    let paginas = 0;
 
     // Simulamos la carga inicial de datos
     cargarDatos();
@@ -93,6 +94,10 @@ jQuery(document).ready(function() {
         }
     });
 
+    $(document).on("click", "select-page", function() {
+
+    })
+
     function cargarDatos() {
         // Asumiendo que todos se llena aquí con datos iniciales
         $.ajax({
@@ -100,7 +105,10 @@ jQuery(document).ready(function() {
             success: function(response) {
                 // Simulamos una respuesta con datos
                 todos = JSON.parse(response).datos; // Asegúrate de que esto coincida con el formato de tu respuesta
+                paginas = Math.ceil(todos.length / itemsPorPagina);
                 actualizarVista();
+                console.log('paginasss', paginas);
+                
             },
             error: function() {
                 console.error('Error al cargar los datos');
