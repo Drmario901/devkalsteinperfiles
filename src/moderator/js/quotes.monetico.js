@@ -140,15 +140,16 @@ jQuery(document).ready(function() {
     }
 
     function generarPaginado(paginas){
+        let botonesPagina = ''; // Inicializamos la cadena para acumular los botones
         for (let i = 1; i <= paginas; i++) {
             console.log('paginas impresas', i);
-            
-            $("#paginado").html(generarBoton(i))
+            botonesPagina += generarBoton(i); // Acumulamos cada botón generado
         }
+        $("#paginado").html(botonesPagina); // Insertamos todos los botones generados de una vez
     }
-
+    
     function generarBoton(pagina) {
-       let btnPagina = `<button>${pagina}}</button>`
-       return btnPagina
+       let btnPagina = `<button class="buttonPaginate">${pagina}</button>`; // Corregido el error tipográfico
+       return btnPagina;
     }
 });
