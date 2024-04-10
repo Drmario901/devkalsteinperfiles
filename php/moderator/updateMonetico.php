@@ -7,3 +7,11 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 
 
 $moneticoID = $_POST['id'];
+
+
+if (isset($moneticoID)) {
+    // La variable está definida y no es null
+    echo json_encode(['success' => true, 'message' => 'Cotización confirmada con éxito.']);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Error al confirmar la cotización.']);
+}
