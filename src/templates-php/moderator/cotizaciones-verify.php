@@ -112,7 +112,7 @@ error_reporting(E_ALL);
     </div> -->
     <div style="display: flex;">
     <li class="page-item">
-        <button id="boton-prev" class="page-link" aria-label="Previous" >
+        <button id="boton-prev" class="page-link btn btn-outline-primary" aria-label="Previous" >
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">Previous</span>
         </button>
