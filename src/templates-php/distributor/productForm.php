@@ -350,7 +350,7 @@
         </div>
         <div class="col-12 col-sm-6 form-group mb-3">
             <label>Subcategoría</label>
-            <select class="custom-select tm-select-accounts" id="subCategorySelect" name="subCategory" disabled>
+            <select class="custom-select tm-select-accounts" id="subCategorySelect" name="subCategorySelect" disabled>
                 <option value="">Seleccione una categoría...</option>
             </select>
         </div>

@@ -27,6 +27,7 @@ function validateProductData(
   model,
   description,
   category,
+  subcategory,
   fileInput,
   stock,
   status,
@@ -409,6 +410,7 @@ jQuery(document).ready(function ($) {
     var brand = $("#brandProduct").val().replace(/'/g, "\\'");
     var description = $("#descriptionProduct").val().replace(/'/g, "\\'");
     var category = $("#dataCategory").val();
+    var subcategory = $("#subCategorySelect").val();
     var fileInput = $("#file-input")[0].files[0];
     var stock = $("#stockProduct").val();
     var status = $("#statusProduct").val();
@@ -461,6 +463,7 @@ jQuery(document).ready(function ($) {
         brand,
         description,
         category,
+        subcategory,
         fileInput,
         stock,
         status,
@@ -487,6 +490,7 @@ jQuery(document).ready(function ($) {
         brand,
         description,
         category,
+        subcategory,
         fileInput,
         stock,
         status,
@@ -519,6 +523,7 @@ jQuery(document).ready(function ($) {
     brand,
     description,
     category,
+    subCategory,
     fileInput,
     stock,
     status,
@@ -549,6 +554,7 @@ jQuery(document).ready(function ($) {
     formData.append("brand", brand);
     formData.append("description", description);
     formData.append("category", category);
+    formData.append("subcategory", subCategory);
     formData.append("fileName", fileInput);
     formData.append("stock", stock);
     formData.append("status", status);
