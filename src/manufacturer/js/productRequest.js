@@ -411,7 +411,7 @@ jQuery(document).ready(function ($) {
     var description = $("#descriptionProduct").val().replace(/'/g, "\\'");
     var category = $("#dataCategory").val();
     var subcategory = $("#subCategorySelect").val();
-    var fileInput = $("#file-input")[0].files[0];
+    var fileName = $("#file-input")[0].files[0];
     var stock = $("#stockProduct").val();
     var status = $("#statusProduct").val();
 
@@ -464,7 +464,7 @@ jQuery(document).ready(function ($) {
         description,
         category,
         subcategory,
-        fileInput,
+        fileName,
         stock,
         status,
         weight,
@@ -491,7 +491,7 @@ jQuery(document).ready(function ($) {
         description,
         category,
         subcategory,
-        fileInput,
+        fileName,
         stock,
         status,
         weight,
@@ -524,7 +524,7 @@ jQuery(document).ready(function ($) {
     description,
     category,
     subCategory,
-    fileInput,
+    fileName,
     stock,
     status,
     weight,
@@ -555,7 +555,7 @@ jQuery(document).ready(function ($) {
     formData.append("description", description);
     formData.append("category", category);
     formData.append("subcategory", subCategory);
-    formData.append("fileName", fileInput);
+    formData.append("fileName", fileName);
     formData.append("stock", stock);
     formData.append("status", status);
 
@@ -652,7 +652,7 @@ jQuery(document).ready(function ($) {
     var model = $("#modelProduct").val().replace(/'/g, "\\'");
     var description = $("#descriptionProduct").val().replace(/'/g, "\\'");
     var category = $("#dataCategory").val();
-    var fileInput = $("#file-input")[0].files[0];
+    var fileName = $("#file-input")[0].files[0];
     var stock = $("#stockProduct").val();
     var status = $("#statusProduct").val();
 
@@ -691,7 +691,7 @@ jQuery(document).ready(function ($) {
     var discount_2 = $("#discount2").val();
     var discount_2_amount = $("#discount2Amount").val();
 
-    dont_image = fileInput == null;
+    dont_image = fileName == null;
 
     var manual = $("#manualPDF")[0].files[0];
     var catalog = $("#catalogPDF")[0].files[0];
@@ -705,7 +705,7 @@ jQuery(document).ready(function ($) {
         model,
         description,
         category,
-        fileInput,
+        fileName,
         stock,
         status,
         weight,
@@ -742,7 +742,7 @@ jQuery(document).ready(function ($) {
                 model,
                 description,
                 category,
-                fileInput,
+                fileName,
                 stock,
                 status,
                 weight,
@@ -785,7 +785,7 @@ jQuery(document).ready(function ($) {
     model,
     description,
     category,
-    fileInput,
+    fileName,
     stock,
     status,
     weight,
@@ -816,7 +816,7 @@ jQuery(document).ready(function ($) {
     formData.append("model", model);
     formData.append("description", description);
     formData.append("category", category);
-    formData.append("fileName", fileInput);
+    formData.append("fileName", fileName);
     formData.append("stock", stock);
     formData.append("status", status);
 
@@ -857,8 +857,8 @@ jQuery(document).ready(function ($) {
       formData.append("dontUpdateCatalogPDF", true);
     }
 
-    if (fileInput) {
-      formData.append("fileName", fileInput);
+    if (fileName) {
+      formData.append("fileName", fileName);
     } else {
       formData.append("dontUpdateImg", true);
     }
