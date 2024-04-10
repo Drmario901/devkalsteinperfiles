@@ -60,7 +60,7 @@ error_reporting(E_ALL);
     // $response['query'] = $query;
     $result = $conexion->query($query);
 
-    include 'translateText.php';
+    include '../translateText.php';
     translateText();
 
     // TABLE PRINT
