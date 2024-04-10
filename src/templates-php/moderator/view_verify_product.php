@@ -265,9 +265,9 @@
                             Product Name
                             <input class='d-inline' type='checkbox' id='name'>
                         </h5>
-                        <p class='text-align-start'>$name</p>
+                        <h6 class='text-align-start'>$name</h6>
                         <p>
-                            <b>Model</b>: $model
+                            <b>Model:</b> $model
                             <input class='d-inline' type='checkbox' id='model'>
                         </p>
                         <a TARGET='_blank' href='$image'>
@@ -279,23 +279,23 @@
                         <input class='d-inline' type='checkbox' id='promotions-i'></p>
 
                         <p><label for=''>Image quality</label>
-                        <input class='d-inline' type='checkbox' id='quality-i'></p><
+                        <input class='d-inline' type='checkbox' id='quality-i'></p>
 
                         <p><label for=''>Professionalism</label>
                         <input class='d-inline' type='checkbox' id='professionalism-i'></p>
                         
-                        <p class='mb-0'>
+                        <p class='mb-0 d-flex align-items-start'>
                             <b>Category: </b>$category
                             <input class='d-inline' type='checkbox' id='category'>
                         </p>
         
                         <p>
-                            <b>Manufacturer</b>: $brand <input class='d-inline' type='checkbox' id='brand'>
+                            <b>Manufacturer:</b> $brand <input class='d-inline' type='checkbox' id='brand'>
                         </p>
                     </div>
                     <div class='col-md-8'>
                         <h5>Description</h5>
-                        <div class='my-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>$description</p>
                         <table class='table table-responsive'>$table</table>
                         </div>
@@ -348,17 +348,6 @@
                                 
                                 <h2 class='text-white mb-0 pb-0'>$price $currency</h2>
                                 <p>Price per unit</p>
-
-                            </div>
-
-                            <label for='' style='margin-top: 12px;'>Descuento Gilson</label>
-                            <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
-                            <button class='btn btn-primary' style='color: white;' id='btnDiscountGilson'>Apply discount</button>
-
-                            <div class='btn btn-success btn-block text-white flex-column' style='align-items: start !important; margin-top: 12px;'>
-                                
-                                <h2 class='text-white mb-0 pb-0' id='priceGilson'>$priceGilson $currency</h2>
-                                <p>Price Gilson</p>
 
                             </div>
 
