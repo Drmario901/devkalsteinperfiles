@@ -9,7 +9,7 @@
 
     $response = array();
 
-    $page = isset($_POST['page']) ? $_POST['page'] : 2;
+    $page = isset($_POST['page']) ? $_POST['page'] : 1;
     $page = intval($page);
     $perPage = $_POST['per_page'];
     $type = $_POST['type'];
@@ -51,12 +51,10 @@
         $query .= "AND (moder LIKE '%$search_term%' OR receptor LIKE '%$search_term%' OR meta LIKE '%$search_term%' OR extra LIKE '%$search_term%')";
     }
     
-    $query .= "ORDER BY date DESC";
+    $query .= "ORDER BY date DESC LIMIT $offset, $limit";
+
     // $response['query'] = $query;
     $result = $conexion->query($query);
-
-    include '../translateText.php';
-    translateText();
 
     // TABLE PRINT
 
@@ -64,14 +62,14 @@
         <table class='table custom-table'>
             <thead class='headTableForQuote'>
                 <tr>
-                    <td data-i17n='client:itemTabla'>Item</td>
-                    <td data-i17n='client:cliente'>Log ID</td>
-                    <td data-i17n='client:moderador'>Moderator</td>
-                    <td data-i17n='client:account'>Account</td>
-                    <td data-i17n='client:tipo'>Type</td>
-                    <td data-i17n='client:info'>Info</td>
-                    <td data-i17n='client:extraInfo'>Extra. info</td>
-                    <td data-i17n='client:fechaTable'>Date</td>
+                    <td>item</td>
+                    <td>Log ID</td>
+                    <td>Moderator</td>
+                    <td>Account</td>
+                    <td>Type</td>
+                    <td>Info</td>
+                    <td>Extra. info</td>
+                    <td>Date</td>
                 </tr>
             </thead>
             <tbody id='tblQuoteClientBody' class='bodyTableForQuote'>
@@ -114,7 +112,7 @@
         $msjNoData = "
             <div class='contentNoDataQuote'>
                 <i class='fa-regular fa-face-frown' style='font-size: 2em;'></i>
-                <p data-i17n='client:noDataFound'>No data found</p>
+                <p>No data found</p>
             </div>
         ";
     }
