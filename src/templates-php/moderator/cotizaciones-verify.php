@@ -107,9 +107,9 @@ error_reporting(E_ALL);
         <!-- La tabla se llenará dinámicamente con AJAX -->
     </div>
 
-    <div id="paginacion">
-        <!-- Los controles de paginación se generarán dinámicamente -->
-    </div>
+  <!--  <div id="paginacion">
+         Los controles de paginación se generarán dinámicamente 
+    </div> -->
     <div style="display: flex; justify-content: space-between;">
       <button id="boton-prev" class="buttonPaginate" >Prev</button> <button id="boton-next" class="buttonPaginate">Next</button>
     </div>
