@@ -151,7 +151,7 @@ jQuery(document).ready(function() {
     function generarBoton(pagina) {
         console.log(`${'pagina-'+pagina}`);
         
-       let btnPagina = `<li class="page-item ${pagina === paginaActual ? 'active' : null }"> <a class="page-link" id=${'pagina-'+pagina} > ${pagina} </a> </li>`; // Corregido el error tipográfico
+       let btnPagina = `<li class="page-item ${pagina === paginaActual ? 'active' : null }"> <button class="page-link" id=${'pagina-'+pagina} > ${pagina} </button> </li>`; // Corregido el error tipográfico
 
        $(document).on(`${'pagina-'+pagina}`, function(){
         console.log('pagina actual', paginaActual);
