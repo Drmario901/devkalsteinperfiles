@@ -112,17 +112,17 @@ error_reporting(E_ALL);
     </div> -->
     <ul id="paginado" class="pagination" >
       <li>
-        <a id="boton-prev" class="page-link" aria-label="Previous" >
+        <button id="boton-prev" class="page-link" aria-label="Previous" >
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">Previous</span>
-        </a>
+        </button>
       </li>
     
       <li>
-        <a id="boton-next" class="page-link" href="#" aria-label="Next">
+        <button id="boton-next" class="page-link" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Next</span>
-        </a>
+        </button>
       </li>
     </ul>
     
