@@ -482,6 +482,7 @@ jQuery(document).ready(function ($) {
       savedDataUpload(
         name,
         model,
+        brandProduct,
         description,
         category,
         fileInput,
@@ -513,6 +514,7 @@ jQuery(document).ready(function ($) {
   function savedDataUpload(
     name,
     model,
+    brandProduct,
     description,
     category,
     fileInput,
@@ -542,6 +544,7 @@ jQuery(document).ready(function ($) {
 
     formData.append("name", name);
     formData.append("model", model);
+    formData.append("brand", brandProduct);
     formData.append("description", description);
     formData.append("category", category);
     formData.append("fileName", fileInput);
