@@ -20,7 +20,7 @@
         border-radius: 12px;
         margin: 0;
     }
-    h5 {
+    h5, p {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -289,7 +289,7 @@
                     </div>
                     <div class='col-md-8'>
                         <h5>Description</h5>
-                        <p style='text-align: justify'>$description</p>
+                        <p style='text-align: justify; background-color: white;'>$description</p>
                         <table class='table table-responsive'>$table</table>
                         <br>
                         
