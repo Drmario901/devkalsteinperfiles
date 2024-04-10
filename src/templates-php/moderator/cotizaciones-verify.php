@@ -110,21 +110,24 @@ error_reporting(E_ALL);
   <!--  <div id="paginacion">
          Los controles de paginación se generarán dinámicamente 
     </div> -->
-    <ul id="paginado" class="pagination" >
-      <li class="page-item">
+    <div>
+    <li class="page-item">
         <button id="boton-prev" class="page-link" aria-label="Previous" >
           <span aria-hidden="true">&laquo;</span>
           <span class="sr-only">Previous</span>
         </button>
       </li>
-    
+      <ul id="paginado" class="pagination" >
+  
+      </ul>
       <li class="page-item">
         <button id="boton-next" class="page-link" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Next</span>
         </button>
       </li>
-    </ul>
+    </div>
+    
     
 </div>
 
