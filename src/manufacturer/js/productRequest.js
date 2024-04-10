@@ -406,6 +406,7 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#btnSendData", function (e) {
     var name = $("#nameProduct").val().replace(/'/g, "\\'");
     var model = $("#modelProduct").val().replace(/'/g, "\\'");
+    var brand = $("#productBand").val().replace(/'/g, "\\'");
     var description = $("#descriptionProduct").val().replace(/'/g, "\\'");
     var category = $("#dataCategory").val();
     var fileInput = $("#file-input")[0].files[0];
@@ -457,6 +458,7 @@ jQuery(document).ready(function ($) {
       validateProductData(
         name,
         model,
+        brand,
         description,
         category,
         fileInput,
@@ -482,7 +484,7 @@ jQuery(document).ready(function ($) {
       savedDataUpload(
         name,
         model,
-        brandProduct,
+        brand,
         description,
         category,
         fileInput,
@@ -514,7 +516,7 @@ jQuery(document).ready(function ($) {
   function savedDataUpload(
     name,
     model,
-    brandProduct,
+    brand,
     description,
     category,
     fileInput,
@@ -544,7 +546,7 @@ jQuery(document).ready(function ($) {
 
     formData.append("name", name);
     formData.append("model", model);
-    formData.append("brand", brandProduct);
+    formData.append("brand", brand);
     formData.append("description", description);
     formData.append("category", category);
     formData.append("fileName", fileInput);

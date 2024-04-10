@@ -192,7 +192,7 @@
 
     $pName        = $_POST['name'];
     $pModel        = $_POST['model'];
-    $pBrand        = $_POST['brandProduct'];
+    $pBrand        = $_POST['brand'];
     $pDescription = $_POST['description'];
     $pCategory    = $_POST['category'];
     $pStock       = $_POST['stock'];
