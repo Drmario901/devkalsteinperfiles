@@ -256,11 +256,11 @@
             <div class='card'>
                 <div class='card-header row'>
                     <div class='col-md-4 text-sm-start text-md-center'>
-                        <h6>
+                        <h5>
                             Product Name
                             <input class='d-inline' type='checkbox' id='name'>
-                        </h6>
-                        <p>$name</p>
+                        </h5>
+                        <p class='text-align-start'>$name</p>
                         <p>
                             <b>Model</b>: $model
                             <input class='d-inline' type='checkbox' id='model'>
