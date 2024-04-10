@@ -147,19 +147,17 @@ jQuery(document).ready(function() {
         }
         $("#paginado").html(botonesPagina); // Insertamos todos los botones generados de una vez
     }
+
+    $(document).on("click", "#paginado .page-link", function() {
+        let seleccionadaPagina = $(this).data("pagina"); // Usa un atributo data-pagina para identificar la página
+        paginaActual = seleccionadaPagina;
+        actualizarVista();
+    });
     
     function generarBoton(pagina) {
-        console.log(`${'pagina-'+pagina}`);
-        
-       let btnPagina = `<li class="page-item ${pagina === paginaActual ? 'active' : null }"> <button class="page-link" id=${'pagina-'+pagina} > ${pagina} </button> </li>`; // Corregido el error tipográfico
-
-       $(document).on(`${'pagina-'+pagina}`, function(){
-        console.log('pagina actual', paginaActual);
-        
-        })
-
-       return btnPagina;
+        // Nota: eliminé el manejador de eventos individual dentro de esta función
+        // y utilizo el atributo data-pagina para identificar el número de página
+        let claseActiva = pagina === paginaActual ? 'active' : '';
+        return `<li class="page-item ${claseActiva}"><button class="page-link" data-pagina="${pagina}">${pagina}</button></li>`;
     }
-
- 
 });
