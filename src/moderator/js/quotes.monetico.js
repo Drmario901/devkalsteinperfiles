@@ -128,9 +128,26 @@ jQuery(document).ready(function() {
                             type: 'POST', // Método HTTP, puede ser 'POST', 'PUT', dependiendo de tu API
                             data: { id: id }, // Datos que envías al servidor, en este caso el ID de la cotización
                             success: function(response) {
-                                // Acciones a realizar después de una respuesta exitosa del servidor
-                                console.log('Cotización confirmada con éxito.', response);
-                                // Aquí podrías, por ejemplo, recargar la tabla de cotizaciones o mostrar un mensaje de éxito
+
+                                const respuesta = JSON.parse(response)
+                                if(respuesta.success) {
+                                console.log('Cotización confirmada con éxito.', respuesta);
+                                    iziToast.show({
+                                        message: respuesta.message,
+                                        position: 'topCenter',
+                                        timeout: false,
+                                        closeOnClick: true,
+                                        progressBar: false
+                                    });
+                                } else {
+                                    iziToast.error({
+                                        message: respuesta.message,
+                                        position: 'topCenter',
+                                        timeout: false,
+                                        closeOnClick: true,
+                                        progressBar: false
+                                    });
+                                }
                             },
                             error: function(xhr, status, error) {
                                 // Manejo de errores
