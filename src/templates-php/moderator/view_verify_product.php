@@ -266,7 +266,7 @@
                             <input class='d-inline' type='checkbox' id='name'>
                         </h5>
                         <h6 class='text-start'>$name</h6>
-                        <p>
+                        <p class='mt-2'>
                             <b>Model:</b> $model
                             <input class='d-inline' type='checkbox' id='model'>
                         </p>
