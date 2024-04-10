@@ -121,7 +121,7 @@ error_reporting(E_ALL);
   
       </ul>
       <li class="page-item">
-        <button id="boton-next" class="page-link" aria-label="Next">
+        <button id="boton-next" class="page-link btn btn-outline-primary" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span class="sr-only">Next</span>
         </button>
