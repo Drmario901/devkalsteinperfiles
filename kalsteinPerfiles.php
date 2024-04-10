@@ -678,6 +678,14 @@ function PerfilesModeratorBitacoras()
     $html = $_short->moderator_bitacora();
     return $html;
 }
+function PerfilesModeratorRender()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_render();
+    return $html;
+}
+
 function PerfilesModeratorShipping()
 {
 
@@ -853,6 +861,7 @@ add_shortcode("MODERATOR_SHIPPING", "PerfilesModeratorShipping");
 add_shortcode("MODERATOR_VIEW_PRODUCT", "PerfilesModeratorViewProduct");
 add_shortcode("MODERATOR_VIEW_ACCOUNT", "PerfilesModeratorViewAccount");
 add_shortcode("MODERATOR_BITACORAS", "PerfilesModeratorBitacoras");
+add_shortcode("MODERATOR_RENDER", "PerfilesModeratorRender");
 add_shortcode("MODERATOR_COTIZACIONES", "moderator_cotizacionesP");
 
 //Shortcode Styles
@@ -2145,6 +2154,21 @@ function perfiles_styles()
         wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
         wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
         wp_enqueue_script('log-table-js', plugins_url('src/moderator/js/log.table.js', __FILE__), array('jquery'));
+    }
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_RENDER')) {
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_style('CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/moderator/css/material.css', __FILE__));
+        wp_enqueue_style('render-css', plugins_url('src/moderator/css/render.css', __FILE__));
+        wp_enqueue_style('font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
+        wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('render', plugins_url('src/moderator/js/render.js', __FILE__), array('jquery'));
+        wp_enqueue_script('jszip', plugins_url('src/moderator/js/jszip.min.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.account.js', __FILE__), array('jquery'));
     }
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_SHIPPING')) {
         translations();
