@@ -4,10 +4,6 @@
     session_start();
     require __DIR__.'/../conexion.php';
 
-    ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 
     // POSTS
 
@@ -56,7 +52,6 @@ error_reporting(E_ALL);
     }
     
     $query .= "ORDER BY date DESC LIMIT $offset, $limit";
-echo $query;
     // $response['query'] = $query;
     $result = $conexion->query($query);
 
