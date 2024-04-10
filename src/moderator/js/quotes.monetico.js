@@ -134,7 +134,14 @@ jQuery(document).ready(function() {
     function generarTabla(datos) {
         let tablaHtml = '<table class="table"><thead><tr><th>ID</th><th>ID Cotización</th><th>Monto Total</th><th>Divisa</th><th>ID Remitente</th><th>Estado del Pago</th></tr></thead><tbody>';
         datos.forEach(fila => {
-            tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td><td>${fila.status_payment}</td></tr>`;
+            let status = '';
+            if(fila.status_payment === 0) {
+             status = 'Pendiente'
+             status = <td class='pay-pendiente'>Pendiente</td>
+            } else {
+                status = <td class='pay-pagado'>Pagado</td>
+            }
+            tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td> ${status} </tr>`;
         });
         tablaHtml += '</tbody></table>';
         return tablaHtml;
