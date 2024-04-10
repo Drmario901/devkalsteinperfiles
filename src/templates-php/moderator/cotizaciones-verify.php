@@ -33,11 +33,11 @@ error_reporting(E_ALL);
 }
 
 .pay-pendiente {
-  /* background-color: orange; */
+  background-color: orange !important;
   color: orange;
 }
 .pay-pagado {
-  /* background-color: green; */
+  background-color: green !important;
   color: green;
   text-align: center;
 }
