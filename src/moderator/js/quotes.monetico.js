@@ -152,4 +152,9 @@ jQuery(document).ready(function() {
        let btnPagina = `<li class="page-item ${pagina === paginaActual ? 'active' : null }"> <a class="page-link" id=${'pagina-'+pagina} > ${pagina} </a> </li>`; // Corregido el error tipográfico
        return btnPagina;
     }
+
+    $(document).on(`pagina-${paginaActual}`, function(){
+        console.log('pagina actual', paginaActual);
+        
+    })
 });
