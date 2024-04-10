@@ -38,7 +38,7 @@
 
         
              
-        $query = "INSERT INTO wp_k_products (product_maker, product_brand, product_name_es, product_model, product_description_es, product_category_es, product_image,
+        $query = "INSERT INTO wp_k_products (product_maker, product_brand, product_name_es, product_model, product_description_es, product_category_es, product_subcategory_es, product_image,
         product_stock_units, product_stock_status,
         product_peso_neto, product_ancho, product_alto, product_largo,
         product_peso_bruto, product_ancho_paquete, product_alto_paquete, product_largo_paquete, wp_product_package_type,
@@ -47,7 +47,7 @@
         product_manual, product_catalog, product_catalog_name,
         product_technical_description_es, product_technical_description_csv, product_type)
         VALUES
-        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$uploadName',
+        ('$acc_id', '$pBrand', '$pName', '$pModel', '$pDescription', '$pCategory', '$pSubcategory', '$uploadName',
         '$pStock', '$pStatus',
         '$pWe', '$pWi','$pHe', '$pLe',
         '$pWePa', '$pWiPa','$pHePa', '$pLePa', '$pPType',

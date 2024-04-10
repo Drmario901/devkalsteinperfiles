@@ -195,7 +195,7 @@
     $pBrand        = $_POST['brand'];
     $pDescription = $_POST['description'];
     $pCategory    = $_POST['category'];
-    $pSubategory    = $_POST['subcategory'];
+    $pSubcategory    = $_POST['subcategory'];
     $pStock       = $_POST['stock'];
     $pStatus      = $_POST['status'];
 
