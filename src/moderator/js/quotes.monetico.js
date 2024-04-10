@@ -136,12 +136,11 @@ jQuery(document).ready(function() {
         datos.forEach(fila => {
             let status = '';
             if(fila.status_payment === 0) {
-             status = 'Pendiente'
-             status = <td class='pay-pendiente'>Pendiente</td>
+                status = "<td class='pay-pendiente'>Pendiente</td>";
             } else {
-                status = <td class='pay-pagado'>Pagado</td>
+                status = "<td class='pay-pagado'>Pagado</td>";
             }
-            tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td> ${status} </tr>`;
+            tablaHtml += `<tr><td>${fila.id}</td><td>${fila.id_cotizacion}</td><td>${fila.monto_total}</td><td>${fila.cotizacion_divisa}</td><td>${fila.cotizacion_id_remitente}</td>${status}</tr>`;
         });
         tablaHtml += '</tbody></table>';
         return tablaHtml;
