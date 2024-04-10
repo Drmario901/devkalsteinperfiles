@@ -16,6 +16,7 @@
     <article class="container article">
 
         <div class="row">
+        <h4>Productos pendientes por verificar</h4>
 
             <!-- PRODUCTOS -->
 
@@ -92,7 +93,6 @@
 
                         echo "
                         <div class='col-lg-6'>
-                        <h4>Productos pendientes por verificar</h4>
                             <div class='card row m-2'>
                                 <div class='col-12'>
                                     <div class='d-flex justify-content-between'>
