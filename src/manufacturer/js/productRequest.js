@@ -573,6 +573,7 @@ jQuery(document).ready(function ($) {
     formData.append("manual", manual);
     formData.append("catalog", catalog);
 
+     /*
     var all_accessories = [];
 
     for (let elem of document.querySelector("#uploadAccesoryList").children) {
@@ -588,6 +589,7 @@ jQuery(document).ready(function ($) {
     }
 
     console.log(all_accessories);
+     */
 
     $("#btnSendData").attr("disabled", "");
 
