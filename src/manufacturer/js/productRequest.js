@@ -406,7 +406,7 @@ jQuery(document).ready(function ($) {
   $(document).on("click", "#btnSendData", function (e) {
     var name = $("#nameProduct").val().replace(/'/g, "\\'");
     var model = $("#modelProduct").val().replace(/'/g, "\\'");
-    var brand = $("#productBand").val().replace(/'/g, "\\'");
+    var brand = $("#brandProduct").val().replace(/'/g, "\\'");
     var description = $("#descriptionProduct").val().replace(/'/g, "\\'");
     var category = $("#dataCategory").val();
     var fileInput = $("#file-input")[0].files[0];
