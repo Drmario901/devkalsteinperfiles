@@ -149,7 +149,7 @@ jQuery(document).ready(function() {
     }
     
     function generarBoton(pagina) {
-       let btnPagina = `<li class="page-item"> <a class="page-link"> ${pagina} </a> </li>`; // Corregido el error tipográfico
+       let btnPagina = `<li class="page-item ${pagina === paginaActual ? 'active' : null }"> <a class="page-link" id=${'pagina-'+pagina} > ${pagina} </a> </li>`; // Corregido el error tipográfico
        return btnPagina;
     }
 });
