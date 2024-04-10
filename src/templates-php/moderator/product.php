@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
                                 <div class='col-12'>
-                                    <a href='https://dev.kalstein.plus/index.php/moderator/view-product?pid=$id'>
+                                    <a href='https://dev.kalstein.plus/plataforma/moderator/view-product?pid=$id'>
                                         <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                                     </a>
                                 </div>
