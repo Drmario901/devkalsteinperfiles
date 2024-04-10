@@ -59,7 +59,7 @@
                     echo "
                     <script>
                         alert('another user is in this taks');
-                        window.location.href = 'https://plataforma.kalstein.net/index.php/moderator/accounts';
+                        window.location.href = 'https://dev.kalstein.plus/plataforma/moderator/accounts';
                     </script>
                     ";
                 }
