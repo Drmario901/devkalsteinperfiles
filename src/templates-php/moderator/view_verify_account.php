@@ -153,7 +153,7 @@
                         </h4>
                         <p class='mb-4'>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
         
-                        <div class='row mb-5' style='border-bottom: 1px solid rgba(33, 40, 50, 0.125);'>
+                        <div class='row mb-3' style='border-bottom: 1px solid rgba(33, 40, 50, 0.125);'>
         
                             <div class='col-xsm-12 col-sm-6'>
             
@@ -195,7 +195,7 @@
                             <br>
                             </div>
 
-                            <div class='row'>
+                            <div class='row mt-3'>
                             <h4>Pricing</h4>
                             <div class='col-sm-6'>
 
