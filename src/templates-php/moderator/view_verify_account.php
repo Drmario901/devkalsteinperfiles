@@ -126,13 +126,13 @@
                         <p class='mb-4'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
         
                         <div class='row'>
-                            <div class='col-xsm-12 col-sm-6' style='border-right: 1px solid rgba(33, 40, 50, 0.125);'>
+                            <div class='col-xsm-12 col-sm-6 px-0' style='border-right: 1px solid rgba(33, 40, 50, 0.125);'>
                                 
                                 <h6 style='font-weight: 600;'>Name <input class='d-inline' type='checkbox' id='nombre'></h6>
                                 $name $lastname
                             
                             </div>
-                            <div class='col-xsm-12 col-sm-6 ps-2'>
+                            <div class='col-xsm-12 col-sm-6 px-0 ms-2'>
         
                                 <h6 style='font-weight: 600;'>Country and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
                                 $countryAcc<br>
