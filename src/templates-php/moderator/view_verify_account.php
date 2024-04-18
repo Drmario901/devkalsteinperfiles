@@ -134,7 +134,7 @@
                             </div>
                             <div class='col-xsm-12 col-sm-6'>
         
-                                <h6 style='font-weight: 500;'>Country and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
+                                <h6 style='font-weight: 600;'>Country and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
                                 $countryAcc<br>
                                 Register: $document
                                 <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
@@ -157,13 +157,13 @@
         
                             <div class='col-xsm-12 col-sm-6'>
             
-                                <h6 style='font-weight: 500;'>Company Name <input class='d-inline' type='checkbox' id='name-b'></h6>
+                                <h6 style='font-weight: 600;'>Company Name <input class='d-inline' type='checkbox' id='name-b'></h6>
                                 $nameCompany
                                 
                                 <br>
                                 <br>
                                 
-                                <h6>Location</h6>
+                                <h6 style='font-weight: 600;'>Location</h6>
                                 <span style='display: flex;
                                 align-items: center;
                                 gap: 10px;'><b>Country:</b> $countryCompany <input class='d-inline' type='checkbox' id='country-b'><br></span> 
@@ -177,16 +177,16 @@
                             </div>
                             <div class='col-xsm-12 col-sm-6'>
             
-                                <h6>Phone <input class='d-inline' type='checkbox' id='phone-b'></h6>
+                                <h6 style='font-weight: 600;'>Phone <input class='d-inline' type='checkbox' id='phone-b'></h6>
                                 $phoneCompany
                 
                                 <br>
                                 <br>
                 
-                                <h6>Website <input class='d-inline' type='checkbox' id='web-b'></h6>
+                                <h6 style='font-weight: 600;'>Website <input class='d-inline' type='checkbox' id='web-b'></h6>
                                 $websiteCompany
 
-                                <h6>RIF <input class='d-inline' type='checkbox' id='rif-b'></h6>
+                                <h6 style='font-weight: 600;'>RIF <input class='d-inline' type='checkbox' id='rif-b'></h6>
                                 Register: $rifCompany
                                 <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
                                     <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
@@ -196,7 +196,7 @@
                             </div>
 
                             <div class='row'>
-                            <h5>Pricing</h5>
+                            <h4>Pricing</h4>
                             <div class='col-sm-6'>
 
                                 <label for='' style='margin-top: 20px; font-weight: 900;'>Descuento Gilson</label>
