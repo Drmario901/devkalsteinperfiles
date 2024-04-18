@@ -185,7 +185,8 @@
                 
                                 <h6 style='font-weight: 600;'>Website <input class='d-inline' type='checkbox' id='web-b'></h6>
                                 $websiteCompany
-
+                                <br>
+                                <br>
                                 <h6 style='font-weight: 600;'>RIF <input class='d-inline' type='checkbox' id='rif-b'></h6>
                                 Register: $rifCompany
                                 <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
@@ -195,7 +196,7 @@
                             <br>
                             </div>
 
-                            <div class='row mt-3'>
+                            <div class='row'>
                             <h4>Pricing</h4>
                             <div class='col-sm-6'>
 
