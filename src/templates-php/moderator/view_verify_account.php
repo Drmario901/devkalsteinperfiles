@@ -120,7 +120,7 @@
                 <div class='card'>
                     <div class='card-header'>
                         <h4>
-                        <i class="fa-solid fa-user"></i>User legal data
+                        User legal data
                         </h4>
                         <p>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
         
