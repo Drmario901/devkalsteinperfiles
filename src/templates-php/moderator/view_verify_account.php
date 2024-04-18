@@ -148,6 +148,7 @@
                     <div class='card-body'>
                         
                         <h4>
+                        <i class='fas fa-building'></i>
                             User Company data
                         </h4>
                         <p>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
