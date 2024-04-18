@@ -128,7 +128,7 @@
                         <div class='row'>
                             <div class='col-xsm-12 col-sm-6'>
                                 
-                                <h6 style='font-weight: 500;'>Name <input class='d-inline' type='checkbox' id='nombre'></h6>
+                                <h6 style='font-weight: 600;'>Name <input class='d-inline' type='checkbox' id='nombre'></h6>
                                 $name $lastname
                             
                             </div>
