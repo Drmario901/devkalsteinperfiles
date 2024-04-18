@@ -197,6 +197,7 @@
                             </div>
 
                             <div class='row'>
+                            <i class='fas fa-tag'></i>
                             <h4>Pricing</h4>
                             <div class='col-sm-6'>
 
