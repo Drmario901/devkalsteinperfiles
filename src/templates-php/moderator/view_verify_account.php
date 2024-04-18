@@ -132,7 +132,7 @@
                                 $name $lastname
                             
                             </div>
-                            <div class='col-xsm-12 col-sm-6 px-0'>
+                            <div class='col-xsm-12 col-sm-6 px-0 ps-5'>
         
                                 <h6 style='font-weight: 600;'>Country and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
                                 $countryAcc<br>
