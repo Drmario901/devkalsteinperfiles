@@ -126,7 +126,7 @@
                         <p class='mb-4'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
         
                         <div class='row'>
-                            <div class='col-xsm-12 col-sm-6'>
+                            <div class='col-xsm-12 col-sm-6' style='border-right: 1px solid rgba(33, 40, 50, 0.125);'>
                                 
                                 <h6 style='font-weight: 600;'>Name <input class='d-inline' type='checkbox' id='nombre'></h6>
                                 $name $lastname
@@ -200,7 +200,7 @@
                             <h4>Pricing</h4>
                             <div class='col-sm-6'>
 
-                                <label for='' style='font-weight: 900;'>Descuento Gilson</label>
+                                <label for='' style='font-weight: 700;'>Descuento Gilson</label>
                                 <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
 
                             </div>
