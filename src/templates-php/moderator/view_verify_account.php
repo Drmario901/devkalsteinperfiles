@@ -126,7 +126,7 @@
                         <p class='mb-4'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
         
                         <div class='row'>
-                            <div class='col-xsm-12 col-sm-6 px-0' style='border-right: 1px solid rgba(33, 40, 50, 0.125);'>
+                            <div class='col-xsm-12 col-sm-6' style='border-right: 1px solid rgba(33, 40, 50, 0.125);'>
                                 
                                 <h6 style='font-weight: 600;'>Name <input class='d-inline' type='checkbox' id='nombre'></h6>
                                 $name $lastname
@@ -155,7 +155,7 @@
         
                         <div class='row mb-3' style='border-bottom: 1px solid rgba(33, 40, 50, 0.125);'>
         
-                            <div class='col-xsm-12 col-sm-6'>
+                            <div class='col-xsm-12 col-sm-6' style='border-right: 1px solid rgba(33, 40, 50, 0.125);'>
             
                                 <h6 style='font-weight: 600;'>Company Name <input class='d-inline' type='checkbox' id='name-b'></h6>
                                 $nameCompany
@@ -175,7 +175,7 @@
                                 gap: 10px;'><b>Address:</b> $adressCompany <input class='d-inline' type='checkbox' id='adress-b'> <br></span>
                             
                             </div>
-                            <div class='col-xsm-12 col-sm-6'>
+                            <div class='col-xsm-12 col-sm-6 px-0 ps-5'>
             
                                 <h6 style='font-weight: 600;'>Phone <input class='d-inline' type='checkbox' id='phone-b'></h6>
                                 $phoneCompany
