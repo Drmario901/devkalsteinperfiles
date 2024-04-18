@@ -200,7 +200,7 @@
                             <h4>Pricing</h4>
                             <div class='col-sm-6'>
 
-                                <label for='' style='margin-top: 20px; font-weight: 900;'>Descuento Gilson</label>
+                                <label for='' style='font-weight: 900;'>Descuento Gilson</label>
                                 <input class='d-inline' type='number' id='discountGilson' value='$discountGilson'>
 
                             </div>
