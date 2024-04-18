@@ -123,7 +123,7 @@
                         <i class='fas fa-user'></i>
                         User legal data
                         </h4>
-                        <p class='mb-3'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
+                        <p class='mb-4'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
         
                         <div class='row'>
                             <div class='col-xsm-12 col-sm-6'>
@@ -151,9 +151,9 @@
                         <i class='fas fa-building'></i>
                             User Company data
                         </h4>
-                        <p class='mb-3'>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
+                        <p class='mb-4'>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
         
-                        <div class='row mb-3' style='border-bottom: 1px solid rgba(33, 40, 50);'>
+                        <div class='row mb-5' style='border-bottom: 1px solid rgba(33, 40, 50, 0.125);'>
         
                             <div class='col-xsm-12 col-sm-6'>
             
