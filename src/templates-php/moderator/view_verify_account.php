@@ -197,8 +197,10 @@
                             </div>
 
                             <div class='row'>
+                            <h4>
                             <i class='fas fa-tag'></i>
-                            <h4>Pricing</h4>
+                            Pricing
+                            </h4>
                             <div class='col-sm-6'>
 
                                 <label for='' style='font-weight: 700;'>Descuento Gilson</label>
