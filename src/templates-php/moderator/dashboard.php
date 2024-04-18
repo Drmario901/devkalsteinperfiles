@@ -14,10 +14,6 @@
 </header>
 <main>   
     <article class="container article">
-        <br>
-        <br>
-        <br>
-        <br>
         
         <div class="row">
             <?php
