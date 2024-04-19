@@ -117,8 +117,8 @@
                 echo "
                 <input type='hidden' id='acc_id' value='$val_acc_id'>
                 <input type='hidden' id='e-mail' value='$idAcc'>
-                <div class='card'>
-                    <div class='card-header'>
+                <div>
+                    <div class='card'>
                         <h4>
                         <i class='fas fa-user'></i>
                         User legal data
@@ -145,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class='card-body'>
+                    <div class='card'>
                         
                         <h4>
                         <i class='fas fa-building'></i>
@@ -196,7 +196,7 @@
                             <br>
                             </div>
 
-                            <div class='row'>
+                            <div class='card'>
                             <h4>
                             <i class='fas fa-tag'></i>
                             Pricing
