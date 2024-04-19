@@ -94,7 +94,7 @@
                                 <div class='col-12'>
                                     <div>
                                         <h6><div style='font-weight: 600;'>$rol</div> Account Verification:</h6>
-                                        <p class='mb-2' style='font-weight: 600; font-size: 1.25em;'>$correo</p>
+                                        <p class='mb-2' style='font-weight: 600; font-size: 1.15em;'>$correo</p>
                                     </div>
                                 </div>
                                 <div class='col-12'>
