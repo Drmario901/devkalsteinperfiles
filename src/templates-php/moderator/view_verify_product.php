@@ -315,6 +315,7 @@
                     </div> 
                 </div>
                 <div class='card mb-3'>
+                <div class='row'>
                     <div class='col-md-6 mb-2'>
                         <h5><i class='fas fa-microscope'></i>Measures <input class='d-inline' type='checkbox' id='measures'></h5>
         
@@ -334,6 +335,7 @@
                             <li><b>Height</b>: $hePa cm</li> 
                             <li><b>Length</b>: $lePa cm</li>
                         </ul>
+                    </div>
                     </div>
                     <hr class='mt-3'>
                     <h5>Files</h5>
