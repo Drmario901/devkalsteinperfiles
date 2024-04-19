@@ -272,7 +272,7 @@
                             <input class='d-inline' type='checkbox' id='model'>
                         </p>
                         <a TARGET='_blank' href='$image'>
-                            <img style='margin: auto; border: 1px solid #999' width=200 src='$image'>
+                            <img class='my-3' style='margin: auto; border: 1px solid #999' width=200 src='$image'>
                         </a>
                         
                         <!-- Enlaces o promociones -->
@@ -374,7 +374,7 @@
                         <h4 class='text-white pb-0'>Denegate</h4>
                     </button>
                 </div>
-                <div class='card mt-3'>
+                <div class='card my-3'>
                     <h5>Past warnings</h5>";
 
                         $query = "SELECT moderator_id, description, strike, create_at FROM wp_atention_calls WHERE to_user = '$maker' AND type = 'product'";
