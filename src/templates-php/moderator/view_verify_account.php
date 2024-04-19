@@ -117,7 +117,6 @@
                 echo "
                 <input type='hidden' id='acc_id' value='$val_acc_id'>
                 <input type='hidden' id='e-mail' value='$idAcc'>
-                <div>
                     <div class='card'>
                         <h4>
                         <i class='fas fa-user'></i>
@@ -221,8 +220,7 @@
                             </button>
                         </div>
         
-                    </div>
-                </div>";
+                    </div>";
 
             }
             else{
