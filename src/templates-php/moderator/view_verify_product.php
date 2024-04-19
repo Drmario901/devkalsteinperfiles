@@ -363,7 +363,6 @@
                     $discounts
         
                 </div></div>
-                <hr class='mt-4'>
                 <textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
                 <p class='d-flex justify-content-start' id='strikeContainer'>
                     <label>Strike</label>
