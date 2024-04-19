@@ -81,7 +81,7 @@
                             $mod = $resultAction->fetch_array()[1];
 
                             $verifying_by = "
-                            <div class='fw-bold card' style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'><i class='fa-regular fa-circle-check'></i> Verifying by: $mod</div>
+                            <div class='fw-bold card d-flex justify-content-start' style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'><i class='fa-regular fa-circle-check'></i> Verifying by: $mod</div>
                             ";
                         }
                         else {
@@ -94,7 +94,7 @@
                                 <div class='col-12'>
                                     <div>
                                         <h6><div style='font-weight: 600;'>$rol</div> Account Verification:</h6>
-                                        <p class='mb-3' style='font-weight: 600; font-size: 1.15em;'>$correo</p>
+                                        <p class='mb-2' style='font-weight: 600; font-size: 1.15em;'>$correo</p>
                                     </div>
                                 </div>
                                 <div class='col-12'>
