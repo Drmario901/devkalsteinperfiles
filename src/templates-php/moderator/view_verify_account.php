@@ -116,7 +116,7 @@
                 <input type='hidden' id='e-mail' value='$idAcc'>
                     <div class='card mb-3'>
                         <h4>
-                        <i class='fa-regular fa-user' style='font-weight: 400;'></i>
+                        <i class='fas fa-user' style='font-weight: 400;'></i>
                         User legal data
                         </h4>
                         <p class='mb-4'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
@@ -143,7 +143,7 @@
                     </div>
                     <div class='card mb-3'>
                     <h4>
-                        <i class='fa-regular fa-building' style='font-weight: 400;'></i>
+                        <i class='fas fa-building' style='font-weight: 400;'></i>
                             User Company data
                         </h4>
                         <p class='mb-4'>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
@@ -197,7 +197,7 @@
                     <div class='card'>
                     <div class='row'>
                             <h4>
-                            <i class='fa-regular fa-tag' style='font-weight: 400;'></i>
+                            <i class='fas fa-tag' style='font-weight: 400;'></i>
                             Pricing
                             </h4>
                             <div class='col-sm-6'>
