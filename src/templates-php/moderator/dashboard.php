@@ -93,8 +93,8 @@
                             <div class='card row m-2'>
                                 <div class='col-12'>
                                     <div>
-                                        <h6>$rol Account Verification:</h6>
-                                        <div>$correo</div>
+                                        <h6><b>$rol</b> Account Verification:</h6>
+                                        <div class='mb-2'>$correo</div>
                                     </div>
                                 </div>
                                 <div class='col-12'>
@@ -104,6 +104,7 @@
                                 </div>
                                 $verifying_by
                                 <div class='col-12'>
+                                    <i class='fas fa-clock'></i>
                                     $elapsed
                                 </div>
                             </div>
