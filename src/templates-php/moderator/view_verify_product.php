@@ -260,6 +260,7 @@
             <input type='hidden' id='p-id' value='$p_id'>
 
                 <div class='card mb-3'>
+                <div class='row'>
                     <div class='col-md-4 text-sm-start text-md-center'>
                         <h5>
                             Product Name
@@ -311,7 +312,7 @@
                         $div_acc
                     </div>
 
-                    
+                    </div> 
                 </div>
                 <div class='card mb-3'>
                     <div class='col-md-6 mb-2'>
@@ -356,12 +357,12 @@
                         <div class='col-sm-6'>
                             <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
                         </div>
-                    </div>
+                    
                     <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
-                </div>
+                </div></div>
                 <hr class='mt-4'>
                 <textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
                 <p class='d-flex justify-content-start' id='strikeContainer'>
