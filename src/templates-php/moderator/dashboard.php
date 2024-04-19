@@ -81,7 +81,7 @@
                             $mod = $resultAction->fetch_array()[1];
 
                             $verifying_by = "
-                                <div class='col-12 card p-1 mt-2' style='background-color: #74d7e0;'>Verifying by: $mod</div>
+                            <b class='mt-2'>Verifying by: $mod</b>
                             ";
                         }
                         else {
