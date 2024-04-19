@@ -258,7 +258,8 @@
         
             echo "
             <input type='hidden' id='p-id' value='$p_id'>
-
+            <h4>Validar producto</h4>
+            <p>Por favor, revisa la información del producto del usuario y marca con un check los datos que sean válidos.</p>
                 <div class='card mb-3'>
                 <div class='row'>
                     <div class='col-md-4 text-sm-start text-md-center'>
