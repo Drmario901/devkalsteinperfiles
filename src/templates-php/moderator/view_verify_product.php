@@ -364,7 +364,7 @@
                         </div>
                         </div>
                         <hr class='mt-3'>
-                    <h5><i class='fas fa-percent'></i Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
+                    <h5><i class='fas fa-percent'></i> Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
