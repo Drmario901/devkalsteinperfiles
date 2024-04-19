@@ -81,7 +81,7 @@
                             $mod = $resultAction->fetch_array()[1];
 
                             $verifying_by = "
-                            <b class='mt-3' style='width: 100vw; border: solid 1px lightgray; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>Verifying by: $mod</b>
+                            <div class='mt-3 fw-bold card' style='width: 100vw; border: solid 1px lightgray; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>Verifying by: $mod</div>
                             ";
                         }
                         else {
