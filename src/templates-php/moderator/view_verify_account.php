@@ -213,7 +213,7 @@
                         </div>
         
         
-                        <textarea class='mx-auto mb-2 mt-4' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
+                        <textarea class='mx-auto mb-2 mt-4' style='width: 100%; height: 150px; background-color: white;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
                         <div id='btnValidate' class='mx-auto'>
                             <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
                                 <h4 class='text-white pb-0'>Denegate</h4>
