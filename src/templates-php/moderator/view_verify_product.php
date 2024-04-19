@@ -163,7 +163,7 @@
                         <b class='d-inline'>Catalog</b>:
                         <a target='_blank' style='display: inline; text-decoration: underline' href='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>
                         <i class='fa-solid fa-file-pdf'></i>$namepdf.pdf</a>
-                        <input class='d-inline' type='checkbox' id='catalog'><br><br>
+                        <input class='d-inline' type='checkbox' id='catalog'>
                     ";
                 }
                 else{
@@ -172,7 +172,7 @@
                         none</p>
                         <div hidden>
                             <input class='d-inline' type='checkbox' id='catalog' checked hidden>
-                        </div><br><br>
+                        </div>
                     ";
                 }
                 
