@@ -25,6 +25,10 @@
     align-items: center;
     gap: 10px;
     }
+    .fas {
+        width: 20px;
+        height: 20px;
+    }
 </style>
 
 <main>   
