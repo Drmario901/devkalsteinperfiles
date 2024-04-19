@@ -343,10 +343,10 @@
                         $divpdfcat
                         $divpdf
                     </p>
-                    <hr class='mt-3'>
                     </div>
                     <div class='card'>
                         <h5>Pricing</h5>
+                        <div class='row'>
                         <div class='col-sm-6'>
                             <div class='btn btn-success btn-block text-white flex-column my-2' style='align-items: start !important'>
                                 
@@ -358,6 +358,7 @@
                         </div>
                         <div class='col-sm-6'>
                             <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
+                        </div>
                         </div>
                     
                     <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
