@@ -118,9 +118,12 @@
                                         <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                                     </a>
                                 </div>
+                                <div class='mt-2'>
                                 $verifying_by
-                                <div class='col-12'>
+                                <div class='col-12 mt-2'>
+                                    <i class='fas fa-clock'></i>
                                     $elapsed
+                                </div>
                                 </div>
                             </div>
                         </div>
