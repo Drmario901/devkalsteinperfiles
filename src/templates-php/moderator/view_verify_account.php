@@ -142,8 +142,7 @@
                         </div>
                     </div>
                     <div class='card mb-3'>
-                        
-                        <h4>
+                    <h4>
                         <i class='fas fa-building'></i>
                             User Company data
                         </h4>
@@ -190,9 +189,11 @@
                                 </a>
                             <br>
                             <br>
-                            </div>
+                            </div></div>
+                        
+                        
 
-                            <div class='card'>
+                    <div class='card'>
                             <h4>
                             <i class='fas fa-tag'></i>
                             Pricing
