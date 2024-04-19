@@ -259,7 +259,7 @@
             echo "
             <input type='hidden' id='p-id' value='$p_id'>
 
-                <div class='card'>
+                <div class='card mb-3'>
                     <div class='col-md-4 text-sm-start text-md-center'>
                         <h5>
                             Product Name
@@ -313,7 +313,7 @@
 
                     
                 </div>
-                <div class='card'>
+                <div class='card mb-3'>
                     <div class='col-md-6 mb-2'>
                         <h5><i class='fas fa-microscope'></i>Measures <input class='d-inline' type='checkbox' id='measures'></h5>
         
@@ -341,6 +341,7 @@
                         $divpdf
                     </p>
                     <hr class='mt-3'>
+                    </div>
                     <div class='card'>
                         <h5>Pricing</h5>
                         <div class='col-sm-6'>
