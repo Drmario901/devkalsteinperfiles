@@ -191,7 +191,6 @@
                             <br>
                             <br>
                             </div>
-                            </div>
 
                             <div class='card'>
                             <h4>
