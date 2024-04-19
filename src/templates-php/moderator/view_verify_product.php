@@ -296,7 +296,9 @@
                         </p>
                     </div>
                     <div class='col-md-8'>
-                        <h5>Description</h5>
+                        <h5>
+                        <i class='fas fa-circle-info'></i>
+                        Description</h5>
                         <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>$description</p>
                         <table class='table table-responsive'>$table</table>
@@ -358,11 +360,11 @@
 
                         </div>
                         <div class='col-sm-6'>
-                            <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
+                            <p><b><i class='fas fa-clock'></i> Last update</b>: $date</p>
                         </div>
                         </div>
                         <hr class='mt-3'>
-                    <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
+                    <h5><i class='fas fa-percent'></i Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
