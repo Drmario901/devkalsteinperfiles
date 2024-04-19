@@ -134,7 +134,7 @@
         
                                 <h6 style='font-weight: 600;'>Country and Passport <input class='d-inline' type='checkbox' id='passport'></h6>
                                 $countryAcc<br>
-                                Register: $document
+                                <b>Register</b>: $document
                                 <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
                                     <img style='border: 1px solid lightgrey' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
                                 </a>
