@@ -93,7 +93,7 @@
                             <div class='card row m-2'>
                                 <div class='col-12'>
                                     <div>
-                                        <h6><span style='font-weight: 500;'>$rol</span> Account Verification:</h6>
+                                        <h6><div style='font-weight: 600;'>$rol</div> Account Verification:</h6>
                                         <div class='mb-2'>$correo</div>
                                     </div>
                                 </div>
