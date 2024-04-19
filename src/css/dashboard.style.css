@@ -908,7 +908,7 @@ li{
     background: #213280;
   }
   
-  .navbar-link.active { color: #213280;}
+  .navbar-link.active { color: #213280; border-bottom: solid 3px #212380;}
   .navbar-link.active:hover { color: #213280 !important;}
   
   .user-action-list {
