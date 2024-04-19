@@ -25,10 +25,6 @@
     align-items: center;
     gap: 10px;
     }
-    .fas {
-        width: 20px;
-        height: 20px;
-    }
 </style>
 
 <main>   
@@ -120,7 +116,7 @@
                 <input type='hidden' id='e-mail' value='$idAcc'>
                     <div class='card mb-3'>
                         <h4>
-                        <i class='fas fa-user'></i>
+                        <i class='fas fa-user' style='font-size: 16px;'></i>
                         User legal data
                         </h4>
                         <p class='mb-4'>Por favor, revisa la información legal del usuario y marca con un check las que estén válidas.</p>
@@ -147,7 +143,7 @@
                     </div>
                     <div class='card mb-3'>
                     <h4>
-                        <i class='fas fa-building'></i>
+                        <i class='fas fa-building' style='font-size: 16px;'></i>
                             User Company data
                         </h4>
                         <p class='mb-4'>Por favor, revisa la información de la empresa y marca con un check las que estén válidas.</p>
@@ -201,7 +197,7 @@
                     <div class='card'>
                     <div class='row'>
                             <h4>
-                            <i class='fas fa-tag'></i>
+                            <i class='fas fa-tag' style='font-size: 16px;'></i>
                             Pricing
                             </h4>
                             <div class='col-sm-6'>
