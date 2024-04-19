@@ -92,7 +92,7 @@
                         <div class='col-lg-6'>
                             <div class='card row m-2'>
                                 <div class='col-12'>
-                                    <div class='d-flex justify-content-between'>
+                                    <div>
                                         <h6>$rol Account Verification:</h6>
                                         <div>$correo</div>
                                     </div>
