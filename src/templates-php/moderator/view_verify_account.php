@@ -25,9 +25,6 @@
     align-items: center;
     gap: 10px;
     }
-    .card-header {
-        background-color: white;
-    }
 </style>
 
 <main>   
@@ -117,7 +114,7 @@
                 echo "
                 <input type='hidden' id='acc_id' value='$val_acc_id'>
                 <input type='hidden' id='e-mail' value='$idAcc'>
-                    <div class='card'>
+                    <div class='card mb-3'>
                         <h4>
                         <i class='fas fa-user'></i>
                         User legal data
@@ -144,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class='card'>
+                    <div class='card mb-3'>
                         
                         <h4>
                         <i class='fas fa-building'></i>
