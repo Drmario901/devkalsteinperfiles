@@ -81,7 +81,7 @@
                             $mod = $resultAction->fetch_array()[1];
 
                             $verifying_by = "
-                            <b class='mt-2' style='width: 100vw; border: solid 1px lightgray; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>Verifying by: $mod</b>
+                            <b class='mt-3' style='width: 100vw; border: solid 1px lightgray; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>Verifying by: $mod</b>
                             ";
                         }
                         else {
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class='mt-2'>
                                 $verifying_by
-                                <div class='col-12'>
+                                <div class='col-12 mt-2'>
                                     <i class='fas fa-clock'></i>
                                     $elapsed
                                 </div>
