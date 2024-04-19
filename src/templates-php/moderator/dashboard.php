@@ -94,7 +94,7 @@
                                 <div class='col-12'>
                                     <div>
                                         <h6><div style='font-weight: 600;'>$rol</div> Account Verification:</h6>
-                                        <div class='mb-2'>$correo</div>
+                                        <p class='mb-2' style='font-weight: 600; font-size: 0.8em;'>$correo</p>
                                     </div>
                                 </div>
                                 <div class='col-12'>
@@ -102,10 +102,12 @@
                                         <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                                     </a>
                                 </div>
+                                <div class='mt-2'>
                                 $verifying_by
                                 <div class='col-12'>
                                     <i class='fas fa-clock'></i>
                                     $elapsed
+                                </div>
                                 </div>
                             </div>
                         </div>
