@@ -264,6 +264,7 @@
                 <div class='row'>
                     <div class='col-md-4 text-sm-start text-md-center'>
                         <h5>
+                        <i class='fas fa-pen'></i>
                             Product Name
                             <input class='d-inline' type='checkbox' id='name'>
                         </h5>
