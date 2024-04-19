@@ -318,7 +318,7 @@
                 <div class='card mb-3'>
                 <div class='row'>
                     <div class='col-md-6 mb-2'>
-                        <h5><i class='fas fa-microscope'></i>Measures <input class='d-inline' type='checkbox' id='measures'></h5>
+                        <h5><i class='fas fa-microscope'></i> Measures <input class='d-inline' type='checkbox' id='measures'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
                             <li><b>Weigth</b>: $we kg</li>
@@ -328,7 +328,7 @@
                         </ul>
                     </div>
                     <div class='col-md-6'>
-                        <h5><i class='fas fa-box'></i>Measures Packaged <input class='d-inline' type='checkbox' id='measures-p'></h5>
+                        <h5><i class='fas fa-box'></i> Measures Packaged <input class='d-inline' type='checkbox' id='measures-p'></h5>
         
                         <ul class='list-unstyled text-start' style='min-width: 125px'>
                             <li><b>Weigth</b>: $wePa kg</li> 
@@ -339,14 +339,14 @@
                     </div>
                     </div>
                     <hr class='mt-3'>
-                    <h5>Files</h5>
+                    <h5><i class='fas fa-file'></i> Files</h5>
                     <p>
                         $divpdfcat
                         $divpdf
                     </p>
                     </div>
                     <div class='card'>
-                        <h5>Pricing</h5>
+                        <h5><i class='fas fa-tag'></i> Pricing</h5>
                         <div class='row'>
                         <div class='col-sm-6'>
                             <div class='btn btn-success btn-block text-white flex-column my-2' style='align-items: start !important'>

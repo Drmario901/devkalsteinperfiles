@@ -114,6 +114,8 @@
                 echo "
                 <input type='hidden' id='acc_id' value='$val_acc_id'>
                 <input type='hidden' id='e-mail' value='$idAcc'>
+                <h4>Validar cuenta</h4>
+            <p>Por favor, revisa la información de la cuenta del usuario y marca con un check los datos que sean válidos.</p>
                     <div class='card mb-3'>
                         <h4>
                         <i class='fas fa-user' style='font-weight: 400;'></i>
