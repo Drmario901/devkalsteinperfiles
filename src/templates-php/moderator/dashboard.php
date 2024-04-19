@@ -81,7 +81,7 @@
                             $mod = $resultAction->fetch_array()[1];
 
                             $verifying_by = "
-                            <b class='mt-2 p-1' style='width: 100%; border: solid 1px gray; border-radius: 5px; background-color: #78d6a8;'>Verifying by: $mod</b>
+                            <b class='mt-2 p-3' style='width: 100%; border: solid 1px lightgrey; border-radius: 5px; background-color: #86e397;'>Verifying by: $mod</b>
                             ";
                         }
                         else {
