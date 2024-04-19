@@ -21,10 +21,6 @@ error_reporting(E_ALL); */
 </header>
 
 <main>
-
-  <br>
-  <br>
-  <br>
   <article class="container article">
     <h1 class="title">Render productos</h1>
     <div class="grid-render">
