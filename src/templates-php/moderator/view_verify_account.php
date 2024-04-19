@@ -209,7 +209,6 @@
                             </div>
                         </div>
         
-                        </div>
         
                         <textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
                         <div id='btnValidate' class='mx-auto'>
