@@ -360,8 +360,8 @@
                             <p><b>Last update <i class='fas fa-clock'></i></b>: $date</p>
                         </div>
                         </div>
-                    
-                    <h5 class='mt-2'>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
+                        <hr class='mt-3'>
+                    <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
