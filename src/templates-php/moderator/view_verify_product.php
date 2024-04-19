@@ -361,7 +361,7 @@
                         </div>
                         </div>
                     
-                    <h5>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
+                    <h5 class='mt-2'>Wholesale discounts <input class='d-inline' type='checkbox' id='wholesale'></h5>
 
                     $discounts
         
