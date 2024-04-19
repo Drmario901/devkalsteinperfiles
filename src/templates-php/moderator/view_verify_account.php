@@ -134,7 +134,7 @@
                                 $countryAcc<br>
                                 Register: $document
                                 <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
-                                    <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
+                                    <img style='border: 1px solid lightgrey' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imageDocument'>
                                 </a>
                                 <br>
                             
@@ -185,7 +185,7 @@
                                 <h6 style='font-weight: 600;'>RIF <input class='d-inline' type='checkbox' id='rif-b'></h6>
                                 Register: $rifCompany
                                 <a target='_blank' style='display: inline; text-decoration: underline' href='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
-                                    <img style='border: 1px solid #999' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
+                                    <img style='border: 1px solid lightgrey' width=200px src='https://plataforma.kalstein.net/wp-content/plugins/kalsteinPerfiles/src/images/images-verify/$imgrifCompany'>
                                 </a>
                             <br>
                             <br>
