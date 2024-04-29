@@ -73,7 +73,7 @@
     background: none;
     border: 2px solid #fff;
     font-size: 15px;
-    color: #131313;
+    color: white;
     cursor: pointer;
     position: relative;
     overflow: hidden;
