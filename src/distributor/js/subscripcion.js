@@ -5,28 +5,48 @@ const titulos = [
   "Membresía 3",
 ];
 
-const informacionTabla = [
+const datos = [
   {
-    titulo: "Soporte Multilingüe en 10 idiomas",
-    assets: ["1 idioma", "2 idiomas", "3 idiomas"],
+    descripcion: "Soporte Multilingüe en 10 idiomas",
+    membresia1: true,
+    membresia2: true,
+    membresia3: true,
   },
+  // Puedes añadir más objetos con la misma estructura para más filas
 ];
 
 jQuery(document).ready(function ($) {
-  const $thead = $("<thead>");
-  const $trTitles = $("<tr>").attr("id", "tr-titles");
-  $.each(titulos, function (index, titulo) {
-    $("<th>").text(titulo).appendTo($trTitles);
-  });
-  $thead.append($trTitles);
-  $(".membership-table").append($thead);
+  function crearTitulos() {
+    $.each(titulos, function (i, titulo) {
+      $("#tr-titles").append($("<th>").text(titulo));
+    });
+  }
 
-  const $tbody = $("<tbody>");
-  $.each(informacionTabla, function (index, fila) {
-    const $tr = $("<tr>");
-    $("<td>").text(fila.titulo).appendTo($tr); // Añade el título de la fila
+  // Función para crear las filas de datos
+  function crearDatos() {
+    $.each(datos, function (i, fila) {
+      const $tr = $("<tr>");
 
-    // Añade las celdas de assets, incluyendo un cheque si corresponde
-  });
-  $(".membership-table").append($tbody);
+      // Añadir la descripción
+      $tr.append($("<td>").text(fila.descripcion));
+
+      // Añadir los datos de membresía
+      titulos.slice(1).forEach((titulo) => {
+        // slice(1) para saltar la descripción
+        $tr.append(
+          $("<td>").append(
+            fila[titulo.toLowerCase().replace(/ /g, "")]
+              ? $("<span>").addClass("checkmark").html("&#10003;")
+              : ""
+          )
+        );
+      });
+
+      $("#tr-data").append($tr);
+    });
+  }
+
+  // Llamadas a las funciones
+  crearTitulos();
+  crearDatos();
 });
