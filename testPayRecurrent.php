@@ -15,6 +15,7 @@ $email = 'marioloquendero32@gmail.com';
 
 //LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
+//$enText = '<h2>Redirecting to Payment Gateway</h2>';
 
 //PAYMENT GATEWAY URL (MONETICO).
 
@@ -23,14 +24,18 @@ function encryptURL() {
     return $gateway; 
 }
 
-//GET VARIABLE.
+//ENCRYPT GET
+//$getSuccess = base64_encode('success');
+//$getDeclined = base64_encode('declined');
 
+//GET VARIABLE.
+$idMembership = $_GET["idMembership"];
+$iMembershipEncrypted = base64_encode($idMembership);
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
 
-$consulta2 = 'SELECT * FROM ';
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -46,10 +51,10 @@ $monetico = new Monetico(
     '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 
     'kalsteinfr' 
 );
-
+ 
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 07',
-    'description' => '',
+    'reference' => 'Test 08',
+    'description' => 'JDJLFJDLKFJKDJFKDJFKJDKFJKLDJF',
     'language' => 'ES',
     'email' => $row['account_correo'],
     'amount' => '788', 
@@ -66,6 +71,8 @@ $billingAddress = new BillingAddressResource([
     'postalCode' => $row['account_zipcode'],
     'country' => $row['account_pais']
 ]);
+
+$purchase->setBillingAddress($billingAddress);
 
 $client = new ClientResource([
     'firstName' => $row['account_nombre'],
