@@ -1,8 +1,8 @@
 <?php
 
-   /*  ini_set('display_errors', 1);
+    ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL); */
+    error_reporting(E_ALL);
 
     session_start();
     if(isset($_SESSION["emailAccount"])){
@@ -226,7 +226,7 @@
                         $conexion2->query($sql_meta);
                     }
                 }
-                }
+                
             }
             if ($profileRole == 3){
                 /*insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','Manufacturer','R2', '$date')";
@@ -301,4 +301,4 @@
 
     echo json_encode($datos, JSON_FORCE_OBJECT);
  
-    $conexion->close();
+    //$conexion->close();
