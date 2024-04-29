@@ -109,6 +109,12 @@
   .btn-tbl:active {
     transform: scale(0.9);
   }
+
+  html a:hover,
+  .btLightSkin a:hover {
+    text-decoration: none;
+    color: #fff !important;
+  }
 </style>
 </head>
 
