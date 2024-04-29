@@ -164,4 +164,12 @@ jQuery(document).ready(function ($) {
   crearTitulos();
   crearDatos();
   crearBotones();
+
+  $("#membresia-2").click(function () {
+    updateSubscripcion();
+  });
+
+  function updateSubscripcion() {
+    window.alert("aqui actualiza");
+  }
 });
