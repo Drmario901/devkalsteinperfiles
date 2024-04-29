@@ -74,11 +74,11 @@ $monetico = new Monetico(
 //$addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
 
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 04',
+    'reference' => 'Test 05',
     'description' => '',
     'language' => 'ES',
     'email' => $row['account_correo'],
-    'amount' => '556', 
+    'amount' => '788', 
     'currency' => 'USD',
     'dateTime' => new DateTime(),
     'successUrl' => 'https://google.com/', 
