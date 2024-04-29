@@ -1,19 +1,17 @@
-<?php 
-session_start();
-
-?><?php
+<?php
 //ERROR DETECTION LINES.
-/*ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);*/
+error_reporting(E_ALL);
 
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
-//session_start();
+session_start();
 
 //EMAIL ACCOUNT SESSION.
 /*if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];
 }*/
+$email = 'marioloquendero32@gmail.com';
 
 //LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
@@ -35,26 +33,9 @@ function encryptURL() {
 $idCotizacionEncrypted = base64_encode($idCotizacion);*/
 
 //MAIN QUERYS
-/*$consulta = "SELECT * FROM wp_cotizacion WHERE cotizacion_id_user = '$email' AND cotizacion_id LIKE '%$idCotizacion%'";
+$consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
-$precioTotal = $row['cotizacion_total'] - $row['cotizacion_total_with_discount'];
 
-$consulta2 = "SELECT * FROM wp_account WHERE account_correo = '$email'";
-$row2 = $conexion->query($consulta2)->fetch_assoc();
-
-$consulta3 = "SELECT * FROM wp_cotizacion_detalle WHERE cotizacion_detalle_id = '$idCotizacion'";
-$productList = array();
-$resultado = $conexion->query($consulta3);
-
-if ($resultado) {
-    while($row3 = $resultado->fetch_assoc()) {
-        $productList[] = array(
-            'producto' => $row3['cotizacion_detalle_name'], 
-        );
-    }
-} else {
-    echo "Error:" . $conexion->error;
-}*/
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -96,7 +77,7 @@ $purchase = new PurchaseRequest([
     'reference' => 'Test 02',
     'description' => '',
     'language' => 'ES',
-    'email' => 'marioloquendero32@gmail.com',
+    'email' => $row['account_correo'],
     'amount' => '556', 
     'currency' => 'USD',
     'dateTime' => new DateTime(),
@@ -105,14 +86,14 @@ $purchase = new PurchaseRequest([
 ]);
 
 $billingAddress = new BillingAddressResource([
-    'name' => 'Edithson',
-    'addressLine1' => 'IDJFIDJFOJODF',
-    'city' => 'Aragua',
-    'postalCode' => '4556',
-    'country' => 'VE',
+    'name' => $row['account_nombre'],
+    'addressLine1' => $row['account_direccion'],
+    'city' => $row['account_ciudad'],
+    'postalCode' => $row['account_zipcode'],
+    'country' => $row['account_pais']
 ]);
 
-$purchase->setBillingAddress($billingAddress);
+/*$purchase->setBillingAddress($billingAddress);
 $shippingAddress = new ShippingAddressResource([
     'name' => 'JFIOSDJFOISDF',
     'addressLine1' => '234324234',
@@ -121,12 +102,12 @@ $shippingAddress = new ShippingAddressResource([
     'country' => 'VE',
 ]);
 
-$purchase->setShippingAddress($shippingAddress);
+$purchase->setShippingAddress($shippingAddress);*/
 
 
 $client = new ClientResource([
-    'firstName' => 'Pepe',
-    'lastName' => 'Landia',
+    'firstName' => $row['account_nombre'],
+    'lastName' => $row['account_apellido'],
 ]);
 $purchase->setClient($client);
 
