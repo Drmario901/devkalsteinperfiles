@@ -40,38 +40,6 @@ function procesarArchivoMonetico($archivo, $conexion) {
     }
 }
 
-// function insertDataToDatabase($conexion, $reference, $montoTotal, $divisa) {
-//     $query = "SELECT id_cotizacion FROM wp_monetico WHERE id_cotizacion = ?";
-//     $stmt = $conexion->prepare($query);
-//     $stmt->bind_param("s", $reference);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-    
-//     if ($result->num_rows === 0) {
-
-//         $queryCotizacion = "SELECT cotizacion_id_remitente FROM wp_cotizaciones WHERE cotizacion_id = ?";
-//         $stmtCotizacion = $conexion->prepare($queryCotizacion);
-//         $stmtCotizacion->bind_param("i", $reference);
-//         $stmtCotizacion->execute();
-//         $resultCotizacion = $stmtCotizacion->get_result();
-
-//         // Modificar para incluir monto_total y cotizacion_divisa en la inserción
-//         $insertQuery = "INSERT INTO wp_monetico (id_cotizacion, monto_total, cotizacion_divisa) VALUES (?, ?, ?)";
-//         $insertStmt = $conexion->prepare($insertQuery);
-//         // Asegúrate de que el tipo de dato corresponda con tu esquema de base de datos
-//         $insertStmt->bind_param("sds", $reference, $montoTotal, $divisa);
-//         if ($insertStmt->execute()) {
-//             echo "Inserción correcta, ID: " . $insertStmt->insert_id . ", Monto: " . $montoTotal . " " . $divisa . "\n";
-//         } else {
-//             echo "Error en inserción: " . $insertStmt->error . "\n";
-//         }
-//         $insertStmt->close();
-//     } else {
-//         echo "El id_cotizacion '{$reference}' ya existe en la base de datos.\n";
-//     }
-//     $stmt->close();
-// }
-
 function insertDataToDatabase($conexion, $reference, $montoTotal, $divisa) {
     // Primero, verificar si el id_cotizacion ya existe en wp_monetico
     $query = "SELECT id_cotizacion FROM wp_monetico WHERE id_cotizacion = ?";

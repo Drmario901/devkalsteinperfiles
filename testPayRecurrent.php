@@ -15,7 +15,6 @@ $email = 'marioloquendero32@gmail.com';
 
 //LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
-//$enText = '<h2>Redirecting to Payment Gateway</h2>';
 
 //PAYMENT GATEWAY URL (MONETICO).
 
@@ -24,18 +23,40 @@ function encryptURL() {
     return $gateway; 
 }
 
-//ENCRYPT GET
-//$getSuccess = base64_encode('success');
-//$getDeclined = base64_encode('declined');
-
 //GET VARIABLE.
-/*$idCotizacion = $_GET["idCotizacion"];
-$idCotizacionEncrypted = base64_encode($idCotizacion);*/
+
+$idMembership = $_GET["idMembership"];
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
 
+$consulta = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$email'";
+$resultado = $conexion->query($consulta);
+
+if ($resultado) {
+    if ($resultado->num_rows > 0) {
+        $row = $resultado->fetch_assoc();
+        $tipo_membresia = $row['tipo_membresia'];
+
+        if ($tipo_membresia == 0) {
+            $id_unico = uniqid();
+
+            $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
+            if ($conexion->query($updateQuery) === TRUE) {
+                echo "ID único generado y almacenado correctamente.";
+            } else {
+                echo "Error al actualizar el registro: " . $conexion->error;
+            }
+        } else {
+            echo "El usuario no requiere un ID único.";
+        }
+    } else {
+        echo "No se encontró el usuario.";
+    }
+} else {
+    echo "Error al ejecutar la consulta: " . $conexion->error;
+}
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -51,27 +72,6 @@ $monetico = new Monetico(
     '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 
     'kalsteinfr' 
 );
-
-/*function formatProductListDescription($productList) {
-    $descriptionParts = [];
-    foreach ($productList as $product) {
-        $sanitizedProduct = sanitizeAndLimit($product['producto'], 50); 
-        $descriptionParts[] = $sanitizedProduct;
-    }
-
-    $fullDescription = implode(", ", $descriptionParts);
-    return sanitizeAndLimit($fullDescription, 200); 
-}*/ 
- 
-
-/*function sanitizeAndLimit($input, $maxLength)
-{
-    $sanitized = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
-    $limited = substr($sanitized, 0, $maxLength);
-    return $limited;
-}*/
-
-//$addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
 
 $purchase = new PurchaseRequest([
     'reference' => 'Test 05',
@@ -92,18 +92,6 @@ $billingAddress = new BillingAddressResource([
     'postalCode' => $row['account_zipcode'],
     'country' => $row['account_pais']
 ]);
-
-$purchase->setBillingAddress($billingAddress);
-/*$shippingAddress = new ShippingAddressResource([
-    'name' => 'JFIOSDJFOISDF',
-    'addressLine1' => '234324234',
-    'city' => 'Maracaibo',
-    'postalCode' => '45566',
-    'country' => 'VE',
-]);
-
-$purchase->setShippingAddress($shippingAddress);*/
-
 
 $client = new ClientResource([
     'firstName' => $row['account_nombre'],
