@@ -15,7 +15,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
     $email = $_SESSION["emailAccount"];
 }*/
 
-//LANGUAGE FOR THE TEXT OF LOADER.
+//LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 //$enText = '<h2>Redirecting to Payment Gateway</h2>';
 
@@ -96,37 +96,37 @@ $purchase = new PurchaseRequest([
     'reference' => 'Test 01',
     'description' => '',
     'language' => 'ES',
-    'email' => '',
-    'amount' => '', 
-    'currency' => '',
+    'email' => 'marioloquendero32@gmail.com',
+    'amount' => '556', 
+    'currency' => 'USD',
     'dateTime' => new DateTime(),
     'successUrl' => 'https://google.com/', 
     'errorUrl' => 'https://x.com/',
 ]);
 
 $billingAddress = new BillingAddressResource([
-    'name' => '',
-    'addressLine1' => '',
-    'city' => '',
-    'postalCode' => '',
-    'country' => '',
+    'name' => 'Edithson',
+    'addressLine1' => 'IDJFIDJFOJODF',
+    'city' => 'Aragua',
+    'postalCode' => '4556',
+    'country' => 'VE',
 ]);
 
 $purchase->setBillingAddress($billingAddress);
 $shippingAddress = new ShippingAddressResource([
-    'name' => '',
-    'addressLine1' => '',
-    'city' => '',
-    'postalCode' => '',
-    'country' => '',
+    'name' => 'JFIOSDJFOISDF',
+    'addressLine1' => '234324234',
+    'city' => 'Maracaibo',
+    'postalCode' => '45566',
+    'country' => 'VE',
 ]);
 
 $purchase->setShippingAddress($shippingAddress);
 
 
 $client = new ClientResource([
-    'firstName' => '',
-    'lastName' => '',
+    'firstName' => 'Pepe',
+    'lastName' => 'Landia',
 ]);
 $purchase->setClient($client);
 
