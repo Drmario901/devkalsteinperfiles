@@ -44,6 +44,7 @@
   .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
+    width: 10rem;
   }
 
   .membership-table tr:nth-child(even) {
