@@ -74,7 +74,7 @@ $monetico = new Monetico(
 //$addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
 
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 02',
+    'reference' => 'Test 03',
     'description' => '',
     'language' => 'ES',
     'email' => $row['account_correo'],
