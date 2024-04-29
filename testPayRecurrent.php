@@ -93,7 +93,7 @@ $monetico = new Monetico(
 //$addressLine1 = sanitizeAndLimit($row2['account_direccion'], 50); 
 
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 01',
+    'reference' => 'Test 02',
     'description' => '',
     'language' => 'ES',
     'email' => 'marioloquendero32@gmail.com',
