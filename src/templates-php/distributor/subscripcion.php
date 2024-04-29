@@ -60,11 +60,30 @@
   }
 
   .title_k {
+    position: relative;
+    /* Posicionamiento relativo para el pseudo-elemento */
     color: var(--e-global-color-text);
     font-size: 1.7em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0px;
+    display: inline-block;
+    /* Esto permite que la barra se ajuste al ancho del texto */
+  }
+
+  .title_k::before {
+    content: "";
+    /* Necesario para que el pseudo-elemento se muestre */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25%;
+    /* Ancho de la barra como porcentaje del elemento */
+    height: 2px;
+    /* Altura de la barra */
+    background-color: #213280;
+    /* Color de la barra */
+    display: block;
   }
 
 
