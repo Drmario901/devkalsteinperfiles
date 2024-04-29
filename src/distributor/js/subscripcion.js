@@ -5,7 +5,11 @@ const titulos = [
   "Membresía 3",
 ];
 
-const botones = ["Membresía 1", "Membresía 2", "Membresía 3"];
+const botones = [
+  { membresia: "Membresía 1", id: "" },
+  { membresia: "Membresía 2", id: "" },
+  { membresia: "Membresía 3", id: "" },
+];
 
 const datos = [
   {
@@ -147,7 +151,10 @@ jQuery(document).ready(function ($) {
 
   function crearBotones() {
     $.each(botones, function (i, boton) {
-      $("#tbl-botones").append($("<button>").text(boton));
+      let $btn = $("#tbl-botones").append(
+        $("<a>").text(boton.membresia).attr("id", boton.id)
+      );
+      $btn.addClass("btn-membresia");
     });
   }
 
