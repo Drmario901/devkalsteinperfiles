@@ -111,7 +111,8 @@
   }
 
   html a:hover,
-  .btLightSkin a:hover {
+  .btLightSkin a:hover,
+  .btn-tbl:hover {
     text-decoration: none;
     color: #fff !important;
   }
