@@ -66,7 +66,7 @@
 
 <body>
 
-  <h2 class="title_k">FORTALECE TU IDENTIDAD CON K+</h2>
+  <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
   <p>Planes de Membresía</p>
   <p>Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
 
