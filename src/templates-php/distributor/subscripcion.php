@@ -79,7 +79,7 @@
     top: 0;
     width: 25%;
     /* Ancho de la barra como porcentaje del elemento */
-    height: 2px;
+    height: 5px;
     /* Altura de la barra */
     background-color: #213280;
     /* Color de la barra */
