@@ -71,7 +71,7 @@
             <?php
             if ($membresia == 0 || $membresia == 1) {
                 echo "<p> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario
-                            <span class='info-icon' data-tooltip='Puedes subir hasta $maxProductos productos según tu plan'>
+                            <span class='info-icon' data-tooltip='Membresia 1 = Maximo 5 Productos \n Membresia 2 = Maximo 10 Productos \n Membresia 3 = Maximo '>
                                 <i class='fas fa-info-circle'></i>
                             </span>
                         </p>";
