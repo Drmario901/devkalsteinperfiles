@@ -68,7 +68,7 @@
   }
 
 
-  button {
+  .button-tbl {
     position: relative;
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@
     border: none;
   }
 
-  button:after {
+  .button-tbl:after {
     content: " ";
     width: 0%;
     height: 100%;
@@ -92,13 +92,13 @@
     right: 0;
   }
 
-  button:hover::after {
+  .button-tbl:hover::after {
     right: auto;
     left: 0;
     width: 100%;
   }
 
-  button span {
+  .button-tbl span {
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -111,7 +111,7 @@
     transition: all 0.3s ease-in-out;
   }
 
-  button:hover span {
+  .button-tbl:hover span {
     color: #183153;
     animation: scaleUp 0.3s ease-in-out;
   }
