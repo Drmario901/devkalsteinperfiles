@@ -84,6 +84,7 @@
     background-color: #213280;
     /* Color de la barra */
     display: block;
+    margin-bottom: 3px;
   }
 
 
