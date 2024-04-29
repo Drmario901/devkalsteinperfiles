@@ -18,3 +18,9 @@
   </script>
 </header>
 <h1>Subscripcion dis</h1>
+
+<!-- FOOTER -->
+<?php
+$footer_img = 'Footer-fabricante-IMG.png';
+include 'footer.php';
+?>
