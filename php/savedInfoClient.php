@@ -21,6 +21,14 @@
         $title = trim($title, '-'); 
         return $title;
     }*/
+
+    function slug_sanitize($title) {
+        $title = strtolower($title); 
+        $title = preg_replace('/[^a-z0-9\s-]/', '', $title); 
+        $title = preg_replace('/[\s-]+/', '-', $title); 
+        $title = trim($title, '-'); 
+        return $title;
+    }
     
 
     $imageDocument = $_FILES['imageDocument']['name'] ?? NULL;
@@ -175,12 +183,11 @@
         $update = "UPDATE wp_account SET account_nombre = '$nameUser', account_apellido = '$lastnameUser', account_rol_aid = '$profileRole', account_direccion = '$addressUser', account_pais = '$countryUser', account_ciudad = '$stateUser', account_zipcode = '$zipcodeUser', account_telefono = '$phoneUser', account_document = '$idDocument', account_image_document = '$newName', account_status = '$accStatus' WHERE account_correo = '$email'";
         if ($conexion->query($update) === TRUE){
             if ($profileRole == 2){
-                /*$insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','Distributor','R2', '$date')";
+                $insertCRM = "INSERT INTO wp_clients_crm(aid_clients_crm, name_clients_crm, lastname_clients_crm, email_clients_crm, phone_clients_crm, country_clients_crm, profile_clients_crm, status_clients_crm, date_clients_crm) VALUES ('','$nameUser','$lastnameUser','$email','$phoneUser','$countryUser','$statusAcc','R2', '$date')";
                 $conexion->query($insertCRM);
 
                 $slug1 = slug_sanitize($nameB);
-                $insertSlug = "INSERT INTO tienda_virtual(ID_tienda, ID_user, titulo_t, subtitulo_t, descripcion, mision, vision, logo_t, quienes_somos_t, facebook_t, twitter_t, instagram_t, color_p, color_s, banner_t, img_quienes_s, img_mision, img_vision, ID_idioma, ID_slug) VALUES ('', '$email', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 'https://plataforma.kalstein.co.ve/$slug1/')";
-                $conexion->query($insertSlug);
+                $insertSlug = "INSERT INTO tienda_virtual(ID_tienda, ID_user, titulo_t, subtitulo_t, descripcion, mision, vision, logo_t, quienes_somos_t, facebook_t, twitter_t, instagram_t, color_p, color_s, banner_t, img_quienes_s, img_mision, img_vision, ID_idioma, ID_slug) VALUES ('', '$email', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 'https://dev.kalstein.plus/plataforma/$slug1/')";
                 if (!$conexion->query($insertSlug)) {
                     echo "Error en la consulta: " . $conexion->error;
                 }
@@ -196,14 +203,14 @@
                 $post_author = 1;
                 $post_type = 'page';
 
-                $sql = "INSERT INTO y0OXEwH_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
+                $sql = "INSERT INTO wp_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
                         VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type')";
 
                 if ($conexion2->query($sql) === TRUE) {
                     $post_id = $conexion2->insert_id;
 
                     $empty_template = $conexion2->real_escape_string($empty_template);
-                    $sql_template = "INSERT INTO y0OXEwH_postmeta (post_id, meta_key, meta_value) 
+                    $sql_template = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                      VALUES ('$post_id', '_wp_page_template', '$empty_template')";
                     $conexion2->query($sql_template);
 
@@ -214,10 +221,11 @@
 
                     foreach ($meta_values as $meta_key => $meta_value) {
                         $meta_value = $conexion->real_escape_string($meta_value);
-                        $sql_meta = "INSERT INTO y0OXEwH_postmeta (post_id, meta_key, meta_value) 
+                        $sql_meta = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                     VALUES ('$post_id', '$meta_key', '$meta_value')";
-                        $conexion2->query($sql_meta);*/
+                        $conexion2->query($sql_meta);
                     }
+                }
                 }
             }
             if ($profileRole == 3){
@@ -240,14 +248,14 @@
 
                 $conexion->query($insertSlug);
 
-                $sql = "INSERT INTO y0OXEwH_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
+                $sql = "INSERT INTO wp_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
                         VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type')";
 
                 if ($conexion2->query($sql) === TRUE) {
                     $post_id = $conexion2->insert_id;
 
                     $empty_template = $conexion2->real_escape_string($empty_template);
-                    $sql_template = "INSERT INTO y0OXEwH_postmeta (post_id, meta_key, meta_value) 
+                    $sql_template = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                      VALUES ('$post_id', '_wp_page_template', '$empty_template')";
                     $conexion2->query($sql_template);
 
@@ -258,7 +266,7 @@
 
                     foreach ($meta_values as $meta_key => $meta_value) {
                         $meta_value = $conexion->real_escape_string($meta_value);
-                        $sql_meta = "INSERT INTO y0OXEwH_postmeta (post_id, meta_key, meta_value) 
+                        $sql_meta = "INSERT INTO wp_postmeta (post_id, meta_key, meta_value) 
                                     VALUES ('$post_id', '$meta_key', '$meta_value')";
                         $conexion2->query($sql_meta);
                     }
