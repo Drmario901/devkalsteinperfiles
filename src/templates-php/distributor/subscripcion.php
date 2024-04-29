@@ -77,6 +77,8 @@
   }
 
   .btn-primary:hover {
+    background-color: darken(#213280, 10%);
+    /* Oscurece el color de fondo en hover */
     color: white !important;
   }
 </style>
