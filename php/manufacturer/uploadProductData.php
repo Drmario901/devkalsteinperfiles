@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+/* ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); */
+
 require_once __DIR__ . '/../../db/conexion.php';
 require __DIR__ . '/validateProductData.php';
 
@@ -8,7 +12,7 @@ $acc_id = $_SESSION['emailAccount'];
 
 // obtener el tipo de membresia de wp_account
 
-$sql = "SELECT tipo_membresia FROM wp_account WHERE account_email = '$acc_id'";
+$sql = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$acc_id'";
 
 $result = $conexion->query($sql);
 
@@ -20,8 +24,8 @@ if ($result->num_rows > 0) {
 }
 
 if ($membresia == 0) {
-    $sql = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id'";
-    $result = $conexion->query($sql);
+    $sqlCount = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id'";
+    $result = $conexion->query($sqlCount);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -31,15 +35,14 @@ if ($membresia == 0) {
     if ($total >= 5) {
         $datos['status'] = 'incorrecto';
         $datos['err_msg'] = 'No puedes subir más de 5 productos con tu membresía actual';
+        //Link para redireccionar a https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/
+        $datos['link'] = 'https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/';
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
         exit();
     } else {
         if ($val) {
             move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
-
-
-
 
             if ($pCurrency == 'EUR') {
                 $pPriceEUR = $pPrice;

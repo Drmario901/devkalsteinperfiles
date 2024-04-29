@@ -5,6 +5,12 @@ const titulos = [
   "Membresía 3",
 ];
 
+const botones = [
+  // { membresia: "Membresía 1", id: "membresia-1" },
+  { membresia: "Membresía 2", id: "membresia-2" },
+  { membresia: "Membresía 3", id: "membresia-3" },
+];
+
 const datos = [
   {
     item: [
@@ -143,7 +149,28 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  function crearBotones() {
+    $.each(botones, function (i, boton) {
+      let $btn = $("#tbl-botones").append(
+        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn-tbl")
+      );
+    });
+  }
+
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
+  crearBotones();
+
+  $("#membresia-2").click(function () {
+    updateSubscripcion();
+  });
+
+  $("#membresia-2").click(function () {
+    updateSubscripcion();
+  });
+
+  function updateSubscripcion() {
+    window.alert("aqui actualiza");
+  }
 });
