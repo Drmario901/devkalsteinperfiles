@@ -11,7 +11,7 @@ if (isset($_SESSION["emailAccount"])) {
 }
 $session_id = session_id();
 
-require_once __DIR__ . '/../db/conexion.php';
+require_once 'conexion.php';
 require __DIR__ . '/../vendor/autoload.php';
 
 function slug_sanitize($title)
