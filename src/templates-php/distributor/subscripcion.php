@@ -68,66 +68,46 @@
   }
 
 
-  .button-tbl {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #183153;
-    font-family: "Montserrat", sans-serif;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+  .btn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
     cursor: pointer;
-    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
   }
 
-  .button-tbl:after {
-    content: " ";
-    width: 0%;
-    height: 100%;
-    background: #ffd401;
+  .btn:before {
+    content: "";
     position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
   }
 
-  .button-tbl:hover::after {
-    right: auto;
-    left: 0;
-    width: 100%;
-  }
-
-  .button-tbl span {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: 18px 25px;
+  .btn:hover {
+    background-color: #4cc9f0;
     color: #fff;
-    font-size: 1.125em;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 0 2px #0d3b66;
   }
 
-  .button-tbl:hover span {
-    color: #183153;
-    animation: scaleUp 0.3s ease-in-out;
+  .btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
   }
 
-  @keyframes scaleUp {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(0.95);
-    }
-
-    100% {
-      transform: scale(1);
-    }
+  .btn:active {
+    transform: scale(0.9);
   }
 </style>
 </head>
