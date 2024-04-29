@@ -48,6 +48,14 @@
             $row = $result->fetch_assoc();
             $total = $row['total'];
         }
+
+        $maxProductos = 0;
+
+        if ($membresia == 0) {
+            $maxProductos = 5;
+        } elseif ($membresia == 1) {
+            $maxProductos = 10;
+        }
         ?>
 
         <nav class="nav nav-borders">
@@ -60,20 +68,14 @@
         </nav>
         <br>
         <div>
-            <p class="text-muted">Aquí puedes ver los productos que has agregado
-                a tu inventario.</p>
-            <p class="text-muted">
-                Tienes un total de <b><?php echo $total; ?></b> productos en tu inventario.
-                <?php
-                if ($membresia == 0) {
-                    echo "Puedes tener un máximo de 5 productos.";
-                } elseif ($membresia == 1) {
-                    echo "Puedes tener un máximo de 10 productos.";
-                } elseif ($membresia == 2) {
-                    echo "No tienes un límite máximo de productos.";
-                }
-                ?>
-            </p>
+            <?php
+            if ($membresia == 0 || $membresia == 1) {
+                echo "<p class='text-muted'> Total <b>$total</b>/$maxProductos productos en tu inventario.
+                </p>";
+            } elseif ($membresia == 2) {
+                echo "<p class='text-muted'> Total <b>$total</b> productos en tu inventario.";
+            }
+            ?>
         </div>
         <div class="table-responsive">
             <table class='table custom-table'>
