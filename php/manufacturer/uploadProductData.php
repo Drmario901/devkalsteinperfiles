@@ -35,6 +35,8 @@ if ($membresia == 0) {
     if ($total >= 5) {
         $datos['status'] = 'incorrecto';
         $datos['err_msg'] = 'No puedes subir más de 5 productos con tu membresía actual';
+        //Link para redireccionar a https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/
+        $datos['link'] = 'https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/';
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
         exit();

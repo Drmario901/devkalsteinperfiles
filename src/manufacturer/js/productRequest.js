@@ -584,7 +584,7 @@ jQuery(document).ready(function ($) {
     formData.append("manual", manual);
     formData.append("catalog", catalog);
 
-     /*
+    /*
     var all_accessories = [];
 
     for (let elem of document.querySelector("#uploadAccesoryList").children) {
@@ -600,7 +600,6 @@ jQuery(document).ready(function ($) {
     }
 */
     console.log(fileName);
-    
 
     $("#btnSendData").attr("disabled", "");
 
@@ -627,8 +626,17 @@ jQuery(document).ready(function ($) {
         } else {
           iziToast.error({
             title: "Error",
-            message: JSON.parse(response).err_msg,
+            message: `${
+              JSON.parse(response).err_msg
+            } Consulta nuestros planes en el siguiente link: <a href=${
+              JSON.parse(response).link
+            }>Membresias</a>`,
             position: "center",
+            timeout: 5000,
+            pauseOnHover: true,
+            progressBar: true,
+            progressBarColor: "",
+            progressBarEasing: "linear",
           });
         }
       })
