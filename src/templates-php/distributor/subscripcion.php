@@ -89,14 +89,14 @@
     position: absolute;
     width: 100px;
     height: 120%;
-    background-color: #ff6700;
+    background-color: #fff;
     top: 50%;
     transform: skewX(30deg) translate(-150%, -50%);
     transition: all 0.5s;
   }
 
   .btn-tbl:hover {
-    background-color: #4cc9f0;
+    background-color: #213280;
     color: #fff;
     box-shadow: 0 2px 0 2px #0d3b66;
   }
