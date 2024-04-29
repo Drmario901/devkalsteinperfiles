@@ -70,8 +70,11 @@
         <div>
             <?php
             if ($membresia == 0 || $membresia == 1) {
-                echo "<p class='text-muted'> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario.
-                </p>";
+                echo "<p> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario
+                            <span class='info-icon' data-tooltip='Puedes subir hasta $maxProductos productos según tu plan'>
+                                <i class='fas fa-info-circle'></i>
+                            </span>
+                        </p>";
                 if ($total >= $maxProductos) {
                     echo "<p class='text-muted'> <b>¡Has alcanzado el límite de productos permitidos en tu inventario!</b>
                     </p>";
