@@ -5,6 +5,8 @@ const titulos = [
   "Membresía 3",
 ];
 
+const botones = ["Membresía 1", "Membresía 2", "Membresía 3"];
+
 const datos = [
   {
     item: [
@@ -143,7 +145,14 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  function crearBotones() {
+    $.each(botones, function (i, boton) {
+      $("#tbl-botones").append($("<button>").text(boton));
+    });
+  }
+
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
+  crearBotones();
 });

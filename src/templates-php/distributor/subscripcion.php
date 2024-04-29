@@ -85,6 +85,9 @@
       <!-- Los datos se llenarán aquí -->
     </tbody>
   </table>
+  <div id='tbl-botones'>
+
+  </div>
 
 </section>
 
