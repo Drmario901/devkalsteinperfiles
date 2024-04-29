@@ -27,17 +27,6 @@ jQuery(document).ready(function ($) {
     $("<td>").text(fila.titulo).appendTo($tr); // Añade el título de la fila
 
     // Añade las celdas de assets, incluyendo un cheque si corresponde
-    $.each(titulos, function (index, titulo) {
-      const $td = $("<td>");
-      if (index > 0) {
-        // Saltea el primer título porque es para la columna de descripción
-        const assetExists = fila.assets.includes(titulo);
-        $td.html(assetExists ? '<span class="checkmark">&#10003;</span>' : "");
-      }
-      $tr.append($td);
-    });
-
-    $tbody.append($tr); // Añade la fila al tbody
   });
   $(".membership-table").append($tbody);
 });
