@@ -61,14 +61,14 @@
 
   .title_k {
     position: relative;
-    /* Posicionamiento relativo para el pseudo-elemento */
     color: var(--e-global-color-text);
     font-size: 1.7em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0px;
     display: inline-block;
-    /* Esto permite que la barra se ajuste al ancho del texto */
+    padding-top: 0.5rem;
+    margin-left: 3rem;
   }
 
   .title_k::before {
