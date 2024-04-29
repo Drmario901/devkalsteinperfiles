@@ -525,7 +525,7 @@ class shortcodePerfiles
 
     function distributor_subscripcion()
     {
-        verify_session(3);
+        verify_session(2);
         return render_php_file("distributor/subscripcion.php");
     }
 
