@@ -27,6 +27,7 @@ function encryptURL() {
 //GET VARIABLE.
 //$idMembership = $_GET["idMembership"];
 
+//LOL
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
