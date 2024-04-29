@@ -35,6 +35,7 @@
         $banner_text = "Gestión de productos";
         include __DIR__ . '/../manufacturer/banner.php';
         require __DIR__ . '/../../../php/conexion.php';
+        require __DIR__ . '/../../../php/getMembresia.php';
 
         $acc_id = $_SESSION['emailAccount'];  // Asumiendo que este es el ID del usuario
         $membresia = $_SESSION['tipo_membresia'];  // Tipo de membresía obtenida de alguna parte
