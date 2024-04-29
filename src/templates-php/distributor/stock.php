@@ -59,9 +59,9 @@
         </nav>
         <br>
         <div>
-            <p class="text-muted" data-i18n="distribuidor:productsExist">Aquí puedes ver los productos que has agregado
+            <p class="text-muted">Aquí puedes ver los productos que has agregado
                 a tu inventario.</p>
-            <p class="text-muted" data-i18n="distribuidor:productsExist">
+            <p class="text-muted">
                 Tienes un total de <b><?php echo $total; ?></b> productos en tu inventario.
                 <?php
                 if ($membresia == 0) {
