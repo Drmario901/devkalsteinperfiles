@@ -93,8 +93,8 @@ $billingAddress = new BillingAddressResource([
     'country' => $row['account_pais']
 ]);
 
-/*$purchase->setBillingAddress($billingAddress);
-$shippingAddress = new ShippingAddressResource([
+$purchase->setBillingAddress($billingAddress);
+/*$shippingAddress = new ShippingAddressResource([
     'name' => 'JFIOSDJFOISDF',
     'addressLine1' => '234324234',
     'city' => 'Maracaibo',
