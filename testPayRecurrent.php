@@ -11,7 +11,7 @@ session_start();
 /*if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];
 }*/
-$email = 'valfonsob12@yopmail.com';
+$email = 'marioloquendero32@gmail.com';
 
 //LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
