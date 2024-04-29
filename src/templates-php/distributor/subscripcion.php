@@ -73,10 +73,7 @@
 
   <table class="membership-table">
     <tr id="tr-subscripcion">
-      <th>Facturación mensual</th>
-      <th>Membresía 1</th>
-      <th>Membresía 2</th>
-      <th>Membresía 3</th>
+
     </tr>
     <tr>
       <td>Soporte Multilingüe en 10 idiomas</td>
