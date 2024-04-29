@@ -25,7 +25,7 @@ function encryptURL() {
 }
 
 //GET VARIABLE.
-$idMembership = $_GET["idMembership"];
+//$idMembership = $_GET["idMembership"];
 
 
 //MAIN QUERYS
@@ -38,20 +38,10 @@ $resultado = $conexion->query($consulta2);
 if ($resultado) {
     if ($resultado->num_rows > 0) {
         $row2 = $resultado->fetch_assoc();
-        $tipo_membresia = $row2['tipo_membresia'];
+        $tipo_membresia = $row['tipo_membresia'];
 
         if ($tipo_membresia == 0) {
-            $id_unico = "";
-            $idExistente = true;
-
-            while ($idExistente) {
-                $id_unico = uniqid('', true);
-                $checkId = "SELECT account_sub_id FROM wp_account WHERE account_sub_id = '$id_unico'";
-                $idResult = $conexion->query($checkId);
-                if ($idResult->num_rows == 0) {
-                    $idExistente = false;
-                }
-            }
+            $id_unico = uniqid();
 
             $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
             if ($conexion->query($updateQuery) === TRUE) {
@@ -68,6 +58,7 @@ if ($resultado) {
 } else {
     echo "Error al ejecutar la consulta: " . $conexion->error;
 }
+
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
