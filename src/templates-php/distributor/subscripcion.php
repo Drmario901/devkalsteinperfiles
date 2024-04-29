@@ -23,7 +23,8 @@
 <style>
   section {
     font-family: Arial, sans-serif;
-    margin: 3rem;
+    /* margin: 3rem; */
+    padding-bottom: 2rem;
   }
 
   .membership-table {
@@ -31,19 +32,22 @@
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   }
 
   .membership-table th,
   .membership-table td {
-    text-align: left;
-    padding: 12px;
+    text-align: center;
+    padding: 5px;
     border: 1px solid #ddd;
+    max-width: 3rem;
 
   }
 
   .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
+    width: 10rem;
   }
 
   .membership-table tr:nth-child(even) {
@@ -65,7 +69,7 @@
 </style>
 </head>
 
-<section>
+<section style="margin-top: 2rem;">
 
   <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
   <p>Planes de Membresía</p>
