@@ -70,8 +70,12 @@
         <div>
             <?php
             if ($membresia == 0 || $membresia == 1) {
-                echo "<p class='text-muted'> Total <b>$total</b>/$maxProductos productos en tu inventario.
+                echo "<p class='text-muted'> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario.
                 </p>";
+                if ($total >= $maxProductos) {
+                    echo "<p class='text-muted'> <b>¡Has alcanzado el límite de productos permitidos en tu inventario!</b>
+                    </p>";
+                }
             } elseif ($membresia == 2) {
                 echo "<p class='text-muted'> Total <b>$total</b> productos en tu inventario.";
             }
