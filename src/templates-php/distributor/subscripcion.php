@@ -85,7 +85,7 @@
       <!-- Los datos se llenarán aquí -->
     </tbody>
   </table>
-  <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem;">
+  <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem; margin-top: 1.5rem;">
 
   </div>
 
