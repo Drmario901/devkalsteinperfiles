@@ -152,7 +152,7 @@ jQuery(document).ready(function ($) {
   function crearBotones() {
     $.each(botones, function (i, boton) {
       let $btn = $("#tbl-botones").append(
-        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn")
+        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn-tbl")
       );
     });
   }
