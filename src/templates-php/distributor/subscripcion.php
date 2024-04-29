@@ -143,8 +143,8 @@
 <section style="margin-top: 2rem;">
 
   <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-  <p>Planes de Membresía</p>
-  <p>Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
+  <p style="margin-left: 3rem;">Planes de Membresía</p>
+  <p style="margin-left: 3rem;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
 
   <table class="membership-table">
     <thead>
