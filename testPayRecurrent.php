@@ -41,7 +41,7 @@ if ($resultado) {
         $tipo_membresia = $row['tipo_membresia'];
 
         if ($tipo_membresia == 0) {
-            $id_unico = uniqid();
+            $id_unico = uniqid(md5($email), true);
 
             $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
             if ($conexion->query($updateQuery) === TRUE) {
@@ -58,6 +58,7 @@ if ($resultado) {
 } else {
     echo "Error al ejecutar la consulta: " . $conexion->error;
 }
+
 
 
 //COMPOSER DEPENDENCIES.
