@@ -31,8 +31,8 @@ $idMembership = $_GET["idMembership"];
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
 
-$consulta = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$email'";
-$resultado = $conexion->query($consulta);
+$consulta2 = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$email'";
+$resultado = $conexion->query($consulta2);
 
 if ($resultado) {
     if ($resultado->num_rows > 0) {
@@ -74,7 +74,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 05',
+    'reference' => 'Test 06',
     'description' => '',
     'language' => 'ES',
     'email' => $row['account_correo'],
