@@ -72,10 +72,10 @@
   <p>Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
 
   <table class="membership-table">
-    <tr id="tr-subscripcion">
+    <tr id="tr-titles">
 
     </tr>
-    <tr>
+    <tr id="tr-data">
       <td>Soporte Multilingüe en 10 idiomas</td>
       <td><span class="checkmark">&#10003;</span></td>
       <td><span class="checkmark">&#10003;</span></td>

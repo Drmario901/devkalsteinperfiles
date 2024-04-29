@@ -5,10 +5,21 @@ const titulos = [
   "Membresía 3",
 ];
 
-jQuery(document).ready(function ($) {
-  const $subscripcionTh = $("#tr-subscripcion");
+const informacionTabla = [
+  {
+    titulo: "Soporte Multilingüe en 10 idiomas",
+    assets: ["1 idioma", "2 idiomas", "3 idiomas"],
+  },
+];
 
-  titulos.forEach((titulo) => {
-    $subscripcionTh.append($("<th>").text(titulo));
+jQuery(document).ready(function ($) {
+  const $titlesTh = $("#tr-titles");
+
+  const $thead = $("<thead>");
+  const $trTitles = $("<tr>").attr("id", "tr-titles");
+  $.each(titulos, function (index, titulo) {
+    $("<th>").text(titulo).appendTo($trTitles);
   });
+  $thead.append($trTitles);
+  $(".membership-table").append($thead);
 });
