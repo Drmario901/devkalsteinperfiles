@@ -25,38 +25,12 @@ function encryptURL() {
 
 //GET VARIABLE.
 
-$idMembership = $_GET["idMembership"];
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
 
-$consulta2 = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$email'";
-$resultado = $conexion->query($consulta2);
-
-if ($resultado) {
-    if ($resultado->num_rows > 0) {
-        $row = $resultado->fetch_assoc();
-        $tipo_membresia = $row['tipo_membresia'];
-
-        if ($tipo_membresia == 0) {
-            $id_unico = uniqid();
-
-            $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
-            if ($conexion->query($updateQuery) === TRUE) {
-                echo "ID único generado y almacenado correctamente.";
-            } else {
-                echo "Error al actualizar el registro: " . $conexion->error;
-            }
-        } else {
-            echo "El usuario no requiere un ID único.";
-        }
-    } else {
-        echo "No se encontró el usuario.";
-    }
-} else {
-    echo "Error al ejecutar la consulta: " . $conexion->error;
-}
+$consulta2 = 'SELECT * FROM ';
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -74,7 +48,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 06',
+    'reference' => 'Test 07',
     'description' => '',
     'language' => 'ES',
     'email' => $row['account_correo'],
