@@ -1672,6 +1672,7 @@ function perfiles_styles()
         wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
         wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
         wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('subscripcion-script', plugins_url('src/distributor/js/subscripcion.js', __FILE__), array('jquery'));
     }
 
     // XXX SUPPORT STYLES

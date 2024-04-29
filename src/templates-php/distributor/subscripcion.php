@@ -72,7 +72,7 @@
   <p>Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
 
   <table class="membership-table">
-    <tr>
+    <tr id="tr-subscripcion">
       <th>Facturación mensual</th>
       <th>Membresía 1</th>
       <th>Membresía 2</th>
