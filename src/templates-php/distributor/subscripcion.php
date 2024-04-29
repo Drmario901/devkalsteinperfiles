@@ -23,6 +23,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
+    margin: 3rem;
   }
 
   .membership-table {
