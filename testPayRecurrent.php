@@ -77,7 +77,7 @@ $monetico = new Monetico(
 );
  
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 08',
+    'reference' => 'Test 09',
     'description' => 'JDJLFJDLKFJKDJFKDJFKJDKFJKLDJF',
     'language' => 'ES',
     'email' => $row['account_correo'],
