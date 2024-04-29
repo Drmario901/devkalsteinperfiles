@@ -13,18 +13,40 @@ const datos = [
       "2 Idiomas",
       "Todos",
     ],
+  },
+  {
     item: [
       "Soporte Multilingüe en 10 idiomas",
       "1 Idiomas",
       "2 Idiomas",
       "Todos",
     ],
+  },
+  {
     item: [
       "Soporte Multilingüe en 10 idiomas",
       "1 Idiomas",
       "2 Idiomas",
       "Todos",
     ],
+  },
+  {
+    item: [
+      "Soporte Multilingüe en 10 idiomas",
+      "1 Idiomas",
+      "2 Idiomas",
+      "Todos",
+    ],
+  },
+  {
+    item: [
+      "Soporte Multilingüe en 10 idiomas",
+      "1 Idiomas",
+      "2 Idiomas",
+      "Todos",
+    ],
+  },
+  {
     item: [
       "Soporte Multilingüe en 10 idiomas",
       "1 Idiomas",
