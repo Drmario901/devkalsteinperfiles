@@ -155,7 +155,7 @@ jQuery(document).ready(function ($) {
         $("<a>")
           .text(boton.membresia)
           .attr("id", boton.id)
-          .addClass(".button-tbl")
+          .addClass("button-tbl")
       );
     });
   }
