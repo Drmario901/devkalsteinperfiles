@@ -85,6 +85,7 @@
     /* Color de la barra */
     display: block;
     margin-bottom: 3px;
+    padding-bottom: 2px;
   }
 
 
