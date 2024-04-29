@@ -17,7 +17,8 @@
     document.querySelector('#link-' + page).removeAttribute("style");
   </script>
 </header>
-<h1>Subscripcion dis</h1>
+
+
 
 <style>
   body {
