@@ -27,8 +27,6 @@ function encryptURL() {
 //GET VARIABLE.
 //$idMembership = $_GET["idMembership"];
 
-//LOL
-
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
@@ -46,15 +44,15 @@ if ($resultado) {
 
             $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
             if ($conexion->query($updateQuery) === TRUE) {
-                echo "ID único generado y almacenado correctamente.";
+                //echo "ID único generado y almacenado correctamente.";
             } else {
-                echo "Error al actualizar el registro: " . $conexion->error;
+                //echo "Error al actualizar el registro: " . $conexion->error;
             }
         } else {
-            echo "El usuario no requiere un ID único.";
+            //echo "El usuario no requiere un ID único.";
         }
     } else {
-        echo "No se encontró el usuario.";
+        //echo "No se encontró el usuario.";
     }
 } else {
     echo "Error al ejecutar la consulta: " . $conexion->error;
@@ -78,7 +76,7 @@ $monetico = new Monetico(
 );
  
 $purchase = new PurchaseRequest([
-    'reference' => 'Test 09',
+    'reference' => 'Test 10',
     'description' => 'JDJLFJDLKFJKDJFKDJFKJDKFJKLDJF',
     'language' => 'ES',
     'email' => $row['account_correo'],
@@ -111,7 +109,7 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<!--body onload="document.forms['payment_form'].submit();"-->
+<body onload="document.forms['payment_form'].submit();">
 <style>
     .custom-loader {
         width: 50px;
