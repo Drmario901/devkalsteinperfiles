@@ -169,6 +169,10 @@ jQuery(document).ready(function ($) {
     updateSubscripcion();
   });
 
+  $("#membresia-2").click(function () {
+    updateSubscripcion();
+  });
+
   function updateSubscripcion() {
     window.alert("aqui actualiza");
   }
