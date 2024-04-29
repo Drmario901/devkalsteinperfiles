@@ -13,8 +13,6 @@ const informacionTabla = [
 ];
 
 jQuery(document).ready(function ($) {
-  const $titlesTh = $("#tr-titles");
-
   const $thead = $("<thead>");
   const $trTitles = $("<tr>").attr("id", "tr-titles");
   $.each(titulos, function (index, titulo) {
@@ -22,4 +20,24 @@ jQuery(document).ready(function ($) {
   });
   $thead.append($trTitles);
   $(".membership-table").append($thead);
+
+  const $tbody = $("<tbody>");
+  $.each(informacionTabla, function (index, fila) {
+    const $tr = $("<tr>");
+    $("<td>").text(fila.titulo).appendTo($tr); // Añade el título de la fila
+
+    // Añade las celdas de assets, incluyendo un cheque si corresponde
+    $.each(titulos, function (index, titulo) {
+      const $td = $("<td>");
+      if (index > 0) {
+        // Saltea el primer título porque es para la columna de descripción
+        const assetExists = fila.assets.includes(titulo);
+        $td.html(assetExists ? '<span class="checkmark">&#10003;</span>' : "");
+      }
+      $tr.append($td);
+    });
+
+    $tbody.append($tr); // Añade la fila al tbody
+  });
+  $(".membership-table").append($tbody);
 });

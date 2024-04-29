@@ -76,10 +76,10 @@
 
     </tr>
     <tr id="tr-data">
-      <td>Soporte Multilingüe en 10 idiomas</td>
+      <!-- <td>Soporte Multilingüe en 10 idiomas</td>
       <td><span class="checkmark">&#10003;</span></td>
       <td><span class="checkmark">&#10003;</span></td>
-      <td><span class="checkmark">&#10003;</span></td>
+      <td><span class="checkmark">&#10003;</span></td> -->
     </tr>
     <!-- Más filas según necesites -->
   </table>
