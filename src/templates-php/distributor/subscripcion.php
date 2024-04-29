@@ -97,7 +97,7 @@
 
   .btn-tbl:hover {
     background-color: #213280;
-    color: #fff;
+    color: #fff !important;
     box-shadow: 0 2px 0 2px #0d3b66;
   }
 
