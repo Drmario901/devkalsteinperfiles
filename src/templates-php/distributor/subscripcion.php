@@ -53,12 +53,20 @@
     color: #4CAF50;
     font-size: 1.5em;
   }
+
+  .title_k {
+    color: var(--e-global-color-text);
+    font-size: 1.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+  }
 </style>
 </head>
 
 <body>
 
-  <h2>FORTALECE TU IDENTIDAD CON K+</h2>
+  <h2 class="title_k">FORTALECE TU IDENTIDAD CON K+</h2>
   <p>Planes de Membresía</p>
   <p>Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
 
