@@ -626,9 +626,8 @@ jQuery(document).ready(function ($) {
         } else {
           iziToast.error({
             title: "Error",
-            message: `${
-              JSON.parse(response).err_msg
-            } Consulta nuestros planes en el siguiente link: <a href=${
+            message: `${JSON.parse(response).err_msg} 
+            Consulta nuestros planes en el siguiente link: <a href=${
               JSON.parse(response).link
             }>Membresias</a>`,
             position: "center",
