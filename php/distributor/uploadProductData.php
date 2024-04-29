@@ -8,7 +8,7 @@ $acc_id = $_SESSION['emailAccount'];
 
 // obtener el tipo de membresia de wp_account
 
-$sql = "SELECT tipo_membresia FROM wp_account WHERE account_email = '$acc_id'";
+$sql = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$acc_id'";
 
 $result = $conexion->query($sql);
 
