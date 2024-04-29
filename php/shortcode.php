@@ -4,7 +4,7 @@
 function render_php_file($path)
 {
     ob_start();
-    include (__DIR__ . '/../src/templates-php/' . $path);
+    include(__DIR__ . '/../src/templates-php/' . $path);
     $var = ob_get_contents();
     ob_end_clean();
     return $var;
@@ -88,7 +88,6 @@ function verify_session($rol)
 
                     $queryDeleteStrikes = $conexion->query("UPDATE wp_atention_calls SET enabled = '0' WHERE to_user = '$email'");
                 }
-
             }
 
             if (($rolacc == 2 || $rolacc == 3 || $rolacc == 4) && ($status == 'filled' || $status == 'solving')) {
@@ -110,8 +109,6 @@ function verify_session($rol)
             if ($rol != $rolacc) {
                 echo "<script>window.location.replace('https://dev.kalstein.plus/plataforma/index.php/account_redirect');</script>";
             }
-
-
         }
     } else {
         if ($_GET) {
@@ -279,7 +276,7 @@ class shortcodePerfiles
             case 4:
                 $redirectUrl = $baseURL . "support/dashboard/";
                 break;
-            /*case 5: 
+                /*case 5: 
                 $redirectUrl = $baseURL . "rentalsale/dashboard/";
                 break;*/
             case 6:
@@ -416,6 +413,12 @@ class shortcodePerfiles
         return render_php_file("manufacturer/pursaching.php");
     }
 
+    function manufacturer_subscripcion()
+    {
+        verify_session(3);
+        return render_php_file("manufacturer/subscripcion.php");
+    }
+
     // XXX DISTRIBUTOR XXX
 
     function dashboard_distributor()
@@ -518,6 +521,12 @@ class shortcodePerfiles
     {
         verify_session(2);
         return render_php_file("distributor/pursaching.php");
+    }
+
+    function distributor_subscripcion()
+    {
+        verify_session(3);
+        return render_php_file("distributor/subscripcion.php");
     }
 
     /* SOPORTE OLX*/
@@ -758,5 +767,3 @@ class shortcodePerfiles
         return render_php_file('diego-index.php');
     }*/
 }
-
-?>

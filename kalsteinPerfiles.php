@@ -18,13 +18,11 @@ require_once dirname(__FILE__) . '/php/shortcode.php';
 //ACTIVATED
 function perfilesActivated()
 {
-
 }
 
 //DEACTIVATED
 function perfilesDeactivated()
 {
-
 }
 
 
@@ -247,6 +245,14 @@ function pursachingPerfilesManufacturer()
     return $html;
 }
 
+function subscripcionManufacturer()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->manufacturer_subscripcion();
+    return $html;
+}
+
 // XXX DISTRIBUTOR XXX
 
 function dashboardPerfilesDistributor()
@@ -393,6 +399,14 @@ function pursachingPerfilesDistributor()
     return $html;
 }
 
+function subscripcionPerfilesDistributor()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->distributor_subscripcion();
+    return $html;
+}
+
 // XXX SUPPORT XXX
 
 function dashboard_suport()
@@ -514,7 +528,6 @@ function stock_suport()
 
     $html = $_short->stock_suport();
     return $html;
-
 }
 
 function catalogo_suport()
@@ -524,7 +537,6 @@ function catalogo_suport()
 
     $html = $_short->catalogo();
     return $html;
-
 }
 
 
@@ -535,7 +547,6 @@ function supportEditProfile()
 
     $html = $_short->support_edit_profile();
     return $html;
-
 }
 function pursachingPerfilesSupport()
 {
@@ -791,6 +802,7 @@ add_shortcode("PERFILES_MANUFACTURER_INBOX", "inboxPerfilesManufacturer");
 add_shortcode("PERFILES_MANUFACTURER_EDIT_PROFILE", "editProfilePerfilesManufacturer");
 add_shortcode("PERFILES_MANUFACTURER_CATALOGS", "catalogsPerfilesManufacturer");
 add_shortcode("PERFILES_MANUFACTURER_PURSACHING", "pursachingPerfilesManufacturer");
+add_shortcode("PERFILES_MANUFACTURER_SUBSCRIPCION", "subscripcionManufacturer");
 
 // XXX DISTRIBUTOR XXX
 
@@ -812,6 +824,8 @@ add_shortcode("PERFILES_DISTRIBUTOR_INBOX_COMPOSE", "inboxComposePerfilesDistrib
 add_shortcode("PERFILES_DISTRIBUTOR_EDIT_PROFILE", "editProfilePerfilesDistributor");
 add_shortcode("PERFILES_DISTRIBUTOR_CATALOGS", "catalogsPerfilesDistributor");
 add_shortcode("PERFILES_DISTRIBUTOR_PURSACHING", "pursachingPerfilesDistributor");
+add_shortcode("PERFILES_DISTRIBUTOR_SUBSCRIPCION", "subscripcionPerfilesDistributor");
+
 
 
 //XX SUPPORT XX//
@@ -1020,7 +1034,6 @@ function perfiles_styles()
         //DIAGNOSIS APP JS 
 
         wp_enqueue_script('diag-pages', plugins_url('src/js/diag.pages.js', __FILE__), array('jquery'));
-
     }
 
     //NOBODY KNOWS WTF IS THIS
@@ -1342,6 +1355,27 @@ function perfiles_styles()
         wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
         wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
     }
+    //GLOBAL URL APPLIED 
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'PERFILES_MANUFACTURER_SUBSCRIPCION')) {
+        translations();
+        global_url();
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_style('CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/manufacturer/css/material.css', __FILE__));
+        wp_enqueue_style('banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('quote-script-js', '' . $plugin_quote . '/assets/js/script.cot2.js', array('jquery'), true);
+        wp_enqueue_style('quote-css', '' . $plugin_quote . '/assets/css/styles.cot.css', true);
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js', __FILE__), array('jquery'));
+        wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js', __FILE__), array('jquery'));
+        wp_enqueue_script('pursaching-script', plugins_url('src/manufacturer/js/pursaching.js', __FILE__), array('jquery'));
+        wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
+        wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+    }
 
     // XXX DISTRIBUTOR XXX
 
@@ -1618,6 +1652,28 @@ function perfiles_styles()
         wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
     }
 
+    //GLOBAL URL APPLIED
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'PERFILES_DISTRIBUTOR_SUBSCRIPCION')) {
+        translations();
+        global_url();
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_style('CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/manufacturer/css/material.css', __FILE__));
+        wp_enqueue_style('banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('quote-script-js', '' . $plugin_quote . '/assets/js/script.cot2.js', array('jquery'), true);
+        wp_enqueue_style('quote-css', '' . $plugin_quote . '/assets/css/styles.cot.css', true);
+        wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js', __FILE__), array('jquery'));
+        wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js', __FILE__), array('jquery'));
+        wp_enqueue_script('pursaching-script', plugins_url('src/distributor/js/pursaching.js', __FILE__), array('jquery'));
+        wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
+        wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+    }
+
     // XXX SUPPORT STYLES
 
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'SUPORT_DASHBOARD')) {
@@ -1670,7 +1726,6 @@ function perfiles_styles()
         wp_enqueue_script('xda', plugins_url('src/suport/js/file_input.js', __FILE__), array('jquery'));
         wp_enqueue_script('script', plugins_url('src/suport/js/script.js', __FILE__), array('jquery'));
         wp_enqueue_script('logout', plugins_url('src/suport/js/logout.js', __FILE__), array('jquery'));
-
     }
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'SUPORT_MODREPORTS')) {
         translations();
@@ -2116,7 +2171,6 @@ function perfiles_styles()
         wp_enqueue_style('font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
         wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js', __FILE__), array('jquery'));
         wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js', __FILE__), array('jquery'));
-
     }
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_PRODUCT')) {
         translations();
