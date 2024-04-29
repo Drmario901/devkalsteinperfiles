@@ -33,13 +33,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  .membership-table th,
+  /* .membership-table th,
   .membership-table td {
     text-align: left;
     padding: 12px;
     border: 1px solid #ddd;
 
-  }
+  } */
 
   .membership-table th {
     /* background-color: #4CAF50; */
