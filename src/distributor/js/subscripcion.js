@@ -21,11 +21,11 @@ jQuery(document).ready(function ($) {
 
   // Función para crear las filas de datos
   function crearDatos() {
-    $.each(datos, function (i, fila) {
+    $.each(datos, function (i, objeto) {
       const $tr = $("<tr>");
-
-      // Añadir la descripción
-      $tr.append($("<td>").text(fila.item));
+      $.each(objeto.item, function (j, dato) {
+        $tr.append($("<td>").html(dato)); // Se utiliza .html() para permitir el uso de HTML dentro de la celda
+      });
       $("#tr-data").append($tr);
     });
   }
