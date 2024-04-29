@@ -7,10 +7,7 @@ const titulos = [
 
 const datos = [
   {
-    descripcion: "Soporte Multilingüe en 10 idiomas",
-    membresia1: true,
-    membresia2: true,
-    membresia3: true,
+    item: ["Soporte Multilingüe en 10 idiomas", "✅", "✅", "✅"],
   },
   // Puedes añadir más objetos con la misma estructura para más filas
 ];
@@ -28,20 +25,7 @@ jQuery(document).ready(function ($) {
       const $tr = $("<tr>");
 
       // Añadir la descripción
-      $tr.append($("<td>").text(fila.descripcion));
-
-      // Añadir los datos de membresía
-      titulos.slice(1).forEach((titulo) => {
-        // slice(1) para saltar la descripción
-        $tr.append(
-          $("<td>").append(
-            fila[titulo.toLowerCase().replace(/ /g, "")]
-              ? $("<span>").addClass("checkmark").html("&#10003;")
-              : ""
-          )
-        );
-      });
-
+      $tr.append($("<td>").text(fila.item));
       $("#tr-data").append($tr);
     });
   }
