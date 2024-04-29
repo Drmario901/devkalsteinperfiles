@@ -79,7 +79,7 @@
     overflow: hidden;
     transition: all 0.3s;
     border-radius: 12px;
-    background-color: #ecd448;
+    background-color: #213280;
     font-weight: bolder;
     box-shadow: 0 2px 0 2px #000;
   }
