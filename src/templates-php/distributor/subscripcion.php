@@ -21,7 +21,7 @@
 
 
 <style>
-  body {
+  section {
     font-family: Arial, sans-serif;
     margin: 3rem;
   }
@@ -65,7 +65,7 @@
 </style>
 </head>
 
-<body>
+<section>
 
   <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
   <p>Planes de Membresía</p>
@@ -87,7 +87,7 @@
     <!-- Más filas según necesites -->
   </table>
 
-</body>
+</section>
 
 <!-- FOOTER -->
 <?php
