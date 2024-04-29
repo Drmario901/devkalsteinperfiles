@@ -13,8 +13,6 @@ const informacionTabla = [
 ];
 
 jQuery(document).ready(function ($) {
-  const $titlesTh = $("#tr-titles");
-
   const $thead = $("<thead>");
   const $trTitles = $("<tr>").attr("id", "tr-titles");
   $.each(titulos, function (index, titulo) {
@@ -22,4 +20,13 @@ jQuery(document).ready(function ($) {
   });
   $thead.append($trTitles);
   $(".membership-table").append($thead);
+
+  const $tbody = $("<tbody>");
+  $.each(informacionTabla, function (index, fila) {
+    const $tr = $("<tr>");
+    $("<td>").text(fila.titulo).appendTo($tr); // Añade el título de la fila
+
+    // Añade las celdas de assets, incluyendo un cheque si corresponde
+  });
+  $(".membership-table").append($tbody);
 });
