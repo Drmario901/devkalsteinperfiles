@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once __DIR__ . '/../../db/conexion.php';
 require __DIR__ . '/validateProductData.php';
 
@@ -33,13 +37,10 @@ if ($membresia == 0) {
         $datos['err_msg'] = 'No puedes subir más de 5 productos con tu membresía actual';
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
-        //exit();
+        exit();
     } else {
         if ($val) {
             move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
-
-
-
 
             if ($pCurrency == 'EUR') {
                 $pPriceEUR = $pPrice;
