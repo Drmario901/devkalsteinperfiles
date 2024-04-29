@@ -631,7 +631,7 @@ jQuery(document).ready(function ($) {
               JSON.parse(response).link
             }>Membresias</a>`,
             position: "center",
-            timeout: 5000,
+            timeout: 10000,
             pauseOnHover: true,
             progressBar: true,
             progressBarColor: "",
