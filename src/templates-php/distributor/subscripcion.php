@@ -24,6 +24,7 @@
   section {
     font-family: Arial, sans-serif;
     /* margin: 3rem; */
+    padding-bottom: 2rem;
   }
 
   .membership-table {
@@ -31,12 +32,12 @@
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
   }
 
   .membership-table th,
   .membership-table td {
-    text-align: left;
+    text-align: center;
     padding: 5px;
     border: 1px solid #ddd;
     max-width: 3rem;
