@@ -70,14 +70,14 @@
 
   .btn-primary {
     /* color: var(--blue-ryb); */
-    border: 1px solid var(#213280);
+    border: 1px solid #213280 !important;
     transition: var(--transition);
     color: white !important;
     background-color: #213280;
   }
 
   .btn-primary:hover {
-    color: white;
+    color: white !important;
   }
 </style>
 </head>
