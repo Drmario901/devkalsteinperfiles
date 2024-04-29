@@ -6,7 +6,7 @@ const titulos = [
 ];
 
 const botones = [
-  { membresia: "Membresía 1", id: "membresia-1" },
+  // { membresia: "Membresía 1", id: "membresia-1" },
   { membresia: "Membresía 2", id: "membresia-2" },
   { membresia: "Membresía 3", id: "membresia-3" },
 ];
