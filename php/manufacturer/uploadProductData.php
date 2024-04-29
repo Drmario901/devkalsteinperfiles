@@ -20,8 +20,8 @@ if ($result->num_rows > 0) {
 }
 
 if ($membresia == 0) {
-    $sql = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id'";
-    $result = $conexion->query($sql);
+    $sqlCount = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id'";
+    $result = $conexion->query($sqlCount);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -33,7 +33,7 @@ if ($membresia == 0) {
         $datos['err_msg'] = 'No puedes subir más de 5 productos con tu membresía actual';
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
-        exit();
+        //exit();
     } else {
         if ($val) {
             move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
