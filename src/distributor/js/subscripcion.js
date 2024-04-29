@@ -7,7 +7,30 @@ const titulos = [
 
 const datos = [
   {
-    item: ["Soporte Multilingüe en 10 idiomas", "✅", "✅", "✅"],
+    item: [
+      "Soporte Multilingüe en 10 idiomas",
+      "1 Idiomas",
+      "2 Idiomas",
+      "Todos",
+    ],
+    item: [
+      "Soporte Multilingüe en 10 idiomas",
+      "1 Idiomas",
+      "2 Idiomas",
+      "Todos",
+    ],
+    item: [
+      "Soporte Multilingüe en 10 idiomas",
+      "1 Idiomas",
+      "2 Idiomas",
+      "Todos",
+    ],
+    item: [
+      "Soporte Multilingüe en 10 idiomas",
+      "1 Idiomas",
+      "2 Idiomas",
+      "Todos",
+    ],
   },
   // Puedes añadir más objetos con la misma estructura para más filas
 ];
