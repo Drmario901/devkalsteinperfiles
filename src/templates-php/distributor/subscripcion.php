@@ -63,6 +63,52 @@
     text-transform: uppercase;
     letter-spacing: 0px;
   }
+
+  @media (max-width: 768px) {
+    .membership-table {
+      border: 0;
+    }
+
+    .membership-table th,
+    .membership-table td {
+      padding: 10px;
+      display: block;
+    }
+
+    .membership-table thead {
+      display: none;
+      /* esconder la cabecera en dispositivos pequeños */
+    }
+
+    .membership-table td {
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+      /* da espacio para el contenido del 'pseudo-elemento' */
+      text-align: right;
+    }
+
+    .membership-table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .membership-table tr {
+      margin-bottom: 10px;
+      display: block;
+      background: none;
+    }
+
+    .membership-table tr:nth-child(even) {
+      background: none;
+      /* remueve el estilo zebra para filas pares */
+    }
+  }
 </style>
 </head>
 
