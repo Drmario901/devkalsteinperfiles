@@ -2076,27 +2076,27 @@ input:focus {
 .info-icon {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* Opcional, muestra un subrayado para indicar que es interactivo */
-  cursor: help; /* Cambia el cursor a un signo de interrogación */
+  cursor: help;
 }
 
 .info-icon .fas {
-  color: #3498db; /* Cambia el color del icono si es necesario */
+  color: #3498db;
 }
 
 .info-icon:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: 100%;
+  bottom: 120%; /* Ajusta según necesidad */
   left: 50%;
   transform: translateX(-50%);
-  white-space: nowrap;
-  background-color: #555; /* Color de fondo del tooltip */
-  color: white; /* Color de texto del tooltip */
-  text-align: center;
+  white-space: pre-line; /* Esto asegura que los saltos de línea se respeten */
+  background-color: #555;
+  color: white;
+  text-align: left; /* Alineación del texto */
   border-radius: 6px;
-  padding: 5px 10px;
+  padding: 8px 10px;
   z-index: 1;
   opacity: 0.9;
-  pointer-events: none; /* Evita que el tooltip interfiera con otros clics */
+  pointer-events: none;
+  max-width: 300px; /* Limita el ancho del tooltip */
 }
