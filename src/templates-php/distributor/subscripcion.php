@@ -66,6 +66,19 @@
     text-transform: uppercase;
     letter-spacing: 0px;
   }
+
+
+  .btn-primary {
+    /* color: var(--blue-ryb); */
+    border: 1px solid var(#213280);
+    transition: var(--transition);
+    color: white !important;
+    background-color: #213280;
+  }
+
+  .btn-primary:hover {
+    color: white;
+  }
 </style>
 </head>
 
