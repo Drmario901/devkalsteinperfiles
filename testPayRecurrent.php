@@ -24,17 +24,41 @@ function encryptURL() {
     return $gateway; 
 }
 
-//ENCRYPT GET
-//$getSuccess = base64_encode('success');
-//$getDeclined = base64_encode('declined');
-
 //GET VARIABLE.
 $idMembership = $_GET["idMembership"];
-$iMembershipEncrypted = base64_encode($idMembership);
+
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
+
+$consulta2 = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$email'";
+$resultado = $conexion->query($consulta2);
+
+if ($resultado) {
+    if ($resultado->num_rows > 0) {
+        $row2 = $resultado->fetch_assoc();
+        $tipo_membresia = $row['tipo_membresia'];
+
+        if ($tipo_membresia == 0) {
+            $id_unico = uniqid();
+
+            // Actualizar el account_sub_id
+            $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
+            if ($conexion->query($updateQuery) === TRUE) {
+                echo "ID único generado y almacenado correctamente.";
+            } else {
+                echo "Error al actualizar el registro: " . $conexion->error;
+            }
+        } else {
+            echo "El usuario no requiere un ID único.";
+        }
+    } else {
+        echo "No se encontró el usuario.";
+    }
+} else {
+    echo "Error al ejecutar la consulta: " . $conexion->error;
+}
 
 
 //COMPOSER DEPENDENCIES.
@@ -86,7 +110,7 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<body onload="document.forms['payment_form'].submit();">
+<!--body onload="document.forms['payment_form'].submit();"-->
 <style>
     .custom-loader {
         width: 50px;
