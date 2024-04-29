@@ -36,7 +36,7 @@ if ($resultAction->num_rows > 0) {
     $titlePage = str_replace('https://dev.kalstein.plus/plataforma/', '', $urlSlug);
     $nwTitlePage = str_replace('/', '', $titlePage);
 
-    $changeStatuPage = "UPDATE wp_posts SET post_status = 'publish' WHERE post_title = '$nwTitlePage'";
+    $changeStatuPage = "UPDATE 8x7MM_posts SET post_status = 'publish' WHERE post_title = '$nwTitlePage'";
     $conexion2->query($changeStatuPage);
 
     $response = array();

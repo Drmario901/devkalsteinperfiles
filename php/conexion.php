@@ -3,7 +3,7 @@ $hostdb = "localhost";
 $userdb = "kalsteinplus";
 $passdb = "OqA;}vKA94PO";
 $namedb = "kalsteinplus_he270716_wp_es";
-$namedb2 = "kalsteinplus_he270711_wp3";
+$namedb2 = "kalsteinplus_plataforma_desarrollo";
 //$namedb3 = "he270716_wp3";
 
 $conexion = new mysqli($hostdb, $userdb, $passdb, $namedb);
