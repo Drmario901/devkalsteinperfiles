@@ -84,7 +84,7 @@
     box-shadow: 0 2px 0 2px #000;
   }
 
-  .btn-tbl :before {
+  .btn-tbl:before {
     content: "";
     position: absolute;
     width: 100px;
@@ -95,18 +95,18 @@
     transition: all 0.5s;
   }
 
-  .btn-tbl :hover {
+  .btn-tbl:hover {
     background-color: #4cc9f0;
     color: #fff;
     box-shadow: 0 2px 0 2px #0d3b66;
   }
 
-  .btn-tbl :hover::before {
+  .btn-tbl:hover::before {
     transform: skewX(30deg) translate(150%, -50%);
     transition-delay: 0.1s;
   }
 
-  .btn-tbl :active {
+  .btn-tbl:active {
     transform: scale(0.9);
   }
 </style>
