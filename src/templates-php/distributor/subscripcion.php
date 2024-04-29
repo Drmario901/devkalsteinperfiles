@@ -68,7 +68,7 @@
   }
 
 
-  .btn {
+  .btn-tbl {
     padding: 1.1em 2em;
     background: none;
     border: 2px solid #fff;
@@ -84,7 +84,7 @@
     box-shadow: 0 2px 0 2px #000;
   }
 
-  .btn:before {
+  .btn-tbl :before {
     content: "";
     position: absolute;
     width: 100px;
@@ -95,18 +95,18 @@
     transition: all 0.5s;
   }
 
-  .btn:hover {
+  .btn-tbl :hover {
     background-color: #4cc9f0;
     color: #fff;
     box-shadow: 0 2px 0 2px #0d3b66;
   }
 
-  .btn:hover::before {
+  .btn-tbl :hover::before {
     transform: skewX(30deg) translate(150%, -50%);
     transition-delay: 0.1s;
   }
 
-  .btn:active {
+  .btn-tbl :active {
     transform: scale(0.9);
   }
 </style>
