@@ -37,12 +37,12 @@
     text-align: left;
     padding: 12px;
     border: 1px solid #ddd;
-    color: #213280;
+
   }
 
   .membership-table th {
-    background-color: #4CAF50;
-    color: white;
+    /* background-color: #4CAF50; */
+    color: #213280;
   }
 
   .membership-table tr:nth-child(even) {
