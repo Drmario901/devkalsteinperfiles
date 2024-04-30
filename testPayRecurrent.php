@@ -8,10 +8,10 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 session_start();
 
 //EMAIL ACCOUNT SESSION.
-/*if(isset($_SESSION["emailAccount"])){
+if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];
-}*/
-$email = 'valfonsob12@yopmail.com';
+}
+//$email = 'valfonsob12@yopmail.com';
 
 //LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';

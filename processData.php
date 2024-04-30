@@ -30,15 +30,15 @@ function processLogFile($filePath, $membershipType, $conexion)
                     if ($stmt) {
                         $stmt->bind_param("is", $membershipValue, $userTag);
                         if ($stmt->execute()) {
-                            echo "Membresía actualizada correctamente para el userTag: $userTag\n";
+                            //echo "Membresía actualizada correctamente para el userTag: $userTag\n";
                         } else {
-                            echo "Error al actualizar la membresía para el userTag: $userTag. Error: " . $stmt->error . "\n";
+                            //echo "Error al actualizar la membresía para el userTag: $userTag. Error: " . $stmt->error . "\n";
                         }
                     } else {
-                        echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
+                        //echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
                     }
                 } else {
-                    echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
+                   // echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
                 }
             }
         }
