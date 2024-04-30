@@ -172,5 +172,16 @@ jQuery(document).ready(function ($) {
 
   function updateSubscripcion() {
     window.alert("aqui actualiza");
+    $.ajax({
+      url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/getMembresia",
+      type: "GET",
+      data: {},
+    })
+      .done(function (respuesta) {
+        console.log("la respuesta", respuesta);
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
   }
 });

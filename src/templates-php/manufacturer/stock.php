@@ -68,7 +68,7 @@
                     echo "<div class='container-danger'>
                     <p class='text-danger'>
                         <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
-                        <a href='https://dev.kalstein.plus/plataforma/manufacturer/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
+                        <a href='https://dev.kalstein.plus/plataforma/fabricante/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
                     </p>
                 </div>
                     ";
