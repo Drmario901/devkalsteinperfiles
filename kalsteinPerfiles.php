@@ -63,6 +63,16 @@ function successPage()
     return $html;
 }
 
+//PÁGINA DE PAGO SATISFACTORIO DE SUBSCRIPCION.
+
+function successPagesSubscripcion()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->success_page_subscripcion();
+    return $html;
+}
+
 //Short Code pagina diego 404 
 /*function diego(){
     $_short = new shortcodePerfiles;
@@ -792,6 +802,9 @@ add_shortcode("ERROR_404_KALSTEIN", "errorPage");
 
 //PAGINA PAGO APROBADO.
 add_shortcode("SUCCESS_PAYMENT", "successPage");
+
+//PAGINA PAGO APROBADO SUBSCRIPCION.
+add_shortcode("SUCCESS_PAYMENT_SUBSCRIPCION", "successPagesSubscripcion");
 
 //PAYMENT GATEWAY
 add_shortcode("MONETICO_PAYMENT", "payment");

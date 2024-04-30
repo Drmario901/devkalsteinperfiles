@@ -39,6 +39,7 @@ if ($result->num_rows > 0) {
 
   if ($totalProductos <= $maxProductos) {
     $sqlMakeVisible = "UPDATE wp_k_products SET visible = 0 WHERE product_maker = '$emailAccount' LIMIT $maxProductos";
+    $conexion->query($sqlMakeVisible);
   }
 
   // Si excede el máximo permitido, cambiar la visibilidad de los últimos productos subidos
