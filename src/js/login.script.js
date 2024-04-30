@@ -901,7 +901,7 @@ jQuery(document).ready(function ($) {
 
         if (data.status === "correcto") {
           $.ajax({
-            url: plugin_dir + "/php/accessAcount.php",
+            url: plugin_dir + "/php/checkMembershipStatus.php",
 
             type: "POST",
 
