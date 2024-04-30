@@ -120,8 +120,6 @@ $datos = array(
     'tipo' => $tipo
 );
 
-require 'checkMembershipStatus.php';
-
 echo json_encode($datos, JSON_FORCE_OBJECT);
 $conexion->close();
 ?>
