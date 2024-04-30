@@ -7,8 +7,8 @@ const titulos = [
 
 const botones = [
   // { membresia: "Membresía 1", id: "membresia-1" },
-  { membresia: "Membresía 2", id: "membresia-2" },
-  { membresia: "Membresía 3", id: "membresia-3" },
+  { membresia: "Membresía 2", id: "membresia-1" },
+  { membresia: "Membresía 3", id: "membresia-2" },
 ];
 
 const datos = [
@@ -152,10 +152,10 @@ jQuery(document).ready(function ($) {
             );
           });
 
-          if (respuesta == 2) {
+          if (respuesta == 1) {
             $("#membresia-2").attr("hidden", true);
           }
-          if (respuesta == 3) {
+          if (respuesta == 2) {
             $("#membresia-3").attr("hidden", true);
           }
         }
@@ -225,8 +225,8 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 3) {
-          updateSubscripcion(2);
+        if (respuesta == 0 && respuesta !== 2) {
+          updateSubscripcion(1);
         }
       })
       .fail(function (error) {
@@ -242,8 +242,8 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 2) {
-          updateSubscripcion(3);
+        if (respuesta == 0 && respuesta !== 1) {
+          updateSubscripcion(2);
         }
       })
       .fail(function (error) {
