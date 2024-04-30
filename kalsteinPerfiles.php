@@ -787,11 +787,37 @@ function moderator_cotizacionesP()
     return $html;
 }
 
+
+// SUCCESS SUBSCRIPCION PAGE 
+function subscripcionPageSuccess()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->success_page_subscripcion();
+    return $html;
+}
+
+// FAILED SUBSCRIPCION PAGE
+function subscripcionPageError()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->failed_page_subscripcion();
+    return $html;
+}
+
+
+
 //PAGINA DE PAGO RECHAZADO.
 add_shortcode("ERROR_404_KALSTEIN", "errorPage");
 
 //PAGINA PAGO APROBADO.
 add_shortcode("SUCCESS_PAYMENT", "successPage");
+
+//PAGINA SUBSCRIPCION PAGO APROBADO.
+add_shortcode("SUCCESS_SUBCRIPCION", "successSubscripcion");
 
 //PAYMENT GATEWAY
 add_shortcode("MONETICO_PAYMENT", "payment");
@@ -800,6 +826,12 @@ add_shortcode("MONETICO_PAYMENT", "payment");
 add_shortcode("MONETICO_PAYMENT_RESPONSE", "paymentResponse");
 
 add_shortcode("PERFILES_DATA_RECOVER", "data_recoverP");
+
+//SUCCESS SUBSCRIPCION PAGE 
+add_shortcode("SUBSCRIPCION_SUCCESS_PAGE", "subscripcionPageSuccess");
+
+//FAILED SUBSCRIPCION PAGE 
+add_shortcode("SUBSCRIPCION_FAILED_PAGE", "subscripcionPageError");
 
 //Shortcode de diego 404 
 // add_shortcode("DIEGO_SHORTCODE", "diego");
