@@ -110,6 +110,8 @@
                         <td class='fw-bold' style='background-color: #213280; color: white;'
                             data-i18n="distribuidor:elementoFecha">Fecha</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;'
+                            data-i18n="distribuidor:elementoFecha">Visible?</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;'
                             data-i18n="distribuidor:elementoAcciones">Acciones</td>
                     </tr>
                 </thead>
@@ -136,7 +138,7 @@
                     $offset = ($page - 1) * $perPage;
                     $limit = $perPage;
 
-                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0 AND visibility = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
+                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
                     $resultado = $conexion->query($query);
 
                     if ($resultado->num_rows > 0) {
@@ -159,6 +161,13 @@
                             $image = $value['product_image'];
                             $date = $value['product_create_at'];
                             $val_status = $value['product_validate_status'];
+                            $visibility = $value['visibility'];
+
+                            if ($visibility == 0) {
+                                $visible = 'Visible';
+                            } else {
+                                $visible = 'No Visible';
+                            }
 
                             if ($status == 'in stock') {
                                 $status = $inStock;
@@ -196,6 +205,7 @@
                     <td style='min-width: 89px'>$stock <br>($status)</td>
                     <td style=''>$currency $price</td>
                     <td>$date</td>
+                    <td>$visible</td>
                     <td>
                         <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id'>delete</button>
                         <br>
