@@ -109,7 +109,6 @@
                             data-i18n="distribuidor:labelPrecioUnit">Precio en (USD)</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;'
                             data-i18n="distribuidor:elementoFecha">Fecha</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;' ">Visible?</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;'
                             data-i18n=" distribuidor:elementoAcciones">Acciones</td>
                     </tr>
@@ -160,13 +159,6 @@
                             $image = $value['product_image'];
                             $date = $value['product_create_at'];
                             $val_status = $value['product_validate_status'];
-                            $visibility = $value['visible'];
-
-                            if ($visibility == 0) {
-                                $visible = 'Visible';
-                            } else {
-                                $visible = 'No Visible';
-                            }
 
                             if ($status == 'in stock') {
                                 $status = $inStock;
@@ -189,7 +181,6 @@
                             } else if ($val_status == 'denied') {
                                 $st = "<i class='fa-solid fa-triangle-exclamation h3 style='color: #d13a33'></i><p class='mb-0'><b>$denegado</b></p>";
                             }
-
                             $date = date('d/m/Y', strtotime($date));
 
                             echo ("
@@ -204,7 +195,6 @@
                     <td style='min-width: 89px'>$stock <br>($status)</td>
                     <td style=''>$currency $price</td>
                     <td>$date</td>
-                    <td>$visible</td>
                     <td>
                         <button class='material-symbols-rounded'  id='btnDeleteProduct' value='$id'>delete</button>
                         <br>
