@@ -24,7 +24,7 @@ function checkMembership() {
   $.ajax({
     url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php",
 
-    type: "GET",
+    type: "POST",
 
     data: {},
   }).done(function (respuesta) {
