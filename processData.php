@@ -15,7 +15,7 @@ function processLogFile($filePath, $membershipType, $conexion)
         while (($line = fgets($handle)) !== false) {
             $data = json_decode(substr($line, strpos($line, '{')), true);
 
-            if ($data && $data['code-retour'] === 'paytest') {
+            if ($data && $data['code-retour'] === 'payetest') {
                 preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
                 preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
 
