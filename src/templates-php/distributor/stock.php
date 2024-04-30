@@ -110,7 +110,7 @@
                         <td class='fw-bold' style='background-color: #213280; color: white;'
                             data-i18n="distribuidor:elementoFecha">Fecha</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;'
-                            data-i18n="distribuidor:elementoAcciones">Acciones</td>
+                            data-i18n=" distribuidor:elementoAcciones">Acciones</td>
                     </tr>
                 </thead>
                 <tbody id="product-table-body" class='bodyTableForQuote'>
@@ -136,7 +136,7 @@
                     $offset = ($page - 1) * $perPage;
                     $limit = $perPage;
 
-                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0 AND visibility = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
+                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
                     $resultado = $conexion->query($query);
 
                     if ($resultado->num_rows > 0) {
@@ -181,7 +181,6 @@
                             } else if ($val_status == 'denied') {
                                 $st = "<i class='fa-solid fa-triangle-exclamation h3 style='color: #d13a33'></i><p class='mb-0'><b>$denegado</b></p>";
                             }
-
                             $date = date('d/m/Y', strtotime($date));
 
                             echo ("
