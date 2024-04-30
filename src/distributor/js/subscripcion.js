@@ -132,6 +132,8 @@ const datos = [
 ];
 
 jQuery(document).ready(function ($) {
+  let membresia = "";
+
   function obtenerMembresia() {
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
@@ -140,23 +142,22 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        const membresia = respuesta;
-
-        $.each(botones, function (i, boton) {
-          if (membresia == 0) {
-            let $btn = $("#tbl-botones").append(
-              $("<a>")
-                .text(boton.membresia)
-                .attr("id", boton.id)
-                .addClass("btn-tbl")
-            );
-          }
-        });
+        if (respuesta == 0) {
+          $.each(botones, function (i, boton) {
+            if (membresia == 0) {
+              let $btn = $("#tbl-botones").append(
+                $("<a>")
+                  .text(boton.membresia)
+                  .attr("id", boton.id)
+                  .addClass("btn-tbl")
+              );
+            }
+          });
+        }
         if (membresia !== 0) {
-          console.log("membresia", membresia);
           $("#tbl-botones").append(
             $("<a>")
-              .text("Cancelar")
+              .text("boton.membresia")
               .attr("id", "btn-cancelar-subs")
               .addClass("btn-tbl")
           );
@@ -182,6 +183,27 @@ jQuery(document).ready(function ($) {
       });
       $("#tr-data").append($tr);
     });
+  }
+
+  function crearBotones() {
+    $.each(botones, function (i, boton) {
+      if (membresia == 0) {
+        let $btn = $("#tbl-botones").append(
+          $("<a>")
+            .text(boton.membresia)
+            .attr("id", boton.id)
+            .addClass("btn-tbl")
+        );
+      }
+    });
+    if (membresia !== 0) {
+      $("#tbl-botones").append(
+        $("<a>")
+          .text("boton.membresia")
+          .attr("id", "btn-cancelar-subs")
+          .addClass("btn-tbl")
+      );
+    }
   }
 
   // Llamadas a las funciones
