@@ -16,7 +16,7 @@ if (empty($data)) {
     exit;
 }
 
-file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
+file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
 $monetico = new Monetico('7593339', '530C185A56C2A9F904681A527780EBDB8C0E6C99', 'kalsteinfr');
 $response = new PurchaseResponse($data);
