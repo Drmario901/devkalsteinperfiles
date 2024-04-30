@@ -76,7 +76,7 @@ $monetico = new Monetico(
 );
  
 $purchase = new PurchaseRequest([
-    'reference' => 'Membresia ' .$tipo_membresia,
+    'reference' => 'Membresia ' .$idMembership,
     'description' => 'User ' .$email,
     'language' => 'ES',
     'email' => $row['account_correo'],
