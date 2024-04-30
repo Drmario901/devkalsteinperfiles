@@ -147,6 +147,18 @@ if ($acc_img == '') {
                 </ul>
                 <ul class='navbar-list'>
                     <li>
+                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/blog'
+                            id="link-accounts" class='navbar-link icon-box'>
+                            <span data-i18n="moderator:blog">Blog</span>
+                        </a>
+                    </li>    
+                    <li>
+                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/guide'
+                            id="link-accounts" class='navbar-link icon-box'>
+                            <span data-i18n="moderator:informationalGuides">Informational Guides</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/accounts'
                             id="link-accounts" class='navbar-link icon-box'>
                             <span data-i18n="moderator:accounts">Cuentas</span>
