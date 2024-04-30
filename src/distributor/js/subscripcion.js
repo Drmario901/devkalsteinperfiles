@@ -166,7 +166,7 @@ jQuery(document).ready(function ($) {
     updateSubscripcion();
   });
 
-  $("#membresia-2").click(function () {
+  $("#membresia-3").click(function () {
     updateSubscripcion();
   });
 
