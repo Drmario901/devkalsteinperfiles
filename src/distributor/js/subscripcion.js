@@ -134,39 +134,7 @@ const datos = [
 jQuery(document).ready(function ($) {
   let membresia = "";
 
-  function obtenerMembresia() {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
-      type: "GET",
-      data: {},
-    })
-      .done(function (respuesta) {
-        console.log("la respuesta", respuesta);
-        if (respuesta == 0) {
-          $.each(botones, function (i, boton) {
-            if (membresia == 0) {
-              let $btn = $("#tbl-botones").append(
-                $("<a>")
-                  .text(boton.membresia)
-                  .attr("id", boton.id)
-                  .addClass("btn-tbl")
-              );
-            }
-          });
-        }
-        if (Number(membresia) !== 0) {
-          $("#tbl-botones").append(
-            $("<a>")
-              .text("Cancelar")
-              .attr("id", "btn-cancelar-subs")
-              .addClass("btn-tbl")
-          );
-        }
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
-  }
+  function obtenerMembresia() {}
 
   function crearTitulos() {
     $.each(titulos, function (i, titulo) {
@@ -187,30 +155,16 @@ jQuery(document).ready(function ($) {
 
   function crearBotones() {
     $.each(botones, function (i, boton) {
-      if (membresia == 0) {
-        let $btn = $("#tbl-botones").append(
-          $("<a>")
-            .text(boton.membresia)
-            .attr("id", boton.id)
-            .addClass("btn-tbl")
-        );
-      }
-    });
-    if (membresia !== 0) {
-      $("#tbl-botones").append(
-        $("<a>")
-          .text("boton.membresia")
-          .attr("id", "btn-cancelar-subs")
-          .addClass("btn-tbl")
+      let $btn = $("#tbl-botones").append(
+        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn-tbl")
       );
-    }
+    });
   }
 
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
-  // crearBotones();
-  obtenerMembresia();
+  crearBotones();
 
   $("#membresia-2").click(function () {
     $.ajax({
@@ -220,8 +174,8 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 3) {
-          updateSubscripcion(2);
+        if (respuesta == 0 && respuesta !== 2) {
+          updateSubscripcion(1);
         }
       })
       .fail(function (error) {
@@ -237,8 +191,8 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 2) {
-          updateSubscripcion(3);
+        if (respuesta == 0 && respuesta !== 1) {
+          updateSubscripcion(2);
         }
       })
       .fail(function (error) {

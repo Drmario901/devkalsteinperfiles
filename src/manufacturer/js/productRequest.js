@@ -616,14 +616,16 @@ jQuery(document).ready(function ($) {
       .done(function (response) {
         //$('#btnSendData').removeAttr('disabled');
         console.log(response);
-        if (JSON.parse(response).status == "correcto") {
+        const res = JSON.parse(response);
+        if (res.status == "correcto") {
           iziToast.success({
             title: alertsTranslations.exito,
-            message: alertsTranslations.datosCargados,
+            message: alertsTranslations.dataSuccessfullySaved,
             position: "center",
           });
-          window.location.href = domain + "/manufacturer/stock";
-        } else {
+          window.location.href = domain + "/productos";
+        }
+        if (res.status == "incorrecto") {
           iziToast.error({
             title: "Error",
             message: `${JSON.parse(response).err_msg} 

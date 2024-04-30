@@ -633,14 +633,16 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         console.log(response);
-        if (!JSON.parse(response).err_msg) {
+        const res = JSON.parse(response);
+        if (res.status == "correcto") {
           iziToast.success({
             title: alertsTranslations.exito,
             message: alertsTranslations.dataSuccessfullySaved,
             position: "center",
           });
           window.location.href = domain + "/productos";
-        } else {
+        }
+        if (res.status == "incorrecto") {
           iziToast.error({
             title: "Error",
             message: `${JSON.parse(response).err_msg} 
