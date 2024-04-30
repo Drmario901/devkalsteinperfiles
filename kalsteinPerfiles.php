@@ -73,6 +73,16 @@ function successPagesSubscripcion()
     return $html;
 }
 
+//PÁGINA DE PAGO SATISFACTORIO DE SUBSCRIPCION.
+
+function failedPagesSubscripcion()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->failed_page_subscripcion();
+    return $html;
+}
+
 //Short Code pagina diego 404 
 /*function diego(){
     $_short = new shortcodePerfiles;
@@ -805,6 +815,9 @@ add_shortcode("SUCCESS_PAYMENT", "successPage");
 
 //PAGINA PAGO APROBADO SUBSCRIPCION.
 add_shortcode("SUCCESS_PAYMENT_SUBSCRIPCION", "successPagesSubscripcion");
+
+//PAGINA PAGO FAILED SUBSCRIPCION.
+add_shortcode("FAILED_PAYMENT_SUBSCRIPCION", "failedPagesSubscripcion");
 
 //PAYMENT GATEWAY
 add_shortcode("MONETICO_PAYMENT", "payment");
