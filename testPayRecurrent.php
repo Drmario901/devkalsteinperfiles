@@ -8,7 +8,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 session_start();
 
 //EMAIL ACCOUNT SESSION.
-if(isset($_SESSION["emailAccount"])){
+if (isset($_SESSION["emailAccount"])) {
     $email = $_SESSION["emailAccount"];
 }
 //$email = 'valfonsob12@yopmail.com';
@@ -32,8 +32,8 @@ if (!isset($_GET["idMembership"])) {
 $idMembership = $_GET["idMembership"];
 
 $membershipPrices = [
-    'SUB1' => 10,
-    'SUB2' => 20
+    'SUB1' => 59,
+    'SUB2' => 79
 ];
 
 if (!isset($membershipPrices[$idMembership])) {
@@ -145,7 +145,7 @@ $fields = $monetico->getFields($purchase);
         }
     </style>
     <form name="payment_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value) : ?>
+        <?php foreach ($fields as $key => $value): ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
