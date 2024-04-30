@@ -132,6 +132,10 @@ const datos = [
 ];
 
 jQuery(document).ready(function ($) {
+  let membresia = "";
+
+  function obtenerMembresia() {}
+
   function crearTitulos() {
     $.each(titulos, function (i, titulo) {
       $("#tr-titles").append($("<th>").text(titulo));
@@ -163,15 +167,6 @@ jQuery(document).ready(function ($) {
   crearBotones();
 
   $("#membresia-2").click(function () {
-    updateSubscripcion();
-  });
-
-  $("#membresia-3").click(function () {
-    updateSubscripcion();
-  });
-
-  function updateSubscripcion() {
-    window.alert("aqui actualiza");
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresia.php",
       type: "GET",
@@ -179,9 +174,35 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
+        if (respuesta == 0 && respuesta !== 3) {
+          updateSubscripcion(2);
+        }
       })
       .fail(function (error) {
         console.log("error", error);
       });
+  });
+
+  $("#membresia-3").click(function () {
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresia.php",
+      type: "GET",
+      data: {},
+    })
+      .done(function (respuesta) {
+        console.log("la respuesta", respuesta);
+        if (respuesta == 0 && respuesta !== 2) {
+          updateSubscripcion(3);
+        }
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
+
+    updateSubscripcion();
+  });
+
+  function updateSubscripcion(subs) {
+    window.alert(`Datos a actualizar a la subscripcion numero: ${subs}`);
   }
 });

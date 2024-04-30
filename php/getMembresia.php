@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
     $_SESSION['tipo_membresia'] = $row['tipo_membresia'];
     $membresia = $row['tipo_membresia'];
   }
-  echo $membresia;
+  echo json_encode($membresia);
 } else {
   echo "0 results";
 }
