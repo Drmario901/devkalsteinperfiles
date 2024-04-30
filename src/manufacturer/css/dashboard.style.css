@@ -2104,7 +2104,7 @@ input:focus {
 
 .text-danger {
   font-weight: 700;
-  color: #721c24; /* Ajustado para coincidir con el tema de alerta */
+  color: #000; /* Ajustado para coincidir con el tema de alerta */
 }
 
 .container-danger {
@@ -2122,11 +2122,11 @@ input:focus {
 .alert-link {
   font-weight: 700;
   color: #721c24;
-  text-decoration: none;
+  text-decoration: underline !important;
 }
 
 .alert-link:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .fas.fa-exclamation-circle {

@@ -81,7 +81,7 @@
                             <p class='text-danger'>
                                 <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
                             </p>
-                            <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
+                            <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu membresia dando click aquí.</a>
                         </div>
                     ";
                 }
