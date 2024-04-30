@@ -218,6 +218,8 @@ jQuery(document).ready(function ($) {
   obtenerMembresia();
 
   $("#membresia-1").click(function () {
+    console.log("click");
+
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
@@ -235,6 +237,7 @@ jQuery(document).ready(function ($) {
   });
 
   $("#membresia-2").click(function () {
+    console.log("click");
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
