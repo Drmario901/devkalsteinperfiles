@@ -163,9 +163,17 @@
   </table>
 
   <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem; margin-top: 1.5rem;">
-    <a href="" id="btn-cancelar-subs" class="btn-tbl">Cancelar</a>
-    <a href="" id="membresia-2" class="btn-tbl">Membresía 2</a>
-    <a href="" id="membresia-3" class="btn-tbl">Membresía 3</a>
+    <?php if ($membresia != 0) : ?>
+      <a href="" id="btn-cancelar-subs" class="btn-tbl">Cancelar</a>
+    <?php endif; ?>
+
+    <?php if ($membresia != 1) : ?>
+      <a href="" id="membresia-1" class="btn-tbl">Membresía 2</a>
+    <?php endif; ?>
+
+    <?php if ($membresia != 2) : ?>
+      <a href="" id="membresia-2" class="btn-tbl">Membresía 3</a>
+    <?php endif; ?>
   </div>
 
 </section>
