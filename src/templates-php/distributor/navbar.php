@@ -39,7 +39,7 @@ if ($acc_img == '') {
         <span class='material-symbols-rounded  icon' style='color: #213280'>menu</span>
     </button>
 
-    <!-- NAVBAR -->
+    <!-- NAVBARR -->
     <nav class="navbar">
         <div class="container">
 
