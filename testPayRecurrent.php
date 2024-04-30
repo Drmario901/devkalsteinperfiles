@@ -25,7 +25,21 @@ function encryptURL() {
 }
 
 //GET VARIABLE.
+if (!isset($_GET["idMembership"])) {
+    die('Error');
+}
 $idMembership = $_GET["idMembership"];
+
+$membershipPrices = [
+    'SUB1' => 10,
+    'SUB2' => 20
+];
+
+if (!isset($membershipPrices[$idMembership])) {
+    die('Error: No price.');
+}
+
+$membershipPrice = $membershipPrices[$idMembership];
 
 //MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
@@ -77,10 +91,10 @@ $monetico = new Monetico(
  
 $purchase = new PurchaseRequest([
     'reference' => 'Membresia ' .$idMembership,
-    'description' => 'User ' .$email,
+    'description' => 'uniqid: ' .$row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
-    'amount' => '788', 
+    'amount' => $membershipPrice, 
     'currency' => 'USD',
     'dateTime' => new DateTime(),
     'successUrl' => 'https://google.com/', 
