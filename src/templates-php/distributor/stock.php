@@ -109,10 +109,9 @@
                             data-i18n="distribuidor:labelPrecioUnit">Precio en (USD)</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;'
                             data-i18n="distribuidor:elementoFecha">Fecha</td>
+                        <td class='fw-bold' style='background-color: #213280; color: white;' ">Visible?</td>
                         <td class='fw-bold' style='background-color: #213280; color: white;'
-                            data-i18n="distribuidor:elementoFecha">Visible?</td>
-                        <td class='fw-bold' style='background-color: #213280; color: white;'
-                            data-i18n="distribuidor:elementoAcciones">Acciones</td>
+                            data-i18n=" distribuidor:elementoAcciones">Acciones</td>
                     </tr>
                 </thead>
                 <tbody id="product-table-body" class='bodyTableForQuote'>
