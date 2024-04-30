@@ -1,15 +1,15 @@
-const titulos = [
-  "Facturación mensual",
-  "Membresía 1",
-  "Membresía 2",
-  "Membresía 3",
-];
+// const titulos = [
+//   "Facturación mensual",
+//   "Membresía 1",
+//   "Membresía 2",
+//   "Membresía 3",
+// ];
 
-const botones = [
-  // { membresia: "Membresía 1", id: "membresia-1" },
-  { membresia: "Membresía 2", id: "membresia-2" },
-  { membresia: "Membresía 3", id: "membresia-3" },
-];
+// const botones = [
+//   // { membresia: "Membresía 1", id: "membresia-1" },
+//   { membresia: "Membresía 2", id: "membresia-2" },
+//   { membresia: "Membresía 3", id: "membresia-3" },
+// ];
 
 const datos = [
   {
