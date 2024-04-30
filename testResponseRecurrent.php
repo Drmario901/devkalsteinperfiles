@@ -8,24 +8,22 @@ require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-con
 $archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log_recurrent.txt";
 
 function processLogFile($filePath) {
+    global $conexion;
     $handle = fopen($filePath, "r");
     if ($handle) {
         while (($line = fgets($handle)) !== false) {
-            echo "Processing line: $line\n";  // Depuración
             $data = json_decode(substr($line, strpos($line, '{')), true);
 
-            if ($data && ($data['code-retour'] === 'paiement' || $data['code-retour'] === 'payetest')) {
+            if ($data && $data['code-retour'] === 'paiement') {
                 preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
                 preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
 
-                $userTag = $userTagMatches[1] ?? 'no userTag found';
-                $membershipId = $membershipMatches[1] ?? 'no membershipId found';
-                echo "User Tag: $userTag, Membership ID: $membershipId\n";  // Depuración
-
+                $userTag = $userTagMatches[1] ?? null;
+                $membershipId = $membershipMatches[1] ?? null;
                 $membershipType = ['SUB1' => 1, 'SUB2' => 2];
                 $membershipValue = $membershipType[$membershipId] ?? null;
 
-                if ($userTag && $membershipValue) {
+                if ($userTag && $membershipValue !== null) {
                     $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
                     if (!$stmt) {
                         echo "Failed to prepare the statement: " . $conexion->error . "\n";
