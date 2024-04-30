@@ -150,7 +150,7 @@ jQuery(document).ready(function ($) {
   }
 
   // Llamadas a las funciones
-  crearTitulos();
+  // crearTitulos();
   crearDatos();
 
   $("#membresia-1").click(function () {

@@ -134,39 +134,44 @@
     background-color: #c1121f;
     font-weight: bolder;
     box-shadow: 0 2px 0 2px #000;
+  }
 
-    .btn-tbl:before {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 120%;
-      background-color: #fff;
-      top: 50%;
-      transform: skewX(30deg) translate(-150%, -50%);
-      transition: all 0.5s;
-    }
+  .btn-tbl-cancelar:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #fff;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+  }
 
-    .btn-tbl-cancelar:hover {
-      background-color: #c1121f;
-      color: #fff !important;
-      box-shadow: 0 2px 0 2px #c1121f;
-    }
 
-    .btn-tbl-cancelar:hover::before {
-      transform: skewX(30deg) translate(150%, -50%);
-      transition-delay: 0.1s;
-    }
+  .btn-tbl-cancelar:hover {
+    background-color: #c1121f;
+    color: #fff !important;
+    box-shadow: 0 2px 0 2px #c1121f;
+  }
 
-    .btn-tbl-cancelar:active {
-      transform: scale(0.9);
-    }
+  .btn-tbl-cancelar:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+  }
 
-    html a:hover,
-    .btLightSkin a:hover,
-    .btn-tbl-cancelar:hover {
-      text-decoration: none;
-      color: #fff !important;
-    }
+  .btn-tbl-cancelar:active {
+    transform: scale(0.9);
+  }
+
+  html a:hover,
+  .btLightSkin a:hover,
+  .btn-tbl-cancelar:hover {
+    text-decoration: none;
+    color: #fff !important;
+  }
+
+  .th-active {
+    background-color: #213280;
   }
 </style>
 
@@ -204,6 +209,10 @@
     <thead>
       <tr id="tr-titles">
         <!-- Los títulos se llenarán aquí -->
+        <th>Facturación mensual</th>
+        <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 1</th>
+        <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 2</th>
+        <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
       </tr>
     </thead>
     <tbody id="tr-data">
@@ -211,7 +220,7 @@
     </tbody>
   </table>
 
-  <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem; margin-top: 1.5rem;">
+  <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
     <?php if ($membresia != 0) : ?>
       <a href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a>
     <?php endif; ?>
