@@ -20,6 +20,20 @@ const loadTranslations = (lng) => {
     });
 };
 
+function checkMembership() {
+  $.ajax({
+    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php",
+
+    type: "GET",
+
+    data: {},
+  }).done(function (respuesta) {
+    console.log(respuesta);
+  });
+}
+
+checkMembership();
+
 loadTranslations(cookieLng);
 
 function validateProductData(
