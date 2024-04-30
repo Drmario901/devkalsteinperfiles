@@ -1,8 +1,8 @@
 const titulos = [
-  "Facturación mensual",
-  "Membresía 1",
-  "Membresía 2",
-  "Membresía 3",
+  { item: "Facturación mensual", id: "" },
+  { item: "Membresía 1", id: "th-membresia-1" },
+  { item: "Membresía 2", id: "th-membresia-2" },
+  { item: "Membresía 3", id: "th-membresia-3" },
 ];
 
 const botones = [
@@ -134,7 +134,7 @@ const datos = [
 jQuery(document).ready(function ($) {
   function crearTitulos() {
     $.each(titulos, function (i, titulo) {
-      $("#tr-titles").append($("<th>").text(titulo));
+      $("#tr-titles").append($("<th>").text(titulo.item)).attr("id", titulo.id);
     });
   }
 
