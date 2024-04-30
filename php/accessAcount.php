@@ -120,7 +120,7 @@ $datos = array(
     'tipo' => $tipo
 );
 
-require __DIR__ . 'checkMembershipStatus.php';
+require 'checkMembershipStatus.php';
 
 echo json_encode($datos, JSON_FORCE_OBJECT);
 $conexion->close();
