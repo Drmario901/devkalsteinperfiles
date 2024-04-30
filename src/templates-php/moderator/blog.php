@@ -20,7 +20,7 @@
                 <div class='card row m-2'>
                     <div class='col-12'>
                         <div class='row'>
-                            <div col-6>
+                            <div class='col-6'>
                                 <img class='mx-1' src='https://pbs.twimg.com/media/F9QcGzgXEAAPqLo.jpg' width=150>
                             </div>
                             <div class='col-6'>
