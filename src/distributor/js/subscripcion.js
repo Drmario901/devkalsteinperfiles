@@ -173,7 +173,7 @@ jQuery(document).ready(function ($) {
   function updateSubscripcion() {
     window.alert("aqui actualiza");
     $.ajax({
-      url: "https://dev.kalstein.plus/wp-content/plugins/kalsteinPerfiles/php/getMembresia",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresia.php",
       type: "GET",
       data: {},
     })
