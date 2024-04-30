@@ -178,6 +178,8 @@ jQuery(document).ready(function ($) {
       }
     });
     if (membresia !== 0) {
+      console.log("membresia", membresia);
+
       $("#tbl-botones").append(
         $("<a>")
           .text("Cancelar")
