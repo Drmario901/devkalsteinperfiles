@@ -23,23 +23,22 @@ function processLogFile($filePath, $membershipType, $conexion)
                 $membershipId = $membershipMatches[1] ?? null;
                 $membershipValue = $membershipType[$membershipId] ?? null;
 
+                echo "userTag: $userTag, membershipValue: $membershipValue\n";
+
                 if ($userTag && $membershipValue !== null) {
                     $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
                     if ($stmt) {
                         $stmt->bind_param("is", $membershipValue, $userTag);
                         if ($stmt->execute()) {
-                            // Membresía actualizada correctamente
+                            echo "Membresía actualizada correctamente para el userTag: $userTag\n";
                         } else {
-                            // Error al actualizar la membresía
-                            // echo "Failed to update membership for user tag: $userTag. Error: " . $stmt->error . "\n";
+                            echo "Error al actualizar la membresía para el userTag: $userTag. Error: " . $stmt->error . "\n";
                         }
                     } else {
-                        // Error al preparar la consulta SQL
-                        // echo "Failed to prepare the statement: " . $conexion->error . "\n";
+                        echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
                     }
                 } else {
-                    // Datos inválidos o información faltante
-                    // echo "Invalid data or missing information: userTag ($userTag), membershipValue ($membershipValue)\n";
+                    echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
                 }
             }
         }
