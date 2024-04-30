@@ -340,7 +340,7 @@ if (isset($_SESSION["emailAccount"])) {
   </style>
 </head>
 
-<body>
+<body style="overflow-y: hidden;">
 
   <div class="contenedor_ppal">
     <div class="success_container">
