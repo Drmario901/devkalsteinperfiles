@@ -155,7 +155,7 @@ if ($acc_img == '') {
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/guide'
                             id="link-accounts" class='navbar-link icon-box'>
-                            <span data-i18n="moderator:Informational Guides">Informational Guides</span>
+                            <span data-i18n="moderator:Guides">Informational Guides</span>
                         </a>
                     </li>
                     <li>
