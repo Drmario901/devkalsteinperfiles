@@ -144,14 +144,12 @@ jQuery(document).ready(function ($) {
         console.log("la respuesta", respuesta);
         if (respuesta == 0) {
           $.each(botones, function (i, boton) {
-            if (membresia == 0) {
-              let $btn = $("#tbl-botones").append(
-                $("<a>")
-                  .text(boton.membresia)
-                  .attr("id", boton.id)
-                  .addClass("btn-tbl")
-              );
-            }
+            let $btn = $("#tbl-botones").append(
+              $("<a>")
+                .text(boton.membresia)
+                .attr("id", boton.id)
+                .addClass("btn-tbl")
+            );
           });
 
           if (respuesta == 2) {
