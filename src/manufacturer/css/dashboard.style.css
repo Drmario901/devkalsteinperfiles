@@ -2104,4 +2104,5 @@ input:focus {
 
 text-danger {
   color: #dc3545 !important;
+  font-weight: 700;
 }
