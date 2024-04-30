@@ -3,27 +3,51 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'vendor/autoload.php';
+require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
 
-use DansMaCulotte\Monetico\Monetico;
-use DansMaCulotte\Monetico\Responses\PurchaseResponse;
+$archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log_recurrent.txt";
+$membershipType = ['SUB1' => 1, 'SUB2' => 2];
 
-$data = $_POST;
-file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
+function processLogFile($filePath, $membershipType, $conexion)
+{
+    $handle = fopen($filePath, "r");
+    if ($handle) {
+        while (($line = fgets($handle)) !== false) {
+            $data = json_decode(substr($line, strpos($line, '{')), true);
 
-if (!empty($data)) {
-    $monetico = new Monetico('7593339', '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 'kalsteinfr');
-    $response = new PurchaseResponse($data);
-    $result = $monetico->validate($response);
+            if ($data && $data['code-retour'] === 'paytest') {
+                preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
+                preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
 
-    if ($result) {
-        echo "version=2\ncdr=0";
-        require 'processData.php';
+                $userTag = $userTagMatches[1] ?? null;
+                $membershipId = $membershipMatches[1] ?? null;
+                $membershipValue = $membershipType[$membershipId] ?? null;
+
+                echo "userTag: $userTag, membershipValue: $membershipValue\n";
+
+                if ($userTag && $membershipValue !== null) {
+                    $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
+                    if ($stmt) {
+                        $stmt->bind_param("is", $membershipValue, $userTag);
+                        if ($stmt->execute()) {
+                            echo "Membresía actualizada correctamente para el userTag: $userTag\n";
+                        } else {
+                            echo "Error al actualizar la membresía para el userTag: $userTag. Error: " . $stmt->error . "\n";
+                        }
+                    } else {
+                        echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
+                    }
+                } else {
+                    echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
+                }
+            }
+        }
+
+        fclose($handle);
     } else {
-        echo "version=2\ncdr=1";
+        echo "Unable to open file: $filePath\n";
     }
-} else {
-    echo "ERROR: No se recibieron datos.";
-    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n", FILE_APPEND);
 }
+
+processLogFile($archivoLog, $membershipType, $conexion);
 ?>
