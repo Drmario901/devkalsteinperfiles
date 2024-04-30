@@ -9,7 +9,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require 'vendor/autoload.php';
-require 'conexion.php';  // Asegúrate de que este archivo contiene la lógica de conexión a tu base de datos.
+require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
@@ -20,36 +20,45 @@ if (!empty($data)) {
     file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
     $monetico = new Monetico(
-        '7590531',
+        '7593339', 
         '530C185A56C2A9F904681A527780EBDB8C0E6C99',
-        'kalsteinfr'
+        'kalsteinfr' 
     );
 
     $response = new PurchaseResponse($data);
     $result = $monetico->validate($response);
 
-    if ($result && $data['code-retour'] == 'payetest') {  
-        echo "version=2\ncdr=0"; 
-        $estado_membresia = 'Activa'; 
+    if ($result && $data['code-retour'] == 'paiement') {
+        preg_match("/@(\w+)-/", $data['reference'], $matches);
+        $userTag = $matches[1] ?? null;
+
+        if ($userTag) {
+            preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
+            $membershipId = $membershipMatches[1] ?? null;
+
+            $membershipType = [
+                'SUB1' => 1,
+                'SUB2' => 2
+            ];
+
+            $membershipValue = $membershipType[$membershipId] ?? null;
+
+            if ($membershipValue !== null) {
+                $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
+                $stmt->bind_param("is", $membershipValue, $userTag);
+                $stmt->execute();
+                echo "version=2\ncdr=0"; /
+            } else {
+                echo "version=2\ncdr=1"; 
+            }
+        } else {
+            echo "version=2\ncdr=1"; 
+        }
     } else {
         echo "version=2\ncdr=1"; 
-        $estado_membresia = 'Pendiente'; // Estado deseado para pagos no exitosos
     }
-
-    $email = $data['email']; 
-    $updateQuery = "UPDATE wp_account SET estado_membresia = ? WHERE account_correo = ?";
-    $stmt = $conexion->prepare($updateQuery);
-    $stmt->bind_param("ss", $estado_membresia, $email);
-    $stmt->execute();
-
-    if ($stmt->error) {
-        file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - ERROR al actualizar la base de datos: " . $stmt->error . "\n", FILE_APPEND);
-    }
-
-    $stmt->close();
 } else {
     echo "ERROR: No se recibieron datos.";
-    file_put_contents('monetico_log.txt', date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n", FILE_APPEND);
 }
 
 ?>
