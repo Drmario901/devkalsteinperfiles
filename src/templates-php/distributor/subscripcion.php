@@ -167,7 +167,7 @@
       <a href="" id="btn-cancelar-subs" class="btn-tbl">Cancelar</a>
     <?php endif; ?>
 
-    <?php if ($membresia != 1) : ?>
+    <?php if ($membresia != 1 && $membresia != 2) : ?>
       <a href="" id="membresia-1" class="btn-tbl">Membresía 2</a>
     <?php endif; ?>
 
