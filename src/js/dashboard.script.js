@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
   function checkMembership() {
     $.ajax({
-      url: plugin_dir + "/php/checkMembershipStatus.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php",
 
       type: "POST",
 
