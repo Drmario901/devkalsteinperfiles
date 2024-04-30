@@ -24,7 +24,7 @@
                                 <img class='mx-1' src='https://pbs.twimg.com/media/F9QcGzgXEAAPqLo.jpg' width=150>
                             </div>
                             <div class='col-8'>
-                                <h6>Titulo del Artículo</h6>
+                                <h6 style='font-weight: 600;'>Titulo del Artículo</h6>
                                 <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
                                     risus, placerat et condimentum eget, sodales sed elit. Sed nec.</p>
                             </div>
