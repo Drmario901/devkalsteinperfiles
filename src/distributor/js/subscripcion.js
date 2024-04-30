@@ -132,8 +132,6 @@ const datos = [
 ];
 
 jQuery(document).ready(function ($) {
-  function obtenerMembresia() {}
-
   function crearTitulos() {
     $.each(titulos, function (i, titulo) {
       $("#tr-titles").append($("<th>").text(titulo));
@@ -151,41 +149,9 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  function crearBotones() {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
-      type: "GET",
-      data: {},
-    })
-      .done(function (respuesta) {
-        console.log("la respuesta", respuesta);
-        if (Number(respuesta) == 0) {
-          $.each(botones, function (i, boton) {
-            let $btn = $("#tbl-botones").append(
-              $("<a>")
-                .text(boton.membresia)
-                .attr("id", boton.id)
-                .addClass("btn-tbl")
-            );
-          });
-        } else {
-          $("#tbl-botones").append(
-            $("<a>")
-              .text("Cancelar")
-              .attr("id", "btn-cancelar-subss")
-              .addClass("btn-tbl")
-          );
-        }
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
-  }
-
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
-  crearBotones();
 
   $("#membresia-2").click(function () {
     $.ajax({
@@ -220,7 +186,6 @@ jQuery(document).ready(function ($) {
         console.log("error", error);
       });
   });
-
   function updateSubscripcion(subs) {
     window.alert(`Datos a actualizar a la subscripcion numero: ${subs}`);
   }
