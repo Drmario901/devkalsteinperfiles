@@ -190,7 +190,7 @@
   require __DIR__ . '/../../../php/getMembresia.php';
 
   $mebresia = $_SESSION['tipo_membresia'];
-  echo  'Membresiaaa' . $mebresia;
+  // echo  'Membresiaaa' . $mebresia;
   ?>
   <script>
     let page = "home";

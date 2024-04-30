@@ -1411,6 +1411,7 @@ function perfiles_styles()
         wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
         wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
         wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+        wp_enqueue_script('subscripcion-script', plugins_url('src/distributor/js/subscripcion.js', __FILE__), array('jquery'));
     }
 
     // XXX DISTRIBUTOR XXX
