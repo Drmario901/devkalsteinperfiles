@@ -132,8 +132,6 @@ const datos = [
 ];
 
 jQuery(document).ready(function ($) {
-  let membresia = "";
-
   function obtenerMembresia() {}
 
   function crearTitulos() {
@@ -154,11 +152,34 @@ jQuery(document).ready(function ($) {
   }
 
   function crearBotones() {
-    $.each(botones, function (i, boton) {
-      let $btn = $("#tbl-botones").append(
-        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn-tbl")
-      );
-    });
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
+      type: "GET",
+      data: {},
+    })
+      .done(function (respuesta) {
+        console.log("la respuesta", respuesta);
+        if (Number(respuesta) == 0) {
+          $.each(botones, function (i, boton) {
+            let $btn = $("#tbl-botones").append(
+              $("<a>")
+                .text(boton.membresia)
+                .attr("id", boton.id)
+                .addClass("btn-tbl")
+            );
+          });
+        } else {
+          $("#tbl-botones").append(
+            $("<a>")
+              .text("Cancelar")
+              .attr("id", "btn-cancelar-subss")
+              .addClass("btn-tbl")
+          );
+        }
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
   }
 
   // Llamadas a las funciones
