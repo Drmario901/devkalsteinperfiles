@@ -132,7 +132,7 @@ const datos = [
 ];
 
 jQuery(document).ready(function ($) {
-  let membresia = "";
+  let membresia;
 
   function obtenerMembresia() {
     $.ajax({
