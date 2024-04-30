@@ -7,9 +7,9 @@ error_reporting(E_ALL);
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 session_start();
 
-if(isset($_SESSION["emailAccount"])){
+/*if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];
-}
+}*/
 
 $email = 'marioloquendero32@gmail.com'; 
 
