@@ -174,8 +174,8 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 3) {
-          updateSubscripcion(2);
+        if (respuesta == 0 && respuesta !== 2) {
+          updateSubscripcion(1);
         }
       })
       .fail(function (error) {
@@ -191,8 +191,8 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 2) {
-          updateSubscripcion(3);
+        if (respuesta == 0 && respuesta !== 1) {
+          updateSubscripcion(2);
         }
       })
       .fail(function (error) {
