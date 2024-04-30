@@ -136,7 +136,8 @@
                     $offset = ($page - 1) * $perPage;
                     $limit = $perPage;
 
-                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
+                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND visible = 0 AND product_group = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
+
                     $resultado = $conexion->query($query);
 
                     if ($resultado->num_rows > 0) {
