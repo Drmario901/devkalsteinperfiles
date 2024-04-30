@@ -149,7 +149,7 @@ if ($acc_img == '') {
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/blog'
                             id="link-accounts" class='navbar-link icon-box'>
-                            <span data-i18n="moderator:Blog">Blog</span>
+                            <span data-i18n="moderator:Blog">Blogs</span>
                         </a>
                     </li>    
                     <li>
