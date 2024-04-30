@@ -19,7 +19,7 @@ function processLogFile($filePath, $membershipType, $conexion)
                 preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
                 preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
 
-                $userTag = $userTagMatches[1] ?? null;
+                $userTag = "@" . $userTagMatches[1] ?? null; 
                 $membershipId = $membershipMatches[1] ?? null;
                 $membershipValue = $membershipType[$membershipId] ?? null;
 
