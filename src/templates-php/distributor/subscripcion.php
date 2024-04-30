@@ -134,39 +134,40 @@
     background-color: #c1121f;
     font-weight: bolder;
     box-shadow: 0 2px 0 2px #000;
+  }
 
-    .btn-tbl:before {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 120%;
-      background-color: #fff;
-      top: 50%;
-      transform: skewX(30deg) translate(-150%, -50%);
-      transition: all 0.5s;
-    }
+  .btn-tbl-cancelar:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #fff;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+  }
 
-    .btn-tbl-cancelar:hover {
-      background-color: #c1121f;
-      color: #fff !important;
-      box-shadow: 0 2px 0 2px #c1121f;
-    }
 
-    .btn-tbl-cancelar:hover::before {
-      transform: skewX(30deg) translate(150%, -50%);
-      transition-delay: 0.1s;
-    }
+  .btn-tbl-cancelar:hover {
+    background-color: #c1121f;
+    color: #fff !important;
+    box-shadow: 0 2px 0 2px #c1121f;
+  }
 
-    .btn-tbl-cancelar:active {
-      transform: scale(0.9);
-    }
+  .btn-tbl-cancelar:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+  }
 
-    html a:hover,
-    .btLightSkin a:hover,
-    .btn-tbl-cancelar:hover {
-      text-decoration: none;
-      color: #fff !important;
-    }
+  .btn-tbl-cancelar:active {
+    transform: scale(0.9);
+  }
+
+  html a:hover,
+  .btLightSkin a:hover,
+  .btn-tbl-cancelar:hover {
+    text-decoration: none;
+    color: #fff !important;
   }
 </style>
 
