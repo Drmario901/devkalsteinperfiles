@@ -154,10 +154,10 @@ jQuery(document).ready(function ($) {
             }
           });
         }
-        if (membresia !== 0) {
+        if (Number(membresia) !== 0) {
           $("#tbl-botones").append(
             $("<a>")
-              .text("boton.membresia")
+              .text("Cancelar")
               .attr("id", "btn-cancelar-subs")
               .addClass("btn-tbl")
           );
@@ -209,7 +209,7 @@ jQuery(document).ready(function ($) {
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
-  crearBotones();
+  // crearBotones();
   obtenerMembresia();
 
   $("#membresia-2").click(function () {
