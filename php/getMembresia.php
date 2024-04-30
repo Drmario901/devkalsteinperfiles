@@ -12,8 +12,8 @@ $result = $conexion->query($sql);
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     $_SESSION['tipo_membresia'] = $row['tipo_membresia'];
-    echo  $row['tipo_membresia'];
   }
+  echo  $row['tipo_membresia'];
 } else {
   echo "0 results";
 }
