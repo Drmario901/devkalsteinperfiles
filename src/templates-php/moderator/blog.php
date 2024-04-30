@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class='mt-2 mb-1'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
+                    <p class='mt-2 mb-1' style='font-size: 1.15em'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
                     <div class='col-12'>
                         <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
                             <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
@@ -39,7 +39,7 @@
                     <div class='mt-2'>
                         <div class='fw-bold card'
                             style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0'><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
+                            <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
                         </div>
                         <div class='col-12 mt-2'>
                             <i class='fas fa-clock'></i>
