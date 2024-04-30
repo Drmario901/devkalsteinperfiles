@@ -2122,11 +2122,11 @@ input:focus {
   align-items: center;
   gap: 5px;
   flex-wrap: nowrap;
-  width: 100%;
 }
 
 .alert-link {
   color: #721c24;
+  font-weight: 500 !important;
   text-decoration: underline !important;
 }
 
