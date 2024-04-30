@@ -209,7 +209,7 @@ jQuery(document).ready(function ($) {
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
-  crearBotones();
+  // crearBotones();
   obtenerMembresia();
 
   $("#membresia-2").click(function () {
