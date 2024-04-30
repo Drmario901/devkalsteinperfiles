@@ -24,7 +24,7 @@ if (!empty($data)) {
 
     if ($result) {
         echo "version=2\ncdr=0"; 
-        require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/processData.php';  
+        //require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/processData.php';  
     } else {
         echo "version=2\ncdr=1"; 
     }
