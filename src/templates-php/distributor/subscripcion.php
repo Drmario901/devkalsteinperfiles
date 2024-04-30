@@ -208,10 +208,11 @@
   <table class="membership-table">
     <thead>
       <tr id="tr-titles">
+        <!-- Los títulos se llenarán aquí -->
         <th>Facturación mensual</th>
-        <th id="th-membresia-1" style="<?php echo $membresia == 0 ? 'class=th-active' : ''; ?>">Membresía 1</th>
-        <th id="th-membresia-2" style="<?php echo $membresia == 2 ? 'class=th-active' : ''; ?>">Membresía 2</th>
-        <th id="th-membresia-3" style="<?php echo $membresia == 3 ? 'class=th-active' : ''; ?>">Membresía 3</th>
+        <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>;">Membresía 1</th>
+        <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>;">Membresía 2</th>
+        <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>;">Membresía 3</th>
       </tr>
     </thead>
     <tbody id="tr-data">
