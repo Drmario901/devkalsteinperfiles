@@ -119,6 +119,55 @@
   .btn-nav-subs {
     color: #213280;
   }
+
+  .btn-tbl-cancelar {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: white !important;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #c1121f;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+
+    .btn-tbl:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 120%;
+      background-color: #fff;
+      top: 50%;
+      transform: skewX(30deg) translate(-150%, -50%);
+      transition: all 0.5s;
+    }
+
+    .btn-tbl-cancelar:hover {
+      background-color: #c1121f;
+      color: #fff !important;
+      box-shadow: 0 2px 0 2px #c1121f;
+    }
+
+    .btn-tbl-cancelar:hover::before {
+      transform: skewX(30deg) translate(150%, -50%);
+      transition-delay: 0.1s;
+    }
+
+    .btn-tbl-cancelar:active {
+      transform: scale(0.9);
+    }
+
+    html a:hover,
+    .btLightSkin a:hover,
+    .btn-tbl-cancelar:hover {
+      text-decoration: none;
+      color: #fff !important;
+    }
+  }
 </style>
 
 <header class="header" data-header>
@@ -135,6 +184,8 @@
   include 'navbar.php';
   require __DIR__ . '/../../../php/getMembresia.php';
 
+  $mebresia = $_SESSION['tipo_membresia'];
+  echo  'Membresiaaa' . $mebresia;
   ?>
   <script>
     let page = "home";
@@ -159,8 +210,19 @@
       <!-- Los datos se llenarán aquí -->
     </tbody>
   </table>
-  <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem; margin-top: 1.5rem;">
 
+  <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem; margin-top: 1.5rem;">
+    <?php if ($membresia != 0) : ?>
+      <a href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a>
+    <?php endif; ?>
+
+    <?php if ($membresia != 1 && $membresia != 2) : ?>
+      <a href="" id="membresia-1" class="btn-tbl">Membresía 2</a>
+    <?php endif; ?>
+
+    <?php if ($membresia != 2) : ?>
+      <a href="" id="membresia-2" class="btn-tbl">Membresía 3</a>
+    <?php endif; ?>
   </div>
 
 </section>
