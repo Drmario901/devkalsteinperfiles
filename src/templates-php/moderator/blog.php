@@ -36,10 +36,12 @@
                                     </a>
                                 </div>
                                 <div class='mt-2'>
-                                $verifying_by
+                                <div class='fw-bold card' style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
+                            <p class='m-0 p-0'><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
+                            </div>
                                 <div class='col-12 mt-2'>
                                     <i class='fas fa-clock'></i>
-                                    $elapsed
+                                    Hace 6 minutos
                                 </div>
                                 </div>
                             </div>
