@@ -317,6 +317,11 @@ class shortcodePerfiles
         return render_php_file("accounts/subscripcion/succes.php");
     }
 
+    //FAILED_PAGE_SUBSCRIPCION
+    function failed_page_subscripcion()
+    {
+        return render_php_file("accounts/subscripcion/failed.php");
+    }
 
     // XXX Client XXX
 
