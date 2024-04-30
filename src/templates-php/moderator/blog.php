@@ -19,7 +19,7 @@
             <div class='col-lg-6'>
                 <div class='card row m-2'>
                     <div class='col-12'>
-                        <div class='row'>
+                        <div class='row mb-2'>
                             <div class='col-4'>
                                 <img class='mx-1' src='https://pbs.twimg.com/media/F9QcGzgXEAAPqLo.jpg' width=150>
                             </div>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <p><i class='fa-solid fa-user'></i><b>Published by: user@mail.com</b></p>
+                    <p><i class='fa-solid fa-user'></i> <b>Published by: user@mail.com</b></p>
                     <div class='col-12'>
                         <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
                             <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
