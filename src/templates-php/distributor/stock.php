@@ -160,7 +160,7 @@
                             $image = $value['product_image'];
                             $date = $value['product_create_at'];
                             $val_status = $value['product_validate_status'];
-                            $visibility = $value['visibility'];
+                            $visibility = $value['visible'];
 
                             if ($visibility == 0) {
                                 $visible = 'Visible';
