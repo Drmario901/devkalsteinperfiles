@@ -168,7 +168,7 @@ jQuery(document).ready(function ($) {
 
   $("#membresia-2").click(function () {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresia.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
       data: {},
     })
@@ -185,7 +185,7 @@ jQuery(document).ready(function ($) {
 
   $("#membresia-3").click(function () {
     $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresia.php",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
       data: {},
     })
@@ -198,8 +198,6 @@ jQuery(document).ready(function ($) {
       .fail(function (error) {
         console.log("error", error);
       });
-
-    updateSubscripcion();
   });
 
   function updateSubscripcion(subs) {
