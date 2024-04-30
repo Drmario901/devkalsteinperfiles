@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 require 'vendor/autoload.php';
 require 'processData.php';
 
+$filePath = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log_recurrent.txt"; 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
