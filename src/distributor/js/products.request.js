@@ -642,9 +642,17 @@ jQuery(document).ready(function ($) {
           window.location.href = domain + "/productos";
         } else {
           iziToast.error({
-            title: alertsTranslations.error,
-            message: JSON.parse(response).err_msg,
+            title: "Error",
+            message: `${JSON.parse(response).err_msg} 
+            Consulta nuestros planes en el siguiente link: <a href=${
+              JSON.parse(response).link
+            }>Membresias</a>`,
             position: "center",
+            timeout: 10000,
+            pauseOnHover: true,
+            progressBar: true,
+            progressBarColor: "",
+            progressBarEasing: "linear",
           });
         }
       })
