@@ -213,7 +213,7 @@
 
   <div id='tbl-botones' style="display: flex; justify-content: end; gap: 2rem; margin-top: 1.5rem;">
     <?php if ($membresia != 0) : ?>
-      <a href="" id="btn-cancelar-subs" class="btn-tbl">Cancelar</a>
+      <a href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a>
     <?php endif; ?>
 
     <?php if ($membresia != 1 && $membresia != 2) : ?>
