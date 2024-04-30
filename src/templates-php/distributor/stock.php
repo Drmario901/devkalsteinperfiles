@@ -71,13 +71,19 @@
             <?php
             if ($membresia == 0 || $membresia == 1) {
                 echo "<p> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario
-                            <span class='info-icon' data-tooltip='Membresia 1 = Maximo 5 Productos \n Membresia 2 = Maximo 10 Productos \n Membresia 3 = Maximo '>
-                                <i class='fas fa-info-circle'></i>
-                            </span>
-                        </p>";
-                if ($total >= $maxProductos) {
-                    echo "<p class='text-muted'> <b>¡Has alcanzado el límite de productos permitidos en tu inventario!</b>
+                        <span class='info-icon' data-tooltip='Membresía 1 = Máximo 5 Productos &#10;Membresía 2 = Máximo 10 Productos &#10;Membresía 3 = Productos ilimitados'>
+                            <i class='fas fa-info-circle'></i>
+                        </span>
                     </p>";
+
+                if ($total >= $maxProductos) {
+                    echo "<div class='container-danger'>
+                    <p class='text-danger'>
+                        <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
+                        <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
+                    </p>
+                </div>
+                    ";
                 }
             } elseif ($membresia == 2) {
                 echo "<p class='text-muted'> Total <b>$total</b> productos en tu inventario.";

@@ -44,6 +44,15 @@ if ($acc_img == '') {
             <!-- enlaces de opciones de cuenta -->
             <ul class="navbar-list">
                 <div class="d-flex flex-row">
+                    <li title="Redireccionar a subscripcion">
+                        <a href="https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/" class='navbar-link icon-box btn-nav-subs'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#213280" class="bi bi-credit-card" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                            </svg>
+                        </a>
+                    </li>
+
                     <li title="Abrir editor de la Tienda Virtual">
                         <a href="https://dev.kalstein.plus/plataforma/template-editor/dashboard.php" class='navbar-link icon-box'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 640 512" class="icon_editor_tienda">
@@ -147,11 +156,11 @@ if ($acc_img == '') {
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a id="link-sales" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/subscripcion" class="navbar-link icon-box">
                         <span>Subscripciones</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class='generate-quote'> <!-- only style class-->
                     <a id='btnGenQuote' href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/agregar" class='navbar-link icon-box text-white' style='color: white !important;'>
