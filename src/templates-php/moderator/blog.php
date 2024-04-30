@@ -36,7 +36,7 @@
                             <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                         </a>
                     </div>
-                    <div class='mt-2'>
+                    <div class='mt-1'>
                         <div class='fw-bold card'
                             style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
                             <p class='m-0 p-0'><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
