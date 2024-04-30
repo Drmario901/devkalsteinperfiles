@@ -156,11 +156,11 @@ if ($acc_img == '') {
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a id="link-sales" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/subscripcion" class="navbar-link icon-box">
                         <span>Subscripciones</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class='generate-quote'> <!-- only style class-->
                     <a id='btnGenQuote' href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/productos/agregar" class='navbar-link icon-box text-white' style='color: white !important;'>
