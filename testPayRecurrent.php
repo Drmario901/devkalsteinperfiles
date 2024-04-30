@@ -1,4 +1,5 @@
 <?php
+//ERROR DETECTION LINES.
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -6,46 +7,80 @@ error_reporting(E_ALL);
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 session_start();
 
+//EMAIL ACCOUNT SESSION.
 /*if(isset($_SESSION["emailAccount"])){
     $email = $_SESSION["emailAccount"];
 }*/
+$email = 'marioloquendero32@gmail.com';
 
-$email = 'marioloquendero32@gmail.com'; 
-
+//LANGUAGE FOR THE TEXT OF LOsADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
+//$enText = '<h2>Redirecting to Payment Gateway</h2>';
 
+//PAYMENT GATEWAY URL (MONETICO).
+
+function encryptURL() {
+    $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
+    return $gateway; 
+}
+
+//GET VARIABLE.
 $idMembership = $_GET["idMembership"];
 
+//MAIN QUERYS
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
 
-if (!$row) {
-    die('Error: Usuario no encontrado.');
-}
+$consulta2 = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$email'";
+$resultado = $conexion->query($consulta2);
 
-$tipo_membresia = $row['tipo_membresia'];
-if ($tipo_membresia == 0) {
-    $id_unico = uniqid(md5($email), true);
-    $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
-    if (!$conexion->query($updateQuery)) {
-        die('Error al actualizar el registro: ' . $conexion->error);
+if ($resultado) {
+    if ($resultado->num_rows > 0) {
+        $row2 = $resultado->fetch_assoc();
+        $tipo_membresia = $row['tipo_membresia'];
+
+        if ($tipo_membresia == 0) {
+            $id_unico = uniqid(md5($email), true);
+
+            $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
+            if ($conexion->query($updateQuery) === TRUE) {
+                //echo "ID Generated.";
+            } else {
+                //echo "Error updating: " . $conexion->error;
+            }
+        } else {
+            //echo "The user doesn't require a Uniqid.";
+        }
+    } else {
+        //echo "User not found.";
     }
+} else {
+    echo "Error executing the query: " . $conexion->error;
 }
 
+
+
+//COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Requests\PurchaseRequest;
 use DansMaCulotte\Monetico\Resources\BillingAddressResource;
+use DansMaCulotte\Monetico\Resources\ShippingAddressResource;
 use DansMaCulotte\Monetico\Resources\ClientResource;
 
-$monetico = new Monetico('7593339', '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 'kalsteinfr');
+$monetico = new Monetico(
+    '7593339', 
+    '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 
+    'kalsteinfr' 
+);
+ 
 $purchase = new PurchaseRequest([
-    'reference' => 'Membresia' . $tipo_membresia . '-' . $email,
-    'description' => .$tipo_membresia. . '-' . $email,
+    'reference' => 'Membresia ' .$tipo_membresia,
+    'description' => 'User ' .$email,
     'language' => 'ES',
-    'email' => $email,
-    'amount' => '788',  
+    'email' => $row['account_correo'],
+    'amount' => '788', 
     'currency' => 'USD',
     'dateTime' => new DateTime(),
     'successUrl' => 'https://google.com/', 
@@ -59,6 +94,7 @@ $billingAddress = new BillingAddressResource([
     'postalCode' => $row['account_zipcode'],
     'country' => $row['account_pais']
 ]);
+
 $purchase->setBillingAddress($billingAddress);
 
 $client = new ClientResource([
@@ -67,11 +103,10 @@ $client = new ClientResource([
 ]);
 $purchase->setClient($client);
 
-function encryptURL() {
-    return base64_encode('https://p.monetico-services.com/test/paiement.cgi');
-}
 $url = base64_decode(encryptURL());
 $fields = $monetico->getFields($purchase);
+
+
 ?>
 <html>
 <body onload="document.forms['payment_form'].submit();">
