@@ -133,6 +133,8 @@
     $email = $_SESSION['emailAccount'];
   }
   include 'navbar.php';
+  require __DIR__ . '/../../../php/getMembresia.php';
+
   ?>
   <script>
     let page = "home";
