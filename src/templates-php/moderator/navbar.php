@@ -149,13 +149,13 @@ if ($acc_img == '') {
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/blog'
                             id="link-accounts" class='navbar-link icon-box'>
-                            <span data-i18n="moderator:accounts">Blog</span>
+                            <span data-i18n="moderator:blog">Blog</span>
                         </a>
                     </li>    
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/guide'
                             id="link-accounts" class='navbar-link icon-box'>
-                            <span data-i18n="moderator:accounts">Informatiional Guides</span>
+                            <span data-i18n="moderator:informationalGuides">Informational Guides</span>
                         </a>
                     </li>
                     <li>
