@@ -352,7 +352,7 @@ if (isset($_SESSION["emailAccount"])) {
         <div class="aprob_details">
           <h1>¡Subscripcion<strong> Aprobada</strong>!</h1>
           <span class="roboto-black">Su subscripcion ha sido aprobada exitosamente.</span>
-          <a href="https://dev.kalstein.plus/plataforma/account_redirect?pay=<?php echo $pay ?>&idCotizacion=<?php echo $idCotizacion ?>" title="Back to Homepage" class="roboto-black">
+          <a href="https://dev.kalstein.plus/plataforma/account_redirect" title="Back to Homepage" class="roboto-black">
             Volver a la Plataforma
           </a>
         </div>
