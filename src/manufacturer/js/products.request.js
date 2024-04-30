@@ -20,19 +20,21 @@ const loadTranslations = (lng) => {
     });
 };
 
-function checkMembership() {
-  $.ajax({
-    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php",
+jQuery(document).ready(function ($) {
+  function checkMembership() {
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php",
 
-    type: "POST",
+      type: "POST",
 
-    data: {},
-  }).done(function (respuesta) {
-    console.log(respuesta);
-  });
-}
+      data: {},
+    }).done(function (respuesta) {
+      console.log(respuesta);
+    });
+  }
 
-checkMembership();
+  checkMembership();
+});
 
 loadTranslations(cookieLng);
 
