@@ -247,7 +247,7 @@ if (isset($_GET['pay'])) {
         <div class="error_details">
           <h1>Subscripcion <strong>rechazada</strong> o <strong>cancelada</strong>.</h1>
           <span class="roboto-black">Lo sentimos, ha ocurrido un problema con su subscripcion.</span>
-          <a href="https://dev.kalstein.plus/plataforma/account_redirect?pay=<?php echo $pay ?>&idCotizacion=<?php echo $idCotizacion ?>" title="Back to Homepage" class="roboto-black">
+          <a href="https://dev.kalstein.plus/plataforma/account_redirect" title="Back to Homepage" class="roboto-black">
             Volver a la Plataforma
           </a>
         </div>
