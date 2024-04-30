@@ -141,29 +141,26 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
         const membresia = respuesta;
-        function crearBotones() {
-          $.each(botones, function (i, boton) {
-            if (membresia == 0) {
-              let $btn = $("#tbl-botones").append(
-                $("<a>")
-                  .text(boton.membresia)
-                  .attr("id", boton.id)
-                  .addClass("btn-tbl")
-              );
-            }
-          });
-          if (membresia !== 0) {
-            console.log("membresia", membresia);
 
-            $("#tbl-botones").append(
+        $.each(botones, function (i, boton) {
+          if (membresia == 0) {
+            let $btn = $("#tbl-botones").append(
               $("<a>")
-                .text("Cancelar")
-                .attr("id", "btn-cancelar-subs")
+                .text(boton.membresia)
+                .attr("id", boton.id)
                 .addClass("btn-tbl")
             );
           }
+        });
+        if (membresia !== 0) {
+          console.log("membresia", membresia);
+          $("#tbl-botones").append(
+            $("<a>")
+              .text("Cancelar")
+              .attr("id", "btn-cancelar-subs")
+              .addClass("btn-tbl")
+          );
         }
-        crearBotones();
       })
       .fail(function (error) {
         console.log("error", error);
