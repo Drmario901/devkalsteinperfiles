@@ -169,6 +169,10 @@
     text-decoration: none;
     color: #fff !important;
   }
+
+  .th-active {
+    background-color: #213280;
+  }
 </style>
 
 <header class="header" data-header>
@@ -205,6 +209,10 @@
     <thead>
       <tr id="tr-titles">
         <!-- Los títulos se llenarán aquí -->
+        <th id="">Facturación mensual</th>
+        <th id="th-membresia-1" class="<?php $membresia == 0 ? 'th-active' : ''  ?>">Membresía 1</th>
+        <th id="th-membresia-2" class="<?php $membresia == 2 ? 'th-active' : ''  ?>">Membresía 2</th>
+        <th id="th-membresia-3" class="<?php $membresia == 3 ? 'th-active' : ''  ?>">Membresía 3</th>
       </tr>
     </thead>
     <tbody id="tr-data">
