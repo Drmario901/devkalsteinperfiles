@@ -19,7 +19,11 @@ function processLogFile($filePath) {
                 if ($userTag && $membershipValue !== null) {
                     $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
                     $stmt->bind_param("is", $membershipValue, $userTag);
-                    $stmt->execute();
+                    if ($stmt->execute()) {
+                        echo "Updated membership for user tag: $userTag\n";
+                    } else {
+                        echo "Failed to update membership for user tag: $userTag\n";
+                    }
                 }
             }
         }
@@ -29,5 +33,6 @@ function processLogFile($filePath) {
     }
 }
 
-processLogFile('monetico_log_recurrent.txt');
+$archivoLog = "/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/monetico_log_recurrent.txt";
+processLogFile($archivoLog);
 ?>
