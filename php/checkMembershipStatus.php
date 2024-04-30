@@ -48,6 +48,9 @@ if ($result->num_rows > 0) {
     $conexion->query($sqlUpdate);
   }
 
+  echo json_encode(array('status' => 'success', 'message' => 'Membership status checked successfully'));
+} else {
+  echo json_encode(array('status' => 'error', 'message' => 'No membership type found for the user'));
 }
 
 $conexion->close();
