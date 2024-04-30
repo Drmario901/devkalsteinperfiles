@@ -50,14 +50,6 @@ const datos = [
   },
   {
     item: [
-      "Acceso Ilimitado a Contenido (Manuales, Catálogos, Certificados)",
-      "✅",
-      "✅",
-      "✅",
-    ],
-  },
-  {
-    item: [
       "Mensajería Directa (Fábrica/Distribuidores/Servicio Técnico/Usuarios)",
       "✅",
       "✅",
@@ -65,13 +57,13 @@ const datos = [
     ],
   },
   {
-    item: ["Soporte Técnico Online", "✅", "✅", "✅"],
+    item: ["Licencia Kalstein", "❌", "❌", "✅"],
   },
   {
-    item: ["1 Hora Gratuita de Inducción Técnica Online", "✅", "✅", "✅"],
+    item: ["Módulo de Cotizaciones Personalizadas", "✅", "✅", "✅"],
   },
   {
-    item: ["Recomendación de Modelos por IA", "✅", "✅", "✅"],
+    item: ["Publicidad en Banners de Kalstein", "❌", "❌", "✅"],
   },
   {
     item: [
@@ -82,10 +74,20 @@ const datos = [
     ],
   },
   {
-    item: ["Verificación Kalstein", "✅", "✅", "✅"],
+    item: [
+      "Descuento del 4% sobre todos los tipos de envíos con Kalstein (Avión, Mar, Courier)",
+      "❌",
+      "❌",
+      "✅",
+    ],
   },
   {
-    item: ["Módulo de Cotizaciones Personalizadas", "✅", "✅", "✅"],
+    item: [
+      "Opciones de envio (30 productos al mes, tamaños y pesos estándares)",
+      "❌",
+      "❌",
+      "✅",
+    ],
   },
   {
     item: ["Descuentos Exclusivos", "18%", "18%", "18% a 41% solo miembros"],
@@ -99,34 +101,10 @@ const datos = [
     ],
   },
   {
-    item: ["Publicidad en Banners de Kalstein", "❌", "❌", "✅"],
+    item: ["Recomendación de Modelos por IA", "✅", "✅", "✅"],
   },
   {
     item: ["Productos 3D del Negocio (10)", "❌", "❌", "✅"],
-  },
-  {
-    item: [
-      "Créditos Kalstein (Tipo I, II y III. Solo para Europa)",
-      "❌",
-      "❌",
-      "✅",
-    ],
-  },
-  {
-    item: [
-      "Descuento del 4% sobre todos los tipos de envíos con Kalstein (Avión, Mar, Courier)",
-      "❌",
-      "❌",
-      "✅",
-    ],
-  },
-  {
-    item: [
-      "Opción de Dropshipping (30 productos al mes, tamaños y pesos estándares)",
-      "❌",
-      "❌",
-      "✅",
-    ],
   },
   // Puedes añadir más objetos con la misma estructura para más filas
 ];
