@@ -17,6 +17,19 @@ jQuery(document).ready(function ($) {
       });
   };
 
+  function checkMembership() {
+    $.ajax({
+      url: plugin_dir + "/php/checkMembershipStatus.php",
+
+      type: "POST",
+
+      data: {},
+    }).done(function (respuesta) {
+      console.log(respuesta);
+    });
+  }
+
+  checkMembership();
   loadTranslations(cookieLng);
 
   /* //function sstranslateAlert(type, msg, lng) {
