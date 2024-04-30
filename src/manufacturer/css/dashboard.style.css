@@ -2099,5 +2099,9 @@ input:focus {
   opacity: 0.9;
   pointer-events: none;
   text-wrap: pretty;
-  max-width: 200px;
+  width: 300px;
+}
+
+text-danger {
+  color: #dc3545 !important;
 }
