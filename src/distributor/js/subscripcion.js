@@ -178,7 +178,7 @@ jQuery(document).ready(function ($) {
       data: {},
     })
       .done(function (respuesta) {
-        console.log("la respuesta", respuesta);
+        console.log("la respuesta", JSON.parse(respuesta));
       })
       .fail(function (error) {
         console.log("error", error);
