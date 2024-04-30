@@ -153,10 +153,10 @@ jQuery(document).ready(function ($) {
           });
 
           if (respuesta == 1) {
-            $("#membresia-2").attr("hidden", true);
+            $("#membresia-1").attr("hidden", true);
           }
           if (respuesta == 2) {
-            $("#membresia-3").attr("hidden", true);
+            $("#membresia-2").attr("hidden", true);
           }
         }
         if (Number(membresia) !== 0) {
