@@ -337,6 +337,10 @@ if (isset($_SESSION["emailAccount"])) {
         width: 100%;
       }
     }
+
+    .contenedor_ppal {
+      overflow-y: hidden;
+    }
   </style>
 </head>
 
