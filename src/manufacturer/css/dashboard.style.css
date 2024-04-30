@@ -2107,28 +2107,27 @@ input:focus {
   border: 4px solid #f5c6cb;
   padding: 10px;
   border-radius: 5px;
-  width: 100%; /* Cambiado a 100% para ocupar el ancho disponible */
-  margin: 10px 0; /* Añade margen para separar de otros elementos */
+  width: 100%;
+  margin: 10px 0;
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos al centro */
-  justify-content: start; /* Alinea horizontalmente al inicio */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .text-danger {
   font-weight: 700;
   color: #721c24;
   display: flex;
-  align-items: center; /* Alinea el icono y el texto en la misma línea */
-  gap: 5px; /* Espacio entre elementos */
-  flex-wrap: nowrap; /* Evita que los elementos se envuelvan en líneas adicionales */
-  width: 100%; /* Utiliza todo el ancho disponible dentro del contenedor */
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .alert-link {
-  font-weight: 700;
   color: #721c24;
-  text-decoration: none;
-  margin-left: auto; /* Empuja el enlace hacia el extremo derecho dentro del flex container */
+  text-decoration: underline !important;
 }
 
 .alert-link:hover {
@@ -2136,5 +2135,5 @@ input:focus {
 }
 
 .fas.fa-exclamation-circle {
-  color: #dc3545; /* Rojo más intenso para el icono */
+  color: #dc3545;
 }
