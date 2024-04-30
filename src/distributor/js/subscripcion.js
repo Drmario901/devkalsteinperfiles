@@ -134,7 +134,39 @@ const datos = [
 jQuery(document).ready(function ($) {
   let membresia = "";
 
-  function obtenerMembresia() {}
+  function obtenerMembresia() {
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
+      type: "GET",
+      data: {},
+    })
+      .done(function (respuesta) {
+        console.log("la respuesta", respuesta);
+        if (respuesta == 0) {
+          $.each(botones, function (i, boton) {
+            if (membresia == 0) {
+              let $btn = $("#tbl-botones").append(
+                $("<a>")
+                  .text(boton.membresia)
+                  .attr("id", boton.id)
+                  .addClass("btn-tbl")
+              );
+            }
+          });
+        }
+        if (membresia !== 0) {
+          $("#tbl-botones").append(
+            $("<a>")
+              .text("boton.membresia")
+              .attr("id", "btn-cancelar-subs")
+              .addClass("btn-tbl")
+          );
+        }
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
+  }
 
   function crearTitulos() {
     $.each(titulos, function (i, titulo) {
@@ -155,16 +187,30 @@ jQuery(document).ready(function ($) {
 
   function crearBotones() {
     $.each(botones, function (i, boton) {
-      let $btn = $("#tbl-botones").append(
-        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn-tbl")
-      );
+      if (membresia == 0) {
+        let $btn = $("#tbl-botones").append(
+          $("<a>")
+            .text(boton.membresia)
+            .attr("id", boton.id)
+            .addClass("btn-tbl")
+        );
+      }
     });
+    if (membresia !== 0) {
+      $("#tbl-botones").append(
+        $("<a>")
+          .text("boton.membresia")
+          .attr("id", "btn-cancelar-subs")
+          .addClass("btn-tbl")
+      );
+    }
   }
 
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
   crearBotones();
+  obtenerMembresia();
 
   $("#membresia-2").click(function () {
     $.ajax({
