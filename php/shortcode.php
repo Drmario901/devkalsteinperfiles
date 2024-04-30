@@ -729,6 +729,18 @@ class shortcodePerfiles
     {
         return render_php_file('moderator/product.php');
     }
+    function moderator_blog(){
+        return render_php_file('moderator/blog.php');
+    }
+    function moderator_view_blog(){
+        return render_php_file('moderator/view_verify_blog.php');
+    }
+    function moderator_barbacoas(){
+        return render_php_file('moderator/barbacoas.php');
+    }        
+    function moderator_view_barbacoas(){
+        return render_php_file('moderator/view_verify_guide.php');
+    }
     function moderator_quotes()
     {
         return render_php_file('moderator/quotes.php');

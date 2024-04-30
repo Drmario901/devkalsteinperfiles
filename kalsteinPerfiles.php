@@ -665,6 +665,38 @@ function PerfilesModeratorDashboard()
     $html = $_short->moderator_dashboard();
     return $html;
 }
+function PerfilesModeratorBlog()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_blog();
+    return $html;
+}
+function PerfilesModeratorViewBlog()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_view__blog();
+    return $html;
+}
+function PerfilesModeratorBarbacoa()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_barbacoas();
+    return $html;
+}
+function PerfilesModeratorViewBarbacoa()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_view_barbacoas();
+    return $html;
+}
 function PerfilesModeratorProduct()
 {
 
@@ -877,6 +909,10 @@ add_shortcode("MODERATOR_VIEW_ACCOUNT", "PerfilesModeratorViewAccount");
 add_shortcode("MODERATOR_BITACORAS", "PerfilesModeratorBitacoras");
 add_shortcode("MODERATOR_RENDER", "PerfilesModeratorRender");
 add_shortcode("MODERATOR_COTIZACIONES", "moderator_cotizacionesP");
+add_shortcode("MODERATOR_BLOG", "PerfilesModeratorBlog");
+add_shortcode("MODERATOR_VIEW_BLOG", "PerfilesModeratorViewBlog");
+add_shortcode("MODERATOR_BARBACOAS", "PerfilesModeratorBarbacoa");
+add_shortcode("MODERATOR_VIEW_BARBACOAS", "PerfilesModeratorViewBarbacoa");
 
 //Shortcode Styles
 
@@ -2263,6 +2299,58 @@ function perfiles_styles()
         wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
         wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
         wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.account.js', __FILE__), array('jquery'));
+    }
+    if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_BLOG' ) ) {
+        translations();
+        wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style( 'material', plugins_url('src/moderator/css/material.css', __FILE__));
+        wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
+        wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js',__FILE__),array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+        wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.account.js',__FILE__),array('jquery'));
+    }
+    if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_VIEW_BLOG' ) ) {
+        translations();
+        wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style( 'material', plugins_url('src/moderator/css/material.css', __FILE__));
+        wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
+        wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js',__FILE__),array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+        wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.blog.js',__FILE__),array('jquery'));
+    }
+    if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_BARBACOAS' ) ) {
+        translations();
+        wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style( 'material', plugins_url('src/moderator/css/material.css', __FILE__));
+        wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
+        wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js',__FILE__),array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+        wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.account.js',__FILE__),array('jquery'));
+    }
+    if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'MODERATOR_VIEW_BARBACOAS' ) ) {
+        translations();
+        wp_enqueue_style( 'bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style( 'material', plugins_url('src/moderator/css/material.css', __FILE__));
+        wp_enqueue_style( 'font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
+        wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js',__FILE__),array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js',__FILE__),array('jquery'));
+        wp_enqueue_style( 'izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js',__FILE__),array('jquery'));
+        wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.barbacoa.js',__FILE__),array('jquery'));
     }
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'PERFILES_DATA_RECOVER')) {
         translations();
