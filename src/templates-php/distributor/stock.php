@@ -77,7 +77,7 @@
                     </p>";
 
                 if ($total >= $maxProductos) {
-                    echo "<div class='container-danger'><p class='text-muted text-danger'>¡Has alcanzado el límite de productos permitidos en tu inventario!
+                    echo "<div class='container-danger'><p class='text-danger'>¡Has alcanzado el límite de productos permitidos en tu inventario!
                     </p></div>
                     
                     ";
