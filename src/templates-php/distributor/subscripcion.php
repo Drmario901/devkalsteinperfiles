@@ -135,6 +135,8 @@
   include 'navbar.php';
   require __DIR__ . '/../../../php/getMembresia.php';
 
+  $mebresia = $_SESSION['tipo_membresia'];
+
   ?>
   <script>
     let page = "home";
