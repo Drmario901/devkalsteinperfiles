@@ -30,10 +30,10 @@
                             </div>
                         </div>
                     </div>
-                    <p class='mt-2'><i class='fa-solid fa-user'></i> <b>Published by: user@mail.com</b></p>
+                    <p class='mt-2 mb-0'><i class='fa-solid fa-user'></i> <b>Published by: user@mail.com</b></p>
                     <div class='col-12'>
                         <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
-                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4 mt-1'>Check</button>
+                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                         </a>
                     </div>
                     <div class='mt-2'>
