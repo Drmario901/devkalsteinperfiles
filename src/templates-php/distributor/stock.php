@@ -56,6 +56,15 @@
         } elseif ($membresia == 1) {
             $maxProductos = 10;
         }
+
+        $sqlCountBloqueado = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id' AND visible = 1";
+        $resultBloqueado = $conexion->query($sqlCountBloqueado);
+
+        $totalBloqueado = 0; // Inicializa la variable total
+        if ($resultBloqueado->num_rows > 0) {
+            $rowBloqueado = $resultBloqueado->fetch_assoc();
+            $totalBloqueado = $rowBloqueado['total'];
+        }
         ?>
 
         <nav class="nav nav-borders">
@@ -82,6 +91,7 @@
                         <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
                         <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
                     </p>
+                    <p class='text-muted'>Total <b>$totalBloqueado</b> productos bloqueados.</p>
                 </div>
                     ";
                 }
