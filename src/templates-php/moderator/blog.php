@@ -25,7 +25,7 @@
                                     </div>
                                     <div>
                                         <h6>Titulo del Artículo</h6>
-                                        <p class='mb-2'>Lorem ipsum</p>
+                                        <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit risus, placerat et condimentum eget, sodales sed elit. Sed nec.</p>
                                     </div>
                                     </div>
                                 </div>
