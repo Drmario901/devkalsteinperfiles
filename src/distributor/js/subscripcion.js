@@ -7,8 +7,8 @@ const titulos = [
 
 const botones = [
   // { membresia: "Membresía 1", id: "membresia-1" },
-  { membresia: "Membresía 2", id: "membresia-1" },
-  { membresia: "Membresía 3", id: "membresia-2" },
+  { membresia: "Membresía 2", id: "membresia-2" },
+  { membresia: "Membresía 3", id: "membresia-3" },
 ];
 
 const datos = [
@@ -134,44 +134,7 @@ const datos = [
 jQuery(document).ready(function ($) {
   let membresia = "";
 
-  function obtenerMembresia() {
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
-      type: "GET",
-      data: {},
-    })
-      .done(function (respuesta) {
-        console.log("la respuesta", respuesta);
-        if (respuesta == 0) {
-          $.each(botones, function (i, boton) {
-            let $btn = $("#tbl-botones").append(
-              $("<a>")
-                .text(boton.membresia)
-                .attr("id", boton.id)
-                .addClass("btn-tbl")
-            );
-          });
-
-          if (respuesta == 1) {
-            $("#membresia-1").attr("hidden", true);
-          }
-          if (respuesta == 2) {
-            $("#membresia-2").attr("hidden", true);
-          }
-        }
-        if (Number(membresia) !== 0) {
-          $("#tbl-botones").append(
-            $("<a>")
-              .text("Cancelar")
-              .attr("id", "btn-cancelar-subs")
-              .addClass("btn-tbl")
-          );
-        }
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
-  }
+  function obtenerMembresia() {}
 
   function crearTitulos() {
     $.each(titulos, function (i, titulo) {
@@ -192,34 +155,35 @@ jQuery(document).ready(function ($) {
 
   function crearBotones() {
     $.each(botones, function (i, boton) {
-      if (membresia == 0) {
-        let $btn = $("#tbl-botones").append(
-          $("<a>")
-            .text(boton.membresia)
-            .attr("id", boton.id)
-            .addClass("btn-tbl")
-        );
-      }
-    });
-    if (membresia !== 0) {
-      $("#tbl-botones").append(
-        $("<a>")
-          .text("boton.membresia")
-          .attr("id", "btn-cancelar-subs")
-          .addClass("btn-tbl")
+      let $btn = $("#tbl-botones").append(
+        $("<a>").text(boton.membresia).attr("id", boton.id).addClass("btn-tbl")
       );
-    }
+    });
   }
 
   // Llamadas a las funciones
   crearTitulos();
   crearDatos();
-  // crearBotones();
-  obtenerMembresia();
+  crearBotones();
 
-  $("#membresia-1").click(function () {
-    console.log("click");
+  $("#membresia-2").click(function () {
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
+      type: "GET",
+      data: {},
+    })
+      .done(function (respuesta) {
+        console.log("la respuesta", respuesta);
+        if (respuesta == 0 && respuesta !== 3) {
+          updateSubscripcion(2);
+        }
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
+  });
 
+  $("#membresia-3").click(function () {
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
@@ -228,25 +192,7 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
         if (respuesta == 0 && respuesta !== 2) {
-          updateSubscripcion(1);
-        }
-      })
-      .fail(function (error) {
-        console.log("error", error);
-      });
-  });
-
-  $("#membresia-2").click(function () {
-    console.log("click");
-    $.ajax({
-      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
-      type: "GET",
-      data: {},
-    })
-      .done(function (respuesta) {
-        console.log("la respuesta", respuesta);
-        if (respuesta == 0 && respuesta !== 1) {
-          updateSubscripcion(2);
+          updateSubscripcion(3);
         }
       })
       .fail(function (error) {
