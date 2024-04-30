@@ -47,35 +47,40 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class='col-lg-6'>
-                <div class='card row m-2'>
-                    <div class='col-12'>
-                        <div class='row mb-2'>
-                            <div class='col-4'>
-                                <img class='mx-1' src='https://64.media.tumblr.com/a2c0065b18af0a21b74d0ee0dfbdf182/1200721b9ec08b1b-d2/s500x750/295caadec5e2afb6288ea0ea59f7f55e405336b7.png' width=150>
-                            </div>
-                            <div class='col-8'>
-                                <h6>Titulo del Artículo</h6>
-                                <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
-                                    risus, placerat et condimentum eget, sodales sed elit. Sed nec.</p>
+                    <div class='card row m-2'>
+                        <div class='col-12'>
+                            <div class='row mb-2'>
+                                <div class='col-4'>
+                                    <img class='mx-1'
+                                        src='https://64.media.tumblr.com/a2c0065b18af0a21b74d0ee0dfbdf182/1200721b9ec08b1b-d2/s500x750/295caadec5e2afb6288ea0ea59f7f55e405336b7.png'
+                                        width=150>
+                                </div>
+                                <div class='col-8'>
+                                    <h6>Titulo del Artículo</h6>
+                                    <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
+                                        risus, placerat et condimentum eget, sodales sed elit. Sed nec.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <p class='mt-2 mb-1'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
-                    <div class='col-12'>
-                        <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
-                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
-                        </a>
-                    </div>
-                    <div class='mt-2'>
-                        <div class='col-12 mt-2'>
-                            <i class='fas fa-clock'></i>
-                            Hace 20 minutos
+                        <p class='mt-2 mb-1'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
+                        <div class='col-12'>
+                            <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
+                                <button type='button' id='btnUpdate'
+                                    class='btn btn-info btn-block p-2 px-4'>Check</button>
+                            </a>
+                        </div>
+                        <div class='mt-2'>
+                            <div class='col-12 mt-2'>
+                                <i class='fas fa-clock'></i>
+                                Hace 20 minutos
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- <?php
+                <!-- <?php
 
                 // require __DIR__.'/../../../php/conexion.php';
 
@@ -142,6 +147,6 @@
                     echo 'No pending tasks';
                 }
             ?> -->
-        </div>
+            </div>
     </article>
 </main>
