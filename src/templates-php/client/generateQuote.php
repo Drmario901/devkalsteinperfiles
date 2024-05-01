@@ -31,7 +31,7 @@
                 
                 $product = $_GET['search'];
                 
-                $query = "SELECT product_aid FROM wp_k_products WHERE product_model LIKE '%".$product."%' AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0'";
+                $query = "SELECT product_aid FROM wp_k_products WHERE product_model LIKE '%".$product."%' OR product_aid='$product' AND product_stock_status = 'in stock' AND product_validate_status = 'validated' AND product_type IN ('sell') AND product_group = '0'";
                 $result = $conexion->query($query);
                 
                 $view_woo = $result->num_rows > 0 ? true : false;
