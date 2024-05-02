@@ -18,7 +18,7 @@ if (!empty($data)) {
 
     if ($result) {
         echo "version=2\ncdr=0";
-        require 'processData.php';
+        //require 'processData.php';
     } else {
         echo "version=2\ncdr=1";
     }
