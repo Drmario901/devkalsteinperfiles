@@ -19,11 +19,11 @@
                     <ul class='navbar-list'>
                         <li>
                             <a href='#' id='btnMail' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded icon position-relative'>
+                                <span class='material-symbols-rounded icon position-relative' style='color: #213280'>
                                     mail
                                     <span id='messagesBaloon'
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                        style='font-family: sans-serif; font-size: 10px; color: #213280' hidden>
+                                        style='font-family: sans-serif; font-size: 10px;' hidden>
                                         <div id='messagesCant' class="unread-messages"></div>
                                     </span>
                                 </span>
