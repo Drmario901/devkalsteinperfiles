@@ -80,6 +80,9 @@
                             <span data-i18n="client:soporteTecnico">Soporte técnico</span>
                         </a>
                     </li>
+                    <?php
+            include __DIR__ . '/quotes/navbar.php';
+        ?>
                     <!--li>
                         <a href="#" id="diagnosis-app" class='navbar-link icon-box'>
                             <span>Diagnóstico</span>
@@ -94,12 +97,12 @@
             </div>
         </nav>
     </div>
-    <div class="container flex-column">
+    <!-- <div class="container flex-column">
         <div class="hr mb-2"></div>
         <?php
             include __DIR__ . '/quotes/navbar.php';
         ?>
-    </div>
+    </div> -->
 </header>
 
 <!-- HREF DIAGNOSIS APP-->
