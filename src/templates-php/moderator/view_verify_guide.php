@@ -460,7 +460,16 @@ h5 {
                                     placerat
                                     eros, id tempor quam. Cras varius placerat posuere.</p>
                             </div>
-                            <p><b>Link: </b><a href=''>link</a></p>
+                            <p>
+                                <label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                            </p>
+                            <p>
+                                <label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-d'>
+                            </p>
+                            <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox'
+                                    id='promotions-d'></p>
                         </div>
                     </div>
                     <div class='col-md-4 align-items-center'>
@@ -513,7 +522,16 @@ h5 {
                                     placerat
                                     eros, id tempor quam. Cras varius placerat posuere.</p>
                             </div>
-                            <p><b>Link: </b><a href=''>link</a></p>
+                            <p>
+                                <label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                            </p>
+                            <p>
+                                <label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-d'>
+                            </p>
+                            <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox'
+                                    id='promotions-d'></p>
                         </div>
                     </div>
                     <div class='col-md-4 align-items-center'>
@@ -566,7 +584,16 @@ h5 {
                                     placerat
                                     eros, id tempor quam. Cras varius placerat posuere.</p>
                             </div>
-                            <p><b>Link: </b><a href=''>link</a></p>
+                            <p>
+                                <label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                            </p>
+                            <p>
+                                <label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-d'>
+                            </p>
+                            <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox'
+                                    id='promotions-d'></p>
                         </div>
                     </div>
                 </div>
@@ -618,7 +645,16 @@ h5 {
                                 placerat
                                 eros, id tempor quam. Cras varius placerat posuere.</p>
                         </div>
-                        <p><b>Link: </b><a href=''>link</a></p>
+                        <p>
+                            <label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        </p>
+                        <p>
+                            <label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        </p>
+                        <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox'
+                                id='promotions-d'></p>
                     </div>
                 </div>
             </div>
