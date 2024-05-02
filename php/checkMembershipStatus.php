@@ -1,17 +1,27 @@
 <?php
-session_start();
 
 function checkMembership()
 {
-  require_once 'conexion.php'; // Asegúrate de que este archivo contiene la lógica de conexión correcta
-  $emailAccount = $_SESSION['emailAccount']; // La dirección de correo del usuario actual
+  // Asegúrate de que la sesión esté iniciada
+  session_start();
 
-  // Conexión a la base de datos
+  // Incluir el archivo de conexión a la base de datos
+  require_once 'conexion.php';
+
+  // Verificar si la sesión contiene la dirección de correo del usuario actual
+  if (!isset($_SESSION['emailAccount'])) {
+    echo json_encode(array('status' => 'error', 'message' => 'User email is not set in session'));
+    return;
+  }
+
+  $emailAccount = $_SESSION['emailAccount'];
+
+  // Verificar si la conexión a la base de datos se estableció correctamente
   if ($conexion->connect_error) {
     die("Connection failed: " . $conexion->connect_error);
   }
 
-  // Obtener el tipo de membresía del usuario
+  // Obtener el tipo de membresía del usuario desde la base de datos
   $sql = "SELECT tipo_membresia FROM wp_account WHERE account_correo = '$emailAccount'";
   $result = $conexion->query($sql);
 
@@ -39,16 +49,14 @@ function checkMembership()
     $countRow = $resultCount->fetch_assoc();
     $totalProductos = $countRow['total'];
 
-    if ($totalProductos <= $maxProductos) {
-      $sqlMakeVisible = "UPDATE wp_k_products SET visible = 0 WHERE product_maker = '$emailAccount' LIMIT $maxProductos";
-      $conexion->query($sqlMakeVisible);
-    }
-
-    // Si excede el máximo permitido, cambiar la visibilidad de los últimos productos subidos
+    // Actualizar la visibilidad de los productos
     if ($totalProductos > $maxProductos) {
       $excess = $totalProductos - $maxProductos;
       $sqlUpdate = "UPDATE wp_k_products SET visible = 1 WHERE product_maker = '$emailAccount' ORDER BY product_create_at DESC LIMIT $excess";
       $conexion->query($sqlUpdate);
+    } else {
+      $sqlMakeVisible = "UPDATE wp_k_products SET visible = 0 WHERE product_maker = '$emailAccount' LIMIT $maxProductos";
+      $conexion->query($sqlMakeVisible);
     }
 
     echo json_encode(array('status' => 'success', 'message' => 'Membership status checked successfully'));
@@ -56,6 +64,6 @@ function checkMembership()
     echo json_encode(array('status' => 'error', 'message' => 'No membership type found for the user'));
   }
 
+  // Cerrar la conexión a la base de datos
   $conexion->close();
 }
-?>
