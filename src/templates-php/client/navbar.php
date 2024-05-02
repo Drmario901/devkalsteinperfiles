@@ -23,7 +23,7 @@
                                     mail
                                     <span id='messagesBaloon'
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                        style='font-family: sans-serif; font-size: 10px' hidden>
+                                        style='font-family: sans-serif; font-size: 10px; color: #213280' hidden>
                                         <div id='messagesCant' class="unread-messages"></div>
                                     </span>
                                 </span>
@@ -31,12 +31,12 @@
                         </li>
                         <li>
                             <a href='#' id='btnEditProfilePr01' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded  icon'>settings</span>
+                                <span class='material-symbols-rounded  icon' style='color: #213280'>settings</span>
                             </a>
                         </li>
                         <li>
                             <a href='#' id='btn-logout' class='navbar-link icon-box'>
-                                <span class='material-symbols-rounded  icon'>logout</span>
+                                <span class='material-symbols-rounded  icon' style='color: #213280'>logout</span>
                             </a>
                         </li>
 
