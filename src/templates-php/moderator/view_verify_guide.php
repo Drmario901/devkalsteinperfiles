@@ -257,7 +257,46 @@ h5 {
                 </h5>
             </div>
             <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                <div class='row'>
+                <div class='row align-items-center'>
+                    <div class='col-md-2'>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div class='col-md-10'>
+                        <h6 class='text-start'>Lorem Ipsum</h6>
+                        <input class='d-inline' type='checkbox' id='name'>
+                    </div>
+                </div>
+                <div class='row align-items-center'>
+                    <div class='col-md-2'>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div class='col-md-10'>
+                        <h6 class='text-start'>Lorem Ipsum</h6>
+                        <input class='d-inline' type='checkbox' id='name'>
+                    </div>
+                </div>
+                <div class='row align-items-center'>
+                    <div class='col-md-2'>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div class='col-md-10'>
+                        <h6 class='text-start'>Lorem Ipsum</h6>
+                        <input class='d-inline' type='checkbox' id='name'>
+                    </div>
+                </div>
+                <div class='row align-items-center'>
                     <div class='col-md-2'>
                         <a TARGET='_blank' href='#'>
                             <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
