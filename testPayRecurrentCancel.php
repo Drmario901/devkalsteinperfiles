@@ -29,14 +29,7 @@ $cancel = new CancelRequest([
     'amountRecovered' => 10, 
 ]);
 
-try {
-    $fields = $monetico->getFields($cancel);
-} catch (Exception $e) {
-    echo "Error al obtener los campos: " . $e->getMessage();
-    exit;
-}
-
-$url = "https://p.monetico-services.com/capture_paiement.cgi";
+$url = CancelRequest::getUrl();
 
 ?>
 <html>
