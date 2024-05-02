@@ -8,7 +8,7 @@ $binary = hex2bin($mac);
 $data = array(
   'version' => '3.0',
   'TPE' => '7593339',
-  'date' => '02/05/2024:19:10:30',
+  'date' => '02/05/2024:20:24:09',
   'date_commande' => '02/05/2024',
   'montant' => '10.00USD',
   'montant_a_capturer' => '0USD',
@@ -18,7 +18,7 @@ $data = array(
   'reference' => '22222222',
   'lgue' => 'FR',
   'societe' => 'kalsteinfr',
-  'MAC' => $mac
+  'MAC' => "B552FD6DB65EC37C5B5C95F0E02A00841634AD86"
 );
 
 // Formato URL-encoded para el cuerpo de la solicitud
