@@ -416,6 +416,17 @@ h5 {
                                     style='margin: auto; border: 1px solid #999' width=200
                                     src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
                             </a>
+                            <p><label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-i'>
+                            </p>
+
+                            <p><label for=''>Image quality</label>
+                                <input class='d-inline' type='checkbox' id='quality-i'>
+                            </p>
+
+                            <p><label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-i'>
+                            </p>
                         </div>
                         <div>
                             <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
@@ -448,6 +459,17 @@ h5 {
                                     style='margin: auto; border: 1px solid #999' width=200
                                     src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
                             </a>
+                            <p><label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-i'>
+                            </p>
+
+                            <p><label for=''>Image quality</label>
+                                <input class='d-inline' type='checkbox' id='quality-i'>
+                            </p>
+
+                            <p><label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-i'>
+                            </p>
                         </div>
                         <div>
                             <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
@@ -480,6 +502,17 @@ h5 {
                                     style='margin: auto; border: 1px solid #999' width=200
                                     src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
                             </a>
+                            <p><label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-i'>
+                            </p>
+
+                            <p><label for=''>Image quality</label>
+                                <input class='d-inline' type='checkbox' id='quality-i'>
+                            </p>
+
+                            <p><label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-i'>
+                            </p>
                         </div>
                         <div>
                             <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
@@ -506,14 +539,25 @@ h5 {
                         </div>
                     </div>
                 </div>
-                <div class='row'>
+                <div class='row mt-1'>
                     <div class='col-md-4'>
-
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
                         <a TARGET='_blank' href='#'>
                             <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                                 width=200
                                 src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
                         </a>
+                        <p><label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        </p>
+
+                        <p><label for=''>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        </p>
+
+                        <p><label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        </p>
                     </div>
 
                     <div class='col-md-8'>
