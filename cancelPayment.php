@@ -15,7 +15,7 @@ $data = array(
   'reference' => '22222222',
   'lgue' => 'ES',
   'societe' => 'kalsteinfr',
-  'MAC' => "d12304b9d550b6c6e9f5c4025f61d424e21fdfa6"
+  'MAC' => "2717a946ebb0d4b097c0914d0913130abf44baca"
 );
 
 // Formato URL-encoded para el cuerpo de la solicitud
