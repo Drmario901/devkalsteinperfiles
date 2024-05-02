@@ -5,23 +5,26 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require __DIR__ . '/conexion.php';
 
-// Asegúrate de que la sesión esté iniciada
 session_start();
-
 $acc = $_SESSION['emailAccount'];
 
-// Preparar y ejecutar la primera consulta
-$query_id_acc = $pdo->prepare("SELECT account_aid FROM accounts WHERE account_correo = ?");
-$query_id_acc->execute([$acc]);
-$account_id = $query_id_acc->fetchColumn();
+// Utiliza la función de conexión que se ajusta a la base de datos
+$conexion_usada = $conexion; // Aquí decides qué conexión utilizar basado en tu lógica
+
+$query_id_acc = $conexion_usada->prepare("SELECT account_aid FROM wp_account WHERE account_correo = ?");
+$query_id_acc->bind_param("s", $acc);
+$query_id_acc->execute();
+$result = $query_id_acc->get_result();
+$account_id = $result->fetch_assoc()['account_aid'];
 
 echo 'ACC: ' . $acc;
 
-// Preparar y ejecutar la segunda consulta, asumiendo que ya tienes el ID del usuario
 if ($account_id) {
-  $query = $pdo->prepare("SELECT fecha_inicio, fecha_final, referencia_pago, estado_membresia FROM wp_subscripcion WHERE user_id = ?");
-  $query->execute([$account_id]);
-  $membership = $query->fetch(PDO::FETCH_ASSOC);
+  $query = $conexion_usada->prepare("SELECT fecha_inicio, fecha_final, referencia_pago, estado_membresia FROM wp_subscripcion WHERE user_id = ?");
+  $query->bind_param("s", $account_id);
+  $query->execute();
+  $result = $query->get_result();
+  $membership = $result->fetch_assoc();
 
   if ($membership) {
     echo 'Fecha Inicio: ' . $membership['fecha_inicio'] . "<br>";

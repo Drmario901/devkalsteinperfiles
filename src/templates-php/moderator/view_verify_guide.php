@@ -22,7 +22,7 @@ input[type="checkbox"] {
 }
 
 h5,
-p {
+p, h6 {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -461,7 +461,7 @@ h5 {
                         <div>
                         <h6 class='text-start' style='font-weight: 600;'>
                                 <i class='fas fa-pen'></i>
-                                Manual #1
+                                Manual #2
                                 <input class='d-inline' type='checkbox' id='name'>
                             </h6>
                             <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
@@ -509,7 +509,7 @@ h5 {
                         <div>
                         <h6 class='text-start' style='font-weight: 600;'>
                                 <i class='fas fa-pen'></i>
-                                Manual #1
+                                Manual #3
                                 <input class='d-inline' type='checkbox' id='name'>
                             </h6>
                             <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
@@ -554,7 +554,7 @@ h5 {
                         </div>
                     </div>
                 </div>
-                <div class='row mt-1 align-items-center'>
+                <div class='row mt-2 align-items-center'>
                     <div class='col-md-4'>
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
