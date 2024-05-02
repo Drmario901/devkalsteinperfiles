@@ -18,7 +18,7 @@
                     </h1>
                     <ul class='navbar-list'>
                         <li>
-                            <a href='#' id='btnMail' class='navbar-link icon-box'>
+                            <a href='#' id='btnMail' class='navbar-link icon-box p-0'>
                                 <span class='material-symbols-rounded icon position-relative' style='color: #213280'>
                                     mail
                                     <span id='messagesBaloon'
@@ -30,12 +30,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href='#' id='btnEditProfilePr01' class='navbar-link icon-box'>
+                            <a href='#' id='btnEditProfilePr01' class='navbar-link icon-box p-0'>
                                 <span class='material-symbols-rounded  icon' style='color: #213280'>settings</span>
                             </a>
                         </li>
                         <li>
-                            <a href='#' id='btn-logout' class='navbar-link icon-box'>
+                            <a href='#' id='btn-logout' class='navbar-link icon-box p-0'>
                                 <span class='material-symbols-rounded  icon' style='color: #213280'>logout</span>
                             </a>
                         </li>
