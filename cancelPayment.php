@@ -37,7 +37,7 @@ curl_setopt(
     'Pragma: no-cache',
     'Connection: close',
     'User-Agent: AuthClient',
-    'Host: p.monetico-services.com/test/',
+    'Host: p.monetico-services.com',
     'Accept: */*',
     'Content-Type: application/x-www-form-urlencoded',
     'Content-Length: ' . strlen($postData)
