@@ -18,7 +18,7 @@ function processLogFile($filePath, $membershipType, $conexion)
             if ($data && $data['code-retour'] === 'payetest') {
                 preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
                 preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
-
+                $reference = $data['reference'];
                 $userTag = "@" . $userTagMatches[1] ?? null;
                 $membershipId = $membershipMatches[1] ?? null;
                 $membershipValue = $membershipType[$membershipId] ?? null;
@@ -37,7 +37,7 @@ function processLogFile($filePath, $membershipType, $conexion)
                             echo "account_aid: $accountId\n"; // Muestra el ID del usuario
 
                             //! Upsert en la tabla de wp_subscripcion
-                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, user_id) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE fecha_inicio = VALUES(fecha_inicio), fecha_final = VALUES(fecha_final)");
+                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (fecha_inicio, fecha_final,referencia_pago, estado_membresia user_id) VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE fecha_inicio = VALUES(fecha_inicio), fecha_final = VALUES(fecha_final),referencia_pago = VALUES(referencia_pago), estado_membresia= VALUES(estado_membresia)");
                             $fechaInicio = new DateTime(); // Fecha actual
                             $fechaFinal = new DateTime();
                             $fechaFinal->modify('+30 days'); // Sumamos 30 días
@@ -47,7 +47,7 @@ function processLogFile($filePath, $membershipType, $conexion)
                             $fechaFinalStr = $fechaFinal->format('Y-m-d');
 
                             if ($stmt_subs) {
-                                $stmt_subs->bind_param("ssi", $fechaInicioStr, $fechaFinalStr, $accountId);
+                                $stmt_subs->bind_param("sssii", $fechaInicioStr, $fechaFinalStr, $accountId, $reference, $membershipValue);
                                 if ($stmt_subs->execute()) {
                                     echo "Suscripción actualizada/insertada correctamente.\n";
                                 } else {
