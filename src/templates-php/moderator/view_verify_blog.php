@@ -114,7 +114,7 @@ h5 {
             <div class='row text-sm-start text-md-center'>
                 <h5>
                     <i class='fas fa-pen'></i>
-                    Subtitulo del Artículo
+                    Título de extracto #1
                     <input class='d-inline' type='checkbox' id='name'>
                 </h5>
                 <h6 class='text-start'>Lorem Ipsum</h6>
@@ -163,7 +163,7 @@ h5 {
             <div class='row text-sm-start text-md-center'>
                 <h5>
                     <i class='fas fa-pen'></i>
-                    Subtitulo del Artículo
+                    Título de extracto #2
                     <input class='d-inline' type='checkbox' id='name'>
                 </h5>
                 <h6 class='text-start'>Lorem Ipsum</h6>
@@ -211,7 +211,7 @@ h5 {
             <div class='row text-sm-start text-md-center'>
                 <h5>
                     <i class='fas fa-pen'></i>
-                    Subtitulo del Artículo
+                    Título de extracto #3
                     <input class='d-inline' type='checkbox' id='name'>
                 </h5>
                 <h6 class='text-start'>Lorem Ipsum</h6>
