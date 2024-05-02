@@ -14,7 +14,7 @@ $data = array(
   'montant_restant' => '0USD',
   'stoprecurrence' => 'OUI',
   'reference' => '22222222',
-  'lgue' => 'ES',
+  'lgue' => 'FR',
   'societe' => 'kalsteinfr',
   'MAC' => 'D12304B9D550B6C6E9F5C4025F61D424E21FDFA6'
 );
