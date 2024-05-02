@@ -5,8 +5,8 @@ $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
 $data = array(
   'version' => '3.0',
   'TPE' => '7593339',
-  'date' => '02/05/2024:20:24:09',
-  'date_commande' => '02/05/2024',
+  'date' => '02%2F05%2F2024%3A20%3A24%3A09',
+  'date_commande' => '02%2F05%2F2024',
   'montant' => '10.00USD',
   'montant_a_capturer' => '0USD',
   'montant_deja_capture' => '0USD',
@@ -15,7 +15,7 @@ $data = array(
   'reference' => '22222222',
   'lgue' => 'ES',
   'societe' => 'kalsteinfr',
-  'MAC' => "2717a946ebb0d4b097c0914d0913130abf44baca"
+  'MAC' => "D12304B9D550B6C6E9F5C4025F61D424E21FDFA6"
 );
 
 // Formato URL-encoded para el cuerpo de la solicitud
