@@ -16,7 +16,7 @@ $data = array(
   'reference' => '11111',
   'lgue' => 'ES',
   'societe' => 'kalsteinfr',
-  //'MAC' => 'B9C0CC41312FDD02DB9C922125C6BAF56AB61C92'
+  'MAC' => 'B9C0CC41312FDD02DB9C922125C6BAF56AB61C92'
 );
 
 // Formato URL-encoded para el cuerpo de la solicitud
@@ -37,7 +37,7 @@ curl_setopt(
     'Pragma: no-cache',
     'Connection: close',
     'User-Agent: AuthClient',
-    'Host: p.monetico-services.com',
+    'Host: p.monetico-services.com/test/',
     'Accept: */*',
     'Content-Type: application/x-www-form-urlencoded',
     'Content-Length: ' . strlen($postData)
