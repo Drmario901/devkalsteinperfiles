@@ -34,6 +34,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Requests\CancelRequest;
+use DansMaCulotte\Monetico\Responses\CancelResponse;
 
 $monetico = new Monetico(
     '7593339',
