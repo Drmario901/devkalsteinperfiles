@@ -5,7 +5,7 @@ $secretKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 
 // Datos que serán enviados, con las fechas correctamente formateadas
 $data = array(
-  'version' => '3.0',
+  'version' => '1.0',
   'TPE' => '7593339',
   'date' => (new DateTime())->format('d/m/Y:H:i:s'),
   'date_commande' => (new DateTime())->format('d/m/Y:H:i:s'),
