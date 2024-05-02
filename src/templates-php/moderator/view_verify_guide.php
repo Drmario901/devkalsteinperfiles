@@ -411,30 +411,30 @@ h5 {
                 <div class='row'>
                     <div class='col-md-4 align-items-center'>
                         <div>
-                            <a TARGET='_blank' href='#'>
-                                <img class='my-3 d-flex justify-content-start'
-                                    style='margin: auto; border: 1px solid #999' width=200
-                                    src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                            </a>
-                            <p><label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-i'>
-                            </p>
-
-                            <p><label for=''>Image quality</label>
-                                <input class='d-inline' type='checkbox' id='quality-i'>
-                            </p>
-
-                            <p><label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-i'>
-                            </p>
-                        </div>
-                        <div>
-                            <h6 class='text-start' style='font-weight: 600;'>
+                        <h6 class='text-start' style='font-weight: 600;'>
                                 <i class='fas fa-pen'></i>
                                 Manual #1
                                 <input class='d-inline' type='checkbox' id='name'>
                             </h6>
                             <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
+                            <a TARGET='_blank' href='#'>
+                                <img class='my-3 d-flex justify-content-start'
+                                    style='margin: auto; border: 1px solid #999' width=200
+                                    src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                            </a>
+                            <p><label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-i'>
+                            </p>
+
+                            <p><label for=''>Image quality</label>
+                                <input class='d-inline' type='checkbox' id='quality-i'>
+                            </p>
+
+                            <p><label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-i'>
+                            </p>
+                        </div>
+                        <div>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
@@ -459,6 +459,12 @@ h5 {
                     </div>
                     <div class='col-md-4 align-items-center'>
                         <div>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                                <i class='fas fa-pen'></i>
+                                Manual #1
+                                <input class='d-inline' type='checkbox' id='name'>
+                            </h6>
+                            <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
                             <a TARGET='_blank' href='#'>
                                 <img class='my-3 d-flex justify-content-start'
                                     style='margin: auto; border: 1px solid #999' width=200
@@ -477,12 +483,6 @@ h5 {
                             </p>
                         </div>
                         <div>
-                            <h6 class='text-start' style='font-weight: 600;'>
-                                <i class='fas fa-pen'></i>
-                                Manual #2
-                                <input class='d-inline' type='checkbox' id='name'>
-                            </h6>
-                            <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
@@ -507,6 +507,12 @@ h5 {
                     </div>
                     <div class='col-md-4 align-items-center'>
                         <div>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                                <i class='fas fa-pen'></i>
+                                Manual #1
+                                <input class='d-inline' type='checkbox' id='name'>
+                            </h6>
+                            <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
                             <a TARGET='_blank' href='#'>
                                 <img class='my-3 d-flex justify-content-start'
                                     style='margin: auto; border: 1px solid #999' width=200
@@ -525,12 +531,6 @@ h5 {
                             </p>
                         </div>
                         <div>
-                            <h6 class='text-start' style='font-weight: 600;'>
-                                <i class='fas fa-pen'></i>
-                                Manual #3
-                                <input class='d-inline' type='checkbox' id='name'>
-                            </h6>
-                            <h6 class='text-start' style='font-size: 1.15em;'>Lorem Ipsum</h6>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
@@ -554,7 +554,7 @@ h5 {
                         </div>
                     </div>
                 </div>
-                <div class='row mt-1'>
+                <div class='row mt-1 align-items-center'>
                     <div class='col-md-4'>
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
