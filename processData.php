@@ -33,7 +33,7 @@ function processLogFile($filePath, $membershipType, $conexion)
                             $fechaFinal = new DateTime();
                             $fechaFinal->modify('+30 days'); // Sumamos 30 días
 
-                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (user_tag, fecha_inicio, fecha_final) VALUES (?, ?, ?)");
+                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (user_id, fecha_inicio, fecha_final) VALUES (?, ?, ?)");
                             if ($stmt_subs) {
                                 $stmt_subs->bind_param("sss", $userTag, $fechaInicio->format('Y-m-d'), $fechaFinal->format('Y-m-d'));
                                 if (!$stmt_subs->execute()) {
