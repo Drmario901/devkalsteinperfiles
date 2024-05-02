@@ -99,9 +99,6 @@
     </div>
     <!-- <div class="container flex-column">
         <div class="hr mb-2"></div>
-        <?php
-            include __DIR__ . '/quotes/navbar.php';
-        ?>
     </div> -->
 </header>
 
