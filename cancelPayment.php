@@ -2,6 +2,9 @@
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
 
+$secretKey = '530C185A56C2A9F904681A527780EBDB8C0E6C99';
+$stringToSign = "D12304B9D550B6C6E9F5C4025F61D424E21FDFA6";
+$mac = hash_hmac('sha1', $stringToSign, $secretKey);
 // Datos que serán enviados, con las fechas correctamente formateadas
 $data = array(
   'version' => '3.0',
@@ -16,7 +19,7 @@ $data = array(
   'reference' => '22222222',
   'lgue' => 'ES',
   'societe' => 'kalsteinfr',
-  'MAC' => "D12304B9D550B6C6E9F5C4025F61D424E21FDFA6"
+  'MAC' => $mac
 );
 
 $postData = http_build_query($data);
