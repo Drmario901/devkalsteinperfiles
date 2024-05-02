@@ -597,7 +597,7 @@ h5 {
                         </div>
                     </div>
                 </div>
-                <div class='row mt-2 align-items-center'>
+                <div class='row mt-3 align-items-center'>
                     <div class='col-md-4'>
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
