@@ -42,10 +42,13 @@ $monetico = new Monetico(
 );
 
 $cancel = new CancelRequest([
-    'reference' => 'Membresia-SUB2-@valfonsob12-1714666086',
+    'dateTime' => new DateTime(),
+    'orderDate' => new DateTime(),
+    'reference' => 'Membresia-SUB2-@valfonsob12-1714667959',
     'language' => 'ES',
     'currency' => 'USD',
-    'amount' => 20 
+    'amount' => 20,
+    'amountRecovered' => 20,
 ]);
 
 $url = $cancel->getUrl();
