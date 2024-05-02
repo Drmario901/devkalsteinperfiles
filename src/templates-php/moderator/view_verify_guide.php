@@ -118,7 +118,7 @@ h5 {
             </h5>
             <div class='row mt-2'>
                 <div class='col-md-6 text-sm-start text-md-center'>
-                    <h6 style='font-weight: 600;'>
+                    <h6 class='text-start' style='font-weight: 600;'>
                         <i class='fas fa-pen'></i>
                         Tipo de producto #1
                         <input class='d-inline' type='checkbox' id='name'>
@@ -143,7 +143,7 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-i'>
                     </p>
 
-                    <h6 style='font-weight: 600;'>
+                    <h6 class='text-start' style='font-weight: 600;'>
                         <i class='fas fa-circle-info'></i>
                         Description
                     </h6>
@@ -183,7 +183,7 @@ h5 {
                     </p>
                 </div>
                 <div class='col-md-6 text-sm-start text-md-center'>
-                    <h6 style='font-weight: 600;'>
+                    <h6 class='text-start' style='font-weight: 600;'>
                         <i class='fas fa-pen'></i>
                         Tipo de producto #2
                         <input class='d-inline' type='checkbox' id='name'>
@@ -208,7 +208,7 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-i'>
                     </p>
 
-                    <h6 style='font-weight: 600;'>
+                    <h6 class='text-start' style='font-weight: 600;'>
                         <i class='fas fa-circle-info'></i>
                         Description
                     </h6>
