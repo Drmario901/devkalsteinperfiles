@@ -16,7 +16,7 @@
     <article class="container article">
 
         <div class="row">
-        <h4 class='mt-2'><span style='font-weight: 600;'>Articulos</span>pendientes por verificar</h4>
+        <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Articulos</span> pendientes por verificar</h4>
             <div class='col-lg-6'>
                 <div class='card row m-2'>
                     <div class='col-12'>
