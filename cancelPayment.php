@@ -15,7 +15,7 @@ $data = array(
   'stoprecurrence' => 'OUI',
   'reference' => '11111',
   'lgue' => 'ES',
-  'societe' => 'kalsteinfr',
+  'commercant' => 'kalsteinfr',
   'MAC' => 'B9C0CC41312FDD02DB9C922125C6BAF56AB61C92'
 );
 
