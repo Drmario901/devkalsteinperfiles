@@ -92,7 +92,7 @@ $monetico = new Monetico(
 
 $purchase = new PurchaseRequest([
     'reference' => $reference,
-    'description' => 'uniqid: ' . $row['account_sub_id'],
+    'description' => '1111111111111',
     'language' => 'ES',
     'email' => $row['account_correo'],
     'amount' => $membershipPrice,
