@@ -19,26 +19,37 @@ function processLogFile($filePath, $membershipType, $conexion)
                 preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
                 preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
 
-                $userTag = "@" . $userTagMatches[1] ?? null; 
+                $userTag = "@" . $userTagMatches[1] ?? null;
                 $membershipId = $membershipMatches[1] ?? null;
                 $membershipValue = $membershipType[$membershipId] ?? null;
-
-                echo "userTag: $userTag, membershipValue: $membershipValue\n";
 
                 if ($userTag && $membershipValue !== null) {
                     $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
                     if ($stmt) {
                         $stmt->bind_param("is", $membershipValue, $userTag);
                         if ($stmt->execute()) {
-                            //echo "Membresía actualizada correctamente para el userTag: $userTag\n";
+                            // Inserción de la subscripción con fechas
+                            $fechaInicio = new DateTime(); // Fecha actual
+                            $fechaFinal = new DateTime();
+                            $fechaFinal->modify('+30 days'); // Sumamos 30 días
+
+                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (user_tag, fecha_inicio, fecha_final) VALUES (?, ?, ?)");
+                            if ($stmt_subs) {
+                                $stmt_subs->bind_param("sss", $userTag, $fechaInicio->format('Y-m-d'), $fechaFinal->format('Y-m-d'));
+                                if (!$stmt_subs->execute()) {
+                                    echo "Error al insertar la subscripción: " . $stmt_subs->error . "\n";
+                                }
+                            } else {
+                                echo "Error al preparar la consulta de inserción: " . $conexion->error . "\n";
+                            }
                         } else {
-                            //echo "Error al actualizar la membresía para el userTag: $userTag. Error: " . $stmt->error . "\n";
+                            echo "Error al actualizar la membresía para el userTag: $userTag. Error: " . $stmt->error . "\n";
                         }
                     } else {
-                        //echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
+                        echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
                     }
                 } else {
-                   // echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
+                    echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
                 }
             }
         }
@@ -49,5 +60,5 @@ function processLogFile($filePath, $membershipType, $conexion)
     }
 }
 
+
 processLogFile($archivoLog, $membershipType, $conexion);
-?>
