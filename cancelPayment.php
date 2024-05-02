@@ -2,7 +2,7 @@
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
 
-$secretKey = '530C185A56C2A9F904681A527780EBDB8C0E6C99';
+$secretKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $stringToSign = "D12304B9D550B6C6E9F5C4025F61D424E21FDFA6";
 $mac = hash_hmac('sha1', $stringToSign, $secretKey);
 // Datos que serán enviados, con las fechas correctamente formateadas
