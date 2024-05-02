@@ -266,8 +266,8 @@ h5 {
                         </a>
                     </div>
                     <div class='col-md-10'>
-                        <h6 class='text-start'>Lorem Ipsum</h6>
-                        <input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
                     </div>
                 </div>
                 <div class='row align-items-center'>
@@ -279,8 +279,8 @@ h5 {
                         </a>
                     </div>
                     <div class='col-md-10'>
-                        <h6 class='text-start'>Lorem Ipsum</h6>
-                        <input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
                     </div>
                 </div>
                 <div class='row align-items-center'>
@@ -292,8 +292,8 @@ h5 {
                         </a>
                     </div>
                     <div class='col-md-10'>
-                        <h6 class='text-start'>Lorem Ipsum</h6>
-                        <input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
                     </div>
                 </div>
                 <div class='row align-items-center'>
@@ -305,8 +305,8 @@ h5 {
                         </a>
                     </div>
                     <div class='col-md-10'>
-                        <h6 class='text-start'>Lorem Ipsum</h6>
-                        <input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
                     </div>
                 </div>
 
