@@ -77,6 +77,15 @@
         </nav>
         <br>
         <div>
+            <style>
+                .container-danger p {
+                    margin-top: 10px;
+                }
+
+                .container-danger p:first-child {
+                    margin-top: 0;
+                }
+            </style>
             <?php
             if ($membresia == 0 || $membresia == 1) {
                 echo "<p> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario
@@ -87,13 +96,13 @@
 
                 if ($total >= $maxProductos) {
                     echo "<div class='container-danger'>
-                    <p class='text-danger'>
-                        <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
-                        <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
-                    </p>
-                    <br>
-                    <p class='text-muted'>&#10Total <b>$totalBloqueado</b> productos bloqueados.</p>
-                </div>
+                            <p class='text-danger'>
+                                <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
+                                <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
+                            </p>
+                            <br>
+                            <p class='text-muted'>&#10Total <b>$totalBloqueado</b> productos bloqueados.</p>
+                        </div>
                     ";
                 }
             } elseif ($membresia == 2) {
