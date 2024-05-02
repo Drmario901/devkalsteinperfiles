@@ -35,19 +35,19 @@ function processLogFile($filePath, $membershipType, $conexion)
                             $row_ID = $result_ID->fetch_assoc();
                             $accountId = $row_ID['account_aid'];
                             echo "account_aid: $accountId\n"; // Muestra el ID del usuario
-
                             //! Upsert en la tabla de wp_subscripcion
-                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (fecha_inicio, fecha_final,referencia_pago, estado_membresia user_id) VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE fecha_inicio = VALUES(fecha_inicio), fecha_final = VALUES(fecha_final),referencia_pago = VALUES(referencia_pago), estado_membresia= VALUES(estado_membresia)");
+                            $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, user_id) VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE fecha_inicio = VALUES(fecha_inicio), fecha_final = VALUES(fecha_final), referencia_pago = VALUES(referencia_pago), estado_membresia = VALUES(estado_membresia)");
                             $fechaInicio = new DateTime(); // Fecha actual
                             $fechaFinal = new DateTime();
                             $fechaFinal->modify('+30 days'); // Sumamos 30 días
 
-                            // Formateamos las fechas
+                            // Formateamos las fechas y preparamos otros datos
                             $fechaInicioStr = $fechaInicio->format('Y-m-d');
                             $fechaFinalStr = $fechaFinal->format('Y-m-d');
+                            $estadoMembresia = $membershipValue;  // Asumiendo que es un integer que representa el estado
 
                             if ($stmt_subs) {
-                                $stmt_subs->bind_param("sssii", $fechaInicioStr, $fechaFinalStr, $accountId, $reference, $membershipValue);
+                                $stmt_subs->bind_param("sssii", $fechaInicioStr, $fechaFinalStr, $reference, $estadoMembresia, $accountId);
                                 if ($stmt_subs->execute()) {
                                     echo "Suscripción actualizada/insertada correctamente.\n";
                                 } else {
