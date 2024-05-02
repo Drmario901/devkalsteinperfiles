@@ -1,7 +1,8 @@
 <?php
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
-$mac = "B552FD6DB65EC37C5B5C95F0E02A00841634AD86";
+$mac = md5("B552FD6DB65EC37C5B5C95F0E02A00841634AD86");
+echo $mac;
 $binary = hex2bin($mac);
 // Datos que serán enviados
 $data = array(
