@@ -460,6 +460,7 @@ h5 {
                                     placerat
                                     eros, id tempor quam. Cras varius placerat posuere.</p>
                             </div>
+                            <p><b>Link: </b><a href=''>link</a></p>
                         </div>
                     </div>
                     <div class='col-md-4 align-items-center'>
@@ -512,6 +513,7 @@ h5 {
                                     placerat
                                     eros, id tempor quam. Cras varius placerat posuere.</p>
                             </div>
+                            <p><b>Link: </b><a href=''>link</a></p>
                         </div>
                     </div>
                     <div class='col-md-4 align-items-center'>
@@ -564,6 +566,7 @@ h5 {
                                     placerat
                                     eros, id tempor quam. Cras varius placerat posuere.</p>
                             </div>
+                            <p><b>Link: </b><a href=''>link</a></p>
                         </div>
                     </div>
                 </div>
@@ -615,6 +618,7 @@ h5 {
                                 placerat
                                 eros, id tempor quam. Cras varius placerat posuere.</p>
                         </div>
+                        <p><b>Link: </b><a href=''>link</a></p>
                     </div>
                 </div>
             </div>
