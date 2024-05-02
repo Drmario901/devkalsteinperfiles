@@ -53,7 +53,7 @@ h5 {
                     <h6 class='text-start'>Lorem Ipsum</h6>
                     <a TARGET='_blank' href='#'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                            width=200 src=''>
+                            width=200 src='https://pbs.twimg.com/media/FbjFOaIWAAEvrkG.png'>
                     </a>
 
                     <!-- Enlaces o promociones -->
@@ -101,7 +101,7 @@ h5 {
                 <h6 class='text-start'>Lorem Ipsum</h6>
 
             </div>
-            <div class='row'>
+            <div class='row mt-2'>
                 <h5>
                     <i class='fas fa-circle-info'></i>
                     Description
@@ -131,7 +131,7 @@ h5 {
                 <h6 class='text-start'>Lorem Ipsum</h6>
 
             </div>
-            <div class='row'>
+            <div class='row mt-2'>
                 <h5>
                     <i class='fas fa-circle-info'></i>
                     Description
@@ -160,7 +160,7 @@ h5 {
                 <h6 class='text-start'>Lorem Ipsum</h6>
 
             </div>
-            <div class='row'>
+            <div class='row mt-2'>
                 <h5>
                     <i class='fas fa-circle-info'></i>
                     Description
