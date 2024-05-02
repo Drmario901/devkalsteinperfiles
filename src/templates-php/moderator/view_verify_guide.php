@@ -252,7 +252,7 @@ h5 {
         <div class='card mb-3'>
             <div class='row text-sm-start text-md-center'>
                 <h5>
-                    <i class='fas fa-pen'></i>
+                    <i class='fa-regular fa-lightbulb'></i>
                     Productos ideales
                 </h5>
             </div>
