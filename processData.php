@@ -26,7 +26,7 @@ function processLogFile($filePath, $membershipType, $conexion)
                 echo "userTag: $userTag, membershipValue: $membershipValue\n";
 
                 if ($userTag && $membershipValue !== null) {
-                    // Preparamos la consulta para buscar el ID del usuario
+                    //! Preparamos la consulta para buscar el ID del usuario
                     $stmt_ID = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
                     if ($stmt_ID) {
                         $stmt_ID->bind_param("s", $userTag);
@@ -39,10 +39,30 @@ function processLogFile($filePath, $membershipType, $conexion)
                         }
                     }
 
-                    $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
+                    //! Insertamos la data en la tabla de wp_subscripcion
+                    $stmt_subs = $conexion->prepare("INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, user_id) VALUES (?, ?, ?)");
                     $fechaInicio = new DateTime(); // Fecha actual
                     $fechaFinal = new DateTime();
                     $fechaFinal->modify('+30 days'); // Sumamos 30 días
+
+                    // Formateamos las fechas
+                    $fechaInicioStr = $fechaInicio->format('Y-m-d');
+                    $fechaFinalStr = $fechaFinal->format('Y-m-d');
+
+                    if ($stmt_subs) {
+                        // Añadimos los tipos de los parámetros: 'ss' para las fechas (strings) y 'i' para el ID (integer)
+                        $stmt_subs->bind_param("ssi", $fechaInicioStr, $fechaFinalStr, $accountId);
+                        if ($stmt_subs->execute()) {
+                            echo "Suscripción insertada correctamente.\n";
+                        } else {
+                            echo "Error al insertar suscripción: " . $stmt_subs->error . "\n";
+                        }
+                    } else {
+                        echo "Error al preparar la consulta de inserción: " . $conexion->error . "\n";
+                    }
+
+                    //! Hacemos update del tipo de membresia;
+                    $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
                     if ($stmt) {
                         $stmt->bind_param("is", $membershipValue, $userTag);
                         if ($stmt->execute()) {
