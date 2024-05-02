@@ -16,7 +16,7 @@
     <article class="container article">
         
         <div class="row">
-        <h4 class='mt-2'><span style='font-weight: 600;'>Cuentas</span> pendientes por verificar</h4>
+        <h4 class='mt-2'><span style='font-weight: 600; white-space: nowrap;'>Cuentas</span> pendientes por verificar</h4>
             <?php
 
                 require __DIR__.'/../../../php/conexion.php';
