@@ -17,7 +17,7 @@ $data = array(
   'reference' => '22222222',
   'lgue' => 'FR',
   'societe' => 'kalsteinfr',
-  'MAC' => $binary
+  'MAC' => $mac
 );
 
 // Formato URL-encoded para el cuerpo de la solicitud
