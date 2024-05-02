@@ -73,7 +73,7 @@ if ($resultado) {
     echo "Error executing the query: " . $conexion->error;
 }
 
-$reference = $idMembership . '-' . $row['user_tag'];
+$reference = $idMembership . '-' . $row['user_tag'] . '-' . time();
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -91,8 +91,8 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => $reference,
-    'description' => '1111111111121',
+    'reference' => '11111',
+    'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
     'amount' => $membershipPrice,
