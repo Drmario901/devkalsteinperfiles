@@ -10,13 +10,13 @@
         </button>
         <nav class='navbar'>
             <div class='container'>
-                <ul class='navbar-list'>
-                    <div class="d-flex flex-row">
-                        <h1 class='mt-auto pb-3'>
-                            <a id='btn-logo' href='https://dev.kalstein.plus/'><img
-                                    src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png'
-                                    alt='Kalstein' width='200' height='40'></a>
-                        </h1>
+                <div class="d-flex flex-row">
+                    <h1 class='mt-auto pb-3'>
+                        <a id='btn-logo' href='https://dev.kalstein.plus/'><img
+                                src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png'
+                                alt='Kalstein' width='200' height='40'></a>
+                    </h1>
+                    <ul class='navbar-list'>
                         <li>
                             <a href='#' id='btnMail' class='navbar-link icon-box'>
                                 <span class='material-symbols-rounded icon position-relative'>
@@ -39,20 +39,21 @@
                                 <span class='material-symbols-rounded  icon'>logout</span>
                             </a>
                         </li>
-                    </div>
-                    <li>
-                        <a href='#' class='header-profile'>
-                            <figure class='profile-avatar' style='margin-top: 0.5rem;'>
-                                <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/<?php echo $urlImagePerfil?>'
-                                    alt='Profile 1' style='width: 50px; height: 50px'>
-                            </figure>
-                            <div>
-                                <p class='profile-title' style='color: #000;'><?php echo $name." ".$lastname?></p>
-                                <p class='profile-subtitle'><?php echo $userTag = $row['user_tag'];?></p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+
+                        <li>
+                            <a href='#' class='header-profile'>
+                                <figure class='profile-avatar' style='margin-top: 0.5rem;'>
+                                    <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/<?php echo $urlImagePerfil?>'
+                                        alt='Profile 1' style='width: 50px; height: 50px'>
+                                </figure>
+                                <div>
+                                    <p class='profile-title' style='color: #000;'><?php echo $name." ".$lastname?></p>
+                                    <p class='profile-subtitle'><?php echo $userTag = $row['user_tag'];?></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <ul class='navbar-list'>
                     <li>
                         <a href='#' id='btnDashboardPr01' class='navbar-link active icon-box'>
