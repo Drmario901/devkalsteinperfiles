@@ -7,16 +7,6 @@ error_reporting(E_ALL);
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 session_start();
 
-// FUNCION PARA CODIFICAR URL
-function encryptURL()
-{
-    $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
-    return $gateway;
-}
-
-// LANGUAGE FOR THE TEXT OF LOADER.
-$esText = '<h2>Redirigiendo a pasarela de pago</h2>';
-
 // COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
@@ -36,16 +26,22 @@ $cancel = new CancelRequest([
     'language' => 'ES',
     'currency' => 'USD',
     'amount' => 20,
-    'amountRecovered' => 20,
+    'amountRecovered' => 10, 
 ]);
 
-$fields = $monetico->getFields($cancel);
-$encodedUrl = base64_decode(encryptURL()); 
+try {
+    $fields = $monetico->getFields($cancel);
+} catch (Exception $e) {
+    echo "Error al obtener los campos: " . $e->getMessage();
+    exit;
+}
+
+$url = "https://p.monetico-services.com/test/paiement.cgi";
 
 ?>
 <html>
 <body onload="document.forms['cancel_form'].submit();">
-    <form name="cancel_form" action="<?php echo $encodedUrl; ?>" method="post">
+    <form name="cancel_form" action="<?php echo $url; ?>" method="post">
         <?php foreach ($fields as $key => $value): ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
