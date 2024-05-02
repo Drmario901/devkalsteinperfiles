@@ -403,7 +403,7 @@ h5 {
         <div class='card mb-3'>
             <div class='row text-sm-start text-md-center'>
                 <h5>
-                    <i class='fa-regular fa-lightbulb'></i>
+                    <i class='fa-solid fa-book-open'></i>
                     Manuales
                 </h5>
             </div>
