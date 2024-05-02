@@ -92,98 +92,90 @@ h5 {
             </div>
         </div>
         <div class='card mb-3'>
+            <div class='row text-sm-start text-md-center'>
+                <h5>
+                    <i class='fas fa-pen'></i>
+                    Subtitulo del Artículo
+                    <input class='d-inline' type='checkbox' id='name'>
+                </h5>
+                <h6 class='text-start'>Lorem Ipsum</h6>
+
+            </div>
             <div class='row'>
-                <div class='col-md-4 text-sm-start text-md-center'>
-                    <h5>
-                        <i class='fas fa-pen'></i>
-                        Subtitulo del Artículo
-                        <input class='d-inline' type='checkbox' id='name'>
-                    </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
-
+                <h5>
+                    <i class='fas fa-circle-info'></i>
+                    Description
+                </h5>
+                <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <p style='text-align: justify;'>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 </div>
-                <div class='col-md-8'>
-                    <h5>
-                        <i class='fas fa-circle-info'></i>
-                        Description
-                    </h5>
-                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                        <p style='text-align: justify;'>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    </div>
-                    <p>
-                        <label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                    </p>
-                    <p>
-                        <label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-d'>
-                    </p>
+                <p>
+                    <label for=''>Links or self-promotion</label>
+                    <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                </p>
+                <p>
+                    <label for=''>Professionalism</label>
+                    <input class='d-inline' type='checkbox' id='professionalism-d'>
+                </p>
 
+            </div>
+
+        </div>
+        <div class='card mb-3'>
+            <div class='row text-sm-start text-md-center'>
+                <h5>
+                    <i class='fas fa-pen'></i>
+                    Subtitulo del Artículo
+                    <input class='d-inline' type='checkbox' id='name'>
+                </h5>
+                <h6 class='text-start'>Lorem Ipsum</h6>
+
+            </div>
+            <div class='row'>
+                <h5>
+                    <i class='fas fa-circle-info'></i>
+                    Description
+                </h5>
+                <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <p style='text-align: justify;'>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 </div>
+                <p>
+                    <label for=''>Links or self-promotion</label>
+                    <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                </p>
+                <p>
+                    <label for=''>Professionalism</label>
+                    <input class='d-inline' type='checkbox' id='professionalism-d'>
+                </p>
 
             </div>
         </div>
         <div class='card mb-3'>
-            <div class='row'>
-                <div class='col-md-4 text-sm-start text-md-center'>
-                    <h5>
-                        <i class='fas fa-pen'></i>
-                        Subtitulo del Artículo
-                        <input class='d-inline' type='checkbox' id='name'>
-                    </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
-
-                </div>
-                <div class='col-md-8'>
-                    <h5>
-                        <i class='fas fa-circle-info'></i>
-                        Description
-                    </h5>
-                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                        <p style='text-align: justify;'>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    </div>
-                    <p>
-                        <label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                    </p>
-                    <p>
-                        <label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-d'>
-                    </p>
-
-                </div>
+            <div class='row text-sm-start text-md-center'>
+                <h5>
+                    <i class='fas fa-pen'></i>
+                    Subtitulo del Artículo
+                    <input class='d-inline' type='checkbox' id='name'>
+                </h5>
+                <h6 class='text-start'>Lorem Ipsum</h6>
 
             </div>
-        </div>
-        <div class='card mb-3'>
             <div class='row'>
-                <div class='col-md-4 text-sm-start text-md-center'>
-                    <h5>
-                        <i class='fas fa-pen'></i>
-                        Subtitulo del Artículo
-                        <input class='d-inline' type='checkbox' id='name'>
-                    </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
-
+                <h5>
+                    <i class='fas fa-circle-info'></i>
+                    Description
+                </h5>
+                <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <p style='text-align: justify;'>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 </div>
-                <div class='col-md-8'>
-                    <h5>
-                        <i class='fas fa-circle-info'></i>
-                        Description
-                    </h5>
-                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                        <p style='text-align: justify;'>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    </div>
-                    <p>
-                        <label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                    </p>
-                    <p>
-                        <label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-d'>
-                    </p>
-
-                </div>
+                <p>
+                    <label for=''>Links or self-promotion</label>
+                    <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                </p>
+                <p>
+                    <label for=''>Professionalism</label>
+                    <input class='d-inline' type='checkbox' id='professionalism-d'>
+                </p>
 
             </div>
         </div>
