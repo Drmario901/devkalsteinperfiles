@@ -16,6 +16,7 @@
     <article class="container article">
         
         <div class="row">
+        <h4 class='mt-2'>Cuentas pendientes por verificar</h4>
             <?php
 
                 require __DIR__.'/../../../php/conexion.php';
