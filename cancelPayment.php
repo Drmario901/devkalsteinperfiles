@@ -1,21 +1,21 @@
 <?php
 
-$url = 'https://p.monetico-services.com/capture_paiement.cgi';
+$url = 'https://p.monetico-services.com/';
 
 // Datos que serán enviados
 $data = array(
-  'version' => '1.0',
+  'version' => '3.0',
   'TPE' => '7593339',
   'date' => '02/05/2024:19:10:30',
   'date_commande' => '02/05/2024',
-  'montant' => '10USD',
+  'montant' => '10.00USD',
   'montant_a_capturer' => '0USD',
   'montant_deja_capture' => '0USD',
   'montant_restant' => '0USD',
   'stoprecurrence' => 'OUI',
   'reference' => '11111',
   'lgue' => 'ES',
-  'commercant' => 'kalsteinfr',
+  'societe' => 'kalsteinfr',
   'MAC' => 'B9C0CC41312FDD02DB9C922125C6BAF56AB61C92'
 );
 
