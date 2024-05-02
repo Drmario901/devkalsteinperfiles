@@ -5,7 +5,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
-require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php';
 session_start();
 
 //EMAIL ACCOUNT SESSION.
@@ -61,7 +60,6 @@ if ($resultado) {
             $updateQuery = "UPDATE wp_account SET account_sub_id = '$id_unico' WHERE account_correo = '$email'";
             if ($conexion->query($updateQuery) === TRUE) {
                 //echo "ID Generated.";
-                checkMembership();
             } else {
                 //echo "Error updating: " . $conexion->error;
             }
