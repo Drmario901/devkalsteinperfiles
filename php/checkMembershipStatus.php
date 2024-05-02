@@ -6,7 +6,7 @@ function checkMembership()
   session_start();
 
   // Incluir el archivo de conexión a la base de datos
-  require_once 'conexion.php';
+  require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 
   // Verificar si la sesión contiene la dirección de correo del usuario actual
   if (!isset($_SESSION['emailAccount'])) {
