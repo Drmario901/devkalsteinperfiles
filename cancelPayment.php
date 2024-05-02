@@ -58,5 +58,5 @@ curl_close($ch);
 
 // Imprimir la respuesta
 echo $response;
-echo $data;
+var_dump($data);
 ?>
