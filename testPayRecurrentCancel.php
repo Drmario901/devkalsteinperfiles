@@ -22,12 +22,12 @@ $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 $idMembership = $_GET["idMembership"];*/
 
 // MAIN QUERYS
-$consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
+/*$consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $row = $conexion->query($consulta)->fetch_assoc();
 
 if (!$row) {
     die('Error: Usuario no encontrado.');
-}
+}*/
 
 // COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
