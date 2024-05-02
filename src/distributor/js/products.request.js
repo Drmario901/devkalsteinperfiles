@@ -45,6 +45,22 @@ function validateProductData(
       });
   };
 
+  jQuery(document).ready(function ($) {
+    function checkMembership() {
+      $.ajax({
+        url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/checkMembershipStatus.php",
+
+        type: "POST",
+
+        data: {},
+      }).done(function (respuesta) {
+        console.log(respuesta);
+      });
+    }
+
+    checkMembership();
+  });
+
   loadTranslations(cookieLng);
 
   err_msg = "";

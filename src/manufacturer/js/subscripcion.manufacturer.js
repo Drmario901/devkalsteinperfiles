@@ -165,6 +165,8 @@ jQuery(document).ready(function ($) {
       });
   });
   function updateSubscripcion(subs) {
-    window.alert(`Datos a actualizar a la subscripcion numero: ${subs}`);
+    window.location.replace(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php/?idMembership=SUB${subs}`
+    );
   }
 });

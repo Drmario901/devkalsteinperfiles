@@ -97,7 +97,7 @@ $purchase = new PurchaseRequest([
     'amount' => $membershipPrice, 
     'currency' => 'USD',
     'dateTime' => new DateTime(),
-    'successUrl' => 'https://dev.kalstein.plus/', 
+    'successUrl' => 'https://google.com/', 
     'errorUrl' => 'https://x.com/',
 ]);
 

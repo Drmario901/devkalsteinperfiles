@@ -678,7 +678,7 @@ function PerfilesModeratorViewBlog()
 
     $_short = new shortcodePerfiles;
 
-    $html = $_short->moderator_view__blog();
+    $html = $_short->moderator_view_blog();
     return $html;
 }
 function PerfilesModeratorBarbacoa()
