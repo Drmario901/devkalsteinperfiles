@@ -1,7 +1,8 @@
 <?php
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
-
+$mac = "B552FD6DB65EC37C5B5C95F0E02A00841634AD86";
+$binary = hex2bin($mac);
 // Datos que serán enviados
 $data = array(
   'version' => '3.0',
@@ -16,7 +17,7 @@ $data = array(
   'reference' => '22222222',
   'lgue' => 'FR',
   'societe' => 'kalsteinfr',
-  'MAC' => 'B552FD6DB65EC37C5B5C95F0E02A00841634AD86'
+  'MAC' => $binary
 );
 
 // Formato URL-encoded para el cuerpo de la solicitud
