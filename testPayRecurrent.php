@@ -8,7 +8,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 session_start();
 
 //EMAIL ACCOUNT SESSION.
-if(isset($_SESSION["emailAccount"])){
+if (isset($_SESSION["emailAccount"])) {
     $email = $_SESSION["emailAccount"];
 }
 //$email = 'valfonsob12@yopmail.com';
@@ -19,9 +19,10 @@ $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 
 //PAYMENT GATEWAY URL (MONETICO).
 
-function encryptURL() {
+function encryptURL()
+{
     $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
-    return $gateway; 
+    return $gateway;
 }
 
 //GET VARIABLE.
@@ -84,21 +85,21 @@ use DansMaCulotte\Monetico\Resources\ShippingAddressResource;
 use DansMaCulotte\Monetico\Resources\ClientResource;
 
 $monetico = new Monetico(
-    '7593339', 
-    '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 
-    'kalsteinfr' 
+    '7593339',
+    '255D023E7A0BDE9EEAC7516959CD93A9854F3991',
+    'kalsteinfr'
 );
- 
+
 $purchase = new PurchaseRequest([
     'reference' => $reference,
-    'description' => 'uniqid: ' .$row['account_sub_id'],
+    'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
-    'amount' => $membershipPrice, 
+    'amount' => $membershipPrice,
     'currency' => 'USD',
     'dateTime' => new DateTime(),
-    'successUrl' => 'https://google.com/', 
-    'errorUrl' => 'https://x.com/',
+    'successUrl' => 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/',
+    'errorUrl' => 'https://dev.kalstein.plus/plataforma/failed-subscripcion-k/',
 ]);
 
 $billingAddress = new BillingAddressResource([
@@ -123,30 +124,36 @@ $fields = $monetico->getFields($purchase);
 
 ?>
 <html>
-<body onload="document.forms['payment_form'].submit();">
-<style>
-    .custom-loader {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: 
-            radial-gradient(farthest-side,#322380 94%,#0000) top/8px 8px no-repeat,
-            conic-gradient(#0000 30%,#322380);
-        -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
-        animation:s3 1s infinite linear;
-    }
 
-    @keyframes s3{ 
-        100%{transform: rotate(1turn)}
-    }
-</style>
+<body onload="document.forms['payment_form'].submit();">
+    <style>
+        .custom-loader {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background:
+                radial-gradient(farthest-side, #322380 94%, #0000) top/8px 8px no-repeat,
+                conic-gradient(#0000 30%, #322380);
+            -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+            animation: s3 1s infinite linear;
+        }
+
+        @keyframes s3 {
+            100% {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
     <form name="payment_form" action="<?php echo $url; ?>" method="post">
         <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
         <center><?php echo $esText ?></center>
-        <center><div class="custom-loader"></div></center>
+        <center>
+            <div class="custom-loader"></div>
+        </center>
     </form>
 </body>
+
 </html>

@@ -19,14 +19,30 @@ function processLogFile($filePath, $membershipType, $conexion)
                 preg_match("/@(\w+)-/", $data['reference'], $userTagMatches);
                 preg_match("/Membresia-(\w+)-/", $data['reference'], $membershipMatches);
 
-                $userTag = "@" . $userTagMatches[1] ?? null; 
+                $userTag = "@" . $userTagMatches[1] ?? null;
                 $membershipId = $membershipMatches[1] ?? null;
                 $membershipValue = $membershipType[$membershipId] ?? null;
 
                 echo "userTag: $userTag, membershipValue: $membershipValue\n";
 
                 if ($userTag && $membershipValue !== null) {
+                    // Preparamos la consulta para buscar el ID del usuario
+                    $stmt_ID = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
+                    if ($stmt_ID) {
+                        $stmt_ID->bind_param("s", $userTag);
+                        $stmt_ID->execute();
+                        $result_ID = $stmt_ID->get_result();
+                        if ($result_ID->num_rows > 0) {
+                            $row_ID = $result_ID->fetch_assoc();
+                            $accountId = $row_ID['account_aid'];
+                            echo "account_aid: $accountId\n"; // Muestra el ID del usuario
+                        }
+                    }
+
                     $stmt = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
+                    $fechaInicio = new DateTime(); // Fecha actual
+                    $fechaFinal = new DateTime();
+                    $fechaFinal->modify('+30 days'); // Sumamos 30 días
                     if ($stmt) {
                         $stmt->bind_param("is", $membershipValue, $userTag);
                         if ($stmt->execute()) {
@@ -38,7 +54,7 @@ function processLogFile($filePath, $membershipType, $conexion)
                         //echo "Error al preparar la consulta SQL: " . $conexion->error . "\n";
                     }
                 } else {
-                   // echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
+                    // echo "Datos inválidos o información faltante: userTag ($userTag), membershipValue ($membershipValue)\n";
                 }
             }
         }
@@ -50,4 +66,3 @@ function processLogFile($filePath, $membershipType, $conexion)
 }
 
 processLogFile($archivoLog, $membershipType, $conexion);
-?>
