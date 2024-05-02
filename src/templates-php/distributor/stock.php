@@ -92,7 +92,7 @@
                         <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
                     </p>
                     <br>
-                    <p class='text-muted'>Total <b>$totalBloqueado</b> productos bloqueados.</p>
+                    <p class='text-muted'>&#10Total <b>$totalBloqueado</b> productos bloqueados.</p>
                 </div>
                     ";
                 }
