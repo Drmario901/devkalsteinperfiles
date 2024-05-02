@@ -1,4 +1,4 @@
 <?php
 
-$date = date('Y');
+$date = date('DD-MM-YY');
 echo $date;
