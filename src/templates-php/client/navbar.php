@@ -10,7 +10,7 @@
         </button>
         <nav class='navbar'>
             <div class='container'>
-                <div class="d-flex flex-row">
+                <div class="d-flex flex-row justify-content-between">
                     <h1 class='mt-auto pb-3'>
                         <a id='btn-logo' href='https://dev.kalstein.plus/'><img
                                 src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png'
