@@ -2,7 +2,7 @@
 
 <?php
 
-$date = time();
+$date = date('Y');
 echo $date;
 
 ?>
