@@ -1,10 +1,8 @@
 <?php
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
-
 $secretKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
-$stringToSign = "D12304B9D550B6C6E9F5C4025F61D424E21FDFA6";
-$mac = hash_hmac('sha1', $stringToSign, $secretKey);
+
 // Datos que serán enviados, con las fechas correctamente formateadas
 $data = array(
   'version' => '3.0',
@@ -18,31 +16,48 @@ $data = array(
   'stoprecurrence' => 'OUI',
   'reference' => '22222222',
   'lgue' => 'ES',
-  'societe' => 'kalsteinfr',
-  'MAC' => $mac
+  'societe' => 'kalsteinfr'
 );
 
+// Generar la cadena para el MAC de acuerdo a la documentación relevante
+$stringToSign = implode("*", [
+  $data['TPE'],
+  $data['date'],
+  $data['montant'],
+  $data['reference'],
+  $data['version'],
+  $data['lgue'],
+  $data['societe'],
+  $data['montant_a_capturer'],
+  $data['montant_deja_capture'],
+  $data['montant_restant'],
+  $data['stoprecurrence']
+]);
+
+// Calcular el MAC
+$mac = hash_hmac('sha1', $stringToSign, $secretKey);
+$data['MAC'] = $mac;
+
+// Convertir los datos en formato URL-encoded
 $postData = http_build_query($data);
 
+// Inicializar cURL
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt(
-  $ch,
-  CURLOPT_HTTPHEADER,
-  array(
-    'Pragma: no-cache',
-    'Connection: close',
-    'User-Agent: AuthClient',
-    'Host: p.monetico-services.com',
-    'Accept: */*',
-    'Content-Type: application/x-www-form-urlencoded',
-    'Content-Length: ' . strlen($postData)
-  )
-);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+  'Pragma: no-cache',
+  'Connection: close',
+  'User-Agent: AuthClient',
+  'Host: p.monetico-services.com',
+  'Accept: */*',
+  'Content-Type: application/x-www-form-urlencoded',
+  'Content-Length: ' . strlen($postData)
+));
 
+// Ejecutar la solicitud
 $response = curl_exec($ch);
 
 if (curl_errno($ch)) {
@@ -56,4 +71,5 @@ if (curl_errno($ch)) {
   }
 }
 
+// Cerrar cURL
 curl_close($ch);
