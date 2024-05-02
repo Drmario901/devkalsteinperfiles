@@ -56,6 +56,15 @@
         } elseif ($membresia == 1) {
             $maxProductos = 10;
         }
+
+        $sqlCountBloqueado = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id' AND visible = 1";
+        $resultBloqueado = $conexion->query($sqlCountBloqueado);
+
+        $totalBloqueado = 0; // Inicializa la variable total
+        if ($resultBloqueado->num_rows > 0) {
+            $rowBloqueado = $resultBloqueado->fetch_assoc();
+            $totalBloqueado = $rowBloqueado['total'];
+        }
         ?>
 
         <nav class="nav nav-borders">
@@ -78,11 +87,13 @@
 
                 if ($total >= $maxProductos) {
                     echo "<div class='container-danger'>
-                    <p class='text-danger'>
-                        <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
-                        <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
-                    </p>
-                </div>
+                            <p class='text-danger'>
+                                <i class='fas fa-exclamation-circle'></i> ¡Has alcanzado el límite de productos permitidos en tu inventario!
+                                <a href='https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/' class='alert-link'>Para añadir más, mejora tu plan.</a>
+                            </p>
+                            <br>
+                            <p class='text-muted'>Total <b>$totalBloqueado</b> productos bloqueados.</p>
+                        </div>
                     ";
                 }
             } elseif ($membresia == 2) {
@@ -136,7 +147,8 @@
                     $offset = ($page - 1) * $perPage;
                     $limit = $perPage;
 
-                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
+                    $query = "SELECT * FROM wp_k_products WHERE product_maker = '$acc_id' AND visible = 0 AND product_group = 0 ORDER BY product_create_at DESC LIMIT $offset, $limit";
+
                     $resultado = $conexion->query($query);
 
                     if ($resultado->num_rows > 0) {

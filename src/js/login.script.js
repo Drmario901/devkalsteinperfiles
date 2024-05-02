@@ -102,25 +102,25 @@ jQuery(document).ready(function ($) {
     });
   });
 
-  $(document).on('keyup', '#emailUser', function(e){
-    if (e.which == 13){
-      $('#btnContinueLogIn').click()
-      $('#btnContinueSignUp').click()
+  $(document).on("keyup", "#emailUser", function (e) {
+    if (e.which == 13) {
+      $("#btnContinueLogIn").click();
+      $("#btnContinueSignUp").click();
     }
-  })
+  });
 
-  $(document).on('keyup', '#passwordGrid', function(e){
-    if (e.which == 13){
-      $('#btnContinueLogIn2').click()
-      $('#btnContinueSignUp4').click()
+  $(document).on("keyup", "#passwordGrid", function (e) {
+    if (e.which == 13) {
+      $("#btnContinueLogIn2").click();
+      $("#btnContinueSignUp4").click();
     }
-  })
+  });
 
-  $(document).on('keyup', '#emailUserConfirm', function(e){
-    if (e.which == 13){
-      $('#btnValidatedEmail').click()
+  $(document).on("keyup", "#emailUserConfirm", function (e) {
+    if (e.which == 13) {
+      $("#btnValidatedEmail").click();
     }
-  })
+  });
 
   $(document).on("click", "#btnContinueSignUp", function () {
     let user = $("#emailUser").val();
@@ -731,26 +731,32 @@ jQuery(document).ready(function ($) {
     $(".codeExpired").css({ display: "none" });
   });
 
-  $(document).on('click', '#countryPrefix', function(){
+  $(document).on("click", "#countryPrefix", function () {
     // $('#countryPrefix ul').toggle()
-  })
+  });
 
-  let  prefix = $('#countryPrefix ul li').first().data('iso')
-  let prefix2 = $('#countryPrefix ul li').first().val()
-  $('#imgCountry').attr('src', plugin_dir+'/src/images/flag-icon/'+prefix+'.png');
-  $('#span-prefix').text(prefix2)
+  let prefix = $("#countryPrefix ul li").first().data("iso");
+  let prefix2 = $("#countryPrefix ul li").first().val();
+  $("#imgCountry").attr(
+    "src",
+    plugin_dir + "/src/images/flag-icon/" + prefix + ".png"
+  );
+  $("#span-prefix").text(prefix2);
 
-  $(document).on('change', '#countryPrefix', function(){
-    let  prefix = $(this).find(':selected').data('iso')
-    let prefix2 = $('#countryPrefix').val()
-    $('#imgCountry').attr('src', plugin_dir+'/src/images/flag-icon/'+prefix+'.png');
-    $('#span-prefix').text(prefix2)
-  })
+  $(document).on("change", "#countryPrefix", function () {
+    let prefix = $(this).find(":selected").data("iso");
+    let prefix2 = $("#countryPrefix").val();
+    $("#imgCountry").attr(
+      "src",
+      plugin_dir + "/src/images/flag-icon/" + prefix + ".png"
+    );
+    $("#span-prefix").text(prefix2);
+  });
 
-  $(document).on('click', '#imgCountry', function(){
-    alert('Click')
-    $('#countryPrefix').css({'display' : 'block'}).focus();
-  })
+  $(document).on("click", "#imgCountry", function () {
+    alert("Click");
+    $("#countryPrefix").css({ display: "block" }).focus();
+  });
 
   function validarCorreo(consulta) {
     $.ajax({
@@ -779,11 +785,11 @@ jQuery(document).ready(function ($) {
 
           $("#c-password").css({ display: "block" });
 
-          if ($('#telefono').length) {
+          if ($("#telefono").length) {
             $("#telefono").focus();
-          }else{            
+          } else {
             $("#passwordGrid").focus();
-          }        
+          }
 
           $("#btnContinueSignUp").css({ display: "none" });
 
@@ -894,6 +900,15 @@ jQuery(document).ready(function ($) {
         let data = JSON.parse(respuesta);
 
         if (data.status === "correcto") {
+          $.ajax({
+            url: plugin_dir + "/php/checkMembershipStatus.php",
+
+            type: "POST",
+
+            data: { consulta, consulta1, ip, browser },
+          }).done(function (respuesta) {
+            console.log(respuesta);
+          });
           if (data.name != "") {
             if (data.tipo == "regular") {
               console.log($("#search-product").val());

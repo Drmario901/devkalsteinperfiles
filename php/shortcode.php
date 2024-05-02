@@ -311,6 +311,17 @@ class shortcodePerfiles
         return render_php_file("client/success_plataforma/pago_aprobado.php");
     }
 
+    //SUCCES_PAGE_SUBSCRIPCION
+    function success_page_subscripcion()
+    {
+        return render_php_file("accounts/subscripcion/succes.php");
+    }
+
+    //FAILED_PAGE_SUBSCRIPCION
+    function failed_page_subscripcion()
+    {
+        return render_php_file("accounts/subscripcion/failed.php");
+    }
 
     // XXX Client XXX
 
@@ -729,16 +740,20 @@ class shortcodePerfiles
     {
         return render_php_file('moderator/product.php');
     }
-    function moderator_blog(){
+    function moderator_blog()
+    {
         return render_php_file('moderator/blog.php');
     }
-    function moderator_view_blog(){
+    function moderator_view_blog()
+    {
         return render_php_file('moderator/view_verify_blog.php');
     }
-    function moderator_barbacoas(){
+    function moderator_barbacoas()
+    {
         return render_php_file('moderator/barbacoas.php');
-    }        
-    function moderator_view_barbacoas(){
+    }
+    function moderator_view_barbacoas()
+    {
         return render_php_file('moderator/view_verify_guide.php');
     }
     function moderator_quotes()

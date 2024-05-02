@@ -220,7 +220,7 @@
     </tbody>
   </table>
 
-  <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+  <div id='tbl-botones' style="display: flex; justify-content: right; gap: 2rem; margin-top: 1.5rem;">
     <?php if ($membresia != 0) : ?>
       <a href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a>
     <?php endif; ?>
