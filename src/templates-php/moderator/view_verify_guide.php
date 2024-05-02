@@ -116,14 +116,14 @@ h5 {
                 <i class='fa-solid fa-shapes'></i>
                 Clasificación del producto
             </h5>
-            <div class='row'>
+            <div class='row mt-2'>
                 <div class='col-md-6 text-sm-start text-md-center'>
-                    <h5>
+                    <h6 style='font-weight: 600;'>
                         <i class='fas fa-pen'></i>
                         Tipo de producto #1
                         <input class='d-inline' type='checkbox' id='name'>
-                    </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
+                    </h6>
+                    <h6 class='text-start' style='font-size: 1em;'>Lorem Ipsum</h6>
                     <a TARGET='_blank' href='#'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                             width=200
@@ -143,10 +143,10 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-i'>
                     </p>
 
-                    <h5>
+                    <h6 style='font-weight: 600;'>
                         <i class='fas fa-circle-info'></i>
                         Description
-                    </h5>
+                    </h6>
                     <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
@@ -183,12 +183,12 @@ h5 {
                     </p>
                 </div>
                 <div class='col-md-6 text-sm-start text-md-center'>
-                    <h5>
+                    <h6 style='font-weight: 600;'>
                         <i class='fas fa-pen'></i>
                         Tipo de producto #2
                         <input class='d-inline' type='checkbox' id='name'>
-                    </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
+                    </h6>
+                    <h6 class='text-start' style='font-size: 1em;'>Lorem Ipsum</h6>
                     <a TARGET='_blank' href='#'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                             width=200
@@ -208,10 +208,10 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-i'>
                     </p>
 
-                    <h5>
+                    <h6 style='font-weight: 600;'>
                         <i class='fas fa-circle-info'></i>
                         Description
-                    </h5>
+                    </h6>
                     <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
