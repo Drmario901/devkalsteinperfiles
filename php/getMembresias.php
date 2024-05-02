@@ -7,7 +7,7 @@ $acc = $_SESSION['emailAccount'];
 // Utiliza la función de conexión que se ajusta a la base de datos
 $conexion_usada = $conexion; // Aquí decides qué conexión utilizar basado en tu lógica
 
-$query_id_acc = $conexion_usada->prepare("SELECT account_aid FROM accounts WHERE account_correo = ?");
+$query_id_acc = $conexion_usada->prepare("SELECT account_aid FROM wp_account WHERE account_correo = ?");
 $query_id_acc->bind_param("s", $acc);
 $query_id_acc->execute();
 $result = $query_id_acc->get_result();
