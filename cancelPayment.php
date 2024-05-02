@@ -1,12 +1,13 @@
 <?php
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
-// Datos que serán enviados
+
+// Datos que serán enviados, con las fechas correctamente formateadas
 $data = array(
   'version' => '3.0',
   'TPE' => '7593339',
-  'date' => '02/05/2024:20:24:09',
-  'date_commande' => '02/05/2024',
+  'date' => (new DateTime())->format('d/m/Y:H:i:s'),
+  'date_commande' => (new DateTime())->format('d/m/Y:H:i:s'),
   'montant' => '10.00USD',
   'montant_a_capturer' => '0USD',
   'montant_deja_capture' => '0USD',
@@ -18,13 +19,9 @@ $data = array(
   'MAC' => "D12304B9D550B6C6E9F5C4025F61D424E21FDFA6"
 );
 
-// Formato URL-encoded para el cuerpo de la solicitud
 $postData = http_build_query($data);
 
-// Crear un manejador de cURL
 $ch = curl_init();
-
-// Opciones para la solicitud cURL
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
@@ -43,17 +40,17 @@ curl_setopt(
   )
 );
 
-// Ejecutar la solicitud
 $response = curl_exec($ch);
 
-// Verificar si hubo algún error durante la ejecución
 if (curl_errno($ch)) {
   echo 'Error en la solicitud cURL: ' . curl_error($ch);
+} else {
+  $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  if ($httpcode == 200) {
+    echo "Respuesta recibida: " . $response;
+  } else {
+    echo "Error HTTP $httpcode: " . $response;
+  }
 }
 
-// Cerrar el manejador de cURL
 curl_close($ch);
-
-// Imprimir la respuesta
-echo $response;
-?>
