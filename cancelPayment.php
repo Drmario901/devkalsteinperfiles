@@ -4,11 +4,11 @@ $url = 'https://p.monetico-services.com/capture_paiement.cgi';
 
 // Datos que serán enviados
 $data = array(
-  'version' => '3.0',
+  'version' => '1.0',
   'TPE' => '7593339',
   'date' => '02/05/2024:19:10:30',
   'date_commande' => '02/05/2024',
-  'montant' => '10.00USD',
+  'montant' => '10USD',
   'montant_a_capturer' => '0USD',
   'montant_deja_capture' => '0USD',
   'montant_restant' => '0USD',
@@ -30,15 +30,18 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  'Pragma: no-cache',
-  'Connection: close',
-  'User-Agent: AuthClient',
-  'Host: p.monetico-services.com',
-  'Accept: */*',
-  'Content-Type: application/x-www-form-urlencoded',
-  'Content-Length: ' . strlen($postData)
-)
+curl_setopt(
+  $ch,
+  CURLOPT_HTTPHEADER,
+  array(
+    'Pragma: no-cache',
+    'Connection: close',
+    'User-Agent: AuthClient',
+    'Host: p.monetico-services.com',
+    'Accept: */*',
+    'Content-Type: application/x-www-form-urlencoded',
+    'Content-Length: ' . strlen($postData)
+  )
 );
 
 // Ejecutar la solicitud
