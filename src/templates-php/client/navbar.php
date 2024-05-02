@@ -10,13 +10,13 @@
         </button>
         <nav class='navbar'>
             <div class='container'>
-                <h1 class='mt-auto pb-3'>
-                    <a id='btn-logo' href='https://dev.kalstein.plus/'><img
-                            src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png'
-                            alt='Kalstein' width='200' height='40'></a>
-                </h1>
                 <ul class='navbar-list'>
                     <div class="d-flex flex-row">
+                        <h1 class='mt-auto pb-3'>
+                            <a id='btn-logo' href='https://dev.kalstein.plus/'><img
+                                    src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIIN-PLUS-2.png'
+                                    alt='Kalstein' width='200' height='40'></a>
+                        </h1>
                         <li>
                             <a href='#' id='btnMail' class='navbar-link icon-box'>
                                 <span class='material-symbols-rounded icon position-relative'>
