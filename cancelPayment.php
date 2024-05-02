@@ -1,6 +1,6 @@
 <?php
 
-$url = 'https://p.monetico-services.com/';
+$url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
 
 // Datos que serán enviados
 $data = array(
