@@ -2115,6 +2115,10 @@ input:focus {
   text-align: center;
 }
 
+.text-muted {
+  margin: 0;
+}
+
 .text-danger {
   font-weight: 700;
   color: #721c24;
@@ -2122,6 +2126,7 @@ input:focus {
   align-items: center;
   gap: 5px;
   flex-wrap: nowrap;
+  margin: 0;
 }
 
 .alert-link {
