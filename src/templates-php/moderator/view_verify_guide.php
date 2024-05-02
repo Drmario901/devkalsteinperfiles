@@ -113,9 +113,8 @@ h5 {
         </div>
         <div class='card mb-3'>
             <h5>
-                <i class='fas fa-pen'></i>
+                <i class='fa-solid fa-shapes'></i>
                 Clasificación del producto
-                <input class='d-inline' type='checkbox' id='name'>
             </h5>
             <div class='row'>
                 <div class='col-md-6 text-sm-start text-md-center'>
