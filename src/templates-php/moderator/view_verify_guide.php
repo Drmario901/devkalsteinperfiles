@@ -22,7 +22,8 @@ input[type="checkbox"] {
 }
 
 h5,
-p, h6 {
+p,
+h6 {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -411,7 +412,7 @@ h5 {
                 <div class='row'>
                     <div class='col-md-4 align-items-center'>
                         <div>
-                        <h6 class='text-start' style='font-weight: 600;'>
+                            <h6 class='text-start' style='font-weight: 600;'>
                                 <i class='fas fa-pen'></i>
                                 Manual #1
                                 <input class='d-inline' type='checkbox' id='name'>
@@ -435,6 +436,10 @@ h5 {
                             </p>
                         </div>
                         <div>
+                            <h6 class='text-start' style='font-weight: 600;'>
+                                <i class='fas fa-circle-info'></i>
+                                Description
+                            </h6>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
@@ -459,7 +464,7 @@ h5 {
                     </div>
                     <div class='col-md-4 align-items-center'>
                         <div>
-                        <h6 class='text-start' style='font-weight: 600;'>
+                            <h6 class='text-start' style='font-weight: 600;'>
                                 <i class='fas fa-pen'></i>
                                 Manual #2
                                 <input class='d-inline' type='checkbox' id='name'>
@@ -483,6 +488,10 @@ h5 {
                             </p>
                         </div>
                         <div>
+                            <h6 class='text-start' style='font-weight: 600;'>
+                                <i class='fas fa-circle-info'></i>
+                                Description
+                            </h6>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
@@ -507,7 +516,7 @@ h5 {
                     </div>
                     <div class='col-md-4 align-items-center'>
                         <div>
-                        <h6 class='text-start' style='font-weight: 600;'>
+                            <h6 class='text-start' style='font-weight: 600;'>
                                 <i class='fas fa-pen'></i>
                                 Manual #3
                                 <input class='d-inline' type='checkbox' id='name'>
@@ -531,6 +540,10 @@ h5 {
                             </p>
                         </div>
                         <div>
+                            <h6 class='text-start' style='font-weight: 600;'>
+                                <i class='fas fa-circle-info'></i>
+                                Description
+                            </h6>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
@@ -581,6 +594,10 @@ h5 {
                     </div>
 
                     <div class='col-md-8'>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h6>
                         <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                             <p style='text-align: justify;'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id
