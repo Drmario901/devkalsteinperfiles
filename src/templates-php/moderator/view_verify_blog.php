@@ -87,7 +87,6 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-d'>
                     </p>
 
-                    $div_acc
                 </div>
 
             </div>
@@ -120,7 +119,6 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-d'>
                     </p>
 
-                    $div_acc
                 </div>
 
             </div>
@@ -153,7 +151,6 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-d'>
                     </p>
 
-                    $div_acc
                 </div>
 
             </div>
@@ -186,7 +183,6 @@ h5 {
                         <input class='d-inline' type='checkbox' id='professionalism-d'>
                     </p>
 
-                    $div_acc
                 </div>
 
             </div>
