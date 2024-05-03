@@ -1,4 +1,4 @@
-<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(33,50,128, 1), rgba(23,35,89, 1)), url('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
+<footer class="footer-kalstein" style="background-image: linear-gradient(rgba(33,50,128, 1), rgba(33,50,128, 1)), url('https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/banner-footer/<?php echo $footer_img ?>');">
     <div class="container">
         <div>
             <img class='kalstein-logo-footer' src="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/LOGO-KALSTEIN-02-WHITE.png" alt="kalstein_plus">
