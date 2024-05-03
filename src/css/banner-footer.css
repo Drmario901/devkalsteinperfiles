@@ -62,6 +62,7 @@
     font-weight: bold;
     border-radius: 8px;
     text-align: center;
+    transition: 0.3s ease all;
 }
 
 .footer-main-button_editor {
