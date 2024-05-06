@@ -404,6 +404,124 @@ h5 {
         <div class='card mb-3'>
             <div class='row text-sm-start text-md-center'>
                 <h5>
+                <i class='fa-solid fa-shop'></i>
+                    Catálogo de productos
+                </h5>
+            </div>
+            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+                <div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'></h6>
+                        <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class='card mb-3'>
+            <div class='row text-sm-start text-md-center'>
+                <h5>
                     <i class='fa-solid fa-book-open'></i>
                     Manuales
                 </h5>
