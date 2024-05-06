@@ -405,7 +405,7 @@ h5 {
             <div class='row text-sm-start text-md-center'>
                 <h5>
                 <i class='fa-solid fa-shop'></i>
-                    Catálogo de productos
+                    Catálogo de producto
                 </h5>
             </div>
             <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
@@ -461,9 +461,6 @@ h5 {
                         <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
                     </div>
                 </div>
-
-            </div>
-            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                 <div class='col-md-3 align-items-center'>
                     <div>
                         <a TARGET='_blank' href='#'>
