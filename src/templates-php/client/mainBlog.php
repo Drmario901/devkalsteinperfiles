@@ -102,7 +102,7 @@
     }
     </style>
 
-    <div id="seccion_blog">
+    <div id="seccion_blog" display="none">
         <div class="contenedor_patron_css">
             <main class="contenedor_principal">
                 <div class="contenedor_guiasInf"
