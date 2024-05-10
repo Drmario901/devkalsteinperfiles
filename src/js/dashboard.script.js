@@ -388,6 +388,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel06").css({ display: "none" });
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     $("#c-profile").css({ display: "block" });
     $("#c-security").css({ display: "none" });
     $("#btnProfilePR01").addClass("active");

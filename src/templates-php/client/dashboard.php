@@ -104,12 +104,16 @@ error_reporting(E_ALL);
             echo '<br>';
             echo '<br>';
             include  'diagnosis.php';
-            ?>
+        ?>
+        
         <?php
             include 'mainBlog.php';
-            include 'guide.php';
         ?>
 
+
+        <?php            
+            include 'guide.php';
+        ?>
     </article>
 
     <!-- #FOOTER -->      
