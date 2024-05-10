@@ -106,24 +106,26 @@
                     style="display: grid; grid-template-columns: 2fr 1fr; gap: 2em; margin: auto; max-width: 1140px; margin-top: 20px;">
                     <div class="columna_principal_guias">
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
                                 </h4>
-                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
+								<hr
+                            style="height:3px; width:75px; border:none; color:#213280; background-color:#213280;">
+                                <p style="font-family: Roboto; line-height: 1.5em">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
-                                    <p style="font-family: var(--fuente-parrafos);">
+                                    <button class="_df_button" id="book1" source="#">Ver mas</button>
+                                    <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -136,24 +138,58 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
                                 </h4>
-                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
+								<hr
+                            style="height:3px; width:75px; border:none; color:#213280; background-color:#213280;">
+                                <p style="font-family: Roboto; line-height: 1.5em">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
-                                    <p style="font-family: var(--fuente-parrafos);">
+                                    <button class="_df_button" id="book1" source="#">Ver mas</button>
+                                    <p style="font-family: Roboto; margin: 0">
+                                        <svg style="display: inline; width:15px; height:15px;"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path
+                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                                        </svg>
+                                        Publicado por <b>Autor</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+						<div class="contenedor_vistaprevia_guia"
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
+                            <div class="thumbnail_guia">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
+                                    alt="guia" width='200' />
+                            </div>
+                            <div class="contenido_guia"
+                                style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
+                                </h4>
+								<hr
+                            style="height:3px; width:75px; border:none; color:#213280; background-color:#213280;">
+                                <p style="font-family: Roboto; line-height: 1.5em">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
+                                    pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
+                                    ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
+                                    auctor, quis auctor neque tristique.</p>
+                                <div class="footer-guia"
+                                    style="display: flex; align-items: center; justify-content: space-between">
+                                    <button class="_df_button" id="book1" source="#">Ver mas</button>
+                                    <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -166,54 +202,26 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
                                 </h4>
-                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
+								<hr
+                            style="height:3px; width:75px; border:none; color:#213280; background-color:#213280;">
+                                <p style="font-family: Roboto; line-height: 1.5em">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
-                                    <p style="font-family: var(--fuente-parrafos);">
-                                        <svg style="display: inline; width:15px; height:15px;"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                            <path
-                                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                                        </svg>
-                                        Publicado por <b>Autor</b>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
-                            <div class="thumbnail_guia">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
-                                    alt="guia" width='200' />
-                            </div>
-                            <div class="contenido_guia"
-                                style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
-                                </h4>
-                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
-                                    pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
-                                    ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
-                                    auctor, quis auctor neque tristique.</p>
-                                <div class="footer-guia"
-                                    style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
-                                    <p style="font-family: var(--fuente-parrafos);">
+                                    <button class="_df_button" id="book1" source="#">Ver mas</button>
+                                    <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
