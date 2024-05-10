@@ -1,4 +1,4 @@
-<div id='c-panel20'>
+<div id='c-panel20' style="display: none">
     <?php
 			// Incluir el archivo de traducciones
 			include __DIR__.'/../../../php/translations.php';
