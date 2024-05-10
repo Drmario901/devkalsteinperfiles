@@ -105,8 +105,9 @@ error_reporting(E_ALL);
             echo '<br>';
             include  'diagnosis.php';
         ?>
-        
+
         <?php
+        echo 'Hola';
             include 'mainBlog.php';
         ?>
 
