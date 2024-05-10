@@ -106,7 +106,7 @@
                     style="display: grid; grid-template-columns: 2fr 1fr; gap: 2em; margin: auto; max-width: 1140px; margin-top: 20px;">
                     <div class="columna_principal_guias">
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
+                            style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
+                            style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
+                            style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
@@ -208,7 +208,7 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
+                            style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
@@ -243,21 +243,20 @@
                         </div>
                     </div>
                     <div class="columna_secundaria_guias">
-                        <h2 class="titulo_destacados" style="font-family: var(--fuente-titulos);">Articulos destacados
-                        </h2>
+                        <h3 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600">Articulos destacados
+                        </h3>
                         <div class="contenedor-destacadas"
-                            style="display: flex; flex-direction: column; flex-wrap: wrap; gap: 20px; margin-top: 10px">
+                            style="display: flex; flex-direction: column; flex-wrap: wrap; gap: 20px; margin: 10px 0">
                             <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
-                                style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); cursor: pointer">
+                                style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                 <div class="thumbnail_guia">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                         alt="guia" width='150' />
                                 </div>
                                 <div class="contenido_guia" style="margin-top: 1em">
-                                    <h3 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la
-                                        guia
-                                    </h3>
-                                    <p style="font-family: var(--fuente-parrafos); margin-top: 10px">
+                                    <h5 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
+                                    </h5>
+                                    <p style="font-family: Roboto; margin-top: 10px">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -269,16 +268,15 @@
                                 </div>
                             </div>
                             <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
-                                style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); cursor: pointer">
+                                style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                 <div class="thumbnail_guia">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                         alt="guia" width='150' />
                                 </div>
                                 <div class="contenido_guia" style="margin-top: 1em">
-                                    <h3 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la
-                                        guia
-                                    </h3>
-                                    <p style="font-family: var(--fuente-parrafos); margin-top: 10px">
+                                    <h5 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
+                                    </h5>
+                                    <p style="font-family: Roboto; margin-top: 10px">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -290,16 +288,15 @@
                                 </div>
                             </div>
                             <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
-                                style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); cursor: pointer">
+                                style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                 <div class="thumbnail_guia">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                         alt="guia" width='150' />
                                 </div>
                                 <div class="contenido_guia" style="margin-top: 1em">
-                                    <h3 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la
-                                        guia
-                                    </h3>
-                                    <p style="font-family: var(--fuente-parrafos); margin-top: 10px">
+                                    <h5 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
+                                    </h5>
+                                    <p style="font-family: Roboto; margin-top: 10px">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
