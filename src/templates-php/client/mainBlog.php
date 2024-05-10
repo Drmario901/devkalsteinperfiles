@@ -106,30 +106,23 @@
                     style="display: grid; grid-template-columns: 2fr 1fr; gap: 2em; margin: auto; max-width: 1140px; margin-top: 20px;">
                     <div class="columna_principal_guias">
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h2 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la guia
-                                </h2>
-                                <p style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet, consectetur
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                </h4>
+                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <a href="" class="boton_ver_mas btn_ver_articulo" style="width: 150px;">
-                                        Ver más
-                                        <svg class="icono_ver_mas" xmlns="http://www.w3.org/2000/svg" width="20"
-                                            height="20" viewBox="0 0 448 512">
-                                            <path
-                                                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                                        </svg>
-                                    </a>
+                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
                                     <p style="font-family: var(--fuente-parrafos);">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -143,30 +136,23 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h2 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la guia
-                                </h2>
-                                <p style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet, consectetur
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                </h4>
+                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <a href="" class="boton_ver_mas btn_ver_articulo" style="width: 150px;">
-                                        Ver más
-                                        <svg class="icono_ver_mas" xmlns="http://www.w3.org/2000/svg" width="20"
-                                            height="20" viewBox="0 0 448 512">
-                                            <path
-                                                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                                        </svg>
-                                    </a>
+                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
                                     <p style="font-family: var(--fuente-parrafos);">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -180,30 +166,23 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h2 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la guia
-                                </h2>
-                                <p style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet, consectetur
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                </h4>
+                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <a href="" class="boton_ver_mas btn_ver_articulo" style="width: 150px;">
-                                        Ver más
-                                        <svg class="icono_ver_mas" xmlns="http://www.w3.org/2000/svg" width="20"
-                                            height="20" viewBox="0 0 448 512">
-                                            <path
-                                                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                                        </svg>
-                                    </a>
+                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
                                     <p style="font-family: var(--fuente-parrafos);">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -217,30 +196,23 @@
                             </div>
                         </div>
                         <div class="contenedor_vistaprevia_guia"
-                            style="padding: 10px; border: solid 1px #c9c9c9; border-radius: 12px; box-shadow: 1px 1px 5px rgb(0 0 0 / 44%); display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
+                            style="padding: 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center;">
                             <div class="thumbnail_guia">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXZEbAw2rTlg6VfF0t7bVOTESl1YMUmp2QvwDtar4SQ&s"
                                     alt="guia" width='200' />
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h2 class="titulo_guia" style="font-family: var(--fuente-titulos);">Titulo de la guia
-                                </h2>
-                                <p style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet, consectetur
+                                <h4 class="titulo_guia" style="font-family: Montserrat;">Titulo de la guia
+                                </h4>
+                                <p style="font-family: Roboto;">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
                                     pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
                                     ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <a href="" class="boton_ver_mas btn_ver_articulo" style="width: 150px;">
-                                        Ver más
-                                        <svg class="icono_ver_mas" xmlns="http://www.w3.org/2000/svg" width="20"
-                                            height="20" viewBox="0 0 448 512">
-                                            <path
-                                                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                                        </svg>
-                                    </a>
+                                    <button class="_df_button" id="book1" source="https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/KALSTEIN -  Ultrasonic Homogenizer Processor Sonicator for Liquid Processing YR05829 - YR05831.pdf">Ver mas</button>
                                     <p style="font-family: var(--fuente-parrafos);">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
