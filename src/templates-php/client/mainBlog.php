@@ -1,4 +1,4 @@
 <!--div id='c-panel16' style='display: none;'-->
     <br><br><br>
-    <script>alert.log('AQUI ESTOY MMGVO')</script>
+    <h1>Main blog</h1>
 <!--/div-->

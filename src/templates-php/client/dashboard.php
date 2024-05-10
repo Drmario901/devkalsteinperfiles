@@ -100,11 +100,9 @@ error_reporting(E_ALL);
 
     <div id='c-panel16' style='display: none'>
         <?php
-        echo 'Hola';
             include 'mainBlog.php';
         ?>
     </div>
-
 
         <?php            
             include 'guide.php';
