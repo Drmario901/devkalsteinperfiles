@@ -41,7 +41,7 @@
             justify-content: space-evenly !important;
         }
 		.contenedor-destacadas h5 {
-            font-size: 1.5em;
+            font-size: 1.25em;
         }
     }
 
@@ -249,7 +249,7 @@
                         <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Articulos destacados
                         </h4>
                         <div class="contenedor-destacadas"
-                            style="display: flex; flex-direction: column; flex-wrap: wrap; gap: 20px; margin: 10px 0">
+                            style="display: flex; flex-direction: column; gap: 20px; margin: 10px 0">
                             <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
                                 style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                 <div class="thumbnail_guia">
