@@ -105,7 +105,10 @@ error_reporting(E_ALL);
             echo '<br>';
             include  'diagnosis.php';
             ?>
-            
+        <?php
+            include 'blog.php';
+            include 'guide.php';
+        ?>
 
     </article>
 
