@@ -113,8 +113,8 @@
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
-                                </h4>
+                                <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
+                                </h5>
                                 <hr
                                     style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
@@ -147,8 +147,8 @@
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
-                                </h4>
+                                <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
+                                </h5>
                                 <hr
                                     style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
@@ -181,8 +181,8 @@
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
-                                </h4>
+                                <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
+                                </h5>
                                 <hr
                                     style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
@@ -215,8 +215,8 @@
                             </div>
                             <div class="contenido_guia"
                                 style="display: flex; flex-direction: column; justify-content: space-between;">
-                                <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
-                                </h4>
+                                <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
+                                </h5>
                                 <hr
                                     style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
@@ -243,8 +243,8 @@
                         </div>
                     </div>
                     <div class="columna_secundaria_guias">
-                        <h3 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600">Articulos destacados
-                        </h3>
+                        <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Articulos destacados
+                        </h4>
                         <div class="contenedor-destacadas"
                             style="display: flex; flex-direction: column; flex-wrap: wrap; gap: 20px; margin: 10px 0">
                             <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
