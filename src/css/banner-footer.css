@@ -62,10 +62,7 @@
     font-weight: bold;
     border-radius: 8px;
     text-align: center;
-}
-
-.footer-main-button:hover {
-    background-color: #ddd;
+    transition: 0.3s ease all;
 }
 
 .footer-main-button_editor {
@@ -75,13 +72,13 @@
     border-radius: 8px;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     color: #000000 !important;
     transition: 0.3s ease all;
 }
 
-.footer-main-button_editor:hover {
-    background-color: hsl(229.26deg 59.01% 31.57%);
+.footer-main-button_editor:hover, .footer-main-button:hover {
+    background-color: #314abd;
     color: #ffffff !important;
 }
 

@@ -25,9 +25,9 @@ $cancel = new CancelRequest([
     'reference' => '11111',
     'language' => 'ES',
     'currency' => 'USD',
-    'amount' => 20,
-    'MAC' => ''
-    'amountRecovered' => 10, 
+    'amount' => 10,
+    'MAC' => '',
+    'amountRecovered' => 0, 
 ]);
 
 try {
@@ -37,7 +37,7 @@ try {
     exit;
 }
 
-url = "https://p.monetico-services.com/capture_paiement.cgi";
+$url = "https://p.monetico-services.com/capture_paiement.cgi";
 
 ?>
 <html>
