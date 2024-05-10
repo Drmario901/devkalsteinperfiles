@@ -80,6 +80,16 @@
                             <span data-i18n="client:soporteTecnico">Soporte técnico</span>
                         </a>
                     </li>
+                    <li>
+                        <a href='#' id='btnBlogPr01' class='navbar-link icon-box'>
+                            <span data-i18n="client:soporteTecnico">Blogs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' id='btnGuidePr01' class='navbar-link icon-box'>
+                            <span data-i18n="client:soporteTecnico">Guides</span>
+                        </a>
+                    </li>
                     <!--li>
                         <a href="#" id="diagnosis-app" class='navbar-link icon-box'>
                             <span>Diagnóstico</span>
