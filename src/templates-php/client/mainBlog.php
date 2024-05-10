@@ -116,7 +116,7 @@
                                 <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h4>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; padding-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -150,7 +150,7 @@
                                 <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h4>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; padding-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -184,7 +184,7 @@
                                 <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h4>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; padding-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -218,7 +218,7 @@
                                 <h4 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h4>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; padding-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
