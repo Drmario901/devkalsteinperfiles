@@ -163,17 +163,13 @@ jQuery(document).ready(function ($) {
   function resetNavLinks(exception) {
     let links = [
       "#btnDashboardPr01",
-
       "#btnQuotePr01",
-
       "#btnRecentActivityPr01",
-
       "#btnEditProfilePr01",
-
       "#btnReportPr01",
-
+      "#btnBlogPr01",
+      "#btnGuidePr01",
       "#btnCatalogs",
-
       "#btnMail",
     ];
 
@@ -196,6 +192,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     showDataQuoteRecent();
     showDataSearchesRecent();
     dataForDonutsChartjsAccount();
@@ -220,6 +219,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     $("#c-panel10").css({ display: "block" });
     $("#under01").addClass("underline");
     $("#under02").removeClass("underline");
@@ -249,6 +251,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     $("#under01").addClass("underline");
     $("#under02").removeClass("underline");
     $("#c-historyQuote").css({ display: "block" });
@@ -280,6 +285,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     tblAccess();
     tblDeletes();
     tblSearches();
@@ -306,10 +314,61 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     $("#c-historySupportPR01").css({ display: "block" });
     $("#c-quoteSupportPR01").css({ display: "none" });
     $("#c-rental-equipments").css({ display: "none" });
     $("#c-orderSupportPR01").css({ display: "none" });
+    $("#btnHistorySupportPR01").addClass("active");
+    $("#btnQuoteSupportPR01").removeClass("active");
+    $("#btnOrderSupportPR01").removeClass("active");
+    $("#btnRentalEquipments").removeClass("active");
+    searchListServices();
+    tblReportsTickets();
+  });
+
+  $(document).on("click", "#btnBlogPr01", function () {
+    window.scrollTo(0, 0);
+    $("#btnSearches").click();
+    resetNavLinks("#btnBlogPr01");
+    $("#c-panel01").css({ display: "none" });
+    $("#c-panel02").css({ display: "none" });
+    $("#c-panel03").css({ display: "none" });
+    $("#c-panel04").css({ display: "none" });
+    $("#c-panel05").css({ display: "none" });
+    $("#c-panel06").css({ display: "none" });
+    $("#c-panel07").css({ display: "none" });
+    $("#c-panel08").css({ display: "none" });
+    $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "block" });
+    $("#c-panel17").css({ display: "none" });
+    $("#btnHistorySupportPR01").addClass("active");
+    $("#btnQuoteSupportPR01").removeClass("active");
+    $("#btnOrderSupportPR01").removeClass("active");
+    $("#btnRentalEquipments").removeClass("active");
+    searchListServices();
+    tblReportsTickets();
+  });
+
+  $(document).on("click", "#btnGuidePr01", function () {
+    window.scrollTo(0, 0);
+    $("#btnSearches").click();
+    resetNavLinks("#btnGuidePr01");
+    $("#c-panel01").css({ display: "none" });
+    $("#c-panel02").css({ display: "none" });
+    $("#c-panel03").css({ display: "none" });
+    $("#c-panel04").css({ display: "none" });
+    $("#c-panel05").css({ display: "none" });
+    $("#c-panel06").css({ display: "none" });
+    $("#c-panel07").css({ display: "none" });
+    $("#c-panel08").css({ display: "none" });
+    $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "block" });
     $("#btnHistorySupportPR01").addClass("active");
     $("#btnQuoteSupportPR01").removeClass("active");
     $("#btnOrderSupportPR01").removeClass("active");
@@ -358,6 +417,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
 
     var myGet = getParameterByName("userToConsultPriceShipping");
     if (myGet) {
@@ -985,6 +1047,9 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "block" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
     resetNavLinks("#btnMail");
 
     var myGet = getParameterByName("userToConsultPriceShipping");
