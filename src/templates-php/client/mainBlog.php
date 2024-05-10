@@ -116,7 +116,7 @@
                                 <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h5>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -150,7 +150,7 @@
                                 <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h5>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -184,7 +184,7 @@
                                 <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h5>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -218,7 +218,7 @@
                                 <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo del articulo
                                 </h5>
                                 <hr
-                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 0; margin-bottom: 20px">
+                                    style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
                                 <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
                                     dolor sit
                                     amet, consectetur
@@ -256,7 +256,7 @@
                                 <div class="contenido_guia" style="margin-top: 1em">
                                     <h5 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
                                     </h5>
-                                    <p style="font-family: Roboto; margin-top: 10px">
+                                    <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -276,7 +276,7 @@
                                 <div class="contenido_guia" style="margin-top: 1em">
                                     <h5 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
                                     </h5>
-                                    <p style="font-family: Roboto; margin-top: 10px">
+                                    <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -296,7 +296,7 @@
                                 <div class="contenido_guia" style="margin-top: 1em">
                                     <h5 class="titulo_guia" style="font-family: Montserrat;">Titulo del articulo
                                     </h5>
-                                    <p style="font-family: Roboto; margin-top: 10px">
+                                    <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
