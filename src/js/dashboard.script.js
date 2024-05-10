@@ -329,13 +329,13 @@ jQuery(document).ready(function ($) {
     tblReportsTickets();
   });
 
+
   $(document).on("click", "#btnBlogPr01", function () {
     window.scrollTo(0, 0);
-    $("#btnBlogPr01").click();
     resetNavLinks("#btnBlogPr01");
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
-    $("#c-panel16").css({ display: "block" });
+    $("#c-panel03").css({ display: "none" });
     $("#c-panel04").css({ display: "none" });
     $("#c-panel05").css({ display: "none" });
     $("#c-panel06").css({ display: "none" });
@@ -343,21 +343,11 @@ jQuery(document).ready(function ($) {
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
     $("#c-panel15").css({ display: "none" });
-    //$("#c-panel16").css({ display: "none" });
+    $("#c-panel16").css({ display: "block" });
     $("#c-panel17").css({ display: "none" });
-    tblAccess();
-    tblDeletes();
-    tblSearches();
-    tblUpdates();
-
-    var myGet = getParameterByName("userToConsultPriceShipping");
-    if (myGet) {
-      window.location.href = domain + "/dashboard/#activity";
-    } else {
-      location.hash = "#activity";
-    }
   });
 
+  
   $(document).on("click", "#btnGuidePr01", function () {
     window.scrollTo(0, 0);
     $("#btnSearches").click();
