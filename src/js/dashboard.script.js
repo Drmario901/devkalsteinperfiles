@@ -335,7 +335,7 @@ jQuery(document).ready(function ($) {
     resetNavLinks("#btnBlogPr01");
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
-    $("#c-panel03").css({ display: "block" });
+    $("#c-panel16").css({ display: "block" });
     $("#c-panel04").css({ display: "none" });
     $("#c-panel05").css({ display: "none" });
     $("#c-panel06").css({ display: "none" });
