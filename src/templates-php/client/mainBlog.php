@@ -23,7 +23,7 @@
     <style>
     @media (max-width: 768px) {
         .contenedor_guiasInf {
-            grid-template-columns: 80% !important;
+            grid-template-columns: 100% !important;
             margin: auto !important;
             justify-content: center !important;
             align-items: center !important;
