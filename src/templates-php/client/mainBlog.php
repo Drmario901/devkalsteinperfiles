@@ -40,6 +40,9 @@
             flex-direction: row !important;
             justify-content: space-evenly !important;
         }
+		.contenedor-destacadas h5 {
+            font-size: 1.5em;
+        }
     }
 
     @media (max-width: 576px) {
