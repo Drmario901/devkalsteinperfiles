@@ -106,7 +106,7 @@ error_reporting(E_ALL);
             include  'diagnosis.php';
             ?>
         <?php
-            include 'blog.php';
+            include 'mainBlog.php';
             include 'guide.php';
         ?>
 
