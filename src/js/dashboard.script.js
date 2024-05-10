@@ -331,7 +331,7 @@ jQuery(document).ready(function ($) {
 
   $(document).on("click", "#btnBlogPr01", function () {
     window.scrollTo(0, 0);
-    $("#btnSearches").click();
+    $("#btnBlogPr01").click();
     resetNavLinks("#btnBlogPr01");
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
@@ -343,7 +343,7 @@ jQuery(document).ready(function ($) {
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
     $("#c-panel15").css({ display: "none" });
-    $("#c-panel16").css({ display: "none" });
+    //$("#c-panel16").css({ display: "none" });
     $("#c-panel17").css({ display: "none" });
     tblAccess();
     tblDeletes();
