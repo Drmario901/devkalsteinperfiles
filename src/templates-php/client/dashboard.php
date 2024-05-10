@@ -98,18 +98,12 @@ error_reporting(E_ALL);
             include 'catalogs.php';
         ?>
 
-        <?php 
-            //DIAGNOSIS APP 
-            //require __DIR__. '/diagnosis/index.php';
-            echo '<br>';
-            echo '<br>';
-            include  'diagnosis.php';
-        ?>
-
+    <div id='c-panel16' style='display: none'>
         <?php
         echo 'Hola';
             include 'mainBlog.php';
         ?>
+    </div>
 
 
         <?php            
