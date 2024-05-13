@@ -91,10 +91,10 @@
                         <main class="contenedor_principal" style="display: flex; justify-content: center;">
                             <div class="contenido_articulo" style="max-width: 86%; display: grid; gap: 1.5em">
                                 <div>
-                                    <h2 style="font-family: Montserrat; margin-bottom: 10px;">Titulo del
+                                    <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0">Titulo del
                                         articulo</h2>
                                     <hr
-                                        style="height:3px; width:100px; border:none; color:var(--color-primario); background-color:var(--color-primario);">
+                                        style="height:3px; width:100px; border:none; color:var(--color-primario); background-color:#213280;">
                                 </div>
                                 <img src="https://i.pinimg.com/736x/2a/9e/75/2a9e75e2ea1d6a8e87b80c83b560f774.jpg"
                                     width="400">
