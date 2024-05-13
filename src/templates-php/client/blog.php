@@ -91,7 +91,7 @@
                         <main class="contenedor_principal" style="display: flex; justify-content: center;">
                             <div class="contenido_articulo" style="display: grid; gap: 1.5em">
                                 <div>
-                                    <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0; font-weight: 600">Titulo del
+                                    <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0; font-weight: 600; font-size: 2.5em">Titulo del
                                         articulo</h2>
                                     <hr
                                         style="height:3px; width:100px; border:none; color:var(--color-primario); background-color:#213280;opacity:1">
@@ -107,7 +107,7 @@
                                     </svg>
                                     8 de mayo de 2024
                                 </p>
-                                <p class="" style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet,
+                                <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                                     consectetur
                                     adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
                                     tempor
@@ -142,7 +142,7 @@
                                     facilisi.
                                 </p>
                                 <div class="articulo_extracto">
-                                    <h3 style="font-family: Montserrat; margin-bottom: 10px;">Subtitulo del
+                                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">Subtitulo del
                                         articulo</h3>
                                     <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                                         consectetur
@@ -186,7 +186,7 @@
                                     </p>
                                 </div>
                                 <div class="articulo_extracto">
-                                    <h3 style="font-family: Montserrat; margin-bottom: 10px;">Subtitulo del
+                                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">Subtitulo del
                                         articulo</h3>
                                     <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                                         consectetur
