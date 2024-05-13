@@ -107,6 +107,10 @@ error_reporting(E_ALL);
         <?php            
             include 'guide.php';
         ?>
+
+        <?
+            include 'blog.php';
+        ?>
     </article>
 
     <!-- #FOOTER -->      
