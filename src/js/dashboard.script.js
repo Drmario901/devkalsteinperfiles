@@ -4504,6 +4504,19 @@ jQuery(document).ready(function ($) {
   }
 
   $(document).on('click', '#guias_informativas', function(){
-    alert('click en Articulos')
+    window.scrollTo(0, 0);
+    resetNavLinks("#btnGenQuote");
+    $("#c-panel01").css({ display: "none" });
+    $("#c-panel02").css({ display: "none" });
+    $("#c-panel03").css({ display: "none" });
+    $("#c-panel04").css({ display: "none" });
+    $("#c-panel05").css({ display: "none" });
+    $("#c-panel06").css({ display: "none" });
+    $("#c-panel07").css({ display: "none" });
+    $("#c-panel08").css({ display: "none" });
+    $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "none" });
+    $("#c-panel16").css({ display: "block" });
+    $("#c-panel17").css({ display: "none" });
   })
 });
