@@ -246,7 +246,7 @@
                         </div>
                     </div>
                     <div class="columna_secundaria_guias">
-                        <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Articulos destacados
+                        <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Artículos destacados
                         </h4>
                         <div class="contenedor-destacadas"
                             style="display: flex; flex-direction: column; gap: 20px; margin: 10px 0">
