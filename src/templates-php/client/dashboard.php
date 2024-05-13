@@ -104,12 +104,14 @@ error_reporting(E_ALL);
         ?>
     </div>
 
-        <?php            
-            include 'guide.php';
-        ?>
-
+    <div id='c-panel15'>
         <?php
             include 'blog.php';
+        ?>
+    </div>
+
+        <?php            
+            include 'guide.php';
         ?>
     </article>
 

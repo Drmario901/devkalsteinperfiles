@@ -4514,8 +4514,8 @@ jQuery(document).ready(function ($) {
     $("#c-panel07").css({ display: "none" });
     $("#c-panel08").css({ display: "none" });
     $("#c-panel09").css({ display: "none" });
-    $("#c-panel15").css({ display: "none" });
-    $("#c-panel16").css({ display: "block" });
+    $("#c-panel15").css({ display: "block" });
+    $("#c-panel16").css({ display: "none" });
     $("#c-panel17").css({ display: "none" });
     console.log('adasdasdasdasdada')
   })
