@@ -263,7 +263,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <hr style="height:2px; border:none; color:black; background-color:black;" />
+                                    <hr style="height:2px; border:none; color:black; background-color:black; margin: 0" />
                                     <h5
                                         style="font-family: Roboto; display: flex; align-items: center;">
                                         <svg style="display: inline; width:30px; height:30px; margin-right: 1em"
