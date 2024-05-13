@@ -91,14 +91,14 @@
                         <main class="contenedor_principal" style="display: flex; justify-content: center;">
                             <div class="contenido_articulo" style="max-width: 86%; display: grid; gap: 1.5em">
                                 <div>
-                                    <h1 style="font-family: var(--fuente-titulos); margin-bottom: 10px;">Titulo del
-                                        articulo</h1>
+                                    <h2 style="font-family: Montserrat; margin-bottom: 10px;">Titulo del
+                                        articulo</h2>
                                     <hr
                                         style="height:3px; width:100px; border:none; color:var(--color-primario); background-color:var(--color-primario);">
                                 </div>
                                 <img src="https://i.pinimg.com/736x/2a/9e/75/2a9e75e2ea1d6a8e87b80c83b560f774.jpg"
                                     width="400">
-                                <p style="font-family: var(--fuente-parrafos); color: #777">
+                                <p style="font-family: Roboto; color: #777">
                                     <svg style="display: inline; width:15px; height:15px;"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -142,9 +142,9 @@
                                     facilisi.
                                 </p>
                                 <div class="articulo_extracto">
-                                    <h2 style="font-family: var(--fuente-titulos); margin-bottom: 10px;">Subtitulo del
-                                        articulo</h2>
-                                    <p class="" style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet,
+                                    <h3 style="font-family: Montserrat; margin-bottom: 10px;">Subtitulo del
+                                        articulo</h3>
+                                    <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                                         consectetur
                                         adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
                                         tempor
@@ -186,9 +186,9 @@
                                     </p>
                                 </div>
                                 <div class="articulo_extracto">
-                                    <h2 style="font-family: var(--fuente-titulos); margin-bottom: 10px;">Subtitulo del
-                                        articulo</h2>
-                                    <p class="" style="font-family: var(--fuente-parrafos);">Lorem ipsum dolor sit amet,
+                                    <h3 style="font-family: Montserrat; margin-bottom: 10px;">Subtitulo del
+                                        articulo</h3>
+                                    <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                                         consectetur
                                         adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
                                         tempor
@@ -232,9 +232,9 @@
                                 <div class="footer_lectura_articulo" style="display: grid; gap: 10px">
                                     <div class="contenido_footer_lectura_articulo"
                                         style="display: flex; justify-content: space-between;">
-                                        <h4 style="font-family: var(--fuente-titulos); font-weight: 700;">Comparte este
+                                        <h5 style="font-family: Montserrat; font-weight: 700;">Comparte este
                                             articulo
-                                        </h4>
+                                        </h5>
                                         <div class="iconos_redes"
                                             style="display: grid; grid-template-columns: auto auto auto; gap: 10px;">
                                             <a href="#">
@@ -264,8 +264,8 @@
                                         </div>
                                     </div>
                                     <hr style="height:2px; border:none; color:black; background-color:black;" />
-                                    <h4
-                                        style="font-family: var(--fuente-parrafos); display: flex; align-items: center;">
+                                    <h5
+                                        style="font-family: Roboto; display: flex; align-items: center;">
                                         <svg style="display: inline; width:30px; height:30px; margin-right: 1em"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -273,7 +273,7 @@
                                                 d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
                                         </svg>
                                         Autor
-                                    </h4>
+                                    </h5>
                                 </div>
                             </div>
                         </main>
