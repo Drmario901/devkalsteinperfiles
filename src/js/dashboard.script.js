@@ -4502,4 +4502,8 @@ jQuery(document).ready(function ($) {
         console.log("error");
       });
   }
+
+  $(document).on('click', '#guias_informativas', function(){
+    alert('click en Articulos')
+  })
 });
