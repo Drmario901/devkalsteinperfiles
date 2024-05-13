@@ -108,7 +108,7 @@ error_reporting(E_ALL);
             include 'guide.php';
         ?>
 
-        <?
+        <?php
             include 'blog.php';
         ?>
     </article>
