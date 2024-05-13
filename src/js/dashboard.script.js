@@ -4505,7 +4505,6 @@ jQuery(document).ready(function ($) {
 
   $(document).on('click', '#guias_informativas', function(){
     window.scrollTo(0, 0);
-    resetNavLinks("#btnGenQuote");
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
     $("#c-panel03").css({ display: "none" });
