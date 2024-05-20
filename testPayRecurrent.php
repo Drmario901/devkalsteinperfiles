@@ -91,7 +91,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => '5555555',
+    'reference' => '1234567',
     'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
@@ -145,7 +145,7 @@ $fields = $monetico->getFields($purchase);
         }
     </style>
     <form name="payment_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value) : ?>
+        <?php foreach ($fields as $key => $value): ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
