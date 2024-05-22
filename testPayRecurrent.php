@@ -118,8 +118,31 @@ $client = new ClientResource([
 ]);
 $purchase->setClient($client);
 
-$url = base64_decode(encryptURL());
+$url = PurchaseRequest::getUrl();
 $fields = $monetico->getFields($purchase);
+
+// Initialize cURL session
+$ch = curl_init();
+
+// Set the URL and other appropriate options
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Execute cURL session and fetch response
+$response = curl_exec($ch);
+
+// Check for cURL errors
+if ($response === false) {
+    echo 'Curl error: ' . curl_error($ch);
+} else {
+    // Print the response from the server
+    echo 'RESPUESTAAAA' .  $response;
+}
+
+// Close cURL session
+curl_close($ch);
 echo '<br>';
 echo '<br>';
 echo '<br>';
@@ -152,16 +175,16 @@ var_dump('aquiii', $fields);
             }
         }
     </style>
-    <form name="payment_form" action="<?php echo $url; ?>" method="post">
+    <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
         <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
-        <center><?php echo $esText ?></center>
-        <center>
-            <div class="custom-loader"></div>
-        </center>
-    </form>
+    <center><?php echo $esText ?></center>
+    <center>
+        <div class="custom-loader"></div>
+    </center>
+    </form> -->
 </body>
 
 </html>
