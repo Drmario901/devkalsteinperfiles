@@ -26,10 +26,10 @@ function encryptURL()
 }
 
 //GET VARIABLE.
-if (!isset($_GET["idMembership"])) {
+if (!isset($_GET["SUB"])) {
     die('Error');
 }
-$idMembership = $_GET["idMembership"];
+$idMembership = $_GET["SUB"];
 
 $membershipPrices = [
     'SUB1' => 10,
