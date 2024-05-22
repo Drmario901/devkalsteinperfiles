@@ -13,13 +13,12 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    // Concatenate fields in alphabetical order
     ksort($fields);
     $dataString = '';
     foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
-    $dataString = rtrim($dataString, '*'); // Remove the last '*'
+    $dataString = rtrim($dataString, '*');
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
@@ -27,9 +26,10 @@ function calculateMAC($securityKey, $fields) {
 $date = '22/05/2024:16:56:33';
 $date_commande = '22/05/2024';
 
+// Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00EUR';
+$montant = '10.00USD';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
 $version = '3.0';
@@ -41,10 +41,15 @@ $urlRetourOk = 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/';
 $urlRetourErr = 'https://dev.kalstein.plus/plataforma/failed-subscripcion-k/';
 $stoprecurrence = 'OUI';
 
+// Crear arreglo de campos
 $fields = [
     'TPE' => $tpe,
     'date' => $date,
+    'date_commande' => $date_commande,
     'montant' => $montant,
+    'montant_a_capturer' => '0.00USD',
+    'montant_deja_capture' => '0.00USD',
+    'montant_restant' => '0.00USD',
     'reference' => $reference,
     'texte-libre' => $texteLibre,
     'version' => $version,
@@ -56,6 +61,8 @@ $fields = [
     'url_retour_err' => $urlRetourErr,
     'stoprecurrence' => $stoprecurrence
 ];
+
+ksort($fields); // Asegura que los datos estén en orden alfabético por clave
 
 $mac = calculateMAC($securityKey, $fields);
 
