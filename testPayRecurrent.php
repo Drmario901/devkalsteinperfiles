@@ -93,7 +93,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'QUO234234',
+    'reference' => $reference,
     'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
