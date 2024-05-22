@@ -75,7 +75,7 @@ if ($resultado) {
     echo "Error executing the query: " . $conexion->error;
 }
 
-$reference = $idMembership . '-' . $row['user_tag'] . '-' . time();
+$reference = $idMembership . '-' . $row['user_tag'];
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
