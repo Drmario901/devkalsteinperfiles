@@ -146,16 +146,16 @@ echo 'aquiii  ' . $fields;
             }
         }
     </style>
-    <form name="payment_form" action="<?php echo $url; ?>" method="post">
+    <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
         <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
-        <center><?php echo $esText ?></center>
-        <center>
-            <div class="custom-loader"></div>
-        </center>
-    </form>
+    <center><?php echo $esText ?></center>
+    <center>
+        <div class="custom-loader"></div>
+    </center>
+    </form> -->
 </body>
 
 </html>
