@@ -118,7 +118,7 @@ $client = new ClientResource([
 ]);
 $purchase->setClient($client);
 
-$url = encryptURL();
+$url = base64_decode(encryptURL());
 $fields = $monetico->getFields($purchase);
 
 
