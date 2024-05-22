@@ -23,8 +23,8 @@ function calculateMAC($securityKey, $fields) {
 }
 
 // Fecha explícita en el formato correcto
-$date = '22/05/2024:16:56:33';
-$date_commande = '22/05/2024';
+$date = date('d/m/Y:H:i:s');
+$date_commande = date('d/m/Y');
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
@@ -45,7 +45,11 @@ $stoprecurrence = 'OUI';
 $fields = [
     'TPE' => $tpe,
     'date' => $date,
+    'date_commande' => $date_commande,
     'montant' => $montant,
+    'montant_a_capturer' => '0.00USD',
+    'montant_deja_capture' => '0.00USD',
+    'montant_restant' => '0.00USD',
     'reference' => $reference,
     'texte-libre' => $texteLibre,
     'version' => $version,
@@ -62,7 +66,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/paiement.cgi";
+$url = "https://p.monetico-services.com/test/paiement.cgi"; // URL de pruebas
 
 ?>
 <html>
