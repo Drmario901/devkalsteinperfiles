@@ -13,12 +13,12 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    ksort($fields);
+    ksort($fields); // Ordenar campos alfabéticamente
     $dataString = '';
-    foreach ($fields as $key => $value) {
+    foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
-    $dataString = rtrim($dataString, '*'); // Remove the last '*'
+    $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
@@ -29,7 +29,7 @@ $date_commande = '22/05/2024';
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '0.00USD';
+$montant = '10.00USD';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
 $version = '3.0';
@@ -58,13 +58,11 @@ $fields = [
     'stoprecurrence' => $stoprecurrence
 ];
 
-ksort($fields); // Asegura que los datos estén en orden alfabético por clave
-
 $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
+$url = "https://p.monetico-services.com/testKJKLDJ/capture_paiement.cgi";
 
 ?>
 <html>
