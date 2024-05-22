@@ -118,9 +118,12 @@ $client = new ClientResource([
 ]);
 $purchase->setClient($client);
 
-$url = base64_decode(encryptURL());
+$url = PurchaseRequest::getUrl();
 $fields = $monetico->getFields($purchase);
+// $url = base64_decode(encryptURL());
+// $fields = $monetico->getFields($purchase);
 
+echo 'asdasda' . $url . '<br>';
 
 var_dump('aquiiii', $fields);
 
