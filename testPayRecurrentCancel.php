@@ -11,9 +11,8 @@ session_start();
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
 use DansMaCulotte\Monetico\Monetico;
-use DansMaCulotte\Monetico\Requests\CancelRequest;
 
-function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLibre, $version, $lgue, $societe, $contexteCommande, $mail, $urlRetourOk, $urlRetourErr) {
+function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLibre, $version, $lgue, $societe, $contexteCommande, $mail, $urlRetourOk, $urlRetourErr, $stoprecurrence) {
     $dataArray = [
         $tpe,
         $date,
@@ -26,16 +25,17 @@ function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLib
         $contexteCommande,
         $mail,
         $urlRetourOk,
-        $urlRetourErr
+        $urlRetourErr,
+        $stoprecurrence
     ];
 
     $dataString = implode('*', $dataArray);
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha explícita en el formato correcto
-$date = '22/05/2024:16:56:33'; // Usa una fecha específica
-$date_commande = '22/05/2024'; // Fecha de la orden en el formato correcto
+// Fecha actual en el formato correcto
+$date = date('d/m/Y:H:i:s');
+$date_commande = date('d/m/Y'); // Fecha de la orden en el formato correcto
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
@@ -50,34 +50,32 @@ $contexteCommande = 'eyJiaWxsaW5nIjp7Im5hbWUiOiJWaWN0b3IiLCJhZGRyZXNzTGluZTEiOiJ
 $mail = 'valfonsob12@yopmail.com';
 $urlRetourOk = 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/';
 $urlRetourErr = 'https://dev.kalstein.plus/plataforma/failed-subscripcion-k/';
+$stoprecurrence = 'OUI';
 
-$mac = calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLibre, $version, $lgue, $societe, $contexteCommande, $mail, $urlRetourOk, $urlRetourErr);
+$mac = calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLibre, $version, $lgue, $societe, $contexteCommande, $mail, $urlRetourOk, $urlRetourErr, $stoprecurrence);
 
-$monetico = new Monetico(
-    $tpe,
-    $securityKey,
-    $societe
-);
-
-$cancel = new CancelRequest([
-    'dateTime' => new DateTime(),
-    'orderDate' => new DateTime(),
+$fields = [
+    'version' => $version,
+    'TPE' => $tpe,
+    'date' => $date,
+    'date_commande' => $date_commande,
+    'montant' => $montant,
+    'montant_a_capturer' => '0EUR',
+    'montant_deja_capture' => '0EUR',
+    'montant_restant' => '0EUR',
     'reference' => $reference,
-    'language' => $lgue,
-    'currency' => 'USD',
-    'amount' => 10.00,
-    'amountRecovered' => 0.00,
+    'lgue' => $lgue,
+    'societe' => $societe,
+    'stoprecurrence' => $stoprecurrence,
     'MAC' => $mac,
-]);
+    'texte-libre' => $texteLibre,
+    'contexte_commande' => $contexteCommande,
+    'mail' => $mail,
+    'url_retour_ok' => $urlRetourOk,
+    'url_retour_err' => $urlRetourErr
+];
 
-try {
-    $fields = $monetico->getFields($cancel);
-} catch (Exception $e) {
-    echo "Error al obtener los campos: " . $e->getMessage();
-    exit;
-}
-
-$url = "https://p.monetico-services.com/test/paiement.cgi";
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
 
 ?>
 <html>
