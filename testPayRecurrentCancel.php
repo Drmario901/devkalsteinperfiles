@@ -13,9 +13,10 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    ksort($fields); // Ordenar campos alfabéticamente
+    // Ordenar los campos alfabéticamente
+    ksort($fields);
     $dataString = '';
-    foreach ($fields as $value) {
+    foreach ($fields as $key => $value) {
         $dataString .= $value . '*';
     }
     $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
@@ -23,13 +24,13 @@ function calculateMAC($securityKey, $fields) {
 }
 
 // Fecha explícita en el formato correcto
-$date = date('d/m/Y:H:i:s'); // Fecha y hora actuales
+$date = date('d/m/Y_a_H:i:s'); // Fecha y hora actuales
 $date_commande = date('d/m/Y'); // Solo la fecha actual
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00USD';
+$montant = '20.00USD'; // Asegurarse de que el monto esté en el formato correcto
 $reference = 'Membresia-SUB2-@valfonsob12-1716406357';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e4678ae4ba5.59995320';
 $version = '3.0';
@@ -47,9 +48,6 @@ $fields = [
     'date' => $date,
     'date_commande' => $date_commande,
     'montant' => $montant,
-    'montant_a_capturer' => '0.00USD',
-    'montant_deja_capture' => '0.00USD',
-    'montant_restant' => '0.00USD',
     'reference' => $reference,
     'texte-libre' => $texteLibre,
     'version' => $version,
@@ -66,7 +64,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; // URL de pruebas
+$url = "https://p.monetico-services.com/test/paiement.cgi"; // URL de pruebas
 
 ?>
 <html>
