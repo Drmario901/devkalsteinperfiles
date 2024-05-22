@@ -30,7 +30,7 @@ $date_commande = '22/05/2024';
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00EUR';
+$montant = '10.00USD';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
 $version = '3.0';
@@ -46,7 +46,11 @@ $stoprecurrence = 'OUI';
 $fields = [
     'TPE' => $tpe,
     'date' => $date,
+    'date_commande' => $date_commande,
     'montant' => $montant,
+    'montant_a_capturer' => '0.00USD',
+    'montant_deja_capture' => '0.00USD',
+    'montant_restant' => '0.00USD',
     'reference' => $reference,
     'texte-libre' => $texteLibre,
     'version' => $version,
@@ -59,11 +63,13 @@ $fields = [
     'stoprecurrence' => $stoprecurrence
 ];
 
+ksort($fields); // Asegura que los datos estén en orden alfabético por clave
+
 $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/capture_paiement.cgi";
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
 
 ?>
 <html>
