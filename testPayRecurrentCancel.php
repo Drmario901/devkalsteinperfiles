@@ -12,35 +12,25 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 
 use DansMaCulotte\Monetico\Monetico;
 
-function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLibre, $version, $lgue, $societe, $contexteCommande, $mail, $urlRetourOk, $urlRetourErr, $stoprecurrence) {
-    $dataArray = [
-        $tpe,
-        $date,
-        $montant,
-        $reference,
-        $texteLibre,
-        $version,
-        $lgue,
-        $societe,
-        $contexteCommande,
-        $mail,
-        $urlRetourOk,
-        $urlRetourErr,
-        $stoprecurrence
-    ];
-
-    $dataString = implode('*', $dataArray);
+function calculateMAC($securityKey, $fields) {
+    // Concatenate fields in alphabetical order
+    ksort($fields);
+    $dataString = '';
+    foreach ($fields as $key => $value) {
+        $dataString .= $value . '*';
+    }
+    $dataString = rtrim($dataString, '*'); // Remove the last '*'
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha actual en el formato correcto
-$date = date('d/m/Y:H:i:s');
-$date_commande = date('d/m/Y'); // Fecha de la orden en el formato correcto
+// Fecha explícita en el formato correcto
+$date = '22/05/2024:16:56:33';
+$date_commande = '22/05/2024';
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00USD';
+$montant = '10.00EUR';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
 $version = '3.0';
@@ -52,30 +42,28 @@ $urlRetourOk = 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/';
 $urlRetourErr = 'https://dev.kalstein.plus/plataforma/failed-subscripcion-k/';
 $stoprecurrence = 'OUI';
 
-$mac = calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLibre, $version, $lgue, $societe, $contexteCommande, $mail, $urlRetourOk, $urlRetourErr, $stoprecurrence);
-
+// Crear arreglo de campos
 $fields = [
-    'version' => $version,
     'TPE' => $tpe,
     'date' => $date,
-    'date_commande' => $date_commande,
     'montant' => $montant,
-    'montant_a_capturer' => '0EUR',
-    'montant_deja_capture' => '0EUR',
-    'montant_restant' => '0EUR',
     'reference' => $reference,
+    'texte-libre' => $texteLibre,
+    'version' => $version,
     'lgue' => $lgue,
     'societe' => $societe,
-    'stoprecurrence' => $stoprecurrence,
-    'MAC' => $mac,
-    'texte-libre' => $texteLibre,
     'contexte_commande' => $contexteCommande,
     'mail' => $mail,
     'url_retour_ok' => $urlRetourOk,
-    'url_retour_err' => $urlRetourErr
+    'url_retour_err' => $urlRetourErr,
+    'stoprecurrence' => $stoprecurrence
 ];
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
+$mac = calculateMAC($securityKey, $fields);
+
+$fields['MAC'] = $mac;
+
+$url = "https://p.monetico-services.com/capture_paiement.cgi";
 
 ?>
 <html>
