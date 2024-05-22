@@ -22,7 +22,7 @@ function calculateMAC($securityKey, $fields) {
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fechas en el formato correcto
+// Fecha explícita en el formato correcto
 $date = date('d/m/Y:H:i:s'); // Fecha y hora actuales
 $date_commande = date('d/m/Y'); // Solo la fecha actual
 
@@ -30,8 +30,8 @@ $date_commande = date('d/m/Y'); // Solo la fecha actual
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
 $montant = '10.00USD';
-$reference = 'QUO23424';
-$texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
+$reference = 'Membresia-SUB2-@valfonsob12-1716406357';
+$texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e4678ae4ba5.59995320';
 $version = '3.0';
 $lgue = 'ES';
 $societe = 'kalsteinfr';
