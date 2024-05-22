@@ -128,28 +128,20 @@ echo 'asdasda' . $url . '<br>';
 var_dump('aquiiii', $fields);
 
 // Initialize cURL session
-$ch = curl_init();
-
-// Set the URL and other appropriate options
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-// Execute cURL session and fetch response
-$response = curl_exec($ch);
-
-// Check for cURL errors
-if ($response === false) {
-    echo 'Curl error: ' . curl_error($ch);
-} else {
-    // Print the response from the server
-    echo 'hey hey hey ' . $response;
+echo '<html><body>';
+echo '<form id="paymentForm" action="' . htmlspecialchars($url) . '" method="POST">';
+foreach ($fields as $key => $value) {
+    echo '<input type="hidden" name="' . htmlspecialchars($key) . '" value="' . htmlspecialchars($value) . '">';
 }
+echo '<noscript><input type="submit" value="Continue"></noscript>';
+echo '</form>';
 
-// Close cURL session
-curl_close($ch);
+// Add JavaScript to submit the form automatically
+echo '<script type="text/javascript">
+        document.getElementById("paymentForm").submit();
+      </script>';
 
+echo '</body></html>';
 ?>
 <html>
 
