@@ -122,6 +122,16 @@ $url = PurchaseRequest::getUrl();
 $fields = $monetico->getFields($purchase);
 
 
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+
+var_dump('aaaaa  ', $fields);
+
+
 ?>
 <html>
 
