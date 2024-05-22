@@ -90,7 +90,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => '1234568907',
+    'reference' => 'QUO324234',
     'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
@@ -126,7 +126,15 @@ $ch = curl_init();
 // Set the URL and other appropriate options
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
+
+// Manually construct the POST fields
+$postFieldsString = '';
+foreach ($fields as $key => $value) {
+    $postFieldsString .= htmlspecialchars($key) . '=' . htmlspecialchars($value) . '&';
+}
+$postFieldsString = rtrim($postFieldsString, '&');
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postFieldsString);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Execute cURL session and fetch response
@@ -139,15 +147,9 @@ if ($response === false) {
     // Print the response from the server
     echo 'RESPUESTA: ' .  $response . '<br>';
 
-    // Decode the response if it's in JSON format
-    $responseData = json_decode($response, true);
-    if (json_last_error() === JSON_ERROR_NONE) {
-        // Iterate through the response data
-        foreach ($responseData as $key => $value) {
-            echo htmlspecialchars($key) . ': ' . htmlspecialchars($value) . '<br>';
-        }
-    } else {
-        echo 'Response is not in JSON format.';
+    // Iterate through the fields and print them
+    foreach ($fields as $key => $value) {
+        echo htmlspecialchars($key) . ': ' . htmlspecialchars($value) . '<br>';
     }
 }
 
