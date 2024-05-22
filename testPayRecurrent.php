@@ -26,12 +26,12 @@ function encryptURL()
 }
 
 //GET VARIABLE.
-if (!isset($_GET["SUB"])) {
+if (!isset($_GET["idMembership"])) {
     die('Error');
 }
-$idMembership = $_GET["SUB"];
+$idMembership = $_GET["idMembership"];
 
-echo 'iddd' . $idMebership;
+echo 'aaaaa ' .  $idMembership;
 
 $membershipPrices = [
     'SUB1' => 10,
@@ -93,7 +93,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'QUO232342',
+    'reference' => 'QUO232341',
     'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
