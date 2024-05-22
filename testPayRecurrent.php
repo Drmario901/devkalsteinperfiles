@@ -19,11 +19,11 @@ $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 
 //PAYMENT GATEWAY URL (MONETICO).
 
-// function encryptURL()
-// {
-//     $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
-//     return $gateway;
-// }
+function encryptURL()
+{
+    $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
+    return $gateway;
+}
 
 //GET VARIABLE.
 if (!isset($_GET["idMembership"])) {
@@ -118,7 +118,7 @@ $client = new ClientResource([
 ]);
 $purchase->setClient($client);
 
-$url = PurchaseRequest::getUrl();
+$url = encryptURL();
 $fields = $monetico->getFields($purchase);
 
 
