@@ -112,6 +112,14 @@ $billingAddress = new BillingAddressResource([
 
 $purchase->setBillingAddress($billingAddress);
 
+$shippingAddress = new ShippingAddressResource([
+    'name' => $row['account_nombre'],
+    'addressLine1' => $row['account_direccion'],
+    'city' => $row['account_ciudad'],
+    'postalCode' => $row['account_zipcode'],
+    'country' => $row['account_pais'],
+]);
+
 $client = new ClientResource([
     'firstName' => $row['account_nombre'],
     'lastName' => $row['account_apellido'],
