@@ -22,9 +22,9 @@ function calculateMAC($securityKey, $fields) {
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha explícita en el formato correcto
-$date = date('d/m/Y:H:i:s');
-$date_commande = date('d/m/Y');
+// Fechas en el formato correcto
+$date = date('d/m/Y:H:i:s'); // Fecha y hora actuales
+$date_commande = date('d/m/Y'); // Solo la fecha actual
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
@@ -66,7 +66,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/paiement.cgi"; // URL de pruebas
+$url = "https://p.monetico-services.com/test/paiement.cgi"; 
 
 ?>
 <html>
