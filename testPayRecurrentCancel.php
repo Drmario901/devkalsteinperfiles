@@ -33,14 +33,14 @@ function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLib
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha actual en el formato correcto
-$date = date('d/m/Y:H:i:s');
-$date_commande = date('d/m/Y'); // Fecha de la orden en el formato correcto
+// Fecha explícita en el formato correcto
+$date = '22/05/2024:16:56:33'; // Usa una fecha específica
+$date_commande = '22/05/2024'; // Fecha de la orden en el formato correcto
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10USD';
+$montant = '10.00USD';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
 $version = '3.0';
