@@ -121,8 +121,8 @@ $purchase->setClient($client);
 $url = base64_decode(encryptURL());
 $fields = $monetico->getFields($purchase);
 
-echo 'aquiii  ' . $fields;
 
+var_dump('aquiiii', $fields);
 
 ?>
 <html>
