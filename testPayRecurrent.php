@@ -135,7 +135,7 @@ $fields = $monetico->getFields($purchase);
 var_dump('aaaaa  ', json_encode($fields));
 
 // Generate the form with hidden inputs
-echo '<html><body>';
+// echo '<html><body>';
 echo '<form id="paymentForm" action="' . htmlspecialchars($url) . '" method="POST">';
 foreach ($fields as $key => $value) {
     echo '<input type="hidden" name="' . htmlspecialchars($key) . '" value="' . htmlspecialchars($value) . '">';
@@ -148,11 +148,8 @@ echo '</form>';
 //         document.getElementById("paymentForm").submit();
 //       </script>';
 
-echo '</body></html>';
+// echo '</body></html>';
 
-
-echo '<h1> Hola';
-echo '</h1>'
 
 
 
