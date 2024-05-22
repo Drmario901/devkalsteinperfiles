@@ -33,7 +33,7 @@ function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLib
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha actual en el formato correcto
+// Obtener fecha actual en el formato correcto
 $date = date('d/m/Y:H:i:s');
 
 // Resto de los parámetros
