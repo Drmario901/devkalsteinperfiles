@@ -73,7 +73,7 @@ try {
     exit;
 }
 
-$url = "https://p.monetico-services.com/capture_paiement.cgi";
+$url = "https://p.monetico-services.com/test/paiement.cgi";
 
 ?>
 <html>
