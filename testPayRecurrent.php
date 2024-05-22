@@ -127,6 +127,29 @@ echo 'asdasda' . $url . '<br>';
 
 var_dump('aquiiii', $fields);
 
+// Initialize cURL session
+$ch = curl_init();
+
+// Set the URL and other appropriate options
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Execute cURL session and fetch response
+$response = curl_exec($ch);
+
+// Check for cURL errors
+if ($response === false) {
+    echo 'Curl error: ' . curl_error($ch);
+} else {
+    // Print the response from the server
+    echo 'hey hey hey ' . $response;
+}
+
+// Close cURL session
+curl_close($ch);
+
 ?>
 <html>
 
