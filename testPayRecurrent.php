@@ -112,44 +112,16 @@ $billingAddress = new BillingAddressResource([
 
 $purchase->setBillingAddress($billingAddress);
 
-$shippingAddress = new ShippingAddressResource([
-    'name' => $row['account_nombre'],
-    'addressLine1' => $row['account_direccion'],
-    'city' => $row['account_ciudad'],
-    'postalCode' => $row['account_zipcode'],
-    'country' => $row['account_pais'],
-]);
-
 $client = new ClientResource([
     'firstName' => $row['account_nombre'],
     'lastName' => $row['account_apellido'],
 ]);
 $purchase->setClient($client);
 
-$url = PurchaseRequest::getUrl();
+$url = base64_decode(encryptURL());
 $fields = $monetico->getFields($purchase);
-// $url = base64_decode(encryptURL());
-// $fields = $monetico->getFields($purchase);
 
-echo 'asdasda' . $url . '<br>';
 
-var_dump('aquiiii', $fields);
-
-// Initialize cURL session
-// echo '<html><body>';
-// echo '<form id="paymentForm" action="' . htmlspecialchars($url) . '" method="POST">';
-// foreach ($fields as $key => $value) {
-//     echo '<input type="hidden" name="' . htmlspecialchars($key) . '" value="' . htmlspecialchars($value) . '">';
-// }
-// echo '<noscript><input type="submit" value="Continue"></noscript>';
-// echo '</form>';
-
-// // Add JavaScript to submit the form automatically
-// echo '<script type="text/javascript">
-//         document.getElementById("paymentForm").submit();
-//       </script>';
-
-// echo '</body></html>';
 ?>
 <html>
 
@@ -172,16 +144,16 @@ var_dump('aquiiii', $fields);
             }
         }
     </style>
-    <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
+    <form name="payment_form" action="<?php echo $url; ?>" method="post">
         <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
-    <center><?php echo $esText ?></center>
-    <center>
-        <div class="custom-loader"></div>
-    </center>
-    </form> -->
+        <center><?php echo $esText ?></center>
+        <center>
+            <div class="custom-loader"></div>
+        </center>
+    </form>
 </body>
 
 </html>
