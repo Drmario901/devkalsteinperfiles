@@ -19,11 +19,11 @@ $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 
 //PAYMENT GATEWAY URL (MONETICO).
 
-function encryptURL()
-{
-    $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
-    return $gateway;
-}
+// function encryptURL()
+// {
+//     $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
+//     return $gateway;
+// }
 
 //GET VARIABLE.
 if (!isset($_GET["idMembership"])) {
@@ -81,6 +81,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Requests\PurchaseRequest;
 use DansMaCulotte\Monetico\Resources\BillingAddressResource;
+use DansMaCulotte\Monetico\Resources\ShippingAddressResource;
 use DansMaCulotte\Monetico\Resources\ClientResource;
 
 $monetico = new Monetico(
@@ -90,7 +91,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'QUO324234',
+    'reference' => 'QUO23424',
     'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
@@ -120,38 +121,39 @@ $purchase->setClient($client);
 $url = PurchaseRequest::getUrl();
 $fields = $monetico->getFields($purchase);
 
-// Initialize cURL session
-$ch = curl_init();
 
-// Set the URL and other appropriate options
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_POST, true);
+?>
+<html>
 
-// Manually construct the POST fields
-$postFieldsString = '';
-foreach ($fields as $key => $value) {
-    $postFieldsString .= htmlspecialchars($key) . '=' . htmlspecialchars($value) . '&';
-}
-$postFieldsString = rtrim($postFieldsString, '&');
+<body onload="document.forms['payment_form'].submit();">
+    <style>
+        .custom-loader {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background:
+                radial-gradient(farthest-side, #322380 94%, #0000) top/8px 8px no-repeat,
+                conic-gradient(#0000 30%, #322380);
+            -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+            animation: s3 1s infinite linear;
+        }
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postFieldsString);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        @keyframes s3 {
+            100% {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
+    <form name="payment_form" action="<?php echo $url; ?>" method="post">
+        <?php foreach ($fields as $key => $value) : ?>
+            <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
+        <?php endforeach; ?>
+        <!--input type="submit" value="Pagar con Monetico"-->
+        <center><?php echo $esText ?></center>
+        <center>
+            <div class="custom-loader"></div>
+        </center>
+    </form>
+</body>
 
-// Execute cURL session and fetch response
-$response = curl_exec($ch);
-
-// Check for cURL errors
-if ($response === false) {
-    echo 'Curl error: ' . curl_error($ch);
-} else {
-    // Print the response from the server
-    echo 'RESPUESTA: ' .  $response . '<br>';
-
-    // Iterate through the fields and print them
-    foreach ($fields as $key => $value) {
-        echo htmlspecialchars($key) . ': ' . htmlspecialchars($value) . '<br>';
-    }
-}
-
-// Close cURL session
-curl_close($ch);
+</html>
