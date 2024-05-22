@@ -27,10 +27,9 @@ function calculateMAC($securityKey, $fields) {
 $date = '22/05/2024:16:56:33';
 $date_commande = '22/05/2024';
 
-// Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00USD';
+$montant = '10.00EUR';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
 $version = '3.0';
@@ -42,7 +41,6 @@ $urlRetourOk = 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/';
 $urlRetourErr = 'https://dev.kalstein.plus/plataforma/failed-subscripcion-k/';
 $stoprecurrence = 'OUI';
 
-// Crear arreglo de campos
 $fields = [
     'TPE' => $tpe,
     'date' => $date,
