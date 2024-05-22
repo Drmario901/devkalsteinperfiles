@@ -125,7 +125,7 @@ $fields = $monetico->getFields($purchase);
 $ch = curl_init();
 
 // Set the URL and other appropriate options
-curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_URL, $_POST);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
