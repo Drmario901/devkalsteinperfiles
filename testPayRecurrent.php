@@ -132,7 +132,7 @@ $fields = $monetico->getFields($purchase);
 '<br>';
 '<br>';
 
-var_dump('aaaaa  ', $fields);
+var_dump('aaaaa  ', json_encode($fields));
 
 // Generate the form with hidden inputs
 // echo '<html><body>';
