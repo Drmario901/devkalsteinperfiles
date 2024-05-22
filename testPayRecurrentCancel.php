@@ -33,8 +33,9 @@ function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLib
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Obtener fecha actual en el formato correcto
+// Fecha actual en el formato correcto
 $date = date('d/m/Y:H:i:s');
+$date_commande = date('d/m/Y'); // Fecha de la orden en el formato correcto
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
@@ -76,7 +77,7 @@ try {
     exit;
 }
 
-$url = "https://p.monetico-services.com/test/paiement.cgi";
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
 
 ?>
 <html>
