@@ -81,7 +81,6 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Requests\PurchaseRequest;
 use DansMaCulotte\Monetico\Resources\BillingAddressResource;
-use DansMaCulotte\Monetico\Resources\ShippingAddressResource;
 use DansMaCulotte\Monetico\Resources\ClientResource;
 
 $monetico = new Monetico(
@@ -91,7 +90,7 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'QUO3454212',
+    'reference' => '1234568907',
     'description' => 'uniqid: ' . $row['account_sub_id'],
     'language' => 'ES',
     'email' => $row['account_correo'],
@@ -125,7 +124,7 @@ $fields = $monetico->getFields($purchase);
 $ch = curl_init();
 
 // Set the URL and other appropriate options
-curl_setopt($ch, CURLOPT_URL, $_POST);
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -138,53 +137,19 @@ if ($response === false) {
     echo 'Curl error: ' . curl_error($ch);
 } else {
     // Print the response from the server
-    echo 'RESPUESTAAAA' .  $response;
+    echo 'RESPUESTA: ' .  $response . '<br>';
+
+    // Decode the response if it's in JSON format
+    $responseData = json_decode($response, true);
+    if (json_last_error() === JSON_ERROR_NONE) {
+        // Iterate through the response data
+        foreach ($responseData as $key => $value) {
+            echo htmlspecialchars($key) . ': ' . htmlspecialchars($value) . '<br>';
+        }
+    } else {
+        echo 'Response is not in JSON format.';
+    }
 }
 
 // Close cURL session
 curl_close($ch);
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-var_dump('aquiii', $fields);
-
-
-?>
-<html>
-
-<body onload="document.forms['payment_form'].submit();">
-    <style>
-        .custom-loader {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background:
-                radial-gradient(farthest-side, #322380 94%, #0000) top/8px 8px no-repeat,
-                conic-gradient(#0000 30%, #322380);
-            -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-            animation: s3 1s infinite linear;
-        }
-
-        @keyframes s3 {
-            100% {
-                transform: rotate(1turn)
-            }
-        }
-    </style>
-    <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value) : ?>
-            <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
-        <?php endforeach; ?>
-        <!--input type="submit" value="Pagar con Monetico"-->
-    <center><?php echo $esText ?></center>
-    <center>
-        <div class="custom-loader"></div>
-    </center>
-    </form> -->
-</body>
-
-</html>
