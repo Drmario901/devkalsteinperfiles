@@ -15,10 +15,10 @@ use DansMaCulotte\Monetico\Monetico;
 function calculateMAC($securityKey, $fields) {
     ksort($fields);
     $dataString = '';
-    foreach ($fields as $value) {
+    foreach ($fields as $key => $value) {
         $dataString .= $value . '*';
     }
-    $dataString = rtrim($dataString, '*');
+    $dataString = rtrim($dataString, '*'); // Remove the last '*'
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
@@ -45,11 +45,7 @@ $stoprecurrence = 'OUI';
 $fields = [
     'TPE' => $tpe,
     'date' => $date,
-    'date_commande' => $date_commande,
     'montant' => $montant,
-    'montant_a_capturer' => '0.00USD',
-    'montant_deja_capture' => '0.00USD',
-    'montant_restant' => '0.00USD',
     'reference' => $reference,
     'texte-libre' => $texteLibre,
     'version' => $version,
@@ -68,7 +64,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/paiement.cgi";
+$url = "https://p.monetico-services.com/capture_paiement.cgi";
 
 ?>
 <html>
