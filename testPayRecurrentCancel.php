@@ -16,7 +16,7 @@ function calculateMAC($securityKey, $fields) {
     // Concatenate fields in alphabetical order
     ksort($fields);
     $dataString = '';
-    foreach ($fields as $key => $value) {
+    foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
     $dataString = rtrim($dataString, '*'); // Remove the last '*'
@@ -46,11 +46,7 @@ $stoprecurrence = 'OUI';
 $fields = [
     'TPE' => $tpe,
     'date' => $date,
-    'date_commande' => $date_commande,
     'montant' => $montant,
-    'montant_a_capturer' => '0.00USD',
-    'montant_deja_capture' => '0.00USD',
-    'montant_restant' => '0.00USD',
     'reference' => $reference,
     'texte-libre' => $texteLibre,
     'version' => $version,
@@ -62,8 +58,6 @@ $fields = [
     'url_retour_err' => $urlRetourErr,
     'stoprecurrence' => $stoprecurrence
 ];
-
-ksort($fields); // Asegura que los datos estén en orden alfabético por clave
 
 $mac = calculateMAC($securityKey, $fields);
 
