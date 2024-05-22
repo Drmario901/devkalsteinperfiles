@@ -33,9 +33,12 @@ function calculateMAC($securityKey, $tpe, $date, $montant, $reference, $texteLib
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
+// Fecha actual en el formato correcto
+$date = date('d/m/Y:H:i:s');
+
+// Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$date = '22/05/2024:16:56:33';
 $montant = '10USD';
 $reference = 'QUO23424';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e237282ee17.49368007';
@@ -73,7 +76,7 @@ try {
     exit;
 }
 
-$url = "https://p.monetico-services.com/test/paiement.cgi";
+$url = "https://p.monetico-services.com/capture_paiement.cgi";
 
 ?>
 <html>
