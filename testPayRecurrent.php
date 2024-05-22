@@ -31,6 +31,8 @@ if (!isset($_GET["idMembership"])) {
 }
 $idMembership = $_GET["idMembership"];
 
+echo 'aaaaa ' .  $idMembership;
+
 $membershipPrices = [
     'SUB1' => 10,
     'SUB2' => 20
