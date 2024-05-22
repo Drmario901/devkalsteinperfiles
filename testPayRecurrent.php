@@ -151,6 +151,10 @@ echo '</form>';
 echo '</body></html>';
 
 
+echo '<h1> Hola';
+echo '</h1>'
+
+
 
 ?>
 <html>
