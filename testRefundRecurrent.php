@@ -51,7 +51,7 @@ if ($response) {
 
 echo 'el idddd ' . $account_aid;
 
-$consulta2 = "SELECT referencia_pago FROM wp_account WHERE user_id = '$account_aid'";
+$consulta2 = "SELECT referencia_pago FROM wp_subscripcion WHERE user_id = '$account_aid'";
 
 $response2 = $conexion->query($consulta2);
 if ($response2) {
