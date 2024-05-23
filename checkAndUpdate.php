@@ -5,14 +5,15 @@ $filePath = __DIR__ . '/monetico_log_recurrent.txt';
 // Archivo que almacena el último timestamp modificado
 $lastModifiedFile = __DIR__ . '/last_modified.txt';
 
-// Ruta del archivo de log para errores
-$errorLogFile = __DIR__ . '/error_log.txt';
+// Ruta del archivo de log para errores y confirmaciones
+$logFile = __DIR__ . '/error_log.txt';
 
-// Función para registrar errores
-function logError($message)
+// Función para registrar mensajes en el log
+function logMessage($message)
 {
-  global $errorLogFile;
-  file_put_contents($errorLogFile, date('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
+  global $logFile;
+  echo $message . "\n";
+  file_put_contents($logFile, date('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
 }
 
 // Leer el último timestamp modificado registrado
@@ -51,7 +52,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
       // Verificar si la decodificación fue exitosa
       if (json_last_error() !== JSON_ERROR_NONE) {
-        logError("Error al decodificar JSON: " . json_last_error_msg());
+        logMessage("Error al decodificar JSON: " . json_last_error_msg());
         continue;
       }
 
@@ -71,7 +72,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
         // Validar que los valores necesarios no estén vacíos
         if (!$userID || !$subscriptionType || !$paymentReference) {
-          logError("Datos faltantes en la entrada: " . $jsonStr);
+          logMessage("Datos faltantes en la entrada: " . $jsonStr);
           continue;
         }
 
@@ -81,7 +82,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
         // Obtener account_aid desde wp_account
         $stmt = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
         if (!$stmt) {
-          logError("Error preparando la consulta: " . $conexion->error);
+          logMessage("Error preparando la consulta: " . $conexion->error);
           continue;
         }
 
@@ -107,7 +108,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
           // Actualizar la tabla wp_subscripcion
           $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET fecha_inicio = ?, fecha_final = ?, referencia_pago = ?, estado_membresia = 'activo', user_id = ? WHERE user_id = ?");
           if (!$updateSubs) {
-            logError("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
+            logMessage("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
             continue;
           }
 
@@ -118,18 +119,22 @@ if ($currentModifiedTime > $lastModifiedTime) {
           // Actualizar el tipo de membresía en la tabla wp_account
           $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
           if (!$updateAccount) {
-            logError("Error preparando la actualización de wp_account: " . $conexion->error);
+            logMessage("Error preparando la actualización de wp_account: " . $conexion->error);
             continue;
           }
 
           $updateAccount->bind_param("ii", $tipoMembresia, $accountAid);
           $updateAccount->execute();
           $updateAccount->close();
+
+          logMessage("Actualización exitosa para user_tag: $userID");
         } else {
-          logError("No se encontró account_aid para user_tag: $userID");
+          logMessage("No se encontró account_aid para user_tag: $userID");
         }
       }
     }
   }
+} else {
+  logMessage("No se encontraron modificaciones recientes en el archivo.");
 }
 ?>
