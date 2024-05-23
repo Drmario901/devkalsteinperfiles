@@ -47,7 +47,7 @@ $montant_deja_capture = '0.00USD';
 $montant_restant = '0.00USD';
 $reference = 'SUB1-1716474386';
 $version = '3.0';
-$lgue = 'FR';
+$lgue = 'ES';
 $societe = 'kalsteinfr';
 $stoprecurrence = 'OUI';
 
