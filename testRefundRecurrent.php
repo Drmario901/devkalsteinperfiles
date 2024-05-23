@@ -93,15 +93,15 @@ $monetico = new Monetico(
 // Create a RefundRequest with the required fields
 $refund = new RefundRequest([
   'dateTime' => new DateTime(),
-  'orderDatetime' => DateTime::createFromFormat('d/m/Y_a_H:i:s', $responseData['date']),
+  'orderDatetime' => "23\/05\/2024_a_19:48:35",
   'recoveryDatetime' => new DateTime(),
-  'authorizationNumber' => $responseData['vld'], // Assuming 'vld' is the authorization number
-  'reference' => $responseData['reference'],
+  'authorizationNumber' => "1226", // Assuming 'vld' is the authorization number
+  'reference' => "SUB2-1716486501",
   'language' => 'FR',
-  'currency' => 'USD',
-  'amount' => 20 * 100, // Amount in cents
-  'refundAmount' => 20 * 100, // Refund the full amount, in cents
-  'maxRefundAmount' => 20 * 100, // Maximum refund amount, in cents
+  'currency' => 'EUR',
+  'amount' => 20,
+  'refundAmount' => 20,
+  'maxRefundAmount' => 20,
 ]);
 
 // Get the fields for the refund request
