@@ -10,7 +10,6 @@ session_start();
 // COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
-use DansMaCulotte\Monetico\Monetico;
 use GuzzleHttp\Client;
 
 function calculateMAC($securityKey, $fields) {
@@ -23,7 +22,7 @@ function calculateMAC($securityKey, $fields) {
 
     $dataString = rtrim($dataString, '*');
 
-    return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
+    return strtoupper(hash_hmac('sha1', $dataString, pack('H*', $securityKey)));
 }
 
 // Datos proporcionados
@@ -40,9 +39,9 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
 }
 
 // Resto de los parámetros
-$securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
+$securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; // Revisa si esta clave es correcta
 $tpe = '7593339';
-$montant = '10.00EUR'; // Formato correcto sin el símbolo de moneda y con dos decimales
+$montant = '100.00EUR'; // Formato correcto según la documentación
 $montant_a_capturer = '0.00EUR';
 $montant_deja_capture = '0.00EUR';
 $montant_restant = '0.00EUR';
@@ -67,8 +66,8 @@ $fields = [
     'stoprecurrence' => $stoprecurrence
 ];
 
-//$mac = calculateMAC($securityKey, $fields);
-$mac = '78bc376c5b192f1c48844794cbdb0050f156b9a2';
+$mac = calculateMAC($securityKey, $fields);
+
 $fields['MAC'] = $mac;
 
 $url = "https://p.monetico-services.com/test/capture_paiement.cgi";
@@ -86,7 +85,6 @@ if ($response->getStatusCode() == 200) {
 } else {
     echo "Error al cancelar el pago recurrente: " . $responseBody;
 }
-
 ?>
 <html>
 <body onload="document.forms['cancel_form'].submit();">
