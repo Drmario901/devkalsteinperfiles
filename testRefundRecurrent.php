@@ -1,5 +1,5 @@
 <?php
-//ERROR DETECTION LINES.
+// ERROR DETECTION LINES.
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -7,31 +7,29 @@ error_reporting(E_ALL);
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 session_start();
 
-//EMAIL ACCOUNT SESSION.
+// EMAIL ACCOUNT SESSION.
 if (isset($_SESSION["emailAccount"])) {
   $email = $_SESSION["emailAccount"];
+} else {
+  die('No email account in session.');
 }
-//$email = 'valfonsob12@yopmail.com';
 
-//LANGUAGE FOR THE TEXT OF LOsADER.
+// LANGUAGE FOR THE TEXT OF LOADER.
 $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
-//$enText = '<h2>Redirecting to Payment Gateway</h2>';
+// $enText = '<h2>Redirecting to Payment Gateway</h2>';
+
+if (!isset($_GET["emailUser"])) {
+  die('Error: emailUser not set');
+}
 
 $emailUser = $_GET["emailUser"];
-
 echo 'aaaaa ' .  $emailUser;
 
-//PAYMENT GATEWAY URL (MONETICO).
-
+// PAYMENT GATEWAY URL (MONETICO).
 function encryptURL()
 {
   $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
   return $gateway;
-}
-
-//GET VARIABLE.
-if (!isset($_GET["emailUser"])) {
-  die('Error');
 }
 
 // MAIN QUERIES
@@ -67,8 +65,6 @@ if ($response2) {
 
 echo 'el idddd pero de ' . $referencia_pago;
 
-
-
 // COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
@@ -90,26 +86,40 @@ $monetico = new Monetico(
   'kalsteinfr'
 );
 
+// Convert date string to DateTime object
+$orderDate = DateTime::createFromFormat('d/m/Y_a_H:i:s', $responseData['date']);
+if (!$orderDate) {
+  die('Invalid order date format.');
+}
+
 // Create a RefundRequest with the required fields
 $refund = new RefundRequest([
   'dateTime' => new DateTime(),
-  'orderDatetime' => "23\/05\/2024_a_19:48:35",
+  'orderDatetime' => $orderDate,
   'recoveryDatetime' => new DateTime(),
-  'authorizationNumber' => "1226", // Assuming 'vld' is the authorization number
-  'reference' => "SUB2-1716486501",
+  'authorizationNumber' => $responseData['vld'], // Assuming 'vld' is the authorization number
+  'reference' => $responseData['reference'],
   'language' => 'FR',
-  'currency' => 'EUR',
-  'amount' => 20,
-  'refundAmount' => 20,
-  'maxRefundAmount' => 20,
+  'currency' => 'USD', // Assuming the currency is USD based on montant
+  'amount' => 20, // Amount in cents (20 USD * 100)
+  'refundAmount' => 20, // Refund the full amount, in cents
+  'maxRefundAmount' => 20, // Maximum refund amount, in cents
 ]);
 
 // Get the fields for the refund request
 $fields = $monetico->getFields($refund);
 
-$client = new GuzzleHttp\Client();
-$data = $client->request('POST', $url, $fields);
+// Send the refund request using GuzzleHttp Client
+$client = new Client();
+$url = 'https://p.monetico-services.com/test/paiement.cgi'; // Monetico payment gateway URL
+$response = $client->request('POST', $url, [
+  'form_params' => $fields
+]);
 
-// $data = json_decode($data, true);
-
-$response = new RefundResponse($data);
+// Handle the response from Monetico
+$refundResponse = new RefundResponse($response);
+if ($refundResponse->isSuccess()) {
+  echo 'Refund successful!';
+} else {
+  echo 'Refund failed: ' . $refundResponse->getMessage();
+}
