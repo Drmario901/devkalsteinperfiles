@@ -52,7 +52,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/paiement.cgi"; // URL de pruebas
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; // URL de pruebas
 
 ?>
 <html>
