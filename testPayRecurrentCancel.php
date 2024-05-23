@@ -15,7 +15,7 @@ use DansMaCulotte\Monetico\Monetico;
 function calculateMAC($securityKey, $fields) {
     ksort($fields); // Ordenar los campos alfabéticamente
     $dataString = '';
-    foreach ($fields as $value) {
+    foreach ($fields as $key => $value) {
         $dataString .= $value . '*';
     }
     $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
@@ -24,7 +24,7 @@ function calculateMAC($securityKey, $fields) {
 
 // Fecha explícita en el formato correcto
 $date = date('d/m/Y_a_H:i:s'); // Fecha y hora actuales
-$date_commande = date('d/m/Y'); // Solo la fecha actual
+$date_commande = '22/05/2024'; // Fecha original de la transacción
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
