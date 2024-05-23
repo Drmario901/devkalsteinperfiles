@@ -107,15 +107,21 @@ if (!$orderDate) {
 echo 'Order Date: ';
 var_dump($orderDate);
 
+// Validate reference length
+$reference = $responseData['reference'];
+if (strlen($reference) > 50) {
+  die('Reference value is too long, should be 50 characters maximum: ' . $reference);
+}
+
 // Create the data array for RefundRequest
 $data = [
   'dateTime' => new DateTime(),
-  'orderDate' => $orderDate, // corrected key
-  'recoveryDate' => new DateTime(), // corrected key
-  'authorizationNumber' => $responseData['vld'], // Assuming 'vld' is the authorization number
-  'reference' => $responseData['reference'],
+  'orderDate' => $orderDate,
+  'recoveryDate' => new DateTime(),
+  'authorizationNumber' => $responseData['vld'],
+  'reference' => $reference,
   'language' => 'FR',
-  'currency' => 'USD', // Assuming the currency is USD based on montant
+  'currency' => 'USD',
   'amount' => 2000, // Amount in cents (20 USD * 100)
   'refundAmount' => 2000, // Refund the full amount, in cents
   'maxRefundAmount' => 2000, // Maximum refund amount, in cents
