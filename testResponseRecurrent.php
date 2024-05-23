@@ -36,7 +36,7 @@ if (!empty($data)) {
         if ($accountAid) {
             // Calcular las fechas de inicio y finalización de la membresía
             $fechaInicio = date('Y-m-d');
-            $fechaFinal = date('Y-m-d', strtotime('+1 year'));
+            $fechaFinal = date('Y-m-d', strtotime('+1 month'));
 
             // Determinar el tipo de membresía basado en la referencia
             $tipoMembresia = 0;
