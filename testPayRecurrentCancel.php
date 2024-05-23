@@ -23,7 +23,7 @@ function calculateMAC($securityKey, $fields) {
 }
 
 // Datos proporcionados
-$date = '23/05/2024_a_16:26:35'; // Fecha y hora de la transacción original
+$date = '23/05/2024:16:26:35'; // Fecha y hora de la transacción original
 $date_commande = '23/05/2024'; // Solo la fecha de la transacción original
 
 // Resto de los parámetros
