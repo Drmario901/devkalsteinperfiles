@@ -29,8 +29,8 @@ function calculateMAC($securityKey, $fields) {
 }
 
 // Datos proporcionados
-$date = '23%2F05%2F2024%5Fa%5F16%3A26%3A35'; // Fecha y hora de la transacción original codificada en URL
-$date_commande = '23%2F05%2F2024'; // Solo la fecha de la transacción original codificada en URL
+$date = urlencode('23/05/2024_a_16:26:35'); // Fecha y hora de la transacción original codificada en URL
+$date_commande = urlencode('23/05/2024'); // Solo la fecha de la transacción original codificada en URL
 
 // Asegurarse de que las fechas están en el formato correcto
 if (!preg_match('/^\d{2}%2F\d{2}%2F\d{4}%5Fa%5F\d{2}%3A\d{2}%3A\d{2}$/', $date)) {
