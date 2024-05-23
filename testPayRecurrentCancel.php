@@ -13,17 +13,23 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    ksort($fields); // Ordenar los campos alfabéticamente
+    // Ordenar los campos alfabéticamente por clave
+    ksort($fields);
+    
+    // Crear el string de datos concatenando los valores de los campos
     $dataString = '';
-    foreach ($fields as $value) {
+    foreach ($fields as $key => $value) {
         $dataString .= $value . '*';
     }
-    $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
+    // Eliminar el último asterisco
+    $dataString = rtrim($dataString, '*');
+    
+    // Calcular el HMAC-SHA1
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
 // Datos proporcionados
-$date = '23/05/2024:16:26:35'; // Fecha y hora de la transacción original
+$date = '23/05/2024_a_16:26:35'; // Fecha y hora de la transacción original
 $date_commande = '23/05/2024'; // Solo la fecha de la transacción original
 
 // Resto de los parámetros
