@@ -13,50 +13,38 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    // Ordenar los campos alfabéticamente
     ksort($fields);
     $dataString = '';
-    foreach ($fields as $key => $value) {
+    foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
-    $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
+    $dataString = rtrim($dataString, '*'); 
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha explícita en el formato correcto
-$date = date('d/m/Y_a_H:i:s'); // Fecha y hora actuales
-$date_commande = date('d/m/Y'); // Solo la fecha actual
+$date = date('d/m/Y_a_H:i:s'); 
+$date_commande = date('d/m/Y'); 
 
-// Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '20.00USD'; // Asegurarse de que el monto esté en el formato correcto
+$montant = '20.00USD'; 
 $reference = 'Membresia-SUB2-@valfonsob12-1716406357';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e4678ae4ba5.59995320';
 $version = '3.0';
 $lgue = 'ES';
 $societe = 'kalsteinfr';
-$contexteCommande = 'eyJiaWxsaW5nIjp7Im5hbWUiOiJWaWN0b3IiLCJhZGRyZXNzTGluZTEiOiJkZmhmZGhnaGQiLCJjaXR5IjoiaGRoZmRoZCIsInBvc3RhbENvZGUiOiIxMjMzIiwiY291bnRyeSI6IkFaIn0sImNsaWVudCI6eyJmaXJzdE5hbWUiOiJWaWN0b3IiLCJsYXN0TmFtZSI6IkRpc3RyaWJ1aWRvciJ9fQ==';
-$mail = 'valfonsob12@yopmail.com';
-$urlRetourOk = 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/';
-$urlRetourErr = 'https://dev.kalstein.plus/plataforma/failed-subscripcion-k/';
 $stoprecurrence = 'OUI';
 
-// Crear arreglo de campos
 $fields = [
+    'version' => $version,
     'TPE' => $tpe,
     'date' => $date,
     'date_commande' => $date_commande,
     'montant' => $montant,
     'reference' => $reference,
     'texte-libre' => $texteLibre,
-    'version' => $version,
     'lgue' => $lgue,
     'societe' => $societe,
-    'contexte_commande' => $contexteCommande,
-    'mail' => $mail,
-    'url_retour_ok' => $urlRetourOk,
-    'url_retour_err' => $urlRetourErr,
     'stoprecurrence' => $stoprecurrence
 ];
 
@@ -64,7 +52,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; // URL de pruebas
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; 
 
 ?>
 <html>
