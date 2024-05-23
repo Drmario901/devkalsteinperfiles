@@ -23,7 +23,7 @@ function calculateMAC($securityKey, $fields) {
 }
 
 // Fecha explícita en el formato correcto
-$date = date('d/m/Y_a_H:i:s'); // Fecha y hora actuales
+$date = date('d/m/Y:H:i:s'); // Fecha y hora actuales
 $date_commande = '22/05/2024'; // Fecha original de la transacción
 
 // Resto de los parámetros
