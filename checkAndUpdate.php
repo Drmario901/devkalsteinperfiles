@@ -64,7 +64,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
         // Obtener los valores necesarios
         $userID = null;
         if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
-          $userID = $matches[1];
+          $userID = '@' . $matches[1];
         }
 
         $subscriptionType = $dataArray['montant'] ?? null;
