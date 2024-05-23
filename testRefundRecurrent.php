@@ -89,11 +89,14 @@ $monetico = new Monetico(
   'kalsteinfr'
 );
 
-// Clean the date string
-$dateString = trim($responseData['date']);
+// Clean the date string and replace underscores with spaces
+$dateString = str_replace('_', ' ', trim($responseData['date']));
+
+// Print the cleaned date string for debugging
+echo 'Cleaned date string: ' . $dateString . '<br>';
 
 // Convert date string to DateTime object
-$orderDate = DateTime::createFromFormat('d/m/Y_a_H:i:s', $dateString);
+$orderDate = DateTime::createFromFormat('d/m/Y H:i:s', $dateString);
 if (!$orderDate) {
   echo 'DateTime::getLastErrors(): ';
   print_r(DateTime::getLastErrors());
