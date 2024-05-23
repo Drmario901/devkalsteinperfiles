@@ -11,15 +11,14 @@ session_start();
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
 use DansMaCulotte\Monetico\Monetico;
-use DansMaCulotte\Monetico\Requests\CancelRequest;
 use GuzzleHttp\Client;
 
 function calculateMAC($securityKey, $fields) {
     ksort($fields);
 
     $dataString = '';
-    foreach ($fields as $value) {
-        $dataString .= $value . '*';
+    foreach ($fields as $key => $value) {
+        $dataString .= $key . '=' . $value . '*';
     }
 
     $dataString = rtrim($dataString, '*');
