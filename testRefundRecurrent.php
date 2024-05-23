@@ -107,8 +107,8 @@ if (!$orderDate) {
 echo 'Order Date: ';
 var_dump($orderDate);
 
-// Create a RefundRequest with the required fields
-$refund = new RefundRequest([
+// Create the data array for RefundRequest
+$data = [
   'dateTime' => new DateTime(),
   'orderDatetime' => $orderDate,
   'recoveryDatetime' => new DateTime(),
@@ -119,7 +119,14 @@ $refund = new RefundRequest([
   'amount' => 2000, // Amount in cents (20 USD * 100)
   'refundAmount' => 2000, // Refund the full amount, in cents
   'maxRefundAmount' => 2000, // Maximum refund amount, in cents
-]);
+];
+
+// Print the data array for debugging
+echo 'Data array: ';
+var_dump($data);
+
+// Create a RefundRequest with the required fields
+$refund = new RefundRequest($data);
 
 // Print the RefundRequest for debugging
 echo 'Refund Request: ';
