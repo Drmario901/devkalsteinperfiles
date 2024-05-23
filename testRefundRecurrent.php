@@ -110,8 +110,8 @@ var_dump($orderDate);
 // Create the data array for RefundRequest
 $data = [
   'dateTime' => new DateTime(),
-  'orderDatetime' => $orderDate,
-  'recoveryDatetime' => new DateTime(),
+  'orderDate' => $orderDate, // corrected key
+  'recoveryDate' => new DateTime(), // corrected key
   'authorizationNumber' => $responseData['vld'], // Assuming 'vld' is the authorization number
   'reference' => $responseData['reference'],
   'language' => 'FR',
