@@ -44,10 +44,10 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00USD'; // Asegúrate de que el monto esté en el formato correcto
+$montant = '10.00EUR'; // Formato correcto sin el símbolo de moneda y con dos decimales
 $reference = 'SUB1-1716474386';
-$version = '3.0';
-$lgue = 'ES';
+$version = '1.0';
+$lgue = 'FR';
 $societe = 'kalsteinfr';
 $stoprecurrence = 'OUI';
 
