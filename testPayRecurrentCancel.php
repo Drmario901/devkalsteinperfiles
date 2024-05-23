@@ -13,7 +13,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    ksort($fields);
+    ksort($fields); 
     $dataString = '';
     foreach ($fields as $value) {
         $dataString .= $value . '*';
@@ -27,7 +27,7 @@ $date_commande = date('d/m/Y');
 
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '20.00USD'; 
+$montant = '20.00USD';
 $reference = 'Membresia-SUB2-@valfonsob12-1716406357';
 $texteLibre = 'uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664e4678ae4ba5.59995320';
 $version = '3.0';
@@ -39,7 +39,6 @@ $fields = [
     'version' => $version,
     'TPE' => $tpe,
     'date' => $date,
-    'date_commande' => $date_commande,
     'montant' => $montant,
     'reference' => $reference,
     'texte-libre' => $texteLibre,
@@ -52,7 +51,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; 
+$url = "https://p.monetico-services.com/test/paiement.cgi"; 
 
 ?>
 <html>
