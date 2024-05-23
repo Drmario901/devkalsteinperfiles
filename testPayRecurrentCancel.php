@@ -11,44 +11,40 @@ session_start();
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
 
 use DansMaCulotte\Monetico\Monetico;
+use DansMaCulotte\Monetico\Requests\CancelRequest;
+use DansMaCulotte\Monetico\Responses\CancelResponse;
+use GuzzleHttp\Client;
 
 function calculateMAC($securityKey, $fields) {
     ksort($fields);
-    
+
     $dataString = '';
     foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
 
     $dataString = rtrim($dataString, '*');
-    
+
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Obtener fecha y hora actual en formato correcto
+// Datos proporcionados
 $dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
-$date = $dateTime->format('d/m/Y\TH:i:s'); // Cambiado a formato ISO 8601
+$date = $dateTime->format('d/m/Y:H:i:s'); // Formato correcto según documentación
 $date_commande = $dateTime->format('d/m/Y');
 
 // Verificar formatos de fecha
-if (!preg_match('/^\d{2}\/\d{2}\/\d{4}T\d{2}:\d{2}:\d{2}$/', $date)) {
-    die('Formato de fecha "date" incorrecto. Debe ser dd/mm/yyyyTHH:mm:ss');
+if (!preg_match('/^\d{2}\/\d{2}\/\d{4}:\d{2}:\d{2}:\d{2}$/', $date)) {
+    die('Formato de fecha "date" incorrecto. Debe ser JJ/MM/AAAA:HH:MM:SS');
 }
 if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
-    die('Formato de fecha "date_commande" incorrecto. Debe ser dd/mm/yyyy');
+    die('Formato de fecha "date_commande" incorrecto. Debe ser JJ/MM/AAAA');
 }
-
-// Imprimir fechas para verificación
-echo "date: " . $date . "<br>";
-echo "date_commande: " . $date_commande . "<br>";
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00USD'; // Asegurarse de que el monto esté en el formato correcto
-$montant_a_capturer = '0.00USD';
-$montant_deja_capture = '0.00USD';
-$montant_restant = '0.00USD';
+$montant = '10.00USD'; // Asegúrate de que el monto esté en el formato correcto
 $reference = 'SUB1-1716474386';
 $version = '3.0';
 $lgue = 'ES';
@@ -61,9 +57,6 @@ $fields = [
     'date' => $date,
     'date_commande' => $date_commande,
     'montant' => $montant,
-    'montant_a_capturer' => $montant_a_capturer,
-    'montant_deja_capture' => $montant_deja_capture,
-    'montant_restant' => $montant_restant,
     'reference' => $reference,
     'lgue' => $lgue,
     'societe' => $societe,
@@ -74,7 +67,21 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; 
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
+
+// Enviar la solicitud de cancelación
+$client = new Client();
+$response = $client->request('POST', $url, [
+    'form_params' => $fields
+]);
+
+$responseBody = $response->getBody()->getContents();
+
+if ($response->getStatusCode() == 200) {
+    echo "Pago recurrente cancelado exitosamente.";
+} else {
+    echo "Error al cancelar el pago recurrente: " . $responseBody;
+}
 
 ?>
 <html>
