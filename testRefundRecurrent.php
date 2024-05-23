@@ -79,6 +79,9 @@ $jsonResponse = '{"TPE":"7593339","date":"23\/05\/2024_a_19:48:35","montant":"20
 // Decode the JSON response
 $responseData = json_decode($jsonResponse, true);
 
+// Print the date value for debugging
+echo 'Date from JSON: ' . $responseData['date'] . '<br>';
+
 // Initialize Monetico with credentials
 $monetico = new Monetico(
   '7593339',
