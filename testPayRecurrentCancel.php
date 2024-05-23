@@ -27,11 +27,19 @@ function calculateMAC($securityKey, $fields) {
 
 // Datos proporcionados
 try {
-    $dateTime = new DateTime('now', new DateTimeZone('America/Caracas'));
+    $dateTime = new DateTime('now', new DateTimeZone('Europe/Paris')); // Asegúrate de usar la zona horaria correcta
     $date = $dateTime->format('d/m/Y_a_H:i:s'); // Fecha y hora de la transacción original
     $date_commande = $dateTime->format('d/m/Y'); // Solo la fecha de la transacción original
 } catch (Exception $e) {
     die('Error al crear las fechas: ' . $e->getMessage());
+}
+
+// Asegurarse de que las fechas están en el formato correcto
+if (!preg_match('/^\d{2}\/\d{2}\/\d{4}_a_\d{2}:\d{2}:\d{2}$/', $date)) {
+    die('Formato de fecha "date" incorrecto. Debe ser dd/mm/yyyy_a_hh:mm:ss');
+}
+if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
+    die('Formato de fecha "date_commande" incorrecto. Debe ser dd/mm/yyyy');
 }
 
 // Resto de los parámetros
