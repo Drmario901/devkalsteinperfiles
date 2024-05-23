@@ -22,18 +22,18 @@ function calculateMAC($securityKey, $fields) {
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Fecha explícita en el formato correcto
-$date = date('d/m/Y:H:i:s'); // Fecha y hora actuales
-$date_commande = '22/05/2024'; // Fecha original de la transacción
+// Datos proporcionados
+$date = '23/05/2024_a_16:26:35'; // Fecha y hora de la transacción original
+$date_commande = '23/05/2024'; // Solo la fecha de la transacción original
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '20.00USD'; // Asegurarse de que el monto esté en el formato correcto
+$montant = '10.00USD'; // Asegurarse de que el monto esté en el formato correcto
 $montant_a_capturer = '0.00USD';
 $montant_deja_capture = '0.00USD';
 $montant_restant = '0.00USD';
-$reference = 'Membresia-SUB2-@valfonsob12-1716406357';
+$reference = 'SUB1-1716474386';
 $version = '3.0';
 $lgue = 'ES';
 $societe = 'kalsteinfr';
