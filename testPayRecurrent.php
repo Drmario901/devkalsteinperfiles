@@ -31,6 +31,8 @@ if (!isset($_GET["idMembership"])) {
 }
 $idMembership = $_GET["idMembership"];
 
+echo 'aaaaa ' . $idMembership;
+
 $membershipPrices = [
     'SUB1' => 10,
     'SUB2' => 20
@@ -72,8 +74,9 @@ if ($resultado) {
 } else {
     echo "Error executing the query: " . $conexion->error;
 }
+//Reference with max 12chars
 
-$reference = $idMembership . '-' . $row['user_tag'] . '-' . time();
+$reference = $idMembership . '-' . time();
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -91,8 +94,8 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => 'QUO23424',
-    'description' => 'uniqid: ' . $row['account_sub_id'],
+    'reference' => $reference,
+    'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'],
     'language' => 'ES',
     'email' => $row['account_correo'],
     'amount' => $membershipPrice,
@@ -175,7 +178,7 @@ echo '</body></html>';
         }
     </style>
     <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value) : ?>
+        <?php foreach ($fields as $key => $value): ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
