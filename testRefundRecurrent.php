@@ -89,11 +89,23 @@ $monetico = new Monetico(
   'kalsteinfr'
 );
 
+// Clean the date string by removing '_a_' and replace it with a space
+$dateString = str_replace('_a_', ' ', trim($responseData['date']));
+
+// Print the cleaned date string for debugging
+echo 'Cleaned date string: ' . $dateString . '<br>';
+
 // Convert date string to DateTime object
-$orderDate = DateTime::createFromFormat('d/m/Y_a_H:i:s', $responseData['date']);
+$orderDate = DateTime::createFromFormat('d/m/Y H:i:s', $dateString);
 if (!$orderDate) {
+  echo 'DateTime::getLastErrors(): ';
+  print_r(DateTime::getLastErrors());
   die('Invalid order date format.');
 }
+
+// Print the orderDate for debugging
+echo 'Order Date: ';
+var_dump($orderDate);
 
 // Create a RefundRequest with the required fields
 $refund = new RefundRequest([
@@ -104,13 +116,21 @@ $refund = new RefundRequest([
   'reference' => $responseData['reference'],
   'language' => 'FR',
   'currency' => 'USD', // Assuming the currency is USD based on montant
-  'amount' => 20, // Amount in cents (20 USD * 100)
-  'refundAmount' => 20, // Refund the full amount, in cents
-  'maxRefundAmount' => 20, // Maximum refund amount, in cents
+  'amount' => 2000, // Amount in cents (20 USD * 100)
+  'refundAmount' => 2000, // Refund the full amount, in cents
+  'maxRefundAmount' => 2000, // Maximum refund amount, in cents
 ]);
+
+// Print the RefundRequest for debugging
+echo 'Refund Request: ';
+var_dump($refund);
 
 // Get the fields for the refund request
 $fields = $monetico->getFields($refund);
+
+// Print the fields for debugging
+echo 'Fields: ';
+var_dump($fields);
 
 // Send the refund request using GuzzleHttp Client
 $client = new Client();
