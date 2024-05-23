@@ -74,8 +74,9 @@ if ($resultado) {
 } else {
     echo "Error executing the query: " . $conexion->error;
 }
+//Reference with max 12chars
 
-$reference = 'Membresia' . $idMembership . '-' . time();
+$reference = $idMembership . '-' . time();
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
