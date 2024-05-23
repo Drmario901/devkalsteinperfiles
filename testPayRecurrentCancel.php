@@ -12,7 +12,6 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Requests\CancelRequest;
-use DansMaCulotte\Monetico\Responses\CancelResponse;
 use GuzzleHttp\Client;
 
 function calculateMAC($securityKey, $fields) {
@@ -45,8 +44,11 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
 $montant = '10.00EUR'; // Formato correcto sin el símbolo de moneda y con dos decimales
+$montant_a_capturer = '0.00EUR';
+$montant_deja_capture = '0.00EUR';
+$montant_restant = '0.00EUR';
 $reference = 'SUB1-1716474386';
-$version = '1.0';
+$version = '3.0';
 $lgue = 'FR';
 $societe = 'kalsteinfr';
 $stoprecurrence = 'OUI';
@@ -57,6 +59,9 @@ $fields = [
     'date' => $date,
     'date_commande' => $date_commande,
     'montant' => $montant,
+    'montant_a_capturer' => $montant_a_capturer,
+    'montant_deja_capture' => $montant_deja_capture,
+    'montant_restant' => $montant_restant,
     'reference' => $reference,
     'lgue' => $lgue,
     'societe' => $societe,
