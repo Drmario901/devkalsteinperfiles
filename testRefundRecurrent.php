@@ -89,8 +89,8 @@ $monetico = new Monetico(
   'kalsteinfr'
 );
 
-// Clean the date string and replace underscores with spaces
-$dateString = str_replace('_', ' ', trim($responseData['date']));
+// Clean the date string by removing '_a_' and replace it with a space
+$dateString = str_replace('_a_', ' ', trim($responseData['date']));
 
 // Print the cleaned date string for debugging
 echo 'Cleaned date string: ' . $dateString . '<br>';
