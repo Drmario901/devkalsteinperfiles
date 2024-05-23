@@ -13,31 +13,25 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use DansMaCulotte\Monetico\Monetico;
 
 function calculateMAC($securityKey, $fields) {
-    // Ordenar los campos alfabéticamente por clave
     ksort($fields);
     
-    // Crear el string de datos concatenando los valores de los campos
     $dataString = '';
     foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
-    // Eliminar el último asterisco
+
     $dataString = rtrim($dataString, '*');
     
-    // Calcular el HMAC-SHA1
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
 // Datos proporcionados
-$date = '23/05/2024_a_16:26:35'; // Fecha y hora de la transacción original
-$date_commande = '23/05/2024'; // Solo la fecha de la transacción original
-
-// Asegurarse de que las fechas están en el formato correcto
-if (!preg_match('/^\d{2}\/\d{2}\/\d{4}_a_\d{2}:\d{2}:\d{2}$/', $date)) {
-    die('Formato de fecha "date" incorrecto. Debe ser dd/mm/yyyy_a_hh:mm:ss');
-}
-if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
-    die('Formato de fecha "date_commande" incorrecto. Debe ser dd/mm/yyyy');
+try {
+    $dateTime = new DateTime('now', new DateTimeZone('America/Caracas'));
+    $date = $dateTime->format('d/m/Y_a_H:i:s'); // Fecha y hora de la transacción original
+    $date_commande = $dateTime->format('d/m/Y'); // Solo la fecha de la transacción original
+} catch (Exception $e) {
+    die('Error al crear las fechas: ' . $e->getMessage());
 }
 
 // Resto de los parámetros
@@ -53,7 +47,6 @@ $lgue = 'ES';
 $societe = 'kalsteinfr';
 $stoprecurrence = 'OUI';
 
-// Crear arreglo de campos
 $fields = [
     'version' => $version,
     'TPE' => $tpe,
@@ -73,7 +66,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; // URL de pruebas
+$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; 
 
 ?>
 <html>
