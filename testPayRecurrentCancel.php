@@ -13,7 +13,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use GuzzleHttp\Client;
 
 function calculateMAC($securityKey, $fields) {
-    ksort($fields);
+    ksort($fields, SORT_STRING);
 
     $dataString = '';
     foreach ($fields as $key => $value) {
@@ -39,15 +39,15 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
 }
 
 // Resto de los parámetros
-$securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; // Revisa si esta clave es correcta
+$securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = '10.00USD'; // Formato correcto según la documentación
+$montant = '10.00USD'; // Formato correcto sin el símbolo de moneda y con dos decimales
 $montant_a_capturer = '0.00USD';
 $montant_deja_capture = '0.00USD';
 $montant_restant = '0.00USD';
 $reference = 'SUB1-1716474386';
 $version = '3.0';
-$lgue = 'ES';
+$lgue = 'FR';
 $societe = 'kalsteinfr';
 $stoprecurrence = 'OUI';
 
