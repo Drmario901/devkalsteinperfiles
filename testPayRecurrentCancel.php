@@ -67,8 +67,8 @@ $fields = [
     'stoprecurrence' => $stoprecurrence
 ];
 
-$mac = calculateMAC($securityKey, $fields);
-
+//$mac = calculateMAC($securityKey, $fields);
+$mac = '78bc376c5b192f1c48844794cbdb0050f156b9a2';
 $fields['MAC'] = $mac;
 
 $url = "https://p.monetico-services.com/test/capture_paiement.cgi";
