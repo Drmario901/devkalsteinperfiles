@@ -197,15 +197,13 @@ if ($jobRole == 0) {
             $post_author = 1;
             $post_type = 'page';
 
-            $sql = "INSERT INTO 8x7MM_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) 
-                    VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type')";
+            $sql = "INSERT INTO 8x7MM_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type) VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type')";
 
             if ($conexion2->query($sql) === TRUE) {
                 $post_id = $conexion2->insert_id;
 
                 $empty_template = $conexion2->real_escape_string($empty_template);
-                $sql_template = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) 
-                                 VALUES ('$post_id', '_wp_page_template', '$empty_template')";
+                $sql_template = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) VALUES ('$post_id', '_wp_page_template', '$empty_template')";
                 $conexion2->query($sql_template);
 
                 $meta_values = [
@@ -215,8 +213,7 @@ if ($jobRole == 0) {
 
                 foreach ($meta_values as $meta_key => $meta_value) {
                     $meta_value = $conexion->real_escape_string($meta_value);
-                    $sql_meta = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) 
-                                VALUES ('$post_id', '$meta_key', '$meta_value')";
+                    $sql_meta = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) VALUES ('$post_id', '$meta_key', '$meta_value')";
                     $conexion2->query($sql_meta);
                 }
             }
