@@ -34,35 +34,38 @@ if (!isset($_GET["emailUser"])) {
   die('Error');
 }
 
-//MAIN QUERYS
+// MAIN QUERIES
 $consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 
 $response = $conexion->query($consulta);
-// $row = $conexion->query($consulta)->fetch_assoc();
-
 if ($response) {
-  if ($reponse->num_rows > 0) {
+  if ($response->num_rows > 0) {
     $row = $response->fetch_assoc();
     $account_id = $row['account_id'];
+  } else {
+    die('No account found for this email.');
   }
+} else {
+  die('Query error: ' . $conexion->error);
 }
 
-
-echo 'el idddd' . $account_id;
+echo 'el idddd ' . $account_id;
 
 $consulta2 = "SELECT referencia_pago FROM wp_account WHERE user_id = '$account_id'";
 
 $response2 = $conexion->query($consulta2);
-
 if ($response2) {
   if ($response2->num_rows > 0) {
     $row2 = $response2->fetch_assoc();
     $referencia_pago = $row2['referencia_pago'];
+  } else {
+    die('No payment reference found for this account.');
   }
+} else {
+  die('Query error: ' . $conexion->error);
 }
 
 echo 'el idddd pero de ' . $referencia_pago;
-
 
 
 // if ($row) {
