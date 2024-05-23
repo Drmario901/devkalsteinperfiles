@@ -18,7 +18,7 @@ if (!empty($data)) {
     $result = $monetico->validate($response);
 
 
-    echo "version=2\ncdr=0";
+    //echo "version=2\ncdr=0";
 
     // Procesar los datos recibidos
     $texteLibre = $data['texte-libre'];
