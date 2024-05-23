@@ -27,16 +27,20 @@ function calculateMAC($securityKey, $fields) {
 
 // Obtener fecha y hora actual en formato correcto
 $dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
-$date = $dateTime->format('d/m/Y_a_H:i:s');
+$date = $dateTime->format('d/m/Y\TH:i:s'); // Cambiado a formato ISO 8601
 $date_commande = $dateTime->format('d/m/Y');
 
 // Verificar formatos de fecha
-if (!preg_match('/^\d{2}\/\d{2}\/\d{4}_a_\d{2}:\d{2}:\d{2}$/', $date)) {
-    die('Formato de fecha "date" incorrecto. Debe ser dd/mm/yyyy_a_hh:mm:ss');
+if (!preg_match('/^\d{2}\/\d{2}\/\d{4}T\d{2}:\d{2}:\d{2}$/', $date)) {
+    die('Formato de fecha "date" incorrecto. Debe ser dd/mm/yyyyTHH:mm:ss');
 }
 if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
     die('Formato de fecha "date_commande" incorrecto. Debe ser dd/mm/yyyy');
 }
+
+// Imprimir fechas para verificación
+echo "date: " . $date . "<br>";
+echo "date_commande: " . $date_commande . "<br>";
 
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
