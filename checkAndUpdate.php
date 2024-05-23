@@ -33,83 +33,102 @@ if ($currentModifiedTime > $lastModifiedTime) {
   // Leer el contenido del archivo
   $data = file_get_contents($filePath);
 
-  // Parsear el contenido del archivo para extraer la información necesaria
-  // Esto dependerá del formato del archivo
+  // Dividir el contenido en líneas individuales
+  $lines = explode("\n", $data);
 
-  // Suponiendo que el archivo contiene JSON
-  $dataArray = json_decode($data, true);
+  // Obtener la fecha actual del sistema
+  $currentDate = date('d/m/Y');
 
-  // Verificar si la decodificación fue exitosa
-  if (json_last_error() !== JSON_ERROR_NONE) {
-    logError("Error al decodificar JSON: " . json_last_error_msg());
-    exit;
-  }
+  // Procesar cada línea individualmente
+  foreach ($lines as $line) {
+    // Verificar si la línea contiene datos JSON
+    if (strpos($line, 'Datos recibidos:') !== false) {
+      // Extraer la parte JSON de la línea
+      $jsonStr = trim(substr($line, strpos($line, 'Datos recibidos:') + 16));
 
-  // Procesar los datos
-  foreach ($dataArray as $entry) {
-    // Obtener los valores necesarios
-    $userID = $entry['userID'] ?? null;
-    $subscriptionType = $entry['subscriptionType'] ?? null;
-    $paymentReference = $entry['paymentReference'] ?? null;
+      // Parsear el contenido del archivo para extraer la información necesaria
+      $dataArray = json_decode($jsonStr, true);
 
-    // Validar que los valores necesarios no estén vacíos
-    if (!$userID || !$subscriptionType || !$paymentReference) {
-      logError("Datos faltantes en la entrada: " . json_encode($entry));
-      continue;
-    }
-
-    // Conectar a la base de datos
-    require __DIR__ . '/php/conexion.php';
-
-    // Obtener account_aid desde wp_account
-    $stmt = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
-    if (!$stmt) {
-      logError("Error preparando la consulta: " . $conexion->error);
-      continue;
-    }
-
-    $stmt->bind_param("s", $userID);
-    $stmt->execute();
-    $stmt->bind_result($accountAid);
-    $stmt->fetch();
-    $stmt->close();
-
-    if ($accountAid) {
-      // Calcular las fechas de inicio y finalización de la membresía (un mes)
-      $fechaInicio = date('Y-m-d');
-      $fechaFinal = date('Y-m-d', strtotime('+1 month'));
-
-      // Determinar el tipo de membresía basado en la referencia
-      $tipoMembresia = 0;
-      if (strpos($paymentReference, 'SUB1') !== false) {
-        $tipoMembresia = 1;
-      } elseif (strpos($paymentReference, 'SUB2') !== false) {
-        $tipoMembresia = 2;
-      }
-
-      // Actualizar la tabla wp_subscripcion
-      $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET fecha_inicio = ?, fecha_final = ?, referencia_pago = ?, estado_membresia = 'activo', user_id = ? WHERE user_id = ?");
-      if (!$updateSubs) {
-        logError("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
+      // Verificar si la decodificación fue exitosa
+      if (json_last_error() !== JSON_ERROR_NONE) {
+        logError("Error al decodificar JSON: " . json_last_error_msg());
         continue;
       }
 
-      $updateSubs->bind_param("sssii", $fechaInicio, $fechaFinal, $paymentReference, $accountAid, $accountAid);
-      $updateSubs->execute();
-      $updateSubs->close();
+      // Extraer y formatear la fecha del JSON
+      $jsonDate = DateTime::createFromFormat('d/m/Y', substr($dataArray['date'], 0, 10));
 
-      // Actualizar el tipo de membresía en la tabla wp_account
-      $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
-      if (!$updateAccount) {
-        logError("Error preparando la actualización de wp_account: " . $conexion->error);
-        continue;
+      // Verificar si la fecha del JSON coincide con la fecha actual
+      if ($jsonDate && $jsonDate->format('d/m/Y') == $currentDate) {
+        // Obtener los valores necesarios
+        $userID = null;
+        if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
+          $userID = $matches[1];
+        }
+
+        $subscriptionType = $dataArray['montant'] ?? null;
+        $paymentReference = $dataArray['reference'] ?? null;
+
+        // Validar que los valores necesarios no estén vacíos
+        if (!$userID || !$subscriptionType || !$paymentReference) {
+          logError("Datos faltantes en la entrada: " . $jsonStr);
+          continue;
+        }
+
+        // Conectar a la base de datos
+        require __DIR__ . '/php/conexion.php';
+
+        // Obtener account_aid desde wp_account
+        $stmt = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
+        if (!$stmt) {
+          logError("Error preparando la consulta: " . $conexion->error);
+          continue;
+        }
+
+        $stmt->bind_param("s", $userID);
+        $stmt->execute();
+        $stmt->bind_result($accountAid);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($accountAid) {
+          // Calcular las fechas de inicio y finalización de la membresía (un mes)
+          $fechaInicio = date('Y-m-d');
+          $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
+
+          // Determinar el tipo de membresía basado en la referencia
+          $tipoMembresia = 0;
+          if (strpos($paymentReference, 'SUB1') !== false) {
+            $tipoMembresia = 1;
+          } elseif (strpos($paymentReference, 'SUB2') !== false) {
+            $tipoMembresia = 2;
+          }
+
+          // Actualizar la tabla wp_subscripcion
+          $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET fecha_inicio = ?, fecha_final = ?, referencia_pago = ?, estado_membresia = 'activo', user_id = ? WHERE user_id = ?");
+          if (!$updateSubs) {
+            logError("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
+            continue;
+          }
+
+          $updateSubs->bind_param("sssii", $fechaInicio, $fechaFinal, $paymentReference, $accountAid, $accountAid);
+          $updateSubs->execute();
+          $updateSubs->close();
+
+          // Actualizar el tipo de membresía en la tabla wp_account
+          $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
+          if (!$updateAccount) {
+            logError("Error preparando la actualización de wp_account: " . $conexion->error);
+            continue;
+          }
+
+          $updateAccount->bind_param("ii", $tipoMembresia, $accountAid);
+          $updateAccount->execute();
+          $updateAccount->close();
+        } else {
+          logError("No se encontró account_aid para user_tag: $userID");
+        }
       }
-
-      $updateAccount->bind_param("ii", $tipoMembresia, $accountAid);
-      $updateAccount->execute();
-      $updateAccount->close();
-    } else {
-      logError("No se encontró account_aid para user_tag: $userID");
     }
   }
 }
