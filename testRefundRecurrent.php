@@ -35,7 +35,7 @@ if (!isset($_GET["emailUser"])) {
 }
 
 // MAIN QUERIES
-$consulta = "SELECT * FROM wp_account WHERE account_correo = '$email'";
+$consulta = "SELECT * FROM wp_account WHERE account_correo = '$emailUser'";
 
 $response = $conexion->query($consulta);
 if ($response) {
@@ -49,9 +49,9 @@ if ($response) {
   die('Query error: ' . $conexion->error);
 }
 
-echo 'el idddd ' . $account_id;
+echo 'el idddd ' . $account_aid;
 
-$consulta2 = "SELECT referencia_pago FROM wp_account WHERE user_id = '$account_id'";
+$consulta2 = "SELECT referencia_pago FROM wp_account WHERE user_id = '$account_aid'";
 
 $response2 = $conexion->query($consulta2);
 if ($response2) {
