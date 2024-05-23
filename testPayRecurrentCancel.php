@@ -15,7 +15,7 @@ use DansMaCulotte\Monetico\Monetico;
 function calculateMAC($securityKey, $fields) {
     ksort($fields); // Ordenar los campos alfabéticamente
     $dataString = '';
-    foreach ($fields as $key => $value) {
+    foreach ($fields as $value) {
         $dataString .= $value . '*';
     }
     $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
