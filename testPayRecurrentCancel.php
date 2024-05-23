@@ -22,7 +22,7 @@ function calculateMAC($securityKey, $fields) {
     return strtoupper(hash_hmac('sha1', $dataString, $securityKey));
 }
 
-// Datos proporcionados
+// Fecha explícita en el formato correcto
 $date = '23/05/2024_a_16:26:35'; // Fecha y hora de la transacción original
 $date_commande = '23/05/2024'; // Solo la fecha de la transacción original
 
