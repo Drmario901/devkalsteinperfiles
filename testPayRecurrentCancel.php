@@ -15,7 +15,7 @@ use DansMaCulotte\Monetico\Monetico;
 function calculateMAC($securityKey, $fields) {
     ksort($fields); // Ordenar los campos alfabéticamente
     $dataString = '';
-    foreach ($fields as $value) {
+    foreach ($fields as $key => $value) {
         $dataString .= $value . '*';
     }
     $dataString = rtrim($dataString, '*'); // Eliminar el último '*'
@@ -52,7 +52,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi"; // URL de pruebas
+$url = "https://p.monetico-services.com/test/paiement.cgi"; // URL de pruebas
 
 ?>
 <html>
