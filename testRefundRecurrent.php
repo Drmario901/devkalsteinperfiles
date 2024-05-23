@@ -41,7 +41,7 @@ $response = $conexion->query($consulta);
 if ($response) {
   if ($response->num_rows > 0) {
     $row = $response->fetch_assoc();
-    $account_id = $row['account_id'];
+    $account_aid = $row['account_aid'];
   } else {
     die('No account found for this email.');
   }
