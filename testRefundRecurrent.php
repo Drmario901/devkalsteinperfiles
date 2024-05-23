@@ -89,9 +89,14 @@ $monetico = new Monetico(
   'kalsteinfr'
 );
 
+// Clean the date string
+$dateString = trim($responseData['date']);
+
 // Convert date string to DateTime object
-$orderDate = DateTime::createFromFormat('d/m/Y_a_H:i:s', $responseData['date']);
+$orderDate = DateTime::createFromFormat('d/m/Y_a_H:i:s', $dateString);
 if (!$orderDate) {
+  echo 'DateTime::getLastErrors(): ';
+  print_r(DateTime::getLastErrors());
   die('Invalid order date format.');
 }
 
@@ -124,5 +129,4 @@ $refundResponse = new RefundResponse($response);
 if ($refundResponse->isSuccess()) {
   echo 'Refund successful!';
 } else {
-  echo 'Refund failed: ' . $refundResponse->getMessage();
-}
+  echo 'Refund failed: '
