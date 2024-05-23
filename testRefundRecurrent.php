@@ -103,6 +103,10 @@ if (!$orderDate) {
   die('Invalid order date format.');
 }
 
+// Print the orderDate for debugging
+echo 'Order Date: ';
+var_dump($orderDate);
+
 // Create a RefundRequest with the required fields
 $refund = new RefundRequest([
   'dateTime' => new DateTime(),
@@ -117,8 +121,16 @@ $refund = new RefundRequest([
   'maxRefundAmount' => 2000, // Maximum refund amount, in cents
 ]);
 
+// Print the RefundRequest for debugging
+echo 'Refund Request: ';
+var_dump($refund);
+
 // Get the fields for the refund request
 $fields = $monetico->getFields($refund);
+
+// Print the fields for debugging
+echo 'Fields: ';
+var_dump($fields);
 
 // Send the refund request using GuzzleHttp Client
 $client = new Client();
