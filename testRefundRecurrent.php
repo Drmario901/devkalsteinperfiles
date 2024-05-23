@@ -109,9 +109,9 @@ $refund = new RefundRequest([
   'reference' => $responseData['reference'],
   'language' => 'FR',
   'currency' => 'USD', // Assuming the currency is USD based on montant
-  'amount' => 20, // Amount in cents (20 USD * 100)
-  'refundAmount' => 20, // Refund the full amount, in cents
-  'maxRefundAmount' => 20, // Maximum refund amount, in cents
+  'amount' => 2000, // Amount in cents (20 USD * 100)
+  'refundAmount' => 2000, // Refund the full amount, in cents
+  'maxRefundAmount' => 2000, // Maximum refund amount, in cents
 ]);
 
 // Get the fields for the refund request
@@ -129,5 +129,5 @@ $refundResponse = new RefundResponse($response);
 if ($refundResponse->isSuccess()) {
   echo 'Refund successful!';
 } else {
-  echo 'Refund failed: '
+  echo 'Refund failed: ' . $refundResponse->getMessage();
 }
