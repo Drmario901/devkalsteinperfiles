@@ -41,10 +41,10 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
 // Resto de los parámetros
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; // Asegúrate de que esta clave es correcta
 $tpe = '7593339';
-$montant = '10.00USD'; // Asegúrate de que el formato es correcto y en USD
-$montant_a_capturer = '0.00USD';
-$montant_deja_capture = '0.00USD';
-$montant_restant = '0.00USD';
+$montant = '10.00EUR'; // Asegúrate de que el formato es correcto y en EUR
+$montant_a_capturer = '0.00EUR';
+$montant_deja_capture = '0.00EUR';
+$montant_restant = '0.00EUR';
 $reference = 'SUB1-1716474386';
 $version = '3.0';
 $lgue = 'FR'; // Ajustado a FR según la documentación
