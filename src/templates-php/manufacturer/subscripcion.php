@@ -220,17 +220,17 @@
     </tbody>
   </table>
 
-  <div id='tbl-botones' style="display: flex; justify-content: right; gap: 2rem; margin-top: 1.5rem;">
+  <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
     <?php if ($membresia != 0) : ?>
       <a href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a>
     <?php endif; ?>
 
     <?php if ($membresia != 1 && $membresia != 2) : ?>
-      <a href="" id="membresia-1" class="btn-tbl">Membresía 2</a>
+      <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
     <?php endif; ?>
 
     <?php if ($membresia != 2) : ?>
-      <a href="" id="membresia-2" class="btn-tbl">Membresía 3</a>
+      <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
     <?php endif; ?>
   </div>
 
