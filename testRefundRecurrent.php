@@ -135,3 +135,19 @@ if ($response->getStatusCode() == 200) {
 } else {
   echo "Error al realizar el recrédito: " . $responseBody;
 }
+?>
+
+<html>
+
+<body onload="document.forms['cancel_form'].submit();">
+  <form name="cancel_form" action="<?php echo $url; ?>" method="post">
+    <?php foreach ($fields as $key => $value) : ?>
+      <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
+    <?php endforeach; ?>
+    <center>
+      <div class="custom-loader"></div>
+    </center>
+  </form>
+</body>
+
+</html>
