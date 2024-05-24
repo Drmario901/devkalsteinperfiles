@@ -64,29 +64,28 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
       // Verificar si la fecha del JSON coincide con la fecha actual
       if ($jsonDate && $jsonDate->format('d/m/Y') == $currentDate) {
-        // Verificar si el code-retour es 'payetest'
-        if (isset($dataArray['code-retour']) && $dataArray['code-retour'] === 'payetest') {
-          // Obtener los valores necesarios
-          $userID = null;
-          if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
-            $userID = '@' . $matches[1];
-          }
-
-          $subscriptionType = $dataArray['montant'] ?? null;
-          $paymentReference = $dataArray['reference'] ?? null;
-
-          // Validar que los valores necesarios no estén vacíos
-          if (!$userID || !$subscriptionType || !$paymentReference) {
-            logMessage("Datos faltantes en la entrada: " . $jsonStr);
-            continue;
-          }
-
-          // Guardar el último registro por userID
-          $lastRecords[$userID] = [
-            'subscriptionType' => $subscriptionType,
-            'paymentReference' => $paymentReference,
-          ];
+        // Obtener los valores necesarios
+        $userID = null;
+        if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
+          $userID = '@' . $matches[1];
         }
+
+        $subscriptionType = $dataArray['montant'] ?? null;
+        $paymentReference = $dataArray['reference'] ?? null;
+        $retour = $dataArray['code-retour'] ?? null;
+
+        // Validar que los valores necesarios no estén vacíos
+        if (!$userID || !$subscriptionType || !$paymentReference || !$retour) {
+          logMessage("Datos faltantes en la entrada: " . $jsonStr);
+          continue;
+        }
+
+        // Guardar el último registro por userID
+        $lastRecords[$userID] = [
+          'subscriptionType' => $subscriptionType,
+          'paymentReference' => $paymentReference,
+          'retour' => $retour,
+        ];
       }
     }
   }
@@ -96,60 +95,64 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
   // Procesar los últimos registros únicos
   foreach ($lastRecords as $userID => $record) {
-    // Obtener account_aid desde wp_account
-    $stmt = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
-    if (!$stmt) {
-      logMessage("Error preparando la consulta: " . $conexion->error);
-      continue;
-    }
-
-    $stmt->bind_param("s", $userID);
-    $stmt->execute();
-    $stmt->bind_result($accountAid);
-    $stmt->fetch();
-    $stmt->close();
-
-    if ($accountAid) {
-      // Calcular las fechas de inicio y finalización de la membresía (un mes)
-      $fechaInicio = date('Y-m-d');
-      $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
-
-      // Determinar el tipo de membresía basado en la referencia
-      $tipoMembresia = 0;
-      if (strpos($record['paymentReference'], 'SUB1') !== false) {
-        $tipoMembresia = 1;
-      } elseif (strpos($record['paymentReference'], 'SUB2') !== false) {
-        $tipoMembresia = 2;
-      }
-
-      // Actualizar la tabla wp_subscripcion
-      $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET fecha_inicio = ?, fecha_final = ?, referencia_pago = ?, estado_membresia = 'activo', user_id = ? WHERE user_id = ?");
-      if (!$updateSubs) {
-        logMessage("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
+    if ($record['retour'] === 'payetest') {
+      // Obtener account_aid desde wp_account
+      $stmt = $conexion->prepare("SELECT account_aid FROM wp_account WHERE user_tag = ?");
+      if (!$stmt) {
+        logMessage("Error preparando la consulta: " . $conexion->error);
         continue;
       }
 
-      $updateSubs->bind_param("sssii", $fechaInicio, $fechaFinal, $record['paymentReference'], $accountAid, $accountAid);
-      $updateSubs->execute();
-      $updateSubs->close();
+      $stmt->bind_param("s", $userID);
+      $stmt->execute();
+      $stmt->bind_result($accountAid);
+      $stmt->fetch();
+      $stmt->close();
 
-      // Actualizar el tipo de membresía en la tabla wp_account
-      $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
-      if (!$updateAccount) {
-        logMessage("Error preparando la actualización de wp_account: " . $conexion->error);
-        continue;
+      if ($accountAid) {
+        // Calcular las fechas de inicio y finalización de la membresía (un mes)
+        $fechaInicio = date('Y-m-d');
+        $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
+
+        // Determinar el tipo de membresía basado en la referencia
+        $tipoMembresia = 0;
+        if (strpos($record['paymentReference'], 'SUB1') !== false) {
+          $tipoMembresia = 1;
+        } elseif (strpos($record['paymentReference'], 'SUB2') !== false) {
+          $tipoMembresia = 2;
+        }
+
+        // Actualizar la tabla wp_subscripcion
+        $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET fecha_inicio = ?, fecha_final = ?, referencia_pago = ?, estado_membresia = 'activo', user_id = ? WHERE user_id = ?");
+        if (!$updateSubs) {
+          logMessage("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
+          continue;
+        }
+
+        $updateSubs->bind_param("sssii", $fechaInicio, $fechaFinal, $record['paymentReference'], $accountAid, $accountAid);
+        $updateSubs->execute();
+        $updateSubs->close();
+
+        // Actualizar el tipo de membresía en la tabla wp_account
+        $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
+        if (!$updateAccount) {
+          logMessage("Error preparando la actualización de wp_account: " . $conexion->error);
+          continue;
+        }
+
+        $updateAccount->bind_param("ii", $tipoMembresia, $accountAid);
+        $updateAccount->execute();
+        $updateAccount->close();
+
+        logMessage("Actualización exitosa para user_tag: $userID");
+      } else {
+        logMessage("No se encontró account_aid para user_tag: $userID");
       }
-
-      $updateAccount->bind_param("ii", $tipoMembresia, $accountAid);
-      $updateAccount->execute();
-      $updateAccount->close();
-
-      logMessage("Actualización exitosa para user_tag: $userID");
     } else {
-      logMessage("No se encontró account_aid para user_tag: $userID");
+      logMessage("El pago no se procesó correctamente.");
     }
   }
 } else {
-  logMessage("No se encontraron modificaciones recientes en el archivoo.");
+  logMessage("No se encontraron modificaciones recientes en el archivo.");
 }
 ?>
