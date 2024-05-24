@@ -137,7 +137,6 @@ if ($response->getStatusCode() == 200) {
 } else {
   echo "Error al realizar el recrédito: " . $responseBody;
 }
-?>
 
 // Verificar la IP del servidor
 echo 'IP del servidor: ' . $_SERVER['SERVER_ADDR'];
