@@ -18,6 +18,11 @@ session_start();
 // $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 // // $enText = '<h2>Redirecting to Payment Gateway</h2>';
 
+$json_prueba = '{"TPE":"7593339","date":"24\/05\/2024_a_17:15:05","montant":"10USD","reference":"SUB1-1716563690","texte-libre":"uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664f7f01063ea1.38026363  userID:@valfonsob12","code-retour":"payetest","cvx":"oui","vld":"1226","brand":"VI","motifrefus":"","usage":"inconnu","typecompte":"inconnu","ecard":"non","originecb":"FRA","bincb":"00000100","hpancb":"B552FD6DB65EC37C5B5C95F0E02A00841634AD86","ipclient":"185.28.22.84","originetr":"USA","cbmasquee":"00000100******21","modepaiement":"CB","authentification":"ewogICAiZGV0YWlscyIgOiB7CiAgICAgICJsaWFiaWxpdHlTaGlmdCIgOiAiTkEiLAogICAgICAibWVyY2hhbnRQcmVmZXJlbmNlIiA6ICJjaGFsbGVuZ2VfbWFuZGF0ZWQiCiAgIH0sCiAgICJwcm90b2NvbCIgOiAiM0RTZWN1cmUiLAogICAic3RhdHVzIiA6ICJub3RfZW5yb2xsZWQiLAogICAidmVyc2lvbiIgOiAiMi4yLjAiCn0K","MAC":"8A2ADD60FC8E74305E4E0E1A9A5ABBBDAB59D5BC"}';
+
+// Decode the JSON response
+$responseData = json_decode($json_prueba, true);
+
 if (!isset($_GET["emailUser"])) {
   die('Error: emailUser not set');
 }
@@ -72,13 +77,12 @@ use GuzzleHttp\Client;
 
 // Datos proporcionados para la prueba
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
-$tpe = '7593339';
-$dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
-$date = $dateTime->format('d/m/Y:H:i:s');
-$date_commande = $dateTime->format('d/m/Y');
-$montant = '10.00USD';
-$montant_recredit = '5.00USD';
-$reference = 'SUB1-1716474386';
+$tpe = $responseData['TPE'];
+$date = str_replace('_a_', ' ', $responseData['date']);
+$date_commande = $date; // Asumiendo que 'date_commande' es el mismo formato
+$montant = $responseData['montant'];
+$montant_recredit = '5.00USD'; // Este es un valor hardcodeado para la prueba
+$reference = $responseData['reference'];
 $version = '3.0';
 $lgue = 'FR';
 $societe = 'kalsteinfr';
