@@ -64,30 +64,29 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
       // Verificar si la fecha del JSON coincide con la fecha actual
       if ($jsonDate && $jsonDate->format('d/m/Y') == $currentDate) {
-        if ($dataArray['code-retour'] !== "payetest") {
-          logMessage("Pago no exitoso para userID: " . $dataArray['texte-libre'] . ", motivo: " . $dataArray['code-retour']);
-          continue;
-        }
-        // Obtener los valores necesarios
-        $userID = null;
-        if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
-          $userID = '@' . $matches[1];
-        }
+        // Verificar si el code-retour es 'payetest'
+        if (isset($dataArray['code-retour']) && $dataArray['code-retour'] === 'payetest') {
+          // Obtener los valores necesarios
+          $userID = null;
+          if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
+            $userID = '@' . $matches[1];
+          }
 
-        $subscriptionType = $dataArray['montant'] ?? null;
-        $paymentReference = $dataArray['reference'] ?? null;
+          $subscriptionType = $dataArray['montant'] ?? null;
+          $paymentReference = $dataArray['reference'] ?? null;
 
-        // Validar que los valores necesarios no estén vacíos
-        if (!$userID || !$subscriptionType || !$paymentReference) {
-          logMessage("Datos faltantes en la entrada: " . $jsonStr);
-          continue;
+          // Validar que los valores necesarios no estén vacíos
+          if (!$userID || !$subscriptionType || !$paymentReference) {
+            logMessage("Datos faltantes en la entrada: " . $jsonStr);
+            continue;
+          }
+
+          // Guardar el último registro por userID
+          $lastRecords[$userID] = [
+            'subscriptionType' => $subscriptionType,
+            'paymentReference' => $paymentReference,
+          ];
         }
-
-        // Guardar el último registro por userID
-        $lastRecords[$userID] = [
-          'subscriptionType' => $subscriptionType,
-          'paymentReference' => $paymentReference,
-        ];
       }
     }
   }
