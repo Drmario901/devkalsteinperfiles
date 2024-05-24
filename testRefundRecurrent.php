@@ -14,9 +14,9 @@ session_start();
 //   die('No email account in session.');
 // }
 
-// // LANGUAGE FOR THE TEXT OF LOADER.
+// LANGUAGE FOR THE TEXT OF LOADER.
 // $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
-// // $enText = '<h2>Redirecting to Payment Gateway</h2>';
+// $enText = '<h2>Redirecting to Payment Gateway</h2>';
 
 $json_prueba = '{"TPE":"7593339","date":"24\/05\/2024_a_17:15:05","montant":"10USD","reference":"SUB1-1716563690","texte-libre":"uniqid: c15a3f97b46c7ce010e5a49ec3b6b3a2664f7f01063ea1.38026363  userID:@valfonsob12","code-retour":"payetest","cvx":"oui","vld":"1226","brand":"VI","motifrefus":"","usage":"inconnu","typecompte":"inconnu","ecard":"non","originecb":"FRA","bincb":"00000100","hpancb":"B552FD6DB65EC37C5B5C95F0E02A00841634AD86","ipclient":"185.28.22.84","originetr":"USA","cbmasquee":"00000100******21","modepaiement":"CB","authentification":"ewogICAiZGV0YWlscyIgOiB7CiAgICAgICJsaWFiaWxpdHlTaGlmdCIgOiAiTkEiLAogICAgICAibWVyY2hhbnRQcmVmZXJlbmNlIiA6ICJjaGFsbGVuZ2VfbWFuZGF0ZWQiCiAgIH0sCiAgICJwcm90b2NvbCIgOiAiM0RTZWN1cmUiLAogICAic3RhdHVzIiA6ICJub3RfZW5yb2xsZWQiLAogICAidmVyc2lvbiIgOiAiMi4yLjAiCn0K","MAC":"8A2ADD60FC8E74305E4E0E1A9A5ABBBDAB59D5BC"}';
 
@@ -78,15 +78,17 @@ use GuzzleHttp\Client;
 // Datos proporcionados para la prueba
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; // Verifica que esta clave es correcta
 $tpe = $responseData['TPE'];
-$dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
 $date = str_replace('_a_', ' ', $responseData['date']);
-$date_commande = $dateTime->format('d/m/Y'); // Asignar una fecha válida a date_commande
 $montant = $responseData['montant'];
-$montant_recredit = '10.00USD'; // Este es un valor hardcodeado para la prueba
+$montant_recredit = '5.00USD'; // Este es un valor hardcodeado para la prueba
 $reference = $responseData['reference'];
 $version = '3.0';
 $lgue = 'FR';
 $societe = 'kalsteinfr';
+
+// Obtener la fecha actual para la date_commande
+$dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
+$date_commande = $dateTime->format('d/m/Y');
 
 $fields = [
   'version' => $version,
@@ -120,7 +122,7 @@ echo '<pre>';
 print_r($fields);
 echo '</pre>';
 
-$url = "https://payment-api.e-i.com/recredit_paiement.cgi";
+$url = "https://p.monetico-services.com/test/recredit_paiement.cgi";
 
 // Enviar la solicitud de recrédito
 $client = new Client();
@@ -137,17 +139,5 @@ if ($response->getStatusCode() == 200) {
 }
 ?>
 
-<!-- <html>
-
-<body onload="document.forms['cancel_form'].submit();">
-  <form name="cancel_form" action="<?php echo $url; ?>" method="post">
-    <?php foreach ($fields as $key => $value) : ?>
-      <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
-    <?php endforeach; ?>
-    <center>
-      <div class="custom-loader"></div>
-    </center>
-  </form>
-</body>
-
-</html> -->
+// Verificar la IP del servidor
+echo 'IP del servidor: ' . $_SERVER['SERVER_ADDR'];
