@@ -39,9 +39,9 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; 
 $tpe = '7593339';
 $montant = '10USD'; 
-$montant_a_capturer = '0.00EUR';
-$montant_deja_capture = '0.00EUR';
-$montant_restant = '0.00EUR';
+$montant_a_capturer = '0.00USD';
+$montant_deja_capture = '0.00USD';
+$montant_restant = '0.00USD';
 $reference = 'SUB1-1716563690';
 $version = '3.0';
 $lgue = 'FR'; 
