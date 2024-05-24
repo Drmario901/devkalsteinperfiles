@@ -12,7 +12,8 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 
 use GuzzleHttp\Client;
 
-function calculateMAC($securityKey, $fields) {
+function calculateMAC($securityKey, $fields)
+{
     ksort($fields, SORT_STRING);
 
     $dataString = '';
@@ -86,13 +87,13 @@ if ($response->getStatusCode() == 200) {
     echo "Error al cancelar el pago recurrente: " . $responseBody;
 }
 ?>
-<html>
+<!-- <html>
 <body onload="document.forms['cancel_form'].submit();">
     <form name="cancel_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value): ?>
+        <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
         <?php endforeach; ?>
         <center><div class="custom-loader"></div></center>
     </form>
 </body>
-</html>
+</html> -->
