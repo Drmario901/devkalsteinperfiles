@@ -76,10 +76,10 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use GuzzleHttp\Client;
 
 // Datos proporcionados para la prueba
-$securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
+$securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; // Verifica que esta clave es correcta
 $tpe = $responseData['TPE'];
 $date = str_replace('_a_', ' ', $responseData['date']);
-$date_commande = $date; // Asumiendo que 'date_commande' es el mismo formato
+$date_commande = $dateTime->format('d/m/Y');
 $montant = $responseData['montant'];
 $montant_recredit = '5.00USD'; // Este es un valor hardcodeado para la prueba
 $reference = $responseData['reference'];
@@ -113,6 +113,11 @@ function calculateMAC($securityKey, $fields)
 
 $mac = calculateMAC($securityKey, $fields);
 $fields['MAC'] = $mac;
+
+// Log para depuración
+echo '<pre>';
+print_r($fields);
+echo '</pre>';
 
 $url = "https://p.monetico-services.com/test/recredit_paiement.cgi";
 
