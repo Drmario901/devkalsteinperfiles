@@ -8,15 +8,15 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 session_start();
 
 // EMAIL ACCOUNT SESSION.
-if (isset($_SESSION["emailAccount"])) {
-  $email = $_SESSION["emailAccount"];
-} else {
-  die('No email account in session.');
-}
+// if (isset($_SESSION["emailAccount"])) {
+//   $email = $_SESSION["emailAccount"];
+// } else {
+//   die('No email account in session.');
+// }
 
-// LANGUAGE FOR THE TEXT OF LOADER.
-$esText = '<h2>Redirigiendo a pasarela de pago</h2>';
-// $enText = '<h2>Redirecting to Payment Gateway</h2>';
+// // LANGUAGE FOR THE TEXT OF LOADER.
+// $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
+// // $enText = '<h2>Redirecting to Payment Gateway</h2>';
 
 if (!isset($_GET["emailUser"])) {
   die('Error: emailUser not set');
