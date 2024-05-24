@@ -64,6 +64,10 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
       // Verificar si la fecha del JSON coincide con la fecha actual
       if ($jsonDate && $jsonDate->format('d/m/Y') == $currentDate) {
+        if ($dataArray['code-retour'] !== "payetest") {
+          logMessage("Pago no exitoso para userID: " . $dataArray['texte-libre'] . ", motivo: " . $dataArray['code-retour']);
+          continue;
+        }
         // Obtener los valores necesarios
         $userID = null;
         if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
