@@ -78,8 +78,9 @@ use GuzzleHttp\Client;
 // Datos proporcionados para la prueba
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991'; // Verifica que esta clave es correcta
 $tpe = $responseData['TPE'];
+$dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
 $date = str_replace('_a_', ' ', $responseData['date']);
-$date_commande = $dateTime->format('d/m/Y');
+$date_commande = $dateTime->format('d/m/Y'); // Asignar una fecha válida a date_commande
 $montant = $responseData['montant'];
 $montant_recredit = '5.00USD'; // Este es un valor hardcodeado para la prueba
 $reference = $responseData['reference'];
