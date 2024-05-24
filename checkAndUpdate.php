@@ -66,7 +66,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
       if ($jsonDate && $jsonDate->format('d/m/Y') == $currentDate) {
         // Obtener los valores necesarios
         $userID = null;
-        if (preg_match('/userID:@(\w+)/', $dataArray['texte-libre'], $matches)) {
+        if (preg_match('/userID:@([\w.-]+)/', $dataArray['texte-libre'], $matches)) {
           $userID = '@' . $matches[1];
         }
 
