@@ -141,7 +141,7 @@ jQuery(document).ready(function ($) {
   crearDatos();
 
   $("#membresia-1").click(function () {
-    let atributo = $("#membresia-2").attr("user");
+    let atributo = $("#membresia-1").attr("user");
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
