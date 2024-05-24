@@ -37,6 +37,8 @@ if (!isset($_GET["user"])) {
 }
 $getUser = $_GET["user"];
 
+$email = $getUser;
+
 
 echo 'aaaaa ' . $idMembership;
 

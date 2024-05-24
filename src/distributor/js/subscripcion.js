@@ -176,9 +176,9 @@ jQuery(document).ready(function ($) {
       });
   });
   function updateSubscripcion(subs, user) {
-    // window.location.replace(
-    //   `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php?idMembership=SUB${subs}&user=${user}`
-    // );
-    alert(`aqui van ${subs} y ${user}`);
+    window.location.replace(
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php?idMembership=SUB${subs}&user=${user}`
+    );
+    // alert(`aqui van ${subs} y ${user}`);
   }
 });
