@@ -125,7 +125,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
         // Actualizar o insertar en la tabla wp_subscripcion
         $insertOrUpdateSubs = $conexion->prepare("
           INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, user_id)
-          VALUES (?, ?, ?, 'activo', ?)
+          VALUES (?, ?, ?, '1', ?)
           ON DUPLICATE KEY UPDATE
             fecha_inicio = VALUES(fecha_inicio),
             fecha_final = VALUES(fecha_final),
