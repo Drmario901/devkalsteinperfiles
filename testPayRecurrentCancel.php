@@ -26,11 +26,11 @@ function calculateMAC($securityKey, $fields) {
 }
 
 $dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
-$date = '24/05/2024_a_17:15:05'; 
-$date_commande = '24/05/2024';
+$date = $dateTime->format('d/m/Y:H:i:s'); 
+$date_commande = $dateTime->format('d/m/Y');
 
-if (!preg_match('/^\d{2}\/\d{2}\/\d{4}_a_\d{2}:\d{2}:\d{2}$/', $date)) {
-    die('Formato de fecha "date" incorrecto. Debe ser JJ/MM/AAAA_a_HH:MM:SS');
+if (!preg_match('/^\d{2}\/\d{2}\/\d{4}:\d{2}:\d{2}:\d{2}$/', $date)) {
+    die('Formato de fecha "date" incorrecto. Debe ser JJ/MM/AAAA:HH:MM:SS');
 }
 if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
     die('Formato de fecha "date_commande" incorrecto. Debe ser JJ/MM/AAAA');
