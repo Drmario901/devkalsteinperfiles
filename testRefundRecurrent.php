@@ -120,7 +120,7 @@ echo '<pre>';
 print_r($fields);
 echo '</pre>';
 
-$url = "https://p.monetico-services.com/test/recredit_paiement.cgi";
+$url = "https://payment-api.e-i.com/test/capture_paiement.cgi";
 
 // Enviar la solicitud de recrédito
 $client = new Client();
