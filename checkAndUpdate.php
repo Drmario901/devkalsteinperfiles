@@ -122,16 +122,24 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $tipoMembresia = 2;
         }
 
-        // Actualizar la tabla wp_subscripcion
-        $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET fecha_inicio = ?, fecha_final = ?, referencia_pago = ?, estado_membresia = 'activo', user_id = ? WHERE user_id = ?");
-        if (!$updateSubs) {
-          logMessage("Error preparando la actualización de wp_subscripcion: " . $conexion->error);
+        // Actualizar o insertar en la tabla wp_subscripcion
+        $insertOrUpdateSubs = $conexion->prepare("
+          INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, user_id)
+          VALUES (?, ?, ?, 'activo', ?)
+          ON DUPLICATE KEY UPDATE
+            fecha_inicio = VALUES(fecha_inicio),
+            fecha_final = VALUES(fecha_final),
+            referencia_pago = VALUES(referencia_pago),
+            estado_membresia = VALUES(estado_membresia)
+        ");
+        if (!$insertOrUpdateSubs) {
+          logMessage("Error preparando la inserción/actualización de wp_subscripcion: " . $conexion->error);
           continue;
         }
 
-        $updateSubs->bind_param("sssii", $fechaInicio, $fechaFinal, $record['paymentReference'], $accountAid, $accountAid);
-        $updateSubs->execute();
-        $updateSubs->close();
+        $insertOrUpdateSubs->bind_param("sssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $accountAid);
+        $insertOrUpdateSubs->execute();
+        $insertOrUpdateSubs->close();
 
         // Actualizar el tipo de membresía en la tabla wp_account
         $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
