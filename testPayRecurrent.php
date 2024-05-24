@@ -31,7 +31,23 @@ if (!isset($_GET["idMembership"])) {
 }
 $idMembership = $_GET["idMembership"];
 
+
+if (!isset($_GET["user"])) {
+    die('Error');
+}
+$getUser = $_GET["user"];
+
+$email = $getUser;
+
+
 echo 'aaaaa ' . $idMembership;
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+echo 'aaaa2' . $getUser;
 
 $membershipPrices = [
     'SUB1' => 10,
@@ -178,7 +194,7 @@ echo '</body></html>';
         }
     </style>
     <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value): ?>
+        <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->

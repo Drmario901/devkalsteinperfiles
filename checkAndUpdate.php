@@ -6,7 +6,7 @@ $filePath = __DIR__ . '/monetico_log_recurrent.txt';
 $lastModifiedFile = __DIR__ . '/last_modified.txt';
 
 // Ruta del archivo de log para errores y confirmaciones
-$logFile = __DIR__ . '/error_log.txt';
+$logFile = __DIR__ . '/check_monetico_log.txt';
 
 // Función para registrar mensajes en el log
 function logMessage($message)
