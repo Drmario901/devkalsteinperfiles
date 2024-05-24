@@ -120,7 +120,7 @@ echo '<pre>';
 print_r($fields);
 echo '</pre>';
 
-$url = "https://payment-api.e-i.com/test/capture_paiement.cgi";
+$url = "https://payment-api.e-i.com/recredit_paiement.cgi";
 
 // Enviar la solicitud de recrédito
 $client = new Client();
@@ -137,7 +137,7 @@ if ($response->getStatusCode() == 200) {
 }
 ?>
 
-<html>
+<!-- <html>
 
 <body onload="document.forms['cancel_form'].submit();">
   <form name="cancel_form" action="<?php echo $url; ?>" method="post">
@@ -150,4 +150,4 @@ if ($response->getStatusCode() == 200) {
   </form>
 </body>
 
-</html>
+</html> -->
