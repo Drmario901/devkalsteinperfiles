@@ -150,6 +150,6 @@ if ($currentModifiedTime > $lastModifiedTime) {
     }
   }
 } else {
-  logMessage("No se encontraron modificaciones recientes en el archivo.");
+  logMessage("No se encontraron modificaciones recientes en el archivoo.");
 }
 ?>
