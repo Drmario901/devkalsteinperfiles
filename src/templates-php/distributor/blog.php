@@ -27,6 +27,7 @@
         
                 $noajax = true;
                 require __DIR__.'/../client/mainBlog.php';
+                require __DIR__.'/../client/blog.php';
         
             ?>
         </main>
