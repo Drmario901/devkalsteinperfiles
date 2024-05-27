@@ -169,14 +169,14 @@ if ($acc_img == '') {
                 <li>
                     <a id="link-blogs" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/blogs"
                         class="navbar-link icon-box">
-                        <span data-i18n="distribuidor:blog">Blogs</span>
+                        <span data-i18n="distribuidor:Blogs">Blogs</span>
                     </a>
                 </li>
 
                 <li>
                     <a id="link-guides" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/guide"
                         class="navbar-link icon-box">
-                        <span data-i18n="distribuidor:guias">Guías Informativas</span>
+                        <span data-i18n="distribuidor:Guías Informativas">Guías Informativas</span>
                     </a>
                 </li>
 
