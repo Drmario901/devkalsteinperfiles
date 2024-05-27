@@ -73,9 +73,10 @@ if ($currentModifiedTime > $lastModifiedTime) {
         $subscriptionType = $dataArray['montant'] ?? null;
         $paymentReference = $dataArray['reference'] ?? null;
         $retour = $dataArray['code-retour'] ?? null;
+        $montant = $dataArray['montant'] ?? null;
 
         // Validar que los valores necesarios no estén vacíos
-        if (!$userID || !$subscriptionType || !$paymentReference || !$retour) {
+        if (!$userID || !$subscriptionType || !$paymentReference || !$retour || !$montant) {
           logMessage("Datos faltantes en la entrada: " . $jsonStr);
           continue;
         }
@@ -85,6 +86,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
           'subscriptionType' => $subscriptionType,
           'paymentReference' => $paymentReference,
           'retour' => $retour,
+          'montant' => $montant,
         ];
       }
     }
@@ -124,20 +126,21 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
         // Actualizar o insertar en la tabla wp_subscripcion
         $insertOrUpdateSubs = $conexion->prepare("
-          INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, user_id)
-          VALUES (?, ?, ?, '1', ?)
+          INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, user_id)
+          VALUES (?, ?, ?, '1', ?, ?)
           ON DUPLICATE KEY UPDATE
             fecha_inicio = VALUES(fecha_inicio),
             fecha_final = VALUES(fecha_final),
             referencia_pago = VALUES(referencia_pago),
-            estado_membresia = VALUES(estado_membresia)
+            estado_membresia = VALUES(estado_membresia),
+            monto = VALUES(monto)
         ");
         if (!$insertOrUpdateSubs) {
           logMessage("Error preparando la inserción/actualización de wp_subscripcion: " . $conexion->error);
           continue;
         }
 
-        $insertOrUpdateSubs->bind_param("sssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $accountAid);
+        $insertOrUpdateSubs->bind_param("sssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $record['monto'], $accountAid);
         $insertOrUpdateSubs->execute();
         $insertOrUpdateSubs->close();
 
