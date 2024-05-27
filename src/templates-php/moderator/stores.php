@@ -59,6 +59,43 @@
                         </div> -->
                 </div>
             </div>
+            <div class='col-lg-6'>
+                <div class='card row m-2'>
+                    <div class='col-12'>
+                        <div class='row mb-2'>
+                            <div class='col-4'>
+                                <img class='mx-1'
+                                    src='https://images.crowdspring.com/blog/wp-content/uploads/2023/12/09192959/mcdonalds-1968-logo.png'
+                                    width=150>
+                            </div>
+                            <div class='col-8'>
+                                <h6 style='font-weight: 600;'>Mañoso Store</h6>
+                                <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
+                                    risus, placerat et condimentum eget, sodales sed elit. Sed nec...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-12' style="display: flex; justify-content: flex-start">
+                        <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
+                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
+                                post</button>
+                        </a>
+                        <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
+                            <button type='button' id='btnUpdate'
+                                class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3'
+                                style='color: #333'>View
+                                Store</button>
+                        </a>
+                    </div>
+
+                </div>
+                <div class='mt-2'>
+                    <!-- <div class='fw-bold card'
+                            style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
+                            <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
+                        </div> -->
+                </div>
+            </div>
         </div>
         <!-- <?php
 
