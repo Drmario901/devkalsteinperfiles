@@ -119,7 +119,7 @@ if (isset($parsedResponse['cdr'])) {
         // Lógica si cdr = 0
         // echo "cdr es igual a 0. La recurrencia ya está detenida.";
         header('Content-Type: application/json');
-        echo json_encode(['status' => 200, 'response' => 'error', 'reference' => $reference]);
+        echo json_encode(['status' => 200, 'response' => 'error', 'reference' => $reference, 'cdr' => $cdr]);
     } elseif ($cdr == 1) {
         // Lógica si cdr = 1
         // echo "cdr es igual a 1. Ejecutar lógica adicional.";
@@ -127,7 +127,7 @@ if (isset($parsedResponse['cdr'])) {
         $sqlUpdate = "UPDATE wp_subscripcion SET estado_membresia = 2 WHERE user_id = '$id'";
         if ($conexion->query($sqlUpdate) === TRUE) {
             header('Content-Type: application/json');
-            echo json_encode(['status' => 200, 'response' => 'success', 'reference' => $reference]);
+            echo json_encode(['status' => 200, 'response' => 'success', 'reference' => $reference, 'cdr' => $cdr]);
         } else {
             // echo "Error actualizando estado de membresía: " . $conexion->error;
             header('Content-Type: application/json');
