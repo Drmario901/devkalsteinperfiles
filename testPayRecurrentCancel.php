@@ -108,6 +108,15 @@ $response = $client->request('POST', $url, [
 $responseBody = $response->getBody()->getContents();
 parse_str(str_replace(" ", "&", $responseBody), $parsedResponse);
 
+
+var_dump($parsedResponse);
+
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+
 if ($parsedResponse['cdr'] == 0) {
     // Lógica si cdr = 0
     echo "cdr es igual a 0. La recurrencia ya está detenida.";
