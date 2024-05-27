@@ -222,7 +222,8 @@
 
   <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
     <?php if ($membresia != 0) : ?>
-      <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a>
+      <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
+      <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
     <?php endif; ?>
 
     <?php if ($membresia != 1 && $membresia != 2) : ?>

@@ -16,14 +16,12 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 
 use GuzzleHttp\Client;
 
-
 $sql = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $result = $conexion->query($sql);
 $row = $result->fetch_assoc();
 $id = $row['account_aid'];
 
 $sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$id'";
-
 $resultSubscripcion = $conexion->query($sqlSubscripcion);
 if ($resultSubscripcion->num_rows > 0) {
     $rowSubscripcion = $resultSubscripcion->fetch_assoc();
@@ -41,6 +39,7 @@ if ($resultSubscripcion->num_rows > 0) {
     $montoFinal = $montoFormateado . 'USD';
 } else {
     echo "No se encontró la suscripción para el user_id: $id";
+    exit;
 }
 
 function calculateMAC($securityKey, $fields)
@@ -107,26 +106,17 @@ $response = $client->request('POST', $url, [
 ]);
 
 $responseBody = $response->getBody()->getContents();
+parse_str(str_replace(" ", "&", $responseBody), $parsedResponse);
 
-var_dump('aaaa', $responseBody);
+if ($parsedResponse['cdr'] == 0) {
+    // Lógica si cdr = 0
+    echo "cdr es igual a 0. La recurrencia ya está detenida.";
+} elseif ($parsedResponse['cdr'] == 1) {
+    // Lógica si cdr = 1
+    echo "cdr es igual a 1. Ejecutar lógica adicional.";
+    // Aquí implementa la lógica adicional que necesitas
+} else {
+    echo "Valor de cdr desconocido: " . $parsedResponse['cdr'];
+}
 
-// if ($response->getStatusCode() == 200) {
-//     echo "Pago recurrente cancelado exitosamente.";
-// } else {
-//     echo "Error al cancelar el pago recurrente: " . $responseBody;
-// }
-?>
-<!-- <html>
-
-<body onload="document.forms['cancel_form'].submit();">
-    <form name="cancel_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value) : ?>
-            <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
-        <?php endforeach; ?>
-        <center>
-            <div class="custom-loader"></div>
-        </center>
-    </form>
-</body>
-
-</html> -->
+var_dump('Respuesta', $parsedResponse);
