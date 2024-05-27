@@ -179,7 +179,7 @@ jQuery(document).ready(function ($) {
   $("#btn-cancelar-subs").click(function () {
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/testPayRecurrentCancel.php",
-      type: "GET",
+      type: "POST",
       data: {},
     })
       .done(function (respuesta) {
