@@ -114,9 +114,9 @@ if ($currentModifiedTime > $lastModifiedTime) {
       if ($accountAid) {
         // Fecha inicio sera la variable date parseada a y-m-d
         $fechaInicio = $record['date'];
-        $fechaInicio = date('Y-m-d', strtotime($fechaInicio));
+        $fechaInicioP = date('Y-m-d', strtotime($fechaInicio));
 
-        $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
+        $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicioP)));
 
         $tipoMembresia = 0;
         if (strpos($record['paymentReference'], 'SUB1') !== false) {
