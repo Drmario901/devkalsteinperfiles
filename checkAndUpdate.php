@@ -132,7 +132,14 @@ if ($currentModifiedTime > $lastModifiedTime) {
       if ($accountAid) {
         // Calcular las fechas de inicio y finalización de la membresía (un mes)
         $fechaInicio = $record['date'];
-        $fechaFinal = date('m-d-Y', strtotime('+1 month', strtotime($fechaInicio)));
+        // Crear un objeto DateTime a partir de la fecha inicial
+        $fecha = DateTime::createFromFormat('d/m/Y', $fechaInicio);
+
+        // Añadir un mes
+        $fecha->modify('+1 month');
+
+        // Obtener la fecha final en el mismo formato
+        $fechaFinal = $fecha->format('d/m/Y');
 
         // Determinar el tipo de membresía basado en la referencia
         $tipoMembresia = 0;
