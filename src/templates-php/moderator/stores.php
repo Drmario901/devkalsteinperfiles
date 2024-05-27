@@ -35,15 +35,15 @@
                     </div>
                     <div class='col-12'>
                         <div class='row'>
-                            <div class='col-lg-6'>
+                            <div class='col'>
                                 <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
                                     <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
                                         post</button>
                                 </a>
                             </div>
-                            <div class='col-lg-6'>
+                            <div class='col'>
                                 <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                                    <button type='button' id='btnUpdate' class='btn btn-outline-info btn-block p-2 px-4'>View
+                                    <button type='button' id='btnUpdate' class='btn btn-outline-info btn-block p-2 px-4' style=''>View
                                         Store</button>
                                 </a>
                             </div>
