@@ -110,15 +110,7 @@ $responseBody = $response->getBody()->getContents();
 
 parse_str(str_replace(["\r", "\n"], '&', $responseBody), $parsedResponse);
 
-
 // var_dump($parsedResponse);
-
-'<br>';
-'<br>';
-'<br>';
-'<br>';
-'<br>';
-
 
 if (isset($parsedResponse['cdr'])) {
     $cdr = $parsedResponse['cdr'];
