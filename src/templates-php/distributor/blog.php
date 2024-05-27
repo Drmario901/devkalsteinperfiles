@@ -23,13 +23,18 @@
         ?>
         
         <main>
+        <div id='c-panel15' style='display: none;'>
             <?php
-        
+                $noajax = true;
+                require __DIR__.'/../client/blog.php';
+            ?>
+        </div>
+        <div id='c-panel16'>
+            <?php
                 $noajax = true;
                 require __DIR__.'/../client/mainBlog.php';
-                require __DIR__.'/../client/blog.php';
-        
             ?>
+        </div>
         </main>
     </article>
 
