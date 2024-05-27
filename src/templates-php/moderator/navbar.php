@@ -147,6 +147,12 @@ if ($acc_img == '') {
                 </ul>
                 <ul class='navbar-list'>
                     <li>
+                        <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/stores'
+                            id="link-accounts" class='navbar-link icon-box'>
+                            <span data-i18n="moderator:Stores">Stores</span>
+                        </a>
+                    </li> 
+                    <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/blog'
                             id="link-accounts" class='navbar-link icon-box'>
                             <span data-i18n="moderator:Blog">Blogs</span>
