@@ -57,7 +57,7 @@ function calculateMAC($securityKey, $fields)
     return strtoupper(hash_hmac('sha1', $dataString, pack('H*', $securityKey)));
 }
 
-/* $dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
+$dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
 $date = $dateTime->format('d/m/Y:H:i:s');
 $date_commande = $dateTime->format('d/m/Y');
 
@@ -66,7 +66,7 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}:\d{2}:\d{2}:\d{2}$/', $date)) {
 }
 if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
     die('Formato de fecha "date_commande" incorrecto. Debe ser JJ/MM/AAAA');
-} */
+}
 
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
@@ -83,8 +83,8 @@ $stoprecurrence = 'OUI';
 $fields = [
     'version' => $version,
     'TPE' => $tpe,
-    'date' => $rowSubscripcion['fecha'],
-    'date_commande' => $rowSubscripcion['fechahora'],
+    'date' => $dateTime,
+    'date_commande' => $date_commande,
     'montant' => $montant,
     'montant_a_capturer' => $montant_a_capturer,
     'montant_deja_capture' => $montant_deja_capture,
@@ -118,7 +118,7 @@ if ($response->getStatusCode() == 200) {
 
 <body onload="document.forms['cancel_form'].submit();">
     <form name="cancel_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value) : ?>
+        <?php foreach ($fields as $key => $value): ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
         <?php endforeach; ?>
         <center>
