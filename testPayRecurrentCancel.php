@@ -108,17 +108,19 @@ $response = $client->request('POST', $url, [
 
 $responseBody = $response->getBody()->getContents();
 
-if ($response->getStatusCode() == 200) {
-    echo "Pago recurrente cancelado exitosamente.";
-} else {
-    echo "Error al cancelar el pago recurrente: " . $responseBody;
-}
+var_dump('aaaa', $responseBody);
+
+// if ($response->getStatusCode() == 200) {
+//     echo "Pago recurrente cancelado exitosamente.";
+// } else {
+//     echo "Error al cancelar el pago recurrente: " . $responseBody;
+// }
 ?>
-<html>
+<!-- <html>
 
 <body onload="document.forms['cancel_form'].submit();">
     <form name="cancel_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value): ?>
+        <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
         <?php endforeach; ?>
         <center>
@@ -127,4 +129,4 @@ if ($response->getStatusCode() == 200) {
     </form>
 </body>
 
-</html>
+</html> -->
