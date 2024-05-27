@@ -144,20 +144,23 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
         // Actualizar o insertar en la tabla wp_subscripcion
         $insertOrUpdateSubs = $conexion->prepare("
-          INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, user_id)
-          VALUES (?, ?, ?, '1', ?)
-          ON DUPLICATE KEY UPDATE
-            fecha_inicio = VALUES(fecha_inicio),
-            fecha_final = VALUES(fecha_final),
-            referencia_pago = VALUES(referencia_pago),
-            estado_membresia = VALUES(estado_membresia)
-        ");
+                    INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fecha, fechahora, user_id)
+                    VALUES (?, ?, ?, '1', ?, ?, ?, ?)
+                    ON DUPLICATE KEY UPDATE
+                        fecha_inicio = VALUES(fecha_inicio),
+                        fecha_final = VALUES(fecha_final),
+                        referencia_pago = VALUES(referencia_pago),
+                        estado_membresia = VALUES(estado_membresia),
+                        monto = VALUES(monto),
+                        fecha = VALUES(fecha),
+                        fechahora = VALUES(fechahora)
+                ");
         if (!$insertOrUpdateSubs) {
           logMessage("Error preparando la inserción/actualización de wp_subscripcion: " . $conexion->error);
           continue;
         }
 
-        $insertOrUpdateSubs->bind_param("sssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $accountAid);
+        $insertOrUpdateSubs->bind_param("ssssssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $record['montant'], $record['date'], $record['datetime'], $accountAid);
         $insertOrUpdateSubs->execute();
         $insertOrUpdateSubs->close();
 
