@@ -184,9 +184,9 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        const res = JSON.parse(respuesta);
+        // const res = JSON.parse(respuesta);
 
-        if (res.response == "error") {
+        if (respuesta.response == "error") {
           iziToast.error({
             title: "Error",
             message: "Su subscripcion ya se encuentra cancelada",
