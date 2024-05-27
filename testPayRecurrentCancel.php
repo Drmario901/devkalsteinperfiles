@@ -77,7 +77,7 @@ $reference = $rowSubscripcion['referencia_pago'];
 $version = '3.0';
 $lgue = 'ES';
 $societe = 'kalsteinfr';
-$stoprecurrence = 'OUI';
+$stoprecurrence = 'NON';
 
 $fields = [
     'version' => $version,
@@ -125,15 +125,25 @@ if (isset($parsedResponse['cdr'])) {
 
     if ($cdr == 0) {
         // Lógica si cdr = 0
-        echo "cdr es igual a 0. La recurrencia ya está detenida.";
+        // echo "cdr es igual a 0. La recurrencia ya está detenida.";
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 200, 'error' => 'error']);
     } elseif ($cdr == 1) {
         // Lógica si cdr = 1
-        echo "cdr es igual a 1. Ejecutar lógica adicional.";
-        // Aquí implementa la lógica adicional que necesitas
+        // echo "cdr es igual a 1. Ejecutar lógica adicional.";
+        // Aquí realizamos el update a la tabla wp_subscripcion
+        $sqlUpdate = "UPDATE wp_subscripcion SET estado_membresia = 2 WHERE user_id = '$id'";
+        if ($conexion->query($sqlUpdate) === TRUE) {
+            header('Content-Type: application/json');
+            echo json_encode(['status' => 200, 'exito' => 'actualizada']);
+        } else {
+            echo "Error actualizando estado de membresía: " . $conexion->error;
+            header('Content-Type: application/json');
+            echo json_encode(['status' => 500, 'error' => $conexion->error]);
+        }
     } else {
         echo "Valor de cdr desconocido: " . $cdr;
     }
 } else {
     echo "No se pudo encontrar el valor de cdr en la respuesta.";
 }
-// var_dump('Respuesta', $parsedResponse);
