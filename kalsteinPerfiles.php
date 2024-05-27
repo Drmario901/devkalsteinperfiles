@@ -403,7 +403,7 @@ function blogPerfilesDistributor()
 {
     $_short = new shortcodePerfiles;
 
-    $html = $_short->distributor_blog();
+    $html = $_short->distributor_blogs();
     return $html;
 }
 
@@ -411,7 +411,7 @@ function blogIndividualPerfilesDistributor()
 {
     $_short = new shortcodePerfiles;
 
-    $html = $_short->distributor_blog_individual();
+    $html = $_short->distributor_blogs_individual();
     return $html;
 }
 
@@ -419,7 +419,7 @@ function guidePerfilesDistributor()
 {
     $_short = new shortcodePerfiles;
 
-    $html = $_short->distributor_guide();
+    $html = $_short->distributor_guides();
     return $html;
 }
 
