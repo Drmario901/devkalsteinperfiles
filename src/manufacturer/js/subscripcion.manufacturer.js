@@ -37,6 +37,14 @@ const datos = [
   },
   {
     item: [
+      "Acceso Ilimitado a Contenido (Manuales, Catálogos, Certificados)",
+      "✅",
+      "✅",
+      "✅",
+    ],
+  },
+  {
+    item: [
       "Mensajería Directa (Fábrica/Distribuidores/Servicio Técnico/Usuarios)",
       "✅",
       "✅",
@@ -44,13 +52,13 @@ const datos = [
     ],
   },
   {
-    item: ["Licencia Kalstein", "❌", "❌", "✅"],
+    item: ["Soporte Técnico Online", "✅", "✅", "✅"],
   },
   {
-    item: ["Módulo de Cotizaciones Personalizadas", "✅", "✅", "✅"],
+    item: ["1 Hora Gratuita de Inducción Técnica Online", "✅", "✅", "✅"],
   },
   {
-    item: ["Publicidad en Banners de Kalstein", "❌", "❌", "✅"],
+    item: ["Recomendación de Modelos por IA", "✅", "✅", "✅"],
   },
   {
     item: [
@@ -61,20 +69,10 @@ const datos = [
     ],
   },
   {
-    item: [
-      "Descuento del 4% sobre todos los tipos de envíos con Kalstein (Avión, Mar, Courier)",
-      "❌",
-      "❌",
-      "✅",
-    ],
+    item: ["Verificación Kalstein", "✅", "✅", "✅"],
   },
   {
-    item: [
-      "Opciones de envio (30 productos al mes, tamaños y pesos estándares)",
-      "❌",
-      "❌",
-      "✅",
-    ],
+    item: ["Módulo de Cotizaciones Personalizadas", "✅", "✅", "✅"],
   },
   {
     item: ["Descuentos Exclusivos", "18%", "18%", "18% a 41% solo miembros"],
@@ -88,10 +86,34 @@ const datos = [
     ],
   },
   {
-    item: ["Recomendación de Modelos por IA", "✅", "✅", "✅"],
+    item: ["Publicidad en Banners de Kalstein", "❌", "❌", "✅"],
   },
   {
     item: ["Productos 3D del Negocio (10)", "❌", "❌", "✅"],
+  },
+  {
+    item: [
+      "Créditos Kalstein (Tipo I, II y III. Solo para Europa)",
+      "❌",
+      "❌",
+      "✅",
+    ],
+  },
+  {
+    item: [
+      "Descuento del 4% sobre todos los tipos de envíos con Kalstein (Avión, Mar, Courier)",
+      "❌",
+      "❌",
+      "✅",
+    ],
+  },
+  {
+    item: [
+      "Opción de Dropshipping (30 productos al mes, tamaños y pesos estándares)",
+      "❌",
+      "❌",
+      "✅",
+    ],
   },
   // Puedes añadir más objetos con la misma estructura para más filas
 ];
@@ -153,6 +175,22 @@ jQuery(document).ready(function ($) {
         console.log("error", error);
       });
   });
+
+  $("#btn-cancelar-subs").click(function () {
+    $.ajax({
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/testPayRecurrentCancel.php",
+      type: "GET",
+      data: {},
+    })
+      .done(function (respuesta) {
+        console.log("la respuesta", respuesta);
+        alert("respuesta", respuesta);
+      })
+      .fail(function (error) {
+        console.log("error", error);
+      });
+  });
+
   function updateSubscripcion(subs, user) {
     window.location.replace(
       `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php?idMembership=SUB${subs}&user=${user}`
