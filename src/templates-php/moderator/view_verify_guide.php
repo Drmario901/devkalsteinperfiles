@@ -784,12 +784,12 @@ h5 {
                 <div class='row'>
                     <h6><i class='fa-regular fa-file-video'></i> Video</h6>
                     <p><i class='fa-solid fa-paperclip'></i> Link</p>
-                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
                             https://www.esteesunenlace.com</p>
                     </div>
                     <p>Description</p>
-                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
                             arcu. Nunc dictum nibh lorem. In hac habitasse platea dictumst. Pellentesque habitant morbi
