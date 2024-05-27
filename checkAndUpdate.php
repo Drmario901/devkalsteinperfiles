@@ -1,8 +1,13 @@
 <?php
 $filePath = __DIR__ . '/monetico_log_recurrent.txt';
-$lastModifiedFile = sys_get_temp_dir() . '/last_modified.txt';
+
+// Archivo que almacena el último timestamp modificado
+$lastModifiedFile = __DIR__ . '/last_modified.txt';
+
+// Ruta del archivo de log para errores y confirmaciones
 $logFile = __DIR__ . '/check_monetico_log.txt';
 
+// Función para registrar mensajes en el log
 function logMessage($message)
 {
   global $logFile;
@@ -10,21 +15,19 @@ function logMessage($message)
   file_put_contents($logFile, date('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
 }
 
-function getLastModifiedTime($lastModifiedFile)
-{
-  return file_exists($lastModifiedFile) ? file_get_contents($lastModifiedFile) : 0;
+// Leer el último timestamp modificado registrado
+if (file_exists($lastModifiedFile)) {
+  $lastModifiedTime = file_get_contents($lastModifiedFile);
+} else {
+  $lastModifiedTime = 0;
 }
 
-function updateLastModifiedTime($lastModifiedFile, $time)
-{
-  file_put_contents($lastModifiedFile, $time);
-}
-
-$lastModifiedTime = getLastModifiedTime($lastModifiedFile);
+// Obtener el timestamp modificado actual del archivo
 $currentModifiedTime = filemtime($filePath);
 
 if ($currentModifiedTime > $lastModifiedTime) {
-  updateLastModifiedTime($lastModifiedFile, $currentModifiedTime);
+  // Actualizar el timestamp en el archivo de registro
+  file_put_contents($lastModifiedFile, $currentModifiedTime);
   $data = file_get_contents($filePath);
   $lines = explode("\n", $data);
   $currentDate = date('d/m/Y');
@@ -48,10 +51,15 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $userID = '@' . $matches[1];
         }
 
+        // Suponiendo que la fecha original está en la variable $originalDate
         $originalDate = $dataArray['date'];
 
+        // Remover caracteres de escape y el texto '_a_'
+        $originalDate = str_replace(['\\/', '_a_'], ['/', ' '], $originalDate);
+
+
         // Parsear la fecha y hora usando DateTime::createFromFormat
-        $dateTime = DateTime::createFromFormat('d/m/Y_a_H:i:s', $originalDate);
+        $dateTime = DateTime::createFromFormat('d/m/Y H:i:s', $originalDate);
 
         if ($dateTime !== false) {
           // Formatear la fecha a 'dd/mm/yyyy'
@@ -61,8 +69,11 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $datetime = $dateTime->format('d/m/Y/H:i:s');
 
         } else {
-          echo "Error al parsear la fecha.";
+          // Mostrar un mensaje de error detallado
+          $errors = DateTime::getLastErrors();
+          echo "Error al parsear la fecha: " . implode(", ", $errors['errors']) . "\n";
         }
+
 
         $subscriptionType = $dataArray['montant'] ?? null;
         $paymentReference = $dataArray['reference'] ?? null;
