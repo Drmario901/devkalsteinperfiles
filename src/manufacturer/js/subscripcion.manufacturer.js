@@ -184,7 +184,27 @@ jQuery(document).ready(function ($) {
     })
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
-        alert("respuesta", respuesta);
+        const res = JSON.parse(respuesta);
+
+        if (res.response == "error") {
+          iziToast.error({
+            title: "Error",
+            message: "Su subscripcion ya se encuentra cancelada",
+            position: "center",
+            timeout: false,
+            closeOnClick: true,
+            progressBar: false,
+          });
+        } else {
+          iziToast.success({
+            title: "Exito",
+            message: "Su subscripcion a sido cancelada",
+            position: "center",
+            timeout: false,
+            closeOnClick: true,
+            progressBar: false,
+          });
+        }
       })
       .fail(function (error) {
         console.log("error", error);
