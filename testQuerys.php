@@ -19,7 +19,7 @@ $email = $getEmail;
 echo 'aaaa', $email;
 
 
-$sql = "SELECT * FROM wp_account WHERE account_email = '$email'";
+$sql = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $result = $conexion->query($sql);
 $row = $result->fetch_assoc();
 $id = $row['account_aid'];
