@@ -25,7 +25,7 @@
             <?php
         
                 $noajax = true;
-                //require __DIR__.'/../client/inbox.php';
+                require __DIR__.'/../client/guide.php';
         
             ?>
         </main>
