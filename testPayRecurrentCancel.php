@@ -106,7 +106,9 @@ $response = $client->request('POST', $url, [
 ]);
 
 $responseBody = $response->getBody()->getContents();
-parse_str(str_replace(" ", "&", $responseBody), $parsedResponse);
+// parse_str(str_replace(" ", "&", $responseBody), $parsedResponse);
+
+parse_str(str_replace(["\r", "\n"], '&', $responseBody), $parsedResponse);
 
 
 var_dump($parsedResponse);
@@ -117,15 +119,21 @@ var_dump($parsedResponse);
 '<br>';
 '<br>';
 
-if ($parsedResponse['cdr'] == 0) {
-    // Lógica si cdr = 0
-    echo "cdr es igual a 0. La recurrencia ya está detenida.";
-} elseif ($parsedResponse['cdr'] == 1) {
-    // Lógica si cdr = 1
-    echo "cdr es igual a 1. Ejecutar lógica adicional.";
-    // Aquí implementa la lógica adicional que necesitas
-} else {
-    echo "Valor de cdr desconocido: " . $parsedResponse['cdr'];
-}
 
+if (isset($parsedResponse['cdr'])) {
+    $cdr = $parsedResponse['cdr'];
+
+    if ($cdr == 0) {
+        // Lógica si cdr = 0
+        echo "cdr es igual a 0. La recurrencia ya está detenida.";
+    } elseif ($cdr == 1) {
+        // Lógica si cdr = 1
+        echo "cdr es igual a 1. Ejecutar lógica adicional.";
+        // Aquí implementa la lógica adicional que necesitas
+    } else {
+        echo "Valor de cdr desconocido: " . $cdr;
+    }
+} else {
+    echo "No se pudo encontrar el valor de cdr en la respuesta.";
+}
 // var_dump('Respuesta', $parsedResponse);
