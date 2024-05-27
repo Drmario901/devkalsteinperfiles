@@ -1,10 +1,5 @@
 <?php
 $filePath = __DIR__ . '/monetico_log_recurrent.txt';
-
-// Archivo que almacena el último timestamp modificado
-$lastModifiedFile = __DIR__ . '/last_modified.txt';
-
-// Ruta del archivo de log para errores y confirmaciones
 $logFile = __DIR__ . '/check_monetico_log.txt';
 
 // Función para registrar mensajes en el log
@@ -15,10 +10,19 @@ function logMessage($message)
   file_put_contents($logFile, date('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
 }
 
-// Leer el último timestamp modificado registrado
-if (file_exists($lastModifiedFile)) {
-  $lastModifiedTime = file_get_contents($lastModifiedFile);
-} else {
+// Conectar a la base de datos
+require __DIR__ . '/php/conexion.php';
+
+// Leer el último timestamp modificado registrado desde la base de datos
+$query = "SELECT last_modified_time FROM last_check WHERE file_path = ?";
+$stmt = $conexion->prepare($query);
+$stmt->bind_param("s", $filePath);
+$stmt->execute();
+$stmt->bind_result($lastModifiedTime);
+$stmt->fetch();
+$stmt->close();
+
+if (!$lastModifiedTime) {
   $lastModifiedTime = 0;
 }
 
@@ -26,8 +30,14 @@ if (file_exists($lastModifiedFile)) {
 $currentModifiedTime = filemtime($filePath);
 
 if ($currentModifiedTime > $lastModifiedTime) {
-  // Actualizar el timestamp en el archivo de registro
-  file_put_contents($lastModifiedFile, $currentModifiedTime);
+  // Actualizar el timestamp en la base de datos
+  $query = "INSERT INTO last_check (file_path, last_modified_time) VALUES (?, ?)
+              ON DUPLICATE KEY UPDATE last_modified_time = ?";
+  $stmt = $conexion->prepare($query);
+  $stmt->bind_param("sii", $filePath, $currentModifiedTime, $currentModifiedTime);
+  $stmt->execute();
+  $stmt->close();
+
   $data = file_get_contents($filePath);
   $lines = explode("\n", $data);
   $currentDate = date('d/m/Y');
@@ -43,62 +53,49 @@ if ($currentModifiedTime > $lastModifiedTime) {
         continue;
       }
 
-      $jsonDate = DateTime::createFromFormat('d/m/Y', substr($dataArray['date'], 0, 10));
+      // Suponiendo que la fecha original está en la variable $originalDate
+      $originalDate = $dataArray['date'];
+      // Remover caracteres de escape y el texto '_a_'
+      $originalDate = str_replace(['\\/', '_a_'], ['/', ' '], $originalDate);
+      // Parsear la fecha y hora usando DateTime::createFromFormat
+      $dateTime = DateTime::createFromFormat('d/m/Y H:i:s', $originalDate);
 
-      if ($jsonDate && $jsonDate->format('d/m/Y') == $currentDate) {
-        $userID = null;
-        if (preg_match('/userID:@([\w.-]+)/', $dataArray['texte-libre'], $matches)) {
-          $userID = '@' . $matches[1];
-        }
-
-        // Suponiendo que la fecha original está en la variable $originalDate
-        $originalDate = $dataArray['date'];
-
-        // Remover caracteres de escape y el texto '_a_'
-        $originalDate = str_replace(['\\/', '_a_'], ['/', ' '], $originalDate);
-
-
-        // Parsear la fecha y hora usando DateTime::createFromFormat
-        $dateTime = DateTime::createFromFormat('d/m/Y H:i:s', $originalDate);
-
-        if ($dateTime !== false) {
-          // Formatear la fecha a 'dd/mm/yyyy'
-          $date = $dateTime->format('d/m/Y');
-
-          // Formatear la fecha y hora a 'dd/mm/yyyy/hh:mm:ss'
-          $datetime = $dateTime->format('d/m/Y/H:i:s');
-
-        } else {
-          // Mostrar un mensaje de error detallado
-          $errors = DateTime::getLastErrors();
-          echo "Error al parsear la fecha: " . implode(", ", $errors['errors']) . "\n";
-        }
-
-
-        $subscriptionType = $dataArray['montant'] ?? null;
-        $paymentReference = $dataArray['reference'] ?? null;
-        $retour = $dataArray['code-retour'] ?? null;
-        $montant = $dataArray['montant'] ?? null;
-        //$date = $dataArray['date'] ?? null;
-
-        if (!$userID || !$subscriptionType || !$paymentReference || !$retour || !$montant) {
-          logMessage("Datos faltantes en la entrada: " . $jsonStr);
-          continue;
-        }
-
-        $lastRecords[$userID] = [
-          'subscriptionType' => $subscriptionType,
-          'paymentReference' => $paymentReference,
-          'retour' => $retour,
-          'montant' => $montant,
-          'date' => $date,
-          'datetime' => $datetime
-        ];
+      if ($dateTime !== false) {
+        // Formatear la fecha a 'dd/mm/yyyy'
+        $date = $dateTime->format('d/m/Y');
+        // Formatear la fecha y hora a 'dd/mm/yyyy/hh:mm:ss'
+        $datetime = $dateTime->format('d/m/Y/H:i:s');
+      } else {
+        $errors = DateTime::getLastErrors();
+        echo "Error al parsear la fecha: " . implode(", ", $errors['errors']) . "\n";
+        continue;
       }
+
+      $userID = null;
+      if (preg_match('/userID:@([\w.-]+)/', $dataArray['texte-libre'], $matches)) {
+        $userID = '@' . $matches[1];
+      }
+
+      $subscriptionType = $dataArray['montant'] ?? null;
+      $paymentReference = $dataArray['reference'] ?? null;
+      $retour = $dataArray['code-retour'] ?? null;
+      $montant = $dataArray['montant'] ?? null;
+
+      if (!$userID || !$subscriptionType || !$paymentReference || !$retour || !$montant) {
+        logMessage("Datos faltantes en la entrada: " . $jsonStr);
+        continue;
+      }
+
+      $lastRecords[$userID] = [
+        'subscriptionType' => $subscriptionType,
+        'paymentReference' => $paymentReference,
+        'retour' => $retour,
+        'montant' => $montant,
+        'date' => $date,
+        'datetime' => $datetime
+      ];
     }
   }
-
-  require __DIR__ . '/php/conexion.php';
 
   foreach ($lastRecords as $userID => $record) {
     if ($record['retour'] === 'payetest') {
@@ -115,8 +112,9 @@ if ($currentModifiedTime > $lastModifiedTime) {
       $stmt->close();
 
       if ($accountAid) {
-        $fechaInicio = date('Y-m-d');
-        $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
+
+        $fechaInicio = $record['date'];
+        $fechaFinal = date('m-d-Y', strtotime('+1 month', $fechaInicio));
 
         $tipoMembresia = 0;
         if (strpos($record['paymentReference'], 'SUB1') !== false) {
@@ -126,8 +124,8 @@ if ($currentModifiedTime > $lastModifiedTime) {
         }
 
         $insertOrUpdateSubs = $conexion->prepare("
-                    INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fecha, fechahora user_id)
-                    VALUES (?, ?, ?, '1', ?, ?)
+                    INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fecha, fechahora, user_id)
+                    VALUES (?, ?, ?, '1', ?, ?, ?, ?)
                     ON DUPLICATE KEY UPDATE
                         fecha_inicio = VALUES(fecha_inicio),
                         fecha_final = VALUES(fecha_final),
