@@ -752,6 +752,10 @@ class shortcodePerfiles
     {
         return render_php_file('moderator/barbacoas.php');
     }
+    function moderator_stores()
+    {
+        return render_php_file('moderator/stores.php');
+    }
     function moderator_view_barbacoas()
     {
         return render_php_file('moderator/view_verify_guide.php');

@@ -31,6 +31,24 @@ if (!isset($_GET["idMembership"])) {
 }
 $idMembership = $_GET["idMembership"];
 
+
+if (!isset($_GET["user"])) {
+    die('Error');
+}
+$getUser = $_GET["user"];
+
+$email = $getUser;
+
+
+echo 'aaaaa ' . $idMembership;
+
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+echo 'aaaa2' . $getUser;
+
 $membershipPrices = [
     'SUB1' => 10,
     'SUB2' => 20
@@ -72,8 +90,9 @@ if ($resultado) {
 } else {
     echo "Error executing the query: " . $conexion->error;
 }
+//Reference with max 12chars
 
-$reference = $idMembership . '-' . $row['user_tag'] . '-' . time();
+$reference = $idMembership . '-' . time();
 
 //COMPOSER DEPENDENCIES.
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/vendor/autoload.php';
@@ -91,8 +110,8 @@ $monetico = new Monetico(
 );
 
 $purchase = new PurchaseRequest([
-    'reference' => '5555555',
-    'description' => 'uniqid: ' . $row['account_sub_id'],
+    'reference' => $reference,
+    'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'],
     'language' => 'ES',
     'email' => $row['account_correo'],
     'amount' => $membershipPrice,
@@ -122,6 +141,36 @@ $url = base64_decode(encryptURL());
 $fields = $monetico->getFields($purchase);
 
 
+
+
+
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+'<br>';
+
+var_dump('aaaaa  ', $fields);
+
+// Generate the form with hidden inputs
+echo '<html><body>';
+echo '<form id="paymentForm" action="' . htmlspecialchars($url) . '" method="POST">';
+foreach ($fields as $key => $value) {
+    echo '<input type="hidden" name="' . htmlspecialchars($key) . '" value="' . htmlspecialchars($value) . '">';
+}
+echo '<noscript><input type="submit" value="Continue"></noscript>';
+echo '</form>';
+
+// Add JavaScript to submit the form automatically
+echo '<script type="text/javascript">
+        document.getElementById("paymentForm").submit();
+      </script>';
+
+echo '</body></html>';
+
+
+
 ?>
 <html>
 
@@ -144,16 +193,16 @@ $fields = $monetico->getFields($purchase);
             }
         }
     </style>
-    <form name="payment_form" action="<?php echo $url; ?>" method="post">
+    <!-- <form name="payment_form" action="<?php echo $url; ?>" method="post">
         <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo $value; ?>">
         <?php endforeach; ?>
         <!--input type="submit" value="Pagar con Monetico"-->
-        <center><?php echo $esText ?></center>
-        <center>
-            <div class="custom-loader"></div>
-        </center>
-    </form>
+    <center><?php echo $esText ?></center>
+    <center>
+        <div class="custom-loader"></div>
+    </center>
+    </form> -->
 </body>
 
 </html>

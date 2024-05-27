@@ -129,7 +129,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver mas</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -163,7 +163,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver mas</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -197,7 +197,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas._df_button" id="guias_informativas" source="#">Ver mas</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -231,7 +231,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver más</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

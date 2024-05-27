@@ -163,7 +163,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver mas</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -197,7 +197,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver mas</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -231,7 +231,7 @@
                                     auctor, quis auctor neque tristique.</p>
                                 <div class="footer-guia"
                                     style="display: flex; align-items: center; justify-content: space-between">
-                                    <button class="btn_guias_informativas" id="guias_informativas" source="#">Ver mas</button>
+                                    <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver mas</button>
                                     <p style="font-family: Roboto; margin: 0">
                                         <svg style="display: inline; width:15px; height:15px;"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -246,7 +246,7 @@
                         </div>
                     </div>
                     <div class="columna_secundaria_guias">
-                        <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Articulos destacados
+                        <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Artículos destacados
                         </h4>
                         <div class="contenedor-destacadas"
                             style="display: flex; flex-direction: column; gap: 20px; margin: 10px 0">

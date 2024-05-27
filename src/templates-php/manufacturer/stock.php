@@ -27,7 +27,7 @@
 
         $acc_id = $_SESSION['emailAccount'];
         $membresia = $_SESSION['tipo_membresia'];
-        
+
         $sqlCount = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id'";
         $result = $conexion->query($sqlCount);
 
@@ -113,7 +113,7 @@
                     $perPage = 5;
                     $page = isset($_GET['i']) ? $_GET['i'] : 1;
 
-                    $queryTotal = "SELECT COUNT(*) FROM wp_k_products WHERE product_maker = '$acc_id'";
+                    $queryTotal = "SELECT COUNT(*) FROM wp_k_products WHERE product_maker = '$acc_id' AND product_group = 0";
                     $All = $conexion->query($queryTotal)->fetch_array()[0];
 
                     if ($All <= ($page - 1) * $perPage) {

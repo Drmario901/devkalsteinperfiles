@@ -1,16 +1,3 @@
-// const titulos = [
-//   "Facturación mensual",
-//   "Membresía 1",
-//   "Membresía 2",
-//   "Membresía 3",
-// ];
-
-// const botones = [
-//   // { membresia: "Membresía 1", id: "membresia-1" },
-//   { membresia: "Membresía 2", id: "membresia-2" },
-//   { membresia: "Membresía 3", id: "membresia-3" },
-// ];
-
 const datos = [
   {
     item: [
@@ -154,6 +141,7 @@ jQuery(document).ready(function ($) {
   crearDatos();
 
   $("#membresia-1").click(function () {
+    let atributo = $("#membresia-1").attr("user");
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
@@ -162,7 +150,7 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
         if (respuesta == 0 && respuesta !== 2) {
-          updateSubscripcion(1);
+          updateSubscripcion(1, atributo);
         }
       })
       .fail(function (error) {
@@ -171,6 +159,7 @@ jQuery(document).ready(function ($) {
   });
 
   $("#membresia-2").click(function () {
+    let atributo = $("#membresia-2").attr("user");
     $.ajax({
       url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/getMembresiaAjax.php",
       type: "GET",
@@ -179,16 +168,17 @@ jQuery(document).ready(function ($) {
       .done(function (respuesta) {
         console.log("la respuesta", respuesta);
         if (respuesta == 0 && respuesta !== 1) {
-          updateSubscripcion(2);
+          updateSubscripcion(2, atributo);
         }
       })
       .fail(function (error) {
         console.log("error", error);
       });
   });
-  function updateSubscripcion(subs) {
+  function updateSubscripcion(subs, user) {
     window.location.replace(
-      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php/?idMembership=SUB${subs}`
+      `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php?idMembership=SUB${subs}&user=${user}`
     );
+    // alert(`aqui van ${subs} y ${user}`);
   }
 });

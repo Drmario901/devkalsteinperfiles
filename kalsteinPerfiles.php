@@ -5,9 +5,9 @@ error_reporting(E_ALL); */
 /*
     Plugin Name: Kalstein - Perfiles
     Description:  Plugin desarrollado para la administración de los distintos roles de las distintas cuentas!
-    Author: Alejandro Espidea con colaboracion de Ricardo Leañez, Jose Alejandro y Edithson Maestracci.
+    Author: Alejandro Espidea con colaboracion de Ricardo Leañez, Jose Alejandro, Edithson Maestracci, Jesús Ibañez, Jorge Briceño, Katherine Leal, Victor Alarcon, Diego Horesok y Moises Brizuela.
     Author URI: https://platform.kalstein.us
-    Version: 1.0 (Beta)
+    Version: 1.0
 */
 
 //Test
@@ -697,6 +697,14 @@ function PerfilesModeratorViewBarbacoa()
     $html = $_short->moderator_view_barbacoas();
     return $html;
 }
+function PerfilesModeratorStores()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_stores();
+    return $html;
+}
 function PerfilesModeratorProduct()
 {
 
@@ -945,6 +953,7 @@ add_shortcode("MODERATOR_BLOG", "PerfilesModeratorBlog");
 add_shortcode("MODERATOR_VIEW_BLOG", "PerfilesModeratorViewBlog");
 add_shortcode("MODERATOR_BARBACOAS", "PerfilesModeratorBarbacoa");
 add_shortcode("MODERATOR_VIEW_BARBACOAS", "PerfilesModeratorViewBarbacoa");
+add_shortcode("MODERATOR_STORES", "PerfilesModeratorStores");
 
 //Shortcode Styles
 
@@ -2373,6 +2382,19 @@ function perfiles_styles()
         wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.account.js', __FILE__), array('jquery'));
     }
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_VIEW_BARBACOAS')) {
+        translations();
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_style('CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/moderator/css/material.css', __FILE__));
+        wp_enqueue_style('font-awesome-css', plugins_url('src/fontawesome/css/all.css', __FILE__));
+        wp_enqueue_script('font-awesome-js', plugins_url('src/fontawesome/js/all.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('validate-product-js', plugins_url('src/moderator/js/validate.barbacoa.js', __FILE__), array('jquery'));
+    }
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_STORES')) {
         translations();
         wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
         wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));

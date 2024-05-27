@@ -1,0 +1,2 @@
+2024-05-23 16:05:01 - Error al decodificar JSON: Syntax error
+2024-05-23 16:08:01 - Error al decodificar JSON: Syntax error

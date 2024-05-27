@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
+/* ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL); */
 
 require 'vendor/autoload.php';
 
@@ -18,7 +18,6 @@ if (!empty($data)) {
 
     if ($result) {
         echo "version=2\ncdr=0";
-        require 'processData.php';
     } else {
         echo "version=2\ncdr=1";
     }
