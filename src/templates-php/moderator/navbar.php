@@ -151,13 +151,13 @@ if ($acc_img == '') {
                             id="link-accounts" class='navbar-link icon-box'>
                             <span data-i18n="moderator:Stores">Stores</span>
                         </a>
-                    </li> 
+                    </li>
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/blog'
                             id="link-accounts" class='navbar-link icon-box'>
                             <span data-i18n="moderator:Blog">Blogs</span>
                         </a>
-                    </li>    
+                    </li>
                     <li>
                         <a href='https://dev.kalstein.plus/plataforma/private-kalstein-moderator/guide'
                             id="link-accounts" class='navbar-link icon-box'>
@@ -192,6 +192,12 @@ if ($acc_img == '') {
                         <a href='https://dev.kalstein.plus/plataforma/moderator/products-render/' id='link-render'
                             class='navbar-link icon-box'>
                             <span>Render</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://dev.kalstein.plus/plataforma/moderator/subscripciones/' id='link-render'
+                            class='navbar-link icon-box'>
+                            <span>Subscripciones</span>
                         </a>
                     </li>
                     <!--li>
