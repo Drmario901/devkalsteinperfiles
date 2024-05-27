@@ -399,6 +399,30 @@ function pursachingPerfilesDistributor()
     return $html;
 }
 
+function blogPerfilesDistributor()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->distributor_blog();
+    return $html;
+}
+
+function blogIndividualPerfilesDistributor()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->distributor_blog_individual();
+    return $html;
+}
+
+function guidePerfilesDistributor()
+{
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->distributor_guide();
+    return $html;
+}
+
 function subscripcionPerfilesDistributor()
 {
     $_short = new shortcodePerfiles;
@@ -897,6 +921,9 @@ add_shortcode("PERFILES_DISTRIBUTOR_EDIT_PROFILE", "editProfilePerfilesDistribut
 add_shortcode("PERFILES_DISTRIBUTOR_CATALOGS", "catalogsPerfilesDistributor");
 add_shortcode("PERFILES_DISTRIBUTOR_PURSACHING", "pursachingPerfilesDistributor");
 add_shortcode("PERFILES_DISTRIBUTOR_SUBSCRIPCION", "subscripcionPerfilesDistributor");
+add_shortcode("PERFILES_DISTRIBUTOR_BLOG", "blogPerfilesDistributor");
+add_shortcode("PERFILES_DISTRIBUTOR_BLOG_INDIVIDUAL", "blogIndividualPerfilesDistributor");
+add_shortcode("PERFILES_DISTRIBUTOR_GUIDE", "guidePerfilesDistributor");
 
 
 
@@ -1111,6 +1138,8 @@ function perfiles_styles()
         //DIAGNOSIS APP JS 
 
         wp_enqueue_script('diag-pages', plugins_url('src/js/diag.pages.js', __FILE__), array('jquery'));
+        wp_enqueue_script('blog', plugins_url('src/js/blog.js', __FILE__), array('jquery'));
+        wp_enqueue_script('guide', plugins_url('src/js/guide.js', __FILE__), array('jquery'));
     }
 
     //NOBODY KNOWS WTF IS THIS
@@ -1751,6 +1780,73 @@ function perfiles_styles()
         wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
         wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
         wp_enqueue_script('subscripcion-script', plugins_url('src/distributor/js/subscripcion.js', __FILE__), array('jquery'));
+    }
+
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'PERFILES_DISTRIBUTOR_BLOG')) {
+        translations();
+        global_url();
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_style('CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/manufacturer/css/material.css', __FILE__));
+        wp_enqueue_style('banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('quote-script-js', '' . $plugin_quote . '/assets/js/script.cot2.js', array('jquery'), true);
+        wp_enqueue_style('quote-css', '' . $plugin_quote . '/assets/css/styles.cot.css', true);
+        wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js', __FILE__), array('jquery'));
+        wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js', __FILE__), array('jquery'));
+        wp_enqueue_script('pursaching-script', plugins_url('src/distributor/js/pursaching.js', __FILE__), array('jquery'));
+        wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
+        wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('blog', plugins_url('src/js/blog.js', __FILE__), array('jquery'));
+    }
+
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'PERFILES_DISTRIBUTOR_BLOG_INDIVIDUAL')) {
+        translations();
+        global_url();
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_style('CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/manufacturer/css/material.css', __FILE__));
+        wp_enqueue_style('banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('quote-script-js', '' . $plugin_quote . '/assets/js/script.cot2.js', array('jquery'), true);
+        wp_enqueue_style('quote-css', '' . $plugin_quote . '/assets/css/styles.cot.css', true);
+        wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js', __FILE__), array('jquery'));
+        wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js', __FILE__), array('jquery'));
+        wp_enqueue_script('pursaching-script', plugins_url('src/distributor/js/pursaching.js', __FILE__), array('jquery'));
+        wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
+        wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('blog', plugins_url('src/js/blog.js', __FILE__), array('jquery'));
+    }
+
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'PERFILES_DISTRIBUTOR_GUIDE')) {
+        translations();
+        global_url();
+        wp_enqueue_style('bootstrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_style('CSS', plugins_url('src/manufacturer/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('material', plugins_url('src/manufacturer/css/material.css', __FILE__));
+        wp_enqueue_style('banner-footer-css', plugins_url('src/css/banner-footer.css', __FILE__));
+        wp_enqueue_script('bootstrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/manufacturer/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('quote-script-js', '' . $plugin_quote . '/assets/js/script.cot2.js', array('jquery'), true);
+        wp_enqueue_style('quote-css', '' . $plugin_quote . '/assets/css/styles.cot.css', true);
+        wp_enqueue_script('JS', plugins_url('src/js/dashboard.script.js', __FILE__), array('jquery'));
+        wp_enqueue_script('acordeon', plugins_url('src/js/acordeon.js', __FILE__), array('jquery'));
+        wp_enqueue_script('pursaching-script', plugins_url('src/distributor/js/pursaching.js', __FILE__), array('jquery'));
+        wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
+        wp_enqueue_script('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/manufacturer/css/izitoast.css', __FILE__));
+        wp_enqueue_script('iziToast-js', plugins_url('src/manufacturer/js/iziToast.js', __FILE__), array('jquery'));
+        wp_enqueue_script('guide-script', plugins_url('src/distributor/js/guide.js', __FILE__), array('jquery'));
+        wp_enqueue_script('guide', plugins_url('src/js/guide.js', __FILE__), array('jquery'));
     }
 
     // XXX SUPPORT STYLES

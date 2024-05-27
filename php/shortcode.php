@@ -540,6 +540,24 @@ class shortcodePerfiles
         return render_php_file("distributor/subscripcion.php");
     }
 
+    function distributor_blogs()
+    {
+        verify_session(2);
+        return render_php_file("distributor/blog.php");
+    }
+
+    function distributor_blogs_individual()
+    {
+        verify_session(2);
+        return render_php_file("distributor/blogIndividual.php");
+    }
+
+    function distributor_guides()
+    {
+        verify_session(2);
+        return render_php_file("distributor/guide.php");
+    }
+
     /* SOPORTE OLX*/
     function dashboard_suport()
     {
