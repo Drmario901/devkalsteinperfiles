@@ -33,32 +33,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class='col-12'>
-                        <div class='row'>
-                            <div class='col-lg-4'>
-                                <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
-                                    <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
-                                        post</button>
-                                </a>
-                            </div>
-                            <div class='col-lg-4'>
-                                <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                                    <button type='button' id='btnUpdate' class='btn btn-outline-secondary btn-block p-2 px-4' style='color: #333 !important'>View
-                                        Store</button>
-                                </a>
-                            </div>
-                        </div>
-
+                    <div class='col-12' style="display: flex; justify-content: flex-start">
+                        <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-blog?accid=$aid'>
+                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
+                                post</button>
+                        </a>
+                        <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
+                            <button type='button' id='btnUpdate' class='btn btn-outline-secondary btn-block p-2 px-4'
+                                style='color: #333 !important'>View
+                                Store</button>
+                        </a>
                     </div>
-                    <div class='mt-2'>
-                        <!-- <div class='fw-bold card'
+
+                </div>
+                <div class='mt-2'>
+                    <!-- <div class='fw-bold card'
                             style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
                             <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
                         </div> -->
-                    </div>
                 </div>
             </div>
-            <!-- <?php
+        </div>
+        <!-- <?php
 
                 // require __DIR__.'/../../../php/conexion.php';
 
