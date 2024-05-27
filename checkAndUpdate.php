@@ -70,21 +70,41 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $userID = '@' . $matches[1];
         }
 
+        // Suponiendo que la fecha original está en la variable $originalDate
+        $originalDate = $dataArray['date'];
+        // Remover caracteres de escape y el texto '_a_'
+        $originalDate = str_replace(['\\/', '_a_'], ['/', ' '], $originalDate);
+        // Parsear la fecha y hora usando DateTime::createFromFormat
+        $dateTime = DateTime::createFromFormat('d/m/Y H:i:s', $originalDate);
+
+        if ($dateTime !== false) {
+          // Formatear la fecha a 'dd/mm/yyyy'
+          $date = $dateTime->format('d/m/Y');
+          // Formatear la fecha y hora a 'dd/mm/yyyy/hh:mm:ss'
+          $datetime = $dateTime->format('d/m/Y/H:i:s');
+        } else {
+          $errors = DateTime::getLastErrors();
+          echo "Error al parsear la fecha: " . implode(", ", $errors['errors']) . "\n";
+          continue;
+        }
+
         $subscriptionType = $dataArray['montant'] ?? null;
         $paymentReference = $dataArray['reference'] ?? null;
         $retour = $dataArray['code-retour'] ?? null;
+        $montant = $dataArray['montant'] ?? null;
 
-        // Validar que los valores necesarios no estén vacíos
-        if (!$userID || !$subscriptionType || !$paymentReference || !$retour) {
+        if (!$userID || !$subscriptionType || !$paymentReference || !$retour || !$montant) {
           logMessage("Datos faltantes en la entrada: " . $jsonStr);
           continue;
         }
 
-        // Guardar el último registro por userID
         $lastRecords[$userID] = [
           'subscriptionType' => $subscriptionType,
           'paymentReference' => $paymentReference,
           'retour' => $retour,
+          'montant' => $montant,
+          'date' => $date,
+          'datetime' => $datetime
         ];
       }
     }
