@@ -16,16 +16,19 @@ $getEmail = $_GET['email'];
 $email = $getEmail;
 
 
-$sql = "SELECT * FROM wp_account WHERE account_email = '$email'";
-$result = $conexion->query($sql);
-$row = $result->fetch_assoc();
-$id = $row['account_aid'];
+echo 'aaaa', $email;
+
+
+// $sql = "SELECT * FROM wp_account WHERE account_email = '$email'";
+// $result = $conexion->query($sql);
+// $row = $result->fetch_assoc();
+// $id = $row['account_aid'];
 
 
 
-$sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$id'";
+// $sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$id'";
 
-$result2 = $conexion->query($sqlSubscripcion);
-$row = $result2->fetch_assoc();
+// $result2 = $conexion->query($sqlSubscripcion);
+// $row = $result2->fetch_assoc();
 
-var_dump('aqui van', $row);
+// var_dump('aqui van', $row);
