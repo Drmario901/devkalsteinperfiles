@@ -17,7 +17,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use GuzzleHttp\Client;
 
 
-$sql = "SELECT * FROM wp_account WHERE account_email = '$email'";
+$sql = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $result = $conexion->query($sql);
 $row = $result->fetch_assoc();
 $id = $row['account_aid'];
@@ -118,7 +118,7 @@ if ($response->getStatusCode() == 200) {
 
 <body onload="document.forms['cancel_form'].submit();">
     <form name="cancel_form" action="<?php echo $url; ?>" method="post">
-        <?php foreach ($fields as $key => $value): ?>
+        <?php foreach ($fields as $key => $value) : ?>
             <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
         <?php endforeach; ?>
         <center>
