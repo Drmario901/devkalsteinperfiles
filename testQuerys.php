@@ -5,11 +5,15 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
-session_start();
+// session_start();
 
-if (isset($_SESSION["emailAccount"])) {
-  $email = $_SESSION["emailAccount"];
-}
+// if (isset($_SESSION["emailAccount"])) {
+//   $email = $_SESSION["emailAccount"];
+// }
+
+$getEmail = $_GET['email'];
+
+$email = $getEmail;
 
 
 $sql = "SELECT * FROM wp_account WHERE account_email = '$email'";
