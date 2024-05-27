@@ -119,4 +119,4 @@ if ($parsedResponse['cdr'] == 0) {
     echo "Valor de cdr desconocido: " . $parsedResponse['cdr'];
 }
 
-var_dump('Respuesta', $parsedResponse);
+// var_dump('Respuesta', $parsedResponse);
