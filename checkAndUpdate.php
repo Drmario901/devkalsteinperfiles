@@ -110,7 +110,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
           continue;
         }
 
-        $insertOrUpdateSubs->bind_param("sssii", $fechaInicio, $fechaFinal, $record['paymentReference'], $record['montant'], $accountAid);
+        $insertOrUpdateSubs->bind_param("ssssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $record['montant'], $accountAid);
         $insertOrUpdateSubs->execute();
         $insertOrUpdateSubs->close();
 
