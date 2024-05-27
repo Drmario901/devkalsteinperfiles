@@ -174,7 +174,7 @@ if ($acc_img == '') {
                 </li>
 
                 <li>
-                    <a id="link-guides" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/guias"
+                    <a id="link-guides" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/guide"
                         class="navbar-link icon-box">
                         <span data-i18n="distribuidor:guias">Guías Informativas</span>
                     </a>
