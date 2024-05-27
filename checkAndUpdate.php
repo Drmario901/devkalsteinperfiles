@@ -131,8 +131,8 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
       if ($accountAid) {
         // Calcular las fechas de inicio y finalización de la membresía (un mes)
-        $fechaInicio = date('Y-m-d');
-        $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
+        $fechaInicio = $record['date'];
+        $fechaFinal = date('m-d-Y', strtotime('+1 month', strtotime($fechaInicio)));
 
         // Determinar el tipo de membresía basado en la referencia
         $tipoMembresia = 0;
