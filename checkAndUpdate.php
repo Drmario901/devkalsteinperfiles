@@ -48,10 +48,27 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $userID = '@' . $matches[1];
         }
 
+        $originalDate = $dataArray['date'];
+
+        // Parsear la fecha y hora usando DateTime::createFromFormat
+        $dateTime = DateTime::createFromFormat('d/m/Y_a_H:i:s', $originalDate);
+
+        if ($dateTime !== false) {
+          // Formatear la fecha a 'dd/mm/yyyy'
+          $date = $dateTime->format('d/m/Y');
+
+          // Formatear la fecha y hora a 'dd/mm/yyyy/hh:mm:ss'
+          $datetime = $dateTime->format('d/m/Y/H:i:s');
+
+        } else {
+          echo "Error al parsear la fecha.";
+        }
+
         $subscriptionType = $dataArray['montant'] ?? null;
         $paymentReference = $dataArray['reference'] ?? null;
         $retour = $dataArray['code-retour'] ?? null;
         $montant = $dataArray['montant'] ?? null;
+        //$date = $dataArray['date'] ?? null;
 
         if (!$userID || !$subscriptionType || !$paymentReference || !$retour || !$montant) {
           logMessage("Datos faltantes en la entrada: " . $jsonStr);
@@ -63,6 +80,8 @@ if ($currentModifiedTime > $lastModifiedTime) {
           'paymentReference' => $paymentReference,
           'retour' => $retour,
           'montant' => $montant,
+          'date' => $date,
+          'datetime' => $datetime
         ];
       }
     }
@@ -96,21 +115,23 @@ if ($currentModifiedTime > $lastModifiedTime) {
         }
 
         $insertOrUpdateSubs = $conexion->prepare("
-                    INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, user_id)
+                    INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fecha, fechahora user_id)
                     VALUES (?, ?, ?, '1', ?, ?)
                     ON DUPLICATE KEY UPDATE
                         fecha_inicio = VALUES(fecha_inicio),
                         fecha_final = VALUES(fecha_final),
                         referencia_pago = VALUES(referencia_pago),
                         estado_membresia = VALUES(estado_membresia),
-                        monto = VALUES(monto)
+                        monto = VALUES(monto),
+                        fecha = VALUES(fecha),
+                        fechahora = VALUES(fechahora)
                 ");
         if (!$insertOrUpdateSubs) {
           logMessage("Error preparando la inserción/actualización de wp_subscripcion: " . $conexion->error);
           continue;
         }
 
-        $insertOrUpdateSubs->bind_param("ssssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $record['montant'], $accountAid);
+        $insertOrUpdateSubs->bind_param("ssssssi", $fechaInicio, $fechaFinal, $record['paymentReference'], $record['montant'], $record['date'], $record['datetime'], $accountAid);
         $insertOrUpdateSubs->execute();
         $insertOrUpdateSubs->close();
 
