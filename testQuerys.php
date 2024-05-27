@@ -29,6 +29,9 @@ $id = $row['account_aid'];
 $sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$id'";
 
 $result2 = $conexion->query($sqlSubscripcion);
-$row = $result2->fetch_assoc();
+$row2 = $result2->fetch_assoc();
 
-var_dump('aqui van', $row);
+$monto_sub = $row2['monto'];
+
+echo 'amonto_sub', $monto_sub;
+// var_dump('aqui van', $row);
