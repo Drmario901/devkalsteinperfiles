@@ -4,7 +4,7 @@
             include 'navbar.php';
         ?>
         <script>
-            let page = "mail";
+            let page = "blogs";
 
             document.querySelector('#link-' + page).classList.add("active");
             document.querySelector('#link-' + page).removeAttribute("style");
@@ -16,9 +16,10 @@
             $banner_img = 'Header-fabricante-IMG.png';
 
             require __DIR__. '/../../../php/translateTextBanner.php';
-            $banner = 'banner_text_ConnectWithOtherUsers';
-            $banner_text = translateTextBanner($banner);
-            include 'banner.php';
+            // $banner = 'banner_text_ConnectWithOtherUsers';
+            // $banner_text = translateTextBanner($banner);
+            $banner_text = 'Blogs';
+            include __DIR__.'/../manufacturer/banner.php';
         ?>
         
         <main>
