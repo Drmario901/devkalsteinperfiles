@@ -39,7 +39,7 @@
                                 post</button>
                         </a>
                         <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                            <button type='button' id='btnUpdate' class='btn btn-outline-secondary btn-block p-2 px-4'
+                            <button type='button' id='btnUpdate' class='btn btn-outline-secondary btn-block p-2 px-4 ms-3'
                                 style='color: #333 !important'>View
                                 Store</button>
                         </a>
