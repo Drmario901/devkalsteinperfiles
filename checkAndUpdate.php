@@ -50,6 +50,9 @@ if ($currentModifiedTime > $lastModifiedTime) {
 
         $originalDate = $dataArray['date'];
 
+        // Remover caracteres de escape si existen
+        $originalDate = str_replace('\\/', '/', $originalDate);
+
         // Parsear la fecha y hora usando DateTime::createFromFormat
         $dateTime = DateTime::createFromFormat('d/m/Y_a_H:i:s', $originalDate);
 
@@ -60,8 +63,13 @@ if ($currentModifiedTime > $lastModifiedTime) {
           // Formatear la fecha y hora a 'dd/mm/yyyy/hh:mm:ss'
           $datetime = $dateTime->format('d/m/Y/H:i:s');
 
+          // Mostrar los resultados
+          echo "Fecha: " . $date . "\n";         // Imprime: Fecha: 27/05/2024
+          echo "Fecha y Hora: " . $datetime . "\n"; // Imprime: Fecha y Hora: 27/05/2024/15:15:16
         } else {
-          echo "Error al parsear la fecha.";
+          // Mostrar un mensaje de error detallado
+          $errors = DateTime::getLastErrors();
+          echo "Error al parsear la fecha: " . implode(", ", $errors['errors']) . "\n";
         }
 
         $subscriptionType = $dataArray['montant'] ?? null;
