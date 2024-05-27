@@ -48,13 +48,17 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $userID = '@' . $matches[1];
         }
 
+        // Suponiendo que la fecha original está en la variable $originalDate
         $originalDate = $dataArray['date'];
 
-        // Remover caracteres de escape si existen
-        $originalDate = str_replace('\\/', '/', $originalDate);
+        // Remover caracteres de escape y el texto '_a_'
+        $originalDate = str_replace(['\\/', '_a_'], ['/', ' '], $originalDate);
+
+        // Verificar el contenido de $originalDate
+        echo "Fecha original: " . $originalDate . "\n";
 
         // Parsear la fecha y hora usando DateTime::createFromFormat
-        $dateTime = DateTime::createFromFormat('d/m/Y_a_H:i:s', $originalDate);
+        $dateTime = DateTime::createFromFormat('d/m/Y H:i:s', $originalDate);
 
         if ($dateTime !== false) {
           // Formatear la fecha a 'dd/mm/yyyy'
@@ -71,6 +75,7 @@ if ($currentModifiedTime > $lastModifiedTime) {
           $errors = DateTime::getLastErrors();
           echo "Error al parsear la fecha: " . implode(", ", $errors['errors']) . "\n";
         }
+
 
         $subscriptionType = $dataArray['montant'] ?? null;
         $paymentReference = $dataArray['reference'] ?? null;
