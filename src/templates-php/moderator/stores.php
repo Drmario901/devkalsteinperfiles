@@ -1,5 +1,9 @@
 <header class="header" data-header>
-
+    <style>
+    .btnVerTienda:hover {
+        color: white !important;
+    }
+    </style>
     <?php
 
         include 'navbar.php';
