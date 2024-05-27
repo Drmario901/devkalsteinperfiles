@@ -403,7 +403,7 @@ h5 {
         <div class='card mb-3'>
             <div class='row text-sm-start text-md-center'>
                 <h5>
-                <i class='fa-solid fa-shop'></i>
+                    <i class='fa-solid fa-shop'></i>
                     Catálogo de producto
                 </h5>
             </div>
@@ -776,7 +776,7 @@ h5 {
         <div class='card mb-3'>
             <div class='row text-sm-start text-md-center'>
                 <h5>
-                <i class='fa-solid fa-star'></i>
+                    <i class='fa-solid fa-star'></i>
                     Extras
                 </h5>
             </div>
@@ -799,6 +799,59 @@ h5 {
                             lacinia sit amet. Proin tincidunt sapien in leo volutpat dignissim. Quisque porta urna vitae
                             lacus ultricies, ut blandit diam pellentesque. Aliquam erat volutpat. Cras sit amet placerat
                             eros, id tempor quam. Cras varius placerat posuere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                <div class='row'>
+                    <h6><i class='fa-regular fa-circle-question'></i> FAQ</h6>
+                    <div class='row'>
+                        <div class='col-6'>
+                            Pregunta N1
+                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>
+                                    Lorem ipsum</p>
+                            </div>
+                        </div>
+                        <div class='col-6'>
+                            Respuesta N1
+                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>
+                                    Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6'>
+                            Pregunta N1
+                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>
+                                    Lorem ipsum</p>
+                            </div>
+                        </div>
+                        <div class='col-6'>
+                            Respuesta N1
+                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>
+                                    Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-6'>
+                            Pregunta N1
+                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>
+                                    Lorem ipsum</p>
+                            </div>
+                        </div>
+                        <div class='col-6'>
+                            Respuesta N1
+                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>
+                                    Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
