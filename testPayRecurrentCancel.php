@@ -111,7 +111,7 @@ $responseBody = $response->getBody()->getContents();
 parse_str(str_replace(["\r", "\n"], '&', $responseBody), $parsedResponse);
 
 
-// var_dump($parsedResponse);
+var_dump($parsedResponse);
 
 '<br>';
 '<br>';
