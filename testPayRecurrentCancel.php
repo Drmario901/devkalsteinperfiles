@@ -17,7 +17,7 @@ require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/
 use GuzzleHttp\Client;
 
 
-$sql = "SELECT * FROM wp_account WHERE account_email = '$email'";
+$sql = "SELECT * FROM wp_account WHERE account_correo = '$email'";
 $result = $conexion->query($sql);
 $row = $result->fetch_assoc();
 $id = $row['account_aid'];
@@ -57,7 +57,7 @@ function calculateMAC($securityKey, $fields)
     return strtoupper(hash_hmac('sha1', $dataString, pack('H*', $securityKey)));
 }
 
-/* $dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
+$dateTime = new DateTime('now', new DateTimeZone('Europe/Paris'));
 $date = $dateTime->format('d/m/Y:H:i:s');
 $date_commande = $dateTime->format('d/m/Y');
 
@@ -66,7 +66,7 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}:\d{2}:\d{2}:\d{2}$/', $date)) {
 }
 if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
     die('Formato de fecha "date_commande" incorrecto. Debe ser JJ/MM/AAAA');
-} */
+}
 
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
@@ -83,8 +83,8 @@ $stoprecurrence = 'OUI';
 $fields = [
     'version' => $version,
     'TPE' => $tpe,
-    'date' => $rowSubscripcion['fecha'],
-    'date_commande' => $rowSubscripcion['fechahora'],
+    'date' => $date,
+    'date_commande' => $date_commande,
     'montant' => $montant,
     'montant_a_capturer' => $montant_a_capturer,
     'montant_deja_capture' => $montant_deja_capture,

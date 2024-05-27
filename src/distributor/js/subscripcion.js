@@ -175,6 +175,22 @@ jQuery(document).ready(function ($) {
         console.log("error", error);
       });
   });
+
+  // $("#btn-cancelar-subs").click(function () {
+  //   $.ajax({
+  //     url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php",
+  //     type: "POST",
+  //     data: {},
+  //   })
+  //     .done(function (respuesta) {
+  //       console.log("la respuesta", respuesta);
+  //       alert("respuesta", respuesta);
+  //     })
+  //     .fail(function (error) {
+  //       console.log("error", error);
+  //     });
+  // });
+
   function updateSubscripcion(subs, user) {
     window.location.replace(
       `https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrent.php?idMembership=SUB${subs}&user=${user}`
