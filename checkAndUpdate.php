@@ -1,8 +1,13 @@
 <?php
 $filePath = __DIR__ . '/monetico_log_recurrent.txt';
-$lastModifiedFile = sys_get_temp_dir() . '/last_modified.txt';
+
+// Archivo que almacena el último timestamp modificado
+$lastModifiedFile = __DIR__ . '/last_modified.txt';
+
+// Ruta del archivo de log para errores y confirmaciones
 $logFile = __DIR__ . '/check_monetico_log.txt';
 
+// Función para registrar mensajes en el log
 function logMessage($message)
 {
   global $logFile;
@@ -10,17 +15,14 @@ function logMessage($message)
   file_put_contents($logFile, date('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
 }
 
-function getLastModifiedTime($lastModifiedFile)
-{
-  return file_exists($lastModifiedFile) ? file_get_contents($lastModifiedFile) : 0;
+// Leer el último timestamp modificado registrado
+if (file_exists($lastModifiedFile)) {
+  $lastModifiedTime = file_get_contents($lastModifiedFile);
+} else {
+  $lastModifiedTime = 0;
 }
 
-function updateLastModifiedTime($lastModifiedFile, $time)
-{
-  file_put_contents($lastModifiedFile, $time);
-}
-
-$lastModifiedTime = getLastModifiedTime($lastModifiedFile);
+// Obtener el timestamp modificado actual del archivo
 $currentModifiedTime = filemtime($filePath);
 
 if ($currentModifiedTime > $lastModifiedTime) {
