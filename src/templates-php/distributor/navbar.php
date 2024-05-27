@@ -167,6 +167,20 @@ if ($acc_img == '') {
                 </li>
 
                 <li>
+                    <a id="link-catalogs" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/catalogos"
+                        class="navbar-link icon-box">
+                        <span data-i18n="distribuidor:blog">Blogs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="link-catalogs" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/catalogos"
+                        class="navbar-link icon-box">
+                        <span data-i18n="distribuidor:guias">Guías Informativas</span>
+                    </a>
+                </li>
+
+                <li>
                     <a id="link-sales" href="https://dev.kalstein.plus/plataforma/index.php/distribuidor/ventas"
                         class="navbar-link icon-box">
                         <span data-i18n="distribuidor:linkRepVentas">Reporte de ventas</span>
