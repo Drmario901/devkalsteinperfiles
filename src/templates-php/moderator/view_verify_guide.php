@@ -774,7 +774,6 @@ h5 {
                 </div>
             </div>
         </div>
-        </div>
 
 
         <textarea class='mx-auto my-2' style='width: 100%; height: 150px;'
