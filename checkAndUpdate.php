@@ -112,7 +112,10 @@ if ($currentModifiedTime > $lastModifiedTime) {
       $stmt->close();
 
       if ($accountAid) {
-        $fechaInicio = date('Y-m-d');
+        // Fecha inicio sera la variable date parseada a y-m-d
+        $fechaInicio = $record['date'];
+        $fechaInicio = date('Y-m-d', strtotime($fechaInicio));
+
         $fechaFinal = date('Y-m-d', strtotime('+1 month', strtotime($fechaInicio)));
 
         $tipoMembresia = 0;
