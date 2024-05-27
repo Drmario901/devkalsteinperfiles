@@ -1,15 +1,17 @@
 <header class="header" data-header>
 
-    <?php
-
-        include 'navbar.php';
-    
-    ?>
     <style>
     .btnVerTienda:hover {
         color: white !important;
     }
     </style>
+
+    <?php
+
+        include 'navbar.php';
+    
+    ?>
+
     <script>
     let page = "stores";
 
