@@ -26,7 +26,8 @@ if (file_exists($lastModifiedFile)) {
 $currentModifiedTime = filemtime($filePath);
 
 if ($currentModifiedTime > $lastModifiedTime) {
-  updateLastModifiedTime($lastModifiedFile, $currentModifiedTime);
+  // Actualizar el timestamp en el archivo de registro
+  file_put_contents($lastModifiedFile, $currentModifiedTime);
   $data = file_get_contents($filePath);
   $lines = explode("\n", $data);
   $currentDate = date('d/m/Y');
