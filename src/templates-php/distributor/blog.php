@@ -13,7 +13,7 @@
 
     <article class="container article">
         <?php
-            $banner_img = 'Header-fabricante-IMG.png';
+            $banner_img = 'Header-distribuidor-IMG.jpg';
 
             require __DIR__. '/../../../php/translateTextBanner.php';
             // $banner = 'banner_text_ConnectWithOtherUsers';
