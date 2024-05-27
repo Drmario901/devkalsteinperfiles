@@ -51,8 +51,9 @@
           $img = $row['account_url_image_perfil'];
           $acc_img = $row['account_url_image_perfil'];
 
-          $firstLyricsName = strtoupper($nombre[0]);
-          $firstLyricsLastname = strtoupper($apellido[0]);
+          $firstLyricsName = strtoupper($nombre);
+          $firstLyricsLastname = strtoupper($apellido);
+          $membresia = $row['tipo_membresia'];
 
 
           if ($acc_img == '') {
@@ -61,9 +62,9 @@
             $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/' . $acc_img;
           }
 
-          if ($row['$tipo_membresia'] == 1) {
+          if ($membresia == 1) {
             $tipo_membresia = 'Plan de membresia 1';
-          } elseif ($row['$tipo_membresia'] == 2) {
+          } elseif ($membresia == 2) {
             $tipo_membresia = 'Plan de membresia 2';
           }
 
