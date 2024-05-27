@@ -111,7 +111,7 @@ $responseBody = $response->getBody()->getContents();
 parse_str(str_replace(["\r", "\n"], '&', $responseBody), $parsedResponse);
 
 
-var_dump($parsedResponse);
+// var_dump($parsedResponse);
 
 '<br>';
 '<br>';
@@ -137,7 +137,7 @@ if (isset($parsedResponse['cdr'])) {
             header('Content-Type: application/json');
             echo json_encode(['status' => 200, 'response' => 'success']);
         } else {
-            echo "Error actualizando estado de membresía: " . $conexion->error;
+            // echo "Error actualizando estado de membresía: " . $conexion->error;
             header('Content-Type: application/json');
             echo json_encode(['status' => 500, 'error' => $conexion->error]);
         }
