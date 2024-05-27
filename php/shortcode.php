@@ -4,7 +4,7 @@
 function render_php_file($path)
 {
     ob_start();
-    include(__DIR__ . '/../src/templates-php/' . $path);
+    include (__DIR__ . '/../src/templates-php/' . $path);
     $var = ob_get_contents();
     ob_end_clean();
     return $var;
@@ -276,9 +276,9 @@ class shortcodePerfiles
             case 4:
                 $redirectUrl = $baseURL . "support/dashboard/";
                 break;
-                /*case 5: 
-                $redirectUrl = $baseURL . "rentalsale/dashboard/";
-                break;*/
+            /*case 5: 
+            $redirectUrl = $baseURL . "rentalsale/dashboard/";
+            break;*/
             case 6:
                 /* sleep(15); */
                 $redirectUrl = $scientistURL . "setSession.php";
@@ -809,6 +809,10 @@ class shortcodePerfiles
     function moderator_render()
     {
         return render_php_file('moderator/render.php');
+    }
+    function moderator_subscripciones()
+    {
+        return render_php_file('moderator/subscripciones.php');
     }
 
     // diego 404
