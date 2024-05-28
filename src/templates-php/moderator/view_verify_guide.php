@@ -887,7 +887,7 @@ h5 {
                 <div class='row'>
                     <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i> Etiquetas
                     </h6>
-                    <div class='d-flex'>
+                    <div class='d-flex my-2'>
                         <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
                             <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
                         </div>
