@@ -11,7 +11,7 @@
             border-color: #213280;
         }
         .buton-paginate:hover{
-            background-color: #213280;
+            background-color: #213280 !important;
             color: #fff;
         }
         @media (max-width: 768px) {
