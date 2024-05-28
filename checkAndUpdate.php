@@ -194,6 +194,19 @@ foreach ($lines as $line) {
         try {
             $insertSubs->execute();
             logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
+
+            // Actualizar el estado de membresía de los registros anteriores del usuario a 3
+            $updateSubs = $conexion->prepare("UPDATE wp_subscripcion SET estado_membresia = '3' WHERE user_id = ? AND referencia_pago != ?");
+            if (!$updateSubs) {
+                logMessage("Error preparando la actualización de estado de membresía: " . $conexion->error);
+                continue;
+            }
+
+            $updateSubs->bind_param("is", $accountID, $paymentReference);
+            $updateSubs->execute();
+            $updateSubs->close();
+
+            logMessage("Estado de membresía de registros anteriores del usuario actualizado a 3.");
         } catch (mysqli_sql_exception $e) {
             if ($insertSubs->errno == 1062) {
                 logMessage("Error de duplicado: La referencia de pago ya existe. Continuando con el siguiente registro.");
