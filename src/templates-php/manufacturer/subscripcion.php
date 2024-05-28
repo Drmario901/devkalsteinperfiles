@@ -191,11 +191,8 @@
 
   $mebresia = $_SESSION['tipo_membresia'];
   $fechaFinal = $_SESSION['fecha_final'];
-  $fechaInicial = $_SESSION['fecha_inicial'];
+  $fechaInicial = $_SESSION['fecha_inicio'];
 
-  echo 'las fechas' . $fechaInicial . 'y' . $fechaFinal;
-  echo  'Membresiaaa' . $mebresia;
-  echo 'Me';
   ?>
   <script>
     let page = "home";
@@ -205,12 +202,19 @@
 </header>
 
 <section style="margin-top: 2rem;">
-  <header>
+  <header style="display: flex; justify-content: space-around; width: 100%;">
     <div>
       <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
       <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
       <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
     </div>
+    <?php
+    if ($membresia != 0) : ?>
+      <div style="width: auto;">
+        <p>Fecha Inicial: </p><strong><?php echo $fechaInicial; ?></strong>
+        <p>Fecha Final: <strong><?php echo $fechaFinal; ?></strong></p>
+      </div>
+    <?php endif; ?>
   </header>
   <table class="membership-table">
     <thead>

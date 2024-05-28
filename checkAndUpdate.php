@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 // Crear la carpeta 'monetico' si no existe
 $logDir = __DIR__ . '/monetico';
 if (!is_dir($logDir)) {
@@ -157,10 +160,13 @@ foreach ($lines as $line) {
             continue;
         }
 
+        // Depuración adicional para verificar las variables
+        logMessage("Variables antes de la inserción - fechaInicio: $fechaInicio, fechaFinal: (calculando), paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID, retour: $retour");
+
         // Insertar el registro en la base de datos
         $insertSubs = $conexion->prepare("
-            INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id, code_retour)
-            VALUES (?, ?, ?, '1', ?, ?, ?, ?)
+            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id)
+            VALUES (?, ?, ?, ?, '1', ?, ?, ?)
         ");
         if (!$insertSubs) {
             logMessage("Error preparando la inserción en wp_subscripcion: " . $conexion->error);
@@ -172,7 +178,10 @@ foreach ($lines as $line) {
         $fechaFinal = (new DateTime($fechaInicio))->modify('+1 month')->format('Y-m-d');
         logMessage("Fecha final calculada: " . $fechaFinal);
 
-        $insertSubs->bind_param("sssssss", $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID, $retour);
+        // Más depuración justo antes de la inserción
+        logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID");
+
+        $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID);
         if (!$insertSubs->execute()) {
             logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
             continue;
