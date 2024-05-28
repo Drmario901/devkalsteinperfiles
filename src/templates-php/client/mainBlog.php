@@ -1,5 +1,8 @@
 <div id='c-panel20'>
     <style>
+    .columna_articulo{
+        min-height: 970px;
+    }
     @media (max-width: 768px) {
         .contenedor_guiasInf {
             grid-template-columns: 100% !important;
