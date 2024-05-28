@@ -40,61 +40,45 @@ if (!file_exists($local_log_file)) {
     exit;
 }
 
-function ftp_mkdir_recursive($ftp_conn, $dir) {
-    $parts = explode('/', $dir);
-    $path = '';
-    foreach ($parts as $part) {
-        if (!empty($part)) {
-            $path .= '/' . $part;
-            if (!@ftp_chdir($ftp_conn, $path)) {
-                if (!ftp_mkdir($ftp_conn, $path)) {
-                    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Failed to create directory: $path\n", FILE_APPEND);
-                } else {
-                    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Created directory: $path\n", FILE_APPEND);
-                }
-            } else {
-                ftp_chdir($ftp_conn, '/');  
-            }
-        }
-    }
-}
-
 function log_to_host($host_config, $local_log_file) {
     $ftp_conn = ftp_connect($host_config['ftp_server']);
     if (!$ftp_conn) {
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Could not connect to FTP server: {$host_config['ftp_server']}\n", FILE_APPEND);
-        return;
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - No se pudo conectar al servidor FTP: {$host_config['ftp_server']}\n", FILE_APPEND);
+        return false;
     }
 
     $login = ftp_login($ftp_conn, $host_config['ftp_user'], $host_config['ftp_pass']);
     if (!$login) {
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - FTP login failed for {$host_config['ftp_server']}\n", FILE_APPEND);
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el login FTP para {$host_config['ftp_server']}\n", FILE_APPEND);
         ftp_close($ftp_conn);
-        return;
+        return false;
     }
 
     $remote_dir = dirname($host_config['remote_path']);
-    ftp_mkdir_recursive($ftp_conn, $remote_dir);
+    if (!@ftp_chdir($ftp_conn, $remote_dir)) {
+        if (!ftp_mkdir($ftp_conn, $remote_dir)) {
+            file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la creación del directorio: $remote_dir\n", FILE_APPEND);
+            ftp_close($ftp_conn);
+            return false;
+        }
+    }
 
     if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_log_file, FTP_ASCII)) {
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - FTP upload failed for {$host_config['remote_path']}\n", FILE_APPEND);
-    } else {
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - FTP upload succeeded for {$host_config['remote_path']}\n", FILE_APPEND);
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la subida FTP para {$host_config['remote_path']}\n", FILE_APPEND);
+        ftp_close($ftp_conn);
+        return false;
     }
 
     ftp_close($ftp_conn);
+    return true;
 }
-
-$log_message = date('Y-m-d H:i:s') . " - Log de prueba para verificación.\n";
-file_put_contents($local_log_file, $log_message, FILE_APPEND);
 
 foreach ($allowed_hosts as $host => $host_config) {
-    log_to_host($host_config, $local_log_file);
+    if (log_to_host($host_config, $local_log_file)) {
+        echo "Archivo de log creado y transferido exitosamente.";
+    } else {
+        echo "ERROR: Falló la transferencia del archivo de log.";
+    }
 }
 
-if (file_exists($local_log_file)) {
-    echo "Archivo de log creado y transferido.";
-} else {
-    echo "ERROR: El archivo de log no se creó.";
-}
 ?>
