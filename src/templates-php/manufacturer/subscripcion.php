@@ -219,11 +219,18 @@
           </span>
         </p>
       </div> -->
-      <p style="display: flex;">Fecha Inicial:
-        <span class='info-icon' data-tooltip='Membresía 1 = Máximo 5 Productos &#10;Membresía 2 = Máximo 10 Productos &#10;Membresía 3 = Productos ilimitados'>
-          <i class='fas fa-info-circle'></i>
-        </span>
-      </p>
+      <div>
+        <p style="display: flex; font-weight: 600;">Fecha Inicial
+          <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
+        <p style="display: flex; font-weight: 600;">Fecha Final
+          <span class='info-icon' data-tooltip='<?php echo $fechaFinal ?>'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
+      </div>
     <?php endif; ?>
   </header>
   <table class="membership-table">
