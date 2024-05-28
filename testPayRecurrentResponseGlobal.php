@@ -38,7 +38,13 @@ function ftp_mkdir_recursive($ftp_conn, $dir) {
         if (!empty($part)) {
             $path .= '/' . $part;
             if (!@ftp_chdir($ftp_conn, $path)) {
-                ftp_mkdir($ftp_conn, $path);
+                if (!ftp_mkdir($ftp_conn, $path)) {
+                    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Failed to create directory: $path\n", FILE_APPEND);
+                } else {
+                    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Created directory: $path\n", FILE_APPEND);
+                }
+            } else {
+                ftp_chdir($ftp_conn, '/');  
             }
         }
     }
