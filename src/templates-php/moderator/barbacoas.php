@@ -26,13 +26,13 @@
 
             <?php
                 $sql_guia_info_all_first = "
-                    SELECT g.*, gd.*, p.*, wa.*
+                    SELECT g.*, gd.*, p.*, wa.*, tv.*
                     FROM wp_guides AS g
                     INNER JOIN wp_guides_details AS gd ON g.guide_id = gd.guide_id
                     INNER JOIN wp_k_products AS p ON gd.guide_product_id = p.product_aid
                     INNER JOIN wp_account AS wa ON g.guide_user_id = wa.account_aid 
-                    WHERE g.guide_user_id = '$idUsuario'
-                    ORDER BY g.guide_id ASC;
+                    INNER JOIN tienda_virtual AS tv ON g.id_guide_slug = tv.ID_slug 
+                    ORDER BY g.guide_creation_date ASC;
                 ";
                 $consulta_guia_info_all_first = mysqli_query($conexion, $sql_guia_info_all_first);
 
