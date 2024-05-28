@@ -165,8 +165,8 @@ foreach ($lines as $line) {
 
         // Insertar el registro en la base de datos
         $insertSubs = $conexion->prepare("
-            INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id, code-retour)
-            VALUES (?, ?, ?, '1', ?, ?, ?, ?)
+            INSERT INTO wp_subscripcion (code-retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id)
+            VALUES (?, ?, ?, ?, '1', ?, ?, ?)
         ");
         if (!$insertSubs) {
             logMessage("Error preparando la inserción en wp_subscripcion: " . $conexion->error);
@@ -179,9 +179,9 @@ foreach ($lines as $line) {
         logMessage("Fecha final calculada: " . $fechaFinal);
 
         // Más depuración justo antes de la inserción
-        logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID, retour: $retour");
+        logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID");
 
-        $insertSubs->bind_param("sssssss", $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID, $retour);
+        $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID);
         if (!$insertSubs->execute()) {
             logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
             continue;
