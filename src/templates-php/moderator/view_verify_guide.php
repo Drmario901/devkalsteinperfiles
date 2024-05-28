@@ -792,11 +792,11 @@ h5 {
                         <p style='text-align: justify;'>
                             https://www.esteesunenlace.com</p>
                     </div>
-                    <p style='font-weight: 600'>
+                    <p class='p-0' style='font-weight: 600'>
                         <i class='fas fa-circle-info'></i>
                         Description
                     </p>
-                    <div class='row'>
+                    <div class='row p-0'>
                         <div class='col-9'>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
