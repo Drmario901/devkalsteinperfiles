@@ -46,7 +46,7 @@
     letter-spacing: 0px;
     display: inline-block;
     padding-top: 0.5rem;
-    margin-left: 3rem;
+
   }
 
   .title_k::before {
@@ -202,11 +202,11 @@
 </header>
 
 <section style="margin-top: 2rem;">
-  <header style="display: flex; justify-content: space-around; width: 100%;">
+  <header style="display: flex; justify-content: space-between; width: 100%;">
     <div>
       <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-      <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
-      <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
+      <p style=" color: #213280; font-weight: 700;">Planes de Membresía</p>
+      <p style=" font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
     </div>
     <?php
     if ($membresia != 0) : ?>
@@ -219,12 +219,18 @@
           </span>
         </p>
       </div> -->
-      <p style="display: flex;">Fecha Inicial:
-        <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
-          <i class='fas fa-info-circle'></i>
-        </span>
-      </p>
-      <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo '&nbsp;' . $fechaFinal; ?></strong></p>
+      <div style="display:flex ; flex-direction:column ; justify-content: end;">
+        <p style="display: flex; font-weight: 600;">Fecha Inicial
+          <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
+        <p style="display: flex; font-weight: 600;">Fecha Final
+          <span class='info-icon' data-tooltip='<?php echo $fechaFinal ?>'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
+      </div>
     <?php endif; ?>
   </header>
   <table class="membership-table">

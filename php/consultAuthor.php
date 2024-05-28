@@ -1,4 +1,7 @@
 <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     require_once __DIR__ . '/../db/conexion.php';
 
     $id = $_POST['idAccount'];
@@ -18,5 +21,5 @@
     // echo json_encode($datos);
 
     echo json_encode([
-        'store' => $store
+        'store' => $row2
     ]);
