@@ -28,7 +28,7 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-$data = $_POST;
+$data = 'HOLA';
 $local_log_file = 'monetico_log_recurrent.txt';
 file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
