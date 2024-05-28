@@ -219,7 +219,7 @@
           </span>
         </p>
       </div> -->
-      <div>
+      <div style="display:flex ; justify-content: flex-end;">
         <p style="display: flex; font-weight: 600;">Fecha Inicial
           <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
             <i class='fas fa-info-circle'></i>
