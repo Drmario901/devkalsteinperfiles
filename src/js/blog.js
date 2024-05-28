@@ -185,7 +185,7 @@ jQuery(document).ready(function() {
             let claseActiva = i === paginaActual ? 'active' : '';
             botonesPagina += `<li class="page-item ${claseActiva}"><button class="page-link" data-pagina="${i}">${i}</button></li>`;
         }
-        $("#paginado").html(botonesPagina);
+        //$("#paginado").html(botonesPagina);
     }
 
 });
