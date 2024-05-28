@@ -9,13 +9,12 @@ use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
 $allowed_hosts = [   
-'plataforma.kalstein.net' => [
-    'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
-    'ftp_server' => '185.28.22.128',
-    'ftp_user' => 'he270716',
-    'ftp_pass' => 'RP$c_myoUeMK'
-]
-
+    'plataforma.kalstein.net' => [
+        'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
+        'ftp_server' => '185.28.22.128',
+        'ftp_user' => 'he270716',
+        'ftp_pass' => 'RP$c_myoUeMK'
+    ]
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -31,6 +30,19 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
 
 $data = $_POST;
 file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
+
+function ftp_mkdir_recursive($ftp_conn, $dir) {
+    $parts = explode('/', $dir);
+    $path = '';
+    foreach ($parts as $part) {
+        if (!empty($part)) {
+            $path .= '/' . $part;
+            if (!@ftp_chdir($ftp_conn, $path)) {
+                ftp_mkdir($ftp_conn, $path);
+            }
+        }
+    }
+}
 
 function log_to_host($host_config, $message) {
     $local_temp_file = tempnam(sys_get_temp_dir(), 'log');
@@ -52,9 +64,7 @@ function log_to_host($host_config, $message) {
     }
 
     $remote_dir = dirname($host_config['remote_path']);
-    if (!ftp_chdir($ftp_conn, $remote_dir)) {
-        ftp_mkdir($ftp_conn, $remote_dir);
-    }
+    ftp_mkdir_recursive($ftp_conn, $remote_dir);
 
     if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_temp_file, FTP_ASCII)) {
         file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP upload failed for {$host_config['remote_path']}\n", FILE_APPEND);
