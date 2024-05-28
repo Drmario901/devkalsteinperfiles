@@ -60,7 +60,7 @@
                                     </div>
                                     <p class='mt-2 mb-1' style='font-size: 1.15em'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
                                     <div class='col-12'>
-                                        <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-guide?accid=$aid'>
+                                        <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-guide?accid=".$aid."'>
                                             <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
                                         </a>
                                     </div>
