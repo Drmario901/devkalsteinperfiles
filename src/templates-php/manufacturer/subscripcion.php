@@ -191,7 +191,7 @@
 
   $mebresia = $_SESSION['tipo_membresia'];
   $fechaFinal = $_SESSION['fecha_final'];
-  $fechaInicial = $_SESSION['fecha_inicial'];
+  $fechaInicial = $_SESSION['fecha_inicio'];
 
   echo 'las fechas' . $fechaInicial . 'y' . $fechaFinal;
   echo  'Membresiaaa' . $mebresia;
