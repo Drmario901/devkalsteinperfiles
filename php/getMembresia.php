@@ -14,7 +14,7 @@ $result = $conexion->query($sql);
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     $_SESSION['tipo_membresia'] = $row['tipo_membresia'];
-    $accountId = ['account_aid'];
+    $accountId = $row['account_aid'];
     $membresia = $row['tipo_membresia'];
   }
   // echo json_encode($membresia);
