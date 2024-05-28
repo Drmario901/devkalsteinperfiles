@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
+/* ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL); */
 // Crear la carpeta 'monetico' si no existe
 $logDir = __DIR__ . '/monetico';
 if (!is_dir($logDir)) {
@@ -128,6 +128,20 @@ foreach ($lines as $line) {
         }
         logMessage("userID extraído: " . $userID);
 
+        $sql = "SELECT account_aid FROM wp_account WHERE user_tag = '$userID'";
+        $result = $conexion->query($sql);
+        if (!$result) {
+            logMessage("Error al consultar la cuenta: " . $conexion->error);
+            continue;
+        }
+        $row = $result->fetch_assoc();
+        $accountID = $row['account_aid'];
+        logMessage("ID de la cuenta: " . $accountID);
+
+        // Obtener el monto de la transacción
+        $montant = $dataArray['montant'] ?? null;
+        logMessage("Monto de la transacción: " . $montant);
+
         // Suponiendo que la fecha original está en la variable $originalDate
         $originalDate = $dataArray['date'];
         logMessage("Fecha original: " . $originalDate);
@@ -179,9 +193,9 @@ foreach ($lines as $line) {
         logMessage("Fecha final calculada: " . $fechaFinal);
 
         // Más depuración justo antes de la inserción
-        logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID");
+        logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $accountID");
 
-        $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID);
+        $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $accountID);
         if (!$insertSubs->execute()) {
             logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
             continue;
@@ -193,9 +207,9 @@ foreach ($lines as $line) {
         // Solo actualizar el tipo de membresía si el code-retour es 'payetest'
         if ($retour === 'payetest') {
             // Actualizar el tipo de membresía basado en el último registro
-            $lastRecords[$userID] = [
+            $lastRecords[$accountID] = [
                 'tipoMembresia' => (strpos($paymentReference, 'SUB1') !== false) ? 1 : ((strpos($paymentReference, 'SUB2') !== false) ? 2 : 0),
-                'userID' => $userID
+                'userID' => $accountID
             ];
         }
     }
@@ -205,7 +219,7 @@ logMessage("Actualización de tipos de membresía basadas en el último registro
 
 // Procesar las actualizaciones de los usuarios basadas en el último registro
 foreach ($lastRecords as $record) {
-    $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE user_tag = ?");
+    $updateAccount = $conexion->prepare("UPDATE wp_account SET tipo_membresia = ? WHERE account_aid = ?");
     if (!$updateAccount) {
         logMessage("Error preparando la actualización de wp_account: " . $conexion->error);
         continue;
@@ -222,4 +236,5 @@ foreach ($lastRecords as $record) {
 }
 
 logMessage("Procesamiento completado.");
+logMessage("--------------------------------------------");
 ?>

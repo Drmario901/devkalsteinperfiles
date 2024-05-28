@@ -210,10 +210,20 @@
     </div>
     <?php
     if ($membresia != 0) : ?>
-      <div style="width: auto;">
-        <p style="display: flex;">Fecha Inicial: <strong style="color: #4CAF50;"> <?php echo ' ' . $fechaInicial; ?></strong></p>
-        <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo ' ' . $fechaFinal; ?></strong></p>
-      </div>
+      <!-- <div style="width: auto;">
+        <p style="display: flex;">Fecha Inicial: <strong style="color: #4CAF50;"> <?php echo '&nbsp;' . $fechaInicial; ?></strong></p>
+        <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo '&nbsp;' . $fechaFinal; ?></strong></p>
+        <p> Total <b>$total</b>/<b>$maxProductos</b> productos en tu inventario
+          <span class='info-icon' data-tooltip='Membresía 1 = Máximo 5 Productos &#10;Membresía 2 = Máximo 10 Productos &#10;Membresía 3 = Productos ilimitados'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
+      </div> -->
+      <p style="display: flex;">Fecha Inicial:
+        <span class='info-icon' data-tooltip='Membresía 1 = Máximo 5 Productos &#10;Membresía 2 = Máximo 10 Productos &#10;Membresía 3 = Productos ilimitados'>
+          <i class='fas fa-info-circle'></i>
+        </span>
+      </p>
     <?php endif; ?>
   </header>
   <table class="membership-table">

@@ -28,7 +28,7 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-$data = $_POST;
+$data = 'JORGITO HIZO ESTO.';
 file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
 function ftp_mkdir_recursive($ftp_conn, $dir) {
@@ -38,7 +38,13 @@ function ftp_mkdir_recursive($ftp_conn, $dir) {
         if (!empty($part)) {
             $path .= '/' . $part;
             if (!@ftp_chdir($ftp_conn, $path)) {
-                ftp_mkdir($ftp_conn, $path);
+                if (!ftp_mkdir($ftp_conn, $path)) {
+                    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Failed to create directory: $path\n", FILE_APPEND);
+                } else {
+                    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Created directory: $path\n", FILE_APPEND);
+                }
+            } else {
+                ftp_chdir($ftp_conn, '/');  
             }
         }
     }
