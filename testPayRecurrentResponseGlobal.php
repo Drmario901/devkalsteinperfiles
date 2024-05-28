@@ -28,8 +28,22 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-$data = 'HOLAAAAA';
-file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
+$data = $_POST;
+
+if (empty($data)) {
+    $data = [
+        'transaction_id' => '123',
+        'TPE' => '1234567',
+        'date' => '2024-05-27T12:34:56',
+        'montant' => '100.00EUR',
+        'reference' => 'REF123456',
+        'MAC' => 'ABCDEF1234567890',
+        'texte-libre' => 'Test transaction'
+    ];
+}
+
+$local_log_file = 'monetico_log_recurrent.txt';
+file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
 function ftp_mkdir_recursive($ftp_conn, $dir) {
     $parts = explode('/', $dir);
@@ -50,41 +64,37 @@ function ftp_mkdir_recursive($ftp_conn, $dir) {
     }
 }
 
-function log_to_host($host_config, $message) {
-    $local_temp_file = tempnam(sys_get_temp_dir(), 'log');
-    file_put_contents($local_temp_file, $message, FILE_APPEND);
-
+function log_to_host($host_config, $local_log_file) {
     $ftp_conn = ftp_connect($host_config['ftp_server']);
     if (!$ftp_conn) {
-        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Could not connect to FTP server: {$host_config['ftp_server']}\n", FILE_APPEND);
-        unlink($local_temp_file);
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Could not connect to FTP server: {$host_config['ftp_server']}\n", FILE_APPEND);
         return;
     }
 
     $login = ftp_login($ftp_conn, $host_config['ftp_user'], $host_config['ftp_pass']);
     if (!$login) {
-        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP login failed for {$host_config['ftp_server']}\n", FILE_APPEND);
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - FTP login failed for {$host_config['ftp_server']}\n", FILE_APPEND);
         ftp_close($ftp_conn);
-        unlink($local_temp_file);
         return;
     }
 
     $remote_dir = dirname($host_config['remote_path']);
     ftp_mkdir_recursive($ftp_conn, $remote_dir);
 
-    if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_temp_file, FTP_ASCII)) {
-        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP upload failed for {$host_config['remote_path']}\n", FILE_APPEND);
+    if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_log_file, FTP_ASCII)) {
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - FTP upload failed for {$host_config['remote_path']}\n", FILE_APPEND);
     } else {
-        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP upload succeeded for {$host_config['remote_path']}\n", FILE_APPEND);
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - FTP upload succeeded for {$host_config['remote_path']}\n", FILE_APPEND);
     }
 
     ftp_close($ftp_conn);
-    unlink($local_temp_file);
 }
 
 $log_message = date('Y-m-d H:i:s') . " - Log de prueba para verificación.\n";
+file_put_contents($local_log_file, $log_message, FILE_APPEND);
+
 foreach ($allowed_hosts as $host_config) {
-    log_to_host($host_config, $log_message);
+    log_to_host($host_config, $local_log_file);
 }
 
 if (!empty($data)) {
@@ -105,15 +115,19 @@ if (!empty($data)) {
         $log_message = date('Y-m-d H:i:s') . " - Error: " . $e->getMessage() . "\n";
     }
 
+    file_put_contents($local_log_file, $log_message, FILE_APPEND);
+
     foreach ($allowed_hosts as $host_config) {
-        log_to_host($host_config, $log_message);
+        log_to_host($host_config, $local_log_file);
     }
 } else {
     echo "ERROR: No se recibieron datos.";
     $log_message = date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n";
 
+    file_put_contents($local_log_file, $log_message, FILE_APPEND);
+
     foreach ($allowed_hosts as $host_config) {
-        log_to_host($host_config, $log_message);
+        log_to_host($host_config, $local_log_file);
     }
 }
 ?>
