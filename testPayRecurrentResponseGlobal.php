@@ -11,7 +11,7 @@ use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 $allowed_hosts = [
     'plataforma.kalstein.net' => [
         'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
-        'ftp_server' => 'ftp.kalstein.net',
+        'ftp_server' => '185.28.22.128',
         'ftp_user' => 'he270716',
         'ftp_pass' => 'RP$c_myoUeMK'
     ]
@@ -36,7 +36,7 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     header('Access-Control-Allow-Methods: POST');
     header('Access-Control-Allow-Headers: Content-Type');
 } else {
-    echo "ERROR: Host Now Allowed.";
+    echo "ERROR: Host no permitido.";
     exit;
 }
 
@@ -47,16 +47,28 @@ function log_to_host($host_config, $message) {
     $local_temp_file = tempnam(sys_get_temp_dir(), 'log');
     file_put_contents($local_temp_file, $message, FILE_APPEND);
 
-    $ftp_conn = ftp_connect($host_config['ftp_server']) or die("Could not connect to {$host_config['ftp_server']}");
-    $login = ftp_login($ftp_conn, $host_config['ftp_user'], $host_config['ftp_pass']);
-
-    if ($login) {
-        ftp_put($ftp_conn, $host_config['remote_path'], $local_temp_file, FTP_ASCII);
-        ftp_close($ftp_conn);
-    } else {
-        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP login failed for {$host_config['ftp_server']}\n", FILE_APPEND);
+    $ftp_conn = ftp_connect($host_config['ftp_server']);
+    if (!$ftp_conn) {
+        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Could not connect to FTP server: {$host_config['ftp_server']}\n", FILE_APPEND);
+        unlink($local_temp_file);
+        return;
     }
 
+    $login = ftp_login($ftp_conn, $host_config['ftp_user'], $host_config['ftp_pass']);
+    if (!$login) {
+        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP login failed for {$host_config['ftp_server']}\n", FILE_APPEND);
+        ftp_close($ftp_conn);
+        unlink($local_temp_file);
+        return;
+    }
+
+    if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_temp_file, FTP_ASCII)) {
+        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP upload failed for {$host_config['remote_path']}\n", FILE_APPEND);
+    } else {
+        file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP upload succeeded for {$host_config['remote_path']}\n", FILE_APPEND);
+    }
+
+    ftp_close($ftp_conn);
     unlink($local_temp_file);
 }
 
