@@ -21,5 +21,5 @@
     // echo json_encode($datos);
 
     echo json_encode([
-        'store' => $store
+        'store' => $row2
     ]);
