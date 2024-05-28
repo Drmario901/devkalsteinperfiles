@@ -86,7 +86,7 @@
             <main class="contenedor_principal">
                 <div class="contenedor_guiasInf"
                     style="display: grid; grid-template-columns: 2fr 1fr; gap: 2em; margin: auto; max-width: 1140px; margin-top: 20px;">
-                    <div class="columna_principal_guias">
+                    <div class="columna_principal_guias" id='container_blogs'>
                         <div class="contenedor_vistaprevia_guia"
                             style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                             <div class="thumbnail_guia">
