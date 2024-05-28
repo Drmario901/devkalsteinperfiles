@@ -3,8 +3,12 @@
         .columna_articulo{
             min-height: 970px;
         }
-        .pagination{
-            background-color: #213280;
+        .page-link{
+            color: #213280 !important;
+        }
+        .active>.page-link{
+            background-color: #213280 !important;
+            border-color: #213280 !important;
         }
         .buton-paginate{
             color: #213280;
