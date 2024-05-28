@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
                         <hr style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
                         <p class="p-description-blog" style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px; min-height: 113px; min-width: 470px;">${fila.art_principal_description}.</p>
                         <div class="footer-guia" style="display: flex; align-items: center; justify-content: space-between">
-                            <button class="btn_guias_informativas" id="blog_articulos" source="#">Ver más <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn_guias_informativas" id="blog_articulos" source="#" value="${fila.art_id}">Ver más <i class="fa-solid fa-arrow-right"></i></button>
                             <p style="font-family: Roboto; margin: 0; display: flex;">
                                 <svg style="display: inline; width:15px; height:15px; margin-top: 5px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
