@@ -1,5 +1,8 @@
 <div id='c-panel20'>
     <style>
+        .txt-author{
+            font-weight: bold;
+        }
         .columna_articulo{
             min-height: 970px;
         }
