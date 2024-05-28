@@ -821,10 +821,6 @@ h5 {
                                 <input class='d-inline' type='checkbox' id='promotions-i'>
                             </p>
 
-                            <p><label for=''>Image quality</label>
-                                <input class='d-inline' type='checkbox' id='quality-i'>
-                            </p>
-
                             <p><label for=''>Professionalism</label>
                                 <input class='d-inline' type='checkbox' id='professionalism-i'>
                             </p>
@@ -911,6 +907,12 @@ h5 {
                             <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
                         </div>
                     </div>
+                    <p><label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                    </p>
+                    <p><label for=''>Coherence</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                    </p>
                 </div>
             </div>
         </div>
