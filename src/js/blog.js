@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
     let todos = [];
     let paginaActual = 1;
     let itemsPorPagina = 4; // Define cuántos items quieres por página
@@ -107,7 +107,7 @@ jQuery(document).ready(function() {
     function cargarDatos() {
         // Asumiendo que todos se llena aquí con datos iniciales
         $.ajax({
-            url: plugin_dir + '/php/blog .php',
+            url: plugin_dir + '/php/blog.php',
             success: function(response) {
                 // Simulamos una respuesta con datos
                 todos = JSON.parse(response).datos; // Asegúrate de que esto coincida con el formato de tu respuesta
@@ -176,6 +176,22 @@ jQuery(document).ready(function() {
         </div>`
         });
         
+        contenedorHTML+= `
+                    <div style="display: flex; justify-content:center; gap:1rem;">
+                        <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous" >
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <ul id="paginado" class="pagination" >
+                    
+                        </ul>                
+                        <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next" >
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </button>
+                    </div>
+        `
+
         return contenedorHTML;
     }
 
