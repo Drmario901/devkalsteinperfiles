@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
     function actualizarVista() {
         let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
         $('#container_blogs').html(generarTabla(datosPagina));
-        truncateText('.p-description-blog', 250); 
+        truncateText('.p-description-blog', 320); 
         generarPaginado(paginas);
     }
 
