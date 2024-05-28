@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
         const html = await generarTabla(datosPagina);
         $('#container_blogs').html(html);
         truncateText('.p-description-blog', 320); 
-        truncateText('.txt-author', 20); 
+        truncateText('.txt-author', 50); 
         generarPaginado(paginas);
     }
 
@@ -122,11 +122,11 @@ jQuery(document).ready(function($) {
                         <p class="p-description-blog" style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px; min-height: 113px; min-width: 470px;">${fila.art_principal_description}.</p>
                         <div class="footer-guia" style="display: flex; align-items: center; justify-content: space-between">
                             <button class="btn_guias_informativas" id="blog_articulos" source="#">Ver más <i class="fa-solid fa-arrow-right"></i></button>
-                            <p style="font-family: Roboto; margin: 0">
+                            <p class='txt-author' style="font-family: Roboto; margin: 0">
                                 <svg style="display: inline; width:15px; height:15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
                                 </svg>
-                                Publicado por <span class='txt-author'><b>${author}</b><span>
+                                Publicado por <b>${author}</b>
                             </p>
                         </div>
                     </div>
