@@ -22,7 +22,7 @@
         #blog_articulos{
             background-color: #213280 !important;
             color: #fff !important;
-            padding: 5px 1px;
+            padding: 2px 10px;
         }
         #blog_articulos:hover{
             background-color: #2e4f9b !important;
