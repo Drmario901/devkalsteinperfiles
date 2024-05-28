@@ -9,6 +9,7 @@
         .active>.page-link{
             background-color: #213280 !important;
             border-color: #213280 !important;
+            color: #fff !important;
         }
         .buton-paginate{
             color: #213280;
