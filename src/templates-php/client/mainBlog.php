@@ -3,6 +3,17 @@
         .columna_articulo{
             min-height: 970px;
         }
+        .pagination{
+            background-color: #213280;
+        }
+        .buton-paginate{
+            color: #213280;
+            border-color: #213280;
+        }
+        .buton-paginate:hover{
+            background-color: #213280;
+            color: #fff;
+        }
         @media (max-width: 768px) {
             .contenedor_guiasInf {
                 grid-template-columns: 100% !important;
