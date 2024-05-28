@@ -219,12 +219,14 @@
           </span>
         </p>
       </div> -->
-      <p style="display: flex;">Fecha Inicial:
-        <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
-          <i class='fas fa-info-circle'></i>
-        </span>
-      </p>
-      <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo '&nbsp;' . $fechaFinal; ?></strong></p>
+      <div>
+        <p style="display: flex;">Fecha Inicial:
+          <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
+        <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo '&nbsp;' . $fechaFinal; ?></strong></p>
+      </div>
     <?php endif; ?>
   </header>
   <table class="membership-table">
