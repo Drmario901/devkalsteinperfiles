@@ -19,6 +19,13 @@
             background-color: #213280 !important;
             color: #fff;
         }
+        .blog_articulos{
+            background-color: #213280 !important;
+            color: #fff !important;
+        }
+        .blog_articulos:hover{
+            background-color: #2e4f9b !important;
+        }
         @media (max-width: 768px) {
             .contenedor_guiasInf {
                 grid-template-columns: 100% !important;
