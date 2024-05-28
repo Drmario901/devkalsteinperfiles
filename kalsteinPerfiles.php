@@ -828,6 +828,15 @@ function moderator_subscripcionesP()
     return $html;
 }
 
+function moderator_lista_subscripcionesP()
+{
+
+    $_short = new shortcodePerfiles;
+
+    $html = $_short->moderator_user_subscripciones();
+    return $html;
+}
+
 
 // SUCCESS SUBSCRIPCION PAGE 
 function subscripcionPageSuccess()
@@ -991,6 +1000,7 @@ add_shortcode("MODERATOR_BARBACOAS", "PerfilesModeratorBarbacoa");
 add_shortcode("MODERATOR_VIEW_BARBACOAS", "PerfilesModeratorViewBarbacoa");
 add_shortcode("MODERATOR_STORES", "PerfilesModeratorStores");
 add_shortcode("MODERATOR_SUBSCRIPCIONES", "moderator_subscripcionesP");
+add_shortcode("MODERATOR_LISTA_SUBSCRIPCIONES", "moderator_lista_subscripcionesP");
 
 //Shortcode Styles
 
@@ -2534,6 +2544,20 @@ function perfiles_styles()
         // wp_enqueue_script('diego', plugins_url('src/js/diego.js',__FILE__),array('jquery'));
     }
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_SUBSCRIPCIONES')) {
+        translations();
+        wp_enqueue_style('boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
+        wp_enqueue_style('CSS', plugins_url('src/css/dashboard.style.css', __FILE__));
+        wp_enqueue_style('CSS-MATERIAL', plugins_url('src/css/material.css', __FILE__));
+        wp_enqueue_style('AlertJS-CSS', plugins_url('jAlert-master/dist/jAlert.css', __FILE__));
+        wp_enqueue_script('boostrap-JS', plugins_url('src/bootstrap/js/bootstrap.bundle.min.js', __FILE__), array('jquery'));
+        wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
+        wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js', __FILE__), array('jquery'));
+        wp_enqueue_script('quotes-monetico', plugins_url('src/moderator/js/quotes.monetico.js', __FILE__), array('jquery'));
+        wp_enqueue_style('izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
+        wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js', __FILE__), array('jquery'));
+        // wp_enqueue_script('diego', plugins_url('src/js/diego.js',__FILE__),array('jquery'));
+    }
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'MODERATOR_LISTA_SUBSCRIPCIONES')) {
         translations();
         wp_enqueue_style('boostrap-css', plugins_url('src/bootstrap/css/bootstrap.min.css', __FILE__));
         wp_enqueue_style('CSS', plugins_url('src/css/dashboard.style.css', __FILE__));

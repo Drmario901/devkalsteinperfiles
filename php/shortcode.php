@@ -815,6 +815,11 @@ class shortcodePerfiles
         return render_php_file('moderator/subscripciones.php');
     }
 
+    function moderator_user_subscripciones()
+    {
+        return render_php_file('moderator/userSubscripciones.php');
+    }
+
     // diego 404
     /*function diego_shortcode(){
         return render_php_file('diego-index.php');
