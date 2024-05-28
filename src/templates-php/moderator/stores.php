@@ -5,6 +5,7 @@
     }
     </style>
     <?php
+     require __DIR__ . '/../../../php/conexion.php';
 
         include 'navbar.php';
     
@@ -22,117 +23,62 @@
 
         <div class="row">
             <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Tiendas</span> a moderar</h4>
-            <div class='col-lg-6'>
-                <div class='card row m-2'>
-                    <div class='col-12'>
-                        <div class='row mb-2'>
-                            <div class='col-4'>
-                                <img class='mx-1'
-                                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2560px-EBay_logo.svg.png'
-                                    width=150>
-                            </div>
-                            <div class='col-8'>
-                                <h6 style='font-weight: 600;'>Jorgito Store</h6>
-                                <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
-                                    risus, placerat et condimentum eget, sodales sed elit. Sed nec...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-12' style="display: flex; justify-content: flex-start">
-                        <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
-                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
-                                post</button>
-                        </a>
-                        <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                            <button type='button' id='btnUpdate'
-                                class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3'
-                                style='color: #333'>View
-                                Store</button>
-                        </a>
-                    </div>
+            <?php
+            $query = "
+            SELECT *
+            FROM tienda_virtual
+            ORDER BY ID_tienda ASC;
+            ";
 
-                </div>
-                <div class='mt-2'>
-                    <!-- <div class='fw-bold card'
-                            style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
-                        </div> -->
-                </div>
-            </div>
-            <div class='col-lg-6'>
-                <div class='card row m-2'>
-                    <div class='col-12'>
-                        <div class='row mb-2'>
-                            <div class='col-4'>
-                                <img class='mx-1'
-                                    src='https://images.crowdspring.com/blog/wp-content/uploads/2023/12/09192959/mcdonalds-1968-logo.png'
-                                    width=150>
-                            </div>
-                            <div class='col-8'>
-                                <h6 style='font-weight: 600;'>Mañoso Store</h6>
-                                <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
-                                    risus, placerat et condimentum eget, sodales sed elit. Sed nec...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-12' style="display: flex; justify-content: flex-start">
-                        <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
-                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
-                                post</button>
-                        </a>
-                        <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                            <button type='button' id='btnUpdate'
-                                class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3'
-                                style='color: #333'>View
-                                Store</button>
-                        </a>
-                    </div>
+            $result = $conexion->query($query);
 
-                </div>
-                <div class='mt-2'>
-                    <!-- <div class='fw-bold card'
-                            style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
-                        </div> -->
-                </div>
-            </div>
-            <div class='col-lg-6'>
-                <div class='card row m-2'>
-                    <div class='col-12'>
-                        <div class='row mb-2'>
-                            <div class='col-4'>
-                                <img class='mx-1'
-                                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png'
-                                    width=150>
-                            </div>
-                            <div class='col-8'>
-                                <h6 style='font-weight: 600;'>Edithsito Store</h6>
-                                <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
-                                    risus, placerat et condimentum eget, sodales sed elit. Sed nec...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-12' style="display: flex; justify-content: flex-start">
-                        <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
-                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
-                                post</button>
-                        </a>
-                        <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                            <button type='button' id='btnUpdate'
-                                class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3'
-                                style='color: #333'>View
-                                Store</button>
-                        </a>
-                    </div>
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
 
-                </div>
-                <div class='mt-2'>
-                    <!-- <div class='fw-bold card'
-                            style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
-                        </div> -->
-                </div>
-            </div>
+          $titulo = $row['titulo_t'] ?? 'AAAAA';
+          $logo = $row['logo_t'];
+          $descripcion = $row['descripcion'];
+          $slug = $row['ID_slug'];
+
+
+
+          echo "<div class='col-lg-6'>
+          <div class='card row m-2'>
+              <div class='col-12'>
+                  <div class='row mb-2'>
+                      <div class='col-4'>
+                          <img class='mx-1'
+                              src='$logo'
+                              width=150>
+                      </div>
+                      <div class='col-8'>
+                          <h6 style='font-weight: 600;'>$titulo</h6>
+                          <p class='mb-2'>$descripcion</p>
+                      </div>
+                  </div>
+              </div>
+              <div class='col-12' style='display: flex; justify-content: flex-start'>
+                  <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
+                      <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
+                          post</button>
+                  </a>
+                  <a href='$slug'>
+                      <button type='button' id='btnUpdate'
+                          class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3'
+                          style='color: #333'>View
+                          Store</button>
+                  </a>
+              </div>
+
+          </div>
+          <div class='mt-2'>
+              <!-- <div class='fw-bold card'
+                      style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
+                      <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
+                  </div> -->
+          </div>
+      </div>";
+            ?>
         </div>
         <!-- <?php
 
