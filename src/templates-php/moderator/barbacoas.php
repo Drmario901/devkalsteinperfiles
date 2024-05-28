@@ -141,7 +141,7 @@
                 }else{
                     echo 'No pending tasks';
                 }
-            ?> -->
+            ?>
         </div>
     </article>
 </main>
