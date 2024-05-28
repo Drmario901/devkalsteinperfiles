@@ -25,6 +25,12 @@
             <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Guias</span> pendientes por verificar</h4>
 
             <?php
+                // Verificar la conexión a la base de datos
+                if (!$conexion) {
+                    die("Conexión fallida: " . mysqli_connect_error());
+                }
+
+                // Consulta SQL
                 $sql_guia_info_all_first = "
                     SELECT g.*, gd.*, p.*, wa.*, tv.*
                     FROM wp_guides AS g
@@ -34,8 +40,16 @@
                     INNER JOIN tienda_virtual AS tv ON g.id_guide_slug = tv.ID_slug 
                     ORDER BY g.guide_creation_date ASC;
                 ";
+
+                // Ejecutar la consulta
                 $consulta_guia_info_all_first = mysqli_query($conexion, $sql_guia_info_all_first);
 
+                // Verificar errores en la consulta
+                if (!$consulta_guia_info_all_first) {
+                    die("Error en la consulta SQL: " . mysqli_error($conexion));
+                }
+
+                // Verificar si hay filas devueltas
                 if (mysqli_num_rows($consulta_guia_info_all_first) > 0) {
                     while ($guias_first = mysqli_fetch_array($consulta_guia_info_all_first)) {
                         // Extraer la descripción y limitar su longitud a 120 caracteres
@@ -75,6 +89,8 @@
                             </div>
                         ";
                     }
+                } else {
+                    echo "No se encontraron registros.";
                 }
 
                 // require __DIR__.'/../../../php/conexion.php';
