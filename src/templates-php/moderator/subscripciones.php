@@ -103,7 +103,7 @@
                 </a>
                 <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
                   <button type='button' id='btnUpdate'
-                    class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Mantener membresia</button>
+                    class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                 </a>
               </div>
     
