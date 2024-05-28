@@ -15,6 +15,7 @@ $allowed_hosts = [
     'ftp_user' => 'he270716',
     'ftp_pass' => 'RP$c_myoUeMK'
 ]
+
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
