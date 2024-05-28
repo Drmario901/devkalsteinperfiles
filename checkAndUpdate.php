@@ -70,7 +70,7 @@ logMessage("Conexión a la base de datos establecida.");
 
 // Obtener el último registro de la base de datos basado en la referencia
 $lastReference = $lastLogData['reference'];
-$result = $conexion->prepare("SELECT referencia_pago FROM wp_subscripcion WHERE referencia_pago = ? ORDER BY fechahora DESC LIMIT 1");
+$result = $conexion->prepare("SELECT referencia_pago FROM wp_subscripcion WHERE referencia_pago = ? ORDER BY ID DESC LIMIT 1");
 if (!$result) {
     logMessage("Error al preparar la consulta a la base de datos: " . $conexion->error);
     exit;
