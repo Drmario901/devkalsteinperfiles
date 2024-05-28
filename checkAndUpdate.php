@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
+/* ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL); */
 // Crear la carpeta 'monetico' si no existe
 $logDir = __DIR__ . '/monetico';
 if (!is_dir($logDir)) {
@@ -197,7 +197,11 @@ foreach ($lines as $line) {
 
         $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $accountID);
         if (!$insertSubs->execute()) {
-            logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
+            if ($insertSubs->errno == 1062) {
+                logMessage("Error de duplicado: La referencia de pago ya existe.");
+            } else {
+                logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
+            }
             continue;
         }
         $insertSubs->close();
