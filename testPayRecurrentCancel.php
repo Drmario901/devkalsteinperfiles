@@ -21,7 +21,8 @@ $result = $conexion->query($sql);
 $row = $result->fetch_assoc();
 $id = $row['account_aid'];
 
-$sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$id'";
+$sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$id' ORDER BY id DESC 
+LIMIT 1";
 $resultSubscripcion = $conexion->query($sqlSubscripcion);
 if ($resultSubscripcion->num_rows > 0) {
     $rowSubscripcion = $resultSubscripcion->fetch_assoc();
