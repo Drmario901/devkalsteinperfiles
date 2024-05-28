@@ -15,7 +15,8 @@
     $sql2 = "SELECT * FROM tienda_virtual WHERE ID_user = '$correo'";
     $resultado2 = $conexion->query($sql2);
     $row2 = mysqli_fetch_array($resultado2);
-    $store = $row2['titulo_t'];
+    $store = $row2[2] ?? 'No tiene tienda';
+
 
     // header('Content-Type: application/json');
     // echo json_encode($datos);
