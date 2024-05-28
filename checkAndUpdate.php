@@ -127,8 +127,10 @@ foreach ($lines as $line) {
 
         // Suponiendo que la fecha original está en la variable $originalDate
         $originalDate = $dataArray['date'];
+        logMessage("Fecha original: " . $originalDate);
         // Remover caracteres de escape y el texto '_a_'
         $originalDate = str_replace(['\\/', '_a_'], ['/', ' '], $originalDate);
+        logMessage("Fecha original formateada: " . $originalDate);
         // Parsear la fecha y hora usando DateTime::createFromFormat
         $dateTime = DateTime::createFromFormat('d/m/Y H:i:s', $originalDate);
 
@@ -148,6 +150,8 @@ foreach ($lines as $line) {
         $retour = $dataArray['code-retour'] ?? null;
         $montant = $dataArray['montant'] ?? null;
 
+        logMessage("Datos obtenidos - subscriptionType: $subscriptionType, paymentReference: $paymentReference, retour: $retour, montant: $montant");
+
         if (!$userID || !$subscriptionType || !$paymentReference || !$retour || !$montant) {
             logMessage("Datos faltantes en la entrada: " . $jsonStr);
             continue;
@@ -166,6 +170,7 @@ foreach ($lines as $line) {
 
         // Calcular la fecha final (un mes después de la fecha de inicio)
         $fechaFinal = (new DateTime($fechaInicio))->modify('+1 month')->format('Y-m-d');
+        logMessage("Fecha final calculada: " . $fechaFinal);
 
         $insertSubs->bind_param("sssssss", $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID, $retour);
         if (!$insertSubs->execute()) {
