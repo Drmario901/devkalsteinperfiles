@@ -783,14 +783,19 @@ h5 {
             <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                 <div class='row'>
                     <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-file-video'></i> Video
-                        <input class='d-inline' type='checkbox' id='name'>
                     </h6>
-                    <p><i class='fa-solid fa-paperclip'></i> Link</p>
+                    <p style='font-weight: 600'>
+                        <i class='fa-solid fa-paperclip'></i>
+                        Link <input class='d-inline' type='checkbox' id='name'>
+                    </p>
                     <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
                             https://www.esteesunenlace.com</p>
                     </div>
-                    <p>Description</p>
+                    <p style='font-weight: 600'>
+                        <i class='fas fa-circle-info'></i>
+                        Description
+                    </p>
                     <div class='row'>
                         <div class='col-9'>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
