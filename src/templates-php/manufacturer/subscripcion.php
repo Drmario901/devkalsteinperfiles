@@ -212,7 +212,7 @@
       <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
     </div>
     <?php
-    if ($membresia == 0) : ?>
+    if ($membresia != 0) : ?>
       <div style="width: auto;">
         <p>Fecha Inicial: </p><strong><?php echo $fechaInicial; ?></strong>
         <p>Fecha Final: <strong><?php echo $fechaFinal; ?></strong></p>
