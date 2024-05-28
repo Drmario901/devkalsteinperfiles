@@ -27,11 +27,7 @@ echo 'adasd ' . $accountId;
 $sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$accountId'";
 $resultSubscripcion = $conexion->query($sqlSubscripcion);
 // guardar en la session las fechas de la membresia
-if ($resultSubscripcion->num_rows > 0) {
-  while ($row2 = $resultSubscripcion->fetch_assoc()) {
-    $_SESSION['fecha_inicio'] = $row2['fecha_inicio'];
-    $_SESSION['fecha_final'] = $row2['fecha_final'];
-  }
-} else {
-  echo '0 results';
-}
+
+$row2 = $resultSubscripcion->fetch_assoc();
+$_SESSION['fecha_inicio'] = $row2['fecha_inicio'];
+$_SESSION['fecha_final'] = $row2['fecha_final'];
