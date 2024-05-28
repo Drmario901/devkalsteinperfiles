@@ -19,8 +19,16 @@ function logMessage($message)
     file_put_contents($logFile, date('Y-m-d H:i:s') . " - " . $message . "\n", FILE_APPEND);
 }
 
+logMessage("Iniciando procesamiento del archivo de log: " . $filePath);
+
 // Leer el contenido del archivo
 $data = file_get_contents($filePath);
+if ($data === false) {
+    logMessage("Error al leer el archivo de log: " . $filePath);
+    exit;
+}
+
+logMessage("Archivo de log leído exitosamente.");
 
 // Dividir el contenido en líneas individuales
 $lines = explode("\n", $data);
@@ -39,6 +47,8 @@ if (empty($lastLogLine)) {
     exit;
 }
 
+logMessage("Última línea válida encontrada en el archivo de log: " . $lastLogLine);
+
 // Extraer la parte JSON de la última línea del log
 $jsonStr = trim(substr($lastLogLine, strpos($lastLogLine, 'Datos recibidos:') + 16));
 
@@ -49,19 +59,27 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     exit;
 }
 
+logMessage("Último registro del log decodificado exitosamente.");
+
 // Conectar a la base de datos
 require __DIR__ . '/php/conexion.php';
+logMessage("Conexión a la base de datos establecida.");
 
 // Obtener el último registro de la base de datos basado en la referencia
 $lastReference = $lastLogData['reference'];
 $result = $conexion->prepare("SELECT referencia_pago FROM wp_subscripcion WHERE referencia_pago = ? ORDER BY fechahora DESC LIMIT 1");
 if (!$result) {
-    logMessage("Error al consultar la base de datos: " . $conexion->error);
+    logMessage("Error al preparar la consulta a la base de datos: " . $conexion->error);
     exit;
 }
 
 $result->bind_param("s", $lastReference);
-$result->execute();
+if (!$result->execute()) {
+    logMessage("Error al ejecutar la consulta a la base de datos: " . $result->error);
+    exit;
+}
+logMessage("Consulta a la base de datos ejecutada exitosamente.");
+
 $result->bind_result($dbReference);
 $result->fetch();
 $result->close();
@@ -70,6 +88,8 @@ if ($dbReference === $lastReference) {
     logMessage("No hay cambios en los registros.");
     exit;
 }
+
+logMessage("Procesando registros del archivo de log.");
 
 // Procesar los registros del archivo de log
 $lastRecords = [];
@@ -87,7 +107,6 @@ foreach ($lines as $line) {
 
         // Extraer y formatear la fecha del JSON
         $jsonDate = DateTime::createFromFormat('d/m/Y', substr($dataArray['date'], 0, 10));
-
         if (!$jsonDate) {
             logMessage("Error al parsear la fecha del JSON: " . implode(", ", DateTime::getLastErrors()['errors']));
             continue;
@@ -140,7 +159,10 @@ foreach ($lines as $line) {
         $fechaFinal = (new DateTime($fechaInicio))->modify('+1 month')->format('Y-m-d');
 
         $insertSubs->bind_param("sssssss", $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID, $retour);
-        $insertSubs->execute();
+        if (!$insertSubs->execute()) {
+            logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
+            continue;
+        }
         $insertSubs->close();
 
         // Solo actualizar el tipo de membresía si el code-retour es 'payetest'
@@ -152,9 +174,11 @@ foreach ($lines as $line) {
             ];
         }
 
-        logMessage("Registro insertado para user_tag: $userID");
+        logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
     }
 }
+
+logMessage("Actualización de tipos de membresía basadas en el último registro.");
 
 // Procesar las actualizaciones de los usuarios basadas en el último registro
 foreach ($lastRecords as $record) {
@@ -165,7 +189,10 @@ foreach ($lastRecords as $record) {
     }
 
     $updateAccount->bind_param("is", $record['tipoMembresia'], $record['userID']);
-    $updateAccount->execute();
+    if (!$updateAccount->execute()) {
+        logMessage("Error al actualizar wp_account: " . $updateAccount->error);
+        continue;
+    }
     $updateAccount->close();
 
     logMessage("Actualización exitosa para user_tag: " . $record['userID']);
