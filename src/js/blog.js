@@ -66,11 +66,14 @@ jQuery(document).ready(function($) {
     function generarTabla(datos) {
         let contenedorHTML = '';
         datos.forEach(fila => {
+            let idAccount = fila.art_id_user
             $.ajax({
                 url: plugin_dir + '/php/consultAuthor.php',
+                type: "POST",
+                data: { idAccount },
                 success: function(response) {
                     // Simulamos una respuesta con datos
-                    let author = JSON.parse(response).store; 
+                    let author = JSON.parse(response).store 
                     contenedorHTML += `<div class="contenedor_vistaprevia_guia"
                         style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                         <div class="thumbnail_guia">
