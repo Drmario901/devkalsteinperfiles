@@ -14,19 +14,19 @@ $allowed_hosts = [
         'ftp_server' => 'ftp.kalstein.net',
         'ftp_user' => 'he270716',
         'ftp_pass' => 'RP$c_myoUeMK'
-    ],
-    'platform.kalstein.us' => [
-        'remote_path' => '/path/to/log/host2_monetico_log_recurrent.txt',
-        'ftp_server' => 'ftp.kalstein.us',
-        'ftp_user' => 'ftp_username',
-        'ftp_pass' => 'ftp_password'
-    ],
-    'plateforme.kalstein.fr' => [
-        'remote_path' => '/path/to/log/host32_monetico_log_recurrent.txt',
-        'ftp_server' => 'ftp.kalstein.fr',
-        'ftp_user' => 'ftp_username',
-        'ftp_pass' => 'ftp_password'
     ]
+    // 'platform.kalstein.us' => [
+    //     'remote_path' => '/path/to/log/host2_monetico_log_recurrent.txt',
+    //     'ftp_server' => 'ftp.kalstein.us',
+    //     'ftp_user' => 'ftp_username',
+    //     'ftp_pass' => 'ftp_password'
+    // ],
+    // 'plateforme.kalstein.fr' => [
+    //     'remote_path' => '/path/to/log/host32_monetico_log_recurrent.txt',
+    //     'ftp_server' => 'ftp.kalstein.fr',
+    //     'ftp_user' => 'ftp_username',
+    //     'ftp_pass' => 'ftp_password'
+    // ]
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
