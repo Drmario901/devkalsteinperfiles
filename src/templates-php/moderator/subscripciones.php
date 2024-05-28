@@ -50,6 +50,7 @@
           $nombreCompleto = $nombre . " " . $apellido;
           $img = $row['account_url_image_perfil'];
           $acc_img = $row['account_url_image_perfil'];
+          $rol = $row['account_rol_aid'];
 
           $firstLyricsName = strtoupper($nombre);
           $firstLyricsLastname = strtoupper($apellido);
@@ -62,6 +63,14 @@
             $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/' . $firstLyricsName . '/' . $firstLyricsName . '' . $firstLyricsLastname . '.png';
           } else {
             $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/' . $acc_img;
+          }
+
+          if ($rol == 1) {
+            $rol = 'Cliente';
+          } elseif ($rol == 2) {
+            $rol = 'Distribuidor';
+          } elseif ($rol == 3) {
+            $rol = 'Fabricante';
           }
 
           if ($membresia == 1) {
