@@ -28,7 +28,7 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-$data = $_POST;
+$data = 'JORGITO HIZO ESTO.';
 file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
 function ftp_mkdir_recursive($ftp_conn, $dir) {
