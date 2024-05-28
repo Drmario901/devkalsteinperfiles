@@ -58,7 +58,7 @@ function ftp_mkdir_recursive($ftp_conn, $dir) {
                     file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Created directory: $path\n", FILE_APPEND);
                 }
             } else {
-                ftp_chdir($ftp_conn, '/'); 
+                ftp_chdir($ftp_conn, '/');  
             }
         }
     }
