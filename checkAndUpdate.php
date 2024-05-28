@@ -80,9 +80,9 @@ logMessage("Consulta a la base de datos ejecutada exitosamente.");
 
 $result->close();
 
-logMessage("Última referencia en la base de datos: " . $dbReference);
+logMessage("Última referencia en la base de datos: " . $result);
 
-if ($dbReference === $lastReference) {
+if ($result === $lastReference) {
     logMessage("No hay cambios en los registros.");
     exit;
 }
