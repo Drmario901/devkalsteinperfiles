@@ -46,7 +46,7 @@
     letter-spacing: 0px;
     display: inline-block;
     padding-top: 0.5rem;
-    margin-left: 3rem;
+
   }
 
   .title_k::before {
@@ -205,8 +205,8 @@
   <header style="display: flex; justify-content: space-between; width: 100%;">
     <div>
       <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-      <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
-      <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
+      <p style=" color: #213280; font-weight: 700;">Planes de Membresía</p>
+      <p style=" font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
     </div>
     <?php
     if ($membresia != 0) : ?>
