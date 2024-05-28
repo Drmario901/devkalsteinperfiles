@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
 
     // Simulamos la carga inicial de datos
     cargarDatos();
-    truncateText('.p-description-blog', 250); 
 
     // Ajusta la paginación cada vez que se hace clic en los botones
     $(document).on("click", "#boton-prev", function() {
@@ -52,6 +51,7 @@ jQuery(document).ready(function($) {
     function actualizarVista() {
         let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
         $('#container_blogs').html(generarTabla(datosPagina));
+        truncateText('.p-description-blog', 250); 
         generarPaginado(paginas);
     }
 
