@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
     let todos = [];
     let paginaActual = 1;
     let itemsPorPagina = 4; // Define cuántos items quieres por página
