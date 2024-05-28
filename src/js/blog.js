@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
         const html = await generarTabla(datosPagina);
         $('#container_blogs').html(html);
         truncateText('.p-description-blog', 320); 
-        truncateText('.txt-author', 25); 
+        truncateText('.txt-author', 50); 
         generarPaginado(paginas);
     }
 
