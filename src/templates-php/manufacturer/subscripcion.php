@@ -205,11 +205,15 @@
 </header>
 
 <section style="margin-top: 2rem;">
-  <header>
+  <header style="display: flex; justify-content: space-between; width: 100%;">
     <div>
       <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
       <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
       <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
+    </div>
+    <div>
+      <p>Fecha Inicial: </p><strong><?php echo $fechaInicial; ?></strong>
+      <p>Fecha Final: <strong><?php echo $fechaFinal; ?></strong></p>
     </div>
   </header>
   <table class="membership-table">
