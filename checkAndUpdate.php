@@ -200,7 +200,7 @@ foreach ($lines as $line) {
         }
         $insertSubs->close();
 
-        logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
+        logMessage("Registro insertado para user_tag: $userID, referenciaa: $paymentReference");
 
         // Solo actualizar el tipo de membresía si el code-retour es 'payetest'
         if ($retour === 'payetest') {
