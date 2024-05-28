@@ -1,5 +1,8 @@
 <div id='c-panel20'>
     <style>
+    .columna_articulo{
+        min-height: 970px;
+    }
     @media (max-width: 768px) {
         .contenedor_guiasInf {
             grid-template-columns: 100% !important;
@@ -86,8 +89,25 @@
             <main class="contenedor_principal">
                 <div class="contenedor_guiasInf"
                     style="display: grid; grid-template-columns: 2fr 1fr; gap: 2em; margin: auto; max-width: 1140px; margin-top: 20px;">
-                    <div class="columna_principal_guias" id='container_blogs'>
-                        
+                    <div class="columna_principal_guias">
+                        <div class='columna_articulo' id='container_blogs'>
+
+                        </div>
+                        <div class='container-paginado'>
+                            <div style="display: flex; justify-content:center; gap:1rem;">
+                                <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous" >
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <ul id="paginado" class="pagination" >
+                            
+                                </ul>                
+                                <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next" >
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="columna_secundaria_guias">
                         <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Artículos destacados
