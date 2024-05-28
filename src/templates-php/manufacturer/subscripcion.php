@@ -220,12 +220,16 @@
         </p>
       </div> -->
       <div>
-        <p style="display: flex;">Fecha Inicial:
+        <p style="display: flex; font-weight: 600;">Fecha Inicial
           <span class='info-icon' data-tooltip='<?php echo $fechaInicial ?>'>
             <i class='fas fa-info-circle'></i>
           </span>
         </p>
-        <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo '&nbsp;' . $fechaFinal; ?></strong></p>
+        <p style="display: flex; font-weight: 600;">Fecha Final
+          <span class='info-icon' data-tooltip='<?php echo $fechaFinal ?>'>
+            <i class='fas fa-info-circle'></i>
+          </span>
+        </p>
       </div>
     <?php endif; ?>
   </header>
