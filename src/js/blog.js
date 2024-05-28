@@ -106,8 +106,8 @@ jQuery(document).ready(function($) {
             data: { idAccount },
             success: function(response) {
                 console.log(response)                
-                console.log('asdasda' + JSON.parse(response).store)
-                return JSON.parse(response).store
+                let author = JSON.parse(response).store
+                return author
             }
         })
     }
