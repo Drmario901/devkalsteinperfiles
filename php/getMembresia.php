@@ -4,7 +4,7 @@ require_once 'conexion.php';
 
 $acc_id = $_SESSION['emailAccount'];
 
-echo 'el account ' . $acc_id;
+// echo 'el account ' . $acc_id;
 
 $sql = "SELECT tipo_membresia, account_aid FROM wp_account WHERE account_correo = '$acc_id'";
 
@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
-echo 'adasd ' . $accountId;
+// echo 'adasd ' . $accountId;
 
 $sqlSubscripcion = "SELECT * FROM wp_subscripcion WHERE user_id = '$accountId'";
 $resultSubscripcion = $conexion->query($sqlSubscripcion);
