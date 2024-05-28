@@ -788,7 +788,7 @@ h5 {
                         <i class='fa-solid fa-paperclip'></i>
                         Link <input class='d-inline' type='checkbox' id='name'>
                     </p>
-                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <div class='mb-3 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
                             https://www.esteesunenlace.com</p>
                     </div>
@@ -839,14 +839,14 @@ h5 {
                     </h6>
                     <div class='row'>
                         <div class='col-6'>
-                            Pregunta N1
+                            <p style='font-weight: 600'>Pregunta N°1</p>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum</p>
                             </div>
                         </div>
                         <div class='col-6'>
-                            Respuesta N1
+                            <p style='font-weight: 600'>Respuesta N°1</p>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
@@ -855,14 +855,14 @@ h5 {
                     </div>
                     <div class='row'>
                         <div class='col-6'>
-                            Pregunta N1
+                            <p style='font-weight: 600'>Pregunta N°2</p>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum</p>
                             </div>
                         </div>
                         <div class='col-6'>
-                            Respuesta N1
+                            <p style='font-weight: 600'>Respuesta N°2</p>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
@@ -871,18 +871,44 @@ h5 {
                     </div>
                     <div class='row'>
                         <div class='col-6'>
-                            Pregunta N1
+                            <p style='font-weight: 600'>Pregunta N°3</p>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum</p>
                             </div>
                         </div>
                         <div class='col-6'>
-                            Respuesta N1
+                            <p style='font-weight: 600'>Respuesta N°3</p>
                             <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>
                                     Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                <div class='row'>
+                    <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i> Etiquetas
+                    </h6>
+                    <div class='d-flex'>
+                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary rounded'>
+                            <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
+                        </div>
+                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary rounded'>
+                            <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
+                        </div>
+                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary rounded'>
+                            <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
+                        </div>
+                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary rounded'>
+                            <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
+                        </div>
+                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary rounded'>
+                            <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
+                        </div>
+                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary rounded'>
+                            <p style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> etiqueta</p>
                         </div>
                     </div>
                 </div>
