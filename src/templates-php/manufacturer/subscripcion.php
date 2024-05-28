@@ -194,7 +194,7 @@
   $fechaInicial = $_SESSION['fecha_inicial'];
 
   echo 'las fechas' . $fechaInicial . 'y' . $fechaFinal;
-  // echo  'Membresiaaa' . $mebresia;
+  echo  'Membresiaaa' . $mebresia;
   ?>
   <script>
     let page = "home";

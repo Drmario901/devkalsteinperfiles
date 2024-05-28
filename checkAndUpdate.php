@@ -84,6 +84,8 @@ $result->bind_result($dbReference);
 $result->fetch();
 $result->close();
 
+logMessage("Última referencia en la base de datos: " . $dbReference);
+
 if ($dbReference === $lastReference) {
     logMessage("No hay cambios en los registros.");
     exit;
@@ -94,9 +96,11 @@ logMessage("Procesando registros del archivo de log.");
 // Procesar los registros del archivo de log
 $lastRecords = [];
 foreach ($lines as $line) {
+    logMessage("Procesando línea: " . $line);
     if (strpos($line, 'Datos recibidos:') !== false) {
         // Extraer la parte JSON de la línea
         $jsonStr = trim(substr($line, strpos($line, 'Datos recibidos:') + 16));
+        logMessage("JSON extraído: " . $jsonStr);
 
         // Parsear el JSON
         $dataArray = json_decode($jsonStr, true);
@@ -104,6 +108,7 @@ foreach ($lines as $line) {
             logMessage("Error al decodificar JSON: " . json_last_error_msg());
             continue;
         }
+        logMessage("Datos JSON decodificados: " . print_r($dataArray, true));
 
         // Extraer y formatear la fecha del JSON
         $jsonDate = DateTime::createFromFormat('d/m/Y', substr($dataArray['date'], 0, 10));
@@ -111,12 +116,14 @@ foreach ($lines as $line) {
             logMessage("Error al parsear la fecha del JSON: " . implode(", ", DateTime::getLastErrors()['errors']));
             continue;
         }
+        logMessage("Fecha del JSON: " . $jsonDate->format('Y-m-d'));
 
         // Obtener los valores necesarios
         $userID = null;
         if (preg_match('/userID:@([\w.-]+)/', $dataArray['texte-libre'], $matches)) {
             $userID = '@' . $matches[1];
         }
+        logMessage("userID extraído: " . $userID);
 
         // Suponiendo que la fecha original está en la variable $originalDate
         $originalDate = $dataArray['date'];
@@ -134,6 +141,7 @@ foreach ($lines as $line) {
             logMessage("Error al parsear la fecha y hora del JSON: " . implode(", ", DateTime::getLastErrors()['errors']));
             continue;
         }
+        logMessage("Fecha y hora formateadas: " . $datetime);
 
         $subscriptionType = $dataArray['montant'] ?? null;
         $paymentReference = $dataArray['reference'] ?? null;
@@ -154,6 +162,7 @@ foreach ($lines as $line) {
             logMessage("Error preparando la inserción en wp_subscripcion: " . $conexion->error);
             continue;
         }
+        logMessage("Preparación de inserción exitosa.");
 
         // Calcular la fecha final (un mes después de la fecha de inicio)
         $fechaFinal = (new DateTime($fechaInicio))->modify('+1 month')->format('Y-m-d');
@@ -165,6 +174,8 @@ foreach ($lines as $line) {
         }
         $insertSubs->close();
 
+        logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
+
         // Solo actualizar el tipo de membresía si el code-retour es 'payetest'
         if ($retour === 'payetest') {
             // Actualizar el tipo de membresía basado en el último registro
@@ -173,8 +184,6 @@ foreach ($lines as $line) {
                 'userID' => $userID
             ];
         }
-
-        logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
     }
 }
 
