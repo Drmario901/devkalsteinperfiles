@@ -792,7 +792,7 @@ h5 {
                         <p style='text-align: justify;'>
                             https://www.esteesunenlace.com</p>
                     </div>
-                    <p class='p-0' style='font-weight: 600'>
+                    <p style='font-weight: 600'>
                         <i class='fas fa-circle-info'></i>
                         Description
                     </p>
