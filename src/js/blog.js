@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
     function cargarDatos() {
         // Asumiendo que todos se llena aquí con datos iniciales
         $.ajax({
-            url: plugin_dir + '/php/blog .php',
+            url: plugin_dir + '/php/blog.php',
             success: function(response) {
                 // Simulamos una respuesta con datos
                 todos = JSON.parse(response).datos; // Asegúrate de que esto coincida con el formato de tu respuesta
