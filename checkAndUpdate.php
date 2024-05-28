@@ -165,7 +165,7 @@ foreach ($lines as $line) {
 
         // Insertar el registro en la base de datos
         $insertSubs = $conexion->prepare("
-            INSERT INTO wp_subscripcion (code-retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id)
+            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id)
             VALUES (?, ?, ?, ?, '1', ?, ?, ?)
         ");
         if (!$insertSubs) {
