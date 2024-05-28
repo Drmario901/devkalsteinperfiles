@@ -112,7 +112,7 @@
     </style>
 
     <?php
-        require_once __DIR__ . '/../db/conexion.php';
+        require_once __DIR__ . '/../../db/conexion.php';
 
         $sql = "SELECT * FROM wp_art_blog ORDER BY art_views DESC LIMIT 3";
         $resultado = $conexion->query($sql);
