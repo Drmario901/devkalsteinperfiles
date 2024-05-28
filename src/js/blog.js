@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 console.log(response)
                 return JSON.parse(response).store
-                console.log(JSON.parse(response).store)
+                console.log('asdasda' + JSON.parse(response).store)
             }
         })
     }
