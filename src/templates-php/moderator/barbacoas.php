@@ -1,6 +1,8 @@
 <header class="header" data-header>
 
     <?php
+    
+    require __DIR__ . '/../../../php/conexion.php';
 
         include 'navbar.php';
     
@@ -16,40 +18,56 @@
     <article class="container article">
 
         <div class="row">
-        <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Guias</span> pendientes por verificar</h4>
-            <div class='col-lg-6'>
-                <div class='card row m-2'>
-                    <div class='col-12'>
-                        <div class='row mb-2'>
-                            <div class='col-4'>
-                                <img class='mx-1' src='https://64.media.tumblr.com/a2c0065b18af0a21b74d0ee0dfbdf182/1200721b9ec08b1b-d2/s500x750/295caadec5e2afb6288ea0ea59f7f55e405336b7.png' width=150>
-                            </div>
-                            <div class='col-8'>
-                                <h6 style='font-weight: 600;'>Titulo de Guia</h6>
-                                <p class='mb-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elit
-                                    risus, placerat et condimentum eget, sodales sed elit. Sed nec.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class='mt-2 mb-1' style='font-size: 1.15em'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
-                    <div class='col-12'>
-                        <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-guide?accid=$aid'>
-                            <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
-                        </a>
-                    </div>
-                    <div class='mt-2'>
-                        <div class='fw-bold card'
-                            style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0' style=><i class='fa-regular fa-circle-check'></i> Verifying by: mod@mail.com</p>
-                        </div>
-                        <div class='col-12 mt-2'>
-                            <i class='fas fa-clock'></i>
-                            Hace 6 minutos
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Guias</span> pendientes por verificar</h4>
+
             <!-- <?php
+            $sql_guia_info_all_first = "
+            SELECT g.*, gd.*, p.*, wa.*
+            FROM wp_guides AS g
+            INNER JOIN wp_guides_details AS gd ON g.guide_id = gd.guide_id
+            INNER JOIN wp_k_products AS p ON gd.guide_product_id = p.product_aid
+            INNER JOIN wp_account AS wa ON g.guide_user_id = wa.account_aid 
+            WHERE g.guide_user_id = '$idUsuario'
+            ORDER BY g.guide_id ASC;
+        ";
+        $consulta_guia_info_all_first = mysqli_query($conexion, $sql_guia_info_all_first);
+
+if (mysqli_num_rows($consulta_guia_info_all_first) > 0) {
+                                while ($guias_first = mysqli_fetch_array($consulta_guia_info_all_first)) {
+                                    // Extraer la descripción y limitar su longitud a 120 caracteres
+                                    $descripcion_guias_first = $guias_first["guide_description"];
+                                    if (strlen($descripcion_guias_first) > 200) {
+                                        $descripcion_guias_first = substr($descripcion_guias_first, 0, 200) . '...';
+                                    }
+
+                                    echo "<div class='col-lg-6'>
+                                    <div class='card row m-2'>
+                                        <div class='col-12'>
+                                            <div class='row mb-2'>
+                                                <div class='col-4'>
+                                                    <img class='mx-1' src=''.$guias_first["guide_img_url"].'' width=150>
+                                                </div>
+                                                <div class='col-8'>
+                                                    <h6 style='font-weight: 600;'>'.$guias_first["product_name_es"].'</h6>
+                                                    <p class='mb-2'>'.$descripcion_guias_first.'</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class='mt-2 mb-1' style='font-size: 1.15em'><i class='fa-solid fa-user'></i> <b>Published by:</b> user@mail.com</p>
+                                        <div class='col-12'>
+                                            <a href='https://dev.kalstein.plus/plataforma/index.php/moderator/view-guide?accid=$aid'>
+                                                <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Check</button>
+                                            </a>
+                                        </div>
+                                        <div class='mt-2'>
+                                        $verifying_by
+                                            <div class='col-12 mt-2'>
+                                                <i class='fas fa-clock'></i>
+                                                Hace 6 minutos
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>";}}
 
                 // require __DIR__.'/../../../php/conexion.php';
 
