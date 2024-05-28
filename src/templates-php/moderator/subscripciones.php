@@ -90,7 +90,7 @@
                       width=150>
                   </div>
                   <div class='col-8'>
-                    <h6 style='font-weight: 600;'>$nombreCompleto</h6>
+                    <h6 style='font-weight: 600;'>$nombreCompleto ($rol)</h6>
                     <p class='mb-2'>$tipo_membresia</p>
                     <p class='mb-2'>Inicio de suscripción: $fechaInicio</p>
                     <p class='mb-2'>Fin de la suscripción: $fechaFin</p>
