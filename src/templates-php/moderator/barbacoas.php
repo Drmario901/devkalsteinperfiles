@@ -49,11 +49,11 @@ if (mysqli_num_rows($consulta_guia_info_all_first) > 0) {
                                         <div class='col-12'>
                                             <div class='row mb-2'>
                                                 <div class='col-4'>
-                                                    <img class='mx-1' src=''.$guias_first["guide_img_url"].'' width=150>
+                                                    <img class='mx-1' src='$guias_first['guide_img_url']' width=150>
                                                 </div>
                                                 <div class='col-8'>
-                                                    <h6 style='font-weight: 600;'>'.$guias_first["product_name_es"].'</h6>
-                                                    <p class='mb-2'>'.$descripcion_guias_first.'</p>
+                                                    <h6 style='font-weight: 600;'>$guias_first['product_name_es']</h6>
+                                                    <p class='mb-2'>$descripcion_guias_first</p>
                                                 </div>
                                             </div>
                                         </div>
