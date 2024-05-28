@@ -26,7 +26,7 @@
   <article class="container article">
 
     <div class="row">
-      <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Subscripciones</span> a cancelar</h4>
+      <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Suscripciones activas</span></h4>
       <?php
 
       // inner join wp_account on wp_subscripcion.user_id = wp_account.account_aid
