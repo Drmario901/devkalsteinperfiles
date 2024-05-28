@@ -85,6 +85,7 @@ logMessage("Última referencia en la base de datos: " . $dbReference);
 
 if ($dbReference === $lastReference) {
     logMessage("No hay cambios en los registros.");
+    logMessage("--------------------------------------------");
     exit;
 }
 
