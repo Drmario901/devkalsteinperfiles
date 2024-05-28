@@ -3,6 +3,22 @@
         .columna_articulo{
             min-height: 970px;
         }
+        .page-link{
+            color: #213280 !important;
+        }
+        .active>.page-link{
+            background-color: #213280 !important;
+            border-color: #213280 !important;
+            color: #fff !important;
+        }
+        .buton-paginate{
+            color: #213280;
+            border-color: #213280;
+        }
+        .buton-paginate:hover{
+            background-color: #213280 !important;
+            color: #fff;
+        }
         @media (max-width: 768px) {
             .contenedor_guiasInf {
                 grid-template-columns: 100% !important;
