@@ -76,7 +76,7 @@ if (!$result) {
     logMessage("Error al preparar la consulta a la base de datos: " . $conexion->error);
     exit;
 }
-logMessage($result);
+
 $result->bind_param("s", $lastReference);
 if (!$result->execute()) {
     logMessage("Error al ejecutar la consulta a la base de datos: " . $result->error);
