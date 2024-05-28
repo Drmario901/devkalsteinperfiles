@@ -1,7 +1,7 @@
 <?php
     require_once __DIR__ . '/../db/conexion.php';
 
-    $id = $_POST['id'];
+    $id = $_POST['idAccount'];
 
     $sql = "SELECT * FROM wp_account WHERE account_aid = '$id'";
 
