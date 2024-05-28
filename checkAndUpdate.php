@@ -1,7 +1,7 @@
 <?php
-/* ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
+error_reporting(E_ALL);
 // Crear la carpeta 'monetico' si no existe
 $logDir = __DIR__ . '/monetico';
 if (!is_dir($logDir)) {
@@ -70,7 +70,6 @@ logMessage("Conexión a la base de datos establecida.");
 
 // Obtener el último registro de la base de datos basado en la referencia
 $lastReference = $lastLogData['reference'];
-logMessage($lastReference);
 $result = $conexion->prepare("SELECT referencia_pago FROM wp_subscripcion ORDER BY ID DESC LIMIT 1");
 if (!$result) {
     logMessage("Error al preparar la consulta a la base de datos: " . $conexion->error);
