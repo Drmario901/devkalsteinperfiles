@@ -124,7 +124,7 @@ if (isset($parsedResponse['cdr'])) {
         // Lógica si cdr = 1
         // echo "cdr es igual a 1. Ejecutar lógica adicional.";
         // Aquí realizamos el update a la tabla wp_subscripcion
-        $sqlUpdate = "UPDATE wp_subscripcion SET estado_membresia = 2 WHERE user_id = '$id'";
+        $sqlUpdate = "UPDATE wp_subscripcion SET estado_membresia = 2 WHERE user_id = '$id' ORDER BY s.user_id DESC LIMIT 1";
         if ($conexion->query($sqlUpdate) === TRUE) {
             header('Content-Type: application/json');
             echo json_encode(['status' => 200, 'response' => 'success', 'reference' => $reference, 'cdr' => $cdr]);
