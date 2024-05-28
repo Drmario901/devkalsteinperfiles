@@ -8,25 +8,13 @@ require 'vendor/autoload.php';
 use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
-$allowed_hosts = [
-    'plataforma.kalstein.net' => [
-        'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
-        'ftp_server' => '185.28.22.128',
-        'ftp_user' => 'he270716',
-        'ftp_pass' => 'RP$c_myoUeMK'
-    ]
-    // 'platform.kalstein.us' => [
-    //     'remote_path' => '/path/to/log/host2_monetico_log_recurrent.txt',
-    //     'ftp_server' => 'ftp.kalstein.us',
-    //     'ftp_user' => 'ftp_username',
-    //     'ftp_pass' => 'ftp_password'
-    // ],
-    // 'plateforme.kalstein.fr' => [
-    //     'remote_path' => '/path/to/log/host32_monetico_log_recurrent.txt',
-    //     'ftp_server' => 'ftp.kalstein.fr',
-    //     'ftp_user' => 'ftp_username',
-    //     'ftp_pass' => 'ftp_password'
-    // ]
+$allowed_hosts = [   
+'plataforma.kalstein.net' => [
+    'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
+    'ftp_server' => '185.28.22.128',
+    'ftp_user' => 'he270716',
+    'ftp_pass' => 'RP$c_myoUeMK'
+]
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -62,6 +50,11 @@ function log_to_host($host_config, $message) {
         return;
     }
 
+    $remote_dir = dirname($host_config['remote_path']);
+    if (!ftp_chdir($ftp_conn, $remote_dir)) {
+        ftp_mkdir($ftp_conn, $remote_dir);
+    }
+
     if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_temp_file, FTP_ASCII)) {
         file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - FTP upload failed for {$host_config['remote_path']}\n", FILE_APPEND);
     } else {
@@ -79,15 +72,20 @@ foreach ($allowed_hosts as $host_config) {
 
 if (!empty($data)) {
     $monetico = new Monetico('7593339', '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 'kalsteinfr');
-    $response = new PurchaseResponse($data);
-    $result = $monetico->validate($response);
+    try {
+        $response = new PurchaseResponse($data);
+        $result = $monetico->validate($response);
 
-    if ($result) {
-        echo "version=2\ncdr=0";
-        $log_message = date('Y-m-d H:i:s') . " - Transacción válida.\n";
-    } else {
+        if ($result) {
+            echo "version=2\ncdr=0";
+            $log_message = date('Y-m-d H:i:s') . " - Transacción válida.\n";
+        } else {
+            echo "version=2\ncdr=1";
+            $log_message = date('Y-m-d H:i:s') . " - Transacción inválida.\n";
+        }
+    } catch (Exception $e) {
         echo "version=2\ncdr=1";
-        $log_message = date('Y-m-d H:i:s') . " - Transacción inválida.\n";
+        $log_message = date('Y-m-d H:i:s') . " - Error: " . $e->getMessage() . "\n";
     }
 
     foreach ($allowed_hosts as $host_config) {
@@ -96,7 +94,7 @@ if (!empty($data)) {
 } else {
     echo "ERROR: No se recibieron datos.";
     $log_message = date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n";
-    
+
     foreach ($allowed_hosts as $host_config) {
         log_to_host($host_config, $log_message);
     }
