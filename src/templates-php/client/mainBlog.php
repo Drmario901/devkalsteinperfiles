@@ -111,6 +111,13 @@
         }
     </style>
 
+    <?php
+        require_once __DIR__ . '/../db/conexion.php';
+
+        $sql = "SELECT * FROM wp_art_blog ORDER BY art_views DESC LIMIT 3";
+        $resultado = $conexion->query($sql);
+    ?>
+
     <div id="seccion_blog" display="none">
         <div class="contenedor_patron_css">
             <main class="contenedor_principal">
@@ -139,8 +146,45 @@
                     <div class="columna_secundaria_guias">
                         <h4 class="titulo_destacados" style="font-family: Montserrat; font-weight: 600;">Artículos destacados
                         </h4>
-                        <div class="contenedor-destacadas"
-                            style="display: flex; flex-direction: column; gap: 20px; margin: 10px 0">
+                        <div class="contenedor-destacadas" style="display: flex; flex-direction: column; gap: 20px; margin: 10px 0">
+                        <?php
+                            if ($resultado->num_rows > 0){
+                                while($fila = $resultado->fetch_assoc()) {
+                                    $id = $fila['art_id_user'];
+                                    $sql = "SELECT * FROM wp_account WHERE account_aid = '$id'";
+                                    $resultado = $conexion->query($sql);
+                                    $row = mysqli_fetch_array($resultado);
+                                    $correo = $row['account_correo'];
+
+                                    $sql2 = "SELECT * FROM tienda_virtual WHERE ID_user = '$correo'";
+                                    $resultado2 = $conexion->query($sql2);
+                                    $row2 = mysqli_fetch_array($resultado2);
+                                    $store = $row2[2] ?? 'No tiene tienda';
+
+                                    echo '
+                                        <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
+                                        style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
+                                            <div class="thumbnail_guia">
+                                                <img src="'.$fila['art_img'].'"
+                                                    alt="guia" width="150" />
+                                            </div>
+                                            <div class="contenido_guia" style="margin-top: 1em">
+                                                <h5 class="titulo_guia" style="font-family: Montserrat;">'.$fila['art_title'].'</h5>
+                                                <p style="font-family: Roboto; margin: 0">
+                                                    <svg style="display: inline; width:15px; height:15px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                                        <path
+                                                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                                                    </svg>
+                                                    Publicado por <span class="txt-author">'.$store.'<span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+                            }
+                        ?>
                             <div class="contenedor_vistaprevia_destacados btn_ver_articulo"
                                 style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                 <div class="thumbnail_guia">
