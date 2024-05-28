@@ -71,18 +71,19 @@ logMessage("Conexión a la base de datos establecida.");
 // Obtener el último registro de la base de datos basado en la referencia
 $lastReference = $lastLogData['reference'];
 $result = $conexion->query("SELECT referencia_pago FROM wp_subscripcion ORDER BY ID DESC LIMIT 1");
+
 if (!$result) {
-    logMessage("Error al preparar la consulta a la base de datos: " . $conexion->error);
+    logMessage("Error al consultar la base de datos: " . $conexion->error);
     exit;
 }
 
-logMessage("Consulta a la base de datos ejecutada exitosamente.");
-
+$row = $result->fetch_assoc();
+$dbReference = $row['referencia_pago'];
 $result->close();
 
-logMessage("Última referencia en la base de datos: " . $result);
+logMessage("Última referencia en la base de datos: " . $dbReference);
 
-if ($result === $lastReference) {
+if ($dbReference === $lastReference) {
     logMessage("No hay cambios en los registros.");
     exit;
 }
