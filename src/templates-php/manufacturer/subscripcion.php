@@ -211,8 +211,8 @@
     <?php
     if ($membresia != 0) : ?>
       <div style="width: auto;">
-        <p style="display: flex;">Fecha Inicial: <strong><?php echo $fechaInicial; ?></strong></p>
-        <p style="display: flex;">Fecha Final: <strong><?php echo $fechaFinal; ?></strong></p>
+        <p style="display: flex;">Fecha Inicial: <strong style="color: #4CAF50;"> <?php echo ' ' . $fechaInicial; ?></strong></p>
+        <p style="display: flex;">Fecha Final: <strong style="color: #c1121f;"> <?php echo ' ' . $fechaFinal; ?></strong></p>
       </div>
     <?php endif; ?>
   </header>
