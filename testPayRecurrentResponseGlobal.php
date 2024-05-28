@@ -23,15 +23,13 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-$data = [
-    'transaction_id' => '123',
-    'TPE' => '1234567',
-    'date' => '2024-05-27T12:34:56',
-    'montant' => '100.00EUR',
-    'reference' => 'REF123456',
-    'MAC' => 'ABCDEF1234567890',
-    'texte-libre' => 'Test transaction'
-];
+$input_data = file_get_contents('php://input');
+$data = json_decode($input_data, true);
+
+if (!$data) {
+    echo "ERROR: No se recibieron datos válidos.";
+    exit;
+}
 
 $local_log_file = 'monetico_log_recurrent.txt';
 $log_message = date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n";
