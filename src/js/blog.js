@@ -147,6 +147,7 @@ jQuery(document).ready(function($) {
     function truncateText(selector, maxLength) {
         $(selector).each(function() {
             var text = $(this).text();
+            console.log(text.length)
             if (text.length > maxLength) {
                 $(this).text(text.slice(0, maxLength) + '...');
             }
