@@ -9,7 +9,15 @@ use DansMaCulotte\Monetico\Monetico;
 use DansMaCulotte\Monetico\Responses\PurchaseResponse;
 
 $data = $_POST;
-file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
+
+// Crear la carpeta 'monetico' si no existe
+$logDir = 'monetico';
+if (!is_dir($logDir)) {
+    mkdir($logDir, 0777, true);
+}
+
+$logFile = $logDir . '/monetico_log_' . date('Y-m-d') . '.txt';
+file_put_contents($logFile, date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
 
 if (!empty($data)) {
     $monetico = new Monetico('7593339', '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 'kalsteinfr');
@@ -23,6 +31,6 @@ if (!empty($data)) {
     }
 } else {
     echo "ERROR: No se recibieron datos.";
-    file_put_contents('monetico_log_recurrent.txt', date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n", FILE_APPEND);
+    file_put_contents($logFile, date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n", FILE_APPEND);
 }
 ?>
