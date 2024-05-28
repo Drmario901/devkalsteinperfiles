@@ -1,7 +1,7 @@
 <?php
-/* ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
+error_reporting(E_ALL);
 // Crear la carpeta 'monetico' si no existe
 $logDir = __DIR__ . '/monetico';
 if (!is_dir($logDir)) {
@@ -89,7 +89,7 @@ $result->close();
 
 logMessage("Última referencia en la base de datos: " . $dbReference);
 
-if ($dbReference === $lastReference) {
+if ($dbReference === $lastReference['reference']) {
     logMessage("No hay cambios en los registros.");
     exit;
 }
