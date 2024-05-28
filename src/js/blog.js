@@ -105,9 +105,9 @@ jQuery(document).ready(function($) {
             type: "POST",
             data: { idAccount },
             success: function(response) {
-                console.log(response)
-                return JSON.parse(response).store
-                console.log('asdasda' + JSON.parse(response).store)
+                console.log(response)                
+                let author = JSON.parse(response).store
+                return author
             }
         })
     }
