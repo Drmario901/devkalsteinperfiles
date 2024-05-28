@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
 
     // Simulamos la carga inicial de datos
     cargarDatos();
-    truncateText('.p-description-blog', 250); 
 
     // Ajusta la paginación cada vez que se hace clic en los botones
     $(document).on("click", "#boton-prev", function() {
@@ -52,6 +51,7 @@ jQuery(document).ready(function($) {
     function actualizarVista() {
         let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
         $('#container_blogs').html(generarTabla(datosPagina));
+        truncateText('.p-description-blog', 320); 
         generarPaginado(paginas);
     }
 
@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
                 </h5>
                 <hr
                     style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
-                <p class="p-description-blog" style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px; min-height: 113px;">${fila.art_principal_description}.</p>
+                <p class="p-description-blog" style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px; min-height: 113px; min-width: 470px;">${fila.art_principal_description}.</p>
                 <div class="footer-guia"
                     style="display: flex; align-items: center; justify-content: space-between">
                     <button class="btn_guias_informativas" id="blog_articulos" source="#">Ver mas</button>
