@@ -12,6 +12,8 @@ $result = $conexion->query($sql);
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     $_SESSION['tipo_membresia'] = $row['tipo_membresia'];
+    $_SESSION['fecha_inicial'] = $row['fecha_inicial'];
+    $_SESSION['fecha_final'] = $row['fecha_final'];
     $membresia = $row['tipo_membresia'];
   }
   // echo json_encode($membresia);

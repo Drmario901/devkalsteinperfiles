@@ -1,87 +1,87 @@
 <div id='c-panel20'>
     <style>
-    .columna_articulo{
-        min-height: 970px;
-    }
-    @media (max-width: 768px) {
-        .contenedor_guiasInf {
-            grid-template-columns: 100% !important;
-            margin: auto !important;
-            justify-content: center !important;
-            align-items: center !important;
+        .columna_articulo{
+            min-height: 970px;
+        }
+        @media (max-width: 768px) {
+            .contenedor_guiasInf {
+                grid-template-columns: 100% !important;
+                margin: auto !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .contenedor_vistaprevia_guia {
+                grid-template-columns: 90% !important;
+                margin: auto !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .contenedor-destacadas {
+                flex-direction: row !important;
+                justify-content: space-evenly !important;
+            }
+            .contenedor-destacadas h5 {
+                font-size: 1.25em;
+            }
         }
 
-        .contenedor_vistaprevia_guia {
-            grid-template-columns: 90% !important;
-            margin: auto !important;
-            justify-content: center !important;
-            align-items: center !important;
+        @media (max-width: 576px) {
+            .footer-guia {
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+
+            .footer-guia .boton_ver_mas {
+                margin-bottom: 10px !important;
+            }
+
+            .contenido_articulo .guia_extracto_principal img {
+                width: 300px !important;
+            }
         }
 
-        .contenedor-destacadas {
-            flex-direction: row !important;
-            justify-content: space-evenly !important;
-        }
-		.contenedor-destacadas h5 {
-            font-size: 1.25em;
-        }
-    }
+        @media (max-width: 1200px) {
+            .articulos_recientes .contenedor_vistaprevia_guia {
+                grid-template-columns: 100% !important;
+            }
 
-    @media (max-width: 576px) {
-        .footer-guia {
-            flex-direction: column;
-            align-items: flex-start !important;
+            .parrafo_extracto_principal {
+                font-size: 16px !important;
+            }
         }
 
-        .footer-guia .boton_ver_mas {
-            margin-bottom: 10px !important;
-        }
+        @media (max-width: 992px) {
 
-        .contenido_articulo .guia_extracto_principal img {
-            width: 300px !important;
-        }
-    }
+            .contenedor_articulos_tienda {
+                grid-template-columns: 100% !important;
+            }
 
-    @media (max-width: 1200px) {
-        .articulos_recientes .contenedor_vistaprevia_guia {
-            grid-template-columns: 100% !important;
-        }
+            .articulos_recientes {
+                display: flex;
+                flex-wrap: wrap;
+            }
 
-        .parrafo_extracto_principal {
-            font-size: 16px !important;
-        }
-    }
+            .articulos_recientes .contenedor_vistaprevia_guia {
+                grid-template-columns: auto auto !important;
+            }
 
-    @media (max-width: 992px) {
+            .contenedor_artPrin {
+                height: 400px !important;
+            }
 
-        .contenedor_articulos_tienda {
-            grid-template-columns: 100% !important;
-        }
+            .contenedor-guiasRecientes .contenedor-guiasRecientes {
+                gap: 0 !important;
+            }
 
-        .articulos_recientes {
-            display: flex;
-            flex-wrap: wrap;
+            .guia_extracto_principal {
+                grid-template-columns: 100% !important;
+                margin: auto !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
         }
-
-        .articulos_recientes .contenedor_vistaprevia_guia {
-            grid-template-columns: auto auto !important;
-        }
-
-        .contenedor_artPrin {
-            height: 400px !important;
-        }
-
-        .contenedor-guiasRecientes .contenedor-guiasRecientes {
-            gap: 0 !important;
-        }
-
-        .guia_extracto_principal {
-            grid-template-columns: 100% !important;
-            margin: auto !important;
-            justify-content: center !important;
-            align-items: center !important;
-        }
-    }
     </style>
 
     <div id="seccion_blog" display="none">
