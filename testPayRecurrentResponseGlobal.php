@@ -84,7 +84,7 @@ function log_to_host($host_config, $local_log_file) {
 $log_message = date('Y-m-d H:i:s') . " - Log de prueba para verificación.\n";
 file_put_contents($local_log_file, $log_message, FILE_APPEND);
 
-foreach ($allowed_hosts as $host_config) {
+foreach ($allowed_hosts as $host => $host_config) {
     log_to_host($host_config, $local_log_file);
 }
 
