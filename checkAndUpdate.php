@@ -79,12 +79,13 @@ if (!$result) {
 
 $row = $result->fetch_assoc();
 $dbReference = $row['referencia_pago'];
-$result->close();
+$result->free();
 
 logMessage("Última referencia en la base de datos: " . $dbReference);
 
 if ($dbReference === $lastReference) {
     logMessage("No hay cambios en los registros.");
+    logMessage("--------------------------------------------");
     exit;
 }
 
@@ -190,17 +191,17 @@ foreach ($lines as $line) {
         logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $accountID");
 
         $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $accountID);
-        if (!$insertSubs->execute()) {
+        try {
+            $insertSubs->execute();
+            logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
+        } catch (mysqli_sql_exception $e) {
             if ($insertSubs->errno == 1062) {
-                logMessage("Error de duplicado: La referencia de pago ya existe.");
+                logMessage("Error de duplicado: La referencia de pago ya existe. Continuando con el siguiente registro.");
             } else {
                 logMessage("Error al insertar el registro en wp_subscripcion: " . $insertSubs->error);
             }
-            continue;
         }
         $insertSubs->close();
-
-        logMessage("Registro insertado para user_tag: $userID, referenciaa: $paymentReference");
 
         // Solo actualizar el tipo de membresía si el code-retour es 'payetest'
         if ($retour === 'payetest') {
