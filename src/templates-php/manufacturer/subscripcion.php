@@ -193,9 +193,6 @@
   $fechaFinal = $_SESSION['fecha_final'];
   $fechaInicial = $_SESSION['fecha_inicio'];
 
-  echo 'las fechas' . $fechaInicial . 'y' . $fechaFinal;
-  echo  'Membresiaaa' . $mebresia;
-  echo 'Me';
   ?>
   <script>
     let page = "home";
@@ -205,7 +202,7 @@
 </header>
 
 <section style="margin-top: 2rem;">
-  <header style="display: flex; justify-content: space-between; width: 100%;">
+  <header style="display: flex; justify-content: space-around; width: 100%;">
     <div>
       <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
       <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
