@@ -190,6 +190,10 @@
   require __DIR__ . '/../../../php/getMembresia.php';
 
   $mebresia = $_SESSION['tipo_membresia'];
+  $fechaFinal = $_SESSION['fecha_final'];
+  $fechaInicial = $_SESSION['fecha_inicial'];
+
+  echo 'las fechas' . $fechaInicial . 'y' . $fechaFinal;
   // echo  'Membresiaaa' . $mebresia;
   ?>
   <script>
