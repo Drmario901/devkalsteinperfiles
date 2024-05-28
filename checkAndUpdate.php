@@ -157,6 +157,9 @@ foreach ($lines as $line) {
             continue;
         }
 
+        // Depuración adicional para verificar las variables
+        logMessage("Variables antes de la inserción - fechaInicio: $fechaInicio, fechaFinal: (calculando), paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID, retour: $retour");
+
         // Insertar el registro en la base de datos
         $insertSubs = $conexion->prepare("
             INSERT INTO wp_subscripcion (fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id, code_retour)
@@ -171,6 +174,9 @@ foreach ($lines as $line) {
         // Calcular la fecha final (un mes después de la fecha de inicio)
         $fechaFinal = (new DateTime($fechaInicio))->modify('+1 month')->format('Y-m-d');
         logMessage("Fecha final calculada: " . $fechaFinal);
+
+        // Más depuración justo antes de la inserción
+        logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID, retour: $retour");
 
         $insertSubs->bind_param("sssssss", $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $userID, $retour);
         if (!$insertSubs->execute()) {
