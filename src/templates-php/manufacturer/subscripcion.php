@@ -195,6 +195,7 @@
 
   echo 'las fechas' . $fechaInicial . 'y' . $fechaFinal;
   echo  'Membresiaaa' . $mebresia;
+  echo 'Me';
   ?>
   <script>
     let page = "home";
@@ -204,11 +205,13 @@
 </header>
 
 <section style="margin-top: 2rem;">
-
-  <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-  <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
-  <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
-
+  <header>
+    <div>
+      <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
+      <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
+      <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
+    </div>
+  </header>
   <table class="membership-table">
     <thead>
       <tr id="tr-titles">
