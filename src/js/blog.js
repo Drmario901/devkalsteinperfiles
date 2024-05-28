@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
     // Simulamos la carga inicial de datos
     cargarDatos();
+    truncateText('.p-description-blog', 250); 
 
     // Ajusta la paginación cada vez que se hace clic en los botones
     $(document).on("click", "#boton-prev", function() {
@@ -28,81 +29,6 @@ jQuery(document).ready(function($) {
         paginaActual = paginaSeleccionada;
         actualizarVista(); // Esto regenerará los botones y aplicará correctamente la clase `active`
     });
-
-    $('#datos-tabla').on('click', 'button[data-id]', function() {
-        let id = $(this).data('id'); // Obtiene el data-id del botón clickeado
-        console.log("Botón con data-id " + id + " clickeado");
-
-            // Aquí puedes añadir tu lógica para manejar el clic del botón
-            // Por ejemplo, podrías hacer una solicitud AJAX para confirmar el pago
-            // y luego actualizar la interfaz de usuario acordemente
-
-            iziToast.question({
-                timeout: false,
-                close: false,
-                overlay: true,
-                displayMode: 'once',
-                id: 'question',
-                zindex: 999,
-                title: 'Confirmar',
-                message: `¿Estás seguro de confirmar la cotización: ${id}?`,
-                position: 'center',
-                buttons: [
-                    [`<button><b>Si</b></button>`, function(instance, toast) {
-                        instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
-            
-                        // Aquí colocas tu lógica AJAX/Fetch para actualizar la cotización
-                        $.ajax({
-                            url: plugin_dir + '/php/blog .php', // URL al servidor que maneja la actualización
-                            type: 'POST', // Método HTTP, puede ser 'POST', 'PUT', dependiendo de tu API
-                            data: { id: id }, // Datos que envías al servidor, en este caso el ID de la cotización
-                            success: function(response) {
-
-                                const respuesta = JSON.parse(response)
-                                if(respuesta.success) {
-                                console.log('Cotización confirmada con éxito.', respuesta);
-                                    iziToast.show({
-                                        message: respuesta.message,
-                                        position: 'topCenter',
-                                        timeout: false,
-                                        closeOnClick: true,
-                                        progressBar: false
-                                    });
-                                } else {
-                                    iziToast.error({
-                                        message: respuesta.message,
-                                        position: 'topCenter',
-                                        timeout: false,
-                                        closeOnClick: true,
-                                        progressBar: false
-                                    });
-                                }
-                            },
-                            error: function(xhr, status, error) {
-                                // Manejo de errores
-                                console.error('Error al confirmar la cotización:', error);
-                            }
-                        });
-                        
-                    }, true],
-                    [`<button>No</button>`, function(instance, toast) {
-                        instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
-                        console.log('Cancelado');
-                    }]
-                ],
-                onClosing: function(instance, toast, closedBy) {
-                    console.log('Closing...');
-                },
-                onClosed: function(instance, toast, closedBy) {
-                    console.log('Closed...');
-                }
-            });
-    });
-
-    
-  
-
-
 
     function cargarDatos() {
         // Asumiendo que todos se llena aquí con datos iniciales
@@ -152,13 +78,7 @@ jQuery(document).ready(function($) {
                 </h5>
                 <hr
                     style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
-                <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
-                    dolor sit
-                    amet, consectetur
-                    adipiscing elit. Cras in mauris vitae justo vehicula viverra in in nulla. Vivamus at
-                    pretium velit. Suspendisse mollis eros sit amet ultrices gravida. Cras libero ipsum,
-                    ultricies vel est quis, condimentum ultrices ante. Ut maximus velit quis neque
-                    auctor, quis auctor neque tristique.</p>
+                <p class="p-description-blog" style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px; min-height: 113px;">${fila.art_principal_description}.</p>
                 <div class="footer-guia"
                     style="display: flex; align-items: center; justify-content: space-between">
                     <button class="btn_guias_informativas" id="blog_articulos" source="#">Ver mas</button>
@@ -177,6 +97,15 @@ jQuery(document).ready(function($) {
         });
 
         return contenedorHTML;
+    }
+
+    function truncateText(selector, maxLength) {
+        $(selector).each(function() {
+            var text = $(this).text();
+            if (text.length > maxLength) {
+                $(this).text(text.slice(0, maxLength) + '...');
+            }
+        });
     }
 
     function generarPaginado(paginas) {
