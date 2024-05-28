@@ -66,15 +66,7 @@ jQuery(document).ready(function($) {
     function generarTabla(datos) {
         let contenedorHTML = '';
         datos.forEach(fila => {
-            let idAccount = fila.art_id_user
-            $.ajax({
-                url: plugin_dir + '/php/consultAuthor.php',
-                type: "POST",
-                data: { idAccount },
-                success: function(response) {
-                    // Simulamos una respuesta con datos
-                    let author = JSON.parse(response).store 
-                    contenedorHTML += `<div class="contenedor_vistaprevia_guia"
+            contenedorHTML += `<div class="contenedor_vistaprevia_guia"
                         style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                         <div class="thumbnail_guia">
                             <img src="${fila.art_img}"
@@ -97,19 +89,25 @@ jQuery(document).ready(function($) {
                                         <path
                                             d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                                     </svg>
-                                    Publicado por <b>${author}</b>
+                                    Publicado por <b>${searchNameStore(fila.art_id_user)}</b>
                                 </p>
                             </div>
                         </div>
                     </div>`
-                },
-                error: function() {
-                    console.error('Error al cargar los datos');
-                }
-            });
         });
 
         return contenedorHTML;
+    }
+
+    function searchNameStore(idAccount){
+        $.ajax({
+            url: plugin_dir + '/php/consultAuthor.php',
+            type: "POST",
+            data: { idAccount },
+            success: function(response) {
+                return author = JSON.parse(response).store
+            }
+        })
     }
 
     function truncateText(selector, maxLength) {
