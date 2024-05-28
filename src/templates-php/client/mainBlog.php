@@ -1,5 +1,8 @@
 <div id='c-panel20'>
     <style>
+        .txt-author{
+            font-weight: bold;
+        }
         .columna_articulo{
             min-height: 970px;
         }
@@ -18,6 +21,14 @@
         .buton-paginate:hover{
             background-color: #213280 !important;
             color: #fff;
+        }
+        #blog_articulos{
+            background-color: #213280 !important;
+            color: #fff !important;
+            padding: 2px 10px;
+        }
+        #blog_articulos:hover{
+            background-color: #2e4f9b !important;
         }
         @media (max-width: 768px) {
             .contenedor_guiasInf {

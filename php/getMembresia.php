@@ -29,5 +29,8 @@ $resultSubscripcion = $conexion->query($sqlSubscripcion);
 // guardar en la session las fechas de la membresia
 
 $row2 = $resultSubscripcion->fetch_assoc();
-$_SESSION['fecha_inicio'] = $row2['fecha_inicio'];
-$_SESSION['fecha_final'] = $row2['fecha_final'];
+
+if (isset($row2['fecha_inicio'])) {
+  $_SESSION['fecha_inicio'] = $row2['fecha_inicio'];
+  $_SESSION['fecha_final'] = $row2['fecha_final'];
+}

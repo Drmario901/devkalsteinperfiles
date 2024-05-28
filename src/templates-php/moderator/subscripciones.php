@@ -50,6 +50,7 @@
           $nombreCompleto = $nombre . " " . $apellido;
           $img = $row['account_url_image_perfil'];
           $acc_img = $row['account_url_image_perfil'];
+          $rol = $row['account_rol_aid'];
 
           $firstLyricsName = strtoupper($nombre);
           $firstLyricsLastname = strtoupper($apellido);
@@ -62,6 +63,14 @@
             $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/' . $firstLyricsName . '/' . $firstLyricsName . '' . $firstLyricsLastname . '.png';
           } else {
             $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/' . $acc_img;
+          }
+
+          if ($rol == 1) {
+            $rol = 'Cliente';
+          } elseif ($rol == 2) {
+            $rol = 'Distribuidor';
+          } elseif ($rol == 3) {
+            $rol = 'Fabricante';
           }
 
           if ($membresia == 1) {
@@ -81,7 +90,7 @@
                       width=150>
                   </div>
                   <div class='col-8'>
-                    <h6 style='font-weight: 600;'>$nombreCompleto</h6>
+                    <h6 style='font-weight: 600;'>$nombreCompleto ($rol)</h6>
                     <p class='mb-2'>$tipo_membresia</p>
                     <p class='mb-2'>Inicio de suscripción: $fechaInicio</p>
                     <p class='mb-2'>Fin de la suscripción: $fechaFin</p>
@@ -94,7 +103,7 @@
                 </a>
                 <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
                   <button type='button' id='btnUpdate'
-                    class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Mantener membresia</button>
+                    class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                 </a>
               </div>
     
