@@ -3,11 +3,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'vendor/autoload.php';
-
-use DansMaCulotte\Monetico\Monetico;
-use DansMaCulotte\Monetico\Responses\PurchaseResponse;
-
 $allowed_hosts = [
     'plataforma.kalstein.net' => [
         'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
@@ -28,19 +23,15 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-$data = $_POST;
-
-if (empty($data)) {
-    $data = [
-        'transaction_id' => '123',
-        'TPE' => '1234567',
-        'date' => '2024-05-27T12:34:56',
-        'montant' => '100.00EUR',
-        'reference' => 'REF123456',
-        'MAC' => 'ABCDEF1234567890',
-        'texte-libre' => 'Test transaction'
-    ];
-}
+$data = [
+    'transaction_id' => '123',
+    'TPE' => '1234567',
+    'date' => '2024-05-27T12:34:56',
+    'montant' => '100.00EUR',
+    'reference' => 'REF123456',
+    'MAC' => 'ABCDEF1234567890',
+    'texte-libre' => 'Test transaction'
+];
 
 $local_log_file = 'monetico_log_recurrent.txt';
 file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
@@ -97,37 +88,5 @@ foreach ($allowed_hosts as $host_config) {
     log_to_host($host_config, $local_log_file);
 }
 
-if (!empty($data)) {
-    $monetico = new Monetico('7593339', '255D023E7A0BDE9EEAC7516959CD93A9854F3991', 'kalsteinfr');
-    try {
-        $response = new PurchaseResponse((array)$data);
-        $result = $monetico->validate($response);
-
-        if ($result) {
-            echo "version=2\ncdr=0";
-            $log_message = date('Y-m-d H:i:s') . " - Transacción válida.\n";
-        } else {
-            echo "version=2\ncdr=1";
-            $log_message = date('Y-m-d H:i:s') . " - Transacción inválida.\n";
-        }
-    } catch (Exception $e) {
-        echo "version=2\ncdr=1";
-        $log_message = date('Y-m-d H:i:s') . " - Error: " . $e->getMessage() . "\n";
-    }
-
-    file_put_contents($local_log_file, $log_message, FILE_APPEND);
-
-    foreach ($allowed_hosts as $host_config) {
-        log_to_host($host_config, $local_log_file);
-    }
-} else {
-    echo "ERROR: No se recibieron datos.";
-    $log_message = date('Y-m-d H:i:s') . " - ERROR: No se recibieron datos.\n";
-
-    file_put_contents($local_log_file, $log_message, FILE_APPEND);
-
-    foreach ($allowed_hosts as $host_config) {
-        log_to_host($host_config, $local_log_file);
-    }
-}
+echo "Archivo de log creado y transferido.";
 ?>
