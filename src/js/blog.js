@@ -48,9 +48,9 @@ jQuery(document).ready(function($) {
         });
     }
 
-    async function actualizarVista() {
-        const html = await generarTabla(datosPagina);
+    async function actualizarVista() {        
         let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
+        const html = await generarTabla(datosPagina);
         $('#container_blogs').html(html);
         truncateText('.p-description-blog', 320); 
         generarPaginado(paginas);
