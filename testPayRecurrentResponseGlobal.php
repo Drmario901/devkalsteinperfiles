@@ -34,7 +34,13 @@ $data = [
 ];
 
 $local_log_file = 'monetico_log_recurrent.txt';
-file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n", FILE_APPEND);
+$log_message = date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n";
+file_put_contents($local_log_file, $log_message, FILE_APPEND);
+
+if (!file_exists($local_log_file)) {
+    echo "ERROR: El archivo de log local no se creó.";
+    exit;
+}
 
 function ftp_mkdir_recursive($ftp_conn, $dir) {
     $parts = explode('/', $dir);
@@ -84,9 +90,13 @@ function log_to_host($host_config, $local_log_file) {
 $log_message = date('Y-m-d H:i:s') . " - Log de prueba para verificación.\n";
 file_put_contents($local_log_file, $log_message, FILE_APPEND);
 
-foreach ($allowed_hosts as $host_config) {
+foreach ($allowed_hosts as $host => $host_config) {
     log_to_host($host_config, $local_log_file);
 }
 
-echo "Archivo de log creado y transferido.";
+if (file_exists($local_log_file)) {
+    echo "Archivo de log creado y transferido.";
+} else {
+    echo "ERROR: El archivo de log no se creó.";
+}
 ?>
