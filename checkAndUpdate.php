@@ -236,4 +236,5 @@ foreach ($lastRecords as $record) {
 }
 
 logMessage("Procesamiento completado.");
+logMessage("--------------------------------------------");
 ?>
