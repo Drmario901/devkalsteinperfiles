@@ -79,7 +79,7 @@ const datos = [
   },
   {
     item: [
-      "Servicios de Marketing Estrategia SEO dirigida al país del distribuidor-Creacion de Contenido (Blog) (40 al mes)-Creacion de contenido (Guias informativas) (10)",
+      "Servicios de Marketing Estrategia SEO dirigida al país del distribuidor<br> -Creacion de Contenido (Blog) (40 al mes)<br>-Creacion de contenido (Guias informativas) (10)",
       "❌",
       "❌",
       "✅",
