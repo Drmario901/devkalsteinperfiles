@@ -81,7 +81,7 @@
                         $guideDescription = $row['guide_description'];
                         $guideImg = $row['guide_img_url'];
                         $guideDetail = $row['guide_detail_number'];
-                        if ($guideDetail === 1) {
+                        if ($guideDetail == '1') {
                             echo "<div class='col-md-4 text-sm-start text-md-center'>
                                 <h5>
                                 <i class='fas fa-pen'></i>
