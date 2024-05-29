@@ -11,6 +11,9 @@
     $fila = mysqli_fetch_array($resultado);
     $fila2 = mysqli_fetch_array($resultado2);
 
+    $fecha = new DateTime($fila['art_date']);
+    $fecha_formateada = $fecha->format('j') . ' de ' . strftime('%B', $fecha->getTimestamp()) . ' de ' . $fecha->format('Y');
+
     $contenedorHTML = '
                 <div>
                     <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0; font-weight: 600; font-size: 2.5em">'.$fila['art_title'].'</h2>
@@ -26,7 +29,7 @@
                         <path fill="#777"
                             d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
                     </svg>
-                    8 de mayo de 2024
+                    '.$fecha_formateada.'
                 </p>
                 <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                     consectetur
