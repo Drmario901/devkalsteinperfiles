@@ -139,7 +139,7 @@
     /* Media Querys */
     @media(max-width: 1100px) {
         .titulos_subs {
-            margin-right: 20px;
+            margin-left: 20px;
         }
     }
 </style>
