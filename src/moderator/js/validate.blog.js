@@ -1,4 +1,6 @@
 var verify = false;
+var plugin_dir =
+  "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
 
 jQuery(document).ready(function ($) {
   // IDs de los checkboxes a validar
@@ -91,7 +93,7 @@ jQuery(document).ready(function ($) {
               let artId = "<?php echo $artId; ?>";
 
               $.ajax({
-                url: "your_validate_url.php",
+                url: plugin_dir + "php/moderator/validateBlog.php",
                 type: "POST",
                 data: { artId },
               })
@@ -103,7 +105,8 @@ jQuery(document).ready(function ($) {
                       message: "Validation successful!",
                       position: "center",
                     });
-                    window.location.href = "your_redirect_url.php";
+                    window.location.href =
+                      "https://dev.kalstein.plus/plataforma/moderator/blog/";
                   } else {
                     iziToast.error({
                       overlay: true,
