@@ -10,7 +10,7 @@
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    table-layout: auto;
   }
 
   .membership-table th,
@@ -18,14 +18,12 @@
     text-align: center;
     padding: 5px;
     border: 1px solid #ddd;
-    max-width: 3rem;
 
   }
 
   .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
-    width: 10rem;
   }
 
   .membership-table tr:nth-child(even) {
