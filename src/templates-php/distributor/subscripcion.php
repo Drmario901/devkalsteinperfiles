@@ -137,11 +137,11 @@
     }
 
     /* Media Querys */
-    /* @media(max-width: 1199px) {
+    @media(max-width: 1199px) {
         .titulos_subs {
             margin-left: 20px;
         }
-    } */
+    }
 </style>
 
 <header class="header" data-header>
@@ -183,7 +183,7 @@
             <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
         </div>
         <?php if ($mebresia != 0) : ?>
-            <div style="font-weight: 600; margin-right: 20px;">
+            <div style="font-weight: 500; margin-right: 20px;">
                 <p class="fechas_subs">
                     <b>Fecha Inicial:</b>
                     <b style="font-weight: 400;"> <?php echo $fechaInicial ?> </b>
