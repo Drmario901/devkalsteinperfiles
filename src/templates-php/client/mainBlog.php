@@ -160,7 +160,7 @@
                                     $resultado3 = $conexion->query($sql3);
                                     $row3 = mysqli_fetch_array($resultado3);
                                     $store = $row3[2];
-                                    $slug = $row2[19];
+                                    $slug = $row2['ID_slug'];
 
                                     echo '
                                         <div id="btn_view_art_destacado" class="contenedor_vistaprevia_destacados btn_ver_articulo" meta-id="'.$fila['art_id'].'"
