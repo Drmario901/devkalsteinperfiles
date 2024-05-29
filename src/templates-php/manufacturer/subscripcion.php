@@ -148,6 +148,10 @@
 
     $mebresia = $_SESSION['tipo_membresia'];
     // echo  'Membresiaaa' . $mebresia;
+
+    //Sessions
+    $session = $_SESSION;
+    var_dump('La sesion ', $session);
     ?>
     <script>
         let page = "home";
@@ -165,8 +169,14 @@
         </div>
         <?php if ($mebresia != 0) : ?>
             <div style="font-weight: 600;">
-                <p>Fecha Inicial: </p>
-                <p>Fecha Final: </p>
+                <p>
+                    <b>Fecha Inicial:</b>
+                    <b></b>
+                </p>
+                <p>
+                    <b>Fecha Final:</b>
+                    <b></b>
+                </p>
             </div>
         <?php endif ?>
     </div>
