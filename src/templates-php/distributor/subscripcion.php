@@ -9,7 +9,7 @@ section {
     font-size: 1.5em;
 }
 
-.fa-solid .fa-circle-exclamation {
+.fa-circle-exclamation {
   font-size: 12px;
 }
 
