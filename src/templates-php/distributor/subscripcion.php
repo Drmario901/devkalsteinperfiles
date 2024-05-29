@@ -5,6 +5,10 @@
     padding-bottom: 2rem;
   }
 
+  .fa-solid {
+    font-size: 1.5em;
+  }
+
   .membership-table {
     width: 100%;
     border-collapse: collapse;
@@ -16,6 +20,7 @@
   .membership-table td {
     text-align: center;
     padding: 1em 1.5em;
+    border: 1px solid #c9c9c9;
   }
 
   .membership-table th {
