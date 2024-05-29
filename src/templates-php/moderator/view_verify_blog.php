@@ -1,59 +1,83 @@
 <header class="header" data-header>
 
     <?php
-
-        include 'navbar.php';
-    
+    require __DIR__ . '/../../../php/conexion.php';
+    include 'navbar.php';
+    if (isset($_GET['artid'])) {
+        $artId = $_GET['artid'];
+    } else {
+        $artId = '';
+    }
     ?>
     <script>
-    let page = "home";
+        let page = "home";
 
-    document.querySelector('#link-' + page).classList.add("active");
-    document.querySelector('#link-' + page).removeAttribute("style");
+        document.querySelector('#link-' + page).classList.add("active");
+        document.querySelector('#link-' + page).removeAttribute("style");
     </script>
 </header>
 
 <style>
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    border-radius: 12px;
-    margin: 0;
-}
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border-radius: 12px;
+        margin: 0;
+    }
 
-h5,
-p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-align: start;
-}
+    h5,
+    p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: start;
+    }
 
-h5 {
-    font-weight: 700;
-}
+    h5 {
+        font-weight: 700;
+    }
 
-.card-header {
-    background-color: white;
-}
+    .card-header {
+        background-color: white;
+    }
 </style>
 
 <main>
     <article class="container article">
-        <h4>Validar artículo</h4>
+        <?php
+
+        $sql = "SELECT wp_art_blog.*, wp_art_details.* FROM wp_art_blog INNER JOIN wp_art_details on wp_art_blog.art_id = wp_art_details.art_id WHERE wp_art_blog.art_id = '$artId'";
+
+        $result = $conexion->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $artTitle = $row['art_title'];
+            $artDescription = $row['art_principal_description'];
+            $artImg = $row['art_img'];
+            $artSubtitulo1 = $row['art_subtitle'];
+            $artSubtitulo2 = $row['art_subtitle_2'];
+            $artSubtitulo3 = $row['art_subtitle_3'];
+            $artDescription = $row['art_description'];
+            $artDescription2 = $row['art_description_2'];
+            $artDescription3 = $row['art_description_3'];
+
+        }
+
+        echo "<h4>Validar artículo</h4>
         <p>Por favor, revisa la información del artículo y marca con un check los datos que sean válidos.</p>
         <div class='card mb-3'>
             <div class='row'>
                 <div class='col-md-4 text-sm-start text-md-center'>
                     <h5>
                         <i class='fas fa-pen'></i>
-                        Titulo del Artículo
+                        $artTitle
                         <input class='d-inline' type='checkbox' id='name'>
                     </h5>
                     <h6 class='text-start'>Lorem Ipsum</h6>
                     <a TARGET='_blank' href='#'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                            width=200 src='https://pbs.twimg.com/media/FbjFOaIWAAEvrkG.png'>
+                            width=200 src='$artImg'>
                     </a>
 
                     <!-- Enlaces o promociones -->
@@ -77,25 +101,7 @@ h5 {
                     </h5>
                     <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
-                            arcu. Nunc dictum nibh lorem. In hac habitasse platea dictumst. Pellentesque habitant morbi
-                            tristique senectus et netus et malesuada fames ac turpis egestas. Donec vitae enim feugiat,
-                            blandit dolor at, placerat ex. Nullam finibus ex in quam elementum tempor. Mauris et
-                            sollicitudin velit, vel elementum neque. Nullam facilisis iaculis ligula, quis euismod ipsum
-                            lacinia sit amet. Proin tincidunt sapien in leo volutpat dignissim. Quisque porta urna vitae
-                            lacus ultricies, ut blandit diam pellentesque. Aliquam erat volutpat. Cras sit amet placerat
-                            eros, id tempor quam. Cras varius placerat posuere.
-
-                            Integer nisl massa, pretium eget dictum a, posuere ut purus. Pellentesque cursus turpis et
-                            semper ultrices. Phasellus at vehicula erat. Pellentesque tincidunt euismod erat sit amet
-                            malesuada. Aenean sodales tincidunt tellus quis dictum. Aenean dapibus rutrum feugiat.
-                            Maecenas dignissim, nulla at sagittis sagittis, justo arcu egestas massa, vel fringilla ex
-                            magna non massa. Maecenas nec ullamcorper ligula. Morbi sapien tellus, iaculis in mollis eu,
-                            dapibus sit amet urna. Suspendisse a ipsum quis libero accumsan tempus. Aenean rhoncus
-                            posuere lectus. Suspendisse facilisis nec justo ac auctor. Vivamus in quam in quam hendrerit
-                            scelerisque vitae nec enim. Nunc libero nisl, aliquam vitae mauris eu, suscipit fermentum
-                            nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                            curae; Nam vitae ex luctus, mattis velit id, sollicitudin arcu.</p>
+                            $artDescription</p>
                     </div>
                     <p>
                         <label for=''>Links or self-promotion</label>
@@ -117,7 +123,7 @@ h5 {
                     Título de extracto #1
                     <input class='d-inline' type='checkbox' id='name'>
                 </h5>
-                <h6 class='text-start'>Lorem Ipsum</h6>
+                <h6 class='text-start'>$artSubtitulo1</h6>
 
             </div>
             <div class='row mt-3'>
@@ -127,25 +133,7 @@ h5 {
                 </h5>
                 <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                     <p style='text-align: justify;'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
-                        arcu. Nunc dictum nibh lorem. In hac habitasse platea dictumst. Pellentesque habitant morbi
-                        tristique senectus et netus et malesuada fames ac turpis egestas. Donec vitae enim feugiat,
-                        blandit dolor at, placerat ex. Nullam finibus ex in quam elementum tempor. Mauris et
-                        sollicitudin velit, vel elementum neque. Nullam facilisis iaculis ligula, quis euismod ipsum
-                        lacinia sit amet. Proin tincidunt sapien in leo volutpat dignissim. Quisque porta urna vitae
-                        lacus ultricies, ut blandit diam pellentesque. Aliquam erat volutpat. Cras sit amet placerat
-                        eros, id tempor quam. Cras varius placerat posuere.
-
-                        Integer nisl massa, pretium eget dictum a, posuere ut purus. Pellentesque cursus turpis et
-                        semper ultrices. Phasellus at vehicula erat. Pellentesque tincidunt euismod erat sit amet
-                        malesuada. Aenean sodales tincidunt tellus quis dictum. Aenean dapibus rutrum feugiat. Maecenas
-                        dignissim, nulla at sagittis sagittis, justo arcu egestas massa, vel fringilla ex magna non
-                        massa. Maecenas nec ullamcorper ligula. Morbi sapien tellus, iaculis in mollis eu, dapibus sit
-                        amet urna. Suspendisse a ipsum quis libero accumsan tempus. Aenean rhoncus posuere lectus.
-                        Suspendisse facilisis nec justo ac auctor. Vivamus in quam in quam hendrerit scelerisque vitae
-                        nec enim. Nunc libero nisl, aliquam vitae mauris eu, suscipit fermentum nunc. Vestibulum ante
-                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam vitae ex luctus,
-                        mattis velit id, sollicitudin arcu.</p>
+                    $artDescription.</p>
                 </div>
                 <p>
                     <label for=''>Links or self-promotion</label>
@@ -166,7 +154,7 @@ h5 {
                     Título de extracto #2
                     <input class='d-inline' type='checkbox' id='name'>
                 </h5>
-                <h6 class='text-start'>Lorem Ipsum</h6>
+                <h6 class='text-start'>$artSubtitulo2</h6>
 
             </div>
             <div class='row mt-3'>
@@ -176,25 +164,7 @@ h5 {
                 </h5>
                 <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                     <p style='text-align: justify;'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
-                        arcu. Nunc dictum nibh lorem. In hac habitasse platea dictumst. Pellentesque habitant morbi
-                        tristique senectus et netus et malesuada fames ac turpis egestas. Donec vitae enim feugiat,
-                        blandit dolor at, placerat ex. Nullam finibus ex in quam elementum tempor. Mauris et
-                        sollicitudin velit, vel elementum neque. Nullam facilisis iaculis ligula, quis euismod ipsum
-                        lacinia sit amet. Proin tincidunt sapien in leo volutpat dignissim. Quisque porta urna vitae
-                        lacus ultricies, ut blandit diam pellentesque. Aliquam erat volutpat. Cras sit amet placerat
-                        eros, id tempor quam. Cras varius placerat posuere.
-
-                        Integer nisl massa, pretium eget dictum a, posuere ut purus. Pellentesque cursus turpis et
-                        semper ultrices. Phasellus at vehicula erat. Pellentesque tincidunt euismod erat sit amet
-                        malesuada. Aenean sodales tincidunt tellus quis dictum. Aenean dapibus rutrum feugiat. Maecenas
-                        dignissim, nulla at sagittis sagittis, justo arcu egestas massa, vel fringilla ex magna non
-                        massa. Maecenas nec ullamcorper ligula. Morbi sapien tellus, iaculis in mollis eu, dapibus sit
-                        amet urna. Suspendisse a ipsum quis libero accumsan tempus. Aenean rhoncus posuere lectus.
-                        Suspendisse facilisis nec justo ac auctor. Vivamus in quam in quam hendrerit scelerisque vitae
-                        nec enim. Nunc libero nisl, aliquam vitae mauris eu, suscipit fermentum nunc. Vestibulum ante
-                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam vitae ex luctus,
-                        mattis velit id, sollicitudin arcu.</p>
+                    $artDescription2.</p>
                 </div>
                 <p>
                     <label for=''>Links or self-promotion</label>
@@ -214,7 +184,7 @@ h5 {
                     Título de extracto #3
                     <input class='d-inline' type='checkbox' id='name'>
                 </h5>
-                <h6 class='text-start'>Lorem Ipsum</h6>
+                <h6 class='text-start'>$artSubtitulo3</h6>
 
             </div>
             <div class='row mt-3'>
@@ -224,25 +194,7 @@ h5 {
                 </h5>
                 <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                     <p style='text-align: justify;'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus purus, id bibendum
-                        arcu. Nunc dictum nibh lorem. In hac habitasse platea dictumst. Pellentesque habitant morbi
-                        tristique senectus et netus et malesuada fames ac turpis egestas. Donec vitae enim feugiat,
-                        blandit dolor at, placerat ex. Nullam finibus ex in quam elementum tempor. Mauris et
-                        sollicitudin velit, vel elementum neque. Nullam facilisis iaculis ligula, quis euismod ipsum
-                        lacinia sit amet. Proin tincidunt sapien in leo volutpat dignissim. Quisque porta urna vitae
-                        lacus ultricies, ut blandit diam pellentesque. Aliquam erat volutpat. Cras sit amet placerat
-                        eros, id tempor quam. Cras varius placerat posuere.
-
-                        Integer nisl massa, pretium eget dictum a, posuere ut purus. Pellentesque cursus turpis et
-                        semper ultrices. Phasellus at vehicula erat. Pellentesque tincidunt euismod erat sit amet
-                        malesuada. Aenean sodales tincidunt tellus quis dictum. Aenean dapibus rutrum feugiat. Maecenas
-                        dignissim, nulla at sagittis sagittis, justo arcu egestas massa, vel fringilla ex magna non
-                        massa. Maecenas nec ullamcorper ligula. Morbi sapien tellus, iaculis in mollis eu, dapibus sit
-                        amet urna. Suspendisse a ipsum quis libero accumsan tempus. Aenean rhoncus posuere lectus.
-                        Suspendisse facilisis nec justo ac auctor. Vivamus in quam in quam hendrerit scelerisque vitae
-                        nec enim. Nunc libero nisl, aliquam vitae mauris eu, suscipit fermentum nunc. Vestibulum ante
-                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam vitae ex luctus,
-                        mattis velit id, sollicitudin arcu.</p>
+                        $artDescription3.</p>
                 </div>
                 <p>
                     <label for=''>Links or self-promotion</label>
@@ -268,6 +220,7 @@ h5 {
             </button>
         </div>
         <div class='card my-3'>
-            <h5>Past warnings</h5>
+            <h5>Past warnings</h5>";
+        ?>
     </article>
 </main>
