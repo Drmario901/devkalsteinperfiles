@@ -45,7 +45,7 @@
                 <img src="'.$fila['art_img'].'"
                     width="400">
                 <p style="font-family: Roboto; color: #777">
-                    <svg style="display: inline; width:15px; height:15px;"
+                    <svg style="display: inline; width: 16px; height:15px; margin-bottom: 5px;"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path fill="#777"
