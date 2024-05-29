@@ -4505,7 +4505,6 @@ jQuery(document).ready(function ($) {
 
   $(document).on('click', '#blog_articulos', function(){
     let id = $(this).val()
-    console.log(id)
     renderArticulo(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
@@ -4524,7 +4523,6 @@ jQuery(document).ready(function ($) {
 
   $(document).on('click', '#btn_view_art_destacado', function(){
     let id = $(this).attr('meta-id')
-    console.log(id)
     renderArticulo(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
