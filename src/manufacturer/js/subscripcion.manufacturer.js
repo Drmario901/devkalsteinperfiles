@@ -10,16 +10,16 @@ const datos = [
   {
     item: [
       "Agente de Logística Asignado (Atención Personalizada (Vía Correo/WhastApp/Llamada telefónica)",
-      "✅",
-      "✅",
-      "✅",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   {
-    item: ["Tracking Global de Pedidos", "✅", "✅", "✅"],
+    item: ["Tracking Global de Pedidos", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
-    item: ["Seguro de envíos nacionales e internacionales", "✅", "✅", "✅"],
+    item: ["Seguro de envíos nacionales e internacionales", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: [
@@ -30,35 +30,35 @@ const datos = [
     ],
   },
   {
-    item: ["Dashboard Personalizado", "✅", "✅", "✅"],
+    item: ["Dashboard Personalizado", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
-    item: ["Acceso de App Móvil Kalstein", "✅", "✅", "✅"],
+    item: ["Acceso de App Móvil Kalstein", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: [
       "Acceso Ilimitado a Contenido (Manuales, Catálogos, Certificados)",
-      "✅",
-      "✅",
-      "✅",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   {
     item: [
       "Mensajería Directa (Fábrica/Distribuidores/Servicio Técnico/Usuarios)",
-      "✅",
-      "✅",
-      "✅",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   {
-    item: ["Soporte Técnico Online", "✅", "✅", "✅"],
+    item: ["Soporte Técnico Online", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
-    item: ["1 Hora Gratuita de Inducción Técnica Online", "✅", "✅", "✅"],
+    item: ["1 Hora Gratuita de Inducción Técnica Online", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
-    item: ["Recomendación de Modelos por IA", "✅", "✅", "✅"],
+    item: ["Recomendación de Modelos por IA", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: [
@@ -69,10 +69,10 @@ const datos = [
     ],
   },
   {
-    item: ["Verificación Kalstein", "✅", "✅", "✅"],
+    item: ["Verificación Kalstein", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
-    item: ["Módulo de Cotizaciones Personalizadas", "✅", "✅", "✅"],
+    item: ["Módulo de Cotizaciones Personalizadas", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: ["Descuentos Exclusivos", "18%", "18%", "18% a 41% solo miembros"],
@@ -80,39 +80,39 @@ const datos = [
   {
     item: [
       "Servicios de Marketing Estrategia SEO dirigida al país del distribuidor-Creacion de Contenido (Blog) (40 al mes)-Creacion de contenido (Guias informativas) (10)",
-      "❌",
-      "❌",
-      "✅",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   {
-    item: ["Publicidad en Banners de Kalstein", "❌", "❌", "✅"],
+    item: ["Publicidad en Banners de Kalstein", "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>", "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
-    item: ["Productos 3D del Negocio (10)", "❌", "❌", "✅"],
+    item: ["Productos 3D del Negocio (10)", "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>", "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: [
       "Créditos Kalstein (Tipo I, II y III. Solo para Europa)",
-      "❌",
-      "❌",
-      "✅",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   {
     item: [
       "Descuento del 4% sobre todos los tipos de envíos con Kalstein (Avión, Mar, Courier)",
-      "❌",
-      "❌",
-      "✅",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   {
     item: [
       "Opción de Dropshipping (30 productos al mes, tamaños y pesos estándares)",
-      "❌",
-      "❌",
-      "✅",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
+      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
   },
   // Puedes añadir más objetos con la misma estructura para más filas
