@@ -10,7 +10,7 @@
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    table-layout: auto;
   }
 
   .membership-table th,
@@ -18,14 +18,12 @@
     text-align: center;
     padding: 5px;
     border: 1px solid #ddd;
-    max-width: 3rem;
 
   }
 
   .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
-    width: 10rem;
   }
 
   .membership-table tr:nth-child(even) {
@@ -46,7 +44,6 @@
     letter-spacing: 0px;
     display: inline-block;
     padding-top: 0.5rem;
-    margin-left: 3rem;
   }
 
   .title_k::before {
@@ -55,9 +52,9 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 25%;
+    width: 60px;
     /* Ancho de la barra como porcentaje del elemento */
-    height: 5px;
+    height: 4px;
     /* Altura de la barra */
     background-color: #213280;
     /* Color de la barra */
@@ -202,14 +199,13 @@
 <section style="margin-top: 2rem;">
 
   <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-  <p style="margin-left: 3rem; color: #213280; font-weight: 700;">Planes de Membresía</p>
-  <p style="margin-left: 3rem; font-weight: 600;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</p>
+  <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
 
   <table class="membership-table">
     <thead>
       <tr id="tr-titles">
         <!-- Los títulos se llenarán aquí -->
-        <th>Facturación mensual</th>
+        <th>Facturación mensual<br><span style="color: black; font-weight: 500;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</span></th>
         <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 1</th>
         <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 2</th>
         <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
