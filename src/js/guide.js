@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
         
         for (const fila of datos) {
             let response = await searchNameStore(fila.guide_user_id);
-            let response2 = await searchGuidesDetails(fila.guide_user_id);
+            let response2 = await searchGuidesDetails(fila.guide_id);
             let author = JSON.parse(response).store
             let slug = JSON.parse(response).slug
             let image = JSON.parse(response2).image
