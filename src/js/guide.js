@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
 
     function searchGuidesDetails(idAccount) {
         return $.ajax({
-            url: plugin_dir + '/php/consultAuthor.php',
+            url: plugin_dir + '/php/guidesDetails.php',
             type: "POST",
             data: { idAccount },
         });
