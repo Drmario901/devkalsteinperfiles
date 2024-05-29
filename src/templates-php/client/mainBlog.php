@@ -164,7 +164,7 @@
                                     echo '
                                         <div id="btn_view_art_destacado" class="contenedor_vistaprevia_destacados btn_ver_articulo" meta-id="'.$fila['art_id'].'"
                                         style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
-                                            <div class="thumbnail_guia">
+                                            <div class="thumbnail_guia" style="min-height: 150px;">
                                                 <img src="'.$fila['art_img'].'"
                                                     alt="guia" width="150" />
                                             </div>
