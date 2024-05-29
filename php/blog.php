@@ -1,7 +1,7 @@
 <?php
     require_once __DIR__ . '/../db/conexion.php';
 
-    $sql = "SELECT * FROM wp_art_blog WHERE id_status = '1'";
+    $sql = "SELECT * FROM wp_art_blog WHERE id_status = '1' ORDER BY art_date DESC";
 
     $resultado = $conexion->query($sql);
 

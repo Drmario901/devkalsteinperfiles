@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     let todos = [];
     let paginaActual = 1;
-    let itemsPorPagina = 4; // Define cuántos items quieres por página
+    let itemsPorPagina = 8; // Define cuántos items quieres por página
     let paginas = 0;
 
     // Simulamos la carga inicial de datos

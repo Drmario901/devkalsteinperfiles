@@ -4517,6 +4517,21 @@ jQuery(document).ready(function ($) {
     $("#c-panel15").css({ display: "block" });
     $("#c-panel16").css({ display: "none" });
     $("#c-panel17").css({ display: "none" });
-    console.log('adasdasdasdasdada')
+  })
+
+  $(document).on('click', '#btn_view_art_destacado', function(){
+    window.scrollTo(0, 0);
+    $("#c-panel01").css({ display: "none" });
+    $("#c-panel02").css({ display: "none" });
+    $("#c-panel03").css({ display: "none" });
+    $("#c-panel04").css({ display: "none" });
+    $("#c-panel05").css({ display: "none" });
+    $("#c-panel06").css({ display: "none" });
+    $("#c-panel07").css({ display: "none" });
+    $("#c-panel08").css({ display: "none" });
+    $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "block" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
   })
 });
