@@ -4544,6 +4544,7 @@ jQuery(document).ready(function ($) {
       type: "POST",
       data: { id },
       success: function(response) {
+        console.log(response)
           // Simulamos una respuesta con datos
           $('#contenido_articulo').html(response);
           
