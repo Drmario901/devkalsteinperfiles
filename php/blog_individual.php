@@ -200,4 +200,4 @@
     // header('Content-Type: application/json');
     // echo json_encode($datos);
 
-    echo $$contenedorHTML;
+    echo $contenedorHTML;

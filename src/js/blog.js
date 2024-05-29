@@ -368,8 +368,11 @@ jQuery(document).ready(function($) {
     }
 
     $(document).on('click', '#blog_articulos', function(){
+        let id = $(this).val()
         $.ajax({
             url: plugin_dir + '/php/blog_individual.php',
+            type: "POST",
+            data: { id },
             success: function(response) {
                 // Simulamos una respuesta con datos
                 $('.contenido_articulo').html(response);
