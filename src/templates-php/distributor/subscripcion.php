@@ -15,7 +15,7 @@
   .membership-table th,
   .membership-table td {
     text-align: center;
-    padding: 30px;
+    padding: 1em 1.5em;
   }
 
   .membership-table th {
