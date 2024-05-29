@@ -114,7 +114,7 @@
     <?php
         require_once '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/db/conexion.php';
 
-        $sql = "SELECT * FROM wp_art_blog ORDER BY art_views DESC LIMIT 3";
+        $sql = "SELECT * FROM wp_art_blog WHERE id_status = '1' ORDER BY art_views DESC LIMIT 3";
         $resultado = $conexion->query($sql);
     ?>
 
