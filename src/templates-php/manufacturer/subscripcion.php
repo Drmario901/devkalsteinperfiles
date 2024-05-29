@@ -9,6 +9,13 @@ section {
     font-size: 1.5em;
 }
 
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .membership-table {
     width: 100%;
     border-collapse: collapse;
@@ -110,7 +117,7 @@ html a:hover,
 
 
 .btn-tbl-cancelar:hover {
-    box-shadow: 0px 0px 20px -4px rgba(255,58,70, 0.83);
+    box-shadow: 0px 0px 20px -4px rgba(255, 58, 70, 0.83);
 }
 
 html a:hover,
@@ -154,35 +161,38 @@ html a:hover,
     <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
     <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
 
-    <table class="membership-table">
-        <thead>
-            <tr id="tr-titles">
-                <!-- Los títulos se llenarán aquí -->
-                <th style="font-size: 1.35em">Facturación mensual<br><span
-                        style="color: black; font-weight: 500; font-size: 14px;">Estos planes están diseñados para
-                        ofrecer un soporte sin precedentes.</span></th>
-                <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
+    <div class="table-responsive">
+        <table class="membership-table">
+            <thead>
+                <tr id="tr-titles">
+                    <!-- Los títulos se llenarán aquí -->
+                    <th style="font-size: 1.35em">Facturación mensual<br><span
+                            style="color: black; font-weight: 500; font-size: 14px;">Estos planes están diseñados para
+                            ofrecer un soporte sin precedentes.</span></th>
+                    <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
-                    Membresía 1<br>
-                </th>
-                <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; 
+                        <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
+                        Membresía 1<br>
+                    </th>
+                    <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 1) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
-                    Membresía 2<br>
-                </th>
-                <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; 
+                        <?php if ($membresia == 1) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
+                        Membresía 2<br>
+                    </th>
+                    <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 2) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
-                    Membresía 3<br>
-                </th>
+                        <?php if ($membresia == 2) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
+                        Membresía 3<br>
+                    </th>
 
-            </tr>
-        </thead>
-        <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
-            <!-- Los datos se llenarán aquí -->
-        </tbody>
-    </table>
+                </tr>
+            </thead>
+            <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
+                <!-- Los datos se llenarán aquí -->
+            </tbody>
+        </table>
+
+    </div>
 
     <div style="margin-top: 15px">
         <div style="line-height: 1.5em">

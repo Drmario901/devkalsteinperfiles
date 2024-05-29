@@ -123,6 +123,12 @@ foreach ($lines as $line) {
         }
         logMessage("userID extraído: " . $userID);
 
+        $domainSub = null;
+        if (preg_match('/domain:\s*([\w.-]+)/', $dataArray['texte-libre'], $matches2)) {
+            $domainSub = $matches2[1];
+        }
+        logMessage("Domain extraído: " . $domainSub);
+
         $sql = "SELECT account_aid FROM wp_account WHERE user_tag = '$userID'";
         $result = $conexion->query($sql);
         if (!$result) {
@@ -170,12 +176,12 @@ foreach ($lines as $line) {
         }
 
         // Depuración adicional para verificar las variables
-        logMessage("Variables antes de la inserción - fechaInicio: $fechaInicio, fechaFinal: (calculando), paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID, retour: $retour");
+        logMessage("Variables antes de la inserción - fechaInicio: $fechaInicio, fechaFinal: (calculando), paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $userID, retour: $retour, domain: $domainSub");
 
         // Insertar el registro en la base de datos
         $insertSubs = $conexion->prepare("
-            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, user_id)
-            VALUES (?, ?, ?, ?, '1', ?, ?, ?)
+            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, dominio, user_id)
+            VALUES (?, ?, ?, ?, '1', ?, ?, ?,?)
         ");
         if (!$insertSubs) {
             logMessage("Error preparando la inserción en wp_subscripcion: " . $conexion->error);
@@ -190,7 +196,7 @@ foreach ($lines as $line) {
         // Más depuración justo antes de la inserción
         logMessage("Ejecutando inserción con valores - fechaInicio: $fechaInicio, fechaFinal: $fechaFinal, paymentReference: $paymentReference, montant: $montant, datetime: $datetime, userID: $accountID");
 
-        $insertSubs->bind_param("sssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $accountID);
+        $insertSubs->bind_param("ssssssss", $retour, $fechaInicio, $fechaFinal, $paymentReference, $montant, $datetime, $domainSub, $accountID);
         try {
             $insertSubs->execute();
             logMessage("Registro insertado para user_tag: $userID, referencia: $paymentReference");
@@ -249,4 +255,3 @@ foreach ($lastRecords as $record) {
 
 logMessage("Procesamiento completado.");
 logMessage("--------------------------------------------");
-?>
