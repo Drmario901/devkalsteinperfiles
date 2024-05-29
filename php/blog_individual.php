@@ -45,7 +45,7 @@
                 <img src="'.$fila['art_img'].'"
                     width="400">
                 <p style="font-family: Roboto; color: #777">
-                    <svg style="display: inline; width: 16px; height:15px; margin-bottom: 5px;"
+                    <svg style="display: inline; width: 16px; height:16px; margin-bottom: 2px;"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path fill="#777"
@@ -53,39 +53,7 @@
                     </svg>
                     '.$fecha_formateada.'
                 </p>
-                <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
-                    tempor
-                    tincidunt, nulla libero vehicula urna, nec porta tellus ipsum sollicitudin nisi. Sed
-                    eu feugiat
-                    arcu. Pellentesque vel purus vitae odio viverra scelerisque. Morbi faucibus, augue
-                    vel facilisis
-                    faucibus, orci ante consequat libero, vitae feugiat lectus libero in purus. Duis
-                    pretium
-                    eleifend ultrices. Phasellus suscipit eros augue. Sed feugiat, mi vel posuere
-                    dapibus, velit
-                    diam pulvinar eros, ut consequat ante neque sit amet sapien. Sed facilisis ac nisi
-                    non viverra.
-                    Fusce id molestie mi.
-                    <br><br>
-                    Phasellus suscipit, lacus sit amet sollicitudin lacinia, ipsum lorem eleifend
-                    ligula, at
-                    hendrerit risus sem luctus arcu. Donec aliquam turpis libero, nec auctor ex congue
-                    ac. Integer
-                    sodales ex non volutpat tincidunt. Donec erat orci, euismod non tincidunt ut, auctor
-                    sed neque.
-                    Nullam rutrum posuere nulla, vitae lobortis urna maximus ac. Nullam iaculis mi quam,
-                    luctus
-                    sodales nulla ullamcorper ac. Maecenas tempor pulvinar elit quis lobortis. Ut mollis
-                    risus a
-                    diam ultricies bibendum. Cras sodales, tortor eu venenatis varius, nisi odio
-                    sagittis lorem, sed
-                    congue purus elit at diam. Curabitur interdum tellus ut nisi viverra, ut maximus
-                    augue
-                    ullamcorper. Nam vitae tincidunt risus. Etiam sollicitudin suscipit nisl sed
-                    viverra. Nulla
-                    facilisi.
+                <p class="" style="font-family: Roboto;">'.$fila['art_principal_description'].'.
                 </p>
                 <div class="articulo_extracto">
                     <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">Subtitulo del
