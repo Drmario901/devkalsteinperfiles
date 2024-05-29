@@ -89,7 +89,7 @@
                     style="display: grid; grid-template-columns: 2fr 1fr; gap: 2em; margin: auto; max-width: 1140px; margin-top: 20px;">
                     <div class="contenedor_patron_css">
                         <main class="contenedor_principal" style="display: flex; justify-content: center;">
-                            <div class="contenido_articulo" style="display: grid; gap: 1.5em">
+                            <div id="contenido_articulo" class="contenido_articulo" style="display: grid; gap: 1.5em">
                                 
                             </div>
                         </main>

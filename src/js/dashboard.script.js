@@ -4545,7 +4545,7 @@ jQuery(document).ready(function ($) {
       data: { id },
       success: function(response) {
           // Simulamos una respuesta con datos
-          $('.contenido_articulo').html(response);
+          $('#contenido_articulo').html(response);
           
       },
       error: function() {
