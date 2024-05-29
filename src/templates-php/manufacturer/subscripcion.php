@@ -130,6 +130,11 @@
     .th-active {
         background-color: #213280;
     }
+
+    .fechas_subs {
+        display: flex;
+        flex-direction: column;
+    }
 </style>
 
 <header class="header" data-header>
@@ -171,13 +176,13 @@
         </div>
         <?php if ($mebresia != 0) : ?>
             <div style="font-weight: 600;">
-                <p>
+                <p class="fechas_subs">
                     <b>Fecha Inicial:</b>
-                    <b> <?php echo $fechaInicial ?> </b>
+                    <b style="font-weight: 400;"> <?php echo $fechaInicial ?> </b>
                 </p>
                 <p>
                     <b>Fecha Final:</b>
-                    <b> <?php echo $fechaFinal ?> </b>
+                    <b style="font-weight: 400;"> <?php echo $fechaFinal ?> </b>
                 </p>
             </div>
         <?php endif ?>
