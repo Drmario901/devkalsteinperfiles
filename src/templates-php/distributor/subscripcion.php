@@ -1,43 +1,43 @@
 <style>
-  section {
+section {
     font-family: Montserrat, Arial, sans-serif;
     /* margin: 3rem; */
     padding-bottom: 2rem;
-  }
+}
 
-  .fa-solid {
+.fa-solid {
     font-size: 1.5em;
-  }
+}
 
-  .membership-table {
+.membership-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     table-layout: auto;
-  }
+}
 
-  .membership-table th,
-  .membership-table td {
+.membership-table th,
+.membership-table td {
     text-align: center;
     padding: 1em 1.5em;
     border: 1px solid #c9c9c9;
-  }
+}
 
-  .membership-table th {
+.membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
-  }
+}
 
-  .membership-table tr:nth-child(even) {
+.membership-table tr:nth-child(even) {
     background-color: #f2f2f2
-  }
+}
 
-  .checkmark {
+.checkmark {
     color: #4CAF50;
     font-size: 1.5em;
-  }
+}
 
-  .title_k {
+.title_k {
     position: relative;
     color: var(--e-global-color-text);
     font-size: 1.7em;
@@ -46,9 +46,9 @@
     letter-spacing: 0px;
     display: inline-block;
     padding-top: 0.5rem;
-  }
+}
 
-  .title_k::before {
+.title_k::before {
     content: "";
     /* Necesario para que el pseudo-elemento se muestre */
     position: absolute;
@@ -63,10 +63,10 @@
     display: block;
     margin-bottom: 3px;
     padding-bottom: 2px;
-  }
+}
 
 
-  .btn-tbl {
+.btn-tbl {
     padding: 1.1em 2em;
     background: none;
     border: 2px solid #fff;
@@ -80,9 +80,9 @@
     background-color: #213280;
     font-weight: bolder;
     box-shadow: 0 2px 0 2px #000;
-  }
+}
 
-  .btn-tbl:before {
+.btn-tbl:before {
     content: "";
     position: absolute;
     width: 100px;
@@ -91,35 +91,35 @@
     top: 50%;
     transform: skewX(30deg) translate(-150%, -50%);
     transition: all 0.5s;
-  }
+}
 
-  .btn-tbl:hover {
+.btn-tbl:hover {
     background-color: #213280;
     color: #fff !important;
     box-shadow: 0 2px 0 2px #0d3b66;
-  }
+}
 
-  .btn-tbl:hover::before {
+.btn-tbl:hover::before {
     transform: skewX(30deg) translate(150%, -50%);
     transition-delay: 0.1s;
-  }
+}
 
-  .btn-tbl:active {
+.btn-tbl:active {
     transform: scale(0.9);
-  }
+}
 
-  html a:hover,
-  .btLightSkin a:hover,
-  .btn-tbl:hover {
+html a:hover,
+.btLightSkin a:hover,
+.btn-tbl:hover {
     text-decoration: none;
     color: #fff !important;
-  }
+}
 
-  .btn-nav-subs {
+.btn-nav-subs {
     color: #213280;
-  }
+}
 
-  .btn-tbl-cancelar {
+.btn-tbl-cancelar {
     padding: 1.1em 2em;
     background: none;
     border: 2px solid #fff;
@@ -133,9 +133,9 @@
     background-color: #c1121f;
     font-weight: bolder;
     box-shadow: 0 2px 0 2px #000;
-  }
+}
 
-  .btn-tbl-cancelar:before {
+.btn-tbl-cancelar:before {
     content: "";
     position: absolute;
     width: 100px;
@@ -144,38 +144,38 @@
     top: 50%;
     transform: skewX(30deg) translate(-150%, -50%);
     transition: all 0.5s;
-  }
+}
 
 
-  .btn-tbl-cancelar:hover {
+.btn-tbl-cancelar:hover {
     background-color: #c1121f;
     color: #fff !important;
     box-shadow: 0 2px 0 2px #c1121f;
-  }
+}
 
-  .btn-tbl-cancelar:hover::before {
+.btn-tbl-cancelar:hover::before {
     transform: skewX(30deg) translate(150%, -50%);
     transition-delay: 0.1s;
-  }
+}
 
-  .btn-tbl-cancelar:active {
+.btn-tbl-cancelar:active {
     transform: scale(0.9);
-  }
+}
 
-  html a:hover,
-  .btLightSkin a:hover,
-  .btn-tbl-cancelar:hover {
+html a:hover,
+.btLightSkin a:hover,
+.btn-tbl-cancelar:hover {
     text-decoration: none;
     color: #fff !important;
-  }
+}
 
-  .th-active {
+.th-active {
     background-color: #213280;
-  }
+}
 </style>
 
 <header class="header" data-header>
-  <?php
+    <?php
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
@@ -191,47 +191,55 @@
   $mebresia = $_SESSION['tipo_membresia'];
   // echo  'Membresiaaa' . $mebresia;
   ?>
-  <script>
+    <script>
     let page = "home";
     document.querySelector('#link-' + page).classList.add("active");
     document.querySelector('#link-' + page).removeAttribute("style");
-  </script>
+    </script>
 </header>
 
 <section style="margin-top: 2rem;">
 
-  <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-  <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
+    <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
+    <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
 
-  <table class="membership-table">
-    <thead>
-      <tr id="tr-titles">
-        <!-- Los títulos se llenarán aquí -->
-        <th>Facturación mensual<br><span style="color: black; font-weight: 500;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</span></th>
-        <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 1</th>
-        <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 2</th>
-        <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
-      </tr>
-    </thead>
-    <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
-      <!-- Los datos se llenarán aquí -->
-    </tbody>
-  </table>
+    <table class="membership-table">
+        <thead>
+            <tr id="tr-titles">
+                <!-- Los títulos se llenarán aquí -->
+                <th style="font-size: 1.35em">Facturación mensual<br><span
+                        style="color: black; font-weight: 500; font-size: 14px;">Estos planes están diseñados para
+                        ofrecer un soporte sin precedentes.</span></th>
+                <th id="th-membresia-1"
+                    style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
+                    Membresía 1<br>Gratis</th>
+                <th id="th-membresia-2"
+                    style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
+                    Membresía 2<br><span style="font-size: 1.35em">$59 al mes</span></th>
+                <th id="th-membresia-3"
+                    style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">
+                    Membresía 3<br><span style="font-size: 1.35em">$79 al mes</span></th>
+            </tr>
+        </thead>
+        <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
+            <!-- Los datos se llenarán aquí -->
+        </tbody>
+    </table>
 
-  <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
-    <?php if ($membresia != 0) : ?>
-      <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
-      <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
-    <?php endif; ?>
+    <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+        <?php if ($membresia != 0) : ?>
+        <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
+        <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
+        <?php endif; ?>
 
-    <?php if ($membresia != 1 && $membresia != 2) : ?>
-      <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
-    <?php endif; ?>
+        <?php if ($membresia != 1 && $membresia != 2) : ?>
+        <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
+        <?php endif; ?>
 
-    <?php if ($membresia != 2) : ?>
-      <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
-    <?php endif; ?>
-  </div>
+        <?php if ($membresia != 2) : ?>
+        <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
+        <?php endif; ?>
+    </div>
 
 </section>
 
