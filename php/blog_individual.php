@@ -21,6 +21,7 @@
     $resultado4 = $conexion->query($sql4);
     $row2 = mysqli_fetch_array($resultado4);
     $store = $row2[2];
+    $slug = $row2[19];
 
     $subtittle = !empty($fila2['art_subtitle']) ? $fila2['art_subtitle'] : '';
     $subdescription = !empty($fila2['art_description']) ? $fila2['art_description'] : '';
@@ -123,7 +124,7 @@
                     </div>
                     <hr style="height:2px; border:none; color:black; background-color:black; margin: 0" />
                     <h5
-                        style="font-family: Roboto; display: flex; align-items: center;">
+                        style="font-family: Roboto; display: flex; align-items: center;" meta-href=["'.$slug.'"]>
                         <svg style="display: inline; width:30px; height:30px; margin-right: 1em"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
