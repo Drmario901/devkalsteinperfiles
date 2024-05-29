@@ -162,7 +162,7 @@
                                     $store = $row3[2];
 
                                     echo '
-                                        <div class="contenedor_vistaprevia_destacados btn_ver_articulo" meta-id="'.$id.'"
+                                        <div id="btn_view_art_destacado" class="contenedor_vistaprevia_destacados btn_ver_articulo" meta-id="'.$fila['art_id'].'"
                                         style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                             <div class="thumbnail_guia">
                                                 <img src="'.$fila['art_img'].'"
