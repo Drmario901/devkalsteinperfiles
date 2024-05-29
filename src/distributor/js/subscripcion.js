@@ -9,7 +9,7 @@ const datos = [
   },
   {
     item: [
-      "Agente de Logística Asignado (Atención Personalizada (Vía Correo/WhastApp/Llamada telefónica)",
+      "Agente de Logística Asignado<br>Atención Personalizada (Vía Correo/WhastApp/Llamada telefónica)",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
