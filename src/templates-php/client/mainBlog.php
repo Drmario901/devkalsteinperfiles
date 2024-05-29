@@ -160,6 +160,7 @@
                                     $resultado3 = $conexion->query($sql3);
                                     $row3 = mysqli_fetch_array($resultado3);
                                     $store = $row3[2];
+                                    $slug = $row2[19];
 
                                     echo '
                                         <div id="btn_view_art_destacado" class="contenedor_vistaprevia_destacados btn_ver_articulo" meta-id="'.$fila['art_id'].'"
@@ -177,7 +178,7 @@
                                                         <path
                                                             d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                                                     </svg>
-                                                    &nbsp;Publicado por&nbsp;<span class="txt-author2">'.$store.'<span>
+                                                    &nbsp;Publicado por&nbsp;<span class="txt-author2" meta-href=["'.$slug.'"]>'.$store.'<span>
                                                 </p>
                                             </div>
                                         </div>

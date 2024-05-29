@@ -16,11 +16,13 @@
     $resultado2 = $conexion->query($sql2);
     $row2 = mysqli_fetch_array($resultado2);
     $store = $row2[2] ?? 'No tiene tienda';
+    $slug = $row2[19] ?? '';
 
 
     // header('Content-Type: application/json');
     // echo json_encode($datos);
 
     echo json_encode([
-        'store' => $store
+        'store' => $store,
+        'slug' => $slug
     ]);
