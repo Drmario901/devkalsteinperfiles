@@ -212,7 +212,7 @@ html a:hover,
                         ofrecer un soporte sin precedentes.</span></th>
                 <th id="th-membresia-1"
                     style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
-                    Membresía 1<br>Gratis</th>
+                    Membresía 1<br><span style="font-size: 1.35em">Gratis</span></th>
                 <th id="th-membresia-2"
                     style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
                     Membresía 2<br><span style="font-size: 1.35em">$59 al mes</span></th>
