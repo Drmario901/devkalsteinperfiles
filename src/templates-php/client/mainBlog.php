@@ -166,7 +166,7 @@
                                         style="padding: 10px; border-bottom: solid 1px #c9c9c9; cursor: pointer">
                                             <div class="thumbnail_guia" style="min-height: 150px;">
                                                 <img src="'.$fila['art_img'].'"
-                                                    alt="guia" width="150" />
+                                                    alt="guia" width="150" height="150"/>
                                             </div>
                                             <div class="contenido_guia" style="margin-top: 1em">
                                                 <h5 class="titulo_guia" style="font-family: Montserrat;">'.$fila['art_title'].'</h5>
