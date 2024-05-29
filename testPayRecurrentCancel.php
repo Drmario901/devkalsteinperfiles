@@ -80,7 +80,7 @@ $reference = $rowSubscripcion['referencia_pago'];
 $version = '3.0';
 $lgue = 'ES';
 $societe = 'kalsteinfr';
-$stoprecurrence = 'NON';
+$stoprecurrence = 'OUI';
 
 $fields = [
     'version' => $version,
