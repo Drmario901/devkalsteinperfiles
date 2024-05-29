@@ -137,11 +137,11 @@
     }
 
     /* Media Querys */
-    @media(max-width: 1199px) {
+    /* @media(max-width: 1199px) {
         .titulos_subs {
             margin-left: 20px;
         }
-    }
+    } */
 </style>
 
 <header class="header" data-header>
