@@ -249,8 +249,6 @@
                 }
                 ?>
 
-
-
                 <div class='card mb-3'>
                     <div class='row text-sm-start text-md-center'>
                         <h5>
