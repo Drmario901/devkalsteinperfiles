@@ -4504,6 +4504,9 @@ jQuery(document).ready(function ($) {
   }
 
   $(document).on('click', '#blog_articulos', function(){
+    let id = $(this).val()
+    renderArticulo(id)
+    blog_views_plus(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
@@ -4517,6 +4520,53 @@ jQuery(document).ready(function ($) {
     $("#c-panel15").css({ display: "block" });
     $("#c-panel16").css({ display: "none" });
     $("#c-panel17").css({ display: "none" });
-    console.log('adasdasdasdasdada')
   })
+
+  $(document).on('click', '#btn_view_art_destacado', function(){
+    let id = $(this).attr('meta-id')
+    renderArticulo(id)
+    blog_views_plus(id)
+    window.scrollTo(0, 0);
+    $("#c-panel01").css({ display: "none" });
+    $("#c-panel02").css({ display: "none" });
+    $("#c-panel03").css({ display: "none" });
+    $("#c-panel04").css({ display: "none" });
+    $("#c-panel05").css({ display: "none" });
+    $("#c-panel06").css({ display: "none" });
+    $("#c-panel07").css({ display: "none" });
+    $("#c-panel08").css({ display: "none" });
+    $("#c-panel09").css({ display: "none" });
+    $("#c-panel15").css({ display: "block" });
+    $("#c-panel16").css({ display: "none" });
+    $("#c-panel17").css({ display: "none" });
+  })
+
+  function renderArticulo(id){
+
+    $.ajax({
+      url: plugin_dir + '/php/blog_individual.php',
+      type: "POST",
+      data: { id },
+    })
+      .done(function (response) {
+        $("#contenido_articulo").html(response);
+    })
+    .fail(function () {
+      console.log("errorrr");
+    });
+  }
+
+  function blog_views_plus(id){
+    $.ajax({
+      url: plugin_dir + '/php/viewCountBlog.php',
+      type: "POST",
+      data: { id },
+    })
+      .done(function (response) {
+
+    })
+    .fail(function () {
+      console.log("errorrr");
+    });
+  }
 });
