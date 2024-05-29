@@ -109,4 +109,6 @@ foreach ($allowed_hosts as $host => $host_config) {
 if ($all_success) {
     echo "Archivo de log creado y transferido exitosamente.\n";
 }
+
+//hola
 ?>
