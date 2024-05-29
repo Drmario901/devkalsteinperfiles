@@ -15,7 +15,7 @@
   .membership-table th,
   .membership-table td {
     text-align: center;
-    padding: 5px;
+    padding: 30px;
   }
 
   .membership-table th {
@@ -208,7 +208,7 @@
         <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
       </tr>
     </thead>
-    <tbody id="tr-data">
+    <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
       <!-- Los datos se llenarán aquí -->
     </tbody>
   </table>
