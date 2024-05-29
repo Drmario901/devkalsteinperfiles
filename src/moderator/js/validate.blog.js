@@ -99,15 +99,15 @@ jQuery(document).ready(function ($) {
               })
                 .done(function (response) {
                   if (JSON.parse(response).status == "correcto") {
-                    console.log("response");
+                    //console.log("response");
                     iziToast.success({
                       overlay: true,
                       title: "Success",
                       message: "Validation successful!",
                       position: "center",
                     });
-                    /* window.location.href =
-                      "https://dev.kalstein.plus/plataforma/moderator/blog/"; */
+                    window.location.href =
+                      "https://dev.kalstein.plus/plataforma/moderator/blog/";
                   } else {
                     iziToast.error({
                       overlay: true,
