@@ -130,6 +130,18 @@
     .th-active {
         background-color: #213280;
     }
+
+    .fechas_subs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Media Querys */
+    @media(max-width: 1100px) {
+        .titulos_subs {
+            margin-left: 20px;
+        }
+    }
 </style>
 
 <header class="header" data-header>
@@ -150,8 +162,10 @@
     // echo  'Membresiaaa' . $mebresia;
 
     //Sessions
-    $session = $_SESSION;
-    var_dump('La sesion ', $session);
+    // $session = $_SESSION;
+    // var_dump('La sesion ', $session);
+    $fechaInicial = $_SESSION['fecha_inicio'];
+    $fechaFinal = $_SESSION['fecha_final'];
     ?>
     <script>
         let page = "home";
@@ -163,19 +177,19 @@
 <section style="margin-top: 2rem;">
 
     <div style="display: flex; justify-content: space-between;">
-        <div>
+        <div class="titulos_subs">
             <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
             <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
         </div>
         <?php if ($mebresia != 0) : ?>
-            <div style="font-weight: 600;">
-                <p>
+            <div style="font-weight: 600; margin-right: 20px;">
+                <p class="fechas_subs">
                     <b>Fecha Inicial:</b>
-                    <b></b>
+                    <b style="font-weight: 400;"> <?php echo $fechaInicial ?> </b>
                 </p>
-                <p>
+                <p class="fechas_subs">
                     <b>Fecha Final:</b>
-                    <b></b>
+                    <b style="font-weight: 400;"> <?php echo $fechaFinal ?> </b>
                 </p>
             </div>
         <?php endif ?>
