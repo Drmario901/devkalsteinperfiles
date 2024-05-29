@@ -124,7 +124,7 @@ foreach ($lines as $line) {
         logMessage("userID extraído: " . $userID);
 
         $domainSub = null;
-        if (preg_match('/domain:@([\w.-]+)/', $dataArray['texte-libre'], $matches2)) {
+        if (preg_match('/domain:\s*([\w.-]+)/', $dataArray['texte-libre'], $matches2)) {
             $domainSub = $matches2[1];
         }
         logMessage("Domain extraído: " . $domainSub);
