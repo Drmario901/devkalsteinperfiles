@@ -150,8 +150,10 @@
     // echo  'Membresiaaa' . $mebresia;
 
     //Sessions
-    $session = $_SESSION;
-    var_dump('La sesion ', $session);
+    // $session = $_SESSION;
+    // var_dump('La sesion ', $session);
+    $fechaInicial = $_SESSION['fecha_inicio'];
+    $fechaFinal = $_SESSION['fecha_final'];
     ?>
     <script>
         let page = "home";
@@ -171,11 +173,11 @@
             <div style="font-weight: 600;">
                 <p>
                     <b>Fecha Inicial:</b>
-                    <b></b>
+                    <b> <?php echo $fechaInicial ?> </b>
                 </p>
                 <p>
                     <b>Fecha Final:</b>
-                    <b></b>
+                    <b> <?php echo $fechaFinal ?> </b>
                 </p>
             </div>
         <?php endif ?>
