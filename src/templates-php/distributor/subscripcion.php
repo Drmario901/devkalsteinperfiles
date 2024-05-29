@@ -110,7 +110,7 @@ html a:hover,
 
 
 .btn-tbl-cancelar:hover {
-    box-shadow: 0px 0px 20px -4px rgba(255,58,70, 0.83);
+    box-shadow: 0px 0px 20px -4px rgba(255, 58, 70, 0.83);
 }
 
 html a:hover,
@@ -153,39 +153,41 @@ html a:hover,
 
     <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
     <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
-
-    <table class="membership-table">
-        <thead>
-            <tr id="tr-titles">
-                <!-- Los títulos se llenarán aquí -->
-                <th style="font-size: 1.35em">Facturación mensual<br><span
-                        style="color: black; font-weight: 500; font-size: 14px;">Estos planes están diseñados para
-                        ofrecer un soporte sin precedentes.</span></th>
-                <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
+    <div class="table-responsive">
+        <table class="membership-table">
+            <thead>
+                <tr id="tr-titles">
+                    <!-- Los títulos se llenarán aquí -->
+                    <th style="font-size: 1.35em">Facturación mensual<br><span
+                            style="color: black; font-weight: 500; font-size: 14px;">Estos planes están diseñados para
+                            ofrecer un soporte sin precedentes.</span></th>
+                    <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
-                    Membresía 1<br>
-                    <span style="font-size: 1.35em">Gratis</span>
-                </th>
-                <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; 
+                        <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
+                        Membresía 1<br>
+                        <span style="font-size: 1.35em">Gratis</span>
+                    </th>
+                    <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 1) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
-                    Membresía 2<br>
-                    <span style="font-size: 1.35em">$59 al mes</span>
-                </th>
-                <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; 
+                        <?php if ($membresia == 1) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
+                        Membresía 2<br>
+                        <span style="font-size: 1.35em">$59 al mes</span>
+                    </th>
+                    <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 2) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
-                    Membresía 3<br>
-                    <span style="font-size: 1.35em">$79 al mes</span>
-                </th>
+                        <?php if ($membresia == 2) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation' style='font-size: 12px;'></i> Suscripción actual</span>"; ?>
+                        Membresía 3<br>
+                        <span style="font-size: 1.35em">$79 al mes</span>
+                    </th>
 
-            </tr>
-        </thead>
-        <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
-            <!-- Los datos se llenarán aquí -->
-        </tbody>
-    </table>
+                </tr>
+            </thead>
+            <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
+                <!-- Los datos se llenarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
     <p style="font-size: 14px; color: #888;"><i class="fa-solid fa-asterisk" style='font-size: 14px;'></i> El
         contrato tiene una duración de<strong> 3 meses</strong>. Adicionalmente se aplica un <strong>1.5% de gastos
             administrativos financieros.</strong></p>
