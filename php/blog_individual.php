@@ -1,4 +1,5 @@
 <?php
+    setlocale(LC_TIME, 'es_ES.UTF-8');
     require_once __DIR__ . '/../db/conexion.php';
 
     $aid_art = $_POST['id'];
