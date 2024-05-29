@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     let todos = [];
     let paginaActual = 1;
-    let itemsPorPagina = 8; // Define cuántos items quieres por página
+    let itemsPorPagina = 6; // Define cuántos items quieres por página
     let paginas = 0;
 
     // Simulamos la carga inicial de datos
@@ -364,8 +364,4 @@ jQuery(document).ready(function($) {
         }
         $("#paginado").html(botonesPagina);
     }
-
-    $(document).on('click', '#btn_view_art_destacado', function(){
-        alert('Click destacado!!!')
-    })
 });
