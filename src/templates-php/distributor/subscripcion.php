@@ -201,13 +201,13 @@
 <section style="margin-top: 2rem;">
 
   <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-  <h5 style="font-size: 1.75em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
+  <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
 
   <table class="membership-table">
     <thead>
       <tr id="tr-titles">
         <!-- Los títulos se llenarán aquí -->
-        <th>Facturación mensual<br><span style="color: black; margin-top: 10px; font-size: 12px; font-weight: 500;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</span></th>
+        <th>Facturación mensual<br><span style="color: black; font-size: 12px; font-weight: 500;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</span></th>
         <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 1</th>
         <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 2</th>
         <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
