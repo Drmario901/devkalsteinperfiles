@@ -210,15 +210,25 @@ html a:hover,
                 <th style="font-size: 1.35em">Facturación mensual<br><span
                         style="color: black; font-weight: 500; font-size: 14px;">Estos planes están diseñados para
                         ofrecer un soporte sin precedentes.</span></th>
-                <th id="th-membresia-1"
-                    style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
-                    Membresía 1<br><span style="font-size: 1.35em">Gratis</span></th>
-                <th id="th-membresia-2"
-                    style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
-                    Membresía 2<br><span style="font-size: 1.35em">$59 al mes</span></th>
-                <th id="th-membresia-3"
-                    style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">
-                    Membresía 3<br><span style="font-size: 1.35em">$79 al mes</span></th>
+                <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
+          color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
+                    Membresía 1<br>
+                    <span style="font-size: 1.35em">Gratis</span>
+                    <?php if ($membresia == 0) echo "<span style='font-weight: bold; color: #FFFFFF;'>Suscripción actual</span>"; ?>
+                </th>
+                <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; 
+          color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
+                    Membresía 2<br>
+                    <span style="font-size: 1.35em">$59 al mes</span>
+                    <?php if ($membresia == 1) echo "<span style='font-weight: bold; color: #FFFFFF;'>Suscripción actual</span>"; ?>
+                </th>
+                <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; 
+          color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">
+                    Membresía 3<br>
+                    <span style="font-size: 1.35em">$79 al mes</span>
+                    <?php if ($membresia == 2) echo "<span style='font-weight: bold; color: #FFFFFF;'>Suscripción actual</span>"; ?>
+                </th>
+
             </tr>
         </thead>
         <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
