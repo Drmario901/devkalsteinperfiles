@@ -85,16 +85,6 @@
                         ${"productCategory_" . $guideDetailNumber} = $row['product_category_es'];
                         ${"guideDescription_" . $guideDetailNumber} = $row['guide_description'];
                         ${"guideImg_" . $guideDetailNumber} = $row['guide_img_url'];
-                    }
-                    while ($row = $result->fetch_assoc()) {
-                        $guideDetailNumber = $row['guide_detail_number'];
-
-                        // Guardar en variables con el sufijo correspondiente
-                        ${"productName_" . $guideDetailNumber} = $row['product_category_es'];
-                        ${"productSubcategory_" . $guideDetailNumber} = $row['product_subcategory_es'];
-                        ${"productCategory_" . $guideDetailNumber} = $row['product_category_es'];
-                        ${"guideDescription_" . $guideDetailNumber} = $row['guide_description'];
-                        ${"guideImg_" . $guideDetailNumber} = $row['guide_img_url'];
 
                         echo "<div class='col-md-4 text-sm-start text-md-center'>
                                 <h5>
