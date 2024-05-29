@@ -85,174 +85,168 @@
                         ${"productCategory_" . $guideDetailNumber} = $row['product_category_es'];
                         ${"guideDescription_" . $guideDetailNumber} = $row['guide_description'];
                         ${"guideImg_" . $guideDetailNumber} = $row['guide_img_url'];
-
-                        echo "<div class='col-md-4 text-sm-start text-md-center'>
-                                <h5>
-                                <i class='fas fa-pen'></i>
-                                Producto principal
-                                <input class='d-inline' type='checkbox' id='name'>
-                            </h5>
-                            <h6 class='text-start'>$productName_1</h6>
-                            <a TARGET='_blank' href='#'>
-                                <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                                    width=200
-                                    src='$guideImg_1'>
-                            </a>
-        
-                            <!-- Enlaces o promociones -->
-                            <p><label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-i'>
-                            </p>
-        
-                            <p><label for=''>Image quality</label>
-                                <input class='d-inline' type='checkbox' id='quality-i'>
-                            </p>
-        
-                            <p><label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-i'>
-                            </p>
-                            </div>
-                            <div class='col-md-8'>
-                            <h5>
-                                <i class='fas fa-circle-info'></i>
-                                Description
-                            </h5>
-                            <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>$guideDescription_1</p>
-                            </div>
-                            <p>
-                                <label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                            </p>
-                            <p>
-                                <label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-d'>
-                            </p>
-
-                        </div>
-                        </div>
-                    </div>
-                            ";
-
-
-                        // revisar si hay producto 2 o 3 para agregar el html inicial basico
-                        if (isset($productName_2) || isset($productName_3)) {
-                            echo "<div class='card mb-3'>
-                            <h5>
-                                <i class='fa-solid fa-shapes'></i>
-                                Clasificación del producto
-                            </h5>
-                            <div class='row mt-2'>";
-                        }
-
-                        if (isset($productName_2)) {
-                            echo "
-                            <div class='col-md-6 text-sm-start text-md-center'>
-                            <h6 class='text-start' style='font-weight: 600;'>
-                                <i class='fas fa-pen'></i>
-                                Tipo de producto #1
-                                <input class='d-inline' type='checkbox' id='name'>
-                            </h6>
-                            <h6 class='text-start' style='font-size: 1.15em;'>
-                                $productName_2
-                            </h6>
-                            <a TARGET='_blank' href='#'>
-                                <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                                    width=200
-                                    src='$guideImg_2'>
-                            </a>
-
-                            <!-- Enlaces o promociones -->
-                            <p><label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-i'>
-                            </p>
-
-                            <p><label for=''>Image quality</label>
-                                <input class='d-inline' type='checkbox' id='quality-i'>
-                            </p>
-
-                            <p><label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-i'>
-                            </p>
-
-                            <h6 class='text-start' style='font-weight: 600;'>
-                                <i class='fas fa-circle-info'></i>
-                                Description
-                            </h6>
-                            <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                $guideDescription_2
-                                </p>
-                            </div>
-                            <p>
-                                <label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                            </p>
-                            <p>
-                                <label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-d'>
-                            </p>
-                        </div>
-                            ";
-                        }
-
-                        if (isset($productName_3)) {
-                            echo "
-                            <div class='col-md-6 text-sm-start text-md-center'>
-                            <h6 class='text-start' style='font-weight: 600;'>
-                                <i class='fas fa-pen'></i>
-                                Tipo de producto #2
-                                <input class='d-inline' type='checkbox' id='name'>
-                            </h6>
-                            <h6 class='text-start' style='font-size: 1.15em;'>
-                                $productName_3
-                            </h6>
-                            <a TARGET='_blank' href='#'>
-                                <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                                    width=200
-                                    src='$guideImg_3'>
-                            </a>
-
-                            <!-- Enlaces o promociones -->
-                            <p><label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-i'>
-                            </p>
-
-                            <p><label for=''>Image quality</label>
-                                <input class='d-inline' type='checkbox' id='quality-i'>
-                            </p>
-
-                            <p><label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-i'>
-                            </p>
-
-                            <h6 class='text-start' style='font-weight: 600;'>
-                                <i class='fas fa-circle-info'></i>
-                                Description
-                            </h6>
-                            <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                $guideDescription_3
-                                </p>
-                            </div>
-                            <p>
-                                <label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                            </p>
-                            <p>
-                                <label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-d'>
-                            </p>
-                        </div>
-                            ";
-                        }
-
-                        // cerrar el html inicial basico
-                        echo "</div>
-                        </div>";
                     }
-                }
 
+                    // Mostrar el contenido para el producto 1 (obligatorio)
+                    echo "<div class='col-md-4 text-sm-start text-md-center'>
+                            <h5>
+                            <i class='fas fa-pen'></i>
+                            Producto principal
+                            <input class='d-inline' type='checkbox' id='name'>
+                        </h5>
+                        <h6 class='text-start'>" . $productName_1 . "</h6>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='" . $guideImg_1 . "'>
+                        </a>
+                
+                        <!-- Enlaces o promociones -->
+                        <p><label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        </p>
+                
+                        <p><label for=''>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        </p>
+                
+                        <p><label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        </p>
+                        </div>
+                        <div class='col-md-8'>
+                        <h5>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h5>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>" . $guideDescription_1 . "</p>
+                        </div>
+                        <p>
+                            <label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        </p>
+                        <p>
+                            <label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        </p>
+                    </div>
+                    </div>
+                </div>";
+
+                    // Revisar si hay producto 2 o 3 para agregar el HTML inicial básico
+                    if (isset($productName_2) || isset($productName_3)) {
+                        echo "<div class='card mb-3'>
+                        <h5>
+                            <i class='fa-solid fa-shapes'></i>
+                            Clasificación del producto
+                        </h5>
+                        <div class='row mt-2'>";
+                    }
+
+                    if (isset($productName_2)) {
+                        echo "
+                        <div class='col-md-6 text-sm-start text-md-center'>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-pen'></i>
+                            Tipo de producto #2
+                            <input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <h6 class='text-start' style='font-size: 1.15em;'>
+                            " . $productName_2 . "
+                        </h6>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='" . $guideImg_2 . "'>
+                        </a>
+                
+                        <!-- Enlaces o promociones -->
+                        <p><label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        </p>
+                
+                        <p><label for=''>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        </p>
+                
+                        <p><label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        </p>
+                
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h6>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>
+                            " . $guideDescription_2 . "
+                            </p>
+                        </div>
+                        <p>
+                            <label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        </p>
+                        <p>
+                            <label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        </p>
+                    </div>";
+                    }
+
+                    if (isset($productName_3)) {
+                        echo "
+                        <div class='col-md-6 text-sm-start text-md-center'>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-pen'></i>
+                            Tipo de producto #3
+                            <input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <h6 class='text-start' style='font-size: 1.15em;'>
+                            " . $productName_3 . "
+                        </h6>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='" . $guideImg_3 . "'>
+                        </a>
+                
+                        <!-- Enlaces o promociones -->
+                        <p><label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        </p>
+                
+                        <p><label for=''>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        </p>
+                
+                        <p><label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        </p>
+                
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h6>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>
+                            " . $guideDescription_3 . "
+                            </p>
+                        </div>
+                        <p>
+                            <label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        </p>
+                        <p>
+                            <label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        </p>
+                    </div>";
+                    }
+
+                    // Cerrar el HTML inicial básico
+                    echo "</div></div>";
+                }
                 ?>
 
 
