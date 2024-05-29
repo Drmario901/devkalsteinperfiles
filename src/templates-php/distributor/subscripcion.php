@@ -5,11 +5,11 @@ section {
     padding-bottom: 2rem;
 }
 
-.fa-solid .fa-circle-check, .fa-solid .fa-circle-xmark {
+.fa-solid {
     font-size: 1.5em;
 }
 
-.fa-circle-exclamation {
+.fa-solid .fa-circle-exclamation {
   font-size: 12px;
 }
 
