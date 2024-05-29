@@ -4546,7 +4546,6 @@ jQuery(document).ready(function ($) {
       data: { id },
     })
       .done(function (response) {
-        console.log(response);
         $("#contenido_articulo").html(response);
       })
       .fail(function () {

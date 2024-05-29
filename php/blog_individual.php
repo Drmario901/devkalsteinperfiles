@@ -13,12 +13,11 @@
 
     $contenedorHTML = '
                 <div>
-                    <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0; font-weight: 600; font-size: 2.5em">Titulo del
-                        articulo</h2>
+                    <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0; font-weight: 600; font-size: 2.5em">'.$fila['art_title'].'</h2>
                     <hr
                         style="height:3px; width:100px; border:none; color:var(--color-primario); background-color:#213280;opacity:1">
                 </div>
-                <img src="https://i.pinimg.com/736x/2a/9e/75/2a9e75e2ea1d6a8e87b80c83b560f774.jpg"
+                <img src="'.$fila['art_img'].'"
                     width="400">
                 <p style="font-family: Roboto; color: #777">
                     <svg style="display: inline; width:15px; height:15px;"
