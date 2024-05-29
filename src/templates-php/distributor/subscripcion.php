@@ -5,8 +5,12 @@ section {
     padding-bottom: 2rem;
 }
 
-.fa-solid {
+.fa-solid .fa-circle-check, .fa-solid .fa-circle-xmark {
     font-size: 1.5em;
+}
+
+.fa-solid .fa-circle-exclamation {
+  font-size: 12px;
 }
 
 .membership-table {
@@ -26,7 +30,7 @@ section {
 .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
-    line-height: 1.25em;
+    line-height: 1.5em;
 }
 
 .membership-table tr:nth-child(even) {
@@ -213,7 +217,7 @@ html a:hover,
                         ofrecer un soporte sin precedentes.</span></th>
                 <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
-                    <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation'></i>< Suscripción actual</span>"; ?>
+                    <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'><i class='fa-solid fa-circle-exclamation'></i> Suscripción actual</span>"; ?>
                     Membresía 1<br>
                     <span style="font-size: 1.35em">Gratis</span>
                 </th>
