@@ -2,16 +2,16 @@
     require_once __DIR__ . '/../db/conexion.php';
 
     $aid_art = $_POST['id'];
-    $sql = "SELECT * FROM wp_art_blog WHERE id_status = '1' AND art_id = '$aid_art'";
-    $sql2 = "SELECT * FROM wp_art_details WHERE art_id = '$aid_art'";
+    // $sql = "SELECT * FROM wp_art_blog WHERE id_status = '1' AND art_id = '$aid_art'";
+    // $sql2 = "SELECT * FROM wp_art_details WHERE art_id = '$aid_art'";
 
-    $resultado = $conexion->query($sql);
-    $resultado2 = $conexion->query($sql2);
+    // $resultado = $conexion->query($sql);
+    // $resultado2 = $conexion->query($sql2);
 
-    $fila = mysqli_fetch_array($resultado);
-    $fila2 = mysqli_fetch_array($resultado2);
+    // $fila = mysqli_fetch_array($resultado);
+    // $fila2 = mysqli_fetch_array($resultado2);
 
-    $contenedorHTML = `
+    $contenedorHTML = '
                 <div>
                     <h2 style="font-family: Montserrat; margin-bottom: 10px; padding: 0; font-weight: 600; font-size: 2.5em">Titulo del
                         articulo</h2>
@@ -196,7 +196,7 @@
                         </svg>
                         Autor
                     </h5>
-                </div>`;
+                </div>';
     // header('Content-Type: application/json');
     // echo json_encode($datos);
 
