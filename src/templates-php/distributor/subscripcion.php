@@ -5,6 +5,10 @@
     padding-bottom: 2rem;
   }
 
+  .fa-solid {
+    font-size: 2em;
+  }
+
   .membership-table {
     width: 100%;
     border-collapse: collapse;
