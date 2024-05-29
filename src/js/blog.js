@@ -59,7 +59,6 @@ jQuery(document).ready(function($) {
     }
 
     function paginar(items, paginaActual, itemsPorPagina) {
-        console.log('pagina actual', paginaActual);
         
         let inicio = (paginaActual - 1) * itemsPorPagina;
         let fin = inicio + itemsPorPagina;
@@ -351,7 +350,6 @@ jQuery(document).ready(function($) {
     function truncateText(selector, maxLength) {
         $(selector).each(function() {
             var text = $(this).text();
-            console.log(text.length)
             if (text.length > maxLength) {
                 $(this).text(text.slice(0, maxLength) + '...');
             }

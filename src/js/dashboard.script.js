@@ -4547,8 +4547,7 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         console.log(response);
-        let data = JSON.parse(response);
-        $("#contenido_articulo").html(data);
+        $("#contenido_articulo").html(response);
       })
       .fail(function () {
         console.log("errorrr");
