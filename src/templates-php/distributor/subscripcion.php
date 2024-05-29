@@ -1,24 +1,26 @@
 <style>
   section {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, Arial, sans-serif;
     /* margin: 3rem; */
     padding-bottom: 2rem;
+  }
+
+  .fa-solid {
+    font-size: 1.5em;
   }
 
   .membership-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     table-layout: auto;
   }
 
   .membership-table th,
   .membership-table td {
     text-align: center;
-    padding: 5px;
-    border: 1px solid #ddd;
-
+    padding: 1em 1.5em;
+    border: 1px solid #c9c9c9;
   }
 
   .membership-table th {
@@ -211,7 +213,7 @@
         <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
       </tr>
     </thead>
-    <tbody id="tr-data">
+    <tbody id="tr-data" style="font-family: Roboto, Arial, sans-serif">
       <!-- Los datos se llenarán aquí -->
     </tbody>
   </table>
