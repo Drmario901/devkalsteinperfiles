@@ -124,8 +124,8 @@ foreach ($lines as $line) {
         logMessage("userID extraído: " . $userID);
 
         $domainSub = null;
-        if (preg_match('/domain:\s*([\w.-]+)/', $dataArray['texte-libre'], $matches)) {
-            $domainSub = $matches[1];
+        if (preg_match('/domain:@([\w.-]+)/', $dataArray['texte-libre'], $matches2)) {
+            $domainSub = $matches2[1];
         }
         logMessage("Domain extraído: " . $domainSub);
 
@@ -180,7 +180,7 @@ foreach ($lines as $line) {
 
         // Insertar el registro en la base de datos
         $insertSubs = $conexion->prepare("
-            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora,dominio user_id)
+            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, dominio, user_id)
             VALUES (?, ?, ?, ?, '1', ?, ?, ?,?)
         ");
         if (!$insertSubs) {

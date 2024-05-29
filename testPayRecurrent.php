@@ -115,7 +115,7 @@ $monetico = new Monetico(
 
 $purchase = new PurchaseRequest([
     'reference' => $reference,
-    'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'] . '  ' . 'domain: ' . $dominio,
+    'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'] . '  ' . 'domain:' . $dominio,
     'language' => 'ES',
     'email' => $row['account_correo'],
     // 'amount' => $membershipPrice,
