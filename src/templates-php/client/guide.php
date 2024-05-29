@@ -3,7 +3,7 @@
         .txt-author{
             font-weight: bold;
         }
-        .columna_articulo{
+        .columna_principal_guias{
             min-height: 970px;
         }
         .page-link{
@@ -123,20 +123,20 @@
                         
                     </div>
                     <div class='container-paginado'>
-                            <div style="display: flex; justify-content:center; gap:1rem;">
-                                <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous" >
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </button>
-                                <ul id="paginado" class="pagination" >
-                            
-                                </ul>                
-                                <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next" >
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Next</span>
-                                </button>
-                            </div>
-                        </div>  
+                        <div style="display: flex; justify-content:center; gap:1rem;">
+                            <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous" >
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <ul id="paginado" class="pagination" >
+                        
+                            </ul>                
+                            <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next" >
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </button>
+                        </div>
+                    </div>  
                 </div>
             </main>
         </div>
