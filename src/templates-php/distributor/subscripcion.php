@@ -240,7 +240,7 @@ html a:hover,
         contrato tiene una duración de<strong> 3 meses</strong>. Adicionalmente se aplica un <strong>1.5% de gastos
             administrativos financieros.</strong></p>
 
-    <div>
+    <div style="margin-top: 15px">
         <h5 style="font-weight: 600; color: #213280">Gestiona tu plan</h5>
         <p style="font-weight: 500; font-size: 1.25em; font-family: Roboto, Arial, sans-serif">Cambia y mejora tu plan o cancela tu suscripcion aqui</p>
         <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
