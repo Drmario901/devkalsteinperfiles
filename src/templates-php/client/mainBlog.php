@@ -9,6 +9,9 @@
         .page-link{
             color: #213280 !important;
         }
+        .author-store:hover{
+            cursor: pointer;
+        }
         .active>.page-link{
             background-color: #213280 !important;
             border-color: #213280 !important;

@@ -7,7 +7,9 @@
                 justify-content: center !important;
                 align-items: center !important;
             }
-
+            .author-store:hover{
+                cursor: pointer;
+            }
             .contenedor_vistaprevia_guia {
                 grid-template-columns: 90% !important;
                 margin: auto !important;
