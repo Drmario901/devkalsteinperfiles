@@ -4504,6 +4504,9 @@ jQuery(document).ready(function ($) {
   }
 
   $(document).on('click', '#blog_articulos', function(){
+    let id = $(this).val()
+    console.log(id)
+    renderArticulo(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
@@ -4534,4 +4537,20 @@ jQuery(document).ready(function ($) {
     $("#c-panel16").css({ display: "none" });
     $("#c-panel17").css({ display: "none" });
   })
+
+  function renderArticulo(id){
+    $.ajax({
+      url: plugin_dir + '/php/blog_individual.php',
+      type: "POST",
+      data: { id },
+      success: function(response) {
+          // Simulamos una respuesta con datos
+          $('.contenido_articulo').html(response);
+          
+      },
+      error: function() {
+          console.error('Error al cargar los datos');
+      }
+  });
+  }
 });
