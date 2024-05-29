@@ -158,7 +158,7 @@
 
 <section style="margin-top: 2rem;">
 
-    <head style="display: flex; justify-content: space-between;">
+    <div style="display: flex; justify-content: space-between;">
         <div>
             <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
             <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
@@ -169,7 +169,7 @@
                 <p>Fecha Final: </p>
             </div>
         <?php endif ?>
-    </head>
+    </div>
     <div class="table-responsive">
         <table class="membership-table">
             <thead>
