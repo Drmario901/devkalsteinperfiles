@@ -71,10 +71,10 @@
                 <div class='col-md-4 text-sm-start text-md-center'>
                     <h5>
                         <i class='fas fa-pen'></i>
-                        $artTitle
+                        Titulo Principal
                         <input class='d-inline' type='checkbox' id='name'>
                     </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
+                    <h6 class='text-start'>$artTitle</h6>
                     <a TARGET='_blank' href='#'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                             width=200 src='$artImg'>
