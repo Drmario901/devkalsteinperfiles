@@ -3,7 +3,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Configuración de los hosts permitidos
 $allowed_hosts = [
     'plataforma.kalstein.net' => [
         'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
@@ -13,10 +12,8 @@ $allowed_hosts = [
     ]
 ];
 
-// Obtener el origen de la solicitud
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-// Validar el host de origen
 if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     header('Access-Control-Allow-Origin: ' . $origin);
     header('Access-Control-Allow-Methods: POST');
@@ -26,7 +23,6 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-// Leer datos de la solicitud
 $input_data = file_get_contents('php://input');
 $data = json_decode($input_data, true);
 
@@ -35,7 +31,6 @@ if (!$data) {
     exit;
 }
 
-// Escribir datos en el archivo de log local
 $local_log_file = 'monetico_log_recurrent.txt';
 $log_message = date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n";
 file_put_contents($local_log_file, $log_message, FILE_APPEND);
@@ -47,7 +42,6 @@ if (!file_exists($local_log_file)) {
     echo "Archivo de log local creado.\n";
 }
 
-// Función para registrar logs en el host remoto
 function log_to_host($host_config, $local_log_file) {
     $ftp_conn = ftp_connect($host_config['ftp_server']);
     if (!$ftp_conn) {
@@ -68,7 +62,6 @@ function log_to_host($host_config, $local_log_file) {
         echo "Login FTP exitoso.\n";
     }
 
-    // Crear el directorio remoto si no existe
     $remote_dir = dirname($host_config['remote_path']);
     if (!ftp_chdir($ftp_conn, $remote_dir)) {
         if (!ftp_mkdir($ftp_conn, $remote_dir)) {
@@ -83,7 +76,6 @@ function log_to_host($host_config, $local_log_file) {
         echo "Directorio existente: $remote_dir\n";
     }
 
-    // Volver a cambiar al directorio remoto después de crearlo
     if (!ftp_chdir($ftp_conn, $remote_dir)) {
         echo "Falló el cambio al directorio: $remote_dir\n";
         file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el cambio al directorio: $remote_dir\n", FILE_APPEND);
@@ -93,7 +85,6 @@ function log_to_host($host_config, $local_log_file) {
         echo "Cambio al directorio remoto exitoso.\n";
     }
 
-    // Subir el archivo de log
     if (!ftp_put($ftp_conn, basename($host_config['remote_path']), $local_log_file, FTP_ASCII)) {
         echo "Falló la subida FTP para {$host_config['remote_path']}\n";
         file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la subida FTP para {$host_config['remote_path']}\n", FILE_APPEND);
@@ -107,7 +98,6 @@ function log_to_host($host_config, $local_log_file) {
     return true;
 }
 
-// Intentar registrar logs en todos los hosts permitidos
 $all_success = true;
 foreach ($allowed_hosts as $host => $host_config) {
     if (!log_to_host($host_config, $local_log_file)) {
