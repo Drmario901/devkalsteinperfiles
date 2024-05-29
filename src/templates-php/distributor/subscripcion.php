@@ -20,7 +20,7 @@
   .membership-table td {
     text-align: center;
     padding: 1em 1.5em;
-    border: 1px solid #213280;
+    border: 1px solid #c9c9c9;
   }
 
   .membership-table th {
