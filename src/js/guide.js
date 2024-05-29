@@ -52,9 +52,7 @@ jQuery(document).ready(function($) {
         let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
         const html = await generarTabla(datosPagina);
         $('#container_guides').html(html);
-        truncateText('.p-description-blog', 320); 
-        truncateText('.txt-author', 30); 
-        truncateText('.txt-author2', 20); 
+        truncateText('.p-description-guide', 400);
         generarPaginado(paginas);
     }
 
@@ -89,10 +87,10 @@ jQuery(document).ready(function($) {
                             <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">${categorie}</h5>
                             <hr
                                 style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
-                            <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">${description}.</p>
+                            <p class="p-description-guide" style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">${description}.</p>
                             <div class="footer-guia"
                                 style="display: flex; align-items: center; justify-content: space-between">
-                                <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#">Ver mas</button>
+                                <button class="btn_guias_informativas ._df_button" id="guias_informativas" source="#" value="${fila.id_guide_slug}">Ver mas</button>
                                 <p style="font-family: Roboto; margin: 0; display: flex;">
                                     <svg style="display: inline; width:15px; height:15px; margin-top: 5px;"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
