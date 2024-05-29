@@ -90,7 +90,7 @@ jQuery(document).ready(function ($) {
             function (instance, toast) {
               instance.hide({ transitionOut: "fadeOut" }, toast, "button");
 
-              let artId = "<?php echo $artId; ?>";
+              let artId = document.querySelector("#artId").value;
 
               $.ajax({
                 url: plugin_dir + "php/moderator/validateBlog.php",
