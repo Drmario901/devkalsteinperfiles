@@ -25,12 +25,12 @@
             background-color: #213280 !important;
             color: #fff;
         }
-        #blog_articulos{
+        #guias_informativas{
             background-color: #213280 !important;
             color: #fff !important;
             padding: 2px 10px;
         }
-        #blog_articulos:hover{
+        #guias_informativas:hover{
             background-color: #2e4f9b !important;
         }
         @media (max-width: 768px) {
