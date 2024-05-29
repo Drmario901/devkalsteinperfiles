@@ -12,6 +12,8 @@
     $fila = mysqli_fetch_array($resultado);
     $fila2 = mysqli_fetch_array($resultado2);
 
+    $subtittle = !empty($fila2['art_subtitle']) ? $fila2['art_subtitle'] : '';
+
     // Función para convertir el nombre del mes en inglés a español
     function convertirMesAEspanol($mesEnIngles) {
         $meses = [
@@ -56,7 +58,7 @@
                 <p class="" style="font-family: Roboto;">'.$fila['art_principal_description'].'.
                 </p>
                 <div class="articulo_extracto">
-                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">'. !empty($fila2['art_subtitle']) ? $fila2['art_subtitle'] : ''.'</h3>
+                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">'.$subtittle.'</h3>
                     <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
                         consectetur
                         adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
