@@ -26,6 +26,7 @@ section {
 .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
+    line-height: 1em;
 }
 
 .membership-table tr:nth-child(even) {
