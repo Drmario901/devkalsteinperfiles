@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
 $slugTitle = slug_sanitize($artTitle);
 
 $queryToValidate = "UPDATE 8x7MM_posts SET post_status = 'publish' WHERE post_name = '$slugTitle'";
-$resultToValidate = $conexion->query($queryToValidate);
+$resultToValidate = $conexion2->query($queryToValidate);
 
 if ($resultToValidate) {
   $response = array(
