@@ -146,4 +146,9 @@ jQuery(document).ready(function($) {
         let url = $(this).attr('meta-href')
         window.location.href = url
     })
+
+    $(document).on('click', '#guias_informativas', function(){
+        let url = $(this).val()
+        window.location.href = url
+    })
 });
