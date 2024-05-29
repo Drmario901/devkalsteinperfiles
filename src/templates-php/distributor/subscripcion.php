@@ -130,6 +130,18 @@
     .th-active {
         background-color: #213280;
     }
+
+    .fechas_subs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Media Querys */
+    @media(max-width: 1199px) {
+        .titulos_subs {
+            margin-left: 20px;
+        }
+    }
 </style>
 
 <header class="header" data-header>
