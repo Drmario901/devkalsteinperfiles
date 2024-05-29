@@ -4523,6 +4523,9 @@ jQuery(document).ready(function ($) {
   })
 
   $(document).on('click', '#btn_view_art_destacado', function(){
+    let id = $(this).data('meta-id')
+    console.log(id)
+    renderArticulo(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
