@@ -55,7 +55,7 @@ function log_to_host($host_config, $local_log_file) {
     }
 
     $remote_dir = dirname($host_config['remote_path']);
-    if (!@ftp_chdir($ftp_conn, $remote_dir)) {
+    if (!ftp_chdir($ftp_conn, $remote_dir)) {
         if (!ftp_mkdir($ftp_conn, $remote_dir)) {
             file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la creación del directorio: $remote_dir\n", FILE_APPEND);
             ftp_close($ftp_conn);
@@ -63,7 +63,13 @@ function log_to_host($host_config, $local_log_file) {
         }
     }
 
-    if (!ftp_put($ftp_conn, $host_config['remote_path'], $local_log_file, FTP_ASCII)) {
+    if (!ftp_chdir($ftp_conn, $remote_dir)) {
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el cambio al directorio: $remote_dir\n", FILE_APPEND);
+        ftp_close($ftp_conn);
+        return false;
+    }
+
+    if (!ftp_put($ftp_conn, basename($host_config['remote_path']), $local_log_file, FTP_ASCII)) {
         file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la subida FTP para {$host_config['remote_path']}\n", FILE_APPEND);
         ftp_close($ftp_conn);
         return false;
@@ -73,12 +79,15 @@ function log_to_host($host_config, $local_log_file) {
     return true;
 }
 
+$all_success = true;
 foreach ($allowed_hosts as $host => $host_config) {
-    if (log_to_host($host_config, $local_log_file)) {
-        echo "Archivo de log creado y transferido exitosamente.";
-    } else {
-        echo "ERROR: Falló la transferencia del archivo de log.";
+    if (!log_to_host($host_config, $local_log_file)) {
+        $all_success = false;
+        echo "ERROR: Falló la transferencia del archivo de log para $host.";
     }
 }
 
+if ($all_success) {
+    echo "Archivo de log creado y transferido exitosamente.";
+}
 ?>
