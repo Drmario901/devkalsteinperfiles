@@ -4523,7 +4523,7 @@ jQuery(document).ready(function ($) {
   })
 
   $(document).on('click', '#btn_view_art_destacado', function(){
-    let id = $(this).data('meta-id')
+    let id = $(this).data('id')
     console.log(id)
     renderArticulo(id)
     window.scrollTo(0, 0);
