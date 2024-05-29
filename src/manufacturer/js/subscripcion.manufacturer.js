@@ -9,7 +9,7 @@ const datos = [
   },
   {
     item: [
-      "Agente de Logística Asignado (Atención Personalizada (Vía Correo/WhastApp/Llamada telefónica)",
+      "Agente de Logística Asignado<br>Atención Personalizada (Vía Correo/WhastApp/Llamada telefónica)",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
@@ -79,7 +79,7 @@ const datos = [
   },
   {
     item: [
-      "Servicios de Marketing Estrategia SEO dirigida al país del distribuidor-Creacion de Contenido (Blog) (40 al mes)-Creacion de contenido (Guias informativas) (10)",
+      "Servicios de Marketing Estrategia SEO dirigida al país del distribuidor<br>-Creacion de Contenido (Blog) (40 articulos al mes)<br>-Creacion de contenido (Guias informativas) (10)",
       "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
       "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
