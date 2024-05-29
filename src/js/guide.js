@@ -70,20 +70,23 @@ jQuery(document).ready(function($) {
         
         for (const fila of datos) {
             let response = await searchNameStore(fila.guide_user_id);
+            let response2 = await searchGuidesDetails(fila.guide_user_id);
             let author = JSON.parse(response).store
             let slug = JSON.parse(response).slug
+            let image = JSON.parse(response2).image
+            let description = JSON.parse(response2).description
+            let categorie = JSON.parse(response2).categorie
 
             contenedorHTML += `
                     <div class="contenedor_vistaprevia_guia"
                     style="padding: 10px 10px 15px 10px; border-bottom: solid 1px #c9c9c9; display: grid; grid-template-columns: 1fr 2fr; gap: 1em; margin-bottom: 20px; justify-items: center; align-content: center; align-items: center;">
                         <div class="thumbnail_guia">
-                            <img src="${fila.guide_img_url}"
+                            <img src="${image}"
                                 alt="guia" width='200' />
                         </div>
                         <div class="contenido_guia"
                             style="display: flex; flex-direction: column; justify-content: space-between;">
-                            <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">Titulo de la guia
-                            </h5>
+                            <h5 class="titulo_guia" style="font-family: Montserrat; padding: 0">${categorie}</h5>
                             <hr
                                 style="height:3px; width:75px; border:none; color:#213280; background-color:#213280; opacity: 1; margin: 10px 0;">
                             <p style="font-family: Roboto; line-height: 1.5em; margin-bottom: 10px">Lorem ipsum
@@ -114,6 +117,14 @@ jQuery(document).ready(function($) {
     }
 
     function searchNameStore(idAccount) {
+        return $.ajax({
+            url: plugin_dir + '/php/consultAuthor.php',
+            type: "POST",
+            data: { idAccount },
+        });
+    }
+
+    function searchGuidesDetails(idAccount) {
         return $.ajax({
             url: plugin_dir + '/php/consultAuthor.php',
             type: "POST",
