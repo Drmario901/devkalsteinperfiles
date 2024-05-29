@@ -4506,6 +4506,7 @@ jQuery(document).ready(function ($) {
   $(document).on('click', '#blog_articulos', function(){
     let id = $(this).val()
     renderArticulo(id)
+    blog_views_plus(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
@@ -4524,6 +4525,7 @@ jQuery(document).ready(function ($) {
   $(document).on('click', '#btn_view_art_destacado', function(){
     let id = $(this).attr('meta-id')
     renderArticulo(id)
+    blog_views_plus(id)
     window.scrollTo(0, 0);
     $("#c-panel01").css({ display: "none" });
     $("#c-panel02").css({ display: "none" });
@@ -4548,9 +4550,23 @@ jQuery(document).ready(function ($) {
     })
       .done(function (response) {
         $("#contenido_articulo").html(response);
-      })
-      .fail(function () {
-        console.log("errorrr");
-      });
+    })
+    .fail(function () {
+      console.log("errorrr");
+    });
+  }
+
+  function blog_views_plus(id){
+    $.ajax({
+      url: plugin_dir + '/php/viewCountBlog.php',
+      type: "POST",
+      data: { id },
+    })
+      .done(function (response) {
+
+    })
+    .fail(function () {
+      console.log("errorrr");
+    });
   }
 });
