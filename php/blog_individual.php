@@ -21,7 +21,7 @@
     $resultado4 = $conexion->query($sql4);
     $row2 = mysqli_fetch_array($resultado4);
     $store = $row2[2];
-    $slug = $row2[19];
+    $slug = $row2['ID_slug'];
 
     $subtittle = !empty($fila2['art_subtitle']) ? $fila2['art_subtitle'] : '';
     $subdescription = !empty($fila2['art_description']) ? $fila2['art_description'] : '';
