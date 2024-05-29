@@ -1,10 +1,10 @@
 <header class="header" data-header>
 
     <?php
-
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+    /* 
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL); */
 
     require __DIR__ . '/../../../php/conexion.php';
 
@@ -49,7 +49,7 @@
                     $guideMaker = $row['product_maker'];
                     $productName = $row['product_name_es'];
                     $guideImg = $row['guide_img_url'];
-                    
+
 
                     echo "
                             <div class='col-lg-6'>
@@ -72,7 +72,7 @@
                                         </a>
                                     </div>
                                     <div class='mt-2'>
-                                    $verifying_by
+                                    Jorgito esta revisando esto salu2
                                         <div class='col-12 mt-2'>
                                             <i class='fas fa-clock'></i>
                                             Hace 6 minutos
