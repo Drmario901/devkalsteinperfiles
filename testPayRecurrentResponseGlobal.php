@@ -6,9 +6,9 @@ error_reporting(E_ALL);
 $allowed_hosts = [
     'plataforma.kalstein.net' => [
         'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
-        'ftp_server' => '185.28.22.128',
-        'ftp_user' => 'he270716',
-        'ftp_pass' => 'RP$c_myoUeMK'
+        'scp_server' => '185.28.22.128',
+        'scp_user' => 'he270716',
+        'scp_pass' => 'RP$c_myoUeMK'
     ]
 ];
 
@@ -43,59 +43,27 @@ if (!file_exists($local_log_file)) {
 }
 
 function log_to_host($host_config, $local_log_file) {
-    $ftp_conn = ftp_connect($host_config['ftp_server']);
-    if (!$ftp_conn) {
-        echo "No se pudo conectar al servidor FTP: {$host_config['ftp_server']}\n";
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - No se pudo conectar al servidor FTP: {$host_config['ftp_server']}\n", FILE_APPEND);
-        return false;
-    } else {
-        echo "Conexión FTP establecida.\n";
-    }
+    $scp_command = sprintf(
+        "sshpass -p '%s' scp %s %s@%s:%s",
+        escapeshellarg($host_config['scp_pass']),
+        escapeshellarg($local_log_file),
+        escapeshellarg($host_config['scp_user']),
+        escapeshellarg($host_config['scp_server']),
+        escapeshellarg($host_config['remote_path'])
+    );
 
-    $login = ftp_login($ftp_conn, $host_config['ftp_user'], $host_config['ftp_pass']);
-    if (!$login) {
-        echo "Falló el login FTP para {$host_config['ftp_server']}\n";
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el login FTP para {$host_config['ftp_server']}\n", FILE_APPEND);
-        ftp_close($ftp_conn);
-        return false;
-    } else {
-        echo "Login FTP exitoso.\n";
-    }
+    $output = [];
+    $return_var = 0;
+    exec($scp_command, $output, $return_var);
 
-    $remote_dir = dirname($host_config['remote_path']);
-    if (!ftp_chdir($ftp_conn, $remote_dir)) {
-        if (!ftp_mkdir($ftp_conn, $remote_dir)) {
-            echo "Falló la creación del directorio: $remote_dir\n";
-            file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la creación del directorio: $remote_dir\n", FILE_APPEND);
-            ftp_close($ftp_conn);
-            return false;
-        } else {
-            echo "Directorio creado: $remote_dir\n";
-        }
-    } else {
-        echo "Directorio existente: $remote_dir\n";
-    }
-
-    if (!ftp_chdir($ftp_conn, $remote_dir)) {
-        echo "Falló el cambio al directorio: $remote_dir\n";
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el cambio al directorio: $remote_dir\n", FILE_APPEND);
-        ftp_close($ftp_conn);
-        return false;
-    } else {
-        echo "Cambio al directorio remoto exitoso.\n";
-    }
-
-    if (!ftp_put($ftp_conn, basename($host_config['remote_path']), $local_log_file, FTP_ASCII)) {
-        echo "Falló la subida FTP para {$host_config['remote_path']}\n";
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la subida FTP para {$host_config['remote_path']}\n", FILE_APPEND);
-        ftp_close($ftp_conn);
+    if ($return_var !== 0) {
+        echo "Falló la subida SCP: " . implode("\n", $output) . "\n";
+        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la subida SCP para {$host_config['remote_path']}\n", FILE_APPEND);
         return false;
     } else {
         echo "Archivo subido exitosamente a {$host_config['remote_path']}.\n";
+        return true;
     }
-
-    ftp_close($ftp_conn);
-    return true;
 }
 
 $all_success = true;
@@ -109,6 +77,4 @@ foreach ($allowed_hosts as $host => $host_config) {
 if ($all_success) {
     echo "Archivo de log creado y transferido exitosamente.\n";
 }
-
-//hola
 ?>
