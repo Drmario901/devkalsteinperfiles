@@ -115,100 +115,102 @@
                 </div>
 
             </div>
-        </div>
-        <div class='card mb-3'>
-            <div class='row text-sm-start text-md-center'>
-                <h5>
-                    <i class='fas fa-pen'></i>
-                    Título de extracto #1
-                    <input class='d-inline' type='checkbox' id='name'>
-                </h5>
-                <h6 class='text-start'>$artSubtitulo1</h6>
+        </div>";
 
-            </div>
-            <div class='row mt-3'>
-                <h5>
-                    <i class='fas fa-circle-info'></i>
-                    Description
-                </h5>
-                <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                    <p style='text-align: justify;'>
-                    $artDescription.</p>
+        if (!empty($artSubtitulo1) && !empty($artDescription)) {
+            echo "<div class='card mb-3'>
+                <div class='row text-sm-start text-md-center'>
+                    <h5>
+                        <i class='fas fa-pen'></i>
+                        Título de extracto #1
+                        <input class='d-inline' type='checkbox' id='name-a'>
+                    </h5>
+                    <h6 class='text-start'>$artSubtitulo1</h6>
                 </div>
-                <p>
-                    <label for=''>Links or self-promotion</label>
-                    <input class='d-inline' type='checkbox' id='promotions-c'><br>
-                </p>
-                <p>
-                    <label for=''>Professionalism</label>
-                    <input class='d-inline' type='checkbox' id='professionalism-c'>
-                </p>
-
-            </div>
-
-        </div>
-        <div class='card mb-3'>
-            <div class='row text-sm-start text-md-center'>
-                <h5>
-                    <i class='fas fa-pen'></i>
-                    Título de extracto #2
-                    <input class='d-inline' type='checkbox' id='name-b'>
-                </h5>
-                <h6 class='text-start'>$artSubtitulo2</h6>
-
-            </div>
-            <div class='row mt-3'>
-                <h5>
-                    <i class='fas fa-circle-info'></i>
-                    Description
-                </h5>
-                <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                    <p style='text-align: justify;'>
-                    $artDescription2.</p>
+                <div class='row mt-3'>
+                    <h5>
+                        <i class='fas fa-circle-info'></i>
+                        Description
+                    </h5>
+                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                        <p style='text-align: justify;'>
+                        $artDescription.</p>
+                    </div>
+                    <p>
+                        <label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-c'><br>
+                    </p>
+                    <p>
+                        <label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-c'>
+                    </p>
                 </div>
-                <p>
-                    <label for=''>Links or self-promotion</label>
-                    <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                </p>
-                <p>
-                    <label for=''>Professionalism</label>
-                    <input class='d-inline' type='checkbox' id='professionalism-d'>
-                </p>
+            </div>";
+        }
 
-            </div>
-        </div>
-        <div class='card mb-3'>
-            <div class='row text-sm-start text-md-center'>
-                <h5>
-                    <i class='fas fa-pen'></i>
-                    Título de extracto #3
-                    <input class='d-inline' type='checkbox' id='name-c'>
-                </h5>
-                <h6 class='text-start'>$artSubtitulo3</h6>
+        if (!empty($artSubtitulo2) && !empty($artDescription2)) {
+            echo "<div class='card mb-3'>
+                <div class='row text-sm-start text-md-center'>
+                    <h5>
+                        <i class='fas fa-pen'></i>
+                        Título de extracto #2
+                        <input class='d-inline' type='checkbox' id='name-b'>
+                    </h5>
+                    <h6 class='text-start'>$artSubtitulo2</h6>
+                </div>
+                <div class='row mt-3'>
+                    <h5>
+                        <i class='fas fa-circle-info'></i>
+                        Description
+                    </h5>
+                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                        <p style='text-align: justify;'>
+                        $artDescription2.</p>
+                    </div>
+                    <p>
+                        <label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                    </p>
+                    <p>
+                        <label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-d'>
+                    </p>
+                </div>
+            </div>";
+        }
 
-            </div>
-            <div class='row mt-3'>
-                <h5>
-                    <i class='fas fa-circle-info'></i>
-                    Description
-                </h5>
-                <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                    <p style='text-align: justify;'>
+        if (!empty($artSubtitulo3) && !empty($artDescription3)) {
+            echo "<div class='card mb-3'>
+                <div class='row text-sm-start text-md-center'>
+                    <h5>
+                        <i class='fas fa-pen'></i>
+                        Título de extracto #3
+                        <input class='d-inline' type='checkbox' id='name-c'>
+                    </h5>
+                    <h6 class='text-start'>$artSubtitulo3</h6>
+                </div>
+                <div class='row mt-3'>
+                    <h5>
+                        <i class='fas fa-circle-info'></i>
+                        Description
+                    </h5>
+                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                        <p style='text-align: justify;'>
                         $artDescription3.</p>
+                    </div>
+                    <p>
+                        <label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-e'><br>
+                    </p>
+                    <p>
+                        <label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-e'>
+                    </p>
                 </div>
-                <p>
-                    <label for=''>Links or self-promotion</label>
-                    <input class='d-inline' type='checkbox' id='promotions-e'><br>
-                </p>
-                <p>
-                    <label for=''>Professionalism</label>
-                    <input class='d-inline' type='checkbox' id='professionalism-e'>
-                </p>
+            </div>";
+        }
 
-            </div>
-        </div>
-        <textarea class='mx-auto my-2' style='width: 100%; height: 150px;'
-            placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
+        echo "<textarea class='mx-auto my-2' style='width: 100%; height: 150px;' placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
         <p class='d-flex justify-content-start' id='strikeContainer'>
             <label>Strike</label>
             <input class='d-inline' type='checkbox' id='strike'>

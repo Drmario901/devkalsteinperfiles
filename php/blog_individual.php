@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <hr style="height:2px; border:none; color:black; background-color:black; margin: 0" />
-                    <h5
+                    <h5 class="author-store"
                         style="font-family: Roboto; display: flex; align-items: center;" meta-href=["'.$slug.'"]>
                         <svg style="display: inline; width:30px; height:30px; margin-right: 1em"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

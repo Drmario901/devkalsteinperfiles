@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
     "professionalism-a",
     "promotions-b",
     "professionalism-b",
+    "name-a",
     "promotions-c",
     "professionalism-c",
     "name-b",
@@ -28,14 +29,33 @@ jQuery(document).ready(function ($) {
   for (let i = 0; i < ids.length; i++) {
     let id = ids[i];
 
-    // Verificar si el elemento existe antes de asignar eventos
-    if (document.querySelector("#" + id)) {
-      checks[i] = document.querySelector("#" + id).checked;
+    checks[i] = document.querySelector("#" + id).checked;
 
-      $(document).on("change", "#" + id, function () {
-        checks[i] = this.checked;
+    $(document).on("change", "#" + id, function () {
+      checks[i] = this.checked;
 
-        if (!this.checked) {
+      if (!this.checked) {
+        verify = false;
+        $("#message").removeAttr("hidden");
+        $("#strikeContainer").removeAttr("hidden");
+        $("#btnValidate").html(`
+                    <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
+                        <h4 class="text-white pb-0">Denegate</h4>
+                    </button>
+                `);
+      } else {
+        let allChecked = checks.every((check) => check);
+
+        if (allChecked) {
+          verify = true;
+          $("#message").attr("hidden", "");
+          $("#strikeContainer").attr("hidden", "");
+          $("#btnValidate").html(`
+                        <button type='button' class='btn btn-success btn-block p-2 px-4 mx-auto'>
+                            <h4 class="text-white pb-0">Validate</h4>
+                        </button>
+                    `);
+        } else {
           verify = false;
           $("#message").removeAttr("hidden");
           $("#strikeContainer").removeAttr("hidden");
@@ -44,31 +64,9 @@ jQuery(document).ready(function ($) {
                             <h4 class="text-white pb-0">Denegate</h4>
                         </button>
                     `);
-        } else {
-          let allChecked = checks.every((check) => check);
-
-          if (allChecked) {
-            verify = true;
-            $("#message").attr("hidden", "");
-            $("#strikeContainer").attr("hidden", "");
-            $("#btnValidate").html(`
-                            <button type='button' class='btn btn-success btn-block p-2 px-4 mx-auto'>
-                                <h4 class="text-white pb-0">Validate</h4>
-                            </button>
-                        `);
-          } else {
-            verify = false;
-            $("#message").removeAttr("hidden");
-            $("#strikeContainer").removeAttr("hidden");
-            $("#btnValidate").html(`
-                            <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
-                                <h4 class="text-white pb-0">Denegate</h4>
-                            </button>
-                        `);
-          }
         }
-      });
-    }
+      }
+    });
   }
 
   // Subida de artículos
