@@ -26,6 +26,7 @@ section {
 .membership-table th {
     /* background-color: #4CAF50; */
     color: #213280;
+    line-height: 1em;
 }
 
 .membership-table tr:nth-child(even) {
@@ -212,21 +213,21 @@ html a:hover,
                         ofrecer un soporte sin precedentes.</span></th>
                 <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">
+                    <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'>Suscripción actual</span>"; ?>
                     Membresía 1<br>
                     <span style="font-size: 1.35em">Gratis</span>
-                    <?php if ($membresia == 0) echo "<span style='font-size: 12px; font-weight: 300; color: #FFFFFF;'>Suscripción actual</span>"; ?>
                 </th>
                 <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">
+                    <?php if ($membresia == 1) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'>Suscripción actual</span>"; ?>
                     Membresía 2<br>
                     <span style="font-size: 1.35em">$59 al mes</span>
-                    <?php if ($membresia == 1) echo "<span style='font-size: 12px; font-weight: 300; color: #FFFFFF;'>Suscripción actual</span>"; ?>
                 </th>
                 <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; 
           color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">
+                    <?php if ($membresia == 2) echo "<span style='font-size: 12px; font-weight: 400; color: #FFFFFF;'>Suscripción actual</span>"; ?>
                     Membresía 3<br>
                     <span style="font-size: 1.35em">$79 al mes</span>
-                    <?php if ($membresia == 2) echo "<span style='font-size: 12px; font-weight: 300; color: #FFFFFF;'>Suscripción actual</span>"; ?>
                 </th>
 
             </tr>
