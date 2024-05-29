@@ -96,18 +96,17 @@
                         ${"guideDescription_" . $guideDetailNumber} = $row['guide_description'];
                         ${"guideImg_" . $guideDetailNumber} = $row['guide_img_url'];
 
-                        if ($guideDetail == '1') {
-                            echo "<div class='col-md-4 text-sm-start text-md-center'>
+                        echo "<div class='col-md-4 text-sm-start text-md-center'>
                                 <h5>
                                 <i class='fas fa-pen'></i>
                                 Producto principal
                                 <input class='d-inline' type='checkbox' id='name'>
                             </h5>
-                            <h6 class='text-start'>$productName</h6>
+                            <h6 class='text-start'>$productName_1</h6>
                             <a TARGET='_blank' href='#'>
                                 <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                                     width=200
-                                    src='$guideImg'>
+                                    src='$guideImg_1'>
                             </a>
         
                             <!-- Enlaces o promociones -->
@@ -129,7 +128,7 @@
                                 Description
                             </h5>
                             <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>$guideDescription</p>
+                                <p style='text-align: justify;'>$guideDescription_1</p>
                             </div>
                             <p>
                                 <label for=''>Links or self-promotion</label>
@@ -144,7 +143,7 @@
                         </div>
                     </div>
                             ";
-                        }
+
 
                         // revisar si hay producto 2 o 3 para agregar el html inicial basico
                         if (isset($productName_2) || isset($productName_3)) {
