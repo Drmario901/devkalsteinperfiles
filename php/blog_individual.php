@@ -12,8 +12,29 @@
     $fila = mysqli_fetch_array($resultado);
     $fila2 = mysqli_fetch_array($resultado2);
 
+    // Función para convertir el nombre del mes en inglés a español
+    function convertirMesAEspanol($mesEnIngles) {
+        $meses = [
+            'January' => 'enero',
+            'February' => 'febrero',
+            'March' => 'marzo',
+            'April' => 'abril',
+            'May' => 'mayo',
+            'June' => 'junio',
+            'July' => 'julio',
+            'August' => 'agosto',
+            'September' => 'septiembre',
+            'October' => 'octubre',
+            'November' => 'noviembre',
+            'December' => 'diciembre'
+        ];
+        return $meses[$mesEnIngles];
+    }
+
     $fecha = new DateTime($fila['art_date']);
-    $fecha_formateada = $fecha->format('j') . ' de ' . strftime('%B', $fecha->getTimestamp()) . ' de ' . $fecha->format('Y');
+    $mesEnIngles = $fecha->format('F');
+    $mesEnEspanol = convertirMesAEspanol($mesEnIngles);
+    $fecha_formateada = $fecha->format('j') . ' de ' .$mesEnEspanol. ' de ' . $fecha->format('Y');
 
     $contenedorHTML = '
                 <div>
