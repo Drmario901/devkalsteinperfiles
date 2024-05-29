@@ -180,7 +180,7 @@
                     <b>Fecha Inicial:</b>
                     <b style="font-weight: 400;"> <?php echo $fechaInicial ?> </b>
                 </p>
-                <p>
+                <p class="fechas_subs">
                     <b>Fecha Final:</b>
                     <b style="font-weight: 400;"> <?php echo $fechaFinal ?> </b>
                 </p>
