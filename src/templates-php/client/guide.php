@@ -1,25 +1,4 @@
 <div id='c-panel20'>
-    <?php
-			// Incluir el archivo de traducciones
-			include __DIR__.'/../../../php/translations.php';
-			
-			$banner_img = 'Header-usuario-IMG.png';
-
-			// Obtener el idioma del cookie
-			$language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
-
-			// Obtener el texto del banner según el idioma
-			$banner_text_key = 'banner_text_guides'; // Clave para el texto de los catálogos (por defecto)
-			if (isset($translations[$language]['banner_text_guides'])) {
-				$banner_text_key = 'banner_text_guides';
-			}
-
-			// Obtener el texto del banner
-			$banner_text = isset($translations[$language][$banner_text_key]) ? $translations[$language][$banner_text_key] : 'Guias informativas';
-
-			include 'banner.php';
-		?>
-
     <style>
         .txt-author{
             font-weight: bold;
