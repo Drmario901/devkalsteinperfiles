@@ -3,7 +3,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Configuración de los hosts permitidos
 $allowed_hosts = [
     'plataforma.kalstein.net' => [
         'remote_path' => '/home/he270716/public_html/plataforma.kalstein.net/monetico_log_recurrent.txt',
@@ -13,10 +12,8 @@ $allowed_hosts = [
     ]
 ];
 
-// Obtener el origen de la solicitud
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-// Validar el host de origen
 if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     header('Access-Control-Allow-Origin: ' . $origin);
     header('Access-Control-Allow-Methods: POST');
@@ -26,7 +23,6 @@ if (array_key_exists(parse_url($origin, PHP_URL_HOST), $allowed_hosts)) {
     exit;
 }
 
-// Leer datos de la solicitud
 $input_data = file_get_contents('php://input');
 $data = json_decode($input_data, true);
 
@@ -35,7 +31,6 @@ if (!$data) {
     exit;
 }
 
-// Escribir datos en el archivo de log local
 $local_log_file = 'monetico_log_recurrent.txt';
 $log_message = date('Y-m-d H:i:s') . " - Datos recibidos: " . json_encode($data) . "\n";
 file_put_contents($local_log_file, $log_message, FILE_APPEND);
@@ -47,10 +42,9 @@ if (!file_exists($local_log_file)) {
     echo "Archivo de log local creado.\n";
 }
 
-// Función para registrar logs en el host remoto usando SCP
 function log_to_host($host_config, $local_log_file) {
     $scp_command = sprintf(
-        "sshpass -p '%s' scp %s %s@%s:%s 2>&1",
+        "sshpass -p '%s' scp -o StrictHostKeyChecking=no %s %s@%s:%s 2>&1",
         escapeshellarg($host_config['scp_pass']),
         escapeshellarg($local_log_file),
         escapeshellarg($host_config['scp_user']),
@@ -58,14 +52,12 @@ function log_to_host($host_config, $local_log_file) {
         escapeshellarg($host_config['remote_path'])
     );
 
-    // Añadir salida de depuración
     echo "Comando SCP: $scp_command\n";
 
     $output = [];
     $return_var = 0;
     exec($scp_command, $output, $return_var);
 
-    // Mostrar la salida del comando SCP
     echo "Salida SCP: " . implode("\n", $output) . "\n";
     echo "Código de retorno SCP: $return_var\n";
 
@@ -79,7 +71,6 @@ function log_to_host($host_config, $local_log_file) {
     }
 }
 
-// Intentar registrar logs en todos los hosts permitidos
 $all_success = true;
 foreach ($allowed_hosts as $host => $host_config) {
     if (!log_to_host($host_config, $local_log_file)) {
