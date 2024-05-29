@@ -20,19 +20,19 @@ jQuery(document).ready(function ($) {
     "professionalism-e",
   ];
 
-  let checks = [];
+  let checks = {};
 
-  for (let id of ids) {
-    checks.push(false);
-  }
+  // Inicializar checks con el estado actual de los checkboxes
+  ids.forEach((id) => {
+    let element = document.querySelector("#" + id);
+    if (element) {
+      checks[id] = element.checked;
+    }
+  });
 
-  for (let i = 0; i < ids.length; i++) {
-    let id = ids[i];
-
-    checks[i] = document.querySelector("#" + id).checked;
-
+  ids.forEach((id) => {
     $(document).on("change", "#" + id, function () {
-      checks[i] = this.checked;
+      checks[id] = this.checked;
 
       if (!this.checked) {
         verify = false;
@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
                     </button>
                 `);
       } else {
-        let allChecked = checks.every((check) => check);
+        let allChecked = Object.values(checks).every((check) => check);
 
         if (allChecked) {
           verify = true;
@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
         }
       }
     });
-  }
+  });
 
   // Subida de artículos
   $(document).on("click", "#btnValidate button", function () {
