@@ -11,8 +11,24 @@
 
     $fila = mysqli_fetch_array($resultado);
     $fila2 = mysqli_fetch_array($resultado2);
+    $id = $fila['art_id_user'];
+
+    $sql3 = "SELECT * FROM wp_account WHERE account_aid = '$id'";
+    $resultado3 = $conexion->query($sql3);
+    $row = mysqli_fetch_array($resultado3);
+    $correo = $row['account_correo'];
+
+    $sql4 = "SELECT * FROM tienda_virtual WHERE ID_user = '$correo'";
+    $resultado4 = $conexion->query($sql4);
+    $row2 = mysqli_fetch_array($resultado4);
+    $store = $row2[2];
 
     $subtittle = !empty($fila2['art_subtitle']) ? $fila2['art_subtitle'] : '';
+    $subdescription = !empty($fila2['art_description']) ? $fila2['art_description'] : '';
+    $subtittle2 = !empty($fila2['art_subtitle_2']) ? $fila2['art_subtitle_2'] : '';
+    $subdescription2 = !empty($fila2['art_description_2']) ? $fila2['art_description_2'] : '';
+    $subtittle3 = !empty($fila2['art_subtitle_3']) ? $fila2['art_subtitle_3'] : '';
+    $subdescription3 = !empty($fila2['art_description_3']) ? $fila2['art_description_3'] : '';
 
     // Función para convertir el nombre del mes en inglés a español
     function convertirMesAEspanol($mesEnIngles) {
@@ -59,89 +75,17 @@
                 </p>
                 <div class="articulo_extracto">
                     <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">'.$subtittle.'</h3>
-                    <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
-                        tempor
-                        tincidunt, nulla libero vehicula urna, nec porta tellus ipsum sollicitudin nisi.
-                        Sed eu
-                        feugiat
-                        arcu. Pellentesque vel purus vitae odio viverra scelerisque. Morbi faucibus,
-                        augue vel
-                        facilisis
-                        faucibus, orci ante consequat libero, vitae feugiat lectus libero in purus. Duis
-                        pretium
-                        eleifend ultrices. Phasellus suscipit eros augue. Sed feugiat, mi vel posuere
-                        dapibus, velit
-                        diam pulvinar eros, ut consequat ante neque sit amet sapien. Sed facilisis ac
-                        nisi non
-                        viverra.
-                        Fusce id molestie mi.
-                        <br><br>
-                        Phasellus suscipit, lacus sit amet sollicitudin lacinia, ipsum lorem eleifend
-                        ligula, at
-                        hendrerit risus sem luctus arcu. Donec aliquam turpis libero, nec auctor ex
-                        congue ac.
-                        Integer
-                        sodales ex non volutpat tincidunt. Donec erat orci, euismod non tincidunt ut,
-                        auctor sed
-                        neque.
-                        Nullam rutrum posuere nulla, vitae lobortis urna maximus ac. Nullam iaculis mi
-                        quam, luctus
-                        sodales nulla ullamcorper ac. Maecenas tempor pulvinar elit quis lobortis. Ut
-                        mollis risus a
-                        diam ultricies bibendum. Cras sodales, tortor eu venenatis varius, nisi odio
-                        sagittis lorem,
-                        sed
-                        congue purus elit at diam. Curabitur interdum tellus ut nisi viverra, ut maximus
-                        augue
-                        ullamcorper. Nam vitae tincidunt risus. Etiam sollicitudin suscipit nisl sed
-                        viverra. Nulla
-                        facilisi.
+                    <p class="" style="font-family: Roboto;">'.$subdescription.'.
                     </p>
                 </div>
                 <div class="articulo_extracto">
-                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">Subtitulo del
-                        articulo</h3>
-                    <p class="" style="font-family: Roboto;">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit. In luctus sapien nec ornare aliquet. Phasellus convallis, mi a
-                        tempor
-                        tincidunt, nulla libero vehicula urna, nec porta tellus ipsum sollicitudin nisi.
-                        Sed eu
-                        feugiat
-                        arcu. Pellentesque vel purus vitae odio viverra scelerisque. Morbi faucibus,
-                        augue vel
-                        facilisis
-                        faucibus, orci ante consequat libero, vitae feugiat lectus libero in purus. Duis
-                        pretium
-                        eleifend ultrices. Phasellus suscipit eros augue. Sed feugiat, mi vel posuere
-                        dapibus, velit
-                        diam pulvinar eros, ut consequat ante neque sit amet sapien. Sed facilisis ac
-                        nisi non
-                        viverra.
-                        Fusce id molestie mi.
-                        <br><br>
-                        Phasellus suscipit, lacus sit amet sollicitudin lacinia, ipsum lorem eleifend
-                        ligula, at
-                        hendrerit risus sem luctus arcu. Donec aliquam turpis libero, nec auctor ex
-                        congue ac.
-                        Integer
-                        sodales ex non volutpat tincidunt. Donec erat orci, euismod non tincidunt ut,
-                        auctor sed
-                        neque.
-                        Nullam rutrum posuere nulla, vitae lobortis urna maximus ac. Nullam iaculis mi
-                        quam, luctus
-                        sodales nulla ullamcorper ac. Maecenas tempor pulvinar elit quis lobortis. Ut
-                        mollis risus a
-                        diam ultricies bibendum. Cras sodales, tortor eu venenatis varius, nisi odio
-                        sagittis lorem,
-                        sed
-                        congue purus elit at diam. Curabitur interdum tellus ut nisi viverra, ut maximus
-                        augue
-                        ullamcorper. Nam vitae tincidunt risus. Etiam sollicitudin suscipit nisl sed
-                        viverra. Nulla
-                        facilisi.
+                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">'.$subtittle2.'</h3>
+                    <p class="" style="font-family: Roboto;">'.$subdescription2.'.
+                    </p>
+                </div>
+                <div class="articulo_extracto">
+                    <h3 style="font-family: Montserrat; margin-bottom: 10px; font-size: 2em; padding: 0">'.$subtittle3.'</h3>
+                    <p class="" style="font-family: Roboto;">'.$subdescription3.'.
                     </p>
                 </div>
                 <div class="footer_lectura_articulo" style="display: grid; gap: 10px">
@@ -187,7 +131,7 @@
                             <path
                                 d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
                         </svg>
-                        Autor
+                        '.$store.'
                     </h5>
                 </div>';
     // header('Content-Type: application/json');
