@@ -207,7 +207,7 @@
     <thead>
       <tr id="tr-titles">
         <!-- Los títulos se llenarán aquí -->
-        <th>Facturación mensual<br><span style="color: black; margin-top: 10px; font-size: 14px; font-weight: 500;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</span></th>
+        <th>Facturación mensual<br><span style="color: black; margin-top: 10px; font-size: 12px; font-weight: 500;">Estos planes están diseñados para ofrecer un soporte sin precedentes.</span></th>
         <th id="th-membresia-1" style="background-color: <?php echo $membresia == 0 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 0 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 1</th>
         <th id="th-membresia-2" style="background-color: <?php echo $membresia == 1 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 1 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 2</th>
         <th id="th-membresia-3" style="background-color: <?php echo $membresia == 2 ? '#213280' : 'transparent'; ?>; color: <?php echo $membresia == 2 ? '#FFFFFF' : 'inherit'; ?>;">Membresía 3</th>
