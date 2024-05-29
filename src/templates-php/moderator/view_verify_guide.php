@@ -2,41 +2,46 @@
 
     <?php
 
-        include 'navbar.php';
-    
+    include 'navbar.php';
+    require __DIR__ . '/../../../php/conexion.php';
+    if (isset($_GET['guideId'])) {
+        $guideId = $_GET['guideId'];
+    } else {
+        $guideId = '';
+    }
     ?>
     <script>
-    let page = "home";
+        let page = "home";
 
-    document.querySelector('#link-' + page).classList.add("active");
-    document.querySelector('#link-' + page).removeAttribute("style");
+        document.querySelector('#link-' + page).classList.add("active");
+        document.querySelector('#link-' + page).removeAttribute("style");
     </script>
 </header>
 
 <style>
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    border-radius: 12px;
-    margin: 0;
-}
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border-radius: 12px;
+        margin: 0;
+    }
 
-h5,
-p,
-h6 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-align: start;
-}
+    h5,
+    p,
+    h6 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: start;
+    }
 
-h5 {
-    font-weight: 700;
-}
+    h5 {
+        font-weight: 700;
+    }
 
-.card-header {
-    background-color: white;
-}
+    .card-header {
+        background-color: white;
+    }
 </style>
 
 <main>
@@ -45,33 +50,71 @@ h5 {
         <p>Por favor, revisa la información de la guía y marca con un check los datos que sean válidos.</p>
         <div class='card mb-3'>
             <div class='row'>
-                <div class='col-md-4 text-sm-start text-md-center'>
-                    <h5>
-                        <i class='fas fa-pen'></i>
-                        Producto principal
-                        <input class='d-inline' type='checkbox' id='name'>
-                    </h5>
-                    <h6 class='text-start'>Lorem Ipsum</h6>
-                    <a TARGET='_blank' href='#'>
-                        <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                            width=200
-                            src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                    </a>
 
-                    <!-- Enlaces o promociones -->
-                    <p><label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-i'>
-                    </p>
+                <?php
 
-                    <p><label for=''>Image quality</label>
-                        <input class='d-inline' type='checkbox' id='quality-i'>
-                    </p>
+                $sql = "SELECT 
+                    wp_guides.*,
+                    wp_guides_details.*,
+                    wp_k_products.product_subcategory_es,
+                    wp_k_products.product_category_es
+                FROM 
+                    wp_guides
+                INNER JOIN 
+                    wp_guides_details ON wp_guides.guide_id = wp_guides_details.guide_id
+                INNER JOIN 
+                    wp_k_products ON wp_guides_details.guide_product_id = wp_k_products.product_aid
+                WHERE 
+                    wp_guides.guide_id = '$guideId'";
 
-                    <p><label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-i'>
-                    </p>
 
-                </div>
+                $result = $conexion->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $productName = $row['product_category_es'];
+                        $productSubcategory = $row['product_subcategory_es'];
+                        $productCategory = $row['product_category_es'];
+                        $guideDescription = $row['guide_description'];
+                        $guideImg = $row['guide_img_url'];
+                        $guideDetail = $row['guide_detail_number'];
+                        if ($guideDetail === 1) {
+                            echo "<div class='col-md-4 text-sm-start text-md-center'>
+                                <h5>
+                                <i class='fas fa-pen'></i>
+                                Producto principal
+                                <input class='d-inline' type='checkbox' id='name'>
+                            </h5>
+                            <h6 class='text-start'>$productName</h6>
+                            <a TARGET='_blank' href='#'>
+                                <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                    width=200
+                                    src='$guideImg'>
+                            </a>
+        
+                            <!-- Enlaces o promociones -->
+                            <p><label for=''>Links or self-promotion</label>
+                                <input class='d-inline' type='checkbox' id='promotions-i'>
+                            </p>
+        
+                            <p><label for=''>Image quality</label>
+                                <input class='d-inline' type='checkbox' id='quality-i'>
+                            </p>
+        
+                            <p><label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-i'>
+                            </p>
+                            </div>";
+                        }
+
+                    }
+                }
+
+                ?>
+
+
+
+
                 <div class='col-md-8'>
                     <h5>
                         <i class='fas fa-circle-info'></i>
