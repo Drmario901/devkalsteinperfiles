@@ -183,9 +183,6 @@ html a:hover,
             <!-- Los datos se llenarán aquí -->
         </tbody>
     </table>
-    <p style="font-size: 14px; color: #888;"><i class="fa-solid fa-asterisk" style='font-size: 14px;'></i> El
-        contrato tiene una duración de<strong> 3 meses</strong>. Adicionalmente se aplica un <strong>1.5% de gastos
-            administrativos financieros.</strong></p>
 
     <div style="margin-top: 15px">
         <div style="line-height: 1.5em">

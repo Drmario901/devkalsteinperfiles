@@ -37,25 +37,11 @@ const datos = [
   },
   {
     item: [
-      "Acceso Ilimitado a Contenido (Manuales, Catálogos, Certificados)",
-      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
-      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
-      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
-    ],
-  },
-  {
-    item: [
       "Mensajería Directa (Fábrica/Distribuidores/Servicio Técnico/Usuarios)",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
       "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
     ],
-  },
-  {
-    item: ["Soporte Técnico Online", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
-  },
-  {
-    item: ["1 Hora Gratuita de Inducción Técnica Online", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: ["Recomendación de Modelos por IA", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
@@ -69,13 +55,10 @@ const datos = [
     ],
   },
   {
-    item: ["Verificación Kalstein", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
+    item: ["Licencia Kalstein", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
   },
   {
     item: ["Módulo de Cotizaciones Personalizadas", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
-  },
-  {
-    item: ["Descuentos Exclusivos", "18%", "18%", "18% a 41% solo miembros"],
   },
   {
     item: [
@@ -90,14 +73,6 @@ const datos = [
   },
   {
     item: ["Productos 3D del Negocio (10)", "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>", "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>", "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>"],
-  },
-  {
-    item: [
-      "Créditos Kalstein (Tipo I, II y III. Solo para Europa)",
-      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
-      "<i class='fa-solid fa-circle-xmark' style='color: #de3a46;'></i>",
-      "<i class='fa-solid fa-circle-check' style='color: #4abd13;'></i>",
-    ],
   },
   {
     item: [
