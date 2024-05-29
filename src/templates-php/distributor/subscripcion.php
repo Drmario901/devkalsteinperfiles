@@ -201,7 +201,7 @@
 <section style="margin-top: 2rem;">
 
   <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
-  <p style="font-size: 1.75em; color: #213280; font-weight: 700;">Planes de Membresía</p>
+  <h5 style="font-size: 1.75em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
 
   <table class="membership-table">
     <thead>
