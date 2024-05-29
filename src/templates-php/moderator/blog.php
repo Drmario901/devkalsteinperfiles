@@ -3,7 +3,9 @@
     <?php
     require __DIR__ . '/../../../php/conexion.php';
     include 'navbar.php';
-
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     ?>
     <script>
         let page = "blog";
@@ -21,11 +23,13 @@
 
             <?php
             $query = "
-            SELECT wp_art_blog.*, wp_account.*
-            FROM wp_art_blog
-            INNER JOIN wp_account ON wp_art_blog.art_id_user = wp_account.account_aid
-            ORDER BY wp_art_blog.art_id_user ASC;
-            ";
+            SELECT wp_art_blog.*, wp_account.*, 8x7MM_posts.*
+            FROM kalsteinplus_he270716_wp_es.wp_art_blog
+            INNER JOIN kalsteinplus_he270716_wp_es.wp_account ON wp_art_blog.art_id_user = wp_account.account_aid
+            INNER JOIN kalsteinplus_plataforma_desarrollo.8x7MM_posts ON wp_art_blog.title_slug = 8x7MM_posts.post_title
+            WHERE 8x7MM_posts.post_status = 'draft'
+            ORDER BY wp_art_blog.art_id_user DESC;
+        ";
 
             $result = $conexion->query($query);
 
