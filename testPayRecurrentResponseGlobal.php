@@ -43,12 +43,14 @@ if (!file_exists($local_log_file)) {
 function log_to_host($host_config, $local_log_file) {
     $ftp_conn = ftp_connect($host_config['ftp_server']);
     if (!$ftp_conn) {
+        echo "No se pudo conectar al servidor FTP: {$host_config['ftp_server']}\n";
         file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - No se pudo conectar al servidor FTP: {$host_config['ftp_server']}\n", FILE_APPEND);
         return false;
     }
 
     $login = ftp_login($ftp_conn, $host_config['ftp_user'], $host_config['ftp_pass']);
     if (!$login) {
+        echo "Falló el login FTP para {$host_config['ftp_server']}\n";
         file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el login FTP para {$host_config['ftp_server']}\n", FILE_APPEND);
         ftp_close($ftp_conn);
         return false;
@@ -57,19 +59,19 @@ function log_to_host($host_config, $local_log_file) {
     $remote_dir = dirname($host_config['remote_path']);
     if (!ftp_chdir($ftp_conn, $remote_dir)) {
         if (!ftp_mkdir($ftp_conn, $remote_dir)) {
+            echo "Falló la creación del directorio: $remote_dir\n";
             file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la creación del directorio: $remote_dir\n", FILE_APPEND);
             ftp_close($ftp_conn);
             return false;
+        } else {
+            echo "Directorio creado: $remote_dir\n";
         }
-    }
-
-    if (!ftp_chdir($ftp_conn, $remote_dir)) {
-        file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló el cambio al directorio: $remote_dir\n", FILE_APPEND);
-        ftp_close($ftp_conn);
-        return false;
+    } else {
+        echo "Directorio existente: $remote_dir\n";
     }
 
     if (!ftp_put($ftp_conn, basename($host_config['remote_path']), $local_log_file, FTP_ASCII)) {
+        echo "Falló la subida FTP para {$host_config['remote_path']}\n";
         file_put_contents($local_log_file, date('Y-m-d H:i:s') . " - Falló la subida FTP para {$host_config['remote_path']}\n", FILE_APPEND);
         ftp_close($ftp_conn);
         return false;
