@@ -4539,19 +4539,19 @@ jQuery(document).ready(function ($) {
   })
 
   function renderArticulo(id){
+
     $.ajax({
       url: plugin_dir + '/php/blog_individual.php',
       type: "POST",
       data: { id },
-      success: function(response) {
-        console.log(response)
-          // Simulamos una respuesta con datos
-          $('#contenido_articulo').html(response);
-          
-      },
-      error: function() {
-          console.error('Error al cargar los datos');
-      }
-  });
+    })
+      .done(function (response) {
+        console.log(response);
+        let data = JSON.parse(response);
+        $("#contenido_articulo").html(data);
+      })
+      .fail(function () {
+        console.log("errorrr");
+      });
   }
 });
