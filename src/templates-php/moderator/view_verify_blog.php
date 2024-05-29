@@ -82,15 +82,15 @@
 
                     <!-- Enlaces o promociones -->
                     <p><label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-i'>
+                        <input class='d-inline' type='checkbox' id='promotions-a'>
                     </p>
 
                     <p><label for=''>Image quality</label>
-                        <input class='d-inline' type='checkbox' id='quality-i'>
+                        <input class='d-inline' type='checkbox' id='quality-a'>
                     </p>
 
                     <p><label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        <input class='d-inline' type='checkbox' id='professionalism-a'>
                     </p>
 
                 </div>
@@ -105,11 +105,11 @@
                     </div>
                     <p>
                         <label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        <input class='d-inline' type='checkbox' id='promotions-b'><br>
                     </p>
                     <p>
                         <label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        <input class='d-inline' type='checkbox' id='professionalism-b'>
                     </p>
 
                 </div>
@@ -137,11 +137,11 @@
                 </div>
                 <p>
                     <label for=''>Links or self-promotion</label>
-                    <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                    <input class='d-inline' type='checkbox' id='promotions-c'><br>
                 </p>
                 <p>
                     <label for=''>Professionalism</label>
-                    <input class='d-inline' type='checkbox' id='professionalism-d'>
+                    <input class='d-inline' type='checkbox' id='professionalism-c'>
                 </p>
 
             </div>
@@ -152,7 +152,7 @@
                 <h5>
                     <i class='fas fa-pen'></i>
                     Título de extracto #2
-                    <input class='d-inline' type='checkbox' id='name'>
+                    <input class='d-inline' type='checkbox' id='name-b'>
                 </h5>
                 <h6 class='text-start'>$artSubtitulo2</h6>
 
@@ -182,7 +182,7 @@
                 <h5>
                     <i class='fas fa-pen'></i>
                     Título de extracto #3
-                    <input class='d-inline' type='checkbox' id='name'>
+                    <input class='d-inline' type='checkbox' id='name-c'>
                 </h5>
                 <h6 class='text-start'>$artSubtitulo3</h6>
 
@@ -198,11 +198,11 @@
                 </div>
                 <p>
                     <label for=''>Links or self-promotion</label>
-                    <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                    <input class='d-inline' type='checkbox' id='promotions-e'><br>
                 </p>
                 <p>
                     <label for=''>Professionalism</label>
-                    <input class='d-inline' type='checkbox' id='professionalism-d'>
+                    <input class='d-inline' type='checkbox' id='professionalism-e'>
                 </p>
 
             </div>
