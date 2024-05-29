@@ -240,21 +240,23 @@ html a:hover,
         contrato tiene una duración de<strong> 3 meses</strong>. Adicionalmente se aplica un <strong>1.5% de gastos
             administrativos financieros.</strong></p>
 
-    <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+    <div>
         <h5>Gestiona tu plan</h5>
         <p>Cambia y mejora tu plan o cancela tu suscripcion aqui</p>
-        <?php if ($membresia != 0) : ?>
-        <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
-        <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
-        <?php endif; ?>
+        <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+            <?php if ($membresia != 0) : ?>
+            <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
+            <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
+            <?php endif; ?>
 
-        <?php if ($membresia != 1 && $membresia != 2) : ?>
-        <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
-        <?php endif; ?>
+            <?php if ($membresia != 1 && $membresia != 2) : ?>
+            <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
+            <?php endif; ?>
 
-        <?php if ($membresia != 2) : ?>
-        <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
-        <?php endif; ?>
+            <?php if ($membresia != 2) : ?>
+            <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
+            <?php endif; ?>
+        </div>
     </div>
 
 </section>
