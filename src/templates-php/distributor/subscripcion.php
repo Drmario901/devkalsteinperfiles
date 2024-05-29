@@ -6,7 +6,7 @@
   }
 
   .fa-solid {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .membership-table {
