@@ -137,7 +137,7 @@
     }
 
     /* Media Querys */
-    @media(max-width: 1100px) {
+    @media(max-width: 1199px) {
         .titulos_subs {
             margin-left: 20px;
         }
