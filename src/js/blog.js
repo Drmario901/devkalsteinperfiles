@@ -163,4 +163,11 @@ jQuery(document).ready(function($) {
         $("#paginado").html(botonesPagina);
     }
 
+    $(document).on('click', '#blog_articulos', function(){
+        alert('Click!!!')
+    })
+
+    $(document).on('click', '#btn_view_art_destacado', function(){
+        alert('Click destacado!!!')
+    })
 });
