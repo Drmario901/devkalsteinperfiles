@@ -149,7 +149,7 @@
                         <div class='col-md-6 text-sm-start text-md-center'>
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
-                            Tipo de producto #2
+                            Tipo de producto #1
                             <input class='d-inline' type='checkbox' id='name'>
                         </h6>
                         <h6 class='text-start' style='font-size: 1.15em;'>
@@ -199,7 +199,7 @@
                         <div class='col-md-6 text-sm-start text-md-center'>
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
-                            Tipo de producto #3
+                            Tipo de producto #2
                             <input class='d-inline' type='checkbox' id='name'>
                         </h6>
                         <h6 class='text-start' style='font-size: 1.15em;'>
