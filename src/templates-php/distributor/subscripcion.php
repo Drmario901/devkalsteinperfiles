@@ -1,6 +1,6 @@
 <style>
   section {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, Arial, sans-serif;
     /* margin: 3rem; */
     padding-bottom: 2rem;
   }
@@ -9,7 +9,6 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     table-layout: auto;
   }
 
@@ -17,8 +16,6 @@
   .membership-table td {
     text-align: center;
     padding: 5px;
-    border: 1px solid #ddd;
-
   }
 
   .membership-table th {
