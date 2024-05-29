@@ -372,10 +372,7 @@ jQuery(document).ready(function($) {
             url: plugin_dir + '/php/blog_individual.php',
             success: function(response) {
                 // Simulamos una respuesta con datos
-                main_articulo = JSON.parse(response).datos // Asegúrate de que esto coincida con el formato de tu respuesta
-                articulo_details = JSON.parse(response).datosDetails
-                
-                printArticulo(main_articulo, articulo_details)
+                $('.contenido_articulo').html(response);
                 
             },
             error: function() {
