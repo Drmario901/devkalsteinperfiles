@@ -241,8 +241,10 @@ html a:hover,
             administrativos financieros.</strong></p>
 
     <div style="margin-top: 15px">
-        <h5 style="font-weight: 600; color: #213280">Gestiona tu plan</h5>
-        <p style="font-weight: 500; font-size: 1.25em; font-family: Roboto, Arial, sans-serif">Cambia y mejora tu plan o cancela tu suscripcion aqui</p>
+        <div style="line-height: 1.5em">
+            <h5 style="font-weight: 600; color: #213280">Gestiona tu plan</h5>
+            <p style="font-family: Roboto, Arial, sans-serif">Cambia y mejora tu plan o cancela tu suscripcion aqui</p>
+        </div>
         <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
             <?php if ($membresia != 0) : ?>
             <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
