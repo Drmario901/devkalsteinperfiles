@@ -170,7 +170,7 @@
                                             </div>
                                             <div class="contenido_guia" style="margin-top: 1em">
                                                 <h5 class="titulo_guia" style="font-family: Montserrat;">'.$fila['art_title'].'</h5>
-                                                <p style="font-family: Roboto; margin: 0">
+                                                <p style="font-family: Roboto; margin: 0; display: flex;">
                                                     <svg style="display: inline; width:15px; height:15px;"
                                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
