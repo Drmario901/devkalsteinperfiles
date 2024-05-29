@@ -19,7 +19,7 @@ section {
 .membership-table th,
 .membership-table td {
     text-align: center;
-    padding: 1em 1.5em;
+    padding: 1em 0.5em;
     border: 1px solid #c9c9c9;
 }
 
@@ -69,44 +69,19 @@ section {
 
 .btn-tbl {
     padding: 1.1em 2em;
-    background: none;
-    border: 2px solid #fff;
     font-size: 15px;
     color: white !important;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s;
     border-radius: 12px;
     background-color: #213280;
     font-weight: bolder;
-    box-shadow: 0 2px 0 2px #000;
-}
-
-.btn-tbl:before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 120%;
-    background-color: #fff;
-    top: 50%;
-    transform: skewX(30deg) translate(-150%, -50%);
-    transition: all 0.5s;
+    transition: box-shadow 0.2s;
 }
 
 .btn-tbl:hover {
-    background-color: #213280;
-    color: #fff !important;
-    box-shadow: 0 2px 0 2px #0d3b66;
-}
-
-.btn-tbl:hover::before {
-    transform: skewX(30deg) translate(150%, -50%);
-    transition-delay: 0.1s;
-}
-
-.btn-tbl:active {
-    transform: scale(0.9);
+    box-shadow: 0px 0px 20px -4px rgba(0, 87, 255, 0.83);
 }
 
 html a:hover,
@@ -122,45 +97,20 @@ html a:hover,
 
 .btn-tbl-cancelar {
     padding: 1.1em 2em;
-    background: none;
-    border: 2px solid #fff;
     font-size: 15px;
     color: white !important;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s;
     border-radius: 12px;
-    background-color: #c1121f;
+    background-color: #de3a46;
     font-weight: bolder;
-    box-shadow: 0 2px 0 2px #000;
-}
-
-.btn-tbl-cancelar:before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 120%;
-    background-color: #fff;
-    top: 50%;
-    transform: skewX(30deg) translate(-150%, -50%);
-    transition: all 0.5s;
+    transition: box-shadow 0.2s
 }
 
 
 .btn-tbl-cancelar:hover {
-    background-color: #c1121f;
-    color: #fff !important;
-    box-shadow: 0 2px 0 2px #c1121f;
-}
-
-.btn-tbl-cancelar:hover::before {
-    transform: skewX(30deg) translate(150%, -50%);
-    transition-delay: 0.1s;
-}
-
-.btn-tbl-cancelar:active {
-    transform: scale(0.9);
+    box-shadow: 0px 0px 20px -4px rgba(255,58,70, 0.83);
 }
 
 html a:hover,
@@ -236,20 +186,29 @@ html a:hover,
             <!-- Los datos se llenarán aquí -->
         </tbody>
     </table>
+    <p style="font-size: 14px; color: #888;"><i class="fa-solid fa-asterisk" style='font-size: 14px;'></i> El
+        contrato tiene una duración de<strong> 3 meses</strong>. Adicionalmente se aplica un <strong>1.5% de gastos
+            administrativos financieros.</strong></p>
 
-    <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
-        <?php if ($membresia != 0) : ?>
-        <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
-        <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
-        <?php endif; ?>
+    <div style="margin-top: 15px">
+        <div style="line-height: 1.5em">
+            <h5 style="font-weight: 600; color: #213280">Gestiona tu plan</h5>
+            <p style="font-family: Roboto, Arial, sans-serif">Cambia y mejora tu plan o cancela tu suscripcion aqui</p>
+        </div>
+        <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+            <?php if ($membresia != 0) : ?>
+            <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
+            <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
+            <?php endif; ?>
 
-        <?php if ($membresia != 1 && $membresia != 2) : ?>
-        <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
-        <?php endif; ?>
+            <?php if ($membresia != 1 && $membresia != 2) : ?>
+            <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
+            <?php endif; ?>
 
-        <?php if ($membresia != 2) : ?>
-        <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
-        <?php endif; ?>
+            <?php if ($membresia != 2) : ?>
+            <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
+            <?php endif; ?>
+        </div>
     </div>
 
 </section>

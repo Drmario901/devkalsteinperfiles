@@ -217,7 +217,7 @@ foreach ($lines as $line) {
         $insertSubs->close();
 
         // Solo actualizar el tipo de membresía si el code-retour es 'payetest'
-        if ($retour === 'payetest') {
+        if ($retour === 'payetest' || $retour === 'paiement') {
             // Actualizar el tipo de membresía basado en el último registro
             $lastRecords[$accountID] = [
                 'tipoMembresia' => (strpos($paymentReference, 'SUB1') !== false) ? 1 : ((strpos($paymentReference, 'SUB2') !== false) ? 2 : 0),
