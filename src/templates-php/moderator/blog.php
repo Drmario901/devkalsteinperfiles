@@ -24,7 +24,6 @@
             SELECT wp_art_blog.*, wp_account.*
             FROM wp_art_blog
             INNER JOIN wp_account ON wp_art_blog.art_id_user = wp_account.account_aid
-            WHERE wp_art_blog.estado_membresia = 2
             ORDER BY wp_art_blog.art_id_user ASC;
             ";
 
