@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function openPaymentModal(idAccount) {
   $.ajax({
     type: "POST",
-    url: "getSuscripcionData.php",
+    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/getSuscripcionData.php",
     data: { idAccount: idAccount },
     dataType: "json",
     success: function (response) {
