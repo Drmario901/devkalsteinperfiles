@@ -732,178 +732,172 @@
                 }
                 ?>
 
-
-            </div>
-        </div>
-        <div class='card mb-3'>
-            <div class='row text-sm-start text-md-center'>
-                <h5>
-                    <i class='fa-solid fa-star'></i>
-                    Extras
-                </h5>
-            </div>
-            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                <div class='row'>
-                    <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-file-video'></i>
-                        Video
-                    </h6>
-                    <p style='font-weight: 600'>
-                        <i class='fa-solid fa-paperclip'></i>
-                        Link <input class='d-inline' type='checkbox' id='name'>
-                    </p>
-                    <div class='mb-3 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                        <p style='text-align: justify;'>
-                            https://www.esteesunenlace.com</p>
+                <div class='card mb-3'>
+                    <div class='row text-sm-start text-md-center'>
+                        <h5>
+                            <i class='fa-solid fa-star'></i>
+                            Extras
+                        </h5>
                     </div>
-                    <p style='font-weight: 600'>
-                        <i class='fas fa-circle-info'></i>
-                        Description
-                    </p>
-                    <div class='row p-0'>
-                        <div class='col-9'>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed faucibus
-                                    purus, id
-                                    bibendum
-                                    arcu. Nunc dictum nibh lorem. In hac habitasse platea dictumst. Pellentesque
-                                    habitant morbi
-                                    tristique senectus et netus et malesuada fames ac turpis egestas. Donec
-                                    vitae enim
-                                    feugiat,
-                                    blandit dolor at, placerat ex. Nullam finibus ex in quam elementum tempor.
-                                    Mauris et
-                                    sollicitudin velit, vel elementum neque. Nullam facilisis iaculis ligula,
-                                    quis
-                                    euismod ipsum
-                                    lacinia sit amet. Proin tincidunt sapien in leo volutpat dignissim. Quisque
-                                    porta
-                                    urna vitae
-                                    lacus ultricies, ut blandit diam pellentesque. Aliquam erat volutpat. Cras
-                                    sit amet
-                                    placerat
-                                    eros, id tempor quam. Cras varius placerat posuere.</p>
+                    <?php
+
+                    $sqlExtra = "SELECT * FROM wp_guides_extras WHERE guide_id = '$guideId'";
+
+                    $resultExtra = $conexion->query($sqlExtra);
+
+                    $rowExtra = $resultExtra->fetch_assoc();
+
+                    $videoUrl = $rowExtra['guide_video_url'];
+                    $videoDescription = $rowExtra['guide_video_description'];
+
+                    if ($videoUrl) {
+                        echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                        <div class='row'>
+                            <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-file-video'></i>
+                                Video
+                            </h6>
+                            <p style='font-weight: 600'>
+                                <i class='fa-solid fa-paperclip'></i>
+                                Link <input class='d-inline' type='checkbox' id='name'>
+                            </p>
+                            <div class='mb-3 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                <p style='text-align: justify;'>$videoUrl</p>
+                            </div>
+                            <p style='font-weight: 600'>
+                                <i class='fas fa-circle-info'></i>
+                                Description
+                            </p>
+                            <div class='row p-0'>
+                                <div class='col-9'>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>$videoDescription</p>
+                                    </div>
+                                </div>
+                                <div class='col-3'>
+                                    <p><label for=''>Links or self-promotion</label>
+                                        <input class='d-inline' type='checkbox' id='promotions-i'>
+                                    </p>
+
+                                    <p><label for=''>Professionalism</label>
+                                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class='col-3'>
-                            <p><label for=''>Links or self-promotion</label>
-                                <input class='d-inline' type='checkbox' id='promotions-i'>
-                            </p>
+                    </div>";
+                    }
 
+                    ?>
+
+
+
+                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                        <div class='row'>
+                            <h6 class='text-start' style='font-weight: 600;'><i
+                                    class='fa-regular fa-circle-question'></i>
+                                FAQ
+                            </h6>
+                            <div class='row'>
+                                <div class='col-6'>
+                                    <p style='font-weight: 600'>Pregunta N°1</p>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>
+                                            Lorem ipsum</p>
+                                    </div>
+                                </div>
+                                <div class='col-6'>
+                                    <p style='font-weight: 600'>Respuesta N°1</p>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>
+                                            Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-6'>
+                                    <p style='font-weight: 600'>Pregunta N°2</p>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>
+                                            Lorem ipsum</p>
+                                    </div>
+                                </div>
+                                <div class='col-6'>
+                                    <p style='font-weight: 600'>Respuesta N°2</p>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>
+                                            Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-6'>
+                                    <p style='font-weight: 600'>Pregunta N°3</p>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>
+                                            Lorem ipsum</p>
+                                    </div>
+                                </div>
+                                <div class='col-6'>
+                                    <p style='font-weight: 600'>Respuesta N°3</p>
+                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                                        <p style='text-align: justify;'>
+                                            Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                        <div class='row'>
+                            <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i>
+                                Etiquetas
+                            </h6>
+                            <div class='d-flex my-2'>
+                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
+                                        etiqueta</p>
+                                </div>
+                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
+                                        etiqueta</p>
+                                </div>
+                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
+                                        etiqueta</p>
+                                </div>
+                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
+                                        etiqueta</p>
+                                </div>
+                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
+                                        etiqueta</p>
+                                </div>
+                            </div>
                             <p><label for=''>Professionalism</label>
+                                <input class='d-inline' type='checkbox' id='professionalism-i'>
+                            </p>
+                            <p><label for=''>Coherence</label>
                                 <input class='d-inline' type='checkbox' id='professionalism-i'>
                             </p>
                         </div>
                     </div>
-
                 </div>
-            </div>
-            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                <div class='row'>
-                    <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-circle-question'></i>
-                        FAQ
-                    </h6>
-                    <div class='row'>
-                        <div class='col-6'>
-                            <p style='font-weight: 600'>Pregunta N°1</p>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum</p>
-                            </div>
-                        </div>
-                        <div class='col-6'>
-                            <p style='font-weight: 600'>Respuesta N°1</p>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6'>
-                            <p style='font-weight: 600'>Pregunta N°2</p>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum</p>
-                            </div>
-                        </div>
-                        <div class='col-6'>
-                            <p style='font-weight: 600'>Respuesta N°2</p>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-6'>
-                            <p style='font-weight: 600'>Pregunta N°3</p>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum</p>
-                            </div>
-                        </div>
-                        <div class='col-6'>
-                            <p style='font-weight: 600'>Respuesta N°3</p>
-                            <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>
-                                    Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
-                            </div>
-                        </div>
-                    </div>
+
+
+                <textarea class='mx-auto my-2' style='width: 100%; height: 150px;'
+                    placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
+                <p class='d-flex justify-content-start' id='strikeContainer'>
+                    <label>Strike</label>
+                    <input class='d-inline' type='checkbox' id='strike'>
+                </p>
+
+                <div id='btnValidate' class='mx-auto'>
+                    <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
+                        <h4 class='text-white pb-0'>Denegate</h4>
+                    </button>
                 </div>
-            </div>
-            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                <div class='row'>
-                    <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i>
-                        Etiquetas
-                    </h6>
-                    <div class='d-flex my-2'>
-                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                            <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                etiqueta</p>
-                        </div>
-                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                            <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                etiqueta</p>
-                        </div>
-                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                            <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                etiqueta</p>
-                        </div>
-                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                            <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                etiqueta</p>
-                        </div>
-                        <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                            <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                etiqueta</p>
-                        </div>
-                    </div>
-                    <p><label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-i'>
-                    </p>
-                    <p><label for=''>Coherence</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-i'>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <textarea class='mx-auto my-2' style='width: 100%; height: 150px;'
-            placeholder='Especifica porqué se está denegando la información' id='message'></textarea>
-        <p class='d-flex justify-content-start' id='strikeContainer'>
-            <label>Strike</label>
-            <input class='d-inline' type='checkbox' id='strike'>
-        </p>
-
-        <div id='btnValidate' class='mx-auto'>
-            <button type='button' class='btn btn-danger btn-block p-2 px-4 mx-auto'>
-                <h4 class='text-white pb-0'>Denegate</h4>
-            </button>
-        </div>
-        <div class='card my-3'>
-            <h5>Past warnings</h5>
+                <div class='card my-3'>
+                    <h5>Past warnings</h5>
     </article>
 </main>
