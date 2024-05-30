@@ -91,7 +91,8 @@
                     }
 
                     // Mostrar el contenido para el producto 1 (obligatorio)
-                    echo "<div class='col-md-4 text-sm-start text-md-center'>
+                    echo "<input type='hidden' id='guideId' value='$guideId'>
+                    <div class='col-md-4 text-sm-start text-md-center'>
                             <h5>
                             <i class='fas fa-pen'></i>
                             Producto principal

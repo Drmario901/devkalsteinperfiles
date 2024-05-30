@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
   let dynamicIds = [];
   $("input[type=checkbox]").each(function () {
     let id = $(this).attr("id");
-    if (id && !staticIds.includes(id)) {
+    if (id && id !== "strike" && !staticIds.includes(id)) {
       dynamicIds.push(id);
     }
   });
@@ -122,7 +122,7 @@ jQuery(document).ready(function ($) {
             function (instance, toast) {
               instance.hide({ transitionOut: "fadeOut" }, toast, "button");
 
-              let guideId = "<?php echo $guideId; ?>";
+              let guideId = document.querySelector("#guideId").value;
 
               $.ajax({
                 url: plugin_dir + "php/moderator/validateGuide.php",
@@ -185,7 +185,7 @@ jQuery(document).ready(function ($) {
               function (instance, toast) {
                 instance.hide({ transitionOut: "fadeOut" }, toast, "button");
 
-                let guideId = "<?php echo $guideId; ?>";
+                let guideId = document.querySelector("#guideId").value;
                 let msg = $("#message").val();
                 let strike = document.querySelector("#strike").checked;
 
