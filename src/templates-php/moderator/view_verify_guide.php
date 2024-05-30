@@ -409,121 +409,87 @@
                 ?>
 
                 <?php
-                $sqlArticles = "SELECT wp_guides.*, wp_guides_articles.* FROM wp_guides INNER JOIN wp_guides_articles ON wp_guides.guide_id = wp_guides_articles.guide_id WHERE wp_guides.guide_id = '$guideId'";
+                // Realiza la primera consulta
+                $sqlArticles = "SELECT wp_guides.*, wp_guides_articles.* 
+                FROM wp_guides 
+                INNER JOIN wp_guides_articles 
+                ON wp_guides.guide_id = wp_guides_articles.guide_id 
+                WHERE wp_guides.guide_id = '$guideId'";
 
                 $resultArticle = $conexion->query($sqlArticles);
 
+                // Verificar si la consulta falló
+                if (!$resultArticle) {
+                    die("Error en la consulta SQL: " . $conexion->error);
+                }
+
                 $rowArticle = $resultArticle->fetch_assoc();
 
-                $articleId = $rowArticle['id_article_1'];
-                $articleId2 = $rowArticle['id_article_2'];
-                $articleId3 = $rowArticle['id_article_3'];
-                $articleId4 = $rowArticle['id_article_4'];
-
-                $sqlArticless = "SELECT wp_art_blog.*, wp_categories.categorie_description_es FROM wp_art_blog INNER JOIN wp_categories ON wp_categories.categorie_id = wp_art_blog.art_id_category WHERE art_id IN ('$articleId', '$articleId2', '$articleId3', '$articleId4')";
-
-                $resultArticless = $conexion->query($sqlArticless);
-
-                while ($articleRow = mysqli_fetch_assoc($resultArticless)) {
-                    if ($articleRow['art_id'] == $articleId) {
-                        $articleName = $articleRow['art_title'];
-                        $articleDescription = $articleRow['categorie_description_es'];
-                        $articleImage = $articleRow['art_img'];
-                    } elseif ($articleRow['art_id'] == $articleId2) {
-                        $articleName_2 = $articleRow['art_title'];
-                        $articleDescription_2 = $articleRow['categorie_description_es'];
-                        $articleImage_2 = $articleRow['art_img'];
-                    } elseif ($articleRow['art_id'] == $articleId3) {
-                        $articleName_3 = $articleRow['art_title'];
-                        $articleDescription_3 = $articleRow['categorie_description_es'];
-                        $articleImage_3 = $articleRow['art_img'];
-                    } elseif ($articleRow['art_id'] == $articleId4) {
-                        $articleName_4 = $articleRow['art_title'];
-                        $articleDescription_4 = $articleRow['categorie_description_es'];
-                        $articleImage_4 = $articleRow['art_img'];
+                // Almacenar los IDs de los artículos en un array
+                $idArticles = [];
+                for ($i = 1; $i <= 4; $i++) {
+                    if (!empty($rowArticle["id_article_$i"])) {
+                        $idArticles[] = $rowArticle["id_article_$i"];
                     }
                 }
 
-                if (isset($articleName)) {
+                // Prepara la consulta para obtener los datos de los artículos
+                $sqlArticless = "SELECT wp_art_blog.*, wp_categories.categorie_description_es 
+                 FROM wp_art_blog 
+                 INNER JOIN wp_categories ON wp_categories.categorie_id = wp_art_blog.art_id_category 
+                 WHERE art_id IN ('" . implode("','", $idArticles) . "')";
+                $resultArticless = $conexion->query($sqlArticless);
+
+                // Verificar si la consulta falló
+                if (!$resultArticless) {
+                    die("Error en la consulta SQL: " . $conexion->error);
+                }
+
+                // Variables para guardar los datos de los artículos
+                $articles = [];
+
+                while ($articleRow = mysqli_fetch_assoc($resultArticless)) {
+                    $articleId = $articleRow['art_id'];
+                    $articles[$articleId] = [
+                        'title' => $articleRow['art_title'],
+                        'description' => $articleRow['categorie_description_es'],
+                        'image' => $articleRow['art_img']
+                    ];
+                }
+
+                if (!empty($articles)) {
                     echo "<div class='card mb-3'>
-                    <div class='row text-sm-start text-md-center'>
-                        <h5>
-                            <i class='fa-regular fa-newspaper'></i>
-                            Articulos destacados
-                        </h5>
-                    </div>
-                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
+            <div class='row text-sm-start text-md-center'>
+                <h5>
+                    <i class='fa-regular fa-newspaper'></i>
+                    Articulos destacados
+                </h5>
+            </div>
+            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
 
-                    echo "<div class='col-md-3 align-items-center'>
+                    foreach ($idArticles as $index => $articleId) {
+                        if (isset($articles[$articleId])) {
+                            $article = $articles[$articleId];
+                            echo "<div class='col-md-3 align-items-center'>
                     <div>
                         <a TARGET='_blank' href='#'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
-                                src='$articleImage'>
+                                src='{$article['image']}'>
                         </a>
                     </div>
                     <div>
-                        <h6 class='text-start'>$articleName<input class='d-inline' type='checkbox' id='name'>
-                        </h6>
-                        <p><b>Category:</b> $articleDescription <input class='d-inline' type='checkbox' id='name'></p>
+                        <h6 class='text-start'>{$article['title']}<input class='d-inline' type='checkbox' id='article$index'></h6>
+                        <p><b>Category:</b> {$article['description']} <input class='d-inline' type='checkbox' id='articleCategory$index'></p>
                     </div>
-                </div>";
-
-                    if (isset($articleName_2)) {
-                        echo "<div class='col-md-3 align-items-center'>
-                    <div>
-                        <a TARGET='_blank' href='#'>
-                            <img class='my-3 d-flex justify-content-start'
-                                style='margin: auto; border: 1px solid #999' width=200
-                                src='$articleImage_2'>
-                        </a>
-                    </div>
-                    <div>
-                        <h6 class='text-start'>$articleName_2<input class='d-inline' type='checkbox' id='name'>
-                        </h6>
-                        <p><b>Category:</b> $articleDescription_2 <input class='d-inline' type='checkbox' id='name'></p>
-                    </div>
-                </div>";
-                    }
-
-                    if (isset($articleName_3)) {
-                        echo "<div class='col-md-3 align-items-center'>
-                    <div>
-                        <a TARGET='_blank' href='#'>
-                            <img class='my-3 d-flex justify-content-start'
-                                style='margin: auto; border: 1px solid #999' width=200
-                                src='$articleImage_3'>
-                        </a>
-                    </div>
-                    <div>
-                        <h6 class='text-start'>$articleName_3<input class='d-inline' type='checkbox' id='name'>
-                        </h6>
-                        <p><b>Category:</b> $articleDescription_3 <input class='d-inline' type='checkbox' id='name'></p>
-                    </div>
-                </div>";
-                    }
-
-                    if (isset($articleName_4)) {
-                        echo "<div class='col-md-3 align-items-center'>
-                    <div>
-                        <a TARGET='_blank' href='#'>
-                            <img class='my-3 d-flex justify-content-start'
-                                style='margin: auto; border: 1px solid #999' width=200
-                                src='$articleImage_4'>
-                        </a>
-                    </div>
-                    <div>
-                        <h6 class='text-start'>$articleName_4<input class='d-inline' type='checkbox' id='name'>
-                        </h6>
-                        <p><b>Category:</b> $articleDescription_4 <input class='d-inline' type='checkbox' id='name'></p>
-                    </div>
-                </div>";
+                  </div>";
+                        }
                     }
 
                     echo "</div></div>";
                 }
-
                 ?>
+
 
                 <?php
                 // Realiza la primera consulta
@@ -601,8 +567,6 @@
 
                     echo "</div></div>";
                 }
-
-                //var_dump($catalogs);
                 ?>
 
                 <div class='card mb-3'>
