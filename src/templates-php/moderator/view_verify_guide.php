@@ -76,10 +76,7 @@
                 WHERE 
                     wp_guides.guide_id = '$guideId'";
 
-
                 $result = $conexion->query($sql);
-
-
 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
@@ -522,7 +519,6 @@
 
                 // Prepara la consulta para obtener los datos de los catálogos
                 $sqlCatalogData = "SELECT * FROM wp_catalogs_es WHERE id IN ('" . implode("','", $idCatalogs) . "')";
-                //echo $sqlCatalogData;
                 $resultCatalogData = $conexion->query($sqlCatalogData);
 
                 // Verificar si la consulta falló
@@ -574,6 +570,7 @@
                 ?>
 
                 <?php
+                // Realiza la primera consulta
                 $sqlArticles = "SELECT wp_guides.*, wp_guides_articles.* 
                 FROM wp_guides 
                 INNER JOIN wp_guides_articles 
@@ -792,7 +789,7 @@
 
                     <?php
                     // Consulta para obtener las preguntas y respuestas de la tabla wp_guides_faq
-                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_aswer_1, guide_faq_2, guide_faq_aswer_2, guide_faq_3, guide_faq_aswer_3, guide_faq_4, guide_faq_aswer_4, guide_faq_5, guide_faq_aswer_5 
+                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_answer_1, guide_faq_2, guide_faq_answer_2, guide_faq_3, guide_faq_answer_3, guide_faq_4, guide_faq_answer_4, guide_faq_5, guide_faq_answer_5 
                     FROM wp_guides_faq 
                     WHERE guide_id = '$guideId'";
 
@@ -808,10 +805,10 @@
                     // Array para almacenar preguntas y respuestas
                     $faqs = [];
                     for ($i = 1; $i <= 5; $i++) {
-                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_aswer_$i"])) {
+                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_answer_$i"])) {
                             $faqs[] = [
                                 'question' => $rowFAQ["guide_faq_$i"],
-                                'answer' => $rowFAQ["guide_faq_aswer_$i"]
+                                'answer' => $rowFAQ["guide_faq_answer_$i"]
                             ];
                         }
                     }
@@ -868,13 +865,13 @@
                             <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i> Etiquetas</h6>
                             <div class='d-flex my-2'>";
 
-                                    foreach ($tags as $tag) {
-                                        echo "<div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                        foreach ($tags as $tag) {
+                            echo "<div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
                             <p class='m-0 p-0' style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> $tag</p>
                         </div>";
-                                    }
+                        }
 
-                                    echo "  </div>
+                        echo "  </div>
                         <p><label for='professionalism-i'>Professionalism</label>
                             <input class='d-inline' type='checkbox' id='professionalism-i'>
                         </p>
