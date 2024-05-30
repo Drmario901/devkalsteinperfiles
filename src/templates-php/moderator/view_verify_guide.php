@@ -403,7 +403,7 @@
                 ?>
 
                 <?php
-                $sqlArticles = "SELECT wp_guides.*, wp_guides_article.* FROM wp_guides INNER JOIN wp_guides_article ON wp_guides.guide_id = wp_guides_article.guide_id WHERE wp_guides.guide_id = '$guideId'";
+                $sqlArticles = "SELECT wp_guides.*, wp_guides_articles.* FROM wp_guides INNER JOIN wp_guides_articles ON wp_guides.guide_id = wp_guides_articles.guide_id WHERE wp_guides.guide_id = '$guideId'";
 
                 $resultArticle = $conexion->query($sqlArticles);
 
