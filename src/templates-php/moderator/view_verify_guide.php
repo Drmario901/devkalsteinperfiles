@@ -868,7 +868,6 @@
                         foreach ($tags as $index => $tag) {
                             echo "<div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
                             <p class='m-0 p-0' style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> $tag</p>
-                            <input class='d-inline' type='checkbox' id='tag_$index'>
                         </div>";
                         }
 
