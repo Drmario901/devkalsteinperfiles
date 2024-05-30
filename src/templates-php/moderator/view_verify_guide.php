@@ -560,9 +560,9 @@
                 while ($catalogRow = mysqli_fetch_assoc($resultCatalogData)) {
                     $catalogId = $catalogRow['id'];
                     $catalogs[$catalogId] = [
-                        'name' => $catalogRow['categorie_name_es'],
+                        'name' => $catalogRow['catalog_name_es'],
                         'image' => $catalogRow['catalog_image'],
-                        'category' => $catalogRow['categorie_category_es']
+                        'category' => $catalogRow['catalog_category_es']
                     ];
                 }
 
