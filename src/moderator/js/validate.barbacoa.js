@@ -3,8 +3,8 @@ var plugin_dir =
   "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/";
 
 jQuery(document).ready(function ($) {
-  // IDs de los checkboxes a validar
-  let ids = [
+  // IDs de los checkboxes estáticos
+  let staticIds = [
     "name_1",
     "promotions_i_1",
     "quality_i_1",
@@ -41,8 +41,18 @@ jQuery(document).ready(function ($) {
     "bestSeller_model",
     "video_url",
     "promotions_i_video",
-    "professionalism_i_video"
+    "professionalism_i_video",
   ];
+
+  let dynamicIds = [];
+  $("input[type=checkbox]").each(function () {
+    let id = $(this).attr("id");
+    if (id && !staticIds.includes(id)) {
+      dynamicIds.push(id);
+    }
+  });
+
+  let ids = staticIds.concat(dynamicIds);
 
   let checks = {};
 
