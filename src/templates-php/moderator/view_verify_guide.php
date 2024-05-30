@@ -402,73 +402,124 @@
 
                 ?>
 
-                <div class='card mb-3'>
+                <?php
+                $sqlArticles = "SELECT wp_guides.*, wp_guides_article.* FROM wp_guides INNER JOIN wp_guides_article ON wp_guides.guide_id = wp_guides_article.guide_id WHERE wp_guides.guide_id = '$guideId'";
+
+                $resultArticle = $conexion->query($sqlArticles);
+
+                $rowArticle = $resultArticle->fetch_assoc();
+
+                $articleId = $rowArticle['id_article_1'];
+                $articleId2 = $rowArticle['id_article_2'];
+                $articleId3 = $rowArticle['id_article_3'];
+                $articleId4 = $rowArticle['id_article_4'];
+
+                $sqlArticless = "SELECT wp_art_blog.*, wp_categories.categorie_description_es FROM wp_art_blog INNER JOIN wp_categories ON wp_categories.categorie_id = wp_art_blog.art_id_category WHERE art_id IN ('$articleId', '$articleId2', '$articleId3', '$articleId4')";
+
+                $resultArticless = $conexion->query($sqlArticless);
+
+                while ($articleRow = mysqli_fetch_assoc($resultArticless)) {
+                    if ($articleRow['art_id'] == $articleId) {
+                        $articleName = $articleRow['art_title'];
+                        $articleDescription = $articleRow['categorie_description_es'];
+                        $articleImage = $articleRow['art_img'];
+                    } elseif ($articleRow['art_id'] == $articleId2) {
+                        $articleName_2 = $articleRow['art_title'];
+                        $articleDescription_2 = $articleRow['categorie_description_es'];
+                        $articleImage_2 = $articleRow['art_img'];
+                    } elseif ($articleRow['art_id'] == $articleId3) {
+                        $articleName_3 = $articleRow['art_title'];
+                        $articleDescription_3 = $articleRow['categorie_description_es'];
+                        $articleImage_3 = $articleRow['art_img'];
+                    } elseif ($articleRow['art_id'] == $articleId4) {
+                        $articleName_4 = $articleRow['art_title'];
+                        $articleDescription_4 = $articleRow['categorie_description_es'];
+                        $articleImage_4 = $articleRow['art_img'];
+                    }
+                }
+
+                if (isset($articleName)) {
+                    echo "<div class='card mb-3'>
                     <div class='row text-sm-start text-md-center'>
                         <h5>
                             <i class='fa-regular fa-newspaper'></i>
                             Articulos destacados
                         </h5>
                     </div>
-                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Category:</b> Jorgitox2 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
+                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
 
+                    echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$articleImage'>
+                        </a>
                     </div>
-                </div>
+                    <div>
+                        <h6 class='text-start'>$articleName<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Category:</b> $articleDescription <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+
+                    if (isset($articleName_2)) {
+                        echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$articleImage_2'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$articleName_2<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Category:</b> $articleDescription_2 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+                    }
+
+                    if (isset($articleName_3)) {
+                        echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$articleImage_3'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$articleName_3<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Category:</b> $articleDescription_3 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+                    }
+
+                    if (isset($articleName_4)) {
+                        echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$articleImage_4'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$articleName_4<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Category:</b> $articleDescription_4 <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+                    }
+
+                    echo "</div></div>";
+                }
+
+                ?>
+
+
                 <div class='card mb-3'>
                     <div class='row text-sm-start text-md-center'>
                         <h5>
