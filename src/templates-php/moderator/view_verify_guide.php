@@ -741,7 +741,7 @@
                     </div>
                     <?php
 
-                    $sqlExtra = "SELECT * FROM wp_guides_extras WHERE guide_id = '$guideId'";
+                    $sqlExtra = "SELECT * FROM wp_guides_videos WHERE guide_id = '$guideId'";
 
                     $resultExtra = $conexion->query($sqlExtra);
 
