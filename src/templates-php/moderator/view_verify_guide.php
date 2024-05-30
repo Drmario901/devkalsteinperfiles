@@ -578,18 +578,19 @@
 
                     foreach ($catalogs as $index => $catalog) {
                         echo "<div class='col-md-3 align-items-center'>
-                <div>
-                    <a TARGET='_blank' href='#'>
-                        <img class='my-3 d-flex justify-content-start'
-                            style='margin: auto; border: 1px solid #999' width=200
-                            src='https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/{$catalog['image']}'>
-                    </a>
-                </div>
-                <div>
-                    <h6 class='text-start'>{$catalog['name']}<input class='d-inline' type='checkbox' id='catalog$index'></h6>
-                    <p><b>Category:</b> {$catalog['category']} <input class='d-inline' type='checkbox' id='catalog$index'></p>
-                </div>
-              </div>";
+                            <div>
+                                <a TARGET='_blank' href='#'>
+                                    <img class='my-3 d-flex justify-content-start'
+                                        style='margin: auto; border: 1px solid #999' width=200
+                                        src='https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/{$catalog['image']}'>
+                                </a>
+                            </div>
+                            <div>
+                                <h6 class='text-start'>{$catalog['name']}<input class='d-inline' type='checkbox' id='catalog$index'>
+                                </h6>
+                                <p><b>Category:</b> {$catalog['category']}  <input class='d-inline' type='checkbox' id='catalogCategory$index'></p>
+                            </div>
+                        </div>";
                     }
 
                     echo "</div></div>";
