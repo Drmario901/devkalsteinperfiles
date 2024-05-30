@@ -789,7 +789,7 @@
 
                     <?php
                     // Consulta para obtener las preguntas y respuestas de la tabla wp_guides_faq
-                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_answer_1, guide_faq_2, guide_faq_answer_2, guide_faq_3, guide_faq_answer_3, guide_faq_4, guide_faq_answer_4, guide_faq_5, guide_faq_answer_5 
+                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_aswer_1, guide_faq_2, guide_faq_aswer_2, guide_faq_3, guide_faq_aswer_3, guide_faq_4, guide_faq_aswer_4, guide_faq_5, guide_faq_aswer_5 
                     FROM wp_guides_faq 
                     WHERE guide_id = '$guideId'";
 
@@ -805,10 +805,10 @@
                     // Array para almacenar preguntas y respuestas
                     $faqs = [];
                     for ($i = 1; $i <= 5; $i++) {
-                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_answer_$i"])) {
+                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_aswer_$i"])) {
                             $faqs[] = [
                                 'question' => $rowFAQ["guide_faq_$i"],
-                                'answer' => $rowFAQ["guide_faq_answer_$i"]
+                                'answer' => $rowFAQ["guide_faq_aswer_$i"]
                             ];
                         }
                     }
