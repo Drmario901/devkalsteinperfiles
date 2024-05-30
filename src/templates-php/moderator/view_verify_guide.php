@@ -796,33 +796,33 @@
                     FROM wp_guides_faq 
                     WHERE guide_id = '$guideId'";
 
-                                $resultFAQ = $conexion->query($sqlFAQ);
+                    $resultFAQ = $conexion->query($sqlFAQ);
 
-                                // Verificar si la consulta falló
-                                if (!$resultFAQ) {
-                                    die("Error en la consulta SQL: " . $conexion->error);
-                                }
+                    // Verificar si la consulta falló
+                    if (!$resultFAQ) {
+                        die("Error en la consulta SQL: " . $conexion->error);
+                    }
 
-                                $rowFAQ = $resultFAQ->fetch_assoc();
+                    $rowFAQ = $resultFAQ->fetch_assoc();
 
-                                // Array para almacenar preguntas y respuestas
-                                $faqs = [];
-                                for ($i = 1; $i <= 5; $i++) {
-                                    if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_aswer_$i"])) {
-                                        $faqs[] = [
-                                            'question' => $rowFAQ["guide_faq_$i"],
-                                            'answer' => $rowFAQ["guide_faq_answer_$i"]
-                                        ];
-                                    }
-                                }
+                    // Array para almacenar preguntas y respuestas
+                    $faqs = [];
+                    for ($i = 1; $i <= 5; $i++) {
+                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_aswer_$i"])) {
+                            $faqs[] = [
+                                'question' => $rowFAQ["guide_faq_$i"],
+                                'answer' => $rowFAQ["guide_faq_aswer_$i"]
+                            ];
+                        }
+                    }
 
-                                if (!empty($faqs)) {
-                                    echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                    if (!empty($faqs)) {
+                        echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                         <div class='row'>
                             <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-circle-question'></i> FAQ</h6>";
 
-                                    foreach ($faqs as $index => $faq) {
-                                        echo "<div class='row'>
+                        foreach ($faqs as $index => $faq) {
+                            echo "<div class='row'>
                             <div class='col-6'>
                                 <p style='font-weight: 600'>Pregunta N°" . ($index + 1) . "</p>
                                 <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px'>
@@ -836,10 +836,10 @@
                                 </div>
                             </div>
                         </div>";
-                                    }
+                        }
 
-                                    echo "</div></div>";
-                                }
+                        echo "</div></div>";
+                    }
                     ?>
 
 
