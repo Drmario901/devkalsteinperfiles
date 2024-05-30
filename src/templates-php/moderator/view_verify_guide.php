@@ -573,164 +573,165 @@
                 }
                 ?>
 
-                            <?php
-                            $sqlArticles = "SELECT wp_guides.*, wp_guides_articles.* 
-                                FROM wp_guides 
-                                INNER JOIN wp_guides_articles 
-                                ON wp_guides.guide_id = wp_guides_articles.guide_id 
-                                WHERE wp_guides.guide_id = '$guideId'";
+                <?php
+                $sqlArticles = "SELECT wp_guides.*, wp_guides_articles.* 
+                FROM wp_guides 
+                INNER JOIN wp_guides_articles 
+                ON wp_guides.guide_id = wp_guides_articles.guide_id 
+                WHERE wp_guides.guide_id = '$guideId'";
 
-                            $resultArticle = $conexion->query($sqlArticles);
+                $resultArticle = $conexion->query($sqlArticles);
 
-                            // Verificar si la consulta falló
-                            if (!$resultArticle) {
-                                die("Error en la consulta SQL: " . $conexion->error);
-                            }
+                // Verificar si la consulta falló
+                if (!$resultArticle) {
+                    die("Error en la consulta SQL: " . $conexion->error);
+                }
 
-                            $rowArticle = $resultArticle->fetch_assoc();
+                $rowArticle = $resultArticle->fetch_assoc();
 
-                            // Almacenar los IDs de los artículos en un array
-                            $idArticles = [];
-                            for ($i = 1; $i <= 4; $i++) {
-                                if (!empty($rowArticle["id_article_$i"])) {
-                                    $idArticles[] = $rowArticle["id_article_$i"];
-                                }
-                            }
+                // Almacenar los IDs de los artículos en un array
+                $idArticles = [];
+                for ($i = 1; $i <= 4; $i++) {
+                    if (!empty($rowArticle["id_article_$i"])) {
+                        $idArticles[] = $rowArticle["id_article_$i"];
+                    }
+                }
 
-                            // Prepara la consulta para obtener los datos de los artículos
-                            $sqlArticless = "SELECT wp_art_blog.*, wp_categories.categorie_description_es 
-                                FROM wp_art_blog 
-                                INNER JOIN wp_categories ON wp_categories.categorie_id = wp_art_blog.art_id_category 
-                                WHERE art_id IN ('" . implode("','", $idArticles) . "')";
-                            $resultArticless = $conexion->query($sqlArticless);
+                // Prepara la consulta para obtener los datos de los artículos
+                $sqlArticless = "SELECT wp_art_blog.*, wp_categories.categorie_description_es 
+                 FROM wp_art_blog 
+                 INNER JOIN wp_categories ON wp_categories.categorie_id = wp_art_blog.art_id_category 
+                 WHERE art_id IN ('" . implode("','", $idArticles) . "')";
+                $resultArticless = $conexion->query($sqlArticless);
 
-                            // Verificar si la consulta falló
-                            if (!$resultArticless) {
-                                die("Error en la consulta SQL: " . $conexion->error);
-                            }
+                // Verificar si la consulta falló
+                if (!$resultArticless) {
+                    die("Error en la consulta SQL: " . $conexion->error);
+                }
 
-                            // Variables para guardar los datos de los artículos
-                            $articlesFt = [];
+                // Variables para guardar los datos de los artículos
+                $articlesFt = [];
 
-                            while ($articleRow = mysqli_fetch_assoc($resultArticless)) {
-                                $articleId = $articleRow['art_id'];
-                                $articlesFt[$articleId] = [
-                                    'title' => $articleRow['art_title'],
-                                    'description' => $articleRow['categorie_description_es'],
-                                    'image' => $articleRow['art_img']
-                                ];
-                            }
+                while ($articleRow = mysqli_fetch_assoc($resultArticless)) {
+                    $articleId = $articleRow['art_id'];
+                    $articlesFt[$articleId] = [
+                        'title' => $articleRow['art_title'],
+                        'description' => $articleRow['categorie_description_es'],
+                        'image' => $articleRow['art_img']
+                    ];
+                }
 
-                            if (!empty($articlesFt)) {
-                                echo "<div class='card mb-3'>
-                            <div class='row text-sm-start text-md-center'>
-                                <h5>
-                                    <i class='fa-solid fa-book-open'></i>
-                                    Manuales
-                                </h5>
-                            </div>
-                            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
+                if (!empty($articlesFt)) {
+                    echo "<div class='card mb-3'>
+            <div class='row text-sm-start text-md-center'>
+                <h5>
+                    <i class='fa-solid fa-book-open'></i>
+                    Manuales
+                </h5>
+            </div>
+            <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
 
-                                echo "<div class='row'>";
+                    echo "<div class='row'>";
 
-                                // for en los primeros 3 artículos
-                                $count = 0;
-                                foreach ($articlesFt as $articleId => $article) {
-                                    if ($count < 3) {
-                                        echo "<div class='col-md-4 align-items-center'>
-                                    <div>
-                                        <h6 class='text-start' style='font-weight: 600;'>
-                                            <i class='fas fa-pen'></i>
-                                            Manual #" . ($count + 1) . "
-                                            <input class='d-inline' type='checkbox' id='name'>
-                                        </h6>
-                                        <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
-                                        <a TARGET='_blank' href='#'>
-                                            <img class='my-3 d-flex justify-content-start'
-                                                style='margin: auto; border: 1px solid #999' width=200
-                                                src='{$article['image']}'>
-                                        </a>
-                                        <p><label for=''>Links or self-promotion</label>
-                                            <input class='d-inline' type='checkbox' id='promotions-i'>
-                                        </p>
-                                        <p><label for=''>Image quality</label>
-                                            <input class='d-inline' type='checkbox' id='quality-i'>
-                                        </p>
-                                        <p><label for=''>Professionalism</label>
-                                            <input class='d-inline' type='checkbox' id='professionalism-i'>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h6 class='text-start' style='font-weight: 600;'>
-                                            <i class='fas fa-circle-info'></i>
-                                            Description
-                                        </h6>
-                                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                            <p style='text-align: justify;'>{$article['description']}</p>
-                                        </div>
-                                        <p><label for=''>Links or self-promotion</label>
-                                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                                        </p>
-                                        <p><label for=''>Professionalism</label>
-                                            <input class='d-inline' type='checkbox' id='professionalism-d'>
-                                        </p>
-                                        <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions-d'></p>
-                                    </div>
-                                </div>";
-                                        $count++;
-                                    }
-                                }
+                    // for en los primeros 3 artículos
+                    $count = 0;
+                    foreach ($articlesFt as $articleId => $article) {
+                        if ($count < 3) {
+                            echo "<div class='col-md-4 align-items-center'>
+                    <div>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-pen'></i>
+                            Manual #" . ($count + 1) . "
+                            <input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='{$article['image']}'>
+                        </a>
+                        <p><label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        </p>
+                        <p><label for=''>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        </p>
+                        <p><label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        </p>
+                    </div>
+                    <div>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h6>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>{$article['description']}</p>
+                        </div>
+                        <p><label for=''>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        </p>
+                        <p><label for=''>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        </p>
+                        <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions-d'></p>
+                    </div>
+                  </div>";
+                            $count++;
+                        }
+                    }
 
-                                echo "</div>";
+                    echo "</div>";
 
-                                // Si hay un cuarto artículo, mostrarlo con un formato diferente
-                                if (count($articlesFt) > 3) {
-                                    $articleId = array_keys($articlesFt)[3];
-                                    $article = $articlesFt[$articleId];
-                                    echo "<div class='row mt-3 align-items-center'>
-                                <div class='col-md-4'>
-                                    <h6 class='text-start' style='font-weight: 600;'>
-                                        <i class='fas fa-pen'></i>
-                                        Manual destacado
-                                        <input class='d-inline' type='checkbox' id='name'>
-                                    </h6>
-                                    <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
-                                    <a TARGET='_blank' href='#'>
-                                        <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
-                                            width=200 src='{$article['image']}'>
-                                    </a>
-                                    <p><label for=''>Links or self-promotion</label>
-                                        <input class='d-inline' type='checkbox' id='promotions-i'>
-                                    </p>
-                                    <p><label for=''>Image quality</label>
-                                        <input class='d-inline' type='checkbox' id='quality-i'>
-                                    </p>
-                                    <p><label for=''>Professionalism</label>
-                                        <input class='d-inline' type='checkbox' id='professionalism-i'>
-                                    </p>
-                                </div>
-                                <div class='col-md-8'>
-                                    <h6 class='text-start' style='font-weight: 600;'>
-                                        <i class='fas fa-circle-info'></i>
-                                        Description
-                                    </h6>
-                                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>{$article['description']}</p>
-                                    </div>
-                                    <p><label for=''>Links or self-promotion</label>
-                                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
-                                    </p>
-                                    <p><label for=''>Professionalism</label>
-                                        <input class='d-inline' type='checkbox' id='professionalism-d'>
-                                    </p>
-                                    <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions-d'></p>
-                                </div>
-                            </div>";
-                                }
+                    // Si hay un cuarto artículo, mostrarlo con un formato diferente
+                    if (count($articlesFt) > 3) {
+                        $articleId = array_keys($articlesFt)[3];
+                        $article = $articlesFt[$articleId];
+                        echo "<div class='row mt-3 align-items-center'>
+                <div class='col-md-4'>
+                    <h6 class='text-start' style='font-weight: 600;'>
+                        <i class='fas fa-pen'></i>
+                        Manual destacado
+                        <input class='d-inline' type='checkbox' id='name'>
+                    </h6>
+                    <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
+                    <a TARGET='_blank' href='#'>
+                        <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                            width=200 src='{$article['image']}'>
+                    </a>
+                    <p><label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-i'>
+                    </p>
+                    <p><label for=''>Image quality</label>
+                        <input class='d-inline' type='checkbox' id='quality-i'>
+                    </p>
+                    <p><label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                    </p>
+                </div>
+                <div class='col-md-8'>
+                    <h6 class='text-start' style='font-weight: 600;'>
+                        <i class='fas fa-circle-info'></i>
+                        Description
+                    </h6>
+                    <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                        <p style='text-align: justify;'>{$article['description']}</p>
+                    </div>
+                    <p><label for=''>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                    </p>
+                    <p><label for=''>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism-d'>
+                    </p>
+                    <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions-d'></p>
+                </div>
+              </div>";
+                    }
 
-                                echo "</div></div>";
-                            }
-                            ?>
+                    echo "</div></div>";
+                }
+                ?>
+
 
             </div>
         </div>
