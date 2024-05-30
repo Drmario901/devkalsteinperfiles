@@ -1,20 +1,35 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const payments = [
-    { id: 1, amount: 100, date: "2023-05-01" },
-    { id: 2, amount: 200, date: "2023-06-01" },
-    { id: 3, amount: 150, date: "2023-07-01" },
-    // Agrega aquí los datos reales de los pagos del usuario
-  ];
+  function openPaymentModal(idAccount) {
+    $.ajax({
+      type: "POST",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/getSuscripcionData.php",
+      data: { idAccount: idAccount },
+      dataType: "json",
+      success: function (response) {
+        const paymentTableBody = document.getElementById("paymentTableBody");
+        paymentTableBody.innerHTML = ""; // Clear previous data
 
-  const paymentTableBody = document.getElementById("paymentTableBody");
+        response.forEach((payment) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${payment.id}</td>
+            <td>${payment.code_retour}</td>
+            <td>${payment.fecha_inicio}</td>
+            <td>${payment.fecha_final}</td>
+            <td>${payment.referencia_pago}</td>
+            <td>${payment.estado_membresia}</td>
+            <td>${payment.monto}</td>
+            <td>${payment.fechahora}</td>
+            <td>${payment.dominio}</td>
+          `;
+          paymentTableBody.appendChild(row);
+        });
 
-  payments.forEach((payment) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-        <td>${payment.id}</td>
-        <td>${payment.amount}</td>
-        <td>${payment.date}</td>
-      `;
-    paymentTableBody.appendChild(row);
-  });
+        $("#paymentModal").modal("show");
+      },
+      error: function (xhr, status, error) {
+        console.error("AJAX Error: " + status + error);
+      },
+    });
+  }
 });

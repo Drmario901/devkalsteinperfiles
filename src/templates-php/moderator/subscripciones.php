@@ -19,6 +19,35 @@
       .btnVerTienda:hover {
         color: white !important;
       }
+
+      .buton-paginate {
+        color: #0d6efd;
+      }
+
+      .boton-paginate:hover {
+        color: white;
+      }
+
+      .table>thead {
+        background-color: hsl(229.26deg 59.01% 31.57%);
+        color: white;
+      }
+
+      .pay-pendiente {
+        background-color: orange !important;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 600;
+      }
+
+      .pay-pagado {
+        background-color: green !important;
+        color: white;
+        text-align: center;
+      }
     </style>
     <?php
     require __DIR__ . '/../../../php/conexion.php';
@@ -94,7 +123,7 @@
                       <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Cancelar membresia</button>
                     </a>
                     <input type='hidden' id='id_account' value='$id_account'>
-                    <button type='button' id='btnHistorial' data-toggle='modal' data-target='#paymentModal'
+                    <button type='button' onclick='openPaymentModal($id_account)' id='btnHistorial' data-toggle='modal' data-target='#paymentModal'
                       class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                   </div>
                 </div>
@@ -120,9 +149,15 @@
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th>ID de Pago</th>
+                    <th>ID</th>
+                    <th>Code Retour</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Final</th>
+                    <th>Referencia Pago</th>
+                    <th>Estado Membresia</th>
                     <th>Monto</th>
-                    <th>Fecha</th>
+                    <th>Fecha y Hora</th>
+                    <th>Dominio</th>
                   </tr>
                 </thead>
                 <tbody id="paymentTableBody">
