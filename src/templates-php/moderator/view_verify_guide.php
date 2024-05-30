@@ -249,98 +249,159 @@
                 }
                 ?>
 
-                <div class='card mb-3'>
+                <?php
+                $sqlDestacados = "SELECT wp_guides.*, wp_guides_products.* FROM wp_guides INNER JOIN wp_guides_products ON wp_guides.guide_id = wp_guides_products.guide_id WHERE wp_guides.guide_id = '$guideId'";
+
+                $resultDestacados = $conexion->query($sqlDestacados);
+
+                $rowDestacados = $resultDestacados->fetch_assoc();
+
+                $idProduct1 = $row['id_product_ideal_1'];
+                $idProduct2 = $row['id_product_ideal_2'];
+                $idProduct3 = $row['id_product_ideal_3'];
+                $idProduct4 = $row['id_product_ideal_4'];
+                $idBestSeller = $row['id_product_best_seller'];
+
+                $sqlProductos = "SELECT * FROM wp_k_products 
+                     WHERE product_aid IN ('$idProduct1', '$idProduct2', '$idProduct3', '$idProduct4', '$idBestSeller')";
+
+                $resultProductos = $conexion->query($sqlProductos);
+
+                while ($productRow = mysqli_fetch_assoc($resultProductos)) {
+                    // Asigna los valores a las variables correspondientes
+                    if ($productRow['product_aid'] == $idProduct1) {
+                        $product1_name = $productRow['product_name_es'];
+                        $product1_model = $productRow['product_model'];
+                        $product1_img = $productRow['product_image'];
+                    } elseif ($productRow['product_aid'] == $idProduct2) {
+                        $product2_name = $productRow['product_name_es'];
+                        $product2_model = $productRow['product_model'];
+                        $product2_img = $productRow['product_image'];
+                    } elseif ($productRow['product_aid'] == $idProduct3) {
+                        $product3_name = $productRow['product_name_es'];
+                        $product3_model = $productRow['product_model'];
+                        $product3_img = $productRow['product_image'];
+                    } elseif ($productRow['product_aid'] == $idProduct4) {
+                        $product4_name = $productRow['product_name_es'];
+                        $product4_model = $productRow['product_model'];
+                        $product4_img = $productRow['product_image'];
+                    } elseif ($productRow['product_aid'] == $idBestSeller) {
+                        $bestSeller_name = $productRow['product_name_es'];
+                        $bestSeller_model = $productRow['product_model'];
+                        $bestSeller_img = $productRow['product_image'];
+                    }
+                }
+
+                if (isset($product1_name)) {
+                    echo "<div class='card mb-3'>
                     <div class='row text-sm-start text-md-center'>
                         <h5>
                             <i class='fa-regular fa-lightbulb'></i>
                             Productos ideales
                         </h5>
                     </div>
-                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
+                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
+
+                    echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$product1_img'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$product1_name<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Model:</b> $product1_model <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+
+                    if (isset($product2_name)) {
+                        echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$product2_img'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$product2_name<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Model:</b> $product2_model <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+                    }
+                    if (isset($product3_name)) {
+                        echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$product3_img'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$product3_name<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Model:</b> $product3_model <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+                    }
+
+                    if (isset($product4_name)) {
+                        echo "<div class='col-md-3 align-items-center'>
+                    <div>
+                        <a TARGET='_blank' href='#'>
+                            <img class='my-3 d-flex justify-content-start'
+                                style='margin: auto; border: 1px solid #999' width=200
+                                src='$product4_img'>
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class='text-start'>$product4_name<input class='d-inline' type='checkbox' id='name'>
+                        </h6>
+                        <p><b>Model:</b> $product4_model <input class='d-inline' type='checkbox' id='name'></p>
+                    </div>
+                </div>";
+                    }
+
+                    echo "</div></div>";
+                }
+
+                if (isset($bestSeller_name)) {
+                    echo "
+                    <div class='card mb-3'>
+                <div class='row text-sm-start text-md-center'>
+                    <h5>
+                        <i class='fa-solid fa-money-bills'></i>
+                        Producto mas vendido
+                    </h5>
+                </div>
+                <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                    <div class='row align-items-center'>
+                        <div class='col-md-4'>
+                            <a TARGET='_blank' href='#'>
+                                <img class='my-3 d-flex justify-content-start'
+                                    style='margin: auto; border: 1px solid #999' width=200
+                                    src='$bestSeller_img'>
+                            </a>
                         </div>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
-                        <div class='col-md-3 align-items-center'>
-                            <div>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
+                        <div class='col-md-8'>
+                            <h6 class='text-start'>$bestSeller_name<input class='d-inline' type='checkbox' id='name'>
+                            </h6>
+                            <p><b>Model:</b> $bestSeller_model <input class='d-inline' type='checkbox' id='name'></p>
                         </div>
                     </div>
 
                 </div>
-                <div class='card mb-3'>
-                    <div class='row text-sm-start text-md-center'>
-                        <h5>
-                            <i class='fa-solid fa-money-bills'></i>
-                            Producto mas vendido
-                        </h5>
-                    </div>
-                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                        <div class='row align-items-center'>
-                            <div class='col-md-4'>
-                                <a TARGET='_blank' href='#'>
-                                    <img class='my-3 d-flex justify-content-start'
-                                        style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://pm1.aminoapps.com/7768/20eb76b2324a56cc2e29e6222882dd2146f49920r1-300-300v2_uhq.jpg'>
-                                </a>
-                            </div>
-                            <div class='col-md-8'>
-                                <h6 class='text-start'>Lorem Ipsum <input class='d-inline' type='checkbox' id='name'>
-                                </h6>
-                                <p><b>Model:</b> Jorgitox1 <input class='d-inline' type='checkbox' id='name'></p>
-                            </div>
-                        </div>
+            </div>
+                    ";
+                }
 
-                    </div>
-                </div>
+                ?>
+
                 <div class='card mb-3'>
                     <div class='row text-sm-start text-md-center'>
                         <h5>
@@ -880,7 +941,8 @@
                     <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                         <div class='row'>
                             <h6 class='text-start' style='font-weight: 600;'><i
-                                    class='fa-regular fa-circle-question'></i> FAQ
+                                    class='fa-regular fa-circle-question'></i>
+                                FAQ
                             </h6>
                             <div class='row'>
                                 <div class='col-6'>
