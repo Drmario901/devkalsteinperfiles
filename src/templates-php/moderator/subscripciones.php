@@ -51,6 +51,7 @@
           $img = $row['account_url_image_perfil'];
           $acc_img = $row['account_url_image_perfil'];
           $rol = $row['account_rol_aid'];
+          $id_account = $row['account_aid'];
 
           $firstLyricsName = strtoupper($nombre);
           $firstLyricsLastname = strtoupper($apellido);
@@ -101,8 +102,9 @@
                 <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
                   <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Cancelar membresia</button>
                 </a>
+                <input type='hidden' id='id_account' value='$id_account'>
                 <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                  <button type='button' id='btnUpdate'
+                  <button type='button' id='btnHistorial' data-toggle='modal' data-target='#paymentModal'
                     class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                 </a>
               </div>
@@ -119,74 +121,37 @@
 
 
     </div>
-    <!-- <?php
-
-    // require __DIR__.'/../../../php/conexion.php';
-    
-    function time_elapsed_string($datetime, $full = false)
-    {
-      $now = new DateTime;
-      $ago = new DateTime($datetime);
-      $diff = $now->diff($ago);
-
-      $diff->w = floor($diff->d / 7);
-      $diff->d -= $diff->w * 7;
-
-      $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-      );
-      foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-          $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-          unset($string[$k]);
-        }
-      }
-
-      if (!$full)
-        $string = array_slice($string, 0, 1);
-      return $string ? implode(', ', $string) . ' ago' : 'just now';
-    }
-
-    if ($result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-
-        $elapsed = time_elapsed_string($row['account_created_at']);
-
-        $aid = $row['account_aid'];
-
-        $rol = $dict[$row['account_rol_aid']];
-        $correo = $row['account_correo'];
-
-        $queryAction = "SELECT type, action_mod FROM wp_mod_moves WHERE type = 'account' AND action_id = '$aid'";
-        $resultAction = $conexion->query($queryAction);
-
-        if ($resultAction->num_rows > 0) {
-          $mod = $resultAction->fetch_array()[1];
-
-          $verifying_by = "
-                            <div class='fw-bold card' style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0'><i class='fa-regular fa-circle-check'></i> Verifying by: $mod</p>
-                            </div>
-                            ";
-        } else {
-          $verifying_by = "";
-        }
-
-        echo "
-                        
-                        ";
-      }
-    } else {
-      echo 'No pending tasks';
-    }
-    ?> -->
+    <!-- Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paymentModalLabel">Historial de Pagos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID de Pago</th>
+                  <th>Monto</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody id="paymentTableBody">
+                <!-- Aquí se insertarán los pagos mediante JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   </article>
 </main>
