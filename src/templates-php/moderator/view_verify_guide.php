@@ -101,7 +101,7 @@
                             <input class='d-inline' type='checkbox' id='name'>
                         </h5>
                         <h6 class='text-start'>" . $productName_1 . "</h6>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$guideImg_1'>
                             <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                                 width=200
                                 src='" . $guideImg_1 . "'>
@@ -161,7 +161,7 @@
                         <h6 class='text-start' style='font-size: 1.15em;'>
                             " . $productName_2 . "
                         </h6>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$guideImg_2'>
                             <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                                 width=200
                                 src='" . $guideImg_2 . "'>
@@ -211,7 +211,7 @@
                         <h6 class='text-start' style='font-size: 1.15em;'>
                             " . $productName_3 . "
                         </h6>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$guideImg_3'>
                             <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                                 width=200
                                 src='" . $guideImg_3 . "'>
@@ -310,7 +310,7 @@
 
                     echo "<div class='col-md-3 align-items-center'>
                     <div>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$product1_img'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='$product1_img'>
@@ -326,7 +326,7 @@
                     if (isset($product2_name)) {
                         echo "<div class='col-md-3 align-items-center'>
                     <div>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$product2_img'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='$product2_img'>
@@ -342,7 +342,7 @@
                     if (isset($product3_name)) {
                         echo "<div class='col-md-3 align-items-center'>
                     <div>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$product3_img'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='$product3_img'>
@@ -359,7 +359,7 @@
                     if (isset($product4_name)) {
                         echo "<div class='col-md-3 align-items-center'>
                     <div>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='$product4_img'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='$product4_img'>
@@ -388,7 +388,7 @@
                 <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                     <div class='row align-items-center'>
                         <div class='col-md-4'>
-                            <a TARGET='_blank' href='#'>
+                            <a TARGET='_blank' href='$bestSeller_img'>
                                 <img class='my-3 d-flex justify-content-start'
                                     style='margin: auto; border: 1px solid #999' width=200
                                     src='$bestSeller_img'>
@@ -476,7 +476,7 @@
                             $article = $articles[$articleId];
                             echo "<div class='col-md-3 align-items-center'>
                     <div>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='{$article['image']}'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='{$article['image']}'>
