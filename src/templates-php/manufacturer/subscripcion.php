@@ -164,8 +164,10 @@
     //Sessions
     // $session = $_SESSION;
     // var_dump('La sesion ', $session);
-    $fechaInicial = $_SESSION['fecha_inicio'];
-    $fechaFinal = $_SESSION['fecha_final'];
+    if (isset($_SESSION['fecha_inicio'])) {
+        $fechaInicial = $_SESSION['fecha_inicio'];
+        $fechaFinal = $_SESSION['fecha_final'];
+    }
     ?>
     <script>
         let page = "home";
