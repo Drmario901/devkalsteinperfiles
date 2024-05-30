@@ -158,8 +158,8 @@
     include 'navbar.php';
     require __DIR__ . '/../../../php/getMembresia.php';
 
-    $mebresia = $_SESSION['tipo_membresia'];
-    // echo  'Membresiaaa' . $mebresia;
+    $membresia = $_SESSION['tipo_membresia'];
+    // echo  'Membresiaaa' . $membresia;
 
     //Sessions
     // $session = $_SESSION;
@@ -182,7 +182,7 @@
             <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
             <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
         </div>
-        <?php if ($mebresia != 0) : ?>
+        <?php if ($membresia != 0) : ?>
             <div style="font-weight: 500; margin-right: 20px;">
                 <p class="fechas_subs">
                     <b>Fecha Inicial:</b>
