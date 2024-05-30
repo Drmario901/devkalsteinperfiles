@@ -2553,7 +2553,7 @@ function perfiles_styles()
         wp_enqueue_script('FontAwesome', plugins_url('src/js/fontAwesome.js', __FILE__), array('jquery'));
         wp_enqueue_script('nav', plugins_url('src/moderator/js/nav.js', __FILE__), array('jquery'));
         wp_enqueue_script('quotes-monetico', plugins_url('src/moderator/js/quotes.monetico.js', __FILE__), array('jquery'));
-        wp_enqueue_script('quotes-monetico', plugins_url('src/moderator/js/modalSuscripciones.js', __FILE__), array('jquery'));
+        wp_enqueue_script('suscripciones', plugins_url('src/moderator/js/modalSuscripciones.js', __FILE__), array('jquery'));
         wp_enqueue_style('izitoast-css', plugins_url('src/distributor/css/izitoast.css', __FILE__));
         wp_enqueue_script('izitoast-js', plugins_url('src/distributor/js/iziToast.js', __FILE__), array('jquery'));
         // wp_enqueue_script('diego', plugins_url('src/js/diego.js',__FILE__),array('jquery'));
