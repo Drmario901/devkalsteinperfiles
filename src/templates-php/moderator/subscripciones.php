@@ -103,10 +103,8 @@
                   <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Cancelar membresia</button>
                 </a>
                 <input type='hidden' id='id_account' value='$id_account'>
-                <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
                   <button type='button' id='btnHistorial' data-toggle='modal' data-target='#paymentModal'
                     class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
-                </a>
               </div>
     
             </div>
