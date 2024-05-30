@@ -45,6 +45,12 @@
     .card-header {
         background-color: white;
     }
+
+    .text-small {
+        font-size: 1em;
+        text-wrap: wrap;
+        overflow-wrap: anywhere;
+    }
 </style>
 
 <main>
@@ -586,7 +592,7 @@
                                 </a>
                             </div>
                             <div>
-                                <p class='text-start'>{$catalog['name']}<input class='d-inline' type='checkbox' id='catalog$index'>
+                                <p class='text-start text-small'>{$catalog['name']}<input class='d-inline' type='checkbox' id='catalog$index'>
                                 </p>
                                 <p><b>Category:</b> {$catalog['category']}  <input class='d-inline' type='checkbox' id='catalogCategory$index'></p>
                             </div>
