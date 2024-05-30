@@ -122,9 +122,8 @@
                     <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
                       <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Cancelar membresia</button>
                     </a>
-                    <input type='hidden' id='id_account' value='$id_account'>
-                    <button type='button' onclick='openPaymentModal($id_account)' id='btnHistorial' data-toggle='modal' data-target='#paymentModal'
-                      class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
+                    <input type='hidden' class='id_account' value='$id_account'>
+                    <button type='button' class='btnHistorial btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                   </div>
                 </div>
               </div>";
@@ -158,6 +157,7 @@
                     <th>Monto</th>
                     <th>Fecha y Hora</th>
                     <th>Dominio</th>
+                    <th>User ID</th>
                   </tr>
                 </thead>
                 <tbody id="paymentTableBody">
