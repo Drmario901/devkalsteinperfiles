@@ -592,8 +592,8 @@
                 // Almacenar los IDs de los artículos en un array
                 $idArticles = [];
                 for ($i = 1; $i <= 4; $i++) {
-                    if (!empty($rowArticle["id_article_$i"])) {
-                        $idArticles[] = $rowArticle["id_article_$i"];
+                    if (!empty($rowArticle["id_featured_article_$i"])) {
+                        $idArticles[] = $rowArticle["id_featured_article_$i"];
                     }
                 }
 
