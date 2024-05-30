@@ -256,11 +256,11 @@
 
                 $rowDestacados = $resultDestacados->fetch_assoc();
 
-                $idProduct1 = $row['id_product_ideal_1'];
-                $idProduct2 = $row['id_product_ideal_2'];
-                $idProduct3 = $row['id_product_ideal_3'];
-                $idProduct4 = $row['id_product_ideal_4'];
-                $idBestSeller = $row['id_product_best_seller'];
+                $idProduct1 = $rowDestacados['id_product_ideal_1'];
+                $idProduct2 = $rowDestacados['id_product_ideal_2'];
+                $idProduct3 = $rowDestacados['id_product_ideal_3'];
+                $idProduct4 = $rowDestacados['id_product_ideal_4'];
+                $idBestSeller = $rowDestacados['id_product_best_seller'];
 
                 $sqlProductos = "SELECT * FROM wp_k_products 
                      WHERE product_aid IN ('$idProduct1', '$idProduct2', '$idProduct3', '$idProduct4', '$idBestSeller')";
