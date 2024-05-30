@@ -790,63 +790,59 @@
                     ?>
 
 
+                    <?php
+                    // Consulta para obtener las preguntas y respuestas de la tabla wp_guides_faq
+                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_answer_1, guide_faq_2, guide_faq_answer_2, guide_faq_3, guide_faq_answer_3, guide_faq_4, guide_faq_answer_4, guide_faq_5, guide_faq_answer_5 
+                    FROM wp_guides_faq 
+                    WHERE guide_id = '$guideId'";
 
-                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                                $resultFAQ = $conexion->query($sqlFAQ);
+
+                                // Verificar si la consulta falló
+                                if (!$resultFAQ) {
+                                    die("Error en la consulta SQL: " . $conexion->error);
+                                }
+
+                                $rowFAQ = $resultFAQ->fetch_assoc();
+
+                                // Array para almacenar preguntas y respuestas
+                                $faqs = [];
+                                for ($i = 1; $i <= 5; $i++) {
+                                    if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_answer_$i"])) {
+                                        $faqs[] = [
+                                            'question' => $rowFAQ["guide_faq_$i"],
+                                            'answer' => $rowFAQ["guide_faq_answer_$i"]
+                                        ];
+                                    }
+                                }
+
+                                if (!empty($faqs)) {
+                                    echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                         <div class='row'>
-                            <h6 class='text-start' style='font-weight: 600;'><i
-                                    class='fa-regular fa-circle-question'></i>
-                                FAQ
-                            </h6>
-                            <div class='row'>
-                                <div class='col-6'>
-                                    <p style='font-weight: 600'>Pregunta N°1</p>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>
-                                            Lorem ipsum</p>
-                                    </div>
-                                </div>
-                                <div class='col-6'>
-                                    <p style='font-weight: 600'>Respuesta N°1</p>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>
-                                            Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
-                                    </div>
+                            <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-circle-question'></i> FAQ</h6>";
+
+                                    foreach ($faqs as $index => $faq) {
+                                        echo "<div class='row'>
+                            <div class='col-6'>
+                                <p style='font-weight: 600'>Pregunta N°" . ($index + 1) . "</p>
+                                <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px'>
+                                    <p style='text-align: justify;'>{$faq['question']}</p>
                                 </div>
                             </div>
-                            <div class='row'>
-                                <div class='col-6'>
-                                    <p style='font-weight: 600'>Pregunta N°2</p>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>
-                                            Lorem ipsum</p>
-                                    </div>
-                                </div>
-                                <div class='col-6'>
-                                    <p style='font-weight: 600'>Respuesta N°2</p>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>
-                                            Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
-                                    </div>
+                            <div class='col-6'>
+                                <p style='font-weight: 600'>Respuesta N°" . ($index + 1) . "</p>
+                                <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px'>
+                                    <p style='text-align: justify;'>{$faq['answer']}</p>
                                 </div>
                             </div>
-                            <div class='row'>
-                                <div class='col-6'>
-                                    <p style='font-weight: 600'>Pregunta N°3</p>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>
-                                            Lorem ipsum</p>
-                                    </div>
-                                </div>
-                                <div class='col-6'>
-                                    <p style='font-weight: 600'>Respuesta N°3</p>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>
-                                            Lorem ipsum jdidjkfsljsmfckldjsmjk jxdskjckjdskjckdsj jxkjskcjkdsxj</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </div>";
+                                    }
+
+                                    echo "</div></div>";
+                                }
+                    ?>
+
+
                     <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                         <div class='row'>
                             <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i>
