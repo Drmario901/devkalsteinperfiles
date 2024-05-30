@@ -843,41 +843,49 @@
                     ?>
 
 
-                    <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                    <?php
+                    // Consulta para obtener las etiquetas de la tabla wp_guide_tags
+                    $sqlTags = "SELECT tag_title FROM wp_guide_tags WHERE guide_id = '$guideId'";
+
+                    $resultTags = $conexion->query($sqlTags);
+
+                    // Verificar si la consulta falló
+                    if (!$resultTags) {
+                        die("Error en la consulta SQL: " . $conexion->error);
+                    }
+
+                    // Array para almacenar las etiquetas
+                    $tags = [];
+                    while ($rowTag = $resultTags->fetch_assoc()) {
+                        if (!empty($rowTag['tag_title'])) {
+                            $tags[] = $rowTag['tag_title'];
+                        }
+                    }
+
+                    if (!empty($tags)) {
+                        echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
                         <div class='row'>
-                            <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i>
-                                Etiquetas
-                            </h6>
-                            <div class='d-flex my-2'>
-                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                        etiqueta</p>
-                                </div>
-                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                        etiqueta</p>
-                                </div>
-                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                        etiqueta</p>
-                                </div>
-                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                        etiqueta</p>
-                                </div>
-                                <div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
-                                    <p class="m-0 p-0" style='font-weight: 600'><i class='fa-solid fa-hashtag'></i>
-                                        etiqueta</p>
-                                </div>
-                            </div>
-                            <p><label for=''>Professionalism</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-i'>
-                            </p>
-                            <p><label for=''>Coherence</label>
-                                <input class='d-inline' type='checkbox' id='professionalism-i'>
-                            </p>
-                        </div>
+                            <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i> Etiquetas</h6>
+                            <div class='d-flex my-2'>";
+
+                                    foreach ($tags as $tag) {
+                                        echo "<div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
+                            <p class='m-0 p-0' style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> $tag</p>
+                        </div>";
+                                    }
+
+                                    echo "  </div>
+                        <p><label for='professionalism-i'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        </p>
+                        <p><label for='coherence-i'>Coherence</label>
+                            <input class='d-inline' type='checkbox' id='coherence-i'>
+                        </p>
                     </div>
+                    </div>";
+                    }
+                    ?>
+
                 </div>
 
 
