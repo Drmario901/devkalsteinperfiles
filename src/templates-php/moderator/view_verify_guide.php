@@ -645,7 +645,7 @@
                             <input class='d-inline' type='checkbox' id='name'>
                         </h6>
                         <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
-                        <a TARGET='_blank' href='#'>
+                        <a TARGET='_blank' href='{$article['image']}'>
                             <img class='my-3 d-flex justify-content-start'
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='{$article['image']}'>
@@ -695,7 +695,7 @@
                         <input class='d-inline' type='checkbox' id='name'>
                     </h6>
                     <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
-                    <a TARGET='_blank' href='#'>
+                    <a TARGET='_blank' href='{$article['image']}'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                             width=200 src='{$article['image']}'>
                     </a>
