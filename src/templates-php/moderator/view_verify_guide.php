@@ -95,7 +95,7 @@
                             <h5>
                             <i class='fas fa-pen'></i>
                             Producto principal
-                            <input class='d-inline' type='checkbox' id='name'>
+                            <input class='d-inline' type='checkbox' id='name_1'>
                         </h5>
                         <h6 class='text-start'>" . $productName_1 . "</h6>
                         <a TARGET='_blank' href='$guideImg_1'>
@@ -105,16 +105,16 @@
                         </a>
                 
                         <!-- Enlaces o promociones -->
-                        <p><label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        <p><label for='promotions_i_1'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_1'>
                         </p>
                 
-                        <p><label for=''>Image quality</label>
-                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        <p><label for='quality_i_1'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_1'>
                         </p>
                 
-                        <p><label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        <p><label for='professionalism_i_1'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_1'>
                         </p>
                         </div>
                         <div class='col-md-8'>
@@ -126,12 +126,12 @@
                             <p style='text-align: justify;'>" . $guideDescription_1 . "</p>
                         </div>
                         <p>
-                            <label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                            <label for='promotions_d_1'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_1'><br>
                         </p>
                         <p>
-                            <label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                            <label for='professionalism_d_1'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_1'>
                         </p>
                     </div>
                     </div>
@@ -153,7 +153,7 @@
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
                             Tipo de producto #1
-                            <input class='d-inline' type='checkbox' id='name'>
+                            <input class='d-inline' type='checkbox' id='name_2'>
                         </h6>
                         <h6 class='text-start' style='font-size: 1.15em;'>
                             " . $productName_2 . "
@@ -165,16 +165,16 @@
                         </a>
                 
                         <!-- Enlaces o promociones -->
-                        <p><label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        <p><label for='promotions_i_2'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_2'>
                         </p>
                 
-                        <p><label for=''>Image quality</label>
-                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        <p><label for='quality_i_2'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_2'>
                         </p>
                 
-                        <p><label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        <p><label for='professionalism_i_2'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_2'>
                         </p>
                 
                         <h6 class='text-start' style='font-weight: 600;'>
@@ -187,12 +187,12 @@
                             </p>
                         </div>
                         <p>
-                            <label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                            <label for='promotions_d_2'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_2'><br>
                         </p>
                         <p>
-                            <label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                            <label for='professionalism_d_2'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_2'>
                         </p>
                     </div>";
                     }
@@ -203,7 +203,7 @@
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
                             Tipo de producto #2
-                            <input class='d-inline' type='checkbox' id='name'>
+                            <input class='d-inline' type='checkbox' id='name_3'>
                         </h6>
                         <h6 class='text-start' style='font-size: 1.15em;'>
                             " . $productName_3 . "
@@ -215,16 +215,16 @@
                         </a>
                 
                         <!-- Enlaces o promociones -->
-                        <p><label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        <p><label for='promotions_i_3'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_3'>
                         </p>
                 
-                        <p><label for=''>Image quality</label>
-                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        <p><label for='quality_i_3'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_3'>
                         </p>
                 
-                        <p><label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        <p><label for='professionalism_i_3'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_3'>
                         </p>
                 
                         <h6 class='text-start' style='font-weight: 600;'>
@@ -237,12 +237,12 @@
                             </p>
                         </div>
                         <p>
-                            <label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                            <label for='promotions_d_3'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_3'><br>
                         </p>
                         <p>
-                            <label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                            <label for='professionalism_d_3'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_3'>
                         </p>
                     </div>";
                     }
@@ -314,9 +314,9 @@
                         </a>
                     </div>
                     <div>
-                        <h6 class='text-start'>$product1_name<input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>$product1_name<input class='d-inline' type='checkbox' id='product1_name'>
                         </h6>
-                        <p><b>Model:</b> $product1_model <input class='d-inline' type='checkbox' id='name'></p>
+                        <p><b>Model:</b> $product1_model <input class='d-inline' type='checkbox' id='product1_model'></p>
                     </div>
                 </div>";
 
@@ -330,9 +330,9 @@
                         </a>
                     </div>
                     <div>
-                        <h6 class='text-start'>$product2_name<input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>$product2_name<input class='d-inline' type='checkbox' id='product2_name'>
                         </h6>
-                        <p><b>Model:</b> $product2_model <input class='d-inline' type='checkbox' id='name'></p>
+                        <p><b>Model:</b> $product2_model <input class='d-inline' type='checkbox' id='product2_model'></p>
                     </div>
                 </div>";
                     }
@@ -346,9 +346,9 @@
                         </a>
                     </div>
                     <div>
-                        <h6 class='text-start'>$product3_name<input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>$product3_name<input class='d-inline' type='checkbox' id='product3_name'>
                         </h6>
-                        <p><b>Model:</b> $product3_model <input class='d-inline' type='checkbox' id='name'></p>
+                        <p><b>Model:</b> $product3_model <input class='d-inline' type='checkbox' id='product3_model'></p>
                     </div>
                 </div>";
                     }
@@ -363,9 +363,9 @@
                         </a>
                     </div>
                     <div>
-                        <h6 class='text-start'>$product4_name<input class='d-inline' type='checkbox' id='name'>
+                        <h6 class='text-start'>$product4_name<input class='d-inline' type='checkbox' id='product4_name'>
                         </h6>
-                        <p><b>Model:</b> $product4_model <input class='d-inline' type='checkbox' id='name'></p>
+                        <p><b>Model:</b> $product4_model <input class='d-inline' type='checkbox' id='product4_model'></p>
                     </div>
                 </div>";
                     }
@@ -392,9 +392,9 @@
                             </a>
                         </div>
                         <div class='col-md-8'>
-                            <h6 class='text-start'>$bestSeller_name<input class='d-inline' type='checkbox' id='name'>
+                            <h6 class='text-start'>$bestSeller_name<input class='d-inline' type='checkbox' id='bestSeller_name'>
                             </h6>
-                            <p><b>Model:</b> $bestSeller_model <input class='d-inline' type='checkbox' id='name'></p>
+                            <p><b>Model:</b> $bestSeller_model <input class='d-inline' type='checkbox' id='bestSeller_model'></p>
                         </div>
                     </div>
 
@@ -639,7 +639,7 @@
                         <h6 class='text-start' style='font-weight: 600;'>
                             <i class='fas fa-pen'></i>
                             Manual #" . ($count + 1) . "
-                            <input class='d-inline' type='checkbox' id='name'>
+                            <input class='d-inline' type='checkbox' id='name_manual$count'>
                         </h6>
                         <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
                         <a TARGET='_blank' href='{$article['image']}'>
@@ -647,14 +647,14 @@
                                 style='margin: auto; border: 1px solid #999' width=200
                                 src='{$article['image']}'>
                         </a>
-                        <p><label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-i'>
+                        <p><label for='promotions_i_$count'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_$count'>
                         </p>
-                        <p><label for=''>Image quality</label>
-                            <input class='d-inline' type='checkbox' id='quality-i'>
+                        <p><label for='quality_i_$count'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_$count'>
                         </p>
-                        <p><label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        <p><label for='professionalism_i_$count'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_$count'>
                         </p>
                     </div>
                     <div>
@@ -665,13 +665,13 @@
                         <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                             <p style='text-align: justify;'>{$article['description']}</p>
                         </div>
-                        <p><label for=''>Links or self-promotion</label>
-                            <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                        <p><label for='promotions_d_$count'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_$count'><br>
                         </p>
-                        <p><label for=''>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-d'>
+                        <p><label for='professionalism_d_$count'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_$count'>
                         </p>
-                        <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions-d'></p>
+                        <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions_d_$count'></p>
                     </div>
                   </div>";
                             $count++;
@@ -689,21 +689,21 @@
                     <h6 class='text-start' style='font-weight: 600;'>
                         <i class='fas fa-pen'></i>
                         Manual destacado
-                        <input class='d-inline' type='checkbox' id='name'>
+                        <input class='d-inline' type='checkbox' id='name_manual_4'>
                     </h6>
                     <h6 class='text-start' style='font-size: 1.15em;'>{$article['title']}</h6>
                     <a TARGET='_blank' href='{$article['image']}'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
                             width=200 src='{$article['image']}'>
                     </a>
-                    <p><label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-i'>
+                    <p><label for='promotions_i_4'>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions_i_4'>
                     </p>
-                    <p><label for=''>Image quality</label>
-                        <input class='d-inline' type='checkbox' id='quality-i'>
+                    <p><label for='quality_i_4'>Image quality</label>
+                        <input class='d-inline' type='checkbox' id='quality_i_4'>
                     </p>
-                    <p><label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                    <p><label for='professionalism_i_4'>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism_i_4'>
                     </p>
                 </div>
                 <div class='col-md-8'>
@@ -714,13 +714,13 @@
                     <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                         <p style='text-align: justify;'>{$article['description']}</p>
                     </div>
-                    <p><label for=''>Links or self-promotion</label>
-                        <input class='d-inline' type='checkbox' id='promotions-d'><br>
+                    <p><label for='promotions_d_4'>Links or self-promotion</label>
+                        <input class='d-inline' type='checkbox' id='promotions_d_4'><br>
                     </p>
-                    <p><label for=''>Professionalism</label>
-                        <input class='d-inline' type='checkbox' id='professionalism-d'>
+                    <p><label for='professionalism_d_4'>Professionalism</label>
+                        <input class='d-inline' type='checkbox' id='professionalism_d_4'>
                     </p>
-                    <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions-d'></p>
+                    <p class='mt-2'><b>Link: </b><a href=''>link</a><input class='d-inline' type='checkbox' id='promotions_d_4'></p>
                 </div>
               </div>";
                     }
@@ -755,7 +755,7 @@
                             </h6>
                             <p style='font-weight: 600'>
                                 <i class='fa-solid fa-paperclip'></i>
-                                Link <input class='d-inline' type='checkbox' id='name'>
+                                Link <input class='d-inline' type='checkbox' id='video_url'>
                             </p>
                             <div class='mb-3 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
                                 <p style='text-align: justify;'>$videoUrl</p>
@@ -771,12 +771,12 @@
                                     </div>
                                 </div>
                                 <div class='col-3'>
-                                    <p><label for=''>Links or self-promotion</label>
-                                        <input class='d-inline' type='checkbox' id='promotions-i'>
+                                    <p><label for='promotions_i_video'>Links or self-promotion</label>
+                                        <input class='d-inline' type='checkbox' id='promotions_i_video'>
                                     </p>
 
-                                    <p><label for=''>Professionalism</label>
-                                        <input class='d-inline' type='checkbox' id='professionalism-i'>
+                                    <p><label for='professionalism_i_video'>Professionalism</label>
+                                        <input class='d-inline' type='checkbox' id='professionalism_i_video'>
                                     </p>
                                 </div>
                             </div>
@@ -789,7 +789,7 @@
 
                     <?php
                     // Consulta para obtener las preguntas y respuestas de la tabla wp_guides_faq
-                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_aswer_1, guide_faq_2, guide_faq_aswer_2, guide_faq_3, guide_faq_aswer_3, guide_faq_4, guide_faq_aswer_4, guide_faq_5, guide_faq_aswer_5 
+                    $sqlFAQ = "SELECT guide_faq_1, guide_faq_answer_1, guide_faq_2, guide_faq_answer_2, guide_faq_3, guide_faq_answer_3, guide_faq_4, guide_faq_answer_4, guide_faq_5, guide_faq_answer_5 
                     FROM wp_guides_faq 
                     WHERE guide_id = '$guideId'";
 
@@ -805,10 +805,10 @@
                     // Array para almacenar preguntas y respuestas
                     $faqs = [];
                     for ($i = 1; $i <= 5; $i++) {
-                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_aswer_$i"])) {
+                        if (!empty($rowFAQ["guide_faq_$i"]) && !empty($rowFAQ["guide_faq_answer_$i"])) {
                             $faqs[] = [
                                 'question' => $rowFAQ["guide_faq_$i"],
-                                'answer' => $rowFAQ["guide_faq_aswer_$i"]
+                                'answer' => $rowFAQ["guide_faq_answer_$i"]
                             ];
                         }
                     }
@@ -865,18 +865,19 @@
                             <h6 class='text-start' style='font-weight: 600;'><i class='fa-solid fa-hashtag'></i> Etiquetas</h6>
                             <div class='d-flex my-2'>";
 
-                        foreach ($tags as $tag) {
+                        foreach ($tags as $index => $tag) {
                             echo "<div class='d-flex justify-content-between me-2 p-2 bg-secondary text-white rounded'>
                             <p class='m-0 p-0' style='font-weight: 600'><i class='fa-solid fa-hashtag'></i> $tag</p>
+                            <input class='d-inline' type='checkbox' id='tag_$index'>
                         </div>";
                         }
 
                         echo "  </div>
-                        <p><label for='professionalism-i'>Professionalism</label>
-                            <input class='d-inline' type='checkbox' id='professionalism-i'>
+                        <p><label for='professionalism_tags'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_tags'>
                         </p>
-                        <p><label for='coherence-i'>Coherence</label>
-                            <input class='d-inline' type='checkbox' id='coherence-i'>
+                        <p><label for='coherence_tags'>Coherence</label>
+                            <input class='d-inline' type='checkbox' id='coherence_tags'>
                         </p>
                     </div>
                     </div>";
