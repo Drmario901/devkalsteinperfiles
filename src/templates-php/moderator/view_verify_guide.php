@@ -586,8 +586,8 @@
                                 </a>
                             </div>
                             <div>
-                                <h6 class='text-start'>{$catalog['name']}<input class='d-inline' type='checkbox' id='catalog$index'>
-                                </h6>
+                                <p class='text-start'>{$catalog['name']}<input class='d-inline' type='checkbox' id='catalog$index'>
+                                </p>
                                 <p><b>Category:</b> {$catalog['category']}  <input class='d-inline' type='checkbox' id='catalogCategory$index'></p>
                             </div>
                         </div>";
