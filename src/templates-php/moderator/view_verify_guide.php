@@ -546,6 +546,7 @@
 
                 // Prepara la consulta para obtener los datos de los catálogos
                 $sqlCatalogData = "SELECT * FROM wp_catalogs WHERE id IN ('" . implode("','", $idCatalogs) . "')";
+                echo $sqlCatalogData;
                 $resultCatalogData = $conexion->query($sqlCatalogData);
 
                 // Verificar si la consulta falló
