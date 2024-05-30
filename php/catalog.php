@@ -62,7 +62,7 @@ if ($resultado->num_rows > 0) {
         $html .= "
             <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-3'>
                 <div class='card h-100 mx-2'>
-                    <img src='https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$imagen' class='catalog-img card-img border' alt='...'>
+                    <img src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/$imagen' class='catalog-img card-img border' alt='...'>
                     <div class='card-body d-flex flex-column justify-content-between'>
                         <center><h5 class='card-title' style='font-size: 16px;'>$nombre</h5></center>
                         <center><button class='_df_button' id='book1' source='https://plateforme.kalstein.fr/wp-content/plugins/kalsteinPerfiles/src/catalogs/upload/$pdf'>Regarder</button></center>
