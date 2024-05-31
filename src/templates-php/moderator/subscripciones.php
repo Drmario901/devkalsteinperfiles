@@ -169,6 +169,21 @@
                 </tbody>
               </table>
             </div>
+            <div style="display: flex; justify-content:center; gap:1rem;">
+              <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </button>
+
+              <ul id="paginado" class="pagination">
+
+              </ul>
+
+              <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </button>
+            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" id="closeModalButton" data-dismiss="modal">Cerrar</button>
             </div>

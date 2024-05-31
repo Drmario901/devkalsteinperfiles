@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  let todos = [];
+  let paginaActual = 1;
+  let itemsPorPagina = 10; // Define cuántos items quieres por página
+  let paginas = 0;
+
   const historialButtons = document.querySelectorAll(".btnHistorial");
 
   historialButtons.forEach((button) => {
@@ -8,55 +13,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const closeModalButton = document.querySelector("#closeModalButton");
-  closeModalButton.addEventListener("click", function () {
-    closeModal();
-  });
-});
+  function openPaymentModal(idAccount) {
+    $.ajax({
+      type: "POST",
+      url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/getSuscripcionData.php",
+      data: { idAccount: idAccount },
+      dataType: "json",
+      success: function (response) {
+        todos = response; // Asigna la respuesta a la variable todos
+        paginas = Math.ceil(todos.length / itemsPorPagina);
+        actualizarVista();
+      },
+      error: function (xhr, status, error) {
+        console.error("AJAX Error: " + status + error);
+      },
+    });
+  }
 
-function openPaymentModal(idAccount) {
-  $.ajax({
-    type: "POST",
-    url: "https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/moderator/getSuscripcionData.php",
-    data: { idAccount: idAccount },
-    dataType: "json",
-    success: function (response) {
-      const paymentTableBody = document.getElementById("paymentTableBody");
-      paymentTableBody.innerHTML = ""; // Clear previous data
+  function actualizarVista() {
+    let datosPagina = paginar(todos, paginaActual, itemsPorPagina);
+    $("#paymentTableBody").html(generarTabla(datosPagina));
+    generarPaginado(paginas);
+    $("#paymentModal").modal("show");
+  }
 
-      response.forEach((payment) => {
-        let codeRetourStatus;
-        let estadoMembresiaStatus;
+  function paginar(items, paginaActual, itemsPorPagina) {
+    let inicio = (paginaActual - 1) * itemsPorPagina;
+    let fin = inicio + itemsPorPagina;
+    return items.slice(inicio, fin);
+  }
 
-        // Determine codeRetourStatus
-        if (
-          payment.code_retour === "paiement" ||
-          payment.code_retour === "payetest"
-        ) {
-          codeRetourStatus = "Pago Exitoso";
-        } else if (payment.code_retour === "annulation") {
-          codeRetourStatus = "Pago Rechazado";
-        } else {
-          codeRetourStatus = payment.code_retour;
-        }
-
-        // Determine estadoMembresiaStatus
-        switch (payment.estado_membresia) {
-          case "1":
-            estadoMembresiaStatus = "Activa";
-            break;
-          case "2":
-            estadoMembresiaStatus = "Pendiente de cancelar";
-            break;
-          case "3":
-            estadoMembresiaStatus = "Finalizada";
-            break;
-          default:
-            estadoMembresiaStatus = payment.estado_membresia;
-        }
-
-        const row = document.createElement("tr");
-        row.innerHTML = `
+  function generarTabla(datos) {
+    let tablaHtml = "";
+    datos.forEach((payment) => {
+      let codeRetourStatus =
+        payment.code_retour === "paiement" || payment.code_retour === "payetest"
+          ? "Exitoso"
+          : payment.code_retour === "annulation"
+          ? "Rechazado"
+          : payment.code_retour;
+      let estadoMembresiaStatus;
+      switch (payment.estado_membresia) {
+        case "1":
+          estadoMembresiaStatus = "Activa";
+          break;
+        case "2":
+          estadoMembresiaStatus = "Pendiente de cancelar";
+          break;
+        case "3":
+          estadoMembresiaStatus = "Finalizada";
+          break;
+        default:
+          estadoMembresiaStatus = payment.estado_membresia;
+      }
+      tablaHtml += `
+        <tr>
           <td>${payment.id}</td>
           <td>${codeRetourStatus}</td>
           <td>${payment.fecha_inicio}</td>
@@ -66,17 +77,28 @@ function openPaymentModal(idAccount) {
           <td>${payment.monto}</td>
           <td>${payment.fechahora}</td>
           <td>${payment.dominio}</td>
-        `;
-        paymentTableBody.appendChild(row);
-      });
+        </tr>
+      `;
+    });
+    return tablaHtml;
+  }
 
-      $("#paymentModal").modal("show");
-    },
-    error: function (xhr, status, error) {
-      console.error("AJAX Error: " + status + error);
-    },
+  function generarPaginado(paginas) {
+    let botonesPagina = "";
+    for (let i = 1; i <= paginas; i++) {
+      let claseActiva = i === paginaActual ? "active" : "";
+      botonesPagina += `<li class="page-item ${claseActiva}"><button class="page-link" data-pagina="${i}">${i}</button></li>`;
+    }
+    $("#paginado").html(botonesPagina);
+  }
+
+  $(document).on("click", "#paginado .page-link", function () {
+    let paginaSeleccionada = parseInt($(this).attr("data-pagina")); // Asegúrate de convertir a número
+    paginaActual = paginaSeleccionada;
+    actualizarVista(); // Esto regenerará los botones y aplicará correctamente la clase `active`
   });
-}
+});
+
 function closeModal() {
   $("#paymentModal").modal("hide");
 }
