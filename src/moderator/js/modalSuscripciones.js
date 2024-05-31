@@ -24,24 +24,27 @@ function openPaymentModal(idAccount) {
         let estadoMembresiaStatus;
 
         // Determine codeRetourStatus
-        if (payment.code_retour === 'paiement' || payment.code_retour === 'payetest') {
-          codeRetourStatus = 'Pago Exitoso';
-        } else if (payment.code_retour === 'annulation') {
-          codeRetourStatus = 'Pago Rechazado';
+        if (
+          payment.code_retour === "paiement" ||
+          payment.code_retour === "payetest"
+        ) {
+          codeRetourStatus = "Pago Exitoso";
+        } else if (payment.code_retour === "annulation") {
+          codeRetourStatus = "Pago Rechazado";
         } else {
           codeRetourStatus = payment.code_retour;
         }
 
         // Determine estadoMembresiaStatus
         switch (payment.estado_membresia) {
-          case '1':
-            estadoMembresiaStatus = 'Activa';
+          case "1":
+            estadoMembresiaStatus = "Activa";
             break;
-          case '2':
-            estadoMembresiaStatus = 'Pendiente de cancelar';
+          case "2":
+            estadoMembresiaStatus = "Pendiente de cancelar";
             break;
-          case '3':
-            estadoMembresiaStatus = 'Finalizada';
+          case "3":
+            estadoMembresiaStatus = "Finalizada";
             break;
           default:
             estadoMembresiaStatus = payment.estado_membresia;
@@ -68,4 +71,7 @@ function openPaymentModal(idAccount) {
       console.error("AJAX Error: " + status + error);
     },
   });
+}
+function closeModal() {
+  $("#paymentModal").modal("hide");
 }
