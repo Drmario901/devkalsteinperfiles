@@ -25,7 +25,7 @@ $esText = '<h2>Redirigiendo a pasarela de pago</h2>';
 
 function encryptURL()
 {
-    $gateway = base64_encode('https://p.monetico-services.com/paiement.cgi');
+    $gateway = base64_encode('https://p.monetico-services.com/test/paiement.cgi');
     return $gateway;
 }
 
@@ -116,10 +116,10 @@ $monetico = new Monetico(
 $purchase = new PurchaseRequest([
     'reference' => $reference,
     'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'] . '  ' . 'domain: ' . $dominio,
-    'language' => 'ES',
+    'language' => 'EN',
     'email' => $row['account_correo'],
-    // 'amount' => $membershipPrice,
-    'amount' => '0.01',
+     'amount' => $membershipPrice,
+    //'amount' => '0.01',
     'currency' => 'USD',
     'dateTime' => new DateTime(),
     'successUrl' => 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/',

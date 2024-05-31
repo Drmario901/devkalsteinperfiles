@@ -158,14 +158,16 @@
     include 'navbar.php';
     require __DIR__ . '/../../../php/getMembresia.php';
 
-    $mebresia = $_SESSION['tipo_membresia'];
-    // echo  'Membresiaaa' . $mebresia;
+    $membresia = $_SESSION['tipo_membresia'];
+    // echo  'Membresiaaa' . $membresia;
 
     //Sessions
     // $session = $_SESSION;
     // var_dump('La sesion ', $session);
-    $fechaInicial = $_SESSION['fecha_inicio'];
-    $fechaFinal = $_SESSION['fecha_final'];
+    if (isset($_SESSION['fecha_inicio'])) {
+        $fechaInicial = $_SESSION['fecha_inicio'];
+        $fechaFinal = $_SESSION['fecha_final'];
+    }
     ?>
     <script>
         let page = "home";
@@ -181,7 +183,7 @@
             <h2 class="title_k">FORTALECE TU <br> <span>IDENTIDAD CON K+</span></h2>
             <h5 style="font-size: 1.5em; color: #213280; font-weight: 700;">Planes de Membresía</h5>
         </div>
-        <?php if ($mebresia != 0) : ?>
+        <?php if ($membresia != 0) : ?>
             <div style="font-weight: 500; margin-right: 20px;">
                 <p class="fechas_subs">
                     <b>Fecha Inicial:</b>
@@ -234,15 +236,19 @@
         <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
             <?php if ($membresia != 0) : ?>
                 <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
-                <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
+                <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancel</button>
             <?php endif; ?>
 
-            <?php if ($membresia != 1 && $membresia != 2) : ?>
-                <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
-            <?php endif; ?>
+            <!-- <?php if ($membresia != 1 && $membresia != 2) : ?>
+        <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membership 2</a>
+      <?php endif; ?>
 
-            <?php if ($membresia != 2) : ?>
-                <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
+      <?php if ($membresia != 2) : ?>
+        <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membership 3</a>
+      <?php endif; ?> -->
+            <?php if ($membresia == 0) : ?>
+                <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membership 2</a>
+                <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membership 3</a>
             <?php endif; ?>
         </div>
     </div>

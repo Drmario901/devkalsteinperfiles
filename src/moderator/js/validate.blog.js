@@ -154,24 +154,27 @@ jQuery(document).ready(function ($) {
               function (instance, toast) {
                 instance.hide({ transitionOut: "fadeOut" }, toast, "button");
 
-                let artId = "<?php echo $artId; ?>";
+                let artId = document.querySelector("#artId").value;
                 let msg = $("#message").val();
                 let strike = document.querySelector("#strike").checked;
 
                 $.ajax({
-                  url: "your_deny_url.php",
+                  url: plugin_dir + "php/moderator/denegateBlog.php",
                   type: "POST",
                   data: { artId, msg, strike },
                 })
                   .done(function (response) {
-                    if (JSON.parse(response).status == "correcto") {
+                    console.log(response);
+
+                    if (response.status == "correcto") {
                       iziToast.success({
                         overlay: true,
                         title: "Success",
                         message: "Message sent successfully!",
                         position: "center",
                       });
-                      window.location.href = "your_redirect_url.php";
+                      window.location.href =
+                        "https://dev.kalstein.plus/plataforma/moderator/blog/";
                     } else {
                       iziToast.error({
                         overlay: true,
