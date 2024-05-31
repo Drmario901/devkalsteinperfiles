@@ -49,6 +49,10 @@ if ($result->num_rows > 0) {
   $artTitle = $row['art_title'];
 }
 
+//update status to 1
+$query = "UPDATE wp_art_blog SET id_status = 1 WHERE art_id = '$artId'";
+$result = $conexion->query($query);
+
 $slugTitle = slug_sanitize($artTitle);
 
 $queryToValidate = "UPDATE 8x7MM_posts SET post_status = 'publish' WHERE post_title = '$slugTitle'";

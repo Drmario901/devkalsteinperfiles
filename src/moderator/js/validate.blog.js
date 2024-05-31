@@ -159,7 +159,7 @@ jQuery(document).ready(function ($) {
                 let strike = document.querySelector("#strike").checked;
 
                 $.ajax({
-                  url: "your_deny_url.php",
+                  url: plugin_dir + "php/moderator/denegateBlog.php",
                   type: "POST",
                   data: { artId, msg, strike },
                 })
@@ -171,7 +171,7 @@ jQuery(document).ready(function ($) {
                         message: "Message sent successfully!",
                         position: "center",
                       });
-                      window.location.href = "your_redirect_url.php";
+                      window.location.href = "https://dev.kalstein.plus/plataforma/moderator/blog/";
                     } else {
                       iziToast.error({
                         overlay: true,
