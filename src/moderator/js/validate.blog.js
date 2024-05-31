@@ -154,7 +154,7 @@ jQuery(document).ready(function ($) {
               function (instance, toast) {
                 instance.hide({ transitionOut: "fadeOut" }, toast, "button");
 
-                let artId = "<?php echo $artId; ?>";
+                let artId = document.querySelector("#artId").value;
                 let msg = $("#message").val();
                 let strike = document.querySelector("#strike").checked;
 
@@ -171,7 +171,8 @@ jQuery(document).ready(function ($) {
                         message: "Message sent successfully!",
                         position: "center",
                       });
-                      window.location.href = "https://dev.kalstein.plus/plataforma/moderator/blog/";
+                      window.location.href =
+                        "https://dev.kalstein.plus/plataforma/moderator/blog/";
                     } else {
                       iziToast.error({
                         overlay: true,
