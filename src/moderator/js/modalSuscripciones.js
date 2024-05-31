@@ -20,14 +20,41 @@ function openPaymentModal(idAccount) {
       paymentTableBody.innerHTML = ""; // Clear previous data
 
       response.forEach((payment) => {
+        let codeRetourStatus;
+        let estadoMembresiaStatus;
+
+        // Determine codeRetourStatus
+        if (payment.code_retour === 'paiement' || payment.code_retour === 'payetest') {
+          codeRetourStatus = 'Pago Exitoso';
+        } else if (payment.code_retour === 'annulation') {
+          codeRetourStatus = 'Pago Rechazado';
+        } else {
+          codeRetourStatus = payment.code_retour;
+        }
+
+        // Determine estadoMembresiaStatus
+        switch (payment.estado_membresia) {
+          case '1':
+            estadoMembresiaStatus = 'Activa';
+            break;
+          case '2':
+            estadoMembresiaStatus = 'Pendiente de cancelar';
+            break;
+          case '3':
+            estadoMembresiaStatus = 'Finalizada';
+            break;
+          default:
+            estadoMembresiaStatus = payment.estado_membresia;
+        }
+
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>${payment.id}</td>
-          <td>${payment.code_retour}</td>
+          <td>${codeRetourStatus}</td>
           <td>${payment.fecha_inicio}</td>
           <td>${payment.fecha_final}</td>
           <td>${payment.referencia_pago}</td>
-          <td>${payment.estado_membresia}</td>
+          <td>${estadoMembresiaStatus}</td>
           <td>${payment.monto}</td>
           <td>${payment.fechahora}</td>
           <td>${payment.dominio}</td>
