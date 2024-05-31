@@ -31,7 +31,6 @@ function openPaymentModal(idAccount) {
           <td>${payment.monto}</td>
           <td>${payment.fechahora}</td>
           <td>${payment.dominio}</td>
-          <td>${payment.user_id}</td>
         `;
         paymentTableBody.appendChild(row);
       });

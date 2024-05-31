@@ -162,7 +162,6 @@
                     <th>Monto</th>
                     <th>Fecha y Hora</th>
                     <th>Dominio</th>
-                    <th>User ID</th>
                   </tr>
                 </thead>
                 <tbody id="paymentTableBody">
