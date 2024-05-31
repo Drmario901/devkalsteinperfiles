@@ -694,54 +694,51 @@
                     <?php
 
                     $sqlExtra = "SELECT * FROM wp_guides_videos WHERE guide_id = '$guideId'";
-
                     $resultExtra = $conexion->query($sqlExtra);
 
-                    $rowExtra = $resultExtra->fetch_assoc();
+                    if ($rowExtra = $resultExtra->fetch_assoc()) {
+                        $videoUrl = isset($rowExtra['guide_video_url']) ? $rowExtra['guide_video_url'] : null;
+                        $videoDescription = isset($rowExtra['guide_video_description']) ? $rowExtra['guide_video_description'] : null;
 
-                    $videoUrl = $rowExtra['guide_video_url'];
-                    $videoDescription = $rowExtra['guide_video_description'];
-
-                    if ($videoUrl) {
-                        echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                        <div class='row'>
-                            <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-file-video'></i>
-                                Video
-                            </h6>
-                            <p style='font-weight: 600'>
-                                <i class='fa-solid fa-paperclip'></i>
-                                Link <input class='d-inline' type='checkbox' id='video_url'>
-                            </p>
-                            <div class='mb-3 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                <p style='text-align: justify;'>$videoUrl</p>
-                            </div>
-                            <p style='font-weight: 600'>
-                                <i class='fas fa-circle-info'></i>
-                                Description
-                            </p>
-                            <div class='row p-0'>
-                                <div class='col-9'>
-                                    <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
-                                        <p style='text-align: justify;'>$videoDescription</p>
-                                    </div>
-                                </div>
-                                <div class='col-3'>
-                                    <p><label for='promotions_i_video'>Links or self-promotion</label>
-                                        <input class='d-inline' type='checkbox' id='promotions_i_video'>
-                                    </p>
-
-                                    <p><label for='professionalism_i_video'>Professionalism</label>
-                                        <input class='d-inline' type='checkbox' id='professionalism_i_video'>
-                                    </p>
-                                </div>
-                            </div>
+                        if ($videoUrl) {
+                            echo "<div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+            <div class='row'>
+                <h6 class='text-start' style='font-weight: 600;'><i class='fa-regular fa-file-video'></i>
+                    Video
+                </h6>
+                <p style='font-weight: 600'>
+                    <i class='fa-solid fa-paperclip'></i>
+                    Link <input class='d-inline' type='checkbox' id='video_url'>
+                </p>
+                <div class='mb-3 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                    <p style='text-align: justify;'>$videoUrl</p>
+                </div>
+                <p style='font-weight: 600'>
+                    <i class='fas fa-circle-info'></i>
+                    Description
+                </p>
+                <div class='row p-0'>
+                    <div class='col-9'>
+                        <div class='mb-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>$videoDescription</p>
                         </div>
-                    </div>";
+                    </div>
+                    <div class='col-3'>
+                        <p><label for='promotions_i_video'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_video'>
+                        </p>
+
+                        <p><label for='professionalism_i_video'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_video'>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>";
+                        }
                     }
 
                     ?>
-
-
                     <?php
                     // Consulta para obtener las preguntas y respuestas de la tabla wp_guides_faq
                     $sqlFAQ = "SELECT guide_faq_1, guide_faq_aswer_1, guide_faq_2, guide_faq_aswer_2, guide_faq_3, guide_faq_aswer_3, guide_faq_4, guide_faq_aswer_4, guide_faq_5, guide_faq_aswer_5 
