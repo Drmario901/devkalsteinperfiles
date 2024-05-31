@@ -45,6 +45,7 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
   $row = $result->fetch_assoc();
   $artTitle = $row['art_title'];
+  $linkBlog = $row['id_art_slug'];
   $correo = $row['account_correo'];
 
   $artTitleSlug = slug_sanitize($artTitle);
@@ -93,6 +94,7 @@ if ($result->num_rows > 0) {
 
         $response = array(
           'status' => 'correcto',
+          'linkBlog' => $linkBlog,
         );
       } else {
         $response = array(
