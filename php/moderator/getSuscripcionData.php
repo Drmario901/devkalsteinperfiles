@@ -3,7 +3,7 @@
 $idAccount = $_POST['idAccount'];
 require __DIR__ . '/../conexion.php';
 
-$sql = "SELECT * FROM wp_subscripcion WHERE user_id = '$idAccount'";
+$sql = "SELECT * FROM wp_subscripcion WHERE user_id = '$idAccount' ORDER BY ID DESC";
 
 $resultado = $conexion->query($sql);
 
