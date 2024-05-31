@@ -36,7 +36,7 @@
             FROM wp_guides AS g
             INNER JOIN wp_guides_details AS gd ON g.guide_id = gd.guide_id
             INNER JOIN wp_k_products AS p ON gd.guide_product_id = p.product_aid
-            WHERE gd.guide_detail_number = 1 AND g.guide_id_status = 4;            
+            WHERE gd.guide_detail_number = 1 AND g.guide_status_id = 4;            
             ";
 
             $result = $conexion->query($query);
