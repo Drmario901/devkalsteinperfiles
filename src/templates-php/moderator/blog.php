@@ -3,7 +3,9 @@
     <?php
     require __DIR__ . '/../../../php/conexion.php';
     include 'navbar.php';
-
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     ?>
     <script>
         let page = "blog";
@@ -24,8 +26,10 @@
             SELECT wp_art_blog.*, wp_account.*
             FROM wp_art_blog
             INNER JOIN wp_account ON wp_art_blog.art_id_user = wp_account.account_aid
-            ORDER BY wp_art_blog.art_id_user ASC;
-            ";
+            WHERE wp_art_blog.id_status = '4'
+            ORDER BY wp_art_blog.art_id_user DESC;
+            ;
+        ";
 
             $result = $conexion->query($query);
 

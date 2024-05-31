@@ -61,6 +61,7 @@
             $artDescription = $row['art_description'];
             $artDescription2 = $row['art_description_2'];
             $artDescription3 = $row['art_description_3'];
+            $artId = $row['art_id'];
 
         }
 
@@ -74,6 +75,7 @@
                         Titulo Principal
                         <input class='d-inline' type='checkbox' id='name'>
                     </h5>
+                    <input type='hidden' value='$artId' id='artId'>
                     <h6 class='text-start'>$artTitle</h6>
                     <a TARGET='_blank' href='#'>
                         <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'

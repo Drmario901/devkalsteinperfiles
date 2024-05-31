@@ -7,6 +7,10 @@ error_reporting(E_ALL);
 require '/home/kalsteinplus/public_html/dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/php/conexion.php';
 session_start();
 
+// Get Domain
+
+$dominio = $_SERVER['HTTP_HOST'];
+
 //EMAIL ACCOUNT SESSION.
 if (isset($_SESSION["emailAccount"])) {
     $email = $_SESSION["emailAccount"];
@@ -111,10 +115,11 @@ $monetico = new Monetico(
 
 $purchase = new PurchaseRequest([
     'reference' => $reference,
-    'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'],
-    'language' => 'ES',
+    'description' => 'uniqid: ' . $row['account_sub_id'] . '  ' . 'userID:' . $row['user_tag'] . '  ' . 'domain: ' . $dominio,
+    'language' => 'EN',
     'email' => $row['account_correo'],
-    'amount' => $membershipPrice,
+     'amount' => $membershipPrice,
+    //'amount' => '0.01',
     'currency' => 'USD',
     'dateTime' => new DateTime(),
     'successUrl' => 'https://dev.kalstein.plus/plataforma/subscripcion-aprobada/',

@@ -68,9 +68,11 @@ if (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $date_commande)) {
     die('Formato de fecha "date_commande" incorrecto. Debe ser JJ/MM/AAAA');
 }
 
+// $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $securityKey = '255D023E7A0BDE9EEAC7516959CD93A9854F3991';
 $tpe = '7593339';
-$montant = $montoFinal;
+//$montant = $montoFinal;
+$montant = '0.01USD';
 $montant_a_capturer = '0.00USD';
 $montant_deja_capture = '0.00USD';
 $montant_restant = '0.00USD';
@@ -78,7 +80,7 @@ $reference = $rowSubscripcion['referencia_pago'];
 $version = '3.0';
 $lgue = 'ES';
 $societe = 'kalsteinfr';
-$stoprecurrence = 'NON';
+$stoprecurrence = 'OUI';
 
 $fields = [
     'version' => $version,
@@ -99,7 +101,7 @@ $mac = calculateMAC($securityKey, $fields);
 
 $fields['MAC'] = $mac;
 
-$url = "https://p.monetico-services.com/test/capture_paiement.cgi";
+$url = "https://p.monetico-services.com/capture_paiement.cgi";
 
 $client = new Client();
 $response = $client->request('POST', $url, [

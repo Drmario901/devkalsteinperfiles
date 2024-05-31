@@ -1,192 +1,195 @@
-<header class="header" data-header>
-  <style>
-    .btnVerTienda:hover {
-      color: white !important;
-    }
-  </style>
-  <?php
+<!DOCTYPE html>
+<html lang="en">
 
-  require __DIR__ . '/../../../php/conexion.php';
-  /* ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL); */
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
 
-  include 'navbar.php';
+<body>
+  <header class="header" data-header>
+    <style>
+      .btnVerTienda:hover {
+        color: white !important;
+      }
 
-  ?>
+      .buton-paginate {
+        color: #0d6efd;
+      }
 
-  <script>
-    let page = "stores";
+      .boton-paginate:hover {
+        color: white;
+      }
 
-    document.querySelector('#link-' + page).classList.add("active");
-    document.querySelector('#link-' + page).removeAttribute("style");
-  </script>
-</header>
-<main>
-  <article class="container article">
+      .table>thead {
+        background-color: hsl(229.26deg 59.01% 31.57%);
+        color: white;
+      }
 
-    <div class="row">
-      <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Suscripciones activas</span></h4>
-      <?php
+      .pay-pendiente {
+        background-color: orange !important;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 600;
+      }
 
-      // inner join wp_account on wp_subscripcion.user_id = wp_account.account_aid
-      
-      $query = "
-      SELECT wp_subscripcion.*, wp_account.*
-      FROM wp_subscripcion
-      INNER JOIN wp_account ON wp_subscripcion.user_id = wp_account.account_aid
-      WHERE wp_subscripcion.estado_membresia = 2
-      ORDER BY wp_subscripcion.user_id ASC;
-      ";
+      .pay-pagado {
+        background-color: green !important;
+        color: white;
+        text-align: center;
+      }
 
-
-      $result = $conexion->query($query);
-
-      if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-
-          $nombre = $row['account_nombre'];
-          $apellido = $row['account_apellido'];
-          $nombreCompleto = $nombre . " " . $apellido;
-          $img = $row['account_url_image_perfil'];
-          $acc_img = $row['account_url_image_perfil'];
-          $rol = $row['account_rol_aid'];
-
-          $firstLyricsName = strtoupper($nombre);
-          $firstLyricsLastname = strtoupper($apellido);
-          $membresia = $row['tipo_membresia'];
-          $fechaInicio = $row['fecha_inicio'];
-          $fechaFin = $row['fecha_final'];
-
-
-          if ($acc_img == '') {
-            $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/' . $firstLyricsName . '/' . $firstLyricsName . '' . $firstLyricsLastname . '.png';
-          } else {
-            $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/' . $acc_img;
-          }
-
-          if ($rol == 1) {
-            $rol = 'Cliente';
-          } elseif ($rol == 2) {
-            $rol = 'Distribuidor';
-          } elseif ($rol == 3) {
-            $rol = 'Fabricante';
-          }
-
-          if ($membresia == 1) {
-            $tipo_membresia = 'Plan de membresia 1';
-          } elseif ($membresia == 2) {
-            $tipo_membresia = 'Plan de membresia 2';
-          }
-
-
-          echo "<div class='col-lg-6'>
-            <div class='card row m-2'>
-              <div class='col-12'>
-                <div class='row mb-2'>
-                  <div class='col-4'>
-                    <img class='mx-1'
-                      src=$urlImagePerfil
-                      width=150>
+      .modal-dialog-custom {
+        max-width: 90%;
+        /* Ajusta este valor según tus necesidades */
+      }
+    </style>
+    <?php
+    require __DIR__ . '/../../../php/conexion.php';
+    include 'navbar.php';
+    ?>
+    <script>
+      let page = "stores";
+      document.querySelector('#link-' + page).classList.add("active");
+      document.querySelector('#link-' + page).removeAttribute("style");
+    </script>
+  </header>
+  <main>
+    <article class="container article">
+      <div class="row">
+        <h4 class='mt-2'><span style='font-weight: 600; display: inline;'>Suscripciones activas</span></h4>
+        <?php
+        $query = "
+          SELECT wp_subscripcion.*, wp_account.*
+          FROM wp_subscripcion
+          INNER JOIN wp_account ON wp_subscripcion.user_id = wp_account.account_aid
+          WHERE wp_subscripcion.estado_membresia = 2
+          ORDER BY wp_subscripcion.user_id ASC;
+          ";
+        $result = $conexion->query($query);
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            $nombre = $row['account_nombre'];
+            $apellido = $row['account_apellido'];
+            $nombreCompleto = $nombre . " " . $apellido;
+            $img = $row['account_url_image_perfil'];
+            $acc_img = $row['account_url_image_perfil'];
+            $rol = $row['account_rol_aid'];
+            $id_account = $row['account_aid'];
+            $firstLyricsName = strtoupper($nombre);
+            $firstLyricsLastname = strtoupper($apellido);
+            $membresia = $row['tipo_membresia'];
+            $fechaInicio = $row['fecha_inicio'];
+            $fechaFin = $row['fecha_final'];
+            if ($acc_img == '') {
+              $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/Iconos/' . $firstLyricsName . '/' . $firstLyricsName . '' . $firstLyricsLastname . '.png';
+            } else {
+              $urlImagePerfil = 'https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/images/upload/' . $acc_img;
+            }
+            if ($rol == 1) {
+              $rol = 'Cliente';
+            } elseif ($rol == 2) {
+              $rol = 'Distribuidor';
+            } elseif ($rol == 3) {
+              $rol = 'Fabricante';
+            }
+            if ($membresia == 1) {
+              $tipo_membresia = 'Plan de membresia 1';
+            } elseif ($membresia == 2) {
+              $tipo_membresia = 'Plan de membresia 2';
+            }
+            echo "<div class='col-lg-6'>
+                <div class='card row m-2'>
+                  <div class='col-12'>
+                    <div class='row mb-2'>
+                      <div class='col-4'>
+                        <img class='mx-1' src=$urlImagePerfil width=150>
+                      </div>
+                      <div class='col-8'>
+                        <h6 style='font-weight: 600;'>$nombreCompleto ($rol)</h6>
+                        <p class='mb-2'>$tipo_membresia</p>
+                        <p class='mb-2'>Inicio de suscripción: $fechaInicio</p>
+                        <p class='mb-2'>Fin de la suscripción: $fechaFin</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class='col-8'>
-                    <h6 style='font-weight: 600;'>$nombreCompleto ($rol)</h6>
-                    <p class='mb-2'>$tipo_membresia</p>
-                    <p class='mb-2'>Inicio de suscripción: $fechaInicio</p>
-                    <p class='mb-2'>Fin de la suscripción: $fechaFin</p>
+                  <div class='col-12' style='display: flex; justify-content: flex-start'>
+                    <input type='hidden' class='id_account' value='$id_account'>
+                    <button type='button' class='btnHistorial btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                   </div>
                 </div>
-              </div>
-              <div class='col-12' style='display: flex; justify-content: flex-start'>
-                <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
-                  <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Cancelar membresia</button>
-                </a>
-                <a href='https://dev.kalstein.plus/plataforma/tienda-de-prueba/'>
-                  <button type='button' id='btnUpdate'
-                    class='btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
-                </a>
-              </div>
-    
+              </div>";
+          }
+        } else {
+          echo "<p>No hay subscripciones para cancelar</p>";
+        }
+        ?>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="paymentModalLabel">Historial de Pagos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Code Retour</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Final</th>
+                    <th>Referencia Pago</th>
+                    <th>Estado Membresia</th>
+                    <th>Monto</th>
+                    <th>Fecha y Hora</th>
+                    <th>Dominio</th>
+                  </tr>
+                </thead>
+                <tbody id="paymentTableBody">
+                  <!-- Aquí se insertarán los pagos mediante JavaScript -->
+                </tbody>
+              </table>
+            </div>
+            <div style="display: flex; justify-content:center; gap:1rem;">
+              <button id="boton-prev" class="btn btn-outline-primary buton-paginate" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </button>
+
+              <ul id="paginado" class="pagination">
+
+              </ul>
+
+              <button id="boton-next" class="btn btn-outline-primary buton-paginate" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="closeModalButton" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
-            ";
-        }
-      } else {
-        echo "
-            <p>No hay subscripciones para cancelar</p>";
-      }
-      ?>
+        </div>
+      </div>
 
+    </article>
+  </main>
+</body>
 
-    </div>
-    <!-- <?php
-
-    // require __DIR__.'/../../../php/conexion.php';
-    
-    function time_elapsed_string($datetime, $full = false)
-    {
-      $now = new DateTime;
-      $ago = new DateTime($datetime);
-      $diff = $now->diff($ago);
-
-      $diff->w = floor($diff->d / 7);
-      $diff->d -= $diff->w * 7;
-
-      $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-      );
-      foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-          $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-          unset($string[$k]);
-        }
-      }
-
-      if (!$full)
-        $string = array_slice($string, 0, 1);
-      return $string ? implode(', ', $string) . ' ago' : 'just now';
-    }
-
-    if ($result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-
-        $elapsed = time_elapsed_string($row['account_created_at']);
-
-        $aid = $row['account_aid'];
-
-        $rol = $dict[$row['account_rol_aid']];
-        $correo = $row['account_correo'];
-
-        $queryAction = "SELECT type, action_mod FROM wp_mod_moves WHERE type = 'account' AND action_id = '$aid'";
-        $resultAction = $conexion->query($queryAction);
-
-        if ($resultAction->num_rows > 0) {
-          $mod = $resultAction->fetch_array()[1];
-
-          $verifying_by = "
-                            <div class='fw-bold card' style='border: solid 1px #27aa3f; border-radius: 5px; background-color: #86e397; padding: 10px 20px;'>
-                            <p class='m-0 p-0'><i class='fa-regular fa-circle-check'></i> Verifying by: $mod</p>
-                            </div>
-                            ";
-        } else {
-          $verifying_by = "";
-        }
-
-        echo "
-                        
-                        ";
-      }
-    } else {
-      echo 'No pending tasks';
-    }
-    ?> -->
-    </div>
-  </article>
-</main>
+</html>
