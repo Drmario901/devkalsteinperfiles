@@ -109,6 +109,8 @@ jQuery(document).ready(function ($) {
                       position: "center",
                     });
                     window.open(res.linkBlog, "_blank");
+                    window.location.href =
+                      "https://dev.kalstein.plus/plataforma/moderator/blog/";
                   } else {
                     iziToast.error({
                       overlay: true,
