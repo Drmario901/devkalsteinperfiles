@@ -36,7 +36,7 @@ function slug_sanitize($title)
 }
 
 // Preparar la consulta para obtener el título del artículo
-$query = "SELECT * FROM wp_art_blog INNER JOIN wp_account ON wp_art_blog.user_id = wp_account.account_aid WHERE art_id = ?";
+$query = "SELECT * FROM wp_art_blog INNER JOIN wp_account ON wp_art_blog.art_id_user = wp_account.account_aid WHERE art_id = ?";
 $stmt = $conexion->prepare($query);
 $stmt->bind_param("s", $artId);
 $stmt->execute();
