@@ -30,7 +30,7 @@ require __DIR__ . '/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 try {
-    //$mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
+    $mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
     $mail->isSMTP();
     $mail->Host = 'mail.kalstein.net';  // Host de conexión SMTP
     $mail->SMTPAuth = true;
