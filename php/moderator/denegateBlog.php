@@ -10,6 +10,8 @@ header('Content-Type: application/json'); // Asegúrate de que la respuesta sea 
 
 $response = array("status" => "incorrecto");
 
+require __DIR__ . '/../../vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -41,7 +43,7 @@ try {
     throw new Exception("Error al actualizar el estado del artículo.");
   }
 
-  require __DIR__ . '/../../vendor/autoload.php';
+
 
   $mail = new PHPMailer(true);
 
