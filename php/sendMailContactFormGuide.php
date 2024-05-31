@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $emailKalstein = 'marketing2.kalstein@gmail.com';
 $datos = $_POST['datos'];
 
