@@ -106,7 +106,7 @@ if ($resultGuideId->num_rows > 0) {
         $sql_updateGuidePost->execute();
 
         $queryUpdateStatus = "UPDATE wp_guides SET guide_status_id = 1 WHERE guide_id = '$guideId'";
-        $result = $conexion->query($query);
+        $result = $conexion->query($queryUpdateStatus);
 
         $response = array(
           'status' => 'correcto',
