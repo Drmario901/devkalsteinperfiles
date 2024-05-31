@@ -10,8 +10,8 @@ header('Content-Type: application/json'); // Asegúrate de que la respuesta sea 
 
 $response = array("status" => "incorrecto");
 
-/* use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception; */
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 try {
   $artId = $_POST['artId'];
