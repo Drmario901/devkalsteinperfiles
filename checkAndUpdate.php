@@ -2,6 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 // Crear la carpeta 'monetico' si no existe
 $logDir = __DIR__ . '/monetico';
 if (!is_dir($logDir)) {
@@ -64,9 +65,53 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 
 logMessage("Último registro del log decodificado exitosamente.");
 
-// Conectar a la base de datos
-require __DIR__ . '/php/conexion.php';
-logMessage("Conexión a la base de datos establecida.");
+// Extraer el dominio del JSON
+$domainSub = null;
+if (preg_match('/domain:\s*([\w.-]+)/', $lastLogData['texte-libre'], $matches)) {
+    $domainSub = $matches[1];
+}
+logMessage("Domain extraído: " . $domainSub);
+
+// Función para conectar a la base de datos según el dominio
+function getDatabaseConnection($domain)
+{
+    $connections = [
+        'plateforme.kalstein.fr' => [
+            'host' => '185.28.22.128',
+            'user' => 'plus',
+            'pass' => 'Yuleana24.',
+            'db' => 'kalsteinfr_he270711'
+        ],
+        'dev.kalstein.plus' => [
+            'host' => 'localhost',
+            'user' => 'user_otro',
+            'pass' => 'password_otro',
+            'db' => 'db_otro'
+        ],
+        // Agrega más dominios y sus configuraciones según sea necesario
+    ];
+
+    if (!isset($connections[$domain])) {
+        throw new Exception("No se encontró configuración para el dominio: " . $domain);
+    }
+
+    $config = $connections[$domain];
+
+    $conexion = new mysqli($config['host'], $config['user'], $config['pass'], $config['db']);
+    if ($conexion->connect_error) {
+        throw new Exception("Error de conexión: " . $conexion->connect_error);
+    }
+
+    return $conexion;
+}
+
+try {
+    $conexion = getDatabaseConnection($domainSub);
+    logMessage("Conexión a la base de datos establecida para el dominio: " . $domainSub);
+} catch (Exception $e) {
+    logMessage("Error al conectar a la base de datos: " . $e->getMessage());
+    exit;
+}
 
 // Obtener el último registro de la base de datos basado en la referencia
 $lastReference = $lastLogData['reference'];
