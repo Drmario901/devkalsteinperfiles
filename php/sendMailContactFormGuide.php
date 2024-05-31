@@ -12,7 +12,7 @@ $sector = $datos[6];
 $model = $datos[7];
 $message = $datos[8]; 
 
-$sql = "SELECT * FROM wp_account WHERE account_aid = $id_account";
+$query = "SELECT * FROM wp_account WHERE account_aid = $id_account";
 $resultQuery = $conexion->query($query);
 $rowemail = mysqli_fetch_array($resultQuery);
 $email = $rowemail['account_correo'];
