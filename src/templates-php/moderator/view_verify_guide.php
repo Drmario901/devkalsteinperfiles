@@ -63,52 +63,195 @@
                 <?php
 
                 $sql = "SELECT 
-                g.guide_id, 
-                gd.guide_description, 
-                gd.guide_img_url, 
-                kp.product_category_es, 
-                kp.product_subcategory_es
-            FROM 
-                wp_guides g
-            INNER JOIN 
-                wp_guides_details gd ON g.guide_id = gd.guide_id
-            INNER JOIN 
-                wp_k_products kp ON gd.guide_product_id = kp.product_aid
-            WHERE 
-                g.guide_id = ?";
+                    wp_guides.*,
+                    wp_guides_details.*,
+                    wp_k_products.product_subcategory_es,
+                    wp_k_products.product_category_es
+                FROM 
+                    wp_guides
+                INNER JOIN 
+                    wp_guides_details ON wp_guides.guide_id = wp_guides_details.guide_id
+                INNER JOIN 
+                    wp_k_products ON wp_guides_details.guide_product_id = wp_k_products.product_aid
+                WHERE 
+                    wp_guides.guide_id = '$guideId'";
 
-                // Preparar la sentencia para evitar inyección SQL
-                $stmt = $conexion->prepare($sql);
-                $stmt->bind_param("s", $guideId);
-                $stmt->execute();
-                $result = $stmt->get_result();
+                $result = $conexion->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Usar un arreglo para almacenar los datos
-                    $guides = [];
                     while ($row = $result->fetch_assoc()) {
-                        $guides[] = $row;
+                        $guideDetailNumber = $row['guide_detail_number'];
+
+                        // Guardar en variables con el sufijo correspondiente
+                        ${"productName_" . $guideDetailNumber} = $row['product_category_es'];
+                        ${"productSubcategory_" . $guideDetailNumber} = $row['product_subcategory_es'];
+                        ${"productCategory_" . $guideDetailNumber} = $row['product_category_es'];
+                        ${"guideDescription_" . $guideDetailNumber} = $row['guide_description'];
+                        ${"guideImg_" . $guideDetailNumber} = $row['guide_img_url'];
                     }
 
-                    // Mostrar el contenido dinámicamente
-                    echo "<div class='row'>";
-                    foreach ($guides as $index => $guide) {
-                        $index++;  // Incrementar índice para comenzar en 1
-                        echo "<div class='col-md-6 text-sm-start text-md-center'>
-                        <h5><i class='fas fa-pen'></i> Producto #{$index}</h5>
-                        <h6 class='text-start'>" . htmlspecialchars($guide['product_category_es']) . "</h6>
-                        <a TARGET='_blank' href='" . htmlspecialchars($guide['guide_img_url']) . "'>
-                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999' width=200 src='" . htmlspecialchars($guide['guide_img_url']) . "'>
+                    // Mostrar el contenido para el producto 1 (obligatorio)
+                    echo "<input type='hidden' id='guideId' value='$guideId'>
+                    <div class='col-md-4 text-sm-start text-md-center'>
+                            <h5>
+                            <i class='fas fa-pen'></i>
+                            Producto principal
+                            <input class='d-inline' type='checkbox' id='name_1'>
+                        </h5>
+                        <h6 class='text-start'>" . $productName_1 . "</h6>
+                        <a TARGET='_blank' href='$guideImg_1'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='" . $guideImg_1 . "'>
                         </a>
-                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px'>
-                            <p style='text-align: justify;'>" . htmlspecialchars($guide['guide_description']) . "</p>
+                
+                        <!-- Enlaces o promociones -->
+                        <p><label for='promotions_i_1'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_1'>
+                        </p>
+                
+                        <p><label for='quality_i_1'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_1'>
+                        </p>
+                
+                        <p><label for='professionalism_i_1'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_1'>
+                        </p>
                         </div>
+                        <div class='col-md-8'>
+                        <h5>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h5>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>" . $guideDescription_1 . "</p>
+                        </div>
+                        <p>
+                            <label for='promotions_d_1'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_1'><br>
+                        </p>
+                        <p>
+                            <label for='professionalism_d_1'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_1'>
+                        </p>
+                    </div>
+                    </div>
+                </div>";
+
+                    // Revisar si hay producto 2 o 3 para agregar el HTML inicial básico
+                    if (isset($productName_2) || isset($productName_3)) {
+                        echo "<div class='card mb-3'>
+                        <h5>
+                            <i class='fa-solid fa-shapes'></i>
+                            Clasificación del producto
+                        </h5>
+                        <div class='row mt-2'>";
+                    }
+
+                    if (isset($productName_2)) {
+                        echo "
+                        <div class='col-md-6 text-sm-start text-md-center'>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-pen'></i>
+                            Tipo de producto #1
+                            <input class='d-inline' type='checkbox' id='name_2'>
+                        </h6>
+                        <h6 class='text-start' style='font-size: 1.15em;'>
+                            " . $productName_2 . "
+                        </h6>
+                        <a TARGET='_blank' href='$guideImg_2'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='" . $guideImg_2 . "'>
+                        </a>
+                
+                        <!-- Enlaces o promociones -->
+                        <p><label for='promotions_i_2'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_2'>
+                        </p>
+                
+                        <p><label for='quality_i_2'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_2'>
+                        </p>
+                
+                        <p><label for='professionalism_i_2'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_2'>
+                        </p>
+                
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h6>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>
+                            " . $guideDescription_2 . "
+                            </p>
+                        </div>
+                        <p>
+                            <label for='promotions_d_2'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_2'><br>
+                        </p>
+                        <p>
+                            <label for='professionalism_d_2'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_2'>
+                        </p>
                     </div>";
                     }
-                    echo "</div>";
+
+                    if (isset($productName_3)) {
+                        echo "
+                        <div class='col-md-6 text-sm-start text-md-center'>
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-pen'></i>
+                            Tipo de producto #2
+                            <input class='d-inline' type='checkbox' id='name_3'>
+                        </h6>
+                        <h6 class='text-start' style='font-size: 1.15em;'>
+                            " . $productName_3 . "
+                        </h6>
+                        <a TARGET='_blank' href='$guideImg_3'>
+                            <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999'
+                                width=200
+                                src='" . $guideImg_3 . "'>
+                        </a>
+                
+                        <!-- Enlaces o promociones -->
+                        <p><label for='promotions_i_3'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_i_3'>
+                        </p>
+                
+                        <p><label for='quality_i_3'>Image quality</label>
+                            <input class='d-inline' type='checkbox' id='quality_i_3'>
+                        </p>
+                
+                        <p><label for='professionalism_i_3'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_i_3'>
+                        </p>
+                
+                        <h6 class='text-start' style='font-weight: 600;'>
+                            <i class='fas fa-circle-info'></i>
+                            Description
+                        </h6>
+                        <div class='my-2 p-2' style='border: solid 1px #c9c9c9; borde-radius: 10px'>
+                            <p style='text-align: justify;'>
+                            " . $guideDescription_3 . "
+                            </p>
+                        </div>
+                        <p>
+                            <label for='promotions_d_3'>Links or self-promotion</label>
+                            <input class='d-inline' type='checkbox' id='promotions_d_3'><br>
+                        </p>
+                        <p>
+                            <label for='professionalism_d_3'>Professionalism</label>
+                            <input class='d-inline' type='checkbox' id='professionalism_d_3'>
+                        </p>
+                    </div>";
+                    }
+
+                    // Cerrar el HTML inicial básico
+                    echo "</div></div>";
                 }
                 ?>
-
 
                 <?php
                 $sqlDestacados = "SELECT wp_guides.*, wp_guides_products.* FROM wp_guides INNER JOIN wp_guides_products ON wp_guides.guide_id = wp_guides_products.guide_id WHERE wp_guides.guide_id = '$guideId'";
