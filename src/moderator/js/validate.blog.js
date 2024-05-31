@@ -172,7 +172,8 @@ jQuery(document).ready(function ($) {
                         message: "Message sent successfully!",
                         position: "center",
                       });
-                      window.location.href = response.linkBlog;
+                      window.location.href =
+                        "https://dev.kalstein.plus/plataforma/moderator/blog/";
                     } else {
                       iziToast.error({
                         overlay: true,
