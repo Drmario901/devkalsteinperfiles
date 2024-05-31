@@ -18,7 +18,7 @@ $message = $datos[8];
 $query = "SELECT * FROM wp_account WHERE account_aid = $id_account";
 $resultQuery = $conexion->query($query);
 $rowemail = mysqli_fetch_array($resultQuery);
-$email = $rowemail['account_correo'];
+$email = 'tzareg96@gmail.com';
 $res = '';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -44,7 +44,7 @@ try {
     #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
  
     $mail->setFrom('no-reply@kalstein.net');			// Mail del remitente
-    $mail->addAddress($emailKalstein);     // Mail del destinatario    
+    // $mail->addAddress($emailKalstein);     // Mail del destinatario    
     $mail->addAddress($email);     // Mail del destinatario
 
     $position = strpos($email, '@');
