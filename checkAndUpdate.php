@@ -82,6 +82,18 @@ function getDatabaseConnection($domain)
             'pass' => 'Yuleana24.',
             'db' => 'kalsteinfr_he270711_kalsteinfr'
         ],
+        'platform.kalstein.us' => [
+            'host' => '185.28.22.128',
+            'user' => 'plus',
+            'pass' => 'Yuleana24.',
+            'db' => 'he269186_he270716_wp_en'
+        ],
+        'plataforma.kalstein.net' => [
+            'host' => '185.28.22.128',
+            'user' => 'plus',
+            'pass' => 'Yuleana24.',
+            'db' => 'he270716_wp_es'
+        ],
         'dev.kalstein.plus' => [
             'host' => 'localhost',
             'user' => 'user_otro',
