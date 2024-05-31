@@ -80,7 +80,7 @@ function getDatabaseConnection($domain)
             'host' => '185.28.22.128',
             'user' => 'plus',
             'pass' => 'Yuleana24.',
-            'db' => 'kalsteinfr_he270711'
+            'db' => 'kalsteinfr_he270711_kalsteinfr'
         ],
         'dev.kalstein.plus' => [
             'host' => 'localhost',
