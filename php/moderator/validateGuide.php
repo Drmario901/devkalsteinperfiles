@@ -8,7 +8,7 @@ require_once __DIR__ . '/../conexion.php';
 
 $guideId = $_POST['guideId'];
 
-$sqlGuideId = "SELECT guide_user_id, id_guide_slug, user_tag FROM wp_guides INNER JOIN wp_account ON wp_guides.guide_user_id = wp_account.account_aid WHERE wp_guides.id_guide = '$guideId'";
+$sqlGuideId = "SELECT guide_user_id, id_guide_slug, user_tag FROM wp_guides INNER JOIN wp_account ON wp_guides.guide_user_id = wp_account.account_aid WHERE wp_guides.guide_id = '$guideId'";
 
 $resultGuideId = $conexion->query($sqlGuideId);
 
