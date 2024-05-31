@@ -233,20 +233,40 @@
             <h5 style="font-weight: 600; color: #213280">Gestiona tu plan</h5>
             <p style="font-family: Roboto, Arial, sans-serif">Cambia y mejora tu plan o cancela tu suscripcion aqui</p>
         </div>
-        <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+        <!-- <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
             <?php if ($membresia != 0) : ?>
                 <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
-                <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
-            <?php endif; ?>
+        <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</button>
+    <?php endif; ?>
 
-            <?php if ($membresia != 1 && $membresia != 2) : ?>
-                <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
-            <?php endif; ?>
+    <?php if ($membresia != 1 && $membresia != 2) : ?>
+        <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membresía 2</a>
+    <?php endif; ?>
 
-            <?php if ($membresia != 2) : ?>
-                <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
-            <?php endif; ?>
-        </div>
+    <?php if ($membresia != 2) : ?>
+        <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membresía 3</a>
+    <?php endif; ?>
+    </div> -->
+
+    <div id='tbl-botones' style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+        <?php if ($membresia != 0) : ?>
+            <!-- <a href="https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/testPayRecurrentCancel.php" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancelar</a> -->
+            <button href="" id="btn-cancelar-subs" class="btn-tbl-cancelar">Cancel</button>
+        <?php endif; ?>
+
+        <!-- <?php if ($membresia != 1 && $membresia != 2) : ?>
+        <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membership 2</a>
+      <?php endif; ?>
+
+      <?php if ($membresia != 2) : ?>
+        <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membership 3</a>
+      <?php endif; ?> -->
+        <?php if ($membresia == 0) : ?>
+            <a href="" id="membresia-1" class="btn-tbl" user=<?php echo $email; ?>>Membership 2</a>
+            <a href="" id="membresia-2" class="btn-tbl" user=<?php echo $email; ?>>Membership 3</a>
+        <?php endif; ?>
+    </div>
+    </div>
     </div>
 
 </section>
