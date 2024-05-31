@@ -98,6 +98,7 @@ jQuery(document).ready(function ($) {
                 data: { artId },
               })
                 .done(function (response) {
+                  console.log(response);
                   if (JSON.parse(response).status == "correcto") {
                     //console.log("response");
                     iziToast.success({
@@ -106,7 +107,7 @@ jQuery(document).ready(function ($) {
                       message: "Validation successful!",
                       position: "center",
                     });
-                    window.location.href = response.linkBlog;
+                    //window.location.href = response.linkBlog;
                   } else {
                     iziToast.error({
                       overlay: true,
