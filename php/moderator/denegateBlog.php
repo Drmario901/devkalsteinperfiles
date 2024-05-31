@@ -46,14 +46,14 @@ try {
   $mail = new PHPMailer(true);
 
   $mail->isSMTP();
-  $mail->Host = 'mail.kalstein.plus';
+  $mail->Host = 'mail.kalstein.net';  // Host de conexión SMTP
   $mail->SMTPAuth = true;
-  $mail->Username = 'no-reply@dev.kalstein.plus';
-  $mail->Password = 'XsI2C;6d{++-';
-  $mail->SMTPSecure = 'ssl';
+  $mail->Username = 'no-reply2@kalstein.net';                 // Usuario SMTP
+  $mail->Password = 'Kalstein1234';                           // Password SMTP
+  $mail->SMTPSecure = 'ssl';                            // Activar seguridad TLS
   $mail->Port = 465;
 
-  $mail->setFrom('no-reply@dev.kalstein.plus', 'Kalstein Plataforma');
+  $mail->setFrom('no-reply2@kalstein.net', 'Kalstein Plataforma');
   $mail->addAddress($accountEmail);
 
   $mail->Subject = 'Notificación de denegación de blog';
