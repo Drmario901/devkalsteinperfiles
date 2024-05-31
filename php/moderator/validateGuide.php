@@ -63,6 +63,9 @@ if ($resultGuideId->num_rows > 0) {
   $userTag = $row['user_tag'];
   $correo = $row['account_correo'];
 
+  // Extraer el último segmento del slug de la URL
+  $guideSlug = basename(rtrim($guideSlug, '/'));
+
   // Agregar datos de depuración
   $response['guideUserId'] = $guideUserId;
   $response['guideSlug'] = $guideSlug;
@@ -118,8 +121,8 @@ if ($resultGuideId->num_rows > 0) {
         $response['guidePostId'] = $guidePostId;
 
         // Preparar la cuarta consulta para actualizar el post con el id del post del guide
-        $sql_updateGuidePost = $conexion2->prepare("UPDATE 8x7MM_posts SET post_status = 'publish' WHERE ID = ?");
-        $sql_updateGuidePost->bind_param("i", $guidePostId);
+        $sql_updateGuidePost = $conexion2->prepare("UPDATE 8x7MM_posts SET post_status = 'publish' WHERE post_title = ? AND post_parent = ?");
+        $sql_updateGuidePost->bind_param("si", $guideSlug, $parent_post_id);
         $sql_updateGuidePost->execute();
 
         $response['status'] = 'correcto';
