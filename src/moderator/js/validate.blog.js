@@ -106,8 +106,7 @@ jQuery(document).ready(function ($) {
                       message: "Validation successful!",
                       position: "center",
                     });
-                    window.location.href =
-                      "https://dev.kalstein.plus/plataforma/moderator/blog/";
+                    window.location.href = response.linkBlog;
                   } else {
                     iziToast.error({
                       overlay: true,
