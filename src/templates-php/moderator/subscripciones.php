@@ -124,9 +124,6 @@
                     </div>
                   </div>
                   <div class='col-12' style='display: flex; justify-content: flex-start'>
-                    <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
-                      <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Cancelar membresia</button>
-                    </a>
                     <input type='hidden' class='id_account' value='$id_account'>
                     <button type='button' class='btnHistorial btnVerTienda btn btn-outline-secondary btn-block p-2 px-4 ms-3' style='color: #333'>Ver Historial</button>
                   </div>
