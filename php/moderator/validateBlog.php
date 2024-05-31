@@ -61,7 +61,6 @@ $resultToValidate = $conexion2->query($queryToValidate);
 if ($resultToValidate) {
   $response = array(
     'status' => 'correcto',
-    'sql' => $queryToValidate,
   );
 } else {
   $response = array(
