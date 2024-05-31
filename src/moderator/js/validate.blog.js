@@ -165,7 +165,8 @@ jQuery(document).ready(function ($) {
                 })
                   .done(function (response) {
                     console.log(response);
-                    if (JSON.parse(response).status == "correcto") {
+
+                    if (response.status == "correcto") {
                       iziToast.success({
                         overlay: true,
                         title: "Success",
