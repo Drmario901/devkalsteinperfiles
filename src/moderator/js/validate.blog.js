@@ -164,6 +164,7 @@ jQuery(document).ready(function ($) {
                   data: { artId, msg, strike },
                 })
                   .done(function (response) {
+                    console.log(response);
                     if (JSON.parse(response).status == "correcto") {
                       iziToast.success({
                         overlay: true,
