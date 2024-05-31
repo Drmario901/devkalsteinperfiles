@@ -34,7 +34,7 @@
     
         $mail = new PHPMailer(true);
         try {
-            $mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
+            //$mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
             $mail->isSMTP();
             $mail->Host = 'mail.kalstein.net';  // Host de conexión SMTP
             $mail->SMTPAuth = true;
@@ -66,7 +66,7 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;La plataforma Kalstein + ha detectado que un usuario ha realizado el envío de una petición de un producto de tu tienda. Aquí estan sus datos de contactos y su petición.<br>
                                 
                                 Nombre: '.$name.' <br>
-                                Correo: '.$email.' <br>
+                                Correo: '.$emailClient.' <br>
                                 Teléfono: '.$phone.' <br>
                                 Tipo de usuario: '.$typeUser.' <br>
                                 País: '.$country.' <br> 
@@ -76,7 +76,7 @@
                             </p>
                             <hr>
                             <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kalstein + nunca le enviará un correo electrónico ni le pedirá que revele o verifique su contraseña, tarjeta de crédito o número de cuenta bancaria.</p>
-                            <p style="color: #000;">2023 © Todos los derechos reservados</p>
+                            <p style="color: #000;">2024 © Todos los derechos reservados</p>
                         </div>
                     </div>
                 </div>
