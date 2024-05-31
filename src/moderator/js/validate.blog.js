@@ -101,13 +101,14 @@ jQuery(document).ready(function ($) {
                   console.log(response);
                   if (JSON.parse(response).status == "correcto") {
                     //console.log("response");
+                    const res = JSON.parse(response);
                     iziToast.success({
                       overlay: true,
                       title: "Success",
                       message: "Validation successful!",
                       position: "center",
                     });
-                    //window.location.href = response.linkBlog;
+                    window.open(res.linkBlog, "_blank");
                   } else {
                     iziToast.error({
                       overlay: true,
