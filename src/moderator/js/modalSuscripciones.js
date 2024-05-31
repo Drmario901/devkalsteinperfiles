@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const closeModalButton = document.querySelector(".closeModalButton");
+  const closeModalButton = document.querySelector("#closeModalButton");
   closeModalButton.addEventListener("click", function () {
     closeModal();
   });
