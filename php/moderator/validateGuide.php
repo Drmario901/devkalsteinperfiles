@@ -88,7 +88,7 @@ if ($resultGuideId->num_rows > 0) {
       $parent_post_id = $rowPostId['ID'];
 
       // Preparar la tercera consulta para traer el post con un title igual al slug del guide y el parent_id igual al post_id del parent
-      $sql_guidePost = $conexion2->prepare("SELECT * FROM 8x7MM_posts WHERE post_title = ? AND parent_id = ?");
+      $sql_guidePost = $conexion2->prepare("SELECT * FROM 8x7MM_posts WHERE post_title = ? AND post_parent = ?");
       $sql_guidePost->bind_param("si", $guideSlug, $parent_post_id); // Cambié el tipo del segundo parámetro a "i"
       $sql_guidePost->execute();
       $result_guidePost = $sql_guidePost->get_result();
