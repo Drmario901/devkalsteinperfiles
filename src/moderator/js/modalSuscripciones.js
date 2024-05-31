@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
       openPaymentModal(idAccount);
     });
   });
+
+  const closeModalButton = document.querySelector(".closeModalButton");
+  closeModalButton.addEventListener("click", function () {
+    closeModal();
+  });
 });
 
 function openPaymentModal(idAccount) {
