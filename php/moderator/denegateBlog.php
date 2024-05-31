@@ -46,12 +46,12 @@ try {
   $mail = new PHPMailer(true);
 
   $mail->isSMTP();
-  $mail->Host = 'dev.kalstein.plus';
+  $mail->Host = 'mail.kalstein.plus';
   $mail->SMTPAuth = true;
   $mail->Username = 'no-reply@dev.kalstein.plus';
   $mail->Password = 'XsI2C;6d{++-';
-  $mail->SMTPSecure = 'tls';
-  $mail->Port = 587;
+  $mail->SMTPSecure = 'ssl';
+  $mail->Port = 465;
 
   $mail->setFrom('no-reply@dev.kalstein.plus', 'Kalstein Plataforma');
   $mail->addAddress($accountEmail);
