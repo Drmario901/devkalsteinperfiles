@@ -48,6 +48,11 @@
         color: white;
         text-align: center;
       }
+
+      .modal-dialog-custom {
+        max-width: 90%;
+        /* Ajusta este valor según tus necesidades */
+      }
     </style>
     <?php
     require __DIR__ . '/../../../php/conexion.php';
@@ -136,7 +141,7 @@
       <!-- Modal -->
       <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-custom" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="paymentModalLabel">Historial de Pagos</h5>
