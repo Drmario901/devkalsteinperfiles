@@ -54,8 +54,6 @@ function slug_sanitize($title)
   return $title;
 }
 
-$response = []; // Array para almacenar los datos de depuración
-
 if ($resultGuideId->num_rows > 0) {
   $row = $resultGuideId->fetch_assoc();
   $guideUserId = $row['guide_user_id'];
@@ -65,12 +63,6 @@ if ($resultGuideId->num_rows > 0) {
 
   // Extraer el último segmento del slug de la URL
   $guideSlug = basename(rtrim($guideSlug, '/'));
-
-  // Agregar datos de depuración
-  $response['guideUserId'] = $guideUserId;
-  $response['guideSlug'] = $guideSlug;
-  $response['userTag'] = $userTag;
-  $response['correo'] = $correo;
 
   // Preparar la consulta para evitar inyecciones SQL
   $sql_idSlug = $conexion->prepare("SELECT ID_slug FROM tienda_virtual WHERE ID_user = ?");
@@ -82,17 +74,11 @@ if ($resultGuideId->num_rows > 0) {
     $rowIdSlug = $result_idSlug->fetch_assoc();
     $idSlug = $rowIdSlug['ID_slug'];
 
-    // Agregar datos de depuración
-    $response['idSlug'] = $idSlug;
-
     // Extraer el último segmento de la URL después del último Slash (/)
     $lastSegmentSlug = basename($idSlug);
 
     // Eliminar los slashes finales
     $parent_slug = rtrim($lastSegmentSlug, '/');
-
-    // Agregar datos de depuración
-    $response['parent_slug'] = $parent_slug;
 
     // Preparar la segunda consulta
     $sql_postId = $conexion2->prepare("SELECT ID FROM 8x7MM_posts WHERE post_title = ?");
@@ -104,9 +90,6 @@ if ($resultGuideId->num_rows > 0) {
       $rowPostId = $result_postId->fetch_assoc();
       $parent_post_id = $rowPostId['ID'];
 
-      // Agregar datos de depuración
-      $response['parent_post_id'] = $parent_post_id;
-
       // Preparar la tercera consulta para traer el post con un title igual al slug del guide y el parent_id igual al post_id del parent
       $sql_guidePost = $conexion2->prepare("SELECT * FROM 8x7MM_posts WHERE post_title = ? AND post_parent = ?");
       $sql_guidePost->bind_param("si", $guideSlug, $parent_post_id); // Cambié el tipo del segundo parámetro a "i"
@@ -117,30 +100,40 @@ if ($resultGuideId->num_rows > 0) {
         $rowGuidePost = $result_guidePost->fetch_assoc();
         $guidePostId = $rowGuidePost['ID'];
 
-        // Agregar datos de depuración
-        $response['guidePostId'] = $guidePostId;
-
         // Preparar la cuarta consulta para actualizar el post con el id del post del guide
         $sql_updateGuidePost = $conexion2->prepare("UPDATE 8x7MM_posts SET post_status = 'publish' WHERE post_title = ? AND post_parent = ?");
         $sql_updateGuidePost->bind_param("si", $guideSlug, $parent_post_id);
         $sql_updateGuidePost->execute();
 
-        $response['status'] = 'correcto';
+        $queryUpdateStatus = "UPDATE wp_guides SET guide_status_id = 1 WHERE guide_id = '$guideId'";
+        $result = $conexion->query($queryUpdateStatus);
+
+        $response = array(
+          'status' => 'correcto',
+        );
       } else {
-        $response['status'] = 'error';
-        $response['message'] = 'No guide post found';
+        $response = array(
+          'status' => 'error',
+          'message' => 'No guide post found'
+        );
       }
     } else {
-      $response['status'] = 'error';
-      $response['message'] = 'No parent post found';
+      $response = array(
+        'status' => 'error',
+        'message' => 'No parent post found'
+      );
     }
   } else {
-    $response['status'] = 'error';
-    $response['message'] = 'No ID slug found';
+    $response = array(
+      'status' => 'error',
+      'message' => 'No ID slug found'
+    );
   }
 } else {
-  $response['status'] = 'error';
-  $response['message'] = 'No guide found';
+  $response = array(
+    'status' => 'error',
+    'message' => 'No guide found'
+  );
 }
 
 echo json_encode($response);
