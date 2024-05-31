@@ -73,7 +73,7 @@
           SELECT wp_subscripcion.*, wp_account.*
           FROM wp_subscripcion
           INNER JOIN wp_account ON wp_subscripcion.user_id = wp_account.account_aid
-          WHERE wp_subscripcion.estado_membresia = 2
+          WHERE wp_subscripcion.estado_membresia = 1
           ORDER BY wp_subscripcion.user_id ASC;
           ";
         $result = $conexion->query($query);
