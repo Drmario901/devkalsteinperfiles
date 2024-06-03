@@ -42,11 +42,11 @@ try {
     setcookie('language', $language, time() + (86400 * 30), "/");
     setcookie('country', $country, time() + (86400 * 30), "/");
     // Roll setcookie
-    setcookie($nombre_cookie, $valor_cookie, $tiempo_expiracion, "/");
+    // setcookie($nombre_cookie, $valor_cookie, $tiempo_expiracion, "/");
 
-    echo isset($_COOKIE['roll_usuario']) ? $_COOKIE['roll_usuario'] : 'Error al obtener la cookie';
-    $cookie_establecida = isset($_COOKIE['roll_usuario']) ? $_COOKIE['roll_usuario'] : "No se pudo establecer la cookie.";
-    echo $cookie_establecida;
+    // echo isset($_COOKIE['roll_usuario']) ? $_COOKIE['roll_usuario'] : 'Error al obtener la cookie';
+    // $cookie_establecida = isset($_COOKIE['roll_usuario']) ? $_COOKIE['roll_usuario'] : "No se pudo establecer la cookie.";
+    // echo $cookie_establecida;
 
     echo "Language set to: " . $language . "\n";
     echo "Country set to: " . $country . "\n";
