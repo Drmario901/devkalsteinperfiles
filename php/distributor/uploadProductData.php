@@ -174,6 +174,49 @@ if ($total >= $maxProductos) {
             $stmt->bind_param("is", $k_product_id, $slug);
             $stmt->execute();
 
+            //Get post_parent id
+
+            $sqlParentId = "SELECT ID FROM 8x7MM_posts where post_title = ?";
+            $stmtParentId = $conexion->prepare($sqlParentId);
+            $stmtParentId->bind_param("s", $parent_slug);
+            $stmtParentId->execute();
+            $resultParentId = $stmtParentId->get_result();
+            $rowParentId = $resultParentId->fetch_assoc();
+            $parentId = $rowParentId['ID'];
+
+            //insertar el post en la tabla 8x7MM_posts
+
+            $empty_template = 'plantilla_producto.php';
+
+            $post_date = date('Y-m-d H:i:s');
+            $post_title = $conexion2->real_escape_string($slug);
+            $post_content = $conexion2->real_escape_string('<script>console.log("Blank template");</script>');
+            $post_name = $conexion2->real_escape_string($slug);
+            $post_status = 'draft';
+            $post_author = 1;
+            $post_type = 'page';
+
+            $sql = "INSERT INTO 8x7MM_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type, post_parent) VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type', $parentId)";
+
+            if ($conexion2->query($sql) === TRUE) {
+                $post_id = $conexion2->insert_id;
+
+                $empty_template = $conexion2->real_escape_string($empty_template);
+                $sql_template = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) VALUES ('$post_id', '_wp_page_template', '$empty_template')";
+                $conexion2->query($sql_template);
+
+                $meta_values = [
+                    '_edit_lock' => time(),
+                    '_edit_last' => $post_author,
+                ];
+
+                foreach ($meta_values as $meta_key => $meta_value) {
+                    $meta_value = $conexion->real_escape_string($meta_value);
+                    $sql_meta = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) VALUES ('$post_id', '$meta_key', '$meta_value')";
+                    $conexion2->query($sql_meta);
+                }
+            }
+
         }
 
         if ($catalog != '') {
