@@ -4,7 +4,7 @@
 function render_php_file($path)
 {
     ob_start();
-    include (__DIR__ . '/../src/templates-php/' . $path);
+    include(__DIR__ . '/../src/templates-php/' . $path);
     $var = ob_get_contents();
     ob_end_clean();
     return $var;
@@ -276,7 +276,7 @@ class shortcodePerfiles
             case 4:
                 $redirectUrl = $baseURL . "support/dashboard/";
                 break;
-            /*case 5: 
+                /*case 5: 
             $redirectUrl = $baseURL . "rentalsale/dashboard/";
             break;*/
             case 6:
@@ -821,7 +821,8 @@ class shortcodePerfiles
     }
 
     // diego 404
-    /*function diego_shortcode(){
+    function diego_shortcode()
+    {
         return render_php_file('diego-index.php');
-    }*/
+    }
 }
