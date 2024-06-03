@@ -192,7 +192,7 @@ if ($total >= $maxProductos) {
             $post_title = $conexion2->real_escape_string($nombreSanitizado);
             $post_content = $conexion2->real_escape_string('<script>console.log("Blank template");</script>');
             $post_name = $conexion2->real_escape_string($nombreSanitizado);
-            $post_status = 'draft';
+            $post_status = 'publish';
             $post_author = 1;
             $post_type = 'page';
 
