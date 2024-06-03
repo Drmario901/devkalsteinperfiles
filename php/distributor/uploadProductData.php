@@ -298,13 +298,12 @@ if ($total >= $maxProductos) {
             return $title;
         }
 
-        //Obtener el parent id de la tienda para
-
         // Obtener el ID_slug
-        $sql_idSlug = $conexion->prepare("SELECT ID_slug FROM tienda_virtual WHERE ID_user = ?");
-        $sql_idSlug->bind_param("s", $acc_id);
-        $sql_idSlug->execute();
-        $result_idSlug = $sql_idSlug->get_result();
+        $sql_idSlug = "SELECT ID_slug FROM tienda_virtual WHERE ID_user = ?";
+        $stmt = $conexion->prepare($sql_idSlug);
+        $stmt->bind_param("s", $acc_id);
+        $stmt->execute();
+        $result_idSlug = $stmt->get_result();
 
         if ($result_idSlug->num_rows > 0) {
             $rowIdSlug = $result_idSlug->fetch_assoc();
@@ -312,30 +311,27 @@ if ($total >= $maxProductos) {
             $parent_slug = basename(rtrim($idSlug, '/'));
 
             // Obtener el ID del post padre
-            $sql_postId = $conexion2->prepare("SELECT ID, post_title FROM 8x7MM_posts WHERE post_title = ?");
-            $sql_postId->bind_param("s", $parent_slug);
-            $sql_postId->execute();
-            $result_postId = $sql_postId->get_result();
+            $sql_postId = "SELECT ID, post_title FROM 8x7MM_posts WHERE post_title = ?";
+            $stmt = $conexion->prepare($sql_postId);
+            $stmt->bind_param("s", $parent_slug);
+            $stmt->execute();
+            $result_postId = $stmt->get_result();
 
             if ($result_postId->num_rows > 0) {
                 $rowPostId = $result_postId->fetch_assoc();
                 $parent_post_id = $rowPostId['ID'];
                 $parent_post_title = $rowPostId['post_title'];
+
+                $nombreSanitizado = slug_sanitize($pName);
+                $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_post_title . '/' . $nombreSanitizado;
+
+                // Insertar el slug y el product id en la tabla wp_product_slug
+                $query = "INSERT INTO wp_product_slug (product_aid, product_slug) VALUES (?, ?)";
+                $stmt = $conexion->prepare($query);
+                $stmt->bind_param("is", $k_product_id, $slug);
+                $stmt->execute();
             }
-
-            $nombreSanitizado = slug_sanitize($pName);
-
-            //Crear el slug usando el titulo del parent/titulo producto
-            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_post_title . '/' . $nombreSanitizado;
-
-            //Insertar el slug y el product id en la tabla wp_product_slug
-            $query = "INSERT INTO wp_product_slug (product_aid, slug) VALUES ('$k_product_id', '$slug')";
-
-            $conexion->query($query);
-
-
         }
-
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
     }
