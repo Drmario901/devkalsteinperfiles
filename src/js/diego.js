@@ -1,6 +1,8 @@
 jQuery(document).ready(function ($) {
   $(document).on("click", "#hola", function () {
     console.log("hola");
+    const cookies = document.cookie;
+    console.log("cookies", cookies);
 
     iziToast.success({
       title: "Success",
