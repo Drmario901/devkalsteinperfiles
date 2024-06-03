@@ -58,7 +58,7 @@
                   </div>
               </div>
               <div class='col-12' style='display: flex; justify-content: flex-start'>
-                  <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php'>
+                  <a href='https://dev.kalstein.plus/plataforma/template-editor/assets/vistas/articulos_blog.php?modInside=$slug'>
                       <button type='button' id='btnUpdate' class='btn btn-info btn-block p-2 px-4'>Add a
                           post</button>
                   </a>
