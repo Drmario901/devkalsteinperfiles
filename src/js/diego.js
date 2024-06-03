@@ -1,8 +1,11 @@
 jQuery(document).ready(function ($) {
   $(document).on("click", "#hola", function () {
     console.log("hola");
-    const cookies = document.cookie;
-    console.log("cookies", cookies);
+
+    let cookieValue = getCookie("roll_usuario")
+      ? getCookie("roll_usuario")
+      : "No se encuentra";
+    console.log("cookies", cookieValue);
 
     iziToast.success({
       title: "Success",
@@ -28,13 +31,4 @@ jQuery(document).ready(function ($) {
     }
     return null;
   }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    let cookieValue = getCookie("roll_usuario");
-    if (cookieValue) {
-      console.log('El valor de la cookie "usuario" es: ' + cookieValue);
-    } else {
-      console.log('La cookie "usuario" no está configurada.');
-    }
-  });
 });
