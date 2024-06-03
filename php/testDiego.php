@@ -11,9 +11,3 @@ if (isset($_COOKIE[$nombre_cookie])) {
 } else {
   echo "No se pudo establecer la cookie.";
 }
-?>
-
-
-<h1>hola</h1>
-
-<button id="hola" role="<?php echo $valor_cookie ?>">Hola</button>
