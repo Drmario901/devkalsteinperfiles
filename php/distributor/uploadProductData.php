@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-/* ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
+error_reporting(E_ALL);
 
 require_once __DIR__ . '/../../db/conexion.php';
 require __DIR__ . '/validateProductData.php';
@@ -177,7 +177,7 @@ if ($total >= $maxProductos) {
             //Get post_parent id
 
             $sqlParentId = "SELECT ID FROM 8x7MM_posts where post_title = ?";
-            $stmtParentId = $conexion->prepare($sqlParentId);
+            $stmtParentId = $conexion2->prepare($sqlParentId);
             $stmtParentId->bind_param("s", $parent_slug);
             $stmtParentId->execute();
             $resultParentId = $stmtParentId->get_result();
