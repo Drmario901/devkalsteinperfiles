@@ -127,6 +127,55 @@ if ($total >= $maxProductos) {
 
         $k_product_id = $conexion->insert_id;
 
+        function slug_sanitize($title)
+        {
+            $unwanted_array = array(
+                'á' => 'a',
+                'é' => 'e',
+                'í' => 'i',
+                'ó' => 'o',
+                'ú' => 'u',
+                'Á' => 'a',
+                'É' => 'e',
+                'Í' => 'i',
+                'Ó' => 'o',
+                'Ú' => 'u',
+                'ñ' => 'n',
+                'Ñ' => 'n'
+            );
+            $title = strtr($title, $unwanted_array);
+            $title = strtolower($title);
+            $title = preg_replace('/[^a-z0-9\s-]/', '', $title);
+            $title = preg_replace('/[\s-]+/', '-', $title);
+            $title = trim($title, '-');
+            return $title;
+        }
+
+        // Obtener el ID_slug
+        $sql_idSlug = "SELECT ID_slug FROM tienda_virtual WHERE ID_user = ?";
+        $stmt = $conexion->prepare($sql_idSlug);
+        $stmt->bind_param("s", $acc_id);
+        $stmt->execute();
+        $result_idSlug = $stmt->get_result();
+
+        if ($result_idSlug->num_rows > 0) {
+            $rowIdSlug = $result_idSlug->fetch_assoc();
+            $idSlug = $rowIdSlug['ID_slug'];
+            $parent_slug = basename(rtrim($idSlug, '/'));
+
+
+
+            $nombreSanitizado = slug_sanitize($pName);
+            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_slug . '/' . $nombreSanitizado;
+
+            // Insertar el slug y el product id en la tabla wp_product_slug
+            $query = "INSERT INTO wp_product_slug (product_aid, product_slug) VALUES (?, ?)";
+            $stmt = $conexion->prepare($query);
+            $stmt->bind_param("is", $k_product_id, $slug);
+            $stmt->execute();
+
+        }
+
         if ($catalog != '') {
             /* $randomFileName = uniqid() . '.jpg';
          
@@ -273,65 +322,6 @@ if ($total >= $maxProductos) {
 ';
         echo $sql9.'
 ';*/
-
-        function slug_sanitize($title)
-        {
-            $unwanted_array = array(
-                'á' => 'a',
-                'é' => 'e',
-                'í' => 'i',
-                'ó' => 'o',
-                'ú' => 'u',
-                'Á' => 'a',
-                'É' => 'e',
-                'Í' => 'i',
-                'Ó' => 'o',
-                'Ú' => 'u',
-                'ñ' => 'n',
-                'Ñ' => 'n'
-            );
-            $title = strtr($title, $unwanted_array);
-            $title = strtolower($title);
-            $title = preg_replace('/[^a-z0-9\s-]/', '', $title);
-            $title = preg_replace('/[\s-]+/', '-', $title);
-            $title = trim($title, '-');
-            return $title;
-        }
-
-        // Obtener el ID_slug
-        $sql_idSlug = "SELECT ID_slug FROM tienda_virtual WHERE ID_user = ?";
-        $stmt = $conexion->prepare($sql_idSlug);
-        $stmt->bind_param("s", $acc_id);
-        $stmt->execute();
-        $result_idSlug = $stmt->get_result();
-
-        if ($result_idSlug->num_rows > 0) {
-            $rowIdSlug = $result_idSlug->fetch_assoc();
-            $idSlug = $rowIdSlug['ID_slug'];
-            $parent_slug = basename(rtrim($idSlug, '/'));
-
-            // Obtener el ID del post padre
-            $sql_postId = "SELECT ID, post_title FROM 8x7MM_posts WHERE post_title = ?";
-            $stmt = $conexion->prepare($sql_postId);
-            $stmt->bind_param("s", $parent_slug);
-            $stmt->execute();
-            $result_postId = $stmt->get_result();
-
-            if ($result_postId->num_rows > 0) {
-                $rowPostId = $result_postId->fetch_assoc();
-                $parent_post_id = $rowPostId['ID'];
-                $parent_post_title = $rowPostId['post_title'];
-
-                $nombreSanitizado = slug_sanitize($pName);
-                $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_post_title . '/' . $nombreSanitizado;
-
-                // Insertar el slug y el product id en la tabla wp_product_slug
-                $query = "INSERT INTO wp_product_slug (product_aid, product_slug) VALUES (?, ?)";
-                $stmt = $conexion->prepare($query);
-                $stmt->bind_param("is", $k_product_id, $slug);
-                $stmt->execute();
-            }
-        }
         echo json_encode($datos, JSON_FORCE_OBJECT);
         $conexion->close();
     }
