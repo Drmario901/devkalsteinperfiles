@@ -189,7 +189,7 @@ if ($total >= $maxProductos) {
             $empty_template = 'plantilla_producto.php';
 
             $post_date = date('Y-m-d H:i:s');
-            $post_title = $conexion2->real_escape_string($slug);
+            $post_title = $conexion2->real_escape_string($nombreSanitizado);
             $post_content = $conexion2->real_escape_string('<script>console.log("Blank template");</script>');
             $post_name = $conexion2->real_escape_string($slug);
             $post_status = 'draft';
