@@ -1,5 +1,11 @@
 jQuery(document).ready(function($){
 
+    if(cookieMembersia == '1'){
+        document.getElementById('cmbPrimary').value = '2';
+        document.getElementById('profileRole').value = '2';
+        
+    }
+
   
         const cookieLng = document.cookie
           .split("; ")
@@ -84,6 +90,26 @@ jQuery(document).ready(function($){
 
 
     $(document).on('click', '#btnNext1', function(){
+
+        //Revisar si cookie membresia existe y si existe el rol sera automaticamente seleccionado como distribuidor
+        if(cookieMembersia != ''){
+            
+            let cookieMembersia = document.cookie
+                .split("; ")
+                .find((row) => row.startsWith("membersia="))
+                .split("=")[1];
+            
+            if(cookieMembersia == '1'){
+                
+                //El id cmbPrimary tendra el valor 2
+                document.getElementById('cmbPrimary').value = '2';
+            }else{
+                
+                document.getElementById('cmbPrimary').value = '0';
+                
+            }
+            
+        }
 
         let cmb = $('#cmbPrimary').val()
 
@@ -686,9 +712,23 @@ jQuery(document).ready(function($){
 
         
 
+        //Revisar si cookie membresia existe y si existe el rol sera automaticamente seleccionado como distribuidor
+        if(cookieMembersia != ''){
+            
+            let cookieMembersia = document.cookie
+                .split("; ")
+                .find((row) => row.startsWith("membersia="))
+                .split("=")[1];
+            
+            if(cookieMembersia == '1'){
+                
+                document.getElementById('profileRole').value = '2';
+                
+            }
+            
+        }
+
         profileRole = $('#profileRole').val();
-
-
 
         if(profileRole === '0'){
 
