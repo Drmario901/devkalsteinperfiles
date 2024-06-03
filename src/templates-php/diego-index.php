@@ -9,4 +9,4 @@ setcookie($nombre_cookie, $valor_cookie, $tiempo_expiracion, "/");
 
 <h1>hola</h1>
 
-<button id="hola" value="<?php echo $valor_cookie ?>">Hola</button>
+<button id="hola" role="<?php echo $valor_cookie ?>">Hola</button>
