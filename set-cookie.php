@@ -29,13 +29,24 @@ $countryToLanguageMap = [
 ];
 
 try {
-    
+
     $country = $_SERVER['HTTP_CF_IPCOUNTRY'] ?? 'UNKNOWN';
-        
+
     $language = $_POST['lang'] ?? ($countryToLanguageMap[$country] ?? 'en');
-    
+
+    // Roll 
+    $nombre_cookie = "roll_usuario";
+    $valor_cookie = "3";
+    $tiempo_expiracion = time() + (86400 * 30); // La cookie expirará en 30 días
+
     setcookie('language', $language, time() + (86400 * 30), "/");
     setcookie('country', $country, time() + (86400 * 30), "/");
+    // Roll setcookie
+    setcookie($nombre_cookie, $valor_cookie, $tiempo_expiracion, "/");
+
+    echo isset($_COOKIE['roll_usuario']) ? $_COOKIE['roll_usuario'] : 'Error al obtener la cookie';
+    $cookie_establecida = isset($_COOKIE['roll_usuario']) ? $_COOKIE['roll_usuario'] : "No se pudo establecer la cookie.";
+    echo $cookie_establecida;
 
     echo "Language set to: " . $language . "\n";
     echo "Country set to: " . $country . "\n";
@@ -44,9 +55,8 @@ try {
 }
 ?>
 
-<script> 
-var php = "<?php echo 'hola' ;?>"
+<script>
+    var php = "<?php echo 'hola'; ?>"
 
-console.log(php)
-
+    console.log(php)
 </script>
