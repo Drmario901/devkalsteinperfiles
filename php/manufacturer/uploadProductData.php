@@ -167,7 +167,7 @@ if ($total >= $maxProductos) {
 
 
             $nombreSanitizado = slug_sanitize($pName);
-            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_slug . '/' . $nombreSanitizado;
+            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_slug . '/' . $nombreSanitizado . '/';
 
             // Insertar el slug y el product id en la tabla wp_product_slug
             $query = "INSERT INTO wp_product_slug (product_aid, product_slug) VALUES (?, ?)";
