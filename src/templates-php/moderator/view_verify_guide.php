@@ -270,29 +270,27 @@
                     if (!empty($ids)) {
                         $idsString = implode("','", $ids);
 
-                        $sqlProductos = "SELECT * FROM wp_k_products WHERE product_aid IN ('$idsString')";
+                        $stmt = $conexion->prepare("SELECT p.* 
+                            FROM wp_k_products p
+                            INNER JOIN wp_guides_products gp ON p.product_aid = gp.id_product_ideal_1 OR p.product_aid = gp.id_product_ideal_2 OR p.product_aid = gp.id_product_ideal_3 OR p.product_aid = gp.id_product_ideal_4 OR p.product_aid = gp.id_product_best_seller
+                            WHERE gp.guide_id = ?");
 
-                        $resultProductos = $conexion->query($sqlProductos);
+                        $stmt->bind_param("i", $guideId); // "i" indica que el parámetro es un entero
+                        $stmt->execute();
+                        $resultProductos = $stmt->get_result();
 
-                        $productos = [];
-                        while ($productRow = mysqli_fetch_assoc($resultProductos)) {
+                        $productos = ['ideal' => [], 'bestSeller' => []];
+
+                        while ($productRow = $resultProductos->fetch_assoc()) {
                             $productData = [
-                                'name' => $productRow['product_name_es'],
-                                'model' => $productRow['product_model'],
-                                'img' => $productRow['product_image']
+                                'name' => htmlspecialchars($productRow['product_name_es'], ENT_QUOTES, 'UTF-8'),
+                                'model' => htmlspecialchars($productRow['product_model'], ENT_QUOTES, 'UTF-8'),
+                                'img' => htmlspecialchars($productRow['product_image'], ENT_QUOTES, 'UTF-8')
                             ];
 
-                            if ($productRow['product_aid'] == $idProduct1) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idProduct2) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idProduct3) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idProduct4) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idBestSeller) {
-                                $productos['bestSeller'][] = $productData;
-                            }
+                            // Determinar el tipo de producto de manera más concisa
+                            $productType = in_array($productRow['product_aid'], ['id_product_ideal_1', 'id_product_ideal_2', 'id_product_ideal_3', 'id_product_ideal_4']) ? 'ideal' : 'bestSeller';
+                            $productos[$productType][] = $productData;
                         }
 
                         if (!empty($productos['ideal'])) {
