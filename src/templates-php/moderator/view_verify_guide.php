@@ -291,7 +291,7 @@
                             } elseif ($productRow['product_aid'] == $idProduct4) {
                                 $productos['ideal'][] = $productData;
                             } elseif ($productRow['product_aid'] == $idBestSeller) {
-                                $productos['bestSeller'] = $productData;
+                                $productos['bestSeller'][] = $productData;
                             }
                         }
 
