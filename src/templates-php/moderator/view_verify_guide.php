@@ -275,44 +275,25 @@
                 $stmt->execute();
                 $resultProductos = $stmt->get_result();
 
-                if ($rowDestacados = $resultDestacados->fetch_assoc()) {
-                    $idProduct1 = isset($rowDestacados['id_product_ideal_1']) ? $rowDestacados['id_product_ideal_1'] : null;
-                    $idProduct2 = isset($rowDestacados['id_product_ideal_2']) ? $rowDestacados['id_product_ideal_2'] : null;
-                    $idProduct3 = isset($rowDestacados['id_product_ideal_3']) ? $rowDestacados['id_product_ideal_3'] : null;
-                    $idProduct4 = isset($rowDestacados['id_product_ideal_4']) ? $rowDestacados['id_product_ideal_4'] : null;
-                    $idBestSeller = isset($rowDestacados['id_product_best_seller']) ? $rowDestacados['id_product_best_seller'] : null;
 
-                    $ids = array_filter([$idProduct1, $idProduct2, $idProduct3, $idProduct4, $idBestSeller]);
 
-                    if (!empty($ids)) {
-                        $idsString = implode("','", $ids);
+                $productos = ['ideal' => [], 'bestSeller' => []];
 
-                        $stmt = $conexion->prepare("SELECT p.* 
-                            FROM wp_k_products p
-                            INNER JOIN wp_guides_products gp ON p.product_aid = gp.id_product_ideal_1 OR p.product_aid = gp.id_product_ideal_2 OR p.product_aid = gp.id_product_ideal_3 OR p.product_aid = gp.id_product_ideal_4 OR p.product_aid = gp.id_product_best_seller
-                            WHERE gp.guide_id = ?");
+                // Iterar sobre los resultados, agrupándolos por tipo de producto
+                while ($productRow = $resultProductos->fetch_assoc()) {
+                    $productData = [
+                        'name' => htmlspecialchars($productRow['product_name_es'], ENT_QUOTES, 'UTF-8'),
+                        'model' => htmlspecialchars($productRow['product_model'], ENT_QUOTES, 'UTF-8'),
+                        'img' => htmlspecialchars($productRow['product_image'], ENT_QUOTES, 'UTF-8')
+                    ];
 
-                        $stmt->bind_param("i", $guideId); // "i" indica que el parámetro es un entero
-                        $stmt->execute();
-                        $resultProductos = $stmt->get_result();
+                    $productType = $productRow['product_type'];
+                    $productos[$productType][] = $productData;
+                }
 
-                        $productos = ['ideal' => [], 'bestSeller' => []];
-
-                        // Iterar sobre los resultados, agrupándolos por tipo de producto
-                        while ($productRow = $resultProductos->fetch_assoc()) {
-                            $productData = [
-                                'name' => htmlspecialchars($productRow['product_name_es'], ENT_QUOTES, 'UTF-8'),
-                                'model' => htmlspecialchars($productRow['product_model'], ENT_QUOTES, 'UTF-8'),
-                                'img' => htmlspecialchars($productRow['product_image'], ENT_QUOTES, 'UTF-8')
-                            ];
-
-                            $productType = $productRow['product_type'];
-                            $productos[$productType][] = $productData;
-                        }
-
-                        // Renderizar productos ideales
-                        if (!empty($productos['ideal'])) {
-                            echo "<div class='card mb-3'>
+                // Renderizar productos ideales
+                if (!empty($productos['ideal'])) {
+                    echo "<div class='card mb-3'>
                                       <div class='row text-sm-start text-md-center'>
                                           <h5>
                                               <i class='fa-regular fa-lightbulb'></i>
@@ -321,8 +302,8 @@
                                       </div>
                                       <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
 
-                            foreach ($productos['ideal'] as $producto) {
-                                echo "<div class='col-md-3 align-items-center'>
+                    foreach ($productos['ideal'] as $producto) {
+                        echo "<div class='col-md-3 align-items-center'>
                     <div>
                         <a TARGET='_blank' href='{$producto['img']}'>
                             <img class='my-3 d-flex justify-content-start'
@@ -336,16 +317,16 @@
                         <p><b>Model:</b> {$producto['model']} <input class='d-inline' type='checkbox' id='product_model'></p>
                     </div>
                 </div>";
-                            }
+                    }
 
-                            echo "</div></div>";
-                        }
+                    echo "</div></div>";
+                }
 
-                        // Renderizar producto más vendido
-                        if (!empty($productos['bestSeller'])) {
-                            // Asegurarse de tomar solo el primer producto (puede haber duplicados si coincide con uno ideal)
-                            $bestSeller = reset($productos['bestSeller']);
-                            echo "
+                // Renderizar producto más vendido
+                if (!empty($productos['bestSeller'])) {
+                    // Asegurarse de tomar solo el primer producto (puede haber duplicados si coincide con uno ideal)
+                    $bestSeller = reset($productos['bestSeller']);
+                    echo "
          <div class='card mb-3'>
              <div class='row text-sm-start text-md-center'>
                  <h5>
@@ -367,9 +348,9 @@
                  </div>
              </div>
          </div>";
-                        }
-                    }
                 }
+
+
                 ?>
 
 
