@@ -29,7 +29,9 @@ if ($membresia == 0) {
 } elseif ($membresia == 1) {
     $maxProductos = 10;
     $errorMsg = 'No puedes subir más de 10 productos con tu membresía actual';
-}
+} else if ( $membresia == 2) {
+    $maxProductos == PHP_INT_MAX;
+} 
 
 
 $sqlCount = "SELECT COUNT(*) AS total FROM wp_k_products WHERE product_maker = '$acc_id'";
