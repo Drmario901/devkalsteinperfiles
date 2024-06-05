@@ -3215,6 +3215,12 @@ jQuery(document).ready(function ($) {
       });
   });
 
+  $(document).on('hover', '#catg1', function(){    
+    console.log('hola')
+  }, function(){
+    console.log('adios')
+  })
+
   $(document).ready(function() {
     // Usar hover para cambiar las clases
     $('#catg1').hover(function() {
