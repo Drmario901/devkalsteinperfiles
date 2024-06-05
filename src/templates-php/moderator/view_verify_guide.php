@@ -505,7 +505,7 @@
                                 <a TARGET='_blank' href='#'>
                                     <img class='my-3 d-flex justify-content-start'
                                         style='margin: auto; border: 1px solid #999' width=200
-                                        src='https://dev.kalstein.plus/plataforma/wp-content/plugins/kalsteinPerfiles/src/catalogs/thumbnails/{$catalog['image']}'>
+                                        src='{$catalog['image']}'>
                                 </a>
                             </div>
                             <div>
