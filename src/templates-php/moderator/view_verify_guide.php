@@ -469,7 +469,7 @@
                 }
 
                 // Prepara la consulta para obtener los datos de los catálogos
-                $sqlCatalogData = "SELECT * FROM wp_catalogs_es WHERE id IN ('" . implode("','", $idCatalogs) . "')";
+                $sqlCatalogData = "SELECT * FROM wp_k_product WHERE id IN ('" . implode("','", $idCatalogs) . "')";
                 $resultCatalogData = $conexion->query($sqlCatalogData);
 
                 // Verificar si la consulta falló
@@ -483,9 +483,9 @@
                 while ($catalogRow = mysqli_fetch_assoc($resultCatalogData)) {
                     $catalogId = $catalogRow['id'];
                     $catalogs[$catalogId] = [
-                        'name' => $catalogRow['catalog_name_es'],
-                        'image' => $catalogRow['catalog_image'],
-                        'category' => $catalogRow['catalog_category_es']
+                        'name' => $catalogRow['product_name_es'],
+                        'image' => $catalogRow['product_image'],
+                        'category' => $catalogRow['product_category_es']
                     ];
                 }
 
