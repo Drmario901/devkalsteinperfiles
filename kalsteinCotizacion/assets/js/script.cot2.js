@@ -3215,24 +3215,13 @@ jQuery(document).ready(function ($) {
       });
   });
 
-  $(document).on('mouseenter', '#catg1', function(){    
-    console.log('hola')
+  $(document).on('mouseenter', '#catg1', function(){        
+    $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
   })
 
   $(document).on('mouseleave', '#catg1', function(){    
-    console.log('adios')
+    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
   })
-
-  $(document).ready(function() {
-    // Usar hover para cambiar las clases
-    $('#catg1').hover(function() {
-      alert('hola')
-      $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
-    }, function() {
-      alert('adios')
-      $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
-    });
-  });
 });
 
 function verificarUsuaurio(modelo) {
