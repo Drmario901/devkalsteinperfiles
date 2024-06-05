@@ -3220,7 +3220,13 @@ jQuery(document).ready(function ($) {
    // Mostrar vista previa al pasar el cursor sobre el elemento
    $(document).on('mouseenter', '#catg1', function() {
     clearTimeout(hideTimeout);
-    $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
+    $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
   });
 
   // Ocultar vista previa al quitar el cursor del elemento
@@ -3246,7 +3252,12 @@ jQuery(document).ready(function ($) {
   $(document).on('mouseenter', '#catg2', function() {
     clearTimeout(hideTimeout);
     $('#catg2-show').addClass('show').removeClass('elemento-vista-previa');    
-    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
+    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
   });
 
   // Ocultar vista previa al quitar el cursor del elemento
@@ -3268,7 +3279,155 @@ jQuery(document).ready(function ($) {
     }, 300); // Ajusta el tiempo según sea necesario
   });
   //-------------------------------------------------------------------
-  
+  $(document).on('mouseenter', '#art1', function() {
+    clearTimeout(hideTimeout);
+    $('#art1-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#art1', function() {
+    hideTimeout = setTimeout(function() {
+      $('#art1-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#art1-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#art1-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+  //------------------------------------------------------------------
+  $(document).on('mouseenter', '#art2', function() {
+    clearTimeout(hideTimeout);
+    $('#art2-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#art2', function() {
+    hideTimeout = setTimeout(function() {
+      $('#art2-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#art2-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#art2-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#art2-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+  //--------------------------------------------------------------------
+  $(document).on('mouseenter', '#prod1', function() {
+    clearTimeout(hideTimeout);
+    $('#prod1-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#prod1', function() {
+    hideTimeout = setTimeout(function() {
+      $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#prod1-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#prod1-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+  //--------------------------------------------------------------------
+  $(document).on('mouseenter', '#prod2', function() {
+    clearTimeout(hideTimeout);
+    $('#prod2-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#prod2', function() {
+    hideTimeout = setTimeout(function() {
+      $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#prod2-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#prod2-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+  //---------------------------------------------------------------------
+  $(document).on('mouseenter', '#prod3', function() {
+    clearTimeout(hideTimeout);
+    $('#prod3-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#art2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod1-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#prod2-show').addClass('elemento-vista-previa').removeClass('show');   
+    $('#catg3-show').addClass('elemento-vista-previa').removeClass('show');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#prod3', function() {
+    hideTimeout = setTimeout(function() {
+      $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#prod3-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#prod3-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#prod3-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
 });
 
 function verificarUsuaurio(modelo) {
