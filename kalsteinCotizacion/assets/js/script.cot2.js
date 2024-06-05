@@ -3230,3 +3230,43 @@ function verificarUsuaurio(modelo) {
       alert("error");
     });
 }
+
+$(document).ready(function () {
+  // VISTA PREVIA 1ERA CATEGORIA
+  $("#catg1").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#catg1-show").show();
+  });
+  // VISTA PREVIA 2DA CATEGORIA
+  $("#catg2").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#catg2-show").show();
+  });
+
+  // VISTA PREVIA 1ERA ENTRADA
+  $("#art1").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#art1-show").show();
+  });
+  // VISTA PREVIA 2DA ENTRADA
+  $("#art2").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#art2-show").show();
+  });
+
+  // VISTA PREVIA 1ER PRODUCTO
+  $("#prod1").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#prod1-show").show();
+  });
+  // VISTA PREVIA 2DO PRODUCTO
+  $("#prod2").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#prod2-show").show();
+  });
+  // VISTA PREVIA 3ER PRODUCTO
+  $("#prod3").hover(function () {
+    $(".elemento-vista-previa").hide();
+    $("#prod3-show").show();
+  });
+});
