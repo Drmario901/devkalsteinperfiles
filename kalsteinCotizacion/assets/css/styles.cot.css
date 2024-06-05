@@ -807,3 +807,11 @@
     width: 75px;
     border: #213280 solid 1px;
   }
+
+  .show{
+    display: block;
+  }
+
+  .elemento-vista-previa{
+    display: none;
+  }

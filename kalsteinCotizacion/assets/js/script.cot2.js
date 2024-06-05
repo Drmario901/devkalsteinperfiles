@@ -3214,6 +3214,14 @@ jQuery(document).ready(function ($) {
         isToastOpen = true;
       });
   });
+
+  $('[id^="catg"], [id^="art"], [id^="prod"]').hover(function() {
+    var id = $(this).attr('id');
+    $('.elemento-vista-previa').removeClass('show');
+    $('#' + id + '-show').addClass('show');
+  }, function() {
+    $('.elemento-vista-previa').removeClass('show');
+  });
 });
 
 function verificarUsuaurio(modelo) {
@@ -3230,43 +3238,3 @@ function verificarUsuaurio(modelo) {
       alert("error");
     });
 }
-
-$(document).ready(function () {
-  // VISTA PREVIA 1ERA CATEGORIA
-  $("#catg1").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#catg1-show").css({'display' : 'block'});
-  });
-  // VISTA PREVIA 2DA CATEGORIA
-  $("#catg2").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#catg2-show").css({'display' : 'block'});
-  });
-
-  // VISTA PREVIA 1ERA ENTRADA
-  $("#art1").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#art1-show").css({'display' : 'block'});
-  });
-  // VISTA PREVIA 2DA ENTRADA
-  $("#art2").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#art2-show").css({'display' : 'block'});
-  });
-
-  // VISTA PREVIA 1ER PRODUCTO
-  $("#prod1").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#prod1-show").css({'display' : 'block'});
-  });
-  // VISTA PREVIA 2DO PRODUCTO
-  $("#prod2").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#prod2-show").css({'display' : 'block'});
-  });
-  // VISTA PREVIA 3ER PRODUCTO
-  $("#prod3").hover(function () {
-    $(".elemento-vista-previa").css({'display' : 'none'});
-    $("#prod3-show").css({'display' : 'block'});
-  });
-});
