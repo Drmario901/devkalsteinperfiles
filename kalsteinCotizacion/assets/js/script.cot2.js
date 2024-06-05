@@ -3245,7 +3245,8 @@ jQuery(document).ready(function ($) {
   // Mostrar vista previa al pasar el cursor sobre el elemento
   $(document).on('mouseenter', '#catg2', function() {
     clearTimeout(hideTimeout);
-    $('#catg2-show').addClass('show').removeClass('elemento-vista-previa');
+    $('#catg2-show').addClass('show').removeClass('elemento-vista-previa');    
+    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
   });
 
   // Ocultar vista previa al quitar el cursor del elemento
