@@ -3215,13 +3215,32 @@ jQuery(document).ready(function ($) {
       });
   });
 
-  $(document).on('mouseenter', '#catg1', function(){        
-    $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
-  })
+  let hideTimeout;
 
-  $(document).on('mouseleave', '#catg1', function(){    
-    $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
-  })
+   // Mostrar vista previa al pasar el cursor sobre el elemento
+   $(document).on('mouseenter', '#catg1', function() {
+    clearTimeout(hideTimeout);
+    $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#catg1', function() {
+    hideTimeout = setTimeout(function() {
+      $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#catg1-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#catg1-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
 });
 
 function verificarUsuaurio(modelo) {
