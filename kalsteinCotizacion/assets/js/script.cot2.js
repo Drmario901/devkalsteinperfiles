@@ -3218,9 +3218,9 @@ jQuery(document).ready(function ($) {
   $(document).ready(function() {
     // Usar hover para cambiar las clases
     $('#catg1').hover(function() {
-      $(this).addClass('show').removeClass('elemento-vista-previa');
+      $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
     }, function() {
-      $(this).addClass('elemento-vista-previa').removeClass('show');
+      $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
     });
   });
 });
