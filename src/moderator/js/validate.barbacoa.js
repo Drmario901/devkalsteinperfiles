@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
                       position: "center",
                     });
                     window.location.href =
-                      "https://dev.kalstein.plus/plataforma/moderator/guides/";
+                      "https://dev.kalstein.plus/plataforma/moderator/guide/";
                   } else {
                     iziToast.error({
                       overlay: true,
