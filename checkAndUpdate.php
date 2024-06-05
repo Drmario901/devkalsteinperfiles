@@ -86,7 +86,7 @@ function getDatabaseConnection($domain)
             'host' => '185.28.22.128',
             'user' => 'plus',
             'pass' => 'Yuleana24.',
-            'db' => 'he269186_he270716_wp_en'
+            'db' => 'he269186_wp1'
         ],
         'plataforma.kalstein.net' => [
             'host' => '185.28.22.128',
