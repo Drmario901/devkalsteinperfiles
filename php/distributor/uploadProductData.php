@@ -42,15 +42,7 @@ if ($result->num_rows > 0) {
     $total = $row['total'];
 }
 
-if ($total >= $maxProductos) {
-    $datos['status'] = 'incorrecto';
-    $datos['err_msg'] = $errorMSg;
-    $datos['link'] = 'https://dev.kalstein.plus/plataforma/distribuidor/subscripcion/';
-    echo json_encode($datos, JSON_FORCE_OBJECT);
-    $conexion->close();
-    exit();
-} else {
-    if ($val) {
+if ($val) {
         move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadFile);
 
         if ($pCurrency == 'EUR') {
@@ -371,5 +363,4 @@ if ($total >= $maxProductos) {
         $conexion->close();
     }
 
-}
 
