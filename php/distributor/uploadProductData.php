@@ -160,7 +160,8 @@ if ($val) {
 
 
             $nombreSanitizado = slug_sanitize($pName);
-            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_slug . '/'.'product-' . $nombreSanitizado.'/';
+            $newName = 'product-' . $nombreSanitizado;
+            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_slug . '/'. $newName.'/';
 
             // Insertar el slug y el product id en la tabla wp_product_slug
             $query = "INSERT INTO wp_product_slug (product_aid, product_slug) VALUES (?, ?)";
@@ -183,9 +184,9 @@ if ($val) {
             $empty_template = 'plantilla_producto.php';
 
             $post_date = date('Y-m-d H:i:s');
-            $post_title = $conexion2->real_escape_string($nombreSanitizado);
+            $post_title = $conexion2->real_escape_string($newName);
             $post_content = $conexion2->real_escape_string('<script>console.log("Blank template");</script>');
-            $post_name = $conexion2->real_escape_string($nombreSanitizado);
+            $post_name = $conexion2->real_escape_string($newName);
             $post_status = 'publish';
             $post_author = 1;
             $post_type = 'page';
