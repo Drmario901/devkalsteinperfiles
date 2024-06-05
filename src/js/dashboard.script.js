@@ -4569,4 +4569,13 @@ jQuery(document).ready(function ($) {
       console.log("errorrr");
     });
   }
+
+  $(document).ready(function() {
+    // Usar hover para cambiar las clases
+    $('#catg1').hover(function() {
+      $('#catg1-show').addClass('show').removeClass('elemento-vista-previa');
+    }, function() {
+      $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
+    });
+  });
 });
