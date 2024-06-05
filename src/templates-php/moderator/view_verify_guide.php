@@ -469,7 +469,7 @@
                 }
 
                 // Prepara la consulta para obtener los datos de los catálogos
-                $sqlCatalogData = "SELECT * FROM wp_k_product WHERE id IN ('" . implode("','", $idCatalogs) . "')";
+                $sqlCatalogData = "SELECT * FROM wp_k_products WHERE id IN ('" . implode("','", $idCatalogs) . "')";
                 $resultCatalogData = $conexion->query($sqlCatalogData);
 
                 // Verificar si la consulta falló
