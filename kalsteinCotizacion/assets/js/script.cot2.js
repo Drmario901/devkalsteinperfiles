@@ -3215,12 +3215,13 @@ jQuery(document).ready(function ($) {
       });
   });
 
-  $('#catg1').hover(function() {
-    $(this).removeClass('elemento-vista-previa');
-    $(this).addClass('show');
-  }, function() {
-    $(this).addClass('elemento-vista-previa');
-    $(this).removeClass('show');
+  $(document).ready(function() {
+    // Usar hover para cambiar las clases
+    $('#catg1').hover(function() {
+      $(this).addClass('show').removeClass('elemento-vista-previa');
+    }, function() {
+      $(this).addClass('elemento-vista-previa').removeClass('show');
+    });
   });
 });
 
