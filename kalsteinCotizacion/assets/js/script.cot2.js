@@ -3241,6 +3241,33 @@ jQuery(document).ready(function ($) {
       $('#catg1-show').addClass('elemento-vista-previa').removeClass('show');
     }, 300); // Ajusta el tiempo según sea necesario
   });
+  //------------------------------------------------------------
+  // Mostrar vista previa al pasar el cursor sobre el elemento
+  $(document).on('mouseenter', '#catg2', function() {
+    clearTimeout(hideTimeout);
+    $('#catg2-show').addClass('show').removeClass('elemento-vista-previa');
+  });
+
+  // Ocultar vista previa al quitar el cursor del elemento
+  $(document).on('mouseleave', '#catg2', function() {
+    hideTimeout = setTimeout(function() {
+      $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+
+  // Mantener vista previa visible al pasar el cursor sobre la vista previa
+  $(document).on('mouseenter', '#catg2-show', function() {
+    clearTimeout(hideTimeout);
+  });
+
+  // Ocultar vista previa al quitar el cursor de la vista previa
+  $(document).on('mouseleave', '#catg2-show', function() {
+    hideTimeout = setTimeout(function() {
+      $('#catg2-show').addClass('elemento-vista-previa').removeClass('show');
+    }, 300); // Ajusta el tiempo según sea necesario
+  });
+  //-------------------------------------------------------------------
+  
 });
 
 function verificarUsuaurio(modelo) {
