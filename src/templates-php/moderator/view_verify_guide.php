@@ -254,59 +254,56 @@
                 ?>
 
                 <?php
-                $sqlDestacados = "SELECT wp_guides.*, wp_guides_products.* FROM wp_guides INNER JOIN wp_guides_products ON wp_guides.guide_id = wp_guides_products.guide_id WHERE wp_guides.guide_id = '$guideId'";
+                $stmt = $conexion->prepare("
+                SELECT p.*, 'ideal' AS product_type 
+                FROM wp_guides g
+                INNER JOIN wp_guides_products gp ON g.guide_id = gp.guide_id
+                INNER JOIN wp_k_products p 
+                    ON p.product_aid IN (gp.id_product_ideal_1, gp.id_product_ideal_2, gp.id_product_ideal_3, gp.id_product_ideal_4)
+                WHERE g.guide_id = ?
+            
+                UNION 
+            
+                SELECT p.*, 'bestSeller' AS product_type
+                FROM wp_guides g
+                INNER JOIN wp_guides_products gp ON g.guide_id = gp.guide_id
+                INNER JOIN wp_k_products p ON p.product_aid = gp.id_product_best_seller
+                WHERE g.guide_id = ?
+            ");
 
-                $resultDestacados = $conexion->query($sqlDestacados);
+                $stmt->bind_param("ii", $guideId, $guideId); // Dos parámetros para las dos partes de la unión
+                $stmt->execute();
+                $resultProductos = $stmt->get_result();
 
-                if ($rowDestacados = $resultDestacados->fetch_assoc()) {
-                    $idProduct1 = isset($rowDestacados['id_product_ideal_1']) ? $rowDestacados['id_product_ideal_1'] : null;
-                    $idProduct2 = isset($rowDestacados['id_product_ideal_2']) ? $rowDestacados['id_product_ideal_2'] : null;
-                    $idProduct3 = isset($rowDestacados['id_product_ideal_3']) ? $rowDestacados['id_product_ideal_3'] : null;
-                    $idProduct4 = isset($rowDestacados['id_product_ideal_4']) ? $rowDestacados['id_product_ideal_4'] : null;
-                    $idBestSeller = isset($rowDestacados['id_product_best_seller']) ? $rowDestacados['id_product_best_seller'] : null;
 
-                    $ids = array_filter([$idProduct1, $idProduct2, $idProduct3, $idProduct4, $idBestSeller]);
 
-                    if (!empty($ids)) {
-                        $idsString = implode("','", $ids);
+                $productos = ['ideal' => [], 'bestSeller' => []];
 
-                        $sqlProductos = "SELECT * FROM wp_k_products WHERE product_aid IN ('$idsString')";
+                // Iterar sobre los resultados, agrupándolos por tipo de producto
+                while ($productRow = $resultProductos->fetch_assoc()) {
+                    $productData = [
+                        'name' => htmlspecialchars($productRow['product_name_es'], ENT_QUOTES, 'UTF-8'),
+                        'model' => htmlspecialchars($productRow['product_model'], ENT_QUOTES, 'UTF-8'),
+                        'img' => htmlspecialchars($productRow['product_image'], ENT_QUOTES, 'UTF-8')
+                    ];
 
-                        $resultProductos = $conexion->query($sqlProductos);
+                    $productType = $productRow['product_type'];
+                    $productos[$productType][] = $productData;
+                }
 
-                        $productos = [];
-                        while ($productRow = mysqli_fetch_assoc($resultProductos)) {
-                            $productData = [
-                                'name' => $productRow['product_name_es'],
-                                'model' => $productRow['product_model'],
-                                'img' => $productRow['product_image']
-                            ];
+                // Renderizar productos ideales
+                if (!empty($productos['ideal'])) {
+                    echo "<div class='card mb-3'>
+                                      <div class='row text-sm-start text-md-center'>
+                                          <h5>
+                                              <i class='fa-regular fa-lightbulb'></i>
+                                              Productos ideales
+                                          </h5>
+                                      </div>
+                                      <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
 
-                            if ($productRow['product_aid'] == $idProduct1) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idProduct2) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idProduct3) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idProduct4) {
-                                $productos['ideal'][] = $productData;
-                            } elseif ($productRow['product_aid'] == $idBestSeller) {
-                                $productos['bestSeller'] = $productData;
-                            }
-                        }
-
-                        if (!empty($productos['ideal'])) {
-                            echo "<div class='card mb-3'>
-                <div class='row text-sm-start text-md-center'>
-                    <h5>
-                        <i class='fa-regular fa-lightbulb'></i>
-                        Productos ideales
-                    </h5>
-                </div>
-                <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>";
-
-                            foreach ($productos['ideal'] as $producto) {
-                                echo "<div class='col-md-3 align-items-center'>
+                    foreach ($productos['ideal'] as $producto) {
+                        echo "<div class='col-md-3 align-items-center'>
                     <div>
                         <a TARGET='_blank' href='{$producto['img']}'>
                             <img class='my-3 d-flex justify-content-start'
@@ -320,41 +317,40 @@
                         <p><b>Model:</b> {$producto['model']} <input class='d-inline' type='checkbox' id='product_model'></p>
                     </div>
                 </div>";
-                            }
-
-                            echo "</div></div>";
-                        }
-
-                        if (isset($productos['bestSeller'])) {
-                            $bestSeller = $productos['bestSeller'];
-                            echo "
-            <div class='card mb-3'>
-                <div class='row text-sm-start text-md-center'>
-                    <h5>
-                        <i class='fa-solid fa-money-bills'></i>
-                        Producto más vendido
-                    </h5>
-                </div>
-                <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
-                    <div class='row align-items-center'>
-                        <div class='col-md-4'>
-                            <a TARGET='_blank' href='{$bestSeller['img']}'>
-                                <img class='my-3 d-flex justify-content-start'
-                                    style='margin: auto; border: 1px solid #999' width=200
-                                    src='{$bestSeller['img']}'>
-                            </a>
-                        </div>
-                        <div class='col-md-8'>
-                            <h6 class='text-start'>{$bestSeller['name']}<input class='d-inline' type='checkbox' id='bestSeller_name'>
-                            </h6>
-                            <p><b>Model:</b> {$bestSeller['model']} <input class='d-inline' type='checkbox' id='bestSeller_model'></p>
-                        </div>
-                    </div>
-                </div>
-            </div>";
-                        }
                     }
+
+                    echo "</div></div>";
                 }
+
+                // Renderizar producto más vendido
+                if (!empty($productos['bestSeller'])) {
+                    // Asegurarse de tomar solo el primer producto (puede haber duplicados si coincide con uno ideal)
+                    $bestSeller = reset($productos['bestSeller']);
+                    echo "
+         <div class='card mb-3'>
+             <div class='row text-sm-start text-md-center'>
+                 <h5>
+                     <i class='fa-solid fa-money-bills'></i>
+                     Producto más vendido
+                 </h5>
+             </div>
+             <div class='row mt-3 p-2' style='border: solid 1px #c9c9c9; border-radius: 10px;'>
+                 <div class='row align-items-center'>
+                     <div class='col-md-4'>
+                         <a TARGET='_blank' href='{$bestSeller['img']}'>
+                             <img class='my-3 d-flex justify-content-start' style='margin: auto; border: 1px solid #999' width=200 src='{$bestSeller['img']}'>
+                         </a>
+                     </div>
+                     <div class='col-md-8'>
+                         <h6 class='text-start'>{$bestSeller['name']}<input class='d-inline' type='checkbox' id='bestSeller_name'></h6>
+                         <p><b>Model:</b> {$bestSeller['model']} <input class='d-inline' type='checkbox' id='bestSeller_model'></p>
+                     </div>
+                 </div>
+             </div>
+         </div>";
+                }
+
+
                 ?>
 
 

@@ -2,6 +2,7 @@
     <header class="header" data-header>
         <?php
             include 'navbar.php';
+            //fgbdfbdb
         ?>
         <script>
             let page = "stock";

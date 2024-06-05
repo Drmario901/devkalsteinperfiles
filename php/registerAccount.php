@@ -16,6 +16,7 @@ $email = $conexion->real_escape_string($email);
 $userTag = $conexion->real_escape_string($userTag);
 
 $passwordEncrypted = md5($password);
+$_SESSION["emailAccount"] = $email;
 
 $result = $conexion->query("SELECT * FROM wp_account WHERE account_correo = '$email'");
 if ($result !== FALSE) {
@@ -27,6 +28,7 @@ if ($result !== FALSE) {
 
         if ($conexion->query($register) === TRUE) {
             $registro = "correcto";
+            $_SESSION["emailAccount"] = $email;
         } else {
             $registro = "incorrecto";
             echo "Error in INSERT query: " . $conexion->error;

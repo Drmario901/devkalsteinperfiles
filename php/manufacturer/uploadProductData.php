@@ -128,6 +128,98 @@ if ($total >= $maxProductos) {
 
         $k_product_id = $conexion->insert_id;
 
+        function slug_sanitize($title)
+        {
+            $unwanted_array = array(
+                'á' => 'a',
+                'é' => 'e',
+                'í' => 'i',
+                'ó' => 'o',
+                'ú' => 'u',
+                'Á' => 'a',
+                'É' => 'e',
+                'Í' => 'i',
+                'Ó' => 'o',
+                'Ú' => 'u',
+                'ñ' => 'n',
+                'Ñ' => 'n'
+            );
+            $title = strtr($title, $unwanted_array);
+            $title = strtolower($title);
+            $title = preg_replace('/[^a-z0-9\s-]/', '', $title);
+            $title = preg_replace('/[\s-]+/', '-', $title);
+            $title = trim($title, '-');
+            return $title;
+        }
+
+        // Obtener el ID_slug
+        $sql_idSlug = "SELECT ID_slug FROM tienda_virtual WHERE ID_user = ?";
+        $stmt = $conexion->prepare($sql_idSlug);
+        $stmt->bind_param("s", $acc_id);
+        $stmt->execute();
+        $result_idSlug = $stmt->get_result();
+
+        if ($result_idSlug->num_rows > 0) {
+            $rowIdSlug = $result_idSlug->fetch_assoc();
+            $idSlug = $rowIdSlug['ID_slug'];
+            $parent_slug = basename(rtrim($idSlug, '/'));
+
+
+
+            $nombreSanitizado = slug_sanitize($pName);
+            $slug = 'https://dev.kalstein.plus/plataforma/' . $parent_slug . '/' . $nombreSanitizado . '/';
+
+            // Insertar el slug y el product id en la tabla wp_product_slug
+            $query = "INSERT INTO wp_product_slug (product_aid, product_slug) VALUES (?, ?)";
+            $stmt = $conexion->prepare($query);
+            $stmt->bind_param("is", $k_product_id, $slug);
+            $stmt->execute();
+
+            //Get post_parent id
+
+            $sqlParentId = "SELECT ID FROM 8x7MM_posts where post_title = ?";
+            $stmtParentId = $conexion2->prepare($sqlParentId);
+            $stmtParentId->bind_param("s", $parent_slug);
+            $stmtParentId->execute();
+            $resultParentId = $stmtParentId->get_result();
+            $rowParentId = $resultParentId->fetch_assoc();
+            $parentId = $rowParentId['ID'];
+
+            //insertar el post en la tabla 8x7MM_posts
+
+            $empty_template = 'plantilla_producto.php';
+
+            $post_date = date('Y-m-d H:i:s');
+            $post_title = $conexion2->real_escape_string($nombreSanitizado);
+            $post_content = $conexion2->real_escape_string('<script>console.log("Blank template");</script>');
+            $post_name = $conexion2->real_escape_string($nombreSanitizado);
+            $post_status = 'publish';
+            $post_author = 1;
+            $post_type = 'page';
+
+            $sql = "INSERT INTO 8x7MM_posts (post_author, post_date, post_date_gmt, post_content, post_title, post_status, post_name, post_type, post_parent) VALUES ('$post_author', '$post_date', '$post_date', '$post_content', '$post_title', '$post_status', '$post_name', '$post_type', $parentId)";
+
+            if ($conexion2->query($sql) === TRUE) {
+                $post_id = $conexion2->insert_id;
+
+                $empty_template = $conexion2->real_escape_string($empty_template);
+                $sql_template = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) VALUES ('$post_id', '_wp_page_template', '$empty_template')";
+                $conexion2->query($sql_template);
+
+                $meta_values = [
+                    '_edit_lock' => time(),
+                    '_edit_last' => $post_author,
+                ];
+
+                foreach ($meta_values as $meta_key => $meta_value) {
+                    $meta_value = $conexion->real_escape_string($meta_value);
+                    $sql_meta = "INSERT INTO 8x7MM_postmeta (post_id, meta_key, meta_value) VALUES ('$post_id', '$meta_key', '$meta_value')";
+                    $conexion2->query($sql_meta);
+                }
+            }
+
+        }
+
         if ($catalog != '') {
             /* $randomFileName = uniqid() . '.jpg';
          

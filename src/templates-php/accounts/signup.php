@@ -14,6 +14,8 @@ if (isset($_GET['search'])) {
     session_write_close();
 }
 
+//si la cookie membresia existe y tiene un valor
+
 $query = "SELECT * FROM wp_paises_prefijos ORDER BY nombre ASC";
 $resultado = $conexion->query($query);
 
@@ -42,7 +44,7 @@ $resultado = $conexion->query($query);
         color: #000;
     }
 
-    #imgCountry{
+    #imgCountry {
         width: 30%;
         /* Color de fondo ligeramente diferente para distinguir */
         padding: 5px 10px;
@@ -95,17 +97,20 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container input-wrapper-p">
-                                <div id="countryPrefix" style='position: relative; display: flex; justify-content: center;'>
+                                <div id="countryPrefix"
+                                    style='position: relative; display: flex; justify-content: center;'>
                                     <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                     <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
-                                    <ul style='position: absolute; z-index: 100; witdh: 10rem; height: 600px; background-color: #000;'>
+                                    <ul
+                                        style='position: absolute; z-index: 100; witdh: 10rem; height: 600px; background-color: #000;'>
                                         <li>a</li>
                                         <li>s</li>
                                         <li>w</li>
                                         <li>d</li>
                                     </ul>
                                 </div>
-                                <input type="text" id='telefono' name="telefono" placeholder="123456789" style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
+                                <input type="text" id='telefono' name="telefono" placeholder="123456789"
+                                    style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
                             </div>
                             <div class='form-floating input-wrapper-p' style='margin-top: 1rem;'>
