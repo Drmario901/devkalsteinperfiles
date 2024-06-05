@@ -3215,9 +3215,11 @@ jQuery(document).ready(function ($) {
       });
   });
 
-  $(document).on('hover', '#catg1', function(){    
+  $(document).on('mouseenter', '#catg1', function(){    
     console.log('hola')
-  }, function(){
+  })
+
+  $(document).on('mouseleave', '#catg1', function(){    
     console.log('adios')
   })
 
