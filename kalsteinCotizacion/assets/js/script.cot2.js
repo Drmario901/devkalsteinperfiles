@@ -3215,12 +3215,12 @@ jQuery(document).ready(function ($) {
       });
   });
 
-  $('[id^="catg"], [id^="art"], [id^="prod"]').hover(function() {
-    var id = $(this).attr('id');
-    $('.elemento-vista-previa').removeClass('show');
-    $('#' + id + '-show').addClass('show');
+  $('#catg1').hover(function() {
+    $(this).removeClass('elemento-vista-previa');
+    $(this).addClass('show');
   }, function() {
-    $('.elemento-vista-previa').removeClass('show');
+    $(this).addClass('elemento-vista-previa');
+    $(this).removeClass('show');
   });
 });
 
