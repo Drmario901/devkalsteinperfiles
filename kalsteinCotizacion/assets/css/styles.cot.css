@@ -710,7 +710,7 @@
 
 /* ESTILOS PARA LA NUEBA BARRA DE SUGERENCIAS*/
 .contenedor-busqueda {
-    width: 100vw;
+    width: 100%;
   }
   h6,
   p {
