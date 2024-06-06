@@ -318,7 +318,8 @@ function executeTask()
 }
 
 $startTime = time();
-while (time() - $startTime < 60) { // Ejecutar durante 60 segundos
+
+while ((time() - $startTime) < 60) { // Ejecutar durante 60 segundos
     executeTask();
     sleep(10); // Esperar 10 segundos antes de la siguiente ejecución
 }
