@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+$logFile = __DIR__ . '/check_monetico_log.txt';
 function executeTask()
 {
     // Crear la carpeta 'monetico' si no existe
@@ -15,7 +15,7 @@ function executeTask()
     $filePath = $logDir . '/monetico_log_' . date('Y-m-d') . '.txt';
 
     // Ruta del archivo de log para errores y confirmaciones
-    $logFile = __DIR__ . '/check_monetico_log.txt';
+
 
     // Función para registrar mensajes en el log
     function logMessage($message)
