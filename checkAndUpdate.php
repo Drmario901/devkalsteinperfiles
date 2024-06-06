@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+$logFile = __DIR__ . '/check_monetico_log.txt';
 function executeTask()
 {
     // Aquí va el código que quieres ejecutar cada 10 segundos
