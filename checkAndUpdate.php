@@ -1,10 +1,11 @@
-<?
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-$logFile = __DIR__ . '/check_monetico_log.txt';
+
 function executeTask()
 {
+    // Aquí va el código que quieres ejecutar cada 10 segundos
     // Crear la carpeta 'monetico' si no existe
     $logDir = __DIR__ . '/monetico';
     if (!is_dir($logDir)) {
@@ -15,7 +16,7 @@ function executeTask()
     $filePath = $logDir . '/monetico_log_' . date('Y-m-d') . '.txt';
 
     // Ruta del archivo de log para errores y confirmaciones
-
+    $logFile = __DIR__ . '/check_monetico_log.txt';
 
     // Función para registrar mensajes en el log
     function logMessage($message)
@@ -239,9 +240,9 @@ function executeTask()
 
             // Insertar el registro en la base de datos
             $insertSubs = $conexion->prepare("
-            INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, dominio, user_id)
-            VALUES (?, ?, ?, ?, '1', ?, ?, ?,?)
-        ");
+                INSERT INTO wp_subscripcion (code_retour, fecha_inicio, fecha_final, referencia_pago, estado_membresia, monto, fechahora, dominio, user_id)
+                VALUES (?, ?, ?, ?, '1', ?, ?, ?,?)
+            ");
             if (!$insertSubs) {
                 logMessage("Error preparando la inserción en wp_subscripcion: " . $conexion->error);
                 continue;
@@ -314,12 +315,10 @@ function executeTask()
 
     logMessage("Procesamiento completado.");
     logMessage("--------------------------------------------");
-
 }
 
 $startTime = time();
-
-while ((time() - $startTime) < 60) { // Ejecutar durante 60 segundos
+while (time() - $startTime < 60) { // Ejecutar durante 60 segundos
     executeTask();
     sleep(10); // Esperar 10 segundos antes de la siguiente ejecución
 }
