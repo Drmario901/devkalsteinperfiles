@@ -25,13 +25,12 @@ try {
 
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $guideTitle = $row['art_title'];
     $accountEmail = $row['account_correo'];
     $nombre = $row['account_nombre'];
     $apellido = $row['account_apellido'];
     $nombreCompleto = $nombre . " " . $apellido;
   } else {
-    throw new Exception("No se encontró el artículo con ID: $artId");
+    throw new Exception("No se encontró el artículo con ID: $guideId");
   }
 
   //update status to 3
@@ -57,14 +56,14 @@ try {
   $mail->setFrom('no-reply2@kalstein.net', 'Kalstein Plataforma');
   $mail->addAddress($accountEmail);
 
-  $mail->Subject = 'Notificación de denegación de blog';
+  $mail->Subject = 'Notificación de denegación de guía';
   $mail->Body = '
         <div style="width: 100%; background-color: #fff;">
             <div style="width: 50%; margin-left: 25%;">
                 <div style="width: 100%; color: #000;">
                     <img src="https://kalstein.us/wp-content/plugins/kalsteinPerfiles/src/images/logo_kalstein.png" style="width: 200px; margin-left: 25%; background-color: #fff; margin-top: 4rem; margin-bottom: 2rem;">
                     <h1 style="text-align: center; color: #000;">Hi, ' . $nombreCompleto . '</h1>
-                    <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parece que nuestro equipo de moderadores encontró irregularidades con tu blog registrado.</p>
+                    <p style="text-align: justify; color: #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parece que nuestro equipo de moderadores encontró irregularidades con tu guía registrada.</p>
                     <hr>
                     <p style="text-align: justify; color: #000;">El error encontrado fue el siguiente:</p>
                     <p style="text-align: justify; color: #000;">' . $msg . '</p>
