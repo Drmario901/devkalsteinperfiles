@@ -35,7 +35,7 @@ if ($resultNameQuery && $resultUserTag->num_rows > 0) {
         $_SESSION['nameQuery'] = $accountName;
     }
 } else {
-    //echo "Error: " . $conexion->error;
+    //echo "Error: " . $conexion->error; aaa
 }
 
 $session_id = session_id();
