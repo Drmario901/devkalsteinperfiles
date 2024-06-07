@@ -98,9 +98,9 @@ function executeTask()
             ],
             'dev.kalstein.plus' => [
                 'host' => 'localhost',
-                'user' => 'user_otro',
-                'pass' => 'password_otro',
-                'db' => 'db_otro'
+                'user' => 'kalsteinplus',
+                'pass' => 'OqA;}vKA94PO',
+                'db' => 'kalsteinplus_he270716_wp_es'
             ],
             // Agrega más dominios y sus configuraciones según sea necesario
         ];
