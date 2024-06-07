@@ -1,7 +1,7 @@
 <?php
 
 $url = 'https://p.monetico-services.com/test/capture_paiement.cgi';
-// Datos que serán enviadosss
+// Datos que serán enviadossssss
 $data = array(
   'version' => '3.0',
   'TPE' => '7593339',
