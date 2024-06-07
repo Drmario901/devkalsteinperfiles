@@ -190,7 +190,7 @@ jQuery(document).ready(function ($) {
                 let strike = document.querySelector("#strike").checked;
 
                 $.ajax({
-                  url: plugin_dir + "php/moderator/denyGuide.php",
+                  url: plugin_dir + "php/moderator/denegateGuide.php",
                   type: "POST",
                   data: { guideId, msg, strike },
                 })
