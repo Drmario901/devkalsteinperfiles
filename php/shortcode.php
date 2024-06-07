@@ -1,6 +1,6 @@
 <?php
 //session_start();
-
+//hola
 function render_php_file($path)
 {
     ob_start();
