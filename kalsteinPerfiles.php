@@ -11,7 +11,7 @@ error_reporting(E_ALL); */
 */
 
 //Test
-
+//hola
 //REQUIRED    
 require_once dirname(__FILE__) . '/php/shortcode.php';
 
