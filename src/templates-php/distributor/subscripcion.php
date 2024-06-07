@@ -260,4 +260,5 @@
 <?php
 $footer_img = 'Footer-fabricante-IMG.png';
 include 'footer.php';
+//hola
 ?>
