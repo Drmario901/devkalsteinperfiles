@@ -7,6 +7,7 @@ function validateProductData(
   model,
   description,
   category,
+  subcategory,
   fileInput,
   stock,
   status,
@@ -78,7 +79,10 @@ function validateProductData(
     err_msg = alertsTranslations.descriptionEmpty;
   } else if (category === "") {
     err_msg = alertsTranslations.emptyCategory;
-  } else if (stock === "") {
+  } else if (subcategory === "") {
+    err_msg = alertsTranslations.emptyCategory;
+  }
+  else if (stock === "") {
     err_msg = alertsTranslations.emptyStock;
   } else if (
     (fileInput === undefined || fileInput === "" || fileInput == []) &&
@@ -447,6 +451,7 @@ jQuery(document).ready(function ($) {
     var model = $("#modelProduct").val();
     var description = $("#descriptionProduct").val();
     var category = $("#dataCategory").val();
+    var subcategory = $("#subCategorySelect").val();
     var fileInput = $("#file-input")[0].files[0];
     var stock = $("#stockProduct").val();
     var status = $("#statusProduct").val();
@@ -501,6 +506,7 @@ jQuery(document).ready(function ($) {
         model,
         description,
         category,
+        subcategory,
         fileInput,
         stock,
         status,
@@ -527,6 +533,7 @@ jQuery(document).ready(function ($) {
         model,
         description,
         category,
+        subcategory,
         fileInput,
         stock,
         status,
@@ -560,6 +567,7 @@ jQuery(document).ready(function ($) {
     model,
     description,
     category,
+    subcategory,
     fileInput,
     stock,
     status,
@@ -591,6 +599,7 @@ jQuery(document).ready(function ($) {
     formData.append("model", model);
     formData.append("description", description);
     formData.append("category", category);
+    formData.append("subcategory", subcategory);
     formData.append("fileName", fileInput);
     formData.append("stock", stock);
     formData.append("status", status);
@@ -714,6 +723,7 @@ jQuery(document).ready(function ($) {
     var model = $("#modelProduct").val();
     var description = $("#descriptionProduct").val();
     var category = $("#dataCategory").val();
+    var subcategory = $("#subCategorySelect").val();
     var fileInput = $("#file-input")[0].files[0];
     var stock = $("#stockProduct").val();
     var status = $("#statusProduct").val();
@@ -769,6 +779,7 @@ jQuery(document).ready(function ($) {
         model,
         description,
         category,
+        subcategory,
         fileInput,
         stock,
         status,
@@ -807,6 +818,7 @@ jQuery(document).ready(function ($) {
                 model,
                 description,
                 category,
+                subcategory,
                 fileInput,
                 stock,
                 status,
@@ -851,6 +863,7 @@ jQuery(document).ready(function ($) {
     model,
     description,
     category,
+    subcategory,
     fileInput,
     stock,
     status,
@@ -883,6 +896,7 @@ jQuery(document).ready(function ($) {
     formData.append("model", model);
     formData.append("description", description);
     formData.append("category", category);
+    formData.append("subcategory", subcategory);
     formData.append("fileName", fileInput);
     formData.append("stock", stock);
     formData.append("status", status);
