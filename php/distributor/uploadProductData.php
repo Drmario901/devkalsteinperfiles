@@ -32,7 +32,7 @@ if ($membresia == 0) {
     $maxProductos = 10;
     $errorMsg = 'No puedes subir más de 10 productos con tu membresía actual';
 } else if ($membresia == 2) {
-    $maxProductos == PHP_INT_MAX;
+    $maxProductos = PHP_INT_MAX;
 }
 
 
