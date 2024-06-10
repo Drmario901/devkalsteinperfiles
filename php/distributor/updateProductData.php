@@ -143,6 +143,7 @@
             product_model                = '$pModel',
             product_description_es       = '$pDescription',
             product_category_es          = '$pCategory',
+            product_subcategory_es       = '$pSubcategory',
             $updateImage
             product_stock_units          = '$pStock',
             product_stock_status         = '$pStatus',
