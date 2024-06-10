@@ -818,6 +818,7 @@ jQuery(document).ready(function ($) {
                 model,
                 description,
                 category,
+                subcategory,
                 fileInput,
                 stock,
                 status,
@@ -862,6 +863,7 @@ jQuery(document).ready(function ($) {
     model,
     description,
     category,
+    subcategory,
     fileInput,
     stock,
     status,
@@ -894,6 +896,7 @@ jQuery(document).ready(function ($) {
     formData.append("model", model);
     formData.append("description", description);
     formData.append("category", category);
+    formData.append("subcategory", subcategory);
     formData.append("fileName", fileInput);
     formData.append("stock", stock);
     formData.append("status", status);
