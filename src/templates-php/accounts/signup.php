@@ -97,7 +97,7 @@ $resultado = $conexion->query($query);
                                 <label for='emailUser' data-i18n="account:labelUsuario">Etiqueta de usuario</label>
                             </div>
                             <div class="phone-container input-wrapper-p">
-                                <div id="countryPrefix"
+                                <!-- <div id="countryPrefix"
                                     style='position: relative; display: flex; justify-content: center;'>
                                     <img id='imgCountry' style='width: 60px; height: 40px; margin-top: 5px;'>
                                     <span id='span-prefix' style='width: 70px; padding-top: 10px;'></span>
@@ -108,7 +108,7 @@ $resultado = $conexion->query($query);
                                         <li>w</li>
                                         <li>d</li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789"
                                     style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
