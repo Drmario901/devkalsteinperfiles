@@ -108,7 +108,7 @@ $resultado = $conexion->query($query);
                                         <li>w</li>
                                         <li>d</li>
                                     </ul>
-                                </div> -->
+                                </div> --> 
                                 <input type="text" id='telefono' name="telefono" placeholder="123456789"
                                     style='height: 3rem; font-size: 1.4em; padding-right: 3rem;'>
                                 <i class='fa-solid fa-phone'></i>
